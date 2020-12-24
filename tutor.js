@@ -5,8 +5,20 @@ let correctAnswer = "";
 
 let perf = 50;
 
+let dict = [];
+
 function startup()
 {
+	dict = dict.concat(spanish);
+	dict = dict.concat(italian);
+	dict = dict.concat(portuguese);
+	dict = dict.concat(french);
+	dict = dict.concat(german);
+	dict = dict.concat(greek);
+	
+	dict = dict.concat(malay);
+	dict = dict.concat(indonesian);
+	
 	timeRemaining = 0;
 	
 	question = document.getElementById("question");
@@ -39,7 +51,7 @@ function newQuestion()
 	
 	timeRemaining = 100;
 	
-	summary.innerHTML = 'p:' + Math.round(10*perf)/10;
+	summary.innerHTML = 'p:' + Math.round(10*perf)/10 + '      n:'+n;
 }
 
 function answer(x)
@@ -54,13 +66,13 @@ function answer(x)
 		{
 			if (i != x) {answer[i].innerHTML = "-";}
 		}
-		perf += 0.1*(100-perf);
+		perf += 0.05*(100-perf);
 	}
 	else
 	{
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
-		perf -= 0.1*perf;
+		perf -= 0.05*perf;
 	}
 
 }
