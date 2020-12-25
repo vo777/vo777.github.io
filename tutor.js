@@ -9,7 +9,10 @@ let answerCount = 0;
 let dict = [];
 
 let currentIndex = 0;
-let errQueue = [];
+let qq = [];
+let maxQ = 100;
+
+let wCount = 0;
 
 function startup()
 {
@@ -50,15 +53,15 @@ function newQuestion()
 {
 	let n = dict.length;
 	
-	if (errQueue.length > 20)
+	while (qq.length < maxQ)
 	{
-		let i = Math.floor(Math.random()*errQueue.length);
-		currentIndex = errQueue.splice(i, 1)[0];
+		qq.push(Math.floor(Math.random()*n));
+		++wCount;
 	}
-	else
-	{
-		currentIndex = Math.floor(Math.random()*n);
-	}
+	
+
+	let i = Math.floor(Math.random()*qq.length);
+	currentIndex = qq.splice(i, 1)[0];
 
 	let indices = genRandomAnswers(n, currentIndex);
 	
@@ -73,9 +76,12 @@ function newQuestion()
 	
 	timeRemaining = 100;
 	
-	summary.innerHTML = 'p:' + Math.round(10*perf)/10 
-	+ '      a:'+answerCount
-	+ '      n:'+n;
+	summary.innerHTML = 'p:' + Math.round(10*perf)/10
+	+ ' w:'+(wCount-maxQ)
+	+ ' a:'+answerCount
+	+ ' n:'+n
+	//+ ' qq:'+qq
+	;
 	
 		
 }
@@ -100,9 +106,9 @@ function answer(x)
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
 		perf -= 0.05*perf;
-		errQueue.push(currentIndex);
-		errQueue.push(currentIndex);
-		errQueue.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
 	}
 
 }
@@ -134,6 +140,7 @@ function genRandomAnswers(n, m)
 	}
 	
 	shuffle(res);
+	shuffle(res); // for good measure
 	
 	return res;
 }
