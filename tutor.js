@@ -23,8 +23,8 @@ function startup()
 	dict = dict.concat(french);
 	dict = dict.concat(german);
 	//dict = dict.concat(greek);
-	dict = dict.concat(malay);
-	dict = dict.concat(indonesian);
+	//dict = dict.concat(malay);
+	//dict = dict.concat(indonesian);
 	
 	timeRemaining = 0;
 	
@@ -94,7 +94,7 @@ function answer(x)
 	
 	if (answered == correctAnswer)
 	{
-		answer[x].bgColor = "green";
+		answer[x].bgColor = "#99FF99";
 		timeRemaining = 20;
 		for (let i=0; i<4; ++i)
 		{
