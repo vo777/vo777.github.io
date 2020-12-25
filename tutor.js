@@ -16,15 +16,32 @@ let wCount = 0;
 
 function startup()
 {
-	dict = dict.concat(spanish);
-	dict = dict.concat(spanish001);
-	dict = dict.concat(italian);
-	dict = dict.concat(portuguese);
-	dict = dict.concat(french);
-	dict = dict.concat(german);
-	//dict = dict.concat(greek);
-	//dict = dict.concat(malay);
-	//dict = dict.concat(indonesian);
+	let langCodes = window.location.search;
+	
+	if (langCodes.length == 0)
+	{
+		dict = dict.concat(spanish);
+		dict = dict.concat(spanish001);
+		dict = dict.concat(italian);
+		dict = dict.concat(portuguese);
+		dict = dict.concat(french);
+		dict = dict.concat(german);
+	}
+	else
+	{
+		if (langCodes.includes('s')) 
+		{	
+			dict = dict.concat(spanish);
+			dict = dict.concat(spanish001);
+		}
+		if (langCodes.includes('i')) {dict = dict.concat(italian);} 
+		if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
+		if (langCodes.includes('f')) {dict = dict.concat(french);} 
+		if (langCodes.includes('d')) {dict = dict.concat(german);} 
+		if (langCodes.includes('g')) {dict = dict.concat(greek);} 
+		if (langCodes.includes('n')) {dict = dict.concat(indonesian);} 
+		if (langCodes.includes('m')) {dict = dict.concat(malay);} 
+	}
 	
 	timeRemaining = 0;
 	
