@@ -8,6 +8,9 @@ let answerCount = 0;
 
 let dict = [];
 
+let currentIndex = 0;
+let errQueue = [];
+
 function startup()
 {
 	dict = dict.concat(spanish);
@@ -47,12 +50,20 @@ function startup()
 function newQuestion()
 {
 	let n = dict.length;
-	let m = Math.floor(Math.random()*n);
 	
-	let indices = genRandomAnswers(n, m);
+	if (errQueue.length > 4)
+	{
+		currentIndex = errQueue.splice(0, 1)[0];
+	}
+	else
+	{
+		currentIndex = Math.floor(Math.random()*n);
+	}
+
+	let indices = genRandomAnswers(n, currentIndex);
 	
-	question.innerHTML = dict[m][0];
-	correctAnswer = dict[m][1];
+	question.innerHTML = dict[currentIndex][0];
+	correctAnswer = dict[currentIndex][1];
 	
 	for (let i=0; i<4; ++i)
 	{
@@ -89,6 +100,7 @@ function answer(x)
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
 		perf -= 0.05*perf;
+		errQueue.push(currentIndex);
 	}
 
 }
