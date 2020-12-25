@@ -82,6 +82,7 @@ function newQuestion()
 	+ ' a:'+answerCount
 	+ ' n:'+n
 	+ ' qq:'+qq.length
+	+ '  ' + window.location.search
 	;
 	
 		
