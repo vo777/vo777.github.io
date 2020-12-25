@@ -4,6 +4,7 @@ let question, answers, summary;
 let correctAnswer = "";
 
 let perf = 50;
+let answerCount = 0;
 
 let dict = [];
 
@@ -31,6 +32,16 @@ function startup()
 	
 	setInterval(worker, 100);
 	
+	// remove dupes
+	for (let i=0; i<dict.length; ++i)
+	{
+		if (dict[i][0].toUpperCase() === dict[i][1].toUpperCase())
+		{
+			dict.splice(i, 1);
+			i--;
+		}
+	}
+	
 }
 
 function newQuestion()
@@ -51,11 +62,16 @@ function newQuestion()
 	
 	timeRemaining = 100;
 	
-	summary.innerHTML = 'p:' + Math.round(10*perf)/10 + '      n:'+n;
+	summary.innerHTML = 'p:' + Math.round(10*perf)/10 
+	+ '      a:'+answerCount
+	+ '      n:'+n;
+	
+		
 }
 
 function answer(x)
 {
+	++answerCount;
 	answered = answer[x].innerHTML;
 	
 	if (answered == correctAnswer)
