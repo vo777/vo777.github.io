@@ -51,9 +51,10 @@ function newQuestion()
 {
 	let n = dict.length;
 	
-	if (errQueue.length > 4)
+	if (errQueue.length > 20)
 	{
-		currentIndex = errQueue.splice(0, 1)[0];
+		let i = Math.floor(Math.random()*errQueue.length);
+		currentIndex = errQueue.splice(i, 1)[0];
 	}
 	else
 	{
@@ -100,6 +101,8 @@ function answer(x)
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
 		perf -= 0.05*perf;
+		errQueue.push(currentIndex);
+		errQueue.push(currentIndex);
 		errQueue.push(currentIndex);
 	}
 
