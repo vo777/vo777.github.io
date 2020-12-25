@@ -34,6 +34,7 @@ function startup()
 			dict = dict.concat(spanish);
 			dict = dict.concat(spanish001);
 		}
+		langCodes = langCodes.toLowerCase();
 		if (langCodes.includes('i')) {dict = dict.concat(italian);} 
 		if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
 		if (langCodes.includes('f')) {dict = dict.concat(french);} 
