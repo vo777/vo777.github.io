@@ -80,7 +80,7 @@ function newQuestion()
 	+ ' w:'+(wCount-maxQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
-	//+ ' qq:'+qq
+	+ ' qq:'+qq.length
 	;
 	
 		
