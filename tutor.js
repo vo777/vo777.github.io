@@ -17,6 +17,7 @@ let wCount = 0;
 function startup()
 {
 	dict = dict.concat(spanish);
+	dict = dict.concat(spanish001);
 	dict = dict.concat(italian);
 	dict = dict.concat(portuguese);
 	dict = dict.concat(french);
