@@ -18,8 +18,7 @@ function startup()
 	dict = dict.concat(portuguese);
 	dict = dict.concat(french);
 	dict = dict.concat(german);
-	dict = dict.concat(greek);
-	
+	//dict = dict.concat(greek);
 	dict = dict.concat(malay);
 	dict = dict.concat(indonesian);
 	
