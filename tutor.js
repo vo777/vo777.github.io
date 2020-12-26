@@ -22,6 +22,8 @@ function startup()
 	{
 		dict = dict.concat(spanish);
 		dict = dict.concat(spanish001);
+		loadSynonyms(dict, spanishSynonims);
+		
 		dict = dict.concat(italian);
 		dict = dict.concat(portuguese);
 		dict = dict.concat(french);
