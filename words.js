@@ -15821,9 +15821,17 @@ let spanishSynonims = [
 "crear: fundo, establezco, instituyo, instauro, organizo, implanto, erijo, introduzco.  hago, formo, elaboro, realizo, compongo, invento, concibo, forjo, descubro, plasmo, imagino, pienso.  produzco, origino, engendro, paro, genero, procreo, alumbro.  nombro, designo, elijo. ",
 "hombre : persona, individuo, mortal, prójimo, semejante, personaje, tipo.  varón, macho, masculino, caballero.  esposo, tipazo, castizo.  niño, joven, adolescente.   ",
 "mujer : señora, dama, dueña, ama, matrona, adulta, hembra, madre.  joven, chica, muchacha, moza, niña, doncella, señorita, venus, hurí, beldad, hermosura.  esposa, consorte, cónyuge, pareja, contrayente, novia, compañera, casada, desposada, media naranja, cara mitad. ",
+"vida : existencia, savia, subsistencia, duración, lapso, vidorria, substancia, supervivencia.  energía, fuerza, vigor, fortaleza, espíritu, aliento.  biografía, hazañas, acontecimientos, historia, relación, crónica, relato, memoria.  conducta, comportamiento, proceder, manera, modo.  carrera, empleo, ocupación, quehacer, actividad.  peregrinación, jornada, paso, movimiento.   ",
+"cosa: ente, objeto, sujetas, formas, unidades, entidades, organismo, cuerpo, esencias, substancias.  trasto, chisme, chirimbolo, cacharro.  elemento, componente, piezas, factor.  caídas, ocurrencias.  efectos, enseres, arreglos.  mercancías, bien, artículo. ",
+"acuerdo : pacto, convenio, alianza, contrato, arreglo, concierto, compromiso, unión, ajuste, acomodo, colaboración, relación, tratado, estipulación, acto, convención, transacción, negociación, trato, componenda, connivencia, manejo.  armonía, avenencia, unidad, paz, inteligencia, entendimiento.  dictamen, fallo, consejo, arbitraje, sentencia, opinión, resolución, decisión, determinación, decreto, edicto.  conformidad, consentimiento, concordancia, asentimiento.   ",
+"amigo : camarada, compañero, aliado, conocido, colaborador, coadjutor, adicto, partidario, inseparable, incondicional, afecto, seguidor, hincha, devoto, apegado, leal, aficionado, inclinado, encariñado. ",
+"lugar : parte, término, zona, terreno, esfera, distrito, territorio, comarca, sector, bando, expresión.  pueblo, aldea, ciudad, villa, localidad, población.  sitio, punto, paraje, andurrial, rincón, recinto, local, teatro, circuito.  situación, asentamiento, colocación, puesto, empleo, dignidad, oficio, ministerio, autoridad.  medio, ámbito, ambiente, atmósfera, espacio.  ocasión, circunstancia, momento, tiempo.  causa, motivo, fundamento.  posición.   ",
+"gustar: saborea, cata, prueba, relame, experimenta, goza, deleita, siente.  encanta, atrae, cautiva, embelesa, toma, arrastra, capta, convence, conquista, enamora, deslumbra, seduce, suspende, interesa, prefiere, arrebata, embriaga, prenda.  desea, quiere, apetece, ambiciona, apasiona, codicia, pretende, aspira, hipa, encapricha, anhela, ansía.  agrada, complace, deleita, place, regala, entusiasma, satisfaz, contenta, alegra, celebra. ",
+"",
+"",
+"",
 "",
 ];
-
 
 
 
