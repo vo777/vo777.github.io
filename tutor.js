@@ -29,12 +29,13 @@ function startup()
 	}
 	else
 	{
+		langCodes = langCodes.toLowerCase();
 		if (langCodes.includes('s')) 
 		{	
 			dict = dict.concat(spanish);
 			dict = dict.concat(spanish001);
 		}
-		langCodes = langCodes.toLowerCase();
+		if (langCodes.includes('1')) {loadSynonyms(dict, spanishSynonims);} 
 		if (langCodes.includes('i')) {dict = dict.concat(italian);} 
 		if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
 		if (langCodes.includes('f')) {dict = dict.concat(french);} 
@@ -66,6 +67,28 @@ function startup()
 		}
 	}
 	
+}
+
+
+function loadSynonyms(dest, src)
+{
+	
+	for (let line of src)
+	{
+		line = line.replaceAll('.', ',');
+		let ll = line.split(':');
+		//console.log('loadSynonyms ' + line);
+		if (ll.length != 2) { continue; }
+		//console.log(ll);
+		let value = ll[0].trim();
+		if (value.length == 0) { continue; }
+		for (let key of ll[1].split(','))
+		{
+			key = key.trim();
+			if (key.length == 0) { continue; }
+			dest.push([key, value]);
+		}
+	}
 }
 
 function newQuestion()
