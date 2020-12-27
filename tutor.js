@@ -3,7 +3,6 @@ let timeRemaining;
 let question, answers, summary;
 let correctAnswer = "";
 
-let perf = 50;
 let answerCount = 0;
 
 let dict = [];
@@ -135,7 +134,7 @@ function newQuestion()
 	timeRemaining = 100;
 	noAnswer = true;
 	
-	summary.innerHTML = 'p:' + Math.round(10*perf)/10
+	summary.innerHTML = ''
 	+ ' w:'+(wCount-maxQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
@@ -162,13 +161,11 @@ function answer(x)
 		{
 			if (i != x) {answer[i].innerHTML = "-";}
 		}
-		perf += 0.05*(100-perf);
 	}
 	else
 	{
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
-		perf -= 0.05*perf;
 		qq.push(currentIndex);
 		qq.push(currentIndex);
 		qq.push(currentIndex);
