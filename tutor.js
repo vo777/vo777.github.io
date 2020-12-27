@@ -55,18 +55,6 @@ function startup()
 		
 	}
 	
-	timeRemaining = 0;
-	
-	question = document.getElementById("question");
-	answers = [];
-	answer[0] = document.getElementById("answer0");
-	answer[1] = document.getElementById("answer1");
-	answer[2] = document.getElementById("answer2");
-	answer[3] = document.getElementById("answer3");
-	summary = document.getElementById("summary");
-	
-	setInterval(worker, 100);
-	
 	// remove dupes
 	for (let i=0; i<dict.length; ++i)
 	{
@@ -79,6 +67,18 @@ function startup()
 			i--;
 		}
 	}
+	
+	timeRemaining = 0;
+	
+	question = document.getElementById("question");
+	answers = [];
+	answer[0] = document.getElementById("answer0");
+	answer[1] = document.getElementById("answer1");
+	answer[2] = document.getElementById("answer2");
+	answer[3] = document.getElementById("answer3");
+	summary = document.getElementById("summary");
+	
+	setInterval(worker, 100);
 	
 }
 
