@@ -10,7 +10,7 @@ let dict = [];
 let currentIndex = 0;
 let qq = [];
 let maxQ = 100;
-let noAnswer;
+let noCorrectAnswer;
 
 let wCount = 0;
 
@@ -107,7 +107,7 @@ function newQuestion()
 	}
 	
 
-	if (noAnswer)
+	if (noCorrectAnswer)
 	{
 		qq.push(currentIndex);
 		qq.push(currentIndex);
@@ -132,7 +132,7 @@ function newQuestion()
 	}
 	
 	timeRemaining = 100;
-	noAnswer = true;
+	noCorrectAnswer = true;
 	
 	summary.innerHTML = ''
 	+ ' w:'+(wCount-maxQ)
@@ -148,12 +148,12 @@ function newQuestion()
 
 function answer(x)
 {
-	noAnswer = false;
 	++answerCount;
 	answered = answer[x].innerHTML;
 	
 	if (answered == correctAnswer)
 	{
+		noCorrectAnswer = false;
 		question.bgColor = "#99FF99";
 		answer[x].bgColor = "#99FF99";
 		timeRemaining = 20;
