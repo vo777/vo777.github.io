@@ -125,6 +125,7 @@ function newQuestion()
 	question.innerHTML = dict[currentIndex][0];
 	correctAnswer = dict[currentIndex][1];
 	
+	question.bgColor = "white";
 	for (let i=0; i<4; ++i)
 	{
 		answer[i].innerHTML = dict[indices[i]][1];
@@ -154,6 +155,7 @@ function answer(x)
 	
 	if (answered == correctAnswer)
 	{
+		question.bgColor = "#99FF99";
 		answer[x].bgColor = "#99FF99";
 		timeRemaining = 20;
 		for (let i=0; i<4; ++i)
