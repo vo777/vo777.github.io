@@ -11,6 +11,7 @@ let dict = [];
 let currentIndex = 0;
 let qq = [];
 let maxQ = 100;
+let noAnswer;
 
 let wCount = 0;
 
@@ -62,7 +63,10 @@ function startup()
 	// remove dupes
 	for (let i=0; i<dict.length; ++i)
 	{
-		if (dict[i][0].toUpperCase() === dict[i][1].toUpperCase())
+		if (dict[i][0].toUpperCase() === dict[i][1].toUpperCase()
+		|| dict[i][0] === ""
+		|| dict[i][1] === ""
+		)
 		{
 			dict.splice(i, 1);
 			i--;
@@ -104,8 +108,17 @@ function newQuestion()
 	}
 	
 
-	let i = Math.floor(Math.random()*qq.length);
-	currentIndex = qq.splice(i, 1)[0];
+	if (noAnswer)
+	{
+		qq.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
+	}
+	else
+	{
+		let i = Math.floor(Math.random()*qq.length);
+		currentIndex = qq.splice(i, 1)[0];
+	}
 
 	let indices = genRandomAnswers(n, currentIndex);
 	
@@ -119,12 +132,14 @@ function newQuestion()
 	}
 	
 	timeRemaining = 100;
+	noAnswer = true;
 	
 	summary.innerHTML = 'p:' + Math.round(10*perf)/10
 	+ ' w:'+(wCount-maxQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
-	+ ' qq:'+qq.length
+	+ ' q:'+qq.length
+	+ ' u:'+[...new Set(qq)].length
 	+ '  ' + window.location.search
 	;
 	
@@ -133,6 +148,7 @@ function newQuestion()
 
 function answer(x)
 {
+	noAnswer = false;
 	++answerCount;
 	answered = answer[x].innerHTML;
 	
