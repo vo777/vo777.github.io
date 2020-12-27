@@ -38,6 +38,7 @@ function startup()
 			dict = dict.concat(spanish001);
 		}
 		if (langCodes.includes('1')) {loadSynonyms(dict, spanishSynonims);} 
+		
 		if (langCodes.includes('i')) {dict = dict.concat(italian);} 
 		if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
 		if (langCodes.includes('f')) {dict = dict.concat(french);} 
@@ -45,6 +46,13 @@ function startup()
 		if (langCodes.includes('g')) {dict = dict.concat(greek);} 
 		if (langCodes.includes('n')) {dict = dict.concat(indonesian);} 
 		if (langCodes.includes('m')) {dict = dict.concat(malay);} 
+		
+		if (langCodes.includes('c')) {dict = dict.concat(czech);} 
+		if (langCodes.includes('l')) {dict = dict.concat(polish);} 
+		if (langCodes.includes('r')) {dict = dict.concat(romanian);} 
+		if (langCodes.includes('t')) {dict = dict.concat(turkish);} 
+		if (langCodes.includes('h')) {dict = dict.concat(hebrew);} 
+		
 	}
 	
 	timeRemaining = 0;
