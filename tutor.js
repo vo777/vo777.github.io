@@ -190,6 +190,7 @@ function worker()
 
 function genRandomAnswers(n, m)
 {
+	/*
 	let bucket = [];
 	
 	for (let i=0; i<n; ++i) {
@@ -206,6 +207,26 @@ function genRandomAnswers(n, m)
 		let randomIndex = Math.floor(Math.random()*bucket.length);
 		res.push(bucket.splice(randomIndex, 1)[0]);
 	}
+	*/
+	
+	let res = [m];
+	let anticollision = dict[m][1];
+	
+	for (let i=0; i<3; ++i)
+	{
+		let randomIndex = Math.floor(Math.random()*n);
+		for (let k=0; k<10;++k)
+		{
+			if (! anticollision.includes(dict[randomIndex][1])) { break; }
+			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
+			randomIndex = Math.floor(Math.random()*n);
+			
+		}
+		anticollision += dict[randomIndex][1];
+		res.push(randomIndex);
+	}	
+	
+	
 	
 	shuffle(res);
 	shuffle(res); // for good measure
