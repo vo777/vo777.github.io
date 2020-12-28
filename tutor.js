@@ -100,6 +100,7 @@ function loadSynonyms(dest, src)
 			key = key.trim();
 			if (key.length == 0) { continue; }
 			dest.push([key, value]);
+			dest.push([value, key]);
 		}
 	}
 }
@@ -192,7 +193,7 @@ function genRandomAnswers(m, dict)
 {
 	
 	let res = [m];
-	let anticollision = dict[m][1];
+	let anticollision = dict[m][0] + dict[m][1];
 	
 	for (let i=0; i<3; ++i)
 	{
@@ -200,12 +201,19 @@ function genRandomAnswers(m, dict)
 		for (let k=0; k<10;++k)
 		{
 			randomIndex = Math.floor(Math.random()*dict.length);
-			if (! anticollision.includes(dict[randomIndex][1])) { break; }
+			if (  (! anticollision.includes(dict[randomIndex][0]) )
+			&&
+			(! anticollision.includes(dict[randomIndex][1])) ) 
+			{ 
+				break;
+			}
 			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
 		}
+		anticollision += dict[randomIndex][0];
 		anticollision += dict[randomIndex][1];
 		res.push(randomIndex);
-	}	
+	}
+	//console.log('ac:' + anticollision);
 	
 	
 	
