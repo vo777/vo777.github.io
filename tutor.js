@@ -196,13 +196,12 @@ function genRandomAnswers(m, dict)
 	
 	for (let i=0; i<3; ++i)
 	{
-		let randomIndex = Math.floor(Math.random()*dict.length);
+		let randomIndex;
 		for (let k=0; k<10;++k)
 		{
+			randomIndex = Math.floor(Math.random()*dict.length);
 			if (! anticollision.includes(dict[randomIndex][1])) { break; }
 			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
-			randomIndex = Math.floor(Math.random()*dict.length);
-			
 		}
 		anticollision += dict[randomIndex][1];
 		res.push(randomIndex);
