@@ -127,7 +127,7 @@ function newQuestion()
 		currentIndex = qq.splice(i, 1)[0];
 	}
 
-	let indices = genRandomAnswers(n, currentIndex);
+	let indices = genRandomAnswers(currentIndex, dict);
 	
 	question.innerHTML = dict[currentIndex][0];
 	correctAnswer = dict[currentIndex][1];
@@ -188,38 +188,20 @@ function worker()
 	if (timeRemaining < 0) {newQuestion();}
 }
 
-function genRandomAnswers(n, m)
+function genRandomAnswers(m, dict)
 {
-	/*
-	let bucket = [];
-	
-	for (let i=0; i<n; ++i) {
-		if (i != m)
-		{
-			bucket.push(i);
-		}
-	}
-	
-	let res = [m];
-	
-	for (let i=0; i<3; ++i)
-	{
-		let randomIndex = Math.floor(Math.random()*bucket.length);
-		res.push(bucket.splice(randomIndex, 1)[0]);
-	}
-	*/
 	
 	let res = [m];
 	let anticollision = dict[m][1];
 	
 	for (let i=0; i<3; ++i)
 	{
-		let randomIndex = Math.floor(Math.random()*n);
+		let randomIndex = Math.floor(Math.random()*dict.length);
 		for (let k=0; k<10;++k)
 		{
 			if (! anticollision.includes(dict[randomIndex][1])) { break; }
 			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
-			randomIndex = Math.floor(Math.random()*n);
+			randomIndex = Math.floor(Math.random()*dict.length);
 			
 		}
 		anticollision += dict[randomIndex][1];
