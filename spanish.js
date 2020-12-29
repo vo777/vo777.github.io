@@ -2099,12 +2099,12 @@ let spanish = [ ["de", "of"],
 ["", ""],
 ["", ""],
 ["", ""],
-["", ""],
-["", ""],
-["", ""],
-["", ""],
 //
-["temer", "to fear"]
+["temer", "to fear"],
+["alcanzar", "reach"],
+["", ""],
+["", ""],
+["", ""],
 ];
 
 
@@ -2290,6 +2290,9 @@ let spanishSynonims = [
 "restar: sustraigo, quito, deduzco, tomo, descuento, saco.  rebajo, disminuyo, mermo, aminoro, cerceno.",
 "desarrollar: desplegar, desenvolver, desdoblar, tender, desenrollar, abrir, deshacer.  ampliar, extender, ensanchar, amplificar, explayar, estirar, expandir, propagar, difundir.  aumentar, acrecentar, incrementar, crecer, perfeccionar, progresar, prosperar, mejorar, adelantar, subir, avanzar.  explicar, exponer, comentar, interpretar, glosar, revelar, esclarecer, definir, especificar.  hacerse, madurar, estudiar, analizar, argumentar, tratar, investigar, tomar vuelo.  realizar, llevar a cabo.",
 "embargar: retengo, impido, suspendo, estorbo, embarazo, detengo, paralizo, abrumo.  secuestro, confisco, decomiso, incauto, aprehendo, usurpo, recojo, desposeo, bloqueo, quito, apropio, apodero, domino.  absorbo, fascino, alucino, maravillo, embeleso, entusiasmo, embobo, cautivo, enajeno, atonto.  ejecuto, intervengo, aprehender los bienes.   ",
+"alcanzar : lograr, conseguir, obtener, adquirir, descubrir, merecer, sacar, agenciar, inventar, averiguar, merendarse, resolver.  coger, tocar, llegar, atrapar, tomar, pillar, cazar, apresar, aprehender.  comprender, entender, saber, penetrar.  rebasar, sobrepasar, aventajar. ",
+"",
+"",
 "",
 "",
 ];
