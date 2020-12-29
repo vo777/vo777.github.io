@@ -162,14 +162,14 @@ function answer(x)
 	if (answered == correctAnswer)
 	{
 		noCorrectAnswer = false;
-		question.bgColor = "#99FF99";
-		answer[x].bgColor = "#99FF99";
+		question.bgColor = "#CCFFCC";
+		//answer[x].bgColor = "#99FF99";
 		timeRemaining = 20;
 		for (let i=0; i<4; ++i)
 		{
 //			if (i != x) {answer[i].innerHTML = "-";}
 			answer[i].innerHTML = correctAnswer;
-			answer[i].bgColor = "#99FF99";
+			answer[i].bgColor = "#CCFFCC";
 		}
 	}
 	else
