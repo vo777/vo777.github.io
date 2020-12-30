@@ -962,7 +962,7 @@ const portuguese = [
  ["animais", "animals"],
  ["interessante", "interesting"],
  ["posição", "position"],
- ["branco", "White"],
+ ["branco", "white"],
  ["legal", "cool"],
  ["rio", "river"],
  ["voltou", "came back"],
