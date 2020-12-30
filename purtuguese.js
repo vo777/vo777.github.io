@@ -1,7 +1,7 @@
 const portuguese = [
  ["que", "what"],
- ["o", "The"],
- ["a", "The"],
+ ["o", "the"],
+ ["a", "the"],
  ["não", "no"],
  ["de", "in"],
  ["é", "It's"],
@@ -118,7 +118,7 @@ const portuguese = [
  ["sobre", "about"],
  ["certo", "right"],
  ["sempre", "ever"],
- ["sabe", "You know"],
+ ["sabe", "you know"],
  ["és", "are"],
  ["depois", "after"],
  ["vida", "life"],
