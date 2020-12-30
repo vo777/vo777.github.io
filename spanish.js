@@ -1,4 +1,4 @@
-let spanish = [ ["de", "of"],
+const spanish = [ ["de", "of"],
 ["que", "what"],
 ["no", "not"],
 ["a", "to"],
@@ -2108,7 +2108,7 @@ let spanish = [ ["de", "of"],
 ];
 
 
-let spanish001 = [
+const spanish001 = [
 ["vale", "okay"],
 ["bueno", "okay"],
 ["bien", "okay"],
@@ -2191,7 +2191,7 @@ let spanish001 = [
 ];
 
 
-let spanishSynonims = [
+const spanishSynonims = [
 "casa : morada, vivienda, hogar, domicilio, residencia, mansión, habitación, palacio, estancia, paradero, señas, dirección, edificio, inmueble, obra, edificación, construcción, refugio, nido, cobijo, techo, albergue, alojamiento, posada, piso, apartamento, departamento, despacho,  firma, empresa, sociedad, compañía, asociación, comercio, corporación, entidad, consorcio, razón social,  prosapia, cepa, sangre, abolengo, blasón, linaje, casta, familia, raza, estirpe, progenie, descendencia,  quinta, cortijo, finca, alquería, casería, palacete, villa, caserón",
 "bueno : humano, caritativo, compasivo, piadoso, bienhechor, misericordioso, clemente, sensible, desprendido, generoso, sacrificado, benévolo, benigno, bondadoso, indulgente, comprensivo, virtuoso, honesto,  afable, servicial, agradable, afectuoso, divertido, cordial, tierno,  cándido, simple, bonachón, inocente, crédulo, buenazo, provechoso, ventajoso, beneficioso, valioso, fructuoso, productivo, adecuado, conveniente, utilizable, servible, favorable, propicio,  justo, estricto, exacto, riguroso,  sano, saludable, benéfico, robusto,  excelente, óptimo, grande, elevado, distinguido, escogido,  bastante, suficiente, basta, hábil ",
 "mal: enfermedad, dolencia, indisposición, achaque, morbo, trastorno, desarreglo, complicación, dificultad.  ofensa, ignominia, infamia, inconveniencia, maldición, traición, ganga, bajeza, vileza, indignidad, mezquindad, jugada, faena, vicio, depravación, inmoralidad, deshonestidad, maldad, iniquidad, perversidad, malignidad, crueldad, ferocidad, abuso, injusticia, delito.  desgracia, molestia, adversidad, desventura, contrariedad, fatalidad, dolor, pena, aflicción, tristeza, desolación, amargura, padecimiento, sufrimiento, malestar, tormento.  calamidad, pérdida, ruina, destrucción, catástrofe, desastre, estrago, plaga, peste, daño, perjuicio, deterioro, menoscabo, detrimento, desventaja, imperfección, lacra, tara.",
