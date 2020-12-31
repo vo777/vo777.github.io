@@ -22,6 +22,7 @@ function startup()
 	{
 		dict = dict.concat(spanish);
 		dict = dict.concat(spanish001);
+		dict = dict.concat(spanishQ);
 		loadSynonyms(dict, spanishSynonims);
 		
 		dict = dict.concat(italian);
@@ -49,6 +50,7 @@ function startup()
 		if (langCodes.includes('m')) {dict = dict.concat(malay);} 
 		if (langCodes.includes('n')) {dict = dict.concat(indonesian);} 
 		if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
+		if (langCodes.includes('q')) {dict = dict.concat(spanishQ);} 
 		if (langCodes.includes('r')) {dict = dict.concat(romanian);} 
 		if (langCodes.includes('t')) {dict = dict.concat(turkish);} 
 		
