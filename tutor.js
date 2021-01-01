@@ -196,7 +196,8 @@ function genRandomAnswers(m, dict)
 {
 	
 	let res = [m];
-	let anticollision = dict[m][0] + dict[m][1];
+	let anticollision = dict[m][0].toLowerCase().trim();
+	anticollision += dict[m][1].toLowerCase().trim();
 	
 	for (let i=0; i<3; ++i)
 	{
@@ -204,16 +205,16 @@ function genRandomAnswers(m, dict)
 		for (let k=0; k<10;++k)
 		{
 			randomIndex = Math.floor(Math.random()*dict.length);
-			if (  (! anticollision.includes(dict[randomIndex][0]) )
+			if (  (! anticollision.includes(dict[randomIndex][0].toLowerCase().trim()) )
 			&&
-			(! anticollision.includes(dict[randomIndex][1])) ) 
+			(! anticollision.includes(dict[randomIndex][1].toLowerCase().trim())) ) 
 			{ 
 				break;
 			}
 			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
 		}
-		anticollision += dict[randomIndex][0];
-		anticollision += dict[randomIndex][1];
+		anticollision += dict[randomIndex][0].toLowerCase().trim();
+		anticollision += dict[randomIndex][1].toLowerCase().trim();
 		res.push(randomIndex);
 	}
 	//console.log('ac:' + anticollision);
