@@ -9,7 +9,7 @@ let dict = [];
 
 let currentIndex = 0;
 let qq = [];
-const maxQ = 100;
+const maxQ = 15;
 let noCorrectAnswer;
 
 let wCount = 0;
