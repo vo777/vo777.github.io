@@ -9,7 +9,7 @@ let dict = [];
 
 let currentIndex = 0;
 let qq = [];
-const maxQ = 15;
+const maxQ = 20;
 let noCorrectAnswer;
 
 let wCount = 0;
@@ -144,13 +144,14 @@ function newQuestion()
 	timeRemaining = 100;
 	noCorrectAnswer = true;
 	
-	summary.innerHTML = ''
+	summary.innerHTML = '<p style="color:White;">'
 	+ ' w:'+(wCount-maxQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
 	+ ' q:'+qq.length
 	+ ' u:'+[...new Set(qq)].length
 	+ '  ' + window.location.search
+	+ '</p>';
 	;
 	
 		
@@ -178,6 +179,8 @@ function answer(x)
 	{
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
+		qq.push(currentIndex);
+		qq.push(currentIndex);
 		qq.push(currentIndex);
 		qq.push(currentIndex);
 		qq.push(currentIndex);
