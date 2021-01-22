@@ -15,6 +15,7 @@ let noCorrectAnswer;
 let wCount = 0;
 
 let debugInfo = "";
+let debugInfoFlag = false;
 
 function startup()
 {
@@ -155,14 +156,30 @@ function newQuestion()
 	+ '  ' + window.location.search
 	+ '';
 	
-	summary.innerHTML = '';
+	if (debugInfoFlag)
+	{
+		summary.innerHTML = debugInfo;
+	}
+	else
+	{
+		summary.innerHTML = '';
+	}
 	
 		
 }
 
 function showDebug()
 {
-	summary.innerHTML = debugInfo;
+	debugInfoFlag = !debugInfoFlag;
+	
+	if (debugInfoFlag)
+	{
+		summary.innerHTML = debugInfo;
+	}
+	else
+	{
+		summary.innerHTML = '';
+	}
 }
 
 function answer(x)
