@@ -14,6 +14,8 @@ let noCorrectAnswer;
 
 let wCount = 0;
 
+let debugInfo = "";
+
 function startup()
 {
 	let langCodes = window.location.search;
@@ -144,17 +146,23 @@ function newQuestion()
 	timeRemaining = 100;
 	noCorrectAnswer = true;
 	
-	summary.innerHTML = '<p style="color:White;">'
+	debugInfo = ''
 	+ ' w:'+(wCount-maxQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
 	+ ' q:'+qq.length
 	+ ' u:'+[...new Set(qq)].length
 	+ '  ' + window.location.search
-	+ '</p>';
-	;
+	+ '';
+	
+	summary.innerHTML = '';
 	
 		
+}
+
+function showDebug()
+{
+	summary.innerHTML = debugInfo;
 }
 
 function answer(x)
