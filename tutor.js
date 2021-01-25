@@ -128,8 +128,20 @@ function newQuestion()
 	}
 	else
 	{
-		let i = Math.floor(Math.random()*qq.length);
-		currentIndex = qq.splice(i, 1)[0];
+		// next question != the current (i.e. previous) question
+		let nextIndexIntoQ = -1;
+		for (let j=0; j<100; ++j)
+		{
+			let tmp = Math.floor(Math.random()*qq.length);
+			//console.log(j, tmp, qq[tmp], currentIndex);
+			if (qq[tmp] != currentIndex)
+			{
+				nextIndexIntoQ = tmp;
+				break;
+			}
+		}
+		
+		currentIndex = qq.splice(nextIndexIntoQ, 1)[0];
 	}
 
 	let indices = genRandomAnswers(currentIndex, dict);
@@ -155,6 +167,11 @@ function newQuestion()
 	+ ' u:'+[...new Set(qq)].length
 	+ '  ' + window.location.search
 	+ '';
+	
+	for (let i=0; i<qq.length; ++i)
+	{
+		debugInfo += ' / ' + dict[qq[i]][0];
+	}
 	
 	if (debugInfoFlag)
 	{
