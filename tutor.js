@@ -8,8 +8,9 @@ let answerCount = 0;
 let dict = [];
 
 let currentIndex = 0;
+let answerIndices = [0, 0, 0, 0];
 let qq = [];
-const maxQ = 20;
+const minQ = 21;
 let noCorrectAnswer;
 
 let wCount = 0;
@@ -113,7 +114,7 @@ function newQuestion()
 {
 	let n = dict.length;
 	
-	while (qq.length < maxQ)
+	while (qq.length < minQ)
 	{
 		qq.push(Math.floor(Math.random()*n));
 		++wCount;
@@ -144,7 +145,7 @@ function newQuestion()
 		currentIndex = qq.splice(nextIndexIntoQ, 1)[0];
 	}
 
-	let indices = genRandomAnswers(currentIndex, dict);
+	answerIndices = genRandomAnswers(currentIndex, dict);
 	
 	question.innerHTML = dict[currentIndex][0];
 	correctAnswer = dict[currentIndex][1];
@@ -152,7 +153,7 @@ function newQuestion()
 	question.bgColor = "white";
 	for (let i=0; i<4; ++i)
 	{
-		answer[i].innerHTML = dict[indices[i]][1];
+		answer[i].innerHTML = dict[answerIndices[i]][1];
 		answer[i].bgColor = "white";
 	}
 	
@@ -160,7 +161,7 @@ function newQuestion()
 	noCorrectAnswer = true;
 	
 	debugInfo = ''
-	+ ' w:'+(wCount-maxQ)
+	+ ' w:'+(wCount-minQ)
 	+ ' a:'+answerCount
 	+ ' n:'+n
 	+ ' q:'+qq.length
@@ -226,6 +227,11 @@ function answer(x)
 		qq.push(currentIndex);
 		qq.push(currentIndex);
 		qq.push(currentIndex);
+		qq.push(answerIndices[x]);
+		qq.push(answerIndices[x]);
+		qq.push(answerIndices[x]);
+		qq.push(answerIndices[x]);
+		qq.push(answerIndices[x]);
 	}
 
 }
