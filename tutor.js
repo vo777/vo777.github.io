@@ -46,6 +46,7 @@ function startup()
 		
 		if (langCodes.includes('c')) {dict = dict.concat(czech);} 
 		if (langCodes.includes('d')) {dict = dict.concat(german);} 
+		if (langCodes.includes('e')) {dict = dict.concat(esperanto);} 
 		if (langCodes.includes('f')) {dict = dict.concat(french);} 
 		if (langCodes.includes('g')) {dict = dict.concat(greek);} 
 		if (langCodes.includes('h')) {dict = dict.concat(hebrew);} 
@@ -63,13 +64,19 @@ function startup()
 	// remove dupes
 	for (let i=0; i<dict.length; ++i)
 	{
-		if (dict[i][0].toUpperCase() === dict[i][1].toUpperCase()
+		if (dict[i].length != 2)
+		{
+			//console.log('format: ' + dict[i])
+		}
+		if (dict[i].length != 2
+		|| dict[i][0].toUpperCase() === dict[i][1].toUpperCase()
 		|| dict[i][0] === ""
 		|| dict[i][1] === ""
 		)
 		{
-			dict.splice(i, 1);
+			let tmp = dict.splice(i, 1);
 			i--;
+			//console.log('skip: ' + tmp)
 		}
 	}
 	
