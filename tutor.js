@@ -234,6 +234,7 @@ function answer(x)
 		qq.push(answerIndices[x]);
 		qq.push(answerIndices[x]);
 		qq.push(answerIndices[x]);
+		++wCount;
 	}
 
 }
