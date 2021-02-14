@@ -10,7 +10,7 @@ let dict = [];
 let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
 let qq = [];
-const minQ = 21;
+const minQ = 31;
 let noCorrectAnswer;
 
 let wCount = 0;
@@ -212,7 +212,7 @@ function answer(x)
 		noCorrectAnswer = false;
 		question.bgColor = "#CCFFCC";
 		//answer[x].bgColor = "#99FF99";
-		timeRemaining = 20;
+		timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 //			if (i != x) {answer[i].innerHTML = "-";}
