@@ -153,7 +153,7 @@ function newQuestion()
 	correctAnswer = dict[currentIndex][1];
 	
 //	question.bgColor = "#F8F8F8";
-	question.style.backgroundColor = "#F8F8F8";
+	question.style.backgroundColor = "#FFFFFF";
 	
 	for (let i=0; i<4; ++i)
 	{
@@ -213,15 +213,11 @@ function answer(x)
 	if (answered == correctAnswer)
 	{
 		noCorrectAnswer = false;
-		//question.bgColor = "#EEFFEE";
 		question.style.backgroundColor = "#EEFFEE";
-		//answer[x].bgColor = "#99FF99";
 		timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
-//			if (i != x) {answer[i].innerHTML = "-";}
 			answer[i].innerHTML = correctAnswer;
-			//answer[i].bgColor = "#EEFFEE";
 			answer[i].style.backgroundColor = "#EEFFEE";
 		}
 	}
@@ -231,12 +227,21 @@ function answer(x)
 		timeRemaining = 50;
 		
 		qq.push(currentIndex);
-		qq.push(answerIndices[x]);
+		//qq.push(answerIndices[x]);
 
 		if (qq.length < maxQ)
 		{
-			qq = qq.concat(findAllRelatedTo(dict, currentIndex));
-			qq = qq.concat(findAllRelatedTo(dict, answerIndices[x]));
+			const tmp = [...findAllRelatedTo(dict, currentIndex),
+			...findAllRelatedTo(dict, answerIndices[x])];
+			//console.log(tmp);
+			
+			for (let ttt of tmp)
+			{
+				if (qq.indexOf(ttt) < 0) { qq.push(ttt); }
+			}
+			
+			//qq = qq.concat(findAllRelatedTo(dict, currentIndex));
+			//qq = qq.concat(findAllRelatedTo(dict, answerIndices[x]));
 		}
 		
 		++wCount;
@@ -249,7 +254,6 @@ function findAllRelatedTo(dic, index)
 {
 	const a = dic[index][0].toLowerCase().trim();
 	const b = dic[index][1].toLowerCase().trim();
-	//console.log('findAllRelatedTo', a,b);
 	
 	const res = [];
 	
@@ -296,7 +300,6 @@ function genRandomAnswers(m, dict)
 			{ 
 				break;
 			}
-			//console.log('collision: ' +  dict[randomIndex][1] + '//' + anticollision);
 		}
 		anticollision += dict[randomIndex][0].toLowerCase().trim();
 		anticollision += dict[randomIndex][1].toLowerCase().trim();
