@@ -32,16 +32,24 @@
     <!-- disable scrollbars: -->
     <style type="text/css"> body { overflow: hidden; } </style>
 	
-	<table border=1 width='100%' style="font-size:220%">
-	<th id='question' onclick='showDebug();'>qqqqqq</th>
-	<tr><td id='answer0' onclick='answer(0);'>aaa0000</td></tr>
-	<tr><td id='answer1' onclick='answer(1);'>aaa1111</td></tr>
-	<tr><td id='answer2' onclick='answer(2);'>aaa2222</td></tr>
-	<tr><td id='answer3' onclick='answer(3);'>aaa3333</td></tr>
-	</table>
+	<style>
+	div 
+	{
+	   text-align: center;
+	   font-size:  220%;
+	   margin: 4px;
+	}
+	</style>
+
+	<div>
+	<div id='question' onclick='showDebug();'>qqqqqq</div>
+	<div id='answer0' onclick='answer(0);'>aaa0000</div>
+	<div id='answer1' onclick='answer(1);'>aaa0000</div>
+	<div id='answer2' onclick='answer(2);'>aaa0000</div>
+	<div id='answer3' onclick='answer(3);'>aaa0000</div>
+	</div>
 	
 	<p id='summary'>summary</p>
-	
 	
   </body>
 </html>

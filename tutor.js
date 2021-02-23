@@ -11,7 +11,7 @@ let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
 let qq = [];
 const minQ = 31;
-const maxQ = 100;
+const maxQ = 1000;
 
 let noCorrectAnswer;
 
@@ -152,18 +152,21 @@ function newQuestion()
 	question.innerHTML = dict[currentIndex][0];
 	correctAnswer = dict[currentIndex][1];
 	
-	question.bgColor = "white";
+//	question.bgColor = "#F8F8F8";
+	question.style.backgroundColor = "#F8F8F8";
+	
 	for (let i=0; i<4; ++i)
 	{
 		answer[i].innerHTML = dict[answerIndices[i]][1];
-		answer[i].bgColor = "white";
+		//answer[i].bgColor = "#F8F8F8";
+		answer[i].style.backgroundColor = "#F8F8F8";
 	}
 	
 	timeRemaining = 100;
 	noCorrectAnswer = true;
 	
 	debugInfo = ''
-	+ ' w:'+(wCount-minQ)
+	//+ ' w:'+(wCount-minQ) does not work
 	+ ' a:'+answerCount
 	+ ' n:'+n
 	+ ' q:'+qq.length
@@ -171,10 +174,10 @@ function newQuestion()
 	+ '  ' + window.location.search
 	+ '';
 	
-	for (let i=0; i<qq.length; ++i)
-	{
-		debugInfo += ' / ' + dict[qq[i]][0];
-	}
+//	for (let i=0; i<qq.length; ++i)
+//	{
+//		debugInfo += ' / ' + dict[qq[i]][0];
+//	}
 	
 	if (debugInfoFlag)
 	{
@@ -210,14 +213,16 @@ function answer(x)
 	if (answered == correctAnswer)
 	{
 		noCorrectAnswer = false;
-		question.bgColor = "#EEFFEE";
+		//question.bgColor = "#EEFFEE";
+		question.style.backgroundColor = "#EEFFEE";
 		//answer[x].bgColor = "#99FF99";
 		timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 //			if (i != x) {answer[i].innerHTML = "-";}
 			answer[i].innerHTML = correctAnswer;
-			answer[i].bgColor = "#EEFFEE";
+			//answer[i].bgColor = "#EEFFEE";
+			answer[i].style.backgroundColor = "#EEFFEE";
 		}
 	}
 	else
@@ -253,10 +258,10 @@ function findAllRelatedTo(dic, index)
 		const c = dic[i][0].toLowerCase().trim();
 		const d = dic[i][1].toLowerCase().trim();
 		
-		if (a.includes(c)&&c.length>2 || c.includes(a)&&a.length>2
-		|| a.includes(d)&&d.length>2 || d.includes(a)&&a.length>2
-		|| b.includes(d)&&d.length>2 || d.includes(b)&&b.length>2
-		|| b.includes(c)&&c.length>2 || c.includes(b)&&b.length>2
+		if (a.includes(c)&&c.length>3 || c.includes(a)&&a.length>3
+		|| a.includes(d)&&d.length>3 || d.includes(a)&&a.length>3
+		|| b.includes(d)&&d.length>3 || d.includes(b)&&b.length>3
+		|| b.includes(c)&&c.length>3 || c.includes(b)&&b.length>3
 		)
 		{
 			res.push(i);
