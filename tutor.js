@@ -11,6 +11,8 @@ let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
 let qq = [];
 const minQ = 31;
+const maxQ = 100;
+
 let noCorrectAnswer;
 
 let wCount = 0;
@@ -125,9 +127,7 @@ function newQuestion()
 
 	if (noCorrectAnswer)
 	{
-		qq.push(currentIndex);
-		qq.push(currentIndex);
-		qq.push(currentIndex);
+		qq = qq.concat([currentIndex, currentIndex, currentIndex]);
 	}
 	else
 	{
@@ -210,35 +210,61 @@ function answer(x)
 	if (answered == correctAnswer)
 	{
 		noCorrectAnswer = false;
-		question.bgColor = "#CCFFCC";
+		question.bgColor = "#EEFFEE";
 		//answer[x].bgColor = "#99FF99";
 		timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 //			if (i != x) {answer[i].innerHTML = "-";}
 			answer[i].innerHTML = correctAnswer;
-			answer[i].bgColor = "#CCFFCC";
+			answer[i].bgColor = "#EEFFEE";
 		}
 	}
 	else
 	{
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
-		qq.push(currentIndex);
-		qq.push(currentIndex);
-		qq.push(currentIndex);
-		qq.push(currentIndex);
+		
 		qq.push(currentIndex);
 		qq.push(answerIndices[x]);
-		qq.push(answerIndices[x]);
-		qq.push(answerIndices[x]);
-		qq.push(answerIndices[x]);
-		qq.push(answerIndices[x]);
+
+		if (qq.length < maxQ)
+		{
+			qq = qq.concat(findAllRelatedTo(dict, currentIndex));
+			qq = qq.concat(findAllRelatedTo(dict, answerIndices[x]));
+		}
+		
 		++wCount;
 	}
 
 }
 
+
+function findAllRelatedTo(dic, index)
+{
+	const a = dic[index][0].toLowerCase().trim();
+	const b = dic[index][1].toLowerCase().trim();
+	//console.log('findAllRelatedTo', a,b);
+	
+	const res = [];
+	
+	for (let i=0; i<dic.length; ++i)
+	{
+		const c = dic[i][0].toLowerCase().trim();
+		const d = dic[i][1].toLowerCase().trim();
+		
+		if (a.includes(c)&&c.length>2 || c.includes(a)&&a.length>2
+		|| a.includes(d)&&d.length>2 || d.includes(a)&&a.length>2
+		|| b.includes(d)&&d.length>2 || d.includes(b)&&b.length>2
+		|| b.includes(c)&&c.length>2 || c.includes(b)&&b.length>2
+		)
+		{
+			res.push(i);
+		}
+	}
+	
+	return res;
+}
 
 function worker()
 {
