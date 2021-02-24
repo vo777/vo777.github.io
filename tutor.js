@@ -31,7 +31,7 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes = "s1qdefimnprt";// all except "chlg"
+		langCodes = "s1qdefimnprtl";// all except "chog"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -48,7 +48,8 @@ function startup()
 	if (langCodes.includes('g')) {dict = dict.concat(greek);} 
 	if (langCodes.includes('h')) {dict = dict.concat(hebrew);} 
 	if (langCodes.includes('i')) {dict = dict.concat(italian);} 
-	if (langCodes.includes('l')) {dict = dict.concat(polish);} 
+	if (langCodes.includes('o')) {dict = dict.concat(polish);} 
+	if (langCodes.includes('l')) {dict = dict.concat(latin);} 
 	if (langCodes.includes('m')) {dict = dict.concat(malay);} 
 	if (langCodes.includes('n')) {dict = dict.concat(indonesian);} 
 	if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
@@ -63,7 +64,7 @@ function startup()
 	{
 		if (dict[i].length != 2)
 		{
-			//console.log('format: ' + dict[i])
+			console.log('format: ' + dict[i])
 		}
 		if (dict[i].length != 2
 		|| dict[i][0].toUpperCase() === dict[i][1].toUpperCase()
@@ -73,7 +74,7 @@ function startup()
 		{
 			let tmp = dict.splice(i, 1);
 			i--;
-			//console.log('skip: ' + tmp)
+			console.log('skip: ' + tmp)
 		}
 	}
 	
