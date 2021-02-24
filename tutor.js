@@ -31,7 +31,7 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes = "s1qdefimnprtl";// all except "chog"
+		langCodes = "s1qdefimnprt";// all except "chogl"
 	}
 	
 	if (langCodes.includes('s')) 
