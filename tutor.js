@@ -11,7 +11,7 @@ let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
 let qq = [];
 const minQ = 1;
-const maxQ = 300;
+const maxQ = 100;
 
 let noCorrectAnswer;
 
