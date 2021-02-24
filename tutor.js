@@ -31,7 +31,7 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes = "s1qdefgimnprt";// all except "chl"
+		langCodes = "s1qdefimnprt";// all except "chlg"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -124,6 +124,12 @@ function newQuestion()
 		++wCount;
 	}
 	
+	if (answerCount % 10 == 0 && qq.length < maxQ)
+	{
+		//console.log('occasionally randomly add new word');
+		qq.push(Math.floor(Math.random()*n));
+		++wCount;
+	}
 
 	if (noCorrectAnswer)
 	{
@@ -264,10 +270,10 @@ function findAllRelatedTo(dic, index)
 		const c = dic[i][0].toLowerCase().trim();
 		const d = dic[i][1].toLowerCase().trim();
 		
-		if (a.includes(c)&&c.length>3 || c.includes(a)&&a.length>3
-		|| a.includes(d)&&d.length>3 || d.includes(a)&&a.length>3
-		|| b.includes(d)&&d.length>3 || d.includes(b)&&b.length>3
-		|| b.includes(c)&&c.length>3 || c.includes(b)&&b.length>3
+		if (a.includes(c)&&c.length>2 || c.includes(a)&&a.length>2
+		|| a.includes(d)&&d.length>2 || d.includes(a)&&a.length>2
+		|| b.includes(d)&&d.length>2 || d.includes(b)&&b.length>2
+		|| b.includes(c)&&c.length>2 || c.includes(b)&&b.length>2
 		)
 		{
 			res.push(i);
