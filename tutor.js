@@ -10,8 +10,8 @@ let dict = [];
 let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
 let qq = [];
-const minQ = 31;
-const maxQ = 100;
+const minQ = 1;
+const maxQ = 300;
 
 let noCorrectAnswer;
 
@@ -234,10 +234,12 @@ function answer(x)
 			const tmp = [...findAllRelatedTo(dict, currentIndex),
 			...findAllRelatedTo(dict, answerIndices[x])];
 			//console.log(tmp);
+			shuffle(tmp);
 			
 			for (let ttt of tmp)
 			{
 				if (qq.indexOf(ttt) < 0) { qq.push(ttt); }
+				if (qq.length > maxQ) { break; }
 			}
 			
 			//qq = qq.concat(findAllRelatedTo(dict, currentIndex));
