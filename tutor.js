@@ -236,8 +236,6 @@ function answer(x)
 		qq.push(currentIndex);
 		qq.push(currentIndex);
 		qq.push(currentIndex);
-		qq.push(currentIndex);
-		qq.push(currentIndex);
 		//qq.push(answerIndices[x]);
 
 		if (qq.length < maxQ)
