@@ -234,6 +234,10 @@ function answer(x)
 		timeRemaining = 50;
 		
 		qq.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
+		qq.push(currentIndex);
 		//qq.push(answerIndices[x]);
 
 		if (qq.length < maxQ)
