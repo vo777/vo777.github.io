@@ -19,7 +19,7 @@ const data =
 	summary : undefined
 };
 
-const threshold1 = 0.6;
+const threshold1 = 0.7;
 const threshold2 = 0.8;
 const maxQ = 50;
 
@@ -137,40 +137,21 @@ function newQuestion()
 		
 		//console.log('correctRatio:',correctRatio);
 		
-		if (correctRatio < threshold1 && data.easyWords.size>0)
+		if (correctRatio < threshold1 
+			&& data.easyWords.size>0 
+			&& Math.random()<threshold2)
 		{
 			//console.log('get easy word');
 			const tmpVals = [...data.easyWords];
 			const tmp = Math.floor(Math.random()*tmpVals.length);
-			const tmp1 = tmpVals[tmp];
-			if (tmp1 == data.currentIndex)
-			{
-				// anti-repeat
-				data.currentIndex 
-				= Math.floor(Math.random()*data.dict.length);
-			}
-			else
-			{
-				data.currentIndex = tmp1;
-			}
+			data.currentIndex = tmpVals[tmp];
 		}
-		else if (correctRatio < threshold2 && data.qq.length>0 
-		|| data.qq.length>maxQ)
+		else if ((correctRatio < threshold2||Math.random()<0.2) 
+		&& data.qq.length>0)
 		{
 			//console.log('get qq word');
 			const tmp = Math.floor(Math.random()*data.qq.length);
-			const tmp1 = data.qq.splice(tmp, 1)[0];
-			if (tmp1 == data.currentIndex)
-			{
-				// anti-repeat
-				data.qq.push(tmp1);
-				data.currentIndex 
-				= Math.floor(Math.random()*data.dict.length);
-			}
-			else
-			{
-				data.currentIndex = tmp1;
-			}
+			data.currentIndex = data.qq.splice(tmp, 1)[0];
 		}
 		else
 		{
