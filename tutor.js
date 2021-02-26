@@ -13,14 +13,15 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : 0,
-	answerIndices : [0, 0, 0, 0]
+	answerIndices : [0, 0, 0, 0],
+	question : undefined,
+	answers : undefined,
+	summary : undefined
 };
 
 const threshold1 = 0.6;
 const threshold2 = 0.8;
 const maxQ = 50;
-
-let question, answers, summary;
 
 function startup()
 {
@@ -80,13 +81,13 @@ function startup()
 	
 	data.timeRemaining = 0;
 	
-	question = document.getElementById("question");
-	answers = [];
-	answer[0] = document.getElementById("answer0");
-	answer[1] = document.getElementById("answer1");
-	answer[2] = document.getElementById("answer2");
-	answer[3] = document.getElementById("answer3");
-	summary = document.getElementById("summary");
+	data.question = document.getElementById("question");
+	data.answers = [];
+	data.answers[0] = document.getElementById("answer0");
+	data.answers[1] = document.getElementById("answer1");
+	data.answers[2] = document.getElementById("answer2");
+	data.answers[3] = document.getElementById("answer3");
+	data.summary = document.getElementById("summary");
 	
 	setInterval(worker, 100);
 }
@@ -126,7 +127,7 @@ function newQuestion()
 	{
 		data.qq = data.qq.concat([data.currentIndex, 
 		data.currentIndex, data.currentIndex]);
-		// and repeat the currentIndex
+		// do nothing: repeat the currentIndex
 	}
 	else
 	{
@@ -180,15 +181,15 @@ function newQuestion()
 
 	data.answerIndices = genRandomAnswers(data.currentIndex, data.dict);
 	
-	question.innerHTML = data.dict[data.currentIndex][0];
-//	question.style.backgroundColor = "#FFFFFF";
-	question.style.color = "#FFFFFF";
+	data.question.innerHTML = data.dict[data.currentIndex][0];
+//	data.question.style.backgroundColor = "#FFFFFF";
+	data.question.style.color = "#FFFFFF";
 	
 	for (let i=0; i<4; ++i)
 	{
-		answer[i].innerHTML = data.dict[data.answerIndices[i]][1];
-//		answer[i].style.backgroundColor = "#F8F8F8";
-		answer[i].style.color = "#F8F8F8";
+		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
+//		data.answers[i].style.backgroundColor = "#F8F8F8";
+		data.answers[i].style.color = "#F8F8F8";
 	}
 	
 	data.timeRemaining = 100;
@@ -210,11 +211,11 @@ function newQuestion()
 	
 	if (data.debugInfoFlag)
 	{
-		summary.innerHTML = data.debugInfo;
+		data.summary.innerHTML = data.debugInfo;
 	}
 	else
 	{
-		summary.innerHTML = '';
+		data.summary.innerHTML = '';
 	}
 	
 		
@@ -226,18 +227,18 @@ function showDebug()
 	
 	if (data.debugInfoFlag)
 	{
-		summary.innerHTML = data.debugInfo;
+		data.summary.innerHTML = data.debugInfo;
 	}
 	else
 	{
-		summary.innerHTML = '';
+		data.summary.innerHTML = '';
 	}
 }
 
 function answer(x)
 {
 	++data.answerCount;
-	const answered = answer[x].innerHTML;
+	const answered = data.answers[x].innerHTML;
 	const correctAnswer = data.dict[data.currentIndex][1];
 	
 	if (answered == correctAnswer)
@@ -245,20 +246,20 @@ function answer(x)
 		++data.ansCorrectly;
 		data.easyWords.add(data.currentIndex);
 		data.noCorrectAnswer = false;
-//		question.style.backgroundColor = "#EEFFEE";
-		question.style.color = "#EEFFEE";
+//		data.question.style.backgroundColor = "#EEFFEE";
+		data.question.style.color = "#EEFFEE";
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
-			answer[i].innerHTML = correctAnswer;
-//			answer[i].style.backgroundColor = "#EEFFEE";
-			answer[i].style.color = "#EEFFEE";
+			data.answers[i].innerHTML = correctAnswer;
+//			data.answers[i].style.backgroundColor = "#EEFFEE";
+			data.answers[i].style.color = "#EEFFEE";
 		}
 	}
 	else
 	{
 		++data.ansIncorrectly;
-		answer[x].innerHTML = "-";
+		data.answers[x].innerHTML = "-";
 		data.timeRemaining = 50;
 		
 		data.qq.push(data.currentIndex);
@@ -287,7 +288,7 @@ function genRandomAnswers(m, dict)
 	for (let i=0; i<3; ++i)
 	{
 		let randomIndex;
-		for (let k=0; k<10;++k)
+		for (let k=0; k<100;++k)
 		{
 			randomIndex = Math.floor(Math.random()*dict.length);
 			if (  (! anticollision.includes(dict[randomIndex][0].toLowerCase().trim()) )
@@ -302,13 +303,10 @@ function genRandomAnswers(m, dict)
 		res.push(randomIndex);
 	}
 	//console.log('ac:' + anticollision);
-	
 	shuffle(res);
 	shuffle(res); // for good measure
-	
 	return res;
 }
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
-}
+function shuffle(array) { array.sort(() => Math.random() - 0.5); }
+
