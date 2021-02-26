@@ -20,7 +20,7 @@ const data =
 };
 
 const threshold = 0.7;
-const maxQ = 50;
+const maxQ = 100;
 
 function startup()
 {
