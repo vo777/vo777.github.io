@@ -209,14 +209,8 @@ function newQuestion()
 	+ '';
 	
 	
-	if (data.debugInfoFlag)
-	{
-		data.summary.innerHTML = data.debugInfo;
-	}
-	else
-	{
-		data.summary.innerHTML = '';
-	}
+	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
+	else{ data.summary.innerHTML = ''; }
 	
 		
 }
@@ -225,14 +219,8 @@ function showDebug()
 {
 	data.debugInfoFlag = !data.debugInfoFlag;
 	
-	if (data.debugInfoFlag)
-	{
-		data.summary.innerHTML = data.debugInfo;
-	}
-	else
-	{
-		data.summary.innerHTML = '';
-	}
+	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
+	else{ data.summary.innerHTML = ''; }
 }
 
 function answer(x)
@@ -273,9 +261,7 @@ function answer(x)
 			data.qq.push(data.answerIndices[x]);
 			++data.wCount;
 		}
-
 	}
-
 }
 
 
