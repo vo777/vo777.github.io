@@ -1,5 +1,4 @@
 
-
 const data =
 {
 	dict : [],
@@ -7,33 +6,21 @@ const data =
 	easyWords : new Set(),
 	ansCorrectly : 0,
 	ansIncorrectly : 0,
-	wCount : 0
+	wCount : 0,
+	answerCount : 0,
+	timeRemaining : 0,
+	noCorrectAnswer : false,
+	debugInfo : "",
+	debugInfoFlag : false,
+	currentIndex : 0,
+	answerIndices : [0, 0, 0, 0]
 };
 
 const threshold1 = 0.6;
 const threshold2 = 0.8;
-
-
-let timeRemaining;
-let question, answers, summary;
-let correctAnswer = "";
-
-let answerCount = 0;
-
-//let dict = [];
-
-let currentIndex = 0;
-let answerIndices = [0, 0, 0, 0];
-//let qq = [];
-//const minQ = 1;
 const maxQ = 50;
 
-let noCorrectAnswer;
-
-//let wCount = 0;
-
-let debugInfo = "";
-let debugInfoFlag = false;
+let question, answers, summary;
 
 function startup()
 {
@@ -46,7 +33,7 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes = "s1qdefimnprt gl";// all except "cho gl"
+		langCodes += "s1qdefimnprt gl";// all except "cho gl"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -71,8 +58,6 @@ function startup()
 	if (langCodes.includes('q')) {data.dict = data.dict.concat(spanishQ);} 
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
 	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
-		
-
 	
 	// remove dupes
 	for (let i=0; i<data.dict.length; ++i)
@@ -93,7 +78,7 @@ function startup()
 		}
 	}
 	
-	timeRemaining = 0;
+	data.timeRemaining = 0;
 	
 	question = document.getElementById("question");
 	answers = [];
@@ -104,9 +89,13 @@ function startup()
 	summary = document.getElementById("summary");
 	
 	setInterval(worker, 100);
-	
 }
 
+function worker()
+{
+	--data.timeRemaining;
+	if (data.timeRemaining < 0) {newQuestion();}
+}
 
 function loadSynonyms(dest, src)
 {
@@ -133,9 +122,10 @@ function loadSynonyms(dest, src)
 function newQuestion()
 {
 
-	if (noCorrectAnswer)
+	if (data.noCorrectAnswer)
 	{
-		data.qq = data.qq.concat([currentIndex, currentIndex, currentIndex]);
+		data.qq = data.qq.concat([data.currentIndex, 
+		data.currentIndex, data.currentIndex]);
 		// and repeat the currentIndex
 	}
 	else
@@ -151,50 +141,62 @@ function newQuestion()
 			//console.log('get easy word');
 			const tmpVals = [...data.easyWords];
 			const tmp = Math.floor(Math.random()*tmpVals.length);
-			currentIndex = tmpVals[tmp];	
-			
+			const tmp1 = tmpVals[tmp];
+			if (tmp1 == data.currentIndex)
+			{
+				// anti-repeat
+				data.currentIndex 
+				= Math.floor(Math.random()*data.dict.length);
+			}
+			else
+			{
+				data.currentIndex = tmp1;
+			}
 		}
 		else if (correctRatio < threshold2 && data.qq.length>0)
 		{
 			//console.log('get qq word');
 			const tmp = Math.floor(Math.random()*data.qq.length);
-			currentIndex = data.qq.splice(tmp, 1)[0];	
+			const tmp1 = data.qq.splice(tmp, 1)[0];
+			if (tmp1 == data.currentIndex)
+			{
+				// anti-repeat
+				data.qq.push(tmp1);
+				data.currentIndex 
+				= Math.floor(Math.random()*data.dict.length);
+			}
+			else
+			{
+				data.currentIndex = tmp1;
+			}
 		}
 		else
 		{
 			//console.log('get dictionary word');
-			currentIndex = Math.floor(Math.random()*data.dict.length);
+			data.currentIndex = Math.floor(Math.random()*data.dict.length);
 			++data.wCount;
 		}
-		
-
-
-
 	}
 
-	answerIndices = genRandomAnswers(currentIndex, data.dict);
+	data.answerIndices = genRandomAnswers(data.currentIndex, data.dict);
 	
-	question.innerHTML = data.dict[currentIndex][0];
-	correctAnswer = data.dict[currentIndex][1];
-	
-//	question.bgColor = "#F8F8F8";
+	question.innerHTML = data.dict[data.currentIndex][0];
 //	question.style.backgroundColor = "#FFFFFF";
 	question.style.color = "#FFFFFF";
 	
 	for (let i=0; i<4; ++i)
 	{
-		answer[i].innerHTML = data.dict[answerIndices[i]][1];
-		//answer[i].bgColor = "#F8F8F8";
+		answer[i].innerHTML = data.dict[data.answerIndices[i]][1];
 //		answer[i].style.backgroundColor = "#F8F8F8";
 		answer[i].style.color = "#F8F8F8";
 	}
 	
-	timeRemaining = 100;
-	noCorrectAnswer = true;
+	data.timeRemaining = 100;
+	data.noCorrectAnswer = true;
 	
-	debugInfo = ''
+	data.debugInfo = ''
 	+ ' w:'+data.wCount
-	+ ' a:'+answerCount
+	+ ' a:'+data.answerCount
 	+ ' corr:'+data.ansCorrectly
 	+ ' incorr:'+data.ansIncorrectly
 	+ ' n:'+data.dict.length
@@ -206,9 +208,9 @@ function newQuestion()
 	+ '';
 	
 	
-	if (debugInfoFlag)
+	if (data.debugInfoFlag)
 	{
-		summary.innerHTML = debugInfo;
+		summary.innerHTML = data.debugInfo;
 	}
 	else
 	{
@@ -220,11 +222,11 @@ function newQuestion()
 
 function showDebug()
 {
-	debugInfoFlag = !debugInfoFlag;
+	data.debugInfoFlag = !data.debugInfoFlag;
 	
-	if (debugInfoFlag)
+	if (data.debugInfoFlag)
 	{
-		summary.innerHTML = debugInfo;
+		summary.innerHTML = data.debugInfo;
 	}
 	else
 	{
@@ -234,17 +236,18 @@ function showDebug()
 
 function answer(x)
 {
-	++answerCount;
-	answered = answer[x].innerHTML;
+	++data.answerCount;
+	const answered = answer[x].innerHTML;
+	const correctAnswer = data.dict[data.currentIndex][1];
 	
 	if (answered == correctAnswer)
 	{
-		data.ansCorrectly++;
-		data.easyWords.add(currentIndex);
-		noCorrectAnswer = false;
+		++data.ansCorrectly;
+		data.easyWords.add(data.currentIndex);
+		data.noCorrectAnswer = false;
 //		question.style.backgroundColor = "#EEFFEE";
 		question.style.color = "#EEFFEE";
-		timeRemaining = 10;
+		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 			answer[i].innerHTML = correctAnswer;
@@ -254,21 +257,19 @@ function answer(x)
 	}
 	else
 	{
-		data.ansIncorrectly++;
+		++data.ansIncorrectly;
 		answer[x].innerHTML = "-";
-		timeRemaining = 50;
+		data.timeRemaining = 50;
 		
-		data.qq.push(currentIndex);
-		data.easyWords.delete(currentIndex);
+		data.qq.push(data.currentIndex);
+		data.easyWords.delete(data.currentIndex);
 		
 		if (data.qq.length < maxQ)
 		{
-			data.qq.push(currentIndex);
-			data.qq.push(currentIndex);
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.currentIndex);
 
-			data.qq.push(answerIndices[x]);
-			data.qq.push(answerIndices[x]);
-			data.qq.push(answerIndices[x]);
+			data.qq.push(data.answerIndices[x]);
 			++data.wCount;
 		}
 
@@ -277,15 +278,8 @@ function answer(x)
 }
 
 
-function worker()
-{
-	--timeRemaining;
-	if (timeRemaining < 0) {newQuestion();}
-}
-
 function genRandomAnswers(m, dict)
 {
-	
 	let res = [m];
 	let anticollision = dict[m][0].toLowerCase().trim();
 	anticollision += dict[m][1].toLowerCase().trim();
@@ -308,8 +302,6 @@ function genRandomAnswers(m, dict)
 		res.push(randomIndex);
 	}
 	//console.log('ac:' + anticollision);
-	
-	
 	
 	shuffle(res);
 	shuffle(res); // for good measure
