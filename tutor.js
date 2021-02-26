@@ -154,7 +154,8 @@ function newQuestion()
 				data.currentIndex = tmp1;
 			}
 		}
-		else if (correctRatio < threshold2 && data.qq.length>0)
+		else if (correctRatio < threshold2 && data.qq.length>0 
+		|| data.qq.length>maxQ)
 		{
 			//console.log('get qq word');
 			const tmp = Math.floor(Math.random()*data.qq.length);
