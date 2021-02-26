@@ -117,7 +117,9 @@ function loadSynonyms(dest, src)
 		}
 	}
 }
-
+/**
+*    generate new currentIndex
+*/
 function newQuestion()
 {
 	const correctRatio = calcCorrectRatio();
@@ -125,8 +127,8 @@ function newQuestion()
 	if (data.noCorrectAnswer && correctRatio>= threshold)
 	{
 		// do nothing: repeat the question
-		data.qq = data.qq.concat([data.currentIndex, 
-		data.currentIndex, data.currentIndex]);
+		data.qq.push(data.currentIndex);
+		data.qq.push(data.currentIndex);
 	}
 	else if (correctRatio<threshold && data.easyWords.size>0)
 	{
@@ -170,7 +172,6 @@ function newQuestion()
 
 function calcCorrectRatio()
 {
-	// generate new currentIndex
 	const correctRatio = 1.0*data.ansCorrectly 
 		/ (data.ansCorrectly + data.ansIncorrectly);
 	//console.log('correctRatio:',correctRatio);
@@ -233,7 +234,6 @@ function answer(x)
 		data.easyWords.delete(data.currentIndex);
 		data.easyWords.delete(data.answerIndices[x]);
 
-		data.qq.push(data.currentIndex);
 		data.qq.push(data.currentIndex);
 		data.qq.push(data.currentIndex);
 
