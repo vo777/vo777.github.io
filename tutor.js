@@ -189,17 +189,20 @@ function newQuestion()
 	{
 		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
 //		data.answers[i].style.backgroundColor = "#F8F8F8";
-		data.answers[i].style.color = "#F8F8F8";
+		data.answers[i].style.color = "#FFFFFF";
 	}
 	
 	data.timeRemaining = 100;
 	data.noCorrectAnswer = true;
 	
+	const correctRatio = 1.0*data.ansCorrectly 
+		/ (data.ansCorrectly + data.ansIncorrectly);
+		
 	data.debugInfo = ''
 	+ ' w:'+data.wCount
 	+ ' a:'+data.answerCount
-	+ ' corr:'+data.ansCorrectly
-	+ ' incorr:'+data.ansIncorrectly
+	+ ' c:'+data.ansCorrectly + ' (' + Math.round(100*correctRatio) + '%)'
+	//+ ' incorr:'+data.ansIncorrectly
 	+ ' n:'+data.dict.length
 	+ ' q:'+data.qq.length
 	+ ' u:'+[...new Set(data.qq)].length
@@ -235,13 +238,13 @@ function answer(x)
 		data.easyWords.add(data.currentIndex);
 		data.noCorrectAnswer = false;
 //		data.question.style.backgroundColor = "#EEFFEE";
-		data.question.style.color = "#EEFFEE";
+		data.question.style.color = "#F8FFF8";
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 //			data.answers[i].style.backgroundColor = "#EEFFEE";
-			data.answers[i].style.color = "#EEFFEE";
+			data.answers[i].style.color = "#F8FFF8";
 		}
 	}
 	else
