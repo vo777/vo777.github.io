@@ -31,13 +31,7 @@
   </head>
   <body onload="startup()">
     <!-- disable scrollbars: -->
-    <style type="text/css"> 
-	body 
-	{ 
-		overflow: hidden; 
-		background-color : #000000;
-		color: #FFFFFF;
-	} </style>
+    <style type="text/css"> body { overflow: hidden; } </style>
 	
 	<style>
 	div 
@@ -46,7 +40,6 @@
 	   font-size:  170%;
 	   font-family: "Arial";
 	   margin: 4px;
-	   #background-color : #111111;
 	}
 	
 	.qqq

@@ -1,21 +1,36 @@
 
+
+const data =
+{
+	dict : [],
+	qq : [],
+	easyWords : new Set(),
+	ansCorrectly : 0,
+	ansIncorrectly : 0,
+	wCount : 0
+};
+
+const threshold1 = 0.6;
+const threshold2 = 0.8;
+
+
 let timeRemaining;
 let question, answers, summary;
 let correctAnswer = "";
 
 let answerCount = 0;
 
-let dict = [];
+//let dict = [];
 
 let currentIndex = 0;
 let answerIndices = [0, 0, 0, 0];
-let qq = [];
-const minQ = 1;
-const maxQ = 100;
+//let qq = [];
+//const minQ = 1;
+const maxQ = 50;
 
 let noCorrectAnswer;
 
-let wCount = 0;
+//let wCount = 0;
 
 let debugInfo = "";
 let debugInfoFlag = false;
@@ -31,48 +46,48 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes = "s1qdefimnprt";// all except "chogl"
+		langCodes = "s1qdefimnprt gl";// all except "cho gl"
 	}
 	
 	if (langCodes.includes('s')) 
 	{	
-		dict = dict.concat(spanish);
-		dict = dict.concat(spanish001);
+		data.dict = data.dict.concat(spanish);
+		data.dict = data.dict.concat(spanish001);
 	}
-	if (langCodes.includes('1')) {loadSynonyms(dict, spanishSynonims);} 
+	if (langCodes.includes('1')) {loadSynonyms(data.dict, spanishSynonims);} 
 		
-	if (langCodes.includes('c')) {dict = dict.concat(czech);} 
-	if (langCodes.includes('d')) {dict = dict.concat(german);} 
-	if (langCodes.includes('e')) {dict = dict.concat(esperanto);} 
-	if (langCodes.includes('f')) {dict = dict.concat(french);} 
-	if (langCodes.includes('g')) {dict = dict.concat(greek);} 
-	if (langCodes.includes('h')) {dict = dict.concat(hebrew);} 
-	if (langCodes.includes('i')) {dict = dict.concat(italian);} 
-	if (langCodes.includes('o')) {dict = dict.concat(polish);} 
-	if (langCodes.includes('l')) {dict = dict.concat(latin);} 
-	if (langCodes.includes('m')) {dict = dict.concat(malay);} 
-	if (langCodes.includes('n')) {dict = dict.concat(indonesian);} 
-	if (langCodes.includes('p')) {dict = dict.concat(portuguese);} 
-	if (langCodes.includes('q')) {dict = dict.concat(spanishQ);} 
-	if (langCodes.includes('r')) {dict = dict.concat(romanian);} 
-	if (langCodes.includes('t')) {dict = dict.concat(turkish);} 
+	if (langCodes.includes('c')) {data.dict = data.dict.concat(czech);} 
+	if (langCodes.includes('d')) {data.dict = data.dict.concat(german);} 
+	if (langCodes.includes('e')) {data.dict = data.dict.concat(esperanto);} 
+	if (langCodes.includes('f')) {data.dict = data.dict.concat(french);} 
+	if (langCodes.includes('g')) {data.dict = data.dict.concat(greek);} 
+	if (langCodes.includes('h')) {data.dict = data.dict.concat(hebrew);} 
+	if (langCodes.includes('i')) {data.dict = data.dict.concat(italian);} 
+	if (langCodes.includes('o')) {data.dict = data.dict.concat(polish);} 
+	if (langCodes.includes('l')) {data.dict = data.dict.concat(latin);} 
+	if (langCodes.includes('m')) {data.dict = data.dict.concat(malay);} 
+	if (langCodes.includes('n')) {data.dict = data.dict.concat(indonesian);} 
+	if (langCodes.includes('p')) {data.dict = data.dict.concat(portuguese);} 
+	if (langCodes.includes('q')) {data.dict = data.dict.concat(spanishQ);} 
+	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
+	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
 		
 
 	
 	// remove dupes
-	for (let i=0; i<dict.length; ++i)
+	for (let i=0; i<data.dict.length; ++i)
 	{
-		if (dict[i].length != 2)
+		if (data.dict[i].length != 2)
 		{
-			console.log('format: ' + dict[i])
+			console.log('format: ' + data.dict[i])
 		}
-		if (dict[i].length != 2
-		|| dict[i][0].toUpperCase() === dict[i][1].toUpperCase()
-		|| dict[i][0] === ""
-		|| dict[i][1] === ""
+		if (data.dict[i].length != 2
+		|| data.dict[i][0].toUpperCase() === data.dict[i][1].toUpperCase()
+		|| data.dict[i][0] === ""
+		|| data.dict[i][1] === ""
 		)
 		{
-			let tmp = dict.splice(i, 1);
+			let tmp = data.dict.splice(i, 1);
 			i--;
 			console.log('skip: ' + tmp)
 		}
@@ -117,74 +132,79 @@ function loadSynonyms(dest, src)
 
 function newQuestion()
 {
-	let n = dict.length;
-	
-	while (qq.length < minQ)
-	{
-		qq.push(Math.floor(Math.random()*n));
-		++wCount;
-	}
-	
-	if (answerCount % 10 == 0 && qq.length < maxQ)
-	{
-		//console.log('occasionally randomly add new word');
-		qq.push(Math.floor(Math.random()*n));
-		++wCount;
-	}
 
 	if (noCorrectAnswer)
 	{
-		qq = qq.concat([currentIndex, currentIndex, currentIndex]);
+		data.qq = data.qq.concat([currentIndex, currentIndex, currentIndex]);
+		// and repeat the currentIndex
 	}
 	else
 	{
-		// next question != the current (i.e. previous) question
-		let nextIndexIntoQ = -1;
-		for (let j=0; j<100; ++j)
+		// generate new currentIndex
+		const correctRatio = 1.0*data.ansCorrectly 
+		/ (data.ansCorrectly + data.ansIncorrectly);
+		
+		//console.log('correctRatio:',correctRatio);
+		
+		if (correctRatio < threshold1 && data.easyWords.size>0)
 		{
-			let tmp = Math.floor(Math.random()*qq.length);
-			//console.log(j, tmp, qq[tmp], currentIndex);
-			if (qq[tmp] != currentIndex)
-			{
-				nextIndexIntoQ = tmp;
-				break;
-			}
+			//console.log('get easy word');
+			const tmpVals = [...data.easyWords];
+			const tmp = Math.floor(Math.random()*tmpVals.length);
+			currentIndex = tmpVals[tmp];	
+			
+		}
+		else if (correctRatio < threshold2 && data.qq.length>0)
+		{
+			//console.log('get qq word');
+			const tmp = Math.floor(Math.random()*data.qq.length);
+			currentIndex = data.qq.splice(tmp, 1)[0];	
+		}
+		else
+		{
+			//console.log('get dictionary word');
+			currentIndex = Math.floor(Math.random()*data.dict.length);
+			++data.wCount;
 		}
 		
-		currentIndex = qq.splice(nextIndexIntoQ, 1)[0];
+
+
+
 	}
 
-	answerIndices = genRandomAnswers(currentIndex, dict);
+	answerIndices = genRandomAnswers(currentIndex, data.dict);
 	
-	question.innerHTML = dict[currentIndex][0];
-	correctAnswer = dict[currentIndex][1];
+	question.innerHTML = data.dict[currentIndex][0];
+	correctAnswer = data.dict[currentIndex][1];
 	
 //	question.bgColor = "#F8F8F8";
-	question.style.backgroundColor = "#FFFFFF";
+//	question.style.backgroundColor = "#FFFFFF";
+	question.style.color = "#FFFFFF";
 	
 	for (let i=0; i<4; ++i)
 	{
-		answer[i].innerHTML = dict[answerIndices[i]][1];
+		answer[i].innerHTML = data.dict[answerIndices[i]][1];
 		//answer[i].bgColor = "#F8F8F8";
-		answer[i].style.backgroundColor = "#F8F8F8";
+//		answer[i].style.backgroundColor = "#F8F8F8";
+		answer[i].style.color = "#F8F8F8";
 	}
 	
 	timeRemaining = 100;
 	noCorrectAnswer = true;
 	
 	debugInfo = ''
-	//+ ' w:'+(wCount-minQ) does not work
+	+ ' w:'+data.wCount
 	+ ' a:'+answerCount
-	+ ' n:'+n
-	+ ' q:'+qq.length
-	+ ' u:'+[...new Set(qq)].length
-	+ '  ' + window.location.search
+	+ ' corr:'+data.ansCorrectly
+	+ ' incorr:'+data.ansIncorrectly
+	+ ' n:'+data.dict.length
+	+ ' q:'+data.qq.length
+	+ ' u:'+[...new Set(data.qq)].length
+	+ ' e:'+data.easyWords.size
+	+ ' ' + window.location.search
+	//+ ' ' + [...data.easyWords]
 	+ '';
 	
-//	for (let i=0; i<qq.length; ++i)
-//	{
-//		debugInfo += ' / ' + dict[qq[i]][0];
-//	}
 	
 	if (debugInfoFlag)
 	{
@@ -219,72 +239,43 @@ function answer(x)
 	
 	if (answered == correctAnswer)
 	{
+		data.ansCorrectly++;
+		data.easyWords.add(currentIndex);
 		noCorrectAnswer = false;
-		question.style.backgroundColor = "#EEFFEE";
+//		question.style.backgroundColor = "#EEFFEE";
+		question.style.color = "#EEFFEE";
 		timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 			answer[i].innerHTML = correctAnswer;
-			answer[i].style.backgroundColor = "#EEFFEE";
+//			answer[i].style.backgroundColor = "#EEFFEE";
+			answer[i].style.color = "#EEFFEE";
 		}
 	}
 	else
 	{
+		data.ansIncorrectly++;
 		answer[x].innerHTML = "-";
 		timeRemaining = 50;
 		
-		qq.push(currentIndex);
-		qq.push(currentIndex);
-		qq.push(currentIndex);
-		//qq.push(answerIndices[x]);
-
-		if (qq.length < maxQ)
-		{
-			const tmp = [...findAllRelatedTo(dict, currentIndex),
-			...findAllRelatedTo(dict, answerIndices[x])];
-			//console.log(tmp);
-			shuffle(tmp);
-			
-			for (let ttt of tmp)
-			{
-				if (qq.indexOf(ttt) < 0) { qq.push(ttt); }
-				if (qq.length > maxQ) { break; }
-			}
-			
-			//qq = qq.concat(findAllRelatedTo(dict, currentIndex));
-			//qq = qq.concat(findAllRelatedTo(dict, answerIndices[x]));
-		}
+		data.qq.push(currentIndex);
+		data.easyWords.delete(currentIndex);
 		
-		++wCount;
+		if (data.qq.length < maxQ)
+		{
+			data.qq.push(currentIndex);
+			data.qq.push(currentIndex);
+
+			data.qq.push(answerIndices[x]);
+			data.qq.push(answerIndices[x]);
+			data.qq.push(answerIndices[x]);
+			++data.wCount;
+		}
+
 	}
 
 }
 
-
-function findAllRelatedTo(dic, index)
-{
-	const a = dic[index][0].toLowerCase().trim();
-	const b = dic[index][1].toLowerCase().trim();
-	
-	const res = [];
-	
-	for (let i=0; i<dic.length; ++i)
-	{
-		const c = dic[i][0].toLowerCase().trim();
-		const d = dic[i][1].toLowerCase().trim();
-		
-		if (a.includes(c)&&c.length>2 || c.includes(a)&&a.length>2
-		|| a.includes(d)&&d.length>2 || d.includes(a)&&a.length>2
-		|| b.includes(d)&&d.length>2 || d.includes(b)&&b.length>2
-		|| b.includes(c)&&c.length>2 || c.includes(b)&&b.length>2
-		)
-		{
-			res.push(i);
-		}
-	}
-	
-	return res;
-}
 
 function worker()
 {
