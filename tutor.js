@@ -19,8 +19,7 @@ const data =
 	summary : undefined
 };
 
-const threshold1 = 0.7;
-const threshold2 = 0.8;
+const threshold = 0.7;
 const maxQ = 50;
 
 function startup()
@@ -100,7 +99,6 @@ function worker()
 
 function loadSynonyms(dest, src)
 {
-	
 	for (let line of src)
 	{
 		line = line.replaceAll('.', ',');
@@ -122,43 +120,32 @@ function loadSynonyms(dest, src)
 
 function newQuestion()
 {
-
-	if (data.noCorrectAnswer)
+	const correctRatio = calcCorrectRatio();
+		
+	if (data.noCorrectAnswer && correctRatio>= threshold)
 	{
+		// do nothing: repeat the question
 		data.qq = data.qq.concat([data.currentIndex, 
 		data.currentIndex, data.currentIndex]);
-		// do nothing: repeat the currentIndex
+	}
+	else if (correctRatio<threshold && data.easyWords.size>0)
+	{
+		//console.log('pick an easy word');
+		const tmpVals = [...data.easyWords];
+		const tmp = Math.floor(Math.random()*tmpVals.length);
+		data.currentIndex = tmpVals[tmp];
+	}
+	else if (Math.random()<data.qq.length/maxQ)
+	{
+		//console.log('pick a qq word');
+		const tmp = Math.floor(Math.random()*data.qq.length);
+		data.currentIndex = data.qq.splice(tmp, 1)[0];
 	}
 	else
 	{
-		// generate new currentIndex
-		const correctRatio = 1.0*data.ansCorrectly 
-		/ (data.ansCorrectly + data.ansIncorrectly);
-		
-		//console.log('correctRatio:',correctRatio);
-		
-		if (correctRatio < threshold1 
-			&& data.easyWords.size>0 
-			&& Math.random()<threshold2)
-		{
-			//console.log('get easy word');
-			const tmpVals = [...data.easyWords];
-			const tmp = Math.floor(Math.random()*tmpVals.length);
-			data.currentIndex = tmpVals[tmp];
-		}
-		else if ((correctRatio < threshold2||Math.random()<0.2) 
-		&& data.qq.length>0)
-		{
-			//console.log('get qq word');
-			const tmp = Math.floor(Math.random()*data.qq.length);
-			data.currentIndex = data.qq.splice(tmp, 1)[0];
-		}
-		else
-		{
-			//console.log('get dictionary word');
-			data.currentIndex = Math.floor(Math.random()*data.dict.length);
-			++data.wCount;
-		}
+		//console.log('pick a dictionary word');
+		data.currentIndex = Math.floor(Math.random()*data.dict.length);
+		++data.wCount;
 	}
 
 	data.answerIndices = genRandomAnswers(data.currentIndex, data.dict);
@@ -177,13 +164,31 @@ function newQuestion()
 	data.timeRemaining = 100;
 	data.noCorrectAnswer = true;
 	
+	showDebug();
+	
+}
+
+function calcCorrectRatio()
+{
+	// generate new currentIndex
 	const correctRatio = 1.0*data.ansCorrectly 
 		/ (data.ansCorrectly + data.ansIncorrectly);
-		
+	//console.log('correctRatio:',correctRatio);
+	return correctRatio;
+}
+
+function toggleDebug()
+{
+	data.debugInfoFlag = !data.debugInfoFlag;
+	showDebug();
+}	
+
+function showDebug()
+{
 	data.debugInfo = ''
 	+ ' w:'+data.wCount
 	+ ' a:'+data.answerCount
-	+ ' c:'+data.ansCorrectly + ' (' + Math.round(100*correctRatio) + '%)'
+	+ ' c:'+data.ansCorrectly+' ('+Math.round(100*calcCorrectRatio())+'%)'
 	//+ ' incorr:'+data.ansIncorrectly
 	+ ' n:'+data.dict.length
 	+ ' q:'+data.qq.length
@@ -193,19 +198,9 @@ function newQuestion()
 	//+ ' ' + [...data.easyWords]
 	+ '';
 	
-	
 	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
-	else{ data.summary.innerHTML = ''; }
+	else{ data.summary.innerHTML = ''; }	
 	
-		
-}
-
-function showDebug()
-{
-	data.debugInfoFlag = !data.debugInfoFlag;
-	
-	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
-	else{ data.summary.innerHTML = ''; }
 }
 
 function answer(x)
@@ -234,19 +229,19 @@ function answer(x)
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = 50;
-		
-		data.qq.push(data.currentIndex);
-		data.easyWords.delete(data.currentIndex);
-		
-		if (data.qq.length < maxQ)
-		{
-			data.qq.push(data.currentIndex);
-			data.qq.push(data.currentIndex);
 
-			data.qq.push(data.answerIndices[x]);
-			++data.wCount;
-		}
+		data.easyWords.delete(data.currentIndex);
+		data.easyWords.delete(data.answerIndices[x]);
+
+		data.qq.push(data.currentIndex);
+		data.qq.push(data.currentIndex);
+		data.qq.push(data.currentIndex);
+
+		data.qq.push(data.answerIndices[x]);
+		++data.wCount;
 	}
+	
+	showDebug();
 }
 
 
@@ -280,4 +275,3 @@ function genRandomAnswers(m, dict)
 }
 
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
-
