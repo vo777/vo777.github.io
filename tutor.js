@@ -19,7 +19,6 @@ const data =
 	summary : undefined
 };
 
-const threshold = 0.7;
 const maxQ = 100;
 
 function startup()
@@ -124,7 +123,7 @@ function newQuestion()
 {
 	const correctRatio = calcCorrectRatio();
 		
-	if (data.noCorrectAnswer && correctRatio>= threshold)
+	if (data.noCorrectAnswer)
 	{
 		// do nothing: repeat the question
 		if (data.qq.length < maxQ)
@@ -133,7 +132,7 @@ function newQuestion()
 			data.qq.push(data.currentIndex);
 		}
 	}
-	else if (correctRatio<threshold && data.easyWords.size>0)
+	else if (Math.random()>correctRatio && data.easyWords.size>0)
 	{
 		//console.log('pick an easy word');
 		const tmpVals = [...data.easyWords];
@@ -157,13 +156,13 @@ function newQuestion()
 	
 	data.question.innerHTML = data.dict[data.currentIndex][0];
 //	data.question.style.backgroundColor = "#FFFFFF";
-	data.question.style.color = "#FFFFFF";
+//	data.question.style.color = "#FFFFFF";
 	
 	for (let i=0; i<4; ++i)
 	{
 		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
 //		data.answers[i].style.backgroundColor = "#F8F8F8";
-		data.answers[i].style.color = "#FFFFFF";
+//		data.answers[i].style.color = "#FFFFFF";
 	}
 	
 	data.timeRemaining = 100;
@@ -207,7 +206,7 @@ function showDebug()
 	
 }
 
-function answer(x)
+function onAnswer(x)
 {
 	++data.answerCount;
 	const answered = data.answers[x].innerHTML;
@@ -219,13 +218,13 @@ function answer(x)
 		data.easyWords.add(data.currentIndex);
 		data.noCorrectAnswer = false;
 //		data.question.style.backgroundColor = "#EEFFEE";
-		data.question.style.color = "#F8FFF8";
+//		data.question.style.color = "#F8FFF8";
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 //			data.answers[i].style.backgroundColor = "#EEFFEE";
-			data.answers[i].style.color = "#F8FFF8";
+//			data.answers[i].style.color = "#F8FFF8";
 		}
 	}
 	else
