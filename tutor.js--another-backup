@@ -1,20 +1,25 @@
 
 const data =
 {
-	dict : [],  // format:  [0:q, 1:a, 2:score]
+	dict : [],
+	qq : [],
+	easyWords : new Set(),
 	ansCorrectly : 0,
 	ansIncorrectly : 0,
+	wCount : 0,
 	answerCount : 0,
 	timeRemaining : 0,
+	noCorrectAnswer : false,
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : 0,
+	answerIndices : [0, 0, 0, 0],
 	question : undefined,
 	answers : undefined,
 	summary : undefined
 };
 
-const timePerQuestion = 70; // 10 = 1 second
+const maxQ = 100;
 
 function startup()
 {
@@ -27,7 +32,7 @@ function startup()
 	langCodes = langCodes.toLowerCase();
 	if (langCodes.includes('z'))
 	{
-		langCodes += "s1qdefimnprt gl";// all except "cho"
+		langCodes += "s1qdefimnprt gl";// all except "cho gl"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -52,8 +57,6 @@ function startup()
 	if (langCodes.includes('q')) {data.dict = data.dict.concat(spanishQ);} 
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
 	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
-
-	console.log('dictionary loaded. checking...');
 	
 	// remove dupes
 	for (let i=0; i<data.dict.length; ++i)
@@ -70,22 +73,9 @@ function startup()
 		{
 			let tmp = data.dict.splice(i, 1);
 			i--;
-			//console.log('skip: ' + tmp)
+			console.log('skip: ' + tmp)
 		}
 	}
-	
-	// normalize
-	for (let i=0; i<data.dict.length; ++i)
-	{
-		data.dict[i][0] = data.dict[i][0].toLowerCase();
-		data.dict[i][1] = data.dict[i][1].toLowerCase();
-		data.dict[i][2] = Math.random()+Math.random()
-			+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random();
-	}
-	
-	console.log('dictionary loaded and checked');
 	
 	data.timeRemaining = 0;
 	
@@ -131,30 +121,63 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
-	const tmp = data.dict[data.currentIndex];
-	data.dict.sort((a,b)=>a[2] - b[2]);
-	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
+	const correctRatio = calcCorrectRatio();
+		
+	if (data.noCorrectAnswer)
+	{
+		// do nothing: repeat the question
+		if (data.qq.length < maxQ)
+		{
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.currentIndex);
+		}
+	}
+	else if (Math.random()>correctRatio && data.easyWords.size>0)
+	{
+		//console.log('pick an easy word');
+		const tmpVals = [...data.easyWords];
+		const tmp = Math.floor(Math.random()*tmpVals.length);
+		data.currentIndex = tmpVals[tmp];
+	}
+	else if (Math.random()<data.qq.length/maxQ)
+	{
+		//console.log('pick a qq word');
+		const tmp = Math.floor(Math.random()*data.qq.length);
+		data.currentIndex = data.qq.splice(tmp, 1)[0];
+	}
+	else
+	{
+		//console.log('pick a dictionary word');
+		data.currentIndex = Math.floor(Math.random()*data.dict.length);
+		++data.wCount;
+	}
 
-	//const tmp1 = data.dict.indexOf(tmp);
-	//console.log(data.currentIndex, '-->', tmp1);
-	//console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
-
-	const answerIndices 
-			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
+	data.answerIndices = genRandomAnswers(data.currentIndex, data.dict);
+	
 	data.question.innerHTML = data.dict[data.currentIndex][0];
+//	data.question.style.backgroundColor = "#FFFFFF";
+//	data.question.style.color = "#FFFFFF";
+	
 	for (let i=0; i<4; ++i)
 	{
-		data.answers[i].innerHTML = data.dict[answerIndices[i]][1];
+		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
+//		data.answers[i].style.backgroundColor = "#F8F8F8";
+//		data.answers[i].style.color = "#FFFFFF";
 	}
-	data.timeRemaining = timePerQuestion;
+	
+	data.timeRemaining = 100;
+	data.noCorrectAnswer = true;
+	
 	showDebug();
+	
 }
 
 function calcCorrectRatio()
 {
-	const res = 1.0*data.ansCorrectly 
+	const correctRatio = 1.0*data.ansCorrectly 
 		/ (data.ansCorrectly + data.ansIncorrectly);
-	return res;
+	//console.log('correctRatio:',correctRatio);
+	return correctRatio;
 }
 
 function toggleDebug()
@@ -166,10 +189,16 @@ function toggleDebug()
 function showDebug()
 {
 	data.debugInfo = ''
-	+ data.ansCorrectly+'/'+data.answerCount
-	+ '('+Math.round(100*calcCorrectRatio())+'%)'
+	+ ' w:'+data.wCount
+	+ ' a:'+data.answerCount
+	+ ' c:'+data.ansCorrectly+' ('+Math.round(100*calcCorrectRatio())+'%)'
+	//+ ' incorr:'+data.ansIncorrectly
 	+ ' n:'+data.dict.length
+	+ ' q:'+data.qq.length
+	+ ' u:'+[...new Set(data.qq)].length
+	+ ' e:'+data.easyWords.size
 	+ ' ' + window.location.search
+	//+ ' ' + [...data.easyWords]
 	+ '';
 	
 	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
@@ -185,32 +214,42 @@ function onAnswer(x)
 	
 	if (answered == correctAnswer)
 	{
-		//console.log('correct answer');
-		//console.log(data.dict[data.currentIndex],'-->');
 		++data.ansCorrectly;
-		data.dict[data.currentIndex][2] += data.timeRemaining/timePerQuestion;
-		//console.log(data.dict[data.currentIndex],'///');
+		data.easyWords.add(data.currentIndex);
+		data.noCorrectAnswer = false;
+//		data.question.style.backgroundColor = "#EEFFEE";
+//		data.question.style.color = "#F8FFF8";
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
 			data.answers[i].innerHTML = correctAnswer;
+//			data.answers[i].style.backgroundColor = "#EEFFEE";
+//			data.answers[i].style.color = "#F8FFF8";
 		}
 	}
 	else
 	{
-		//console.log('wrong answer');
-		//console.log(data.dict[data.currentIndex],'-->');
 		++data.ansIncorrectly;
-		data.dict[data.currentIndex][2] -= data.timeRemaining/timePerQuestion;
-		//console.log(data.dict[data.currentIndex],'///');
 		data.answers[x].innerHTML = "-";
-		data.timeRemaining = timePerQuestion;
+		data.timeRemaining = 50;
+
+		data.easyWords.delete(data.currentIndex);
+		data.easyWords.delete(data.answerIndices[x]);
+
+		if (data.qq.length < maxQ)
+		{
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.answerIndices[x]);
+			++data.wCount;
+		}
 	}
+	
 	showDebug();
 }
 
 
-function genRandomIncorrectAnswers(m, dict)
+function genRandomAnswers(m, dict)
 {
 	let res = [m];
 	let anticollision = dict[m][0].toLowerCase().trim();

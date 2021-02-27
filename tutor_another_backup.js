@@ -79,10 +79,9 @@ function startup()
 	{
 		data.dict[i][0] = data.dict[i][0].toLowerCase();
 		data.dict[i][1] = data.dict[i][1].toLowerCase();
-		data.dict[i][2] = Math.random()+Math.random()
-			+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random();
+		data.dict[i][2] = 3 + Math.random();
+		data.dict[i][3] = 1 + Math.random();
+		data.dict[i][4] = data.dict[i][2]/(data.dict[i][2]+data.dict[i][3]);
 	}
 	
 	console.log('dictionary loaded and checked');
@@ -132,11 +131,10 @@ function loadSynonyms(dest, src)
 function newQuestion()
 {
 	const tmp = data.dict[data.currentIndex];
-	data.dict.sort((a,b)=>a[2] - b[2]);
-	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
-
-	//const tmp1 = data.dict.indexOf(tmp);
+	data.dict.sort((a,b)=>a[4] - b[4]);
+	const tmp1 = data.dict.indexOf(tmp);
 	//console.log(data.currentIndex, '-->', tmp1);
+	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
 	//console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
 	const answerIndices 
@@ -187,9 +185,13 @@ function onAnswer(x)
 	{
 		//console.log('correct answer');
 		//console.log(data.dict[data.currentIndex],'-->');
+
 		++data.ansCorrectly;
 		data.dict[data.currentIndex][2] += data.timeRemaining/timePerQuestion;
+		data.dict[data.currentIndex][4] = data.dict[data.currentIndex][2]/(data.dict[data.currentIndex][2]+data.dict[data.currentIndex][3]);
+
 		//console.log(data.dict[data.currentIndex],'///');
+
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
@@ -200,9 +202,13 @@ function onAnswer(x)
 	{
 		//console.log('wrong answer');
 		//console.log(data.dict[data.currentIndex],'-->');
+
 		++data.ansIncorrectly;
-		data.dict[data.currentIndex][2] -= data.timeRemaining/timePerQuestion;
+		data.dict[data.currentIndex][3] += data.timeRemaining/timePerQuestion;
+		data.dict[data.currentIndex][4] = data.dict[data.currentIndex][2]/(data.dict[data.currentIndex][2]+data.dict[data.currentIndex][3]);
+
 		//console.log(data.dict[data.currentIndex],'///');
+
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
