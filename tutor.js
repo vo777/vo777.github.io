@@ -127,8 +127,11 @@ function newQuestion()
 	if (data.noCorrectAnswer && correctRatio>= threshold)
 	{
 		// do nothing: repeat the question
-		data.qq.push(data.currentIndex);
-		data.qq.push(data.currentIndex);
+		if (data.qq.length < maxQ)
+		{
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.currentIndex);
+		}
 	}
 	else if (correctRatio<threshold && data.easyWords.size>0)
 	{
@@ -234,11 +237,13 @@ function answer(x)
 		data.easyWords.delete(data.currentIndex);
 		data.easyWords.delete(data.answerIndices[x]);
 
-		data.qq.push(data.currentIndex);
-		data.qq.push(data.currentIndex);
-
-		data.qq.push(data.answerIndices[x]);
-		++data.wCount;
+		if (data.qq.length < maxQ)
+		{
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.currentIndex);
+			data.qq.push(data.answerIndices[x]);
+			++data.wCount;
+		}
 	}
 	
 	showDebug();
