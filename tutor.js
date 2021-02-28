@@ -16,6 +16,9 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
+let seed = 0.1;
+function rnd() { seed=(1234.5678*seed+Math.PI)%1; return seed; }
+
 function startup()
 {
 	let langCodes = window.location.search;
@@ -25,9 +28,21 @@ function startup()
 		langCodes = "s";
 	}
 	langCodes = langCodes.toLowerCase();
+
+	if (langCodes.includes('0')) {seed += 0.1; }
+	if (langCodes.includes('1')) {seed += 0.01; }
+	if (langCodes.includes('2')) {seed += 0.02; }
+	if (langCodes.includes('3')) {seed += 0.03; }
+	if (langCodes.includes('4')) {seed += 0.04; }
+	if (langCodes.includes('5')) {seed += 0.05; }
+	if (langCodes.includes('6')) {seed += 0.06; }
+	if (langCodes.includes('7')) {seed += 0.07; }
+	if (langCodes.includes('8')) {seed += 0.08; }
+	if (langCodes.includes('9')) {seed += 0.09; }
+
 	if (langCodes.includes('z'))
 	{
-		langCodes += "s1qdefimnprt gl";// all except "cho"
+		langCodes += "sq dfip elr";// all except "cho mnt g"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -35,7 +50,6 @@ function startup()
 		data.dict = data.dict.concat(spanish);
 		data.dict = data.dict.concat(spanish001);
 	}
-	if (langCodes.includes('1')) {loadSynonyms(data.dict, spanishSynonims);} 
 		
 	if (langCodes.includes('c')) {data.dict = data.dict.concat(czech);} 
 	if (langCodes.includes('d')) {data.dict = data.dict.concat(german);} 
@@ -49,7 +63,11 @@ function startup()
 	if (langCodes.includes('m')) {data.dict = data.dict.concat(malay);} 
 	if (langCodes.includes('n')) {data.dict = data.dict.concat(indonesian);} 
 	if (langCodes.includes('p')) {data.dict = data.dict.concat(portuguese);} 
-	if (langCodes.includes('q')) {data.dict = data.dict.concat(spanishQ);} 
+	if (langCodes.includes('q')) 
+	{
+		loadSynonyms(data.dict, spanishSynonims);
+		data.dict = data.dict.concat(spanishQ);
+	} 
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
 	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
 
@@ -79,10 +97,9 @@ function startup()
 	{
 		data.dict[i][0] = data.dict[i][0].toLowerCase();
 		data.dict[i][1] = data.dict[i][1].toLowerCase();
-		data.dict[i][2] = Math.random()+Math.random()
-			+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random()
-			+Math.random()+Math.random()+Math.random()+Math.random();
+		data.dict[i][2] = rnd()+rnd()+rnd()+rnd()
+			+rnd()+rnd()+rnd()+rnd()
+			+rnd()+rnd()+rnd()+rnd();
 	}
 	
 	console.log('dictionary loaded and checked');
