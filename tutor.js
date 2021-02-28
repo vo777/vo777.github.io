@@ -16,8 +16,6 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-let seed = 0.1;
-function rnd() { seed=(1234.5678*seed+Math.PI)%1; return seed; }
 
 function startup()
 {
@@ -29,16 +27,22 @@ function startup()
 	}
 	langCodes = langCodes.toLowerCase();
 
-	if (langCodes.includes('0')) {seed += 0.1; }
-	if (langCodes.includes('1')) {seed += 0.01; }
-	if (langCodes.includes('2')) {seed += 0.02; }
-	if (langCodes.includes('3')) {seed += 0.03; }
-	if (langCodes.includes('4')) {seed += 0.04; }
-	if (langCodes.includes('5')) {seed += 0.05; }
-	if (langCodes.includes('6')) {seed += 0.06; }
-	if (langCodes.includes('7')) {seed += 0.07; }
-	if (langCodes.includes('8')) {seed += 0.08; }
-	if (langCodes.includes('9')) {seed += 0.09; }
+	let seed = new Date().getTime()/1e6;
+	if (langCodes.includes('0')) {seed = 0.10; }
+	if (langCodes.includes('1')) {seed = 0.11; }
+	if (langCodes.includes('2')) {seed = 0.12; }
+	if (langCodes.includes('3')) {seed = 0.13; }
+	if (langCodes.includes('4')) {seed = 0.14; }
+	if (langCodes.includes('5')) {seed = 0.15; }
+	if (langCodes.includes('6')) {seed = 0.16; }
+	if (langCodes.includes('7')) {seed = 0.17; }
+	if (langCodes.includes('8')) {seed = 0.18; }
+	if (langCodes.includes('9')) {seed = 0.19; }
+	function rnd()
+	{ 
+		seed=(123456.789*seed+Math.PI)%1;
+		return seed;
+	}
 
 	if (langCodes.includes('z'))
 	{
@@ -152,9 +156,9 @@ function newQuestion()
 	data.dict.sort((a,b)=>a[2] - b[2]);
 	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
 
-	//const tmp1 = data.dict.indexOf(tmp);
-	//console.log(data.currentIndex, '-->', tmp1);
-	//console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
+	const tmp1 = data.dict.indexOf(tmp);
+	console.log(data.currentIndex, '-->', tmp1);
+	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
 	const answerIndices 
 			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
