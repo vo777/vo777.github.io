@@ -74,6 +74,7 @@ function startup()
 	} 
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
 	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
+	if (langCodes.includes('u')) {data.dict = data.dict.concat(dutch);} 
 
 	console.log('dictionary loaded. checking...');
 	
