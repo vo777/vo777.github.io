@@ -4,6 +4,7 @@ const data =
 	dict : [],  // format:  [0:q, 1:a, 2:score]
 	ansCorrectly : 0,
 	ansIncorrectly : 0,
+	questionCount : 0,
 	answerCount : 0,
 	timeRemaining : 0,
 	debugInfo : "",
@@ -153,6 +154,8 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
+	++data.questionCount;
+	
 	const tmp = data.dict[data.currentIndex];
 	data.dict.sort((a,b)=>a[2] - b[2]);
 	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
@@ -188,6 +191,7 @@ function toggleDebug()
 function showDebug()
 {
 	data.debugInfo = ''
+	+ data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+Math.round(100*calcCorrectRatio())+'%)'
 	+ ' n:'+data.dict.length
