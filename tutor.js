@@ -47,7 +47,7 @@ function startup()
 
 	if (langCodes.includes('z'))
 	{
-		langCodes += "sq dfip elr";// all except "cho mnt g"
+		langCodes += "sq dfipu elr";// all except "cho mnt g"
 	}
 	
 	if (langCodes.includes('s')) 
@@ -97,7 +97,6 @@ function startup()
 			//console.log('skip: ' + tmp)
 		}
 	}
-	
 	// normalize
 	for (let i=0; i<data.dict.length; ++i)
 	{
@@ -107,7 +106,6 @@ function startup()
 			+rnd()+rnd()+rnd()+rnd()
 			+rnd()+rnd()+rnd()+rnd();
 	}
-	
 	console.log('dictionary loaded and checked');
 	
 	data.timeRemaining = 0;
@@ -200,7 +198,6 @@ function showDebug()
 	
 	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
 	else{ data.summary.innerHTML = ''; }	
-	
 }
 
 function onAnswer(x)
