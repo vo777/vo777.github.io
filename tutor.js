@@ -40,7 +40,7 @@ function startup()
 	if (langCodes.includes('8')) {seed = 0.18; }
 	if (langCodes.includes('9')) {seed = 0.19; }
 	function rnd()
-	{ 
+	{
 		seed=(123456.789*seed+Math.PI)%1;
 		return seed;
 	}
@@ -56,6 +56,9 @@ function startup()
 		data.dict = data.dict.concat(spanish001);
 	}
 		
+	if (langCodes.includes('a')) {data.dict = data.dict.concat(arabic);} 
+	// running out of letters...
+	if (langCodes.includes('b')) {data.dict = data.dict.concat(hungarian);} 
 	if (langCodes.includes('c')) {data.dict = data.dict.concat(czech);} 
 	if (langCodes.includes('d')) {data.dict = data.dict.concat(german);} 
 	if (langCodes.includes('e')) {data.dict = data.dict.concat(esperanto);} 
@@ -94,7 +97,7 @@ function startup()
 		{
 			let tmp = data.dict.splice(i, 1);
 			i--;
-			//console.log('skip: ' + tmp)
+			console.log('skip: ' + tmp)
 		}
 	}
 	// normalize
