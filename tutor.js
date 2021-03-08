@@ -39,11 +39,7 @@ function startup()
 	if (langCodes.includes('7')) {seed = 0.17; }
 	if (langCodes.includes('8')) {seed = 0.18; }
 	if (langCodes.includes('9')) {seed = 0.19; }
-	function rnd()
-	{
-		seed=(123456.789*seed+Math.PI)%1;
-		return seed;
-	}
+	function rnd() { return seed=(123456.789*seed+0.1)%1; }
 
 	if (langCodes.includes('z'))
 	{
