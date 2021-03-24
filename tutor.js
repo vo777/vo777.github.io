@@ -156,7 +156,7 @@ function newQuestion()
 	const tmp = data.dict[data.currentIndex];
 	data.dict.sort((a,b)=>a[2] - b[2]);
 //	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
-	data.currentIndex = (++data.currentIndex) % 10;
+	data.currentIndex = (++data.currentIndex) % 5;
 
 	const tmp1 = data.dict.indexOf(tmp);
 	console.log(data.currentIndex, '-->', tmp1);
