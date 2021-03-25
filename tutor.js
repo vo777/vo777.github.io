@@ -9,7 +9,7 @@ const data =
 	timeRemaining : 0,
 	debugInfo : "",
 	debugInfoFlag : false,
-	currentIndex : 0,
+	currentIndex : -1,
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -153,13 +153,13 @@ function newQuestion()
 {
 	++data.questionCount;
 	
-	const tmp = data.dict[data.currentIndex];
-	data.dict.sort((a,b)=>a[2] - b[2]);
-//	data.currentIndex = tmp==data.dict[0] ? 1 : 0; // anti-repeat
+	//const tmp = data.dict[data.currentIndex];
+	
 	data.currentIndex = (++data.currentIndex) % 5;
+	if (data.currentIndex == 0) { data.dict.sort((a,b)=>a[2] - b[2]); }
 
-	const tmp1 = data.dict.indexOf(tmp);
-	console.log(data.currentIndex, '-->', tmp1);
+	//const tmp1 = data.dict.indexOf(tmp);
+	//console.log(data.currentIndex, '-->', tmp1);
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
 	const answerIndices 
