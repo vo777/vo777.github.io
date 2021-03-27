@@ -220,7 +220,11 @@ function onAnswer(x)
 		//console.log('correct answer');
 		//console.log(data.dict[data.currentIndex],'-->');
 		++data.ansCorrectly;
-		data.dict[data.currentIndex][2] += data.timeRemaining/timePerQuestion;
+		if (!data.errFlag)
+		{
+			data.dict[data.currentIndex][2] 
+					+= data.timeRemaining/timePerQuestion;
+		}
 		//console.log(data.dict[data.currentIndex],'///');
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
