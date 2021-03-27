@@ -10,6 +10,7 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : -1,
+	errFlag : true,
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -43,7 +44,7 @@ function startup()
 
 	if (langCodes.includes('z'))
 	{
-		langCodes += "sq dfipu elr";// all except "cho mnt g"
+		langCodes += "sq dfipu elr";// all west eur
 	}
 	
 	if (langCodes.includes('s')) 
@@ -155,8 +156,16 @@ function newQuestion()
 	
 	//const tmp = data.dict[data.currentIndex];
 	
-	data.currentIndex = (++data.currentIndex) % 5;
-	if (data.currentIndex == 0) { data.dict.sort((a,b)=>a[2] - b[2]); }
+	if (data.errFlag)
+	{
+		data.currentIndex = 0;
+		data.dict.sort((a,b)=>a[2] - b[2]);
+		data.errFlag = false;
+	}
+	else
+	{
+		data.currentIndex = (++data.currentIndex) % data.dict.length;
+	}
 
 	//const tmp1 = data.dict.indexOf(tmp);
 	//console.log(data.currentIndex, '-->', tmp1);
@@ -223,6 +232,7 @@ function onAnswer(x)
 	{
 		//console.log('wrong answer');
 		//console.log(data.dict[data.currentIndex],'-->');
+		data.errFlag = true;
 		++data.ansIncorrectly;
 		data.dict[data.currentIndex][2] -= data.timeRemaining/timePerQuestion;
 		//console.log(data.dict[data.currentIndex],'///');
