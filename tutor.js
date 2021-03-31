@@ -10,6 +10,7 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : -1,
+	answerIndices : [],
 	errFlag : true,
 	question : undefined,
 	answers : undefined,
@@ -101,8 +102,8 @@ function startup()
 	// normalize
 	for (let i=0; i<data.dict.length; ++i)
 	{
-		data.dict[i][0] = data.dict[i][0].toLowerCase();
-		data.dict[i][1] = data.dict[i][1].toLowerCase();
+		data.dict[i][0] = data.dict[i][0].toLowerCase().trim();
+		data.dict[i][1] = data.dict[i][1].toLowerCase().trim();
 		data.dict[i][2] = rnd()+rnd()+rnd()+rnd()
 			+rnd()+rnd()+rnd()+rnd()
 			+rnd()+rnd()+rnd()+rnd();
@@ -172,12 +173,12 @@ function newQuestion()
 	//console.log(data.currentIndex, '-->', tmp1);
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
-	const answerIndices 
+	data.answerIndices 
 			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
 	data.question.innerHTML = data.dict[data.currentIndex][0];
 	for (let i=0; i<4; ++i)
 	{
-		data.answers[i].innerHTML = data.dict[answerIndices[i]][1];
+		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
 	}
 	data.timeRemaining = timePerQuestion;
 	showDebug();
@@ -239,7 +240,12 @@ function onAnswer(x)
 		//console.log(data.dict[data.currentIndex],'-->');
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		data.dict[data.currentIndex][2] -= data.timeRemaining/timePerQuestion;
+		data.dict[data.answerIndices[x]][2] = data.dict[5][2]; 
+				// move an incorrent answer
+				// to the 5th (an arbitrary reasonable number) position		
+		data.dict[data.currentIndex][2] 
+					-= data.timeRemaining/timePerQuestion;
+
 		//console.log(data.dict[data.currentIndex],'///');
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
