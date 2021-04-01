@@ -745,7 +745,6 @@
  ["spielt", "plays"],
  ["schiff", "ship"],
  ["hörst", "hear"],
- ["lhren", "NOT CONNECT"],
  ["onkel", "uncle"],
  ["glaub", "think"],
  ["verlieren", "to lose"],
