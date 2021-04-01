@@ -30,19 +30,6 @@ function startup()
 	}
 	langCodes = langCodes.toLowerCase();
 
-	let seed = new Date().getTime()/1e6;
-	if (langCodes.includes('0')) {seed = 0.10; }
-	if (langCodes.includes('1')) {seed = 0.11; }
-	if (langCodes.includes('2')) {seed = 0.12; }
-	if (langCodes.includes('3')) {seed = 0.13; }
-	if (langCodes.includes('4')) {seed = 0.14; }
-	if (langCodes.includes('5')) {seed = 0.15; }
-	if (langCodes.includes('6')) {seed = 0.16; }
-	if (langCodes.includes('7')) {seed = 0.17; }
-	if (langCodes.includes('8')) {seed = 0.18; }
-	if (langCodes.includes('9')) {seed = 0.19; }
-	function rnd() { return seed=(123456.789*seed+0.1)%1; }
-
 	if (langCodes.includes('z'))
 	{
 		langCodes += "sq dfipu elr";// all west eur
@@ -89,7 +76,8 @@ function startup()
 			console.log('format: ' + data.dict[i])
 		}
 		if (data.dict[i].length != 2
-		|| data.dict[i][0].toUpperCase() === data.dict[i][1].toUpperCase()
+		|| data.dict[i][0].toLowerCase().trim() 
+				=== data.dict[i][1].toLowerCase().trim()
 		|| data.dict[i][0] === ""
 		|| data.dict[i][1] === ""
 		)
@@ -104,9 +92,7 @@ function startup()
 	{
 		data.dict[i][0] = data.dict[i][0].toLowerCase().trim();
 		data.dict[i][1] = data.dict[i][1].toLowerCase().trim();
-		data.dict[i][2] = rnd()+rnd()+rnd()+rnd()
-			+rnd()+rnd()+rnd()+rnd()
-			+rnd()+rnd()+rnd()+rnd();
+		data.dict[i][2] = Math.random();
 	}
 	console.log('dictionary loaded and checked');
 	
@@ -150,14 +136,11 @@ function loadSynonyms(dest, src)
 	}
 }
 /**
-*    generate new currentIndex
+*    generate new  currentIndex  and  answerIndices
 */
 function newQuestion()
 {
 	++data.questionCount;
-	
-	//const tmp = data.dict[data.currentIndex];
-	
 	if (data.errFlag)
 	{
 		data.currentIndex = 0;
@@ -168,9 +151,6 @@ function newQuestion()
 	{
 		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
-
-	//const tmp1 = data.dict.indexOf(tmp);
-	//console.log(data.currentIndex, '-->', tmp1);
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
 	data.answerIndices 
@@ -184,7 +164,7 @@ function newQuestion()
 	showDebug();
 }
 
-function calcCorrectRatio()
+function calcCorrectnessRatio()
 {
 	const res = 1.0*data.ansCorrectly 
 		/ (data.ansCorrectly + data.ansIncorrectly);
@@ -202,8 +182,9 @@ function showDebug()
 	data.debugInfo = ''
 	+ data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
-	+ '('+Math.round(100*calcCorrectRatio())+'%)'
+	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
+	+ ' i:'+data.currentIndex
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -219,15 +200,13 @@ function onAnswer(x)
 	
 	if (answered == correctAnswer)
 	{
-		//console.log('correct answer');
-		//console.log(data.dict[data.currentIndex],'-->');
 		++data.ansCorrectly;
 		if (!data.errFlag)
 		{
-			data.dict[data.currentIndex][2] 
-					+= data.timeRemaining/timePerQuestion;
+			const newIndex = (7 + 2*data.currentIndex) % data.dict.length;
+			// newIndex = a reasonable number larger than the current
+			data.dict[data.currentIndex][2] = data.dict[newIndex][2] + 1e-6; 
 		}
-		//console.log(data.dict[data.currentIndex],'///');
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
@@ -236,17 +215,15 @@ function onAnswer(x)
 	}
 	else
 	{
-		//console.log('wrong answer');
-		//console.log(data.dict[data.currentIndex],'-->');
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		data.dict[data.answerIndices[x]][2] = data.dict[5][2]; 
+		data.dict[data.answerIndices[x]][2] = data.dict[4][2] + 1e-6; 
 				// move an incorrent answer
 				// to the 5th (an arbitrary reasonable number) position		
-		data.dict[data.currentIndex][2] 
-					-= data.timeRemaining/timePerQuestion;
+		data.dict[data.currentIndex][2] = data.dict[1][2] + 1e-6; 
+				// move an incorrent question
+				// to the 2nd (an arbitrary reasonable number) position		
 
-		//console.log(data.dict[data.currentIndex],'///');
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
@@ -277,10 +254,11 @@ function genRandomIncorrectAnswers(m, dict)
 		anticollision += dict[randomIndex][1].toLowerCase().trim();
 		res.push(randomIndex);
 	}
-	//console.log('ac:' + anticollision);
+	//console.log('anticollision:' + anticollision);
 	shuffle(res);
 	shuffle(res); // for good measure
 	return res;
 }
 
+// this 'shuffle' is *not* reliable for long arrays
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
