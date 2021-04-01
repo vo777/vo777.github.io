@@ -151,6 +151,12 @@ function newQuestion()
 	{
 		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
+	
+	if (data.currentIndex >= 10 && calcCorrectnessRatio() > 0.75)
+	{
+		data.currentIndex = Math.floor(Math.random() * data.dict.length);
+	}
+	
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 
 	data.answerIndices 
@@ -205,7 +211,8 @@ function onAnswer(x)
 		{
 			const newIndex = (7 + 2*data.currentIndex) % data.dict.length;
 			// newIndex = a reasonable number larger than the current
-			data.dict[data.currentIndex][2] = data.dict[newIndex][2] + 1e-6; 
+			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
+				+ 1e-6*Math.random(); 
 		}
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
@@ -217,11 +224,13 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		data.dict[data.answerIndices[x]][2] = data.dict[4][2] + 1e-6; 
+		data.dict[data.answerIndices[x]][2] = data.dict[2][2] 
+			+ 1e-6*Math.random(); 
 				// move an incorrent answer
-				// to the 5th (an arbitrary reasonable number) position		
-		data.dict[data.currentIndex][2] = data.dict[1][2] + 1e-6; 
-				// move an incorrent question
+				// to the 3rd (an arbitrary reasonable number) position		
+		data.dict[data.currentIndex][2] = data.dict[1][2] 
+			+ 1e-6*Math.random(); 
+				// move an incorrently answered question
 				// to the 2nd (an arbitrary reasonable number) position		
 
 		data.answers[x].innerHTML = "-";
