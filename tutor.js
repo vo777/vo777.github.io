@@ -243,7 +243,7 @@ function onAnswer(x)
 		++data.ansIncorrectly;
 		for (let i=0; i<4; ++i)
 		{
-			data.dict[data.answerIndices[i]][2] = data.dict[2][2] 
+			data.dict[data.answerIndices[i]][2] = data.dict[5+10*i][2] 
 				+ 1e-6*Math.random();
 			console.log('err: moving to front:'
 					, data.dict[data.answerIndices[i]][0]);
