@@ -10,8 +10,9 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : -1,
-	answerIndices : [],
+	answerIndices : [0,0,0,0],
 	errFlag : true,
+	noAnswerFlag: true,
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -141,16 +142,30 @@ function loadSynonyms(dest, src)
 function newQuestion()
 {
 	++data.questionCount;
+	
+	if (data.noAnswerFlag)
+	{
+		for (let i=0; i<4; ++i)
+		{
+			data.dict[data.answerIndices[i]][2] = 1e-6*Math.random(); 
+			console.log('noAns: moving to front:'
+					, data.dict[data.answerIndices[i]][0]);
+		}	
+	}
+	
+	data.noAnswerFlag = true;
+	
 	if (data.errFlag)
 	{
 		data.currentIndex = 0;
 		data.dict.sort((a,b)=>a[2] - b[2]);
-		data.errFlag = false;
 	}
 	else
 	{
 		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
+	
+	data.errFlag = false;
 	
 	if (data.currentIndex >= 10 && calcCorrectnessRatio() > 0.75)
 	{
@@ -201,9 +216,11 @@ function showDebug()
 function onAnswer(x)
 {
 	++data.answerCount;
+	data.noAnswerFlag = false;
+
 	const answered = data.answers[x].innerHTML;
 	const correctAnswer = data.dict[data.currentIndex][1];
-	
+		
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
@@ -224,15 +241,14 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		data.dict[data.answerIndices[x]][2] = data.dict[2][2] 
-			+ 1e-6*Math.random(); 
-				// move an incorrent answer
-				// to the 3rd (an arbitrary reasonable number) position		
-		data.dict[data.currentIndex][2] = data.dict[1][2] 
-			+ 1e-6*Math.random(); 
-				// move an incorrently answered question
-				// to the 2nd (an arbitrary reasonable number) position		
-
+		for (let i=0; i<4; ++i)
+		{
+			data.dict[data.answerIndices[i]][2] = data.dict[2][2] 
+				+ 1e-6*Math.random();
+			console.log('err: moving to front:'
+					, data.dict[data.answerIndices[i]][0]);
+		}
+		
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
