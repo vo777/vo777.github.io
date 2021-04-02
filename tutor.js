@@ -11,8 +11,8 @@ const data =
 	debugInfoFlag : false,
 	currentIndex : -1,
 	answerIndices : [0,0,0,0],
-	errFlag : true,
-	noAnswerFlag: true,
+	errFlag : true,      // true  required for proper first question
+	noAnswerFlag: false, // false required for proper first question
 	question : undefined,
 	answers : undefined,
 	summary : undefined
