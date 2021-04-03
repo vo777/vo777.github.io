@@ -146,10 +146,10 @@ function newQuestion()
 	const tmp = calcCorrectnessRatio() > 0.7;
 	if (data.noAnswerFlag && tmp)
 	{
+		const offset = 10;
+		const step = 5;
 		for (let i=0; i<4; ++i)
 		{
-			const offset = tmp? 1:10;
-			const step = tmp? 2:5;
 			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
 				+ 1e-6*Math.random();
 		}	
