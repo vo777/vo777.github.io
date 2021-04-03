@@ -227,10 +227,10 @@ function onAnswer(x)
 	{
 		++data.ansCorrectly;
 		const tmp = calcCorrectnessRatio() > 0.7;
-		if (!data.errFlag || !tmp)
+		if (!data.errFlag && tmp)
 		{
-			const offset = tmp ? 50:2;
-			const step = tmp? 5:1;
+			const offset = 50;
+			const step = 5;
 			const newIndex = (offset + step*data.currentIndex) 
 				% data.dict.length;
 			// newIndex = a reasonable number larger than the current
