@@ -247,11 +247,11 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
+		const tmp = calcCorrectnessRatio() > 0.7;
+		const offset = tmp? 1:40;
+		const step = tmp? 2:5;
 		for (let i=0; i<4; ++i)
 		{
-			const tmp = calcCorrectnessRatio() > 0.7;
-			const offset = tmp? 1:40;
-			const step = tmp? 2:5;
 			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
 				+ 1e-6*Math.random();
 		}
