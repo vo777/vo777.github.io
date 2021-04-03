@@ -143,11 +143,11 @@ function newQuestion()
 {
 	++data.questionCount;
 	
-	if (data.noAnswerFlag)
+	const tmp = calcCorrectnessRatio() > 0.7;
+	if (data.noAnswerFlag && tmp)
 	{
 		for (let i=0; i<4; ++i)
 		{
-			const tmp = calcCorrectnessRatio() > 0.7;
 			const offset = tmp? 1:10;
 			const step = tmp? 2:5;
 			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
