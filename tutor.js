@@ -158,7 +158,7 @@ function newQuestion()
 	
 	if (data.errFlag)
 	{
-		data.currentIndex = Math.floor(5*Math.random());
+		data.currentIndex = 0;
 		data.dict.sort((a,b)=>a[2] - b[2]);
 	}
 	else
