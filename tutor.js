@@ -143,8 +143,7 @@ function newQuestion()
 {
 	++data.questionCount;
 	
-	const tmp = calcCorrectnessRatio() > 0.7;
-	if (data.noAnswerFlag && tmp)
+	if (data.noAnswerFlag && calcCorrectnessRatio() > 0.7)
 	{
 		const offset = 10;
 		const step = 5;
@@ -208,7 +207,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.01'
+	+ ' ver:3.02'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -227,13 +226,9 @@ function onAnswer(x)
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
-		const tmp = calcCorrectnessRatio() > 0.7;
-		if (!data.errFlag && tmp)
+		if (!data.errFlag && calcCorrectnessRatio() > 0.7)
 		{
-			const offset = 50;
-			const step = 5;
-			const newIndex = (offset + step*data.currentIndex) 
-				% data.dict.length;
+			const newIndex = 50+data.currentIndex;
 			// newIndex = a reasonable number larger than the current
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
@@ -248,8 +243,7 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		const tmp = calcCorrectnessRatio() > 0.7;
-		if (tmp)
+		if (calcCorrectnessRatio() > 0.7)
 		{
 			const offset = 1;
 			const step = 2;
