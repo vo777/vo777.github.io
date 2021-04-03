@@ -147,9 +147,11 @@ function newQuestion()
 	{
 		for (let i=0; i<4; ++i)
 		{
-			data.dict[data.answerIndices[i]][2] = 1e-6*Math.random(); 
-			console.log('noAns: moving to front:'
-					, data.dict[data.answerIndices[i]][0]);
+			const tmp = calcCorrectnessRatio() > 0.7;
+			const offset = tmp? 1:40;
+			const step = tmp? 2:5;
+			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
+				+ 1e-6*Math.random();
 		}	
 	}
 	
@@ -226,7 +228,9 @@ function onAnswer(x)
 		++data.ansCorrectly;
 		if (!data.errFlag)
 		{
-			const newIndex = (7 + 2*data.currentIndex) % data.dict.length;
+			const tmp = calcCorrectnessRatio() > 0.7;
+			const offset = tmp ? 50:2;
+			const newIndex = (offset + 2*data.currentIndex) % data.dict.length;
 			// newIndex = a reasonable number larger than the current
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
@@ -243,10 +247,11 @@ function onAnswer(x)
 		++data.ansIncorrectly;
 		for (let i=0; i<4; ++i)
 		{
-			data.dict[data.answerIndices[i]][2] = data.dict[5+10*i][2] 
+			const tmp = calcCorrectnessRatio() > 0.7;
+			const offset = tmp? 1:40;
+			const step = tmp? 2:5;
+			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
 				+ 1e-6*Math.random();
-			console.log('err: moving to front:'
-					, data.dict[data.answerIndices[i]][0]);
 		}
 		
 		data.answers[x].innerHTML = "-";
