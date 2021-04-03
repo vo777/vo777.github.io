@@ -296,4 +296,5 @@ function genRandomIncorrectAnswers(m, dict)
 }
 
 // this 'shuffle' is *not* reliable for long arrays
+// it is used here only to shuffle answers (4 items)
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
