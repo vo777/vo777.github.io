@@ -226,11 +226,13 @@ function onAnswer(x)
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
-		if (!data.errFlag)
+		const tmp = calcCorrectnessRatio() > 0.7;
+		if (!data.errFlag || !tmp)
 		{
-			const tmp = calcCorrectnessRatio() > 0.7;
 			const offset = tmp ? 50:2;
-			const newIndex = (offset + 2*data.currentIndex) % data.dict.length;
+			const step = tmp? 5:1;
+			const newIndex = (offset + step*data.currentIndex) 
+				% data.dict.length;
 			// newIndex = a reasonable number larger than the current
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
