@@ -208,6 +208,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
+	+ ' ver:3.01'
 	+ ' ' + window.location.search
 	+ '';
 	
