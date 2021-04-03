@@ -248,14 +248,16 @@ function onAnswer(x)
 		data.errFlag = true;
 		++data.ansIncorrectly;
 		const tmp = calcCorrectnessRatio() > 0.7;
-		const offset = tmp? 1:40;
-		const step = tmp? 2:5;
-		for (let i=0; i<4; ++i)
+		if (tmp)
 		{
-			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
-				+ 1e-6*Math.random();
+			const offset = 1;
+			const step = 2;
+			for (let i=0; i<4; ++i)
+			{
+				data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
+					+ 1e-6*Math.random();
+			}
 		}
-		
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
