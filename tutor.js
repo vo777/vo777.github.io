@@ -67,6 +67,8 @@ function startup()
 	if (langCodes.includes('u')) {data.dict = data.dict.concat(dutch);} 
 	if (langCodes.includes('v')) {data.dict = data.dict.concat(vietnamese);} 
 
+	if (langCodes.includes('0')) {data.dict = data.dict.concat(lang_0);} 
+
 	console.log('dictionary loaded. checking...');
 	
 	// remove dupes

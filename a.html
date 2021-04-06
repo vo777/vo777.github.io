@@ -37,11 +37,11 @@
 	
 	function worker()
 	{
-		const N = 4;
+		const N = 16;
 		const idx = Math.floor(N * Math.random());
 		const name = 'img/x' + idx + '.png';
 		document.getElementById("pic").src = name;
-		setTimeout(worker, 200);
+		setTimeout(worker, 2000);
 	}
 
 
