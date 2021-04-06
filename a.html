@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash</title>
+    <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <body onload="startup()">
+    <!-- disable scrollbars: -->
+    <style type="text/css"> 
+	body 
+	{ 
+		overflow: hidden; 
+		background-color : #000000;
+		color: #FFFFFF;
+	} </style>
+	
+	<style>
+	.aaa
+	{
+	   text-align: center;
+	   font-size:  170%;
+	   font-family: "Arial";
+	   font-weight: normal;
+	   background-color : #000000;
+	   margin: 10px 0px 1px 0px;
+	}
+	</style>
+
+	<div class='aaa' id='answer0' onclick='clicked();'>aaa0000</div>
+	
+	<script>
+	function startup()
+	{
+		worker();
+	}
+	
+	function clicked()
+	{
+	}
+	
+	function worker()
+	{
+		const txt = items[Math.floor(items.length * Math.random())];
+		document.getElementById("answer0").innerHTML = txt;
+		setTimeout(worker, 200+txt.length*200);
+	}
+	
+	
+	const items = [
+	"aaa",
+	"bbb",
+	"cccccccc",
+	"ddd",
+	"e",
+	
+	];
+	
+	</script>
+	
+	
+  </body>
+</html>
