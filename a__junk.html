@@ -17,13 +17,18 @@
 	} </style>
 	
 	<style>
-	img {
-   -webkit-filter: invert(1);
-   filter: invert(1);
-   }
+	.aaa
+	{
+	   text-align: center;
+	   font-size:  170%;
+	   font-family: "Arial";
+	   font-weight: normal;
+	   background-color : #000000;
+	   margin: 10px 0px 1px 0px;
+	}
 	</style>
-	
-	<img id='pic' src='img/x0.png' width='100%' height="100%">
+
+	<div class='aaa' id='answer0' onclick='clicked();'>aaa0000</div>
 	
 	<script>
 	function startup()
@@ -37,11 +42,9 @@
 	
 	function worker()
 	{
-		const N = 4;
-		const idx = Math.floor(N * Math.random());
-		const name = 'img/x' + idx + '.png';
-		document.getElementById("pic").src = name;
-		setTimeout(worker, 200);
+		const txt = items[Math.floor(items.length * Math.random())];
+		document.getElementById("answer0").innerHTML = txt;
+		setTimeout(worker, 200+txt.length*200);
 	}
 
 
