@@ -212,7 +212,7 @@ const lang_0 = [
 ["mi piacerà", "like (future)"],
 ["vorrò", "want (future)"],
 ["dovrò", "have to (future)"],
-["(?)", "be able to (future)"],
+
 ["sarei", "be (conditional)"],
 ["avrei", "have (conditional)"],
 ["andrei", "go (conditional)"],
@@ -303,7 +303,7 @@ const lang_0 = [
 ["je ferai", "faire (future)"],
 ["j'aimerai", "aimer (future)"],
 ["je voudrai", "vouloir (future)"],
-["?", "devoir (future)"],
+
 ["je pourrai", "pouvoir (future)"],
 
 ["je serais", "être (conditional)"],
@@ -312,7 +312,7 @@ const lang_0 = [
 ["je ferais", "faire (conditional)"],
 ["j'aimerais", "aimer (conditional)"],
 ["je voudrais", "vouloir (conditional)"],
-["?", "devoir (conditional)"],
+
 ["je pourrais", "pouvoir (conditional)"],
 
 
