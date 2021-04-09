@@ -230,6 +230,7 @@ function onAnswer(x)
 		{
 			const newIndex = 20+data.currentIndex;
 			// newIndex = a reasonable number larger than the current
+			console.log('index change:', data.currentIndex, newIndex);
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
 		}
@@ -249,7 +250,10 @@ function onAnswer(x)
 			const step = 2;
 			for (let i=0; i<4; ++i)
 			{
-				data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] + 1e-6*Math.random();
+				const a = data.answerIndices[i];
+				const b = offset+step*i;
+				console.log('index change:', a, b);
+				data.dict[a][2] = data.dict[b][2] + 1e-6*Math.random();
 			}
 		}
 
