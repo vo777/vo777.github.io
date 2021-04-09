@@ -207,7 +207,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.06'
+	+ ' ver:3.07'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -243,7 +243,7 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		if (calcCorrectnessRatio() > 0.7 || data.currentIndex > 5)
+		if (data.currentIndex > 5)
 		{
 			const offset = 1;
 			const step = 2;
