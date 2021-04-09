@@ -170,7 +170,7 @@ function newQuestion()
 	
 	if (data.currentIndex >= 5)
 	{
-		data.currentIndex = Math.floor(Math.random() * data.dict.length);
+		data.currentIndex = Math.floor(Math.random()**2 * data.dict.length);
 	}
 	
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
@@ -207,7 +207,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.07'
+	+ ' ver:3.08'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -228,7 +228,8 @@ function onAnswer(x)
 		++data.ansCorrectly;
 		if (!data.errFlag)
 		{
-			const newIndex = 20+data.currentIndex;
+			const newIndex = (data.currentIndex + Math.floor(Math.sqrt(data.ansCorrectly)) ) % data.dict.length;
+			
 			console.log('index change:', data.currentIndex, newIndex);
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
