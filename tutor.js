@@ -207,7 +207,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.04'
+	+ ' ver:3.06'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -252,11 +252,7 @@ function onAnswer(x)
 				data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] + 1e-6*Math.random();
 			}
 		}
-		else
-		{
-			data.dict[data.currentIndex][2] 
-				= data.dict[0][2] - 1e-6*Math.random();
-		}
+
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
