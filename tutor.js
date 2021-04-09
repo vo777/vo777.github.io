@@ -229,7 +229,6 @@ function onAnswer(x)
 		if (!data.errFlag)
 		{
 			const newIndex = 20+data.currentIndex;
-			// newIndex = a reasonable number larger than the current
 			console.log('index change:', data.currentIndex, newIndex);
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
