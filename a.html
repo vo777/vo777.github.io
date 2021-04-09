@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash</title>
+    <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <body onload="startup()">
+    <!-- disable scrollbars: -->
+    <style type="text/css"> 
+	body 
+	{ 
+		overflow: hidden; 
+		background-color : #000000;
+		color: #FFFFFF;
+	} </style>
+	
+	<style>
+	img {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   }
+	</style>
+	
+	<img id='pic' src='img/x0.png' width='100%' height="100%">
+	
+	<script>
+	function startup()
+	{
+		worker();
+	}
+	
+	function clicked()
+	{
+	}
+	
+	function worker()
+	{
+		const N = 16;
+		const idx = Math.floor(N * Math.random());
+		const name = 'img/x' + idx + '.png';
+		document.getElementById("pic").src = name;
+		setTimeout(worker, 2000);
+	}
+
+
+	const items = [
+	"aaa",
+	"bbb",
+	"cccccccc",
+	"ddd",
+	"e",
+	
+	];
+
+
+	</script>
+  </body>
+</html>
