@@ -147,14 +147,10 @@ function newQuestion()
 	
 	if (data.noAnswerFlag && calcCorrectnessRatio() > 0.7)
 	{
-//		const offset = 10;
-//		const step = 5;
-		const offset = 0;
-		const step = 0;
 		for (let i=0; i<4; ++i)
 		{
-			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
-				- 1e-6*Math.random();
+			data.dict[data.answerIndices[i]][2] 
+				= data.dict[0][2] - 1e-6*Math.random();
 		}	
 	}
 	
@@ -211,7 +207,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.03'
+	+ ' ver:3.04'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -253,9 +249,13 @@ function onAnswer(x)
 			const step = 2;
 			for (let i=0; i<4; ++i)
 			{
-				data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
-					+ 1e-6*Math.random();
+				data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] + 1e-6*Math.random();
 			}
+		}
+		else
+		{
+			data.dict[data.currentIndex][2] 
+				= data.dict[0][2] - 1e-6*Math.random();
 		}
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
