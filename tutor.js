@@ -147,12 +147,14 @@ function newQuestion()
 	
 	if (data.noAnswerFlag && calcCorrectnessRatio() > 0.7)
 	{
-		const offset = 10;
-		const step = 5;
+//		const offset = 10;
+//		const step = 5;
+		const offset = 0;
+		const step = 0;
 		for (let i=0; i<4; ++i)
 		{
 			data.dict[data.answerIndices[i]][2] = data.dict[offset+step*i][2] 
-				+ 1e-6*Math.random();
+				- 1e-6*Math.random();
 		}	
 	}
 	
@@ -170,7 +172,7 @@ function newQuestion()
 	
 	data.errFlag = false;
 	
-	if (data.currentIndex >= 10 && calcCorrectnessRatio() > 0.75)
+	if (data.currentIndex >= 5)
 	{
 		data.currentIndex = Math.floor(Math.random() * data.dict.length);
 	}
@@ -209,7 +211,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.02'
+	+ ' ver:3.03'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -228,9 +230,9 @@ function onAnswer(x)
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
-		if (!data.errFlag && calcCorrectnessRatio() > 0.7)
+		if (!data.errFlag)
 		{
-			const newIndex = 50+data.currentIndex;
+			const newIndex = 20+data.currentIndex;
 			// newIndex = a reasonable number larger than the current
 			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
 				+ 1e-6*Math.random(); 
@@ -245,7 +247,7 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		if (calcCorrectnessRatio() > 0.7)
+		if (calcCorrectnessRatio() > 0.7 || data.currentIndex > 5)
 		{
 			const offset = 1;
 			const step = 2;
