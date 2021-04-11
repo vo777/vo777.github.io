@@ -148,6 +148,21 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
+	if (data.ansCorrectly > data.questionCount + 1)
+	{
+		// re-init
+		data.ansCorrectly = 0;
+		data.ansIncorrectly = 0;
+		data.questionCount = 0;
+		data.answerCount = 0;
+		data.errFlag = true;
+		noAnswerFlag = false;
+		for (let i=0; i<data.dict.length; ++i)
+		{
+			data.dict[i][2] = Math.random();
+		}
+	}
+	
 	++data.questionCount;
 	
 	if (data.noAnswerFlag && calcCorrectnessRatio() > 0.7)
