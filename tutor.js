@@ -148,6 +148,8 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
+	const nCorr = 8;
+	
 	if (data.ansCorrectly > data.questionCount + 5)
 	{
 		// re-init
@@ -167,7 +169,7 @@ function newQuestion()
 	
 	if (data.noAnswerFlag || data.errFlag)
 	{
-		if (data.currentIndex >= 5)
+		if (data.currentIndex >= nCorr)
 		{
 			for (let i=0; i<4; ++i)
 			{
@@ -187,7 +189,7 @@ function newQuestion()
 	data.noAnswerFlag = false;
 	data.errFlag = false;
 	
-	if (data.currentIndex >= 7)
+	if (data.currentIndex >= nCorr)
 	{
 		data.currentIndex = Math.floor(Math.random()**2 * data.dict.length);
 	}
@@ -226,7 +228,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.09'
+	+ ' ver:3.10'
 	+ ' ' + window.location.search
 	+ '';
 	
