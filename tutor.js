@@ -148,7 +148,7 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
-	if (data.ansCorrectly > data.questionCount + 1)
+	if (data.ansCorrectly > data.questionCount + 5)
 	{
 		// re-init
 		data.ansCorrectly = 0;
