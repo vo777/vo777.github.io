@@ -1,4 +1,4 @@
-tagalog = [
+const tagalog = [
 ["bilang", "as"],
 ["ako", "I"],
 ["kanyang", "his"],

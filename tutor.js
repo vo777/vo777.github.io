@@ -36,12 +36,6 @@ function startup()
 		langCodes += "sq dfipu elr";// all west eur
 	}
 	
-	if (langCodes.includes('s')) 
-	{	
-		data.dict = data.dict.concat(spanish);
-		data.dict = data.dict.concat(spanish001);
-	}
-		
 	if (langCodes.includes('a')) {data.dict = data.dict.concat(arabic);} 
 	// running out of letters...
 	if (langCodes.includes('b')) {data.dict = data.dict.concat(hungarian);} 
@@ -63,9 +57,15 @@ function startup()
 		data.dict = data.dict.concat(spanishQ);
 	} 
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
+	if (langCodes.includes('s')) 
+	{	
+		data.dict = data.dict.concat(spanish);
+		data.dict = data.dict.concat(spanish001);
+	}		
 	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
 	if (langCodes.includes('u')) {data.dict = data.dict.concat(dutch);} 
 	if (langCodes.includes('v')) {data.dict = data.dict.concat(vietnamese);} 
+	if (langCodes.includes('x')) {data.dict = data.dict.concat(tagalog);} 
 
 	if (langCodes.includes('0')) {data.dict = data.dict.concat(lang_0);} 
 
