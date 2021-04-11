@@ -31,6 +31,11 @@ function startup()
 	}
 	langCodes = langCodes.toLowerCase();
 
+	if (langCodes.includes('*'))
+	{
+		langCodes += "abcdefghijklmnopqrstuvwxyz0123456789";
+	}
+	
 	if (langCodes.includes('z'))
 	{
 		langCodes += "sq dfipu elr";// all west eur
