@@ -165,19 +165,17 @@ function newQuestion()
 	
 	++data.questionCount;
 	
-	if (data.noAnswerFlag && calcCorrectnessRatio() > 0.7)
+	if (data.noAnswerFlag || data.errFlag)
 	{
-		for (let i=0; i<4; ++i)
+		if (data.currentIndex >= 5)
 		{
-			data.dict[data.answerIndices[i]][2] 
-				= data.dict[0][2] - 1e-6*Math.random();
-		}	
-	}
-	
-	data.noAnswerFlag = true;
-	
-	if (data.errFlag)
-	{
+			for (let i=0; i<4; ++i)
+			{
+				data.dict[data.answerIndices[i]][2] 
+					= data.dict[0][2] - 1e-6*Math.random();
+				console.log('idx change:',data.answerIndices[i],'->',0);
+			}
+		}
 		data.currentIndex = 0;
 		data.dict.sort((a,b)=>a[2] - b[2]);
 	}
@@ -186,9 +184,10 @@ function newQuestion()
 		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
 	
+	data.noAnswerFlag = false;
 	data.errFlag = false;
 	
-	if (data.currentIndex >= 5)
+	if (data.currentIndex >= 7)
 	{
 		data.currentIndex = Math.floor(Math.random()**2 * data.dict.length);
 	}
@@ -227,7 +226,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.08'
+	+ ' ver:3.09'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -246,14 +245,6 @@ function onAnswer(x)
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
-		if (!data.errFlag)
-		{
-			const newIndex = (data.currentIndex + Math.floor(Math.sqrt(data.ansCorrectly)) ) % data.dict.length;
-			
-			console.log('index change:', data.currentIndex, newIndex);
-			data.dict[data.currentIndex][2] = data.dict[newIndex][2] 
-				+ 1e-6*Math.random(); 
-		}
 		data.timeRemaining = 10;
 		for (let i=0; i<4; ++i)
 		{
@@ -264,19 +255,6 @@ function onAnswer(x)
 	{
 		data.errFlag = true;
 		++data.ansIncorrectly;
-		if (data.currentIndex > 5)
-		{
-			const offset = 1;
-			const step = 2;
-			for (let i=0; i<4; ++i)
-			{
-				const a = data.answerIndices[i];
-				const b = offset+step*i;
-				console.log('index change:', a, b);
-				data.dict[a][2] = data.dict[b][2] + 1e-6*Math.random();
-			}
-		}
-
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 	}
