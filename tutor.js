@@ -177,9 +177,13 @@ function newQuestion()
 					= data.dict[0][2] - 1e-6*Math.random();
 				console.log('idx change:',data.answerIndices[i],'->',0);
 			}
+			data.currentIndex = 0;
+			data.dict.sort((a,b)=>a[2] - b[2]);
 		}
-		data.currentIndex = 0;
-		data.dict.sort((a,b)=>a[2] - b[2]);
+		else
+		{
+			if (data.currentIndex > 0) { --data.currentIndex; }
+		}
 	}
 	else
 	{
@@ -228,7 +232,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.11'
+	+ ' ver:3.12'
 	+ ' ' + window.location.search
 	+ '';
 	
