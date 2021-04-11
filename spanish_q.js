@@ -587,6 +587,569 @@ const spanishQ = [
 ["¿Adónde va usted?", "Where are you going?"],
 ["Where are you going? You have to leave in ten minutes!", "¿Para dónde vas? ¡Te tienes que ir en diez minutos!"],
 ["What are you waiting for?", "¡Vamos!"],
- 
+["Hola", "Hello"],
+["¿Qué tal?", "How are you?"],
+["¿Qué pasa?", "What’s up?"],
+["¿Cómo te va?", "How’re you doing?"],
+["Bien", "Good"],
+["Muy bien", "Very good"],
+["Así así", "So-so"],
+["No tan bien", "Not so good"],
+["¿Y tú?", "And you?"],
+["Me llamo…", "My name is…"],
+["¿Cómo te llamas?", "What’s your name?"],
+["Mucho gusto", "Nice to meet you"],
+["Placér", "A pleasure"],
+["Encantado/Encantada", "Charmed, Likewise"],
+["Nos vemos mañana", "See you tomorrow"],
+["Hasta luego", "See you later"],
+["Hasta pronto amigo", "See you soon, friend"],
+["Gracias", "Thank you"],
+["De nada", "You’re welcome"],
+["No hay de qué", "No problem"],
+["Disculpe", "Excuse me"],
+["Lo siento", "I’m sorry"],
+
+["¿Qué te gusta hacer?", "What do you like to do?"],
+["Mi pasatiempo favorito es…", "My favourite pastime is…"],
+["¿Cuáles son tus pasatiempos?", "What are your hobbies?"],
+["¿Qué haces en tu tiempo libre?", "What do you do in your free time?"],
+["Me gusta / No me gusta…", "I like / I don’t like…"],
+["Me encanta…", "I love…"],
+["¿Qué te gusta leer?", "Do you like to read?"],
+["¿Que música te gusta?", "What music do you like?"],
+["Mi favorito es…", "My favourite is…"],
+["Me gusta ir…", "I like going to…"],
+["¿En qué trabajas?", "What’s your job?"],
+["¿Te gusta tu trabajo?", "Do you like your job?"],
+["Trabajo en…", "I work at…"],
+
+
+
+
+["Me encanta café. ¿Quieres ir a tomar una taza?", "I love coffee. Wanna go grab a cup?"],
+["Trabajo en la escuela. Soy profesor.", "I work at the school. I’m a teacher."],
+
+["¿Cuánto cuesta?", "How much is this?"],
+["¿Dónde está el baño?", "Where’s the bathroom?"],
+["¿Qué hora es?", "What time is it?"],
+["¿Pasa algo?", "Is something wrong?"],
+["¿Es esto correcto?", "Is this right?"],
+["¿Me equivocado?", "Was I wrong?"],
+["¿Me puede ayudar con esto?", "Can you help me with this?"],
+["¿Puedes traerme … por favor?", "Can you bring me … please?"],
+["¿Puedo entrar?", "Can I come in?"],
+["¿Quieres tomar una copa?", "Want to grab a drink?"],
+["¿A dónde deberíamos ir a comer?", "Where should we go to eat?"],
+["¿Estás listo?", "Are you ready?"],
+
+
+
+["¡Cuánto tiempo sin verlo(a)!", "Long time no see!"],
+["¡Feliz cumpleaños!", "Happy birthday!"],
+["¡Buena suerte!", "Good luck!"],
+["¡Alto!", "Stop!"],
+["¡Salud!", "Cheers!"],
+["Que te mejores", "Get well soon"],
+["Buen provecho", "Bon appetit"],
+["Cuídate", "Take care"],
+["Felicitaciones", "Congratulations"],
+["¡Bien hecho!", "Well done!"],
+["¡Genio!", "Genius!"],
+["Estupendo", "Stupendous, Amazing"],
+["Genial", "Great, Awesome"],
+["¡Increíble!", "Incredible!, Impressive!"],
+
+
+["A ver…", "Let’s see…"],
+["Pues…", "Well…"],
+["Bueno…", "Well then…"],
+["¿Sabes?", "You know?"],
+["Por supuesto", "Of course"],
+["Por otra parte…", "On another note…"],
+["Pero…", "But…"],
+["De verdad?", "Really?"],
+["Dios mio", "Oh my god"],
+["Entonces…", "So…"],
+["Asi que…", "So… About that…"],
+
+["Necesito ayuda", "I need help"],
+["Llámame cuando llegues", "Call me when you arrive"],
+["Me voy a casa", "I’m going home"],
+["Necesito ir a…", "I need to go to…"],
+["¿Como llego hasta ahí?", "How do I get there?"],
+["No lo sé", "I don´t know"],
+["No tengo idea", "I have no idea"],
+["¿Lo entiendes?", "Do you understand?"],
+["No entiendo", "I don’t understand."],
+["Quiero…", "I want…"],
+["¿Puede hablar más despacio, por favor?", "Can you speak slowly, please?"],
+["Hola", "Hello"],
+["Buenas", "Hi (informal)"],
+["Buenos días", "Good morning"],
+["Buen día", "Good morning (less common, used in Argentina)"],
+["Buenas tardes", "Good afternoon"],
+["Buenas noches", "Good evening"],
+["Bienvenido", "Welcome"],
+["Que gusto de verlo", "What a pleasure to see you"],
+["¡Buenos días!", "Good morning!"],
+["¡Bienvenido!", "Welcome!"],
+["¡Que gusto de verlo!", "What a pleasure to see you!"],
+["Adiós", "Goodbye"],
+["Chao", "Goodbye"],
+["Hasta luego", "See you later"],
+["Hasta pronto", "See you soon"],
+["Hasta la vista", "See you next time"],
+["Hasta mañana", "See you tomorrow"],
+["Nos vemos", "See ya"],
+["Buenas noches", "Good night"],
+["Que tengas un buen día", "Have a good day"],
+["Que te vaya bien", "Have a good day"],
+["Cuídate", "Take care (informal)"],
+["Cuídese", "Take care (formal)"],
+["¿Qué tal?", "How are you?"],
+["¿Cómo estás?", "How are you?"],
+["¿Cómo está usted?", "How are you? (usted is more formal than tú)"],
+["¿Cómo te va?", "How are you?"],
+["¿Cómo te ha ido?", "How have you been?"],
+["¿Qué pasa?", "What’s up?"],
+["¿Qué cuentas?", "What’s up?"],
+["Estoy bien, ¿y tú?", "I am fine, and you?"],
+["Bien, ¿y usted?", "Good, and you? (usted is more formal than tú)"],
+["Estoy estupendo", "I am great"],
+["Estoy muy bien", "I am very well"],
+["Estoy así así", "I am okay"],
+["Estoy más o menos.", "I am so-so"],
+["Estoy regular", "I am regular"],
+["Estoy mal", "I feel unwell"],
+["Estoy fatal", "I am terrible"],
+["Estoy un poco cansado", "I am a little tired"],
+["Estoy exhausto", "I am exhausted"],
+["Estoy enfermo", "I am sick"],
+["¿Cuál es tu nombre?", "What is your name? (informal)"],
+["¿Cuál es su nombre?", "What is your name? (formal)"],
+["¿Cómo te llamas?", "What is your name? (informal)"],
+["¿Cómo se llama?", "What is your name? (formal)"],
+["Me llamo…", "My name is…"],
+["Mi nombre es…", "My name is…"],
+["Gracias", "Thank you"],
+["Muchas gracias", "Thank you very much"],
+["De nada", "You’re welcome"],
+["Perdón", "I am sorry"],
+["Lo siento", "I am sorry"],
+["Disculpe", "Sorry"],
+["Mil disculpas", "A thousand sorry’s"],
+["Por favor", "Please"],
+["Con permiso", "Excuse me"],
+["Perdone / Perdona", "Excuse me"],
+["Señor (Sr.)", "Mr."],
+["Señora (Sra.)", "Mrs."],
+["Señorita (Srta.)", "Miss"],
+["¿De dónde eres?", "Where are you from? (informal)"],
+["¿De dónde es?", "Where are you from? (formal)"],
+["¿De dónde son?", "Where are you from? (plural)"],
+["¿Dónde vives?", "Where do you live?"],
+["Yo soy de…", "I am from…"],
+["Somos de…", "We are from…"],
+["¿Qué…?", "What…?"],
+["¿Cómo…?", "How…?"],
+["¿Cuándo…?", "When…?"],
+["¿Cuánto…?", "How much…?"],
+["¿Dónde…?", "Where…?"],
+["¿Quién…?", "Who…?"],
+["¿Por qué…?", "Why…?"],
+["¿Cuál?", "Which…?"],
+["¿Qué hora tienes?", "What time is it?"],
+["¿Qué edad tienes?", "How old are you?"],
+["¿Cuántos años tienes?", "How old are you?"],
+["¿Cuándo es tu cumpleaños?", "When is your birthday?"],
+["¿Cuánto cuesta eso?", "How much is that?"],
+["¿Quién eres?", "Who are you?"],
+["¿Qué es esto?", "What is this?"],
+["¿Cuál es la fecha de hoy?", "What is the date today?"],
+["¿Entiende?", "Do you understand?"],
+["¿Comprende?", "Do you understand?"],
+["¿Por qué te gusta?", "Why do you like it?"],
+["¿Hablas inglés?", "Do you speak English?"],
+["¿Dónde está el baño?", "Where is the bathroom?"],
+["Necesito ayuda", "I need help"],
+["Sí", "Yes"],
+["Claro", "Of course"],
+["Siempre", "Always"],
+["A veces", "Sometimes"],
+["Tal vez", "Maybe"],
+["Nunca", "Never"],
+["Buena suerte", "Good luck"],
+["Buen viaje", "Have a good trip"],
+["Buen provecho", "Enjoy your meal"],
+["Diviértete", "Have fun"],
+["Salud", "Cheers / Bless you (when someone sneezes)"],
+["Muy bien", "Well done"],
+["Felicitaciones", "Congratulations"],
+["Feliz Cumpleaños", "Happy Birthday"],
+["Feliz Navidad", "Merry Christmas"],
+["Feliz Año Nuevo", "Happy New Year"],
+["Siento interrumpir", "I am sorry to interrupt"],
+["No se preocupe", "Don’t worry"],
+["Te amo", "I love you"],
+["Con mucho amor", "With much love"],
+["Hola", "Hello"],
+["Adiós", "Goodbye"],
+["Por favor", "Please"],
+["Gracias", "Thank you"],
+["Lo siento", "Sorry"],
+["Salud", "Bless you (after someone sneezes)"],
+["¿Quién?", "Who?"],
+["¿Qué?", "What?"],
+["¿Por qué?", "Why?"],
+["¿Dónde?", "Where?"],
+["Buenos días", "Good morning"],
+["Buenas tardes", "Good afternoon"],
+["Buenas noches", "Good evening"],
+["Hola, me llamo Juan", "Hello, my name is John"],
+["Me llamo…", "My name is…"],
+["¿Cómo te llamas?", "What’s your name?"],
+["Mucho gusto", "Nice to meet you"],
+["¿Cómo estás?", "How are you?"],
+["Estoy bien, gracias", "I’m well thank you"],
+["Disculpa. ¿Dónde está el baño?", "Excuse me. Where is the bathroom?"],
+["¿Qué hora es?", "What time is it?"],
+["¿Cómo se dice ‘concert’ en español?", "How do you say ‘concert’ in Spanish?"],
+["Estoy perdido/a", "I am lost"],
+["Yo no comprendo", "I do not understand"],
+["Por favor, habla más despacio", "Would you speak slower, please"],
+["Te extraño", "I miss you"],
+["Te quiero", "I love you"],
+["Despacito", "Slowly"],
+["Mi Gente", "My people"],
+["Bailando", "Dancing"],
+["Bésame mucho", "Kiss me a lot"],
+["Gasolina", "Gasoline"],
+["La Bicicleta", "The bicycle"],
+["Sin Pijama", "Without pajamas"],
+["Bella", "Beautiful"],
+["Clandestino", "Clandestine, secret"],
+["No Me Acuerdo", "I don’t remember"],
+["¡Buenos días, Estela!", "Good morning, Estela!"],
+["Buenos días, Esteban. ¿Cómo estás?", "Good morning, Esteban. How are you?"],
+["Bien, ¿y tú?", "Well, how about you?"],
+["Como siempre.", "As always."],
+["Buenos días", "good morning"],
+["Buenas tardes", "good afternoon"],
+["Buenas noches", "good evening"],
+["Hola", "hello"],
+["¿Cómo estás?", "How are you?"],
+["¿Cómo está usted?", "How are you?(more formal)"],
+["¿Cómo te va?", "How's it going?"],
+["¿Cómo has ido?", "How've you been?"],
+["¿Qué tal?", "What's up?"],
+["¿Qué pasa?", "What's happening?"],
+["¿Qué haces?", "What are you doing?"],
+["Más o menos", "Okay, so-so"],
+["Mal", "Bad"],
+["Todo bien", "All good"],
+
+["¿Qué haces?", "What are you doing? "],
+["Nada, nada. Estoy enferma.", "Nothing, nothing. I'm sick. "],
+["Ah, lo siento.", "Ah, sorry. "],
+["¿Y tú? ¿Cómo te va? ¿Bien?", "How about you? How are you doing? Well? "],
+["Sí, todo bien.", "Yes, all right. "],
+["Lo siento.", "I'm sorry. "],
+["Te amo.", "I love you. "],
+["Necesito ayuda.", "I need help "],
+
+
+["adiós", "goodbye "],
+
+["chao", "goodbye "],
+
+["hasta luego", "later "],
+
+["hasta pronto", "see you soon "],
+
+["hasta la vista", "until we see each other again "],
+
+["nos vemos", "see ya "],
+
+["¡Buena suerte!", "Good luck! "],
+
+["¡Diviértete!", "Have fun! "],
+
+["¡Con mucho amor!", "Lots of love! "],
+
+["¡Buen viaje!", "Have a good trip! "],
+
+["¡Buen provecho!", "Enjoy your meal! "],
+
+["¡Salud!", "Cheers! "],
+
+["¡Muy bien!", "Well done! "],
+
+["¡Cuídate!", "Take care! "],
+
+["¡Cuídese!", "Take care! (formal) "],
+
+["Los mejores deseos para…", "Best wishes to… "],
+
+["¡Felicitaciones!", "Congratulations! "],
+
+["¡Bienvenidos! / ¡Bienvenidas!", "Welcome! "],
+
+["¡Feliz Cumpleaños!", "Happy Birthday! "],
+
+["¡Salud!", "Bless you! "],
+
+["¡Feliz Navidad!", "Merry Christmas! "],
+
+["¡Feliz Año Nuevo!", "Happy New Year! "],
+
+
+["¡Lo siento!", "I'm sorry! "],
+
+["Perdón, pero dónde están los baños?", "Excuse me, but where are the toilets? "],
+
+["¡Perdón!", "Excuse me! "],
+
+
+["¡Mil disculpas!", "A thousand sorry's! "],
+
+
+["Siento interrumpir.", "Sorry to interrupt. "],
+
+
+["Con permiso.", "Excuse me. "],
+
+
+["¡No se preocupe!", "No worries! "],
+
+
+["See you soon!", "¡Hasta pronto! "],
+
+
+
+
+
+
+
+
+
+["Why? (for what purpose)", "¿Para qué? "],
+
+["Who?", "¿Quién? "],
+
+["What?", "¿Cómo? ¿Qué? "],
+
+["Which?", "¿Cuál? "],
+
+["Seriously?", "¿En serio? "],
+
+
+["What time is it?", "¿Qué hora es? "],
+
+["It is 1 o’clock", "Es la una* "],
+
+["It is 8 o’clock", "Son las ocho "],
+
+["It is half past five", "Son las cinco y media "],
+
+["It is quarter to eleven", "Son las once menos cuarto "],
+
+
+["I’m lost", "Estoy perdido(a) "],
+
+["Where is the bus station/bank/supermarket?", "¿Dónde está la estación de autobuses / banco / supermercado? "],
+
+["It is straight ahead", "Está más adelante. "],
+
+["It is to the left / to the right", "Está a la izquierda / a la derecha "],
+
+["It is around the corner", "Está a la vuelta "],
+
+
+["I would like to reserve a table for five people", "Quisiera reservar una mesa para cinco personas "],
+
+["A table for two please", "Una mesa para dos, por favor "],
+
+["The menu, please", "La carta, por favor "],
+
+["I would like", "… Quisiera… "],
+
+["Can you bring me a_____, please?", "¿Me trae un(a)_____, por favor? "],
+
+["Can I ask you for a_____?", "¿Le pido un(a)_____? "],
+
+["A beer / a glass of wine, please", "Una cerveza / una copa de vino, por favor "],
+
+["I am hungry", "Tengo hambre "],
+
+["I am thirsty", "Tengo sed "],
+
+["At what time does the bus / train arrive?", "¿A qué hora llega el tren / el autobús? "],
+
+["A single ticket for_____, please", "Un billete sencillo / pasaje de ida para_____, por favor "],
+
+["A round trip ticket for_____, please", "Un billete / pasaje de ida y vuelta para_____, por favor "],
+
+["Have a safe journey!", "¡Buen viaje! "],
+
+["Have a great holiday!", "¡Felices vacaciones! "],
+
+
+
+["Happy Easter", "¡Felices Pascuas! "],
+
+["Happy Christmas", "¡Feliz Navidad! "],
+
+["Happy New Year", "¡Feliz Año Nuevo! "],
+
+["Happy Birthday", "¡Feliz cumpleaños! "],
+
+["Cheers!", "¡Salud! "],
+
+["Congratulations!", "¡Felicitaciones! "],
+
+
+["Where’s the bathroom?", "¿Dónde está el baño? "],
+
+["Shall we go for a drink?", "¿Vamos a tomar una copa? "],
+
+["How much does this cost?", "¿Cuánto cuesta? "],
+
+["Don’t worry", "¡No te preocupes! "],
+
+["Good luck!", "¡Suerte! "],
+
+["Sorry!", "¡Lo siento! "],
+
+
+["Do you speak English?", "¿Hablas inglés? "],
+
+["Thank you", "Gracias "],
+
+["You’re welcome", "De nada "],
+
+["Don’t worry about it", "No pasa nada "],
+
+["I don’t understand", "No entiendo "],
+
+["No problem", "No hay problema "],
+
+["That’s a shame", "Es una lástima "],
+
+["I don’t know", "No sé "],
+
+["Quick!", "¡Rápido! "],
+
+
+
+["¡Mucho tiempo sin verte!", "Long time no see! "],
+["¡Cuánto tiempo sin verte!", "Long time no see! (alternative) "],
+["¡Qué alegría verte!", "How nice to see you! "],
+["¡No me lo puedo creer!", "I can’t believe it! "],
+["¿Qué cuentas?", "Literally: “What do you tell?” (asking for news) "],
+["¿Qué hay de nuevo?", "What’s new? "],
+
+["Soy de Inglaterra.", "I’m from England. "],
+["Soy inglés.", "I’m English. "],
+["Vivo en Australia.", "I live in Australia. "],
+["Tengo 27 años.", "Literally 'I have 27 years'. "],
+["Soy casado(a).", "I’m married. "],
+["Soy soltero(a).", "I’m single. "],
+
+
+["Soy profesora de yoga.", "I’m a yoga teacher. "],
+["Soy estudiante.", "I’m a student. "],
+["Estoy jubilado/retirado.", "I’m retired. "],
+["Estudio historia.", "I study history (for example, as a degree) "],
+["Estoy estudiando español.", "I’m studying Spanish (temporary, doing it right now) "],
+["Trabajo aquí.", "I work here. "],
+["Trabajo a tiempo parcial.", "I work part-time. "],
+["Estoy buscando trabajo.", "I’m looking for a job. "],
+
+
+["¿Cómo te llamas?", "What’s your name? "],
+["¿De dónde es?", "Where are you from? "],
+["¿Dónde vives?", "Where do you live? "],
+["¿Cuáles son tus pasatiempos?", "What are your hobbies? "],
+["¿A qué te dedicas?", "What do you dedicate yourself to (what’s your job?) "],
+["¿Cuál es tu trabajo/ocupación?", "What’s your job/occupation? "],
+
+["Porque me encanta la cultura española.", "Because I love Spanish culture. "],
+["Porque mi compañero(a)/pareja es venezolano.", "Because my partner is Venezuelan. "],
+["Porque mis abuelos eran mexicanos.", "Because my grandparents were Mexican. "],
+["Porque quiero entender la música en español.", "Because I want to understand music in Spanish. "],
+
+
+["Sólo hablo un poco.", "I only speak a little bit. "],
+["Entiendo bien el español.", "I understand Spanish well. "],
+["Me cuesta hablar con fluidez.", "It’s hard for me to speak fluently. "],
+["Puedo escribir/leer/hablar muy bien.", "I can write/read/speak very well. "],
+["Todavía tengo que hablar despacio.", "I still have to speak slowly. "],
+["Prefiero hablar que escribir.", "I prefer talking than writing. "],
+
+["Soy principiante.", "I’m a beginner. "],
+
+
+["Me gusta escuchar música.", "I like listening to music. "],
+
+["Me gustan las series de terror.", "I like horror series. "],
+
+["Uno de mis pasatiempos es escribir.", "One of my hobbies is writing. "],
+["Me encanta el cine español.", "I love Spanish cinema. "],
+["Me encantan los libros de fantasía.", "I love fantasy books. "],
+
+
+["¿Te gustaría ir conmigo?", "Would you like to come with me? "],
+["¿Te gustaría ir al cine mañana?", "Would you like to go to the movies tomorrow? "],
+["¿Quieres tomar un café?", "Do you want to grab some coffee? "],
+["¿Te gustaría salir conmigo?", "Would you like to go out with me? (romantic undertones) "],
+
+["Estoy estresado(a).", "I’m stressed out. "],
+["Estoy triste.", "I’m sad. "],
+["Estoy muy nervioso(a).", "I’m very nervous. "],
+["¡Estoy feliz!", "I’m happy! "],
+["Estoy decepcionado.", "I’m disappointed. "],
+["Me siento mal.", "I feel bad. "],
+["Tengo miedo.", "I’m scared. "],
+
+["No entiendo.", "I don’t understand. "],
+["No lo sé.", "I don’t know. "],
+["No tengo idea.", "I have no idea. "],
+["No tengo ni idea de qué hacer.", "I have no clue what to do. "],
+["Estoy perdido(a).", "I’m lost. "],
+["Estoy confundido(a).", "I’m confused. "],
+["No estoy seguro(a).", "I’m not sure. "],
+["¿Puede(s) hablar más despacio, por favor?", "Could you please speak slowly? "],
+
+["¡Buen viaje!", "Have a nice trip! "],
+["¡Buena suerte!", "Good luck! "],
+
+
+
+["Muchas gracias!", "Thanks a lot! "],
+["¡Muchísimas gracias!", "Thank you so much! "],
+["Eres/Es muy amable.", "It’s so kind of you. (The first is informal, the second is a formal option.) "],
+
+["Estoy muy agradecido(a).", "I’m really thankful. "],
+["Te lo agradezco.", "I thank you for that. "],
+
+["¡Perdón!", "Pardon, excuse me, sorry. "],
+["Disculpe(a).", "Sorry. (Use the letter 'a' instead of 'e' to make it informal) "],
+["Lo siento.", "I’m sorry. "],
+["Lo siento mucho/muchíssimo.", "I’m so sorry. "],
+["Me equivoqué.", "I was wrong. "],
+
+["¿Nos trae la carta, por favor?", "Can you bring us the menu, please? "],
+["¿Qué me/nos recomienda?", "What do you recommend me/us? "],
+["Voy a tomar un té, gracias.", "I’ll take a tea, thanks. "],
+["Para mí, las enchiladas.", "I’ll have the enchiladas. "],
+["Tenéis pulpo a la gallega?", "Do you have octopus a la gallega? "],
+["¿Nos puede traer la cuenta?", "Can you bring us the check? "],
+
+["¿Así que estás pensando viajar mañana?", "So you’re thinking of traveling tomorrow? "],
+["No tenéis paella? Pues, entonces un bocadillo.", "You don’t have paella? Well, then a sandwhich. "],
+["Pues…no sé qué hacer.", "Well... I don’t know what to do. "],
+["A ver. Que quieres hacer hoy?", "Let’s see. What do you want to do today? "],
+["No quiero ir con él. Es que me siento mal por lo que pasó.", "I don’t want to go with him. It’s just that I feel bad about what happened. "],
 ];
 
