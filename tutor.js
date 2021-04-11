@@ -186,7 +186,7 @@ function newQuestion()
 		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
 	
-	data.noAnswerFlag = false;
+	data.noAnswerFlag = true;
 	data.errFlag = false;
 	
 	if (data.currentIndex >= nCorr)
@@ -228,7 +228,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.10'
+	+ ' ver:3.11'
 	+ ' ' + window.location.search
 	+ '';
 	
