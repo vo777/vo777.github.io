@@ -9,7 +9,7 @@ const data =
 	timeRemaining : 0,
 	debugInfo : "",
 	debugInfoFlag : false,
-	currentIndex : -1,
+	currentIndex : 0,
 	answerIndices : [0,0,0,0],
 	errFlag : true,      // true  required for proper first question
 	noAnswerFlag: false, // false required for proper first question
