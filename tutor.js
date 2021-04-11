@@ -11,8 +11,8 @@ const data =
 	debugInfoFlag : false,
 	currentIndex : 0,
 	answerIndices : [0,0,0,0],
-	errFlag : true,      // true  required for proper first question
-	noAnswerFlag: false, // false required for proper first question
+	errFlag : false,   //
+	noAnswerFlag: true,// at least 1 of those 2 flags must be init true
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -102,6 +102,7 @@ function startup()
 		data.dict[i][1] = data.dict[i][1].toLowerCase().trim();
 		data.dict[i][2] = Math.random();
 	}
+	data.dict.sort((a,b)=>a[2] - b[2]);
 	console.log('dictionary loaded and checked');
 	
 	data.timeRemaining = 0;
@@ -157,12 +158,14 @@ function newQuestion()
 		data.ansIncorrectly = 0;
 		data.questionCount = 0;
 		data.answerCount = 0;
-		data.errFlag = true;
-		noAnswerFlag = false;
+		data.noAnswerFlag = true;
+		data.errFlag = false;
+		data.currentIndex = 0;
 		for (let i=0; i<data.dict.length; ++i)
 		{
 			data.dict[i][2] = Math.random();
 		}
+		data.dict.sort((a,b)=>a[2] - b[2]);
 	}
 	
 	++data.questionCount;
@@ -232,7 +235,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.12'
+	+ ' ver:3.14'
 	+ ' ' + window.location.search
 	+ '';
 	
