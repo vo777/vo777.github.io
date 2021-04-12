@@ -33,7 +33,8 @@ function startup()
 
 	if (langCodes.includes('*'))
 	{
-		langCodes += "abcdefghijklmnopqrstuvwxyz0123456789";
+		langCodes += "-bcdef--ijklmnopqrstuvwxyz0123456789";
+		// all except agh
 	}
 	
 	if (langCodes.includes('z'))
@@ -149,7 +150,7 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
-	const nCorr = 8;
+	const nCorr = 10;
 	
 	if (data.ansCorrectly > data.questionCount + 5)
 	{
@@ -235,7 +236,7 @@ function showDebug()
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
 	+ ' i:'+data.currentIndex
-	+ ' ver:3.14'
+	+ ' ver:3.15'
 	+ ' ' + window.location.search
 	+ '';
 	
