@@ -219,7 +219,7 @@ function showDebug()
 	+ ' n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart
-	+ ' ver:4.02'
+	+ ' ver:4.03'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -256,6 +256,7 @@ function onAnswer(x)
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 		data.dict[data.currentIndex][2] += shift; // '+' = hard
+		--data.windowStart;
 		--data.windowStart;
 //		console.log('111 incorrect ans:', data.windowStart);
 	}
