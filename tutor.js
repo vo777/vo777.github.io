@@ -12,8 +12,8 @@ const data =
 	currentIndex : 0,
 	windowStart : 0,
 	answerIndices : [0,0,0,0],
-	errFlag : false,   //
-	noAnswerFlag: true,// at least 1 of those 2 flags must be init true
+//	errFlag : false,   //
+//	noAnswerFlag: true,// at least 1 of those 2 flags must be init true
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -158,8 +158,8 @@ function newQuestion()
 		data.ansIncorrectly = 0;
 		data.questionCount = 0;
 		data.answerCount = 0;
-		data.noAnswerFlag = true;
-		data.errFlag = false;
+//		data.noAnswerFlag = true;
+//		data.errFlag = false;
 		data.currentIndex = 0;
 		data.windowStart = 0;
 		for (let i=0; i<data.dict.length; ++i)
@@ -172,22 +172,14 @@ function newQuestion()
 	
 	++data.questionCount;
 	
-	if (data.noAnswerFlag || data.errFlag)
-	{
-		--data.windowStart;
-		if (data.windowStart<0) { data.windowStart=0; }
-	}
-	else
-	{
-		++data.windowStart;
-	}
-	
+//	if (data.noAnswerFlag) { --data.windowStart; }
+	if (data.windowStart<0) { data.windowStart=0; }
 	console.log('windowStart:', data.windowStart);
 	
-	data.noAnswerFlag = true;
-	data.errFlag = false;
+//	data.noAnswerFlag = true;
+//	data.errFlag = false;
 	
-	const WindowSize = 5;
+	const WindowSize = 10;
 	const N = data.dict.length;
 	
 	data.currentIndex = Math.floor(data.windowStart + Math.random()*WindowSize) % N;
@@ -227,7 +219,7 @@ function showDebug()
 	+ ' n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart
-	+ ' ver:4.01'
+	+ ' ver:4.02'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -237,8 +229,9 @@ function showDebug()
 
 function onAnswer(x)
 {
+//	console.log('onAnswer:', x);
 	++data.answerCount;
-	data.noAnswerFlag = false;
+//	data.noAnswerFlag = false;
 	
 	const answered = data.answers[x].innerHTML;
 	const correctAnswer = data.dict[data.currentIndex][1];
@@ -253,14 +246,18 @@ function onAnswer(x)
 			data.answers[i].innerHTML = correctAnswer;
 		}
 		data.dict[data.currentIndex][2] -= shift; // '-' = easy
+		++data.windowStart;
 	}
 	else
 	{
-		data.errFlag = true;
+//		data.errFlag = true;
+//		console.log('000 incorrect ans:', data.windowStart);
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 		data.dict[data.currentIndex][2] += shift; // '+' = hard
+		--data.windowStart;
+//		console.log('111 incorrect ans:', data.windowStart);
 	}
 	showDebug();
 }
