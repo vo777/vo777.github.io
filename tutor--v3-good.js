@@ -10,7 +10,6 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : 0,
-	windowStart : 0,
 	answerIndices : [0,0,0,0],
 	errFlag : false,   //
 	noAnswerFlag: true,// at least 1 of those 2 flags must be init true
@@ -151,6 +150,8 @@ function loadSynonyms(dest, src)
 */
 function newQuestion()
 {
+	const nCorr = 10;
+	
 	if (data.ansCorrectly > data.questionCount + 5)
 	{
 		// re-init
@@ -161,39 +162,48 @@ function newQuestion()
 		data.noAnswerFlag = true;
 		data.errFlag = false;
 		data.currentIndex = 0;
-		data.windowStart = 0;
 		for (let i=0; i<data.dict.length; ++i)
 		{
 			data.dict[i][2] = Math.random();
 		}
+		data.dict.sort((a,b)=>a[2] - b[2]);
 	}
-	
-	data.dict.sort((a,b)=>a[2] - b[2]);
 	
 	++data.questionCount;
 	
 	if (data.noAnswerFlag || data.errFlag)
 	{
-		--data.windowStart;
-		if (data.windowStart<0) { data.windowStart=0; }
+		if (data.currentIndex >= nCorr)
+		{
+			for (let i=0; i<4; ++i)
+			{
+				data.dict[data.answerIndices[i]][2] 
+					= data.dict[0][2] - 1e-6*Math.random();
+				console.log('idx change:',data.answerIndices[i],'->',0);
+			}
+			data.currentIndex = 0;
+			data.dict.sort((a,b)=>a[2] - b[2]);
+		}
+		else
+		{
+			if (data.currentIndex > 0) { --data.currentIndex; }
+		}
 	}
 	else
 	{
-		++data.windowStart;
+		data.currentIndex = (++data.currentIndex) % data.dict.length;
 	}
-	
-	console.log('windowStart:', data.windowStart);
 	
 	data.noAnswerFlag = true;
 	data.errFlag = false;
 	
-	const WindowSize = 5;
-	const N = data.dict.length;
-	
-	data.currentIndex = Math.floor(data.windowStart + Math.random()*WindowSize) % N;
+	if (data.currentIndex >= nCorr)
+	{
+		data.currentIndex = Math.floor(Math.random()**2 * data.dict.length);
+	}
 	
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
-	
+
 	data.answerIndices 
 			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
 	data.question.innerHTML = data.dict[data.currentIndex][0];
@@ -225,9 +235,8 @@ function showDebug()
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
 	+ ' n:'+data.dict.length
-	//+ ' i:'+data.currentIndex
-	+ ' k:'+data.windowStart
-	+ ' ver:4.01'
+	+ ' i:'+data.currentIndex
+	+ ' ver:3.15'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -239,11 +248,10 @@ function onAnswer(x)
 {
 	++data.answerCount;
 	data.noAnswerFlag = false;
-	
+
 	const answered = data.answers[x].innerHTML;
 	const correctAnswer = data.dict[data.currentIndex][1];
-	
-	const shift = 2.0*Math.random() / data.dict.length;
+		
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
@@ -252,7 +260,6 @@ function onAnswer(x)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 		}
-		data.dict[data.currentIndex][2] -= shift; // '-' = easy
 	}
 	else
 	{
@@ -260,7 +267,6 @@ function onAnswer(x)
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
-		data.dict[data.currentIndex][2] += shift; // '+' = hard
 	}
 	showDebug();
 }
