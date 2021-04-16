@@ -12,8 +12,6 @@ const data =
 	currentIndex : 0,
 	windowStart : 0,
 	answerIndices : [0,0,0,0],
-//	errFlag : false,   //
-//	noAnswerFlag: true,// at least 1 of those 2 flags must be init true
 	question : undefined,
 	answers : undefined,
 	summary : undefined
@@ -120,12 +118,6 @@ function startup()
 	setInterval(worker, 100);
 }
 
-function worker()
-{
-	--data.timeRemaining;
-	if (data.timeRemaining < 0) {newQuestion();}
-}
-
 function loadSynonyms(dest, src)
 {
 	for (let line of src)
@@ -146,6 +138,14 @@ function loadSynonyms(dest, src)
 		}
 	}
 }
+
+
+function worker()
+{
+	--data.timeRemaining;
+	if (data.timeRemaining < 0) {newQuestion();}
+}
+
 /**
 *    generate new  currentIndex  and  answerIndices
 */
@@ -158,8 +158,6 @@ function newQuestion()
 		data.ansIncorrectly = 0;
 		data.questionCount = 0;
 		data.answerCount = 0;
-//		data.noAnswerFlag = true;
-//		data.errFlag = false;
 		data.currentIndex = 0;
 		data.windowStart = 0;
 		for (let i=0; i<data.dict.length; ++i)
@@ -172,12 +170,8 @@ function newQuestion()
 	
 	++data.questionCount;
 	
-//	if (data.noAnswerFlag) { --data.windowStart; }
 	if (data.windowStart<0) { data.windowStart=0; }
 	console.log('windowStart:', data.windowStart);
-	
-//	data.noAnswerFlag = true;
-//	data.errFlag = false;
 	
 	const WindowSize = 10;
 	const N = data.dict.length;
@@ -216,10 +210,10 @@ function showDebug()
 	+ data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
-	+ ' n:'+data.dict.length
+	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart
-	+ ' ver:4.03'
+	+ '<br>ver:4.03'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -229,14 +223,11 @@ function showDebug()
 
 function onAnswer(x)
 {
-//	console.log('onAnswer:', x);
 	++data.answerCount;
-//	data.noAnswerFlag = false;
 	
 	const answered = data.answers[x].innerHTML;
 	const correctAnswer = data.dict[data.currentIndex][1];
 	
-	const shift = 2.0*Math.random() / data.dict.length;
 	if (answered == correctAnswer)
 	{
 		++data.ansCorrectly;
@@ -245,20 +236,17 @@ function onAnswer(x)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 		}
-		data.dict[data.currentIndex][2] -= shift; // '-' = easy
 		++data.windowStart;
 	}
 	else
 	{
-//		data.errFlag = true;
-//		console.log('000 incorrect ans:', data.windowStart);
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
+		const shift = 2.0 / data.dict.length;
 		data.dict[data.currentIndex][2] += shift; // '+' = hard
 		--data.windowStart;
 		--data.windowStart;
-//		console.log('111 incorrect ans:', data.windowStart);
 	}
 	showDebug();
 }
