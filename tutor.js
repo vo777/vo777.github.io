@@ -58,9 +58,10 @@ function startup()
 	if (langCodes.includes('p')) {data.dict = data.dict.concat(portuguese);} 
 	if (langCodes.includes('q')) 
 	{
-		loadSynonyms(data.dict, spanishSynonims);
+		// loadSynonyms -- moved to the end 
+//		loadSynonyms(data.dict, spanishSynonims);
 		data.dict = data.dict.concat(spanishQ);
-	} 
+	}
 	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
 	if (langCodes.includes('s')) 
 	{	
@@ -74,7 +75,6 @@ function startup()
 
 	if (langCodes.includes('0')) {data.dict = data.dict.concat(lang_0);} 
 
-	console.log('dictionary loaded. checking...');
 	
 	// remove dupes
 	for (let i=0; i<data.dict.length; ++i)
@@ -95,6 +95,34 @@ function startup()
 			console.log('skip: ' + tmp)
 		}
 	}
+
+	if (langCodes.includes('-')) // invert the word pairs if requested
+	{
+		for (let arr of data.dict)
+		{
+			[arr[0], arr[1]] = [arr[1], arr[0]];
+		}
+	}
+
+	if (langCodes.includes('+')) // dupe the word pairs if requested
+	{
+		const N = data.dict.length;
+		for (let i=0; i<N; ++i)
+		{
+			// push inverted pair
+			data.dict.push([data.dict[i][1], data.dict[i][0]]);
+		}
+	}
+	
+	if (langCodes.includes('q')) 
+	{
+		// synonyms are already inverted and duped, so had to move
+		// this line to the end
+		loadSynonyms(data.dict, spanishSynonims);
+	} 
+	
+	
+
 	// normalize
 	for (let i=0; i<data.dict.length; ++i)
 	{
@@ -213,7 +241,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart
-	+ '<br>ver:4.03'
+	+ '<br>ver:4.05'
 	+ ' ' + window.location.search
 	+ '';
 	
