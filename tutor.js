@@ -271,7 +271,7 @@ function onAnswer(x)
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
-		const shift = 2.0 / data.dict.length;
+		const shift = 5.0 / data.dict.length;
 		data.dict[data.currentIndex][2] += shift; // '+' = hard
 		--data.windowStart;
 		--data.windowStart;
