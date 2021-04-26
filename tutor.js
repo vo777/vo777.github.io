@@ -241,7 +241,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart
-	+ '<br>ver:4.05'
+	+ '<br>ver:4.07'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -271,7 +271,7 @@ function onAnswer(x)
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
-		const shift = 5.0 / data.dict.length;
+		const shift = 10.0 / data.dict.length;
 		data.dict[data.currentIndex][2] += shift; // '+' = hard
 		--data.windowStart;
 		--data.windowStart;
