@@ -51,10 +51,10 @@ function startup()
 	if (langCodes.includes('g')) {data.dict = data.dict.concat(greek);} 
 	if (langCodes.includes('h')) {data.dict = data.dict.concat(hebrew);} 
 	if (langCodes.includes('i')) {data.dict = data.dict.concat(italian);} 
-	if (langCodes.includes('o')) {data.dict = data.dict.concat(polish);} 
 	if (langCodes.includes('l')) {data.dict = data.dict.concat(latin);} 
 	if (langCodes.includes('m')) {data.dict = data.dict.concat(malay);} 
 	if (langCodes.includes('n')) {data.dict = data.dict.concat(indonesian);} 
+	if (langCodes.includes('o')) {data.dict = data.dict.concat(polish);} 
 	if (langCodes.includes('p')) {data.dict = data.dict.concat(portuguese);} 
 	if (langCodes.includes('q')) 
 	{
@@ -72,6 +72,7 @@ function startup()
 	if (langCodes.includes('u')) {data.dict = data.dict.concat(dutch);} 
 	if (langCodes.includes('v')) {data.dict = data.dict.concat(vietnamese);} 
 	if (langCodes.includes('x')) {data.dict = data.dict.concat(tagalog);} 
+	if (langCodes.includes('y')) {data.dict = data.dict.concat(interlingua);} 
 
 	if (langCodes.includes('0')) {data.dict = data.dict.concat(lang_0);} 
 
