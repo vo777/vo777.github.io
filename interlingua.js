@@ -3,8 +3,8 @@ const interlingua = [
 
 ["Welcome","Benvenite!"],
 ["Hello (General greeting)","Bon die! Salute! (on meeting)"],
-["Holla! (to call attention)"],
-["Vide! (to express surprise)"],
+["Holla!","(to call attention)"],
+["Vide!","(to express surprise)"],
 ["Hello (on phone)","Hallo!"],
 ["How are you?","Como sta vos?"],
 ["Reply to 'How are you?'","Multo ben, gratias. E vos?"],
@@ -280,6513 +280,1037 @@ const interlingua = [
 ["distante", "far"],
 ["dextre", "right"],
 
+["ab", "since, from"],
+["abassamento", "lowering"],
+["abassamento de un equation", "reduction of an equation"],
+["abassar", "to lower"],
+["abassar un perpendicular", "to drop a perpendicular"],
+["abatter", "to knock or cast down"],
+["abattimento", "despondency, dejection"],
+["abattite", "downcast, dejected"],
+["abattitor", "feller, wood-cutter, slaughterer, etc."],
+["abattitorio", "slaughterhouse, abattoir"],
+["abbate", "abbot"],
+["abbatessa", "abbess"],
+["abbatia", "abbacy; abbey"],
+["abbordabile", "approachable, accessible"],
+["abbordar", "1. to land (= to go ashore from a ship or boat); 2. [Navy] to board (= to come alongside in order to attack); 3. to accost, address"],
+["abbordo", "1. [Naut.] (act of) landing; 2. [Navy] (act of) boarding (a ship)"],
+["abducer", "to lead away, abduce; 2. [Physiol.] to abduct"],
+["abhorribile", "abominable, hateful"],
+["abiberar", "to water (1. to supply with drink; 2. to irrigate)"],
+["abiberatorio", "watering-place, water-hole"],
+["abiete", "fir (1. fir-tree; 2. fir wood)"],
+["abiete de Canada", "hemlock (spruce)"],
+["abjurar", "to abjure (1. to forswear; 2. to recant, repudiate)"],
+["ablandar", "to soften; to mollify, mitigate, assuage"],
+["abluer", "to wash, cleanse"],
+["ablution", "ablution, washing"],
+["abnegar", "to deny oneself, abnegate"],
+["abolimento", "abolishment, abolition"],
+["abolir", "to abolish"],
+["abonamento", "subscription"],
+["abonar", "to enter the subscription"],
+["abonar se", "to subscribe (to a periodical, etc.)"],
+["abonar", "to improve"],
+["abrogatori", "rescinding, abrogating"],
+["abrumper", "to break off, rend"],
+["absceder", "to form (turn into) an abscess"],
+["abscinder", "to cut off, abscind"],
+["absentar se", "absent oneself"],
+["brillar per su absentia ", "to be conspicuous by one's absence"],
+["absolutor", "absolver"],
+["abstraher", "[Logic] to abstract"],
+["abstruder", "1. to thrust away; 2. to conceal"],
+["abuccamento", "1. (action of) seizing, snatching up (with the mouth); 2. (action of) interconnecting (two openings); 3. interview, conference"],
+["abuccar", "1. to seize, snatch up (with the mouth); 2. to interconnect (two openings);"],
+["abuccar se", "to come or get together"],
+["acaju", "1. cashew; 2. mahogany;"],
+["nuce de acaju", "cashew nut"],
+["acantha", "prickle, thorn"],
+["acantho·phore", "spine-bearing, acanthophorous"],
+["acceder", "1. to approach; 2. to accede (= to assent)"],
+["accendalia", "kindling"],
+["accender", "to light, kindle"],
+["accendibile", "inflammable, combustible"],
+["accendimento", "lighting, kindling"],
+["accenditor", "lighter (= device for lighting)"],
+["accensibile", "inflammable, combustible, accensible"],
+["accensibilitate", "inflammability, combustibility, accensibility"],
+["accisia", "excise"],
+["acclamar", "to acclaim (= to applaud)"],
+["per acclamation", "by acclamation"],
+["acclamator", "acclaimer"],
+["acclimatar", "to acclimatize, acclimate"],
+["acclimatation", "acclimatization, acclimation"],
+["accollar", "to embrace, salute with an accolade"],
+["accommodamento", "settlement (of disputes, etc.)"],
+["accommodar", "to accommodate (1. to adapt; 2. to settle (disputes, etc.))"],
+["accopulamento", "coupling"],
+["accopular", "1. to couple (= to unite, bring together in pairs); 2. to mate (= to bring together for breeding)"],
+["accordabile", "1. reconcilable; 2. tunable; 3. grantable"],
+["accordante", " I. ppr of accordar; II. adj accordant (1. conformable; 2. [Mus.] harmonious)"],
+["accordar", "1. to harmonize (= to cause to agree); 2. to tune; 3. to grant, accord"],
+["accordator", "tuner (of pianos, etc.)"],
+["clave accordator", "tuning key"],
+["accordatura", "1. tuning; 2. pitch"],
+["accordo", "1. accord, agreement; 2. [Mus.] chord"],
+["de accordo", "in accord"],
+["esser de accordo", "to be in accord, agree"],
+["poner se de accordo", "to come to an agreement"],
+["de commun accordo", "by common consent"],
+["accostabile", "approachable, accostable"],
+["accostamento", "approach"],
+["accostar", "to accost"],
+["accostumar", "to accustom"],
+["accostumate", "1. pp of accostumar; 2. adj accustomed, usual"],
+["accrescer", "to increase"],
+["accrescimento", "increase"],
+["accular", "to back up (a horse, cart, etc. against a wall, etc.)"],
+["accumulamento", "heaping or piling up, accumulation"],
+["accurrer", "to come running, rush up"],
+["accurtamento", "shortening (= act of making shorter)"],
+["accurtar", "to shorten, make shorter"],
+["accusabile", "blameworthy, liable to be accused; accusable"],
+["accusabilitate", "blameworthiness"],
+["accusamento", "accusing, accusation"],
+["accusar", "to accuse"],
+["accusar reception de", "to acknowledge receipt of"],
+["accusato", "accused, defendant"],
+["accusator", "accuser"],
+["accusatori", "accusing, accusatory"],
+["acerbe", "acerb, sour, bitter, harsh"],
+["acerbitate", "acerbity"],
+["acere", "maple, maple tree"],
+["aceto", "vinegar"],
+["acierage", "steel plating, acierage"],
+["acierar", "to steel (1. to overlay, point, plate, etc., with steel; 2. to convert into or cause to resemble steel)"],
+["acieration", "acieration (= conversion into steel)"],
+["acieria", "steelworks, steel mill"],
+["aciero", "steel"],
+["aco", "needle"],
+["acordonar", "to lace"],
+["acquesto", "acquisition"],
+["acquiescente", "1. ppr of acquiescer; 2. adj acquiescent"],
+["acquiritor", "acquirer"],
+["actionar", "1. to actuate (= to set in action or motion); 2. [Law] to sue"],
+["actionero", "shareholder, stockholder"],
+["actionista", "shareholder, stockholder"],
+["activar", "to activate, to stir up, rouse"],
+["activo", "[Com.] assets"],
+["acuminar", "to sharpen, acuminate"],
+["acuminate", "1. pp of acuminar; 2. adj pointed, acuminate"],
+["acumine", "1. [Bot.] a tapering point; 2. acumen"],
+["angulo acute", "acute angle"],
+["morbo acute", "acute disease"],
+["nota acute", "high-pitched sound"],
+["voce acute", "shrill voice"],
+["dolor acute", "acute or sharp pain"],
+["acutessa", "sharpness, acuteness"],
+["acutiamento", "sharpening"],
+["acutiar", "to sharpen (= to make sharp)"],
+["acutiator", "sharpener (= one who sharpens)"],
+["addormir", "to put to sleep"],
+["addormir se", "to fall asleep"],
+["addormite", "1. pp of addormir; 2. adj asleep"],
+["aden", "[Physiol.] gland"],
+["adenose", "glandulous, adenose"],
+["adeo", "farewell, good-by(e)"],
+["adequar", "to equalize"],
+["adieu", "farewell"],
+["adipe", "animal fat, body fat; also", "adeps"],
+["adir", "1. to approach; go to; 2. to attain, enter upon; also", "[Law] to enter on (an inheritance, etc.)"],
+["adition", "[Law] entering upon (an inheritance)"],
+["adjuncto", "1. assistant, deputy; 2. [Gram.] adjunct"],
+["adjunger", "to join, unite (one thing to another)"],
+["adjuta", "1. aid, help; 2. aide (= assistant)"],
+["adjutor", "help, helper"],
+["adolescer", "to grow up, to become adolescent"],
+["adornar de", "to adorn with"],
+["advertimento", "notice, warning"],
+["advertir", "to advise, give notice"],
+["advocar", "to call, summon; to call to one's aid"],
+["adyname", "weak, without strength"],
+["aer", "air (1.atmospheric air; 2. appearance; 3. melody)"],
+["esser in le aer", "to be up in the air"],
+["facer castellos in le aer", "to build castles in the air"],
+["prender le aer", "to take an airing"],
+["dar se aeres", "to give oneself airs"],
+["parlar in le aer", "to talk at random"],
+["haber le aer de (facer un cosa)", "to appear to be (doing something)"],
+["haber le aer (triste)", "to look (sad)"],
+["aere libre", "open air"],
+["aerar", "to air (= to expose to the open air)"],
+["via aeree", "[Aeronaut.] airway"],
+["posta aeree", "air mail"],
+["vias aeree", "air-passages"],
+["affamar", "to starve, famish"],
+["affamator", "starver"],
+["affectabile", "impressionable"],
+["affectate", "affected (= full of affectation)"],
+["affectibilitate", "impressionability"],
+["affectionar", "to be fond of"],
+["affectionate", "1. pp of affectionar; 2. adj affectionate"],
+["affectuose", "loving, affectionate"],
+["afficer", "to affect"],
+["affiger", "v to affix, fasten"],
+["affilar", "to whet, sharpen"],
+["affilatoria", "sharpener, sharpening machine"],
+["affin", "1. resembling, like; 2. related by marriage"],
+["(patre, matre, etc.) affin", "(father-, mother-, etc.) in-law"],
+["affinamento", "(act of) refining, improving"],
+["affinar", "to refine, improve"],
+["affinator", "refiner (of metals)"],
+["affinitate", "affinity (1. relationship by marriage; 2. resemblance, likeness; 3. attraction)"],
+["affirmar", "1. to strengthen, make firm; 2. to affirm, assert"],
+["affirmator", "affirmer"],
+["affixar", "to affix, fasten"],
+["afflictive", "giving pain, distressing"],
+["pena afflictive", "corporal punishment"],
+["affliger", "to afflict"],
+["affliger se", "to be grieved"],
+["affloramento", "[Geol.] outcrop"],
+["afflorar", "[Geol.] to outcrop"],
+["affluente", "I. ppr of affluer; II. adj 1. tributary; 2. affluent, opulent"],
+["affluente", "tributary (stream), affluent"],
+["affluer", "1. to flow (into); 2. to crowd, flock, throng (to a place)"],
+["affollamento", "1. madness; 2. panic, terror"],
+["affollar", "to madden, drive mad"],
+["affollar se", "to go mad"],
+["affusar", "to spindle, give a spindle shape to"],
+["agglutinar", "to stick or glue together, agglutinate"],
+["aggrandimento", "1. enlargement; 2. aggrandizement"],
+["aggrandir", "1. to make greater, enlarge; also", "to magnify; 2. to aggrandize"],
+["aggreder", "to assail, attack"],
+["aggruppar", "to group"],
+["agibile", "1. feasible; 2. manageable"],
+["agiotar", "to speculate (on the stock exchange)"],
+["agiotator", "speculator (on the stock exchange)"],
+["agno", "lamb"],
+["agradabile", "agreeable, pleasing"],
+["agradamento", "1. pleasure; 2. agreeableness, pleasantness"],
+["agradar", "to please"],
+["agrari", "agrarian; farm, field laborer"],
+["agreste", "rustic (1. rural; 2. awkward, uncouth)"],
+["agrimensor", "surveyor (= one who surveys lands, highways, etc.)"],
+["agrimensura", "1. surveying; 2. [Topog.] survey"],
+["agro", "field (= arable land)"],
+["aguerrimento", "(act of) inuring to war"],
+["aguerrir", "to inure to war"],
+["agulia", "needle"],
+["agulia magnetic", "magnetic needle"],
+["aira", "threshing floor"],
+["ala", "wing (1. wing of a bird, airplane etc.; 2. part of a building)"],
+["alacre", "eager, brisk, alacritous"],
+["alacritate", "eagerness, briskness, alacrity"],
+["alate", "winged"],
+["alba", "1. dawn, break of day; 2. [Eccl.] alb"],
+["albe", "white (= of the color white)"],
+["albergar", "to shelter, lodge"],
+["albergero", "innkeeper"],
+["albergo", "1. shelter, lodging; 2. inn"],
+["albergo de juventute", "youth hostel"],
+["albricoc", "apricot"],
+["albricochiero", "apricot tree"],
+["alca", "[Ornith.] auk"],
+["alcalde", "alcalde (= mayor of a Spanish town, etc.)"],
+["alce", "elk"],
+["algesia", "algesia (= sensitivity to pain)"],
+["alicuno", "someone, somebody; anyone, anybody"],
+["alie", "other"],
+["alimentar", "to feed"],
+["alimentation", "nourishment"],
+["alimentator", "feeder"],
+["alimentose", "nutritious"],
+["alineamento", "alignment (= action of aligning)"],
+["alinear", "to align (= to range or place in a line)"],
+["alizari", "madder root"],
+["allactamento", "(act of) suckling, nursing"],
+["allactar", "to suckle, nurse"],
+["allargamento", "widening, broadening"],
+["allargar", "to widen (= to make broad(er))"],
+["allectar", "to lay up (through illness)"],
+["allectate", "1. pp of allectar; 2. adj bedridden"],
+["allée", "avenue, walk, alley"],
+["allegar", "to allege (= to bring forward as an argument or excuse)"],
+["allegre", "gay, sprightly; merry; cheerful"],
+["allegressa", "gayness, sprightliness; merriness; cheerfulness"],
+["allertar", "to give the alarm to, alarm"],
+["alleviar", "to lighten (= to make less heavy); to alleviate"],
+["alleviation", "lightening (= making less heavy); alleviation"],
+["alliantia", "alliance"],
+["le arca del alliantia", "the Ark of the Covenant"],
+["alliar", "to ally"],
+["alliar se", "to form an alliance"],
+["alliato", "ally"],
+["alligato", "alloy"],
+["allio", "garlic"],
+["allongamento", "(act of) lengthening"],
+["allongar", "to lengthen (= to make longer)"],
+["allongar (le bracio)", "to stretch out (one's arm)"],
+["alloquer", "to pronounce an allocution"],
+["alpestre", "Alpine, Alpestrine"],
+["particula alpha", "alpha particle"],
+["radio alpha", "alpha ray"],
+["alte", "1. high; 2. loud"],
+["in alte voce", "aloud"],
+["altercar", "to quarrel, wrangle, altercate"],
+["altere", "other (1. additional; 2. different)"],
+["un altere", "another"],
+["le un le altere, le unes le alteres", "one another, each other"],
+["altere vice", "a second time, once again, once more"],
+["angulos alterne", "alternate angles"],
+["altessa", "Highness"],
+["altiamento", "(act of) raising or lifting"],
+["altiar", "to raise (1. to make higher; 2. to raise the position or level of)"],
+["altiar le voce", "to raise one's voice"],
+["altisonante", "altisonant, high-sounding"],
+["altisone", "altisonant, high-sounding"],
+["alto-parlator", "loud-speaker"],
+["alveo", "trough, tub; bathtub"],
+["alveolari", "1. cell-like; honeycomb; 2. [Anat.] alveolar"],
+["alveolate", "honeycombed, pitted, alveolate"],
+["alveolo", "1. cell (of a honeycomb); 2. socket (of a tooth)"],
+["amabile", "lovable, amiable"],
+["amabilitate", "amiability"],
+["amandola", "almond"],
+["amandoliero", "almond-tree"],
+["amante", "lover, paramour"],
+["amar", "bitter"],
+["amar", "to love; also", "to like, be fond of, etc."],
+["amarage", "[Aeronaut.] action of alighting on water"],
+["amarar", "to alight on water"],
+["amarisar", "to make bitter; to embitter"],
+["amaritude", "bitterness"],
+["amassamento", "amassment"],
+["amassar", "to amass"],
+["amassator", "amasser"],
+["amate", "1. pp of amar; 2. adj beloved"],
+["amator", "lover (= one who has a strong liking for something)"],
+["ambir", "1. to go round (something), surround; 2. to go round after, solicit"],
+["ambito", "ambit, circuit, circuitous route"],
+["ambra", "1. amber; 2. ambergris"],
+["ambrar", "to perfume with ambergris"],
+["ambulante ", "1. ppr of ambular; 2. adj ambulant"],
+["ambulantia", "ambulance (1. field hospital; 2. hospital ambulance)"],
+["ambular", "to walk (= to go on foot)"],
+["ambulatura", "gait, walk"],
+["amica", "friend (fem.)"],
+["amical", "friendly"],
+["amicitate", "friendship"],
+["amita", "aunt"],
+["amollir", "to soften (= to make soft)"],
+["amor", "love (= passionate affection)"],
+["amor proprie", "self-esteem"],
+["amores amours", "love-affairs"],
+["amoretto", "love affair, flirtation"],
+["amortimento", "(act of) deadening, subduing"],
+["amortir", "to deaden (feelings, taste, etc.)"],
+["ampliar", "to enlarge (= to make larger)"],
+["ampliation", "enlargement, enlarging"],
+["analphabete", "illiterate"],
+["anate", "[Zool.] duck"],
+["ancianitate", "1. oldness, antiquity; 2. seniority (= length of service)"],
+["anetho", "dill"],
+["angue", "snake, serpent"],
+["anguilla", "eel"],
+["angustia", "anguish (1. [Pathol.]; 2. agony, distress)"],
+["anhelante", "1. ppr of anhelar; 2. adj panting, gasping"],
+["anhelar", "to pant, gasp"],
+["anhelation", "panting, gasping"],
+["anima", "soul"],
+["render le anima", "give up the ghost"],
+["stato de anima", "state of mind, frame of mind"],
+["animalesc", "animal (= characteristic of an animal)"],
+["animalitate", "animality"],
+["animar", "to animate"],
+["animate", "I. pp of animar; II. adj 1. animate, living; 2. animated, lively"],
+["animo", "animating spirit"],
+["anisar", "to flavor with anise"],
+["annidar", "to nest"],
+["anno", "year"],
+["anno bissextil", "leap year"],
+["anno de lumine", "light-year"],
+["annoctar", "to grow dark"],
+["annuario", "yearbook"],
+["annuitate", "annuity"],
+["annullabile", "voidable"],
+["annullar", "to annul, cancel"],
+["annullation", "annulment, cancellation"],
+["annullative", "annulling, quashing"],
+["annunciar", "to announce"],
+["annunciator", "announcer"],
+["annuncio", "1. announcement; 2. advertisement"],
+["ano", "[Anat.] anus"],
+["societate anonyme", "joint-stock company, limited company"],
+["anque / anke", "also, too"],
+["anque (io)", "(I) too, (me) too"],
+["non solmente ... ma anque", "not only ... but also"],
+["ansa", "handle"],
+["ansate", "ansate, looped"],
+["cruce ansate", "crux ansata, ansate cross"],
+["ansere", "goose"],
+["anserin", "goose (as in goose liver)"],
+["cute anserin", "goose flesh, goose skin"],
+["antea", "before, formerly, previously"],
+["antebracio", "forearm"],
+["le antecedentes de un persona", "someone's antecedents"],
+["anteceder", "to antecede, be the antecedent"],
+["antemural", "[Fortif.] barbican"],
+["anteponer", "to prepose, place before or in front"],
+["anteposition", "(act of) preposing, (act of) placing before or in front"],
+["(periodo) anterior", "former (period);"],
+["(data) anterior", "earlier (date);"],
+["(gamba) anterior", "fore(leg);"],
+["(muro) anterior", "front (wall)"],
+["anteriormente", "formerly, before"],
+["anthelminthic", "anthelminthic, vermifuge"],
+["anthropophage", "man-eating, cannibal, anthropophagous"],
+["antiaeree", "[Mil.] antiaircraft"],
+["aperitivo", "1. aperient, laxative; 2. apéritif"],
+["aperitor", "opener"],
+["aperte", "open (= not closed, limited or hidden)"],
+["apertura", "opening (1. action of opening; 2. aperture; 3. beginning)"],
+["apetale", "[Bot.] apetalous"],
+["apiario", "bee-keeper"],
+["apiario", "apiary"],
+["apice", "apex"],
+["apicula", "honey-bee"],
+["apiculario", "bee-hive"],
+["apicultor", "bee-keeper, apiculturist"],
+["apicultura", "bee-keeping, apiculture"],
+["apivore", "bee-eating"],
+["apogee", "apogean, apogeal"],
+["appaciabile", "appeasable"],
+["appaciar", "to appease"],
+["appaciator", "appeaser"],
+["apparar", "to prepare"],
+["apparentar", "to ally or connect by marriage"],
+["apparer", "to appear (= to come in sight)"],
+["appartar", "to separate"],
+["appertiner", "to appertain"],
+["appestar", "to infect (with a plague)"],
+["appetente", "1. ppr of appeter; 2. adj longing, desirous (of)"],
+["appetentia", "appetency, appetence (= fixed and strong desire); appetite"],
+["appeter", "to crave, have a craving for"],
+["appetibile", "appetible, desirable"],
+["applanamento", "(act of) flattening, smoothing, planing"],
+["applanar", "to flatten, smooth, plane"],
+["applanar difficultates", "to smooth away difficulties"],
+["applattar", "to flatten (= to make flat, bring level)"],
+["applicar", "to apply (1. to put on; 2. to put to use)"],
+["applicar se a", "to apply oneself, put one's mind to"],
+["scientias applicate", "applied sciences"],
+["appoiar", "1. to keep up, prop (up); to support, back, aid"],
+["appoiar (un cosa) contra", "to lean (something) against"],
+["appoiar (un cosa) super", "to rest (something) on"],
+["appoiar se (super, contra)", "to lean (on, against)"],
+["appoio", "support (1. backing, aid; 2. prop, rest, shore)"],
+["apponer", "to appose (as in to appose one's seal to)"],
+["apportar", "to bring"],
+["apposite", "apposite, relevant"],
+["apprestar", "to prepare, make ready"],
+["appresto", "preparation"],
+["approbabile", "approvable"],
+["approbar", "to approve, approve of"],
+["approbation", "approval, approbation"],
+["approbative", "approving, approbative"],
+["approbator", "approver"],
+["approbatori", "approbatory, approbative"],
+["approchabile", "approachable"],
+["approfundamento", "1. (action of) deepening, making deeper in level; 2. (thorough) investigation"],
+["approfundar", "1. to deepen (= to make deeper in level); 2. to go deeply into, fathom, investigate"],
+["appropriabile", "1. that may be appropriated; 2. adaptable"],
+["appropriar", "to adapt"],
+["appropriar se un cosa", "to appropriate something (= to take something for one's own)"],
+["appropriate", "1. pp of appropriar; 2. adj appropriate"],
+["approvisionamento", "(act of) supplying, furnishing"],
+["approvisionar", "to supply, furnish, cater"],
+["appunctamento", "appointment, rendez-vous"],
+["appunctar", "1. to appoint (as in to appoint someone to a post); 2. to point, sharpen"],
+["appuramento", "1. purification; 2. verification, audit"],
+["appurar", "I. to clear (1. to free from impurities; 2. to free from obligation); II. to free from errors; to verify, audit, etc."],
+["apriorista", "a priori reasoner"],
+["aprioristic", "a priori"],
+["aptar", "to adapt"],
+["apte", "apt (= suited to its purpose)"],
+["apud (á-)", "near, with, at, by"],
+["aqua forte", "1. aqua fortis, nitric acid; 2. etching (= picture printed from etched plate)"],
+["aqua pesante", "heavy water"],
+["via de aqua", "[Naut.] leak"],
+["facer aqua", "[Naut.] to leak"],
+["aquar", "to water (plants, etc.); to sprinkle (with water)"],
+["aquose", "aqueous, watery"],
+["aquositate", "aquosity, wateriness"],
+["ar", "are (= one hundredth part of a hectare)"],
+["cavallo arabe", "Arabian horse"],
+["cifra arabic", "Arabic number"],
+["arabile", "arable"],
+["aranea", "spider"],
+["tela de aranea", "cobweb, spider web"],
+["arar", "to plow"],
+["arator", "plower, plowman"],
+["aratori", "agricultural, farming"],
+["aratro", "plow"],
+["aratura", "1. (act of) plowing; 2. plowed field"],
+["arbitrage", "1. arbitration, arbitrament; 2. [Bank. etc.] arbitrage"],
+["arbore", "[Bot.] tree"],
+["arbore genealogic", "family tree, genealogical tree"],
+["arboree", "arboreal, tree"],
+["arborescer", "[Bot.] to arboresce, grow into a tree"],
+["arboreto", "grove; also", "arboretum"],
+["arboretto", "small tree"],
+["arborisar", "to give a treelike appearance to, arborize"],
+["arborisate", "1. pp of arborisar; 2. adj [Mineral.] dendritic"],
+["arbusto", "shrub, bush"],
+["arcan", "secret, mysterious"],
+["arcano", "secret, mystery"],
+["arcar", "to arch (1. to cause to arch or curve; 2. to furnish with arches)"],
+["archaisar", "to archaize"],
+["archetto", "(violin) bow"],
+["arcoballista", "crossbow"],
+["ardente", "I. ppr of arder; II. adj ardent (1. burning; 2. fervent)"],
+["arder", "to burn (1. to be on fire; 2. to cause to be consumed by fire)"],
+["ardesia", "slate (1. [Mineral.]; 2. roofing slate; 3. writing slate)"],
+["ardesiera", "slate quarry"],
+["ardesiero", "slate worker; slate-quarry owner"],
+["ardesiose", "slate, slaty"],
+["ardimento", "burning (1. being on fire; 2. causing to be consumed by fire)"],
+["arditura", "burn (= hurt, injury, or effect caused by burning)"],
+["ardorose", "ardent, ardurous"],
+["arenacee", "sandy, arenaceous"],
+["arenamento", "stranding, grounding"],
+["arenar", "I. to sand (1. to cover with sand; 2. to rub with sand); II. to strand, run aground"],
+["arenari", "adj (of) sand"],
+["petra arenari", "sandstone"],
+["arenario", "sandpit"],
+["arenero", "dealer in sand"],
+["arenose", "sandy, gravelly; gritty"],
+["arenositate", "sandiness, gravelliness; grittiness"],
+["argentar", "to silver, cover or plate with silver"],
+["argentero", "silversmith"],
+["argento", "silver"],
+["argento", "quicksilver, mercury"],
+["argentose", "containing silver"],
+["argilla", "clay"],
+["argillaria", "clay-pit"],
+["argillose", "clayey"],
+["argute", "1. clear (to the ear); shrill, piercing; 2. keen, quick-witted, subtle"],
+["argutia", "1. quick-wittedness; subtlety; 2. quibble, cavil; 3. witticism"],
+["argutiar", "to quibble, cavil"],
+["argutiose", "quibbling, caviling"],
+["arietar", "to ram"],
+["arietari", "ram, ram's (= of a ram or battering ram)"],
+["arietation", "ramming, arietation"],
+["ariete", "1. ram; 2. battering ram; also", "[Rom. Antiq.] aries"],
+["ariete hydraulic", "hydraulic ram"],
+["armas blanc", "sidearms"],
+["armas de foco", "firearms"],
+["homine de armas", "man-at-arms"],
+["prender le armas", "to take up arms"],
+["armar un persona cavallero", "to dub someone a knight"],
+["armar se de patientia", "to exercise patience"],
+["armario", "wardrobe, cupboard"],
+["armeniaca", "apricot"],
+["arretrato", "arrears"],
+["arrha", "[Law] earnest, earnest money"],
+["arrivismo", "unscrupulous ambition"],
+["arrivista", "(social) climber"],
+["arrotundar", "to round, make round"],
+["arrugar", "to wrinkle, crease"],
+["arrugar", "le fronte to frown"],
+["arte n art (1. fine art; 2. skill)"],
+["opera de arte", "work of art"],
+["artes liberal", "liberal arts"],
+["belle artes", "fine arts"],
+["arte·facto", "artifact, man-made product"],
+["sanguine arterial", "arterial blood"],
+["pression arterial", "blood pressure"],
+["articulo de fide", "article of faith"],
+["articulo de fundo", "editorial, leading article"],
+["articulo definite (indefinite)", "definite (indefinite) article"],
+["seta artificial", "rayon"],
+["foco de artificio", "fireworks"],
+["artificiose", "artful, crafty"],
+["artillar", "to arm (= to equip with artillery)"],
+["ascensor", "elevator, lift"],
+["ascolta", "1. listening, hearing; 2. eavesdropping; 3. listening place or post"],
+["ascoltamento", "listening"],
+["ascoltar", "to listen to (1. to hearken to; 2. to mind, heed)"],
+["ascoltator", "listener"],
+["asinero", "donkey driver"],
+["asino", "donkey, ass"],
+["asperar", "to make rough, roughen"],
+["aspere", "rough, harsh"],
+["asperger", "to besprinkle"],
+["asperitate", "roughness, harshness"],
+["aspersion", "(act of) sprinkling"],
+["aspersorio", "[Eccl.] aspergillum"],
+["assalir", "to attack, assail"],
+["assalitor", "attacker, assailant, assailer"],
+["assaltar", "to attack, assault, assail"],
+["assaltator", "attacker, assaulter, assailant"],
+["assalto", "attack, assault"],
+["assassinato", "murder"],
+["assatis", "1. enough; 2. rather (= fairly, quite)"],
+["asse", "I. [Rom. Antiq.] as; II. ace (1. [Cards, Dice, etc.]; 2. highly skilled person; also", "[Aviation])"],
+["assecurabile", "insurable"],
+["assetar", "to make thirsty"],
+["assetate", "1. pp of assetar; 2. adj thirsty, thirsting"],
+["asseverar", "to affirm positively, asseverate"],
+["assider", "to sit (by or near)"],
+["assortir", "to sort, assort"],
+["assumer", "to assume (= to take to or upon oneself)"],
+["assurdar", "1. to deafen (= to stun with noise); 2. to mute, muffle"],
+["astere", "I. star (1. heavenly body; 2. starshaped figure, etc.); II. [Bot.] aster"],
+["asteria", "1. starfish; 2. asteriated opal"],
+["attentato", "criminal attempt"],
+["attentatori", "attacking, making a criminal attempt on"],
+["attente", "attentive, intent"],
+["atterrage", "[Aeronaut.] landing"],
+["atterrar", "[Aeronaut.] to land"],
+["attinger", "to attain (= to arrive at, reach)"],
+["attingimento", "attainment (= action or process of attaining)"],
+["attrahente", "1. ppr of attraher; 2. adj attractive, attracting"],
+["attraher", "to attract (1. to draw to oneself; 2. to allure)"],
+["attrappar", "to catch, seize"],
+["attristar", "to sadden, make sad"],
+["attruppamento", "1. (act of) assembling, gathering; 2. crowd, gathering"],
+["attruppar", "to troup, gather, assemble"],
+["attruppar se", "to flock together, assemble"],
+["audito", "hearing, sense of hearing"],
+["aurora", "dawn"],
+["ava", "grandmother"],
+["aval", "[Com.] endorsement, backing (of a bill of exchange)"],
+["avalisar", "[Com.] to endorse, back (a bill of exchange)"],
+["avalista", "[Com.] endorser, backer (of a bill of exchange)"],
+["avantal", "apron"],
+["avante", "before (= in front, ahead)"],
+["avantia", "advance (= payment beforehand)"],
+["avantiamento", "1. advance (= forward motion); 2. advancement (= promotion in rank)"],
+["avantiar", "to advance (1. to move forward; 2. as in to advance a proposition; 3. to promote in rank)"],
+["avantiata", "[Mil.] outpost, advance guard"],
+["avantiate", "I. pp of avantiar; II. adj advanced (1. far on in progress; 2. far on in life, time or course)"],
+["posto avantiate", "advanced post"],
+["avar", "avaricious, miserly"],
+["avaro", "miser"],
+["ave", "bird"],
+["ave de appello", "decoy bird"],
+["aves", "domestic poultry"],
+["avellana", "hazelnut, filbert"],
+["avellaniero", "hazel (tree)"],
+["aveller", "to tear away, avulse"],
+["avena", "oat, oats"],
+["aventura", "adventure"],
+["per aventura", "by chance"],
+["al aventura", "at random"],
+["avergoniar", "to shame, put to shame; to make (feel) ashamed"],
+["avergoniate", "1. pp of avergoniar; 2. adj ashamed"],
+["averter", "to turn away, avert"],
+["avestruthio", "ostrich"],
+["haber un stomacho de avestruthio", "to have the digestion of an ostrich"],
+["aviar", "to aviate"],
+["campo de aviation", "airfield"],
+["avicinar", "to border upon, neighbor"],
+["aviditate", "avidity, greed, greediness"],
+["avinar se", "to tipple, get drunk"],
+["avinate", "drunk, in one's cups"],
+["avisar", "to advise (1. to give information or notice to; 2. to counsel)"],
+["avisate", "1. pp of avisar; 2. adj prudent, circumspect"],
+["mal avisate", "ill-advised, imprudent"],
+["ariso", "I. opinion, judgment; II. advice (1. notice; 2. counsel);"],
+["littera de aviso [Com.] notification of dispatch, letter of advice"],
+["avivamento", "1. (action of) reviving, vivifying; 2. (action of) heightening (colors)"],
+["avivar", "1. to revive, vivify; 2. to heighten (colors)"],
+["avo", "grandfather"],
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+["ubertate","fertility, abundance uberty"],
+["ubi","1. adv where (= in or at what place); 2. conj where; when, as soon as; wherewith; in which"],
+["a ubi","where, whither"],
+["de ubi","from where, whence"],
+["ubicar","to have location, be (somewhere)"],
+["ubication","location"],
+["ubicunque","wherever"],
+["ulle","any, anyone"],
+["ulmacee","[Bot.] ulmaceous"],
+["ulmaria","[Bot.] meadosweet, queen of the meadows"],
+["ulmeto","elm grove"],
+["ulmo","elm"],
+["ultimar","to bring to a close, to bring to completion"],
+["ultrage","outrage"],
+["ultragiar","to outrage"],
+["ultragiose","outrageous"],
+["ultramar","overseas"],
+["(paises) de ultramar","overseas (countries)"],
+["ultrantia","excess, extreme"],
+["a ultrantia","to the bitter end"],
+["ultrapassar","to go beyond"],
+["ultrar","to carry to excess or to extremes"],
+["uluco","owl"],
+["ulula","barn owl"],
+["ulular","to howl, ululate"],
+["ululation","howling, ululation"],
+["ululator","howler (= one who howls); specif. howling monkey"],
+["umbrar","to shade, darken"],
+["umbratile","shady, umbrageous"],
+["umbrose","shady, umbrageous"],
+["un-altere","each other, one another"],
+["uncia","1. ounce; 2. inch"],
+["uncino","hook (as in wall hook, hook and eye)"],
+["unco","hook, barb"],
+["uncto","anointed; le Uncto del Senior the Lord's Anointed"],
+["uncto","unguent, ointment"],
+["unctuose","unctuous (1. oily, greasy; 2. oily, suave)"],
+["unda","wave"],
+["unde","whence (1. from which place; 2. wherefore, for which reason or cause)"],
+["undear","to wave"],
+["undece","eleven"],
+["undose","wavy"],
+["undulose","rolling, wavy, undulous"],
+["ungue","nail (of a finger or toe)"],
+["unguiculo","small nail or claw"],
+["unquam","ever, at any time"],
+["urbe","town, city"],
+["urceo","pitcher, jug"],
+["urso","bear"],
+["urso blanc","polar bear"],
+["urson","[Zool.] Canada porcupine"],
+["usantia","usage, custom, habit"],
+["usquam","somewhere"],
+["usque","(all the way) to, up to"],
+["usque nunc","up to now"],
+["usque al presente","up to the present"],
+["ustion","1. (act of) burning, destroying by fire; 2. [Med.] cauterization"],
+["utile","useful"],
+["uva","1. grape; 2. grapes, bunch of grapes;"],
+["uxor","wife"],
+["vacar","1. to be vacant, unoccupied; 2. to be in recess"],
+["vacca","1. cow (= female bovine); 2. cowhide"],
+["vacchero","cowherd, cowboy"],
+["vacuar","to empty, make empty"],
+["vacue","empty"],
+["vacuo","emptiness; void; vacuum"],
+["vadabile","fordable"],
+["vadar","to ford, wade through"],
+["vado","ford"],
+["vagar","to wander about, ramble"],
+["vage","1. wandering about, rambling; 2. vague (= not clearly defined)"],
+["vaina","sheath, scabbard, etc."],
+["vainero","sheather, scabbard maker"],
+["valde","1. vehemently, strongly; 2. exceedingly, very much"],
+["valente","1. ppr of valer; 2. adj valiant"],
+["valentia","1. valor, bravery; 2. [Chem.] valence"],
+["valer","1. to be worth (= to be equal to, in value or in price); 2. to be courageous"],
+["valetudinari","invalid, infirm"],
+["valetudinario","invalid"],
+["valge","bow-legged"],
+["valide","1. able-bodied, robust; 2. valid"],
+["validitate","1. robustness, vigor; 2. validity"],
+["valise","traveling bag, valise; also","suitcase, satchel, etc."],
+["vallar","to surround with a rampart"],
+["vallata","valley"],
+["vallation","1. (act of) surrounding with a rampart; 2. rampart, circumvallation"],
+["valle","valley"],
+["lilio del valles","lily of the valley"],
+["per (le) montes e valles","over hill and dale"],
+["valle de lacrimas","vale of tears"],
+["vallea","valley"],
+["vallo","rampart, circumvallation"],
+["valutar","to value, appraise"],
+["van","vain (1. futile; 2. worthless; 3. conceited); in van in vain"],
+["vanitate","vanity (1. futility; 2. conceit, vainglory)"],
+["vanitose","vainglorious, conceited"],
+["vannar","to winnow"],
+["vannatura","chaff (= husks separated from the grain hy winnowing)"],
+["vanno","winnow, winnowing fan"],
+["vantar","to boast, of vaunt; vantar se to boast (about oneself)"],
+["vanteria","boasting, vauntery"],
+["variante","1. ppr of variar; 2. adj variant, varying variante n variant"],
+["variar","to vary (1. to differ; 2. to modify, alter)"],
+["variate","1. pp of variar; 2. adj varied"],
+["varice","[Med.] varix, varicose vein"],
+["varion","minnow"],
+["vascello","vessel (= ship)"],
+["vasculo","1. vessel, container; 2. vasculum"],
+["vastar","to lay waste"],
+["vastitate","vastness"],
+["vece","time (as in three times)"],
+["alcun veces","sometimes"],
+["un vece","once"],
+["a veces","at times"],
+["altere vece","again"],
+["plure veces","several times"],
+["vecte","crowbar, pry, lever, etc."],
+["vegete","healthy, vigorous, flourishing"],
+["vela","sail of a ship"],
+["facer vela","to make sail"],
+["poner al vela","to set sail"],
+["a plen vela","under full sail"],
+["sub vela","under sail"],
+["velero","sailmaker"],
+["velia","waking, being awake"],
+["veliar","1. to stay awake; 2. to watch, be on the lookout"],
+["veliero","sailing ship; sailboat"],
+["velle","subj pass of voler - would, would wish, would like"],
+["venar","to hunt, chase"],
+["venar","to vein, grain"],
+["venate","veiny, veined"],
+["venation","(action of) hunting"],
+["venator","hunter, huntsman"],
+["venatori","hunting, hunter's"],
+["venafura","venation, veining"],
+["vendita","sale (= act of selling)"],
+["veneficio","(act of) poisoning"],
+["venenifere","poison-bearing"],
+["veneno","poison/ venom"],
+["venenose","poisonous, venomous"],
+["venenositate","venomousness"],
+["veneria","hunt, chase, hunting"],
+["vengiabile","worthy of revenge"],
+["vengiar","to avenge"],
+["vengiar se","to avenge oneself, take revenge"],
+["vengiator","avenger"],
+["venia","mercy, indulgence"],
+["venir","to come"],
+["venir al mundo","to come into the world, be born"],
+["venir al manos","to come to blows"],
+["facer venir","to send for"],
+["venita","coming"],
+["ventar","to blow, be windy"],
+["vento","wind"],
+["ventose","1. windy, gusty; 2. ventose, flatulent"],
+["ventral","abdominal"],
+["ventrata","1. litter (of puppies, etc.); 2. hearty feed"],
+["ventre","belly"],
+["verberar","to beat, whip, flog"],
+["verberation","(action of) beating, whipping, flogging; verberation"],
+["verbo","1. word; 2. [Gram.] verb"],
+["le Verbo","the Word"],
+["verde","green"],
+["fructo verde","green fruit (= unripe fruit)"],
+["vino verde","hard, sharp, wine"],
+["le annos verde","the green years"],
+["verde vetulessa","green old age"],
+["verde","(the color) green"],
+["verdear","to become green"],
+["verdemar","sea-green"],
+["verdicto","verdict"],
+["verdiero","orchard"],
+["verdura","I. verdure (1. fresh greenness; 2. green vegetation); II. greens (= green vegetables)"],
+["vergonia","shame (1. feeling of shame; 2. disgrace)"],
+["haber vergonia","to be ashamed"],
+["vergoniose","1. bashful, modest; 2. shameful, disgraceful"],
+["veridic","truthful, veridical"],
+["veridicitate","truthfulness, veracity"],
+
+
+[ "verisimile","likely, probable, verisimilar"],
+[ "verisimilitude","likelihood, probability"],
+[ "veritate","truth;"],
+[ "dicer le veritate","to tell the truth"],
+[ "in veritate","in truth, truly, really"],
+[ "verme","worm; verme de terra earthworm"],
+[ "vermente","really, truly; indeed"],
+[ "vermilie","bright red, scarlet, vermilion, etc."],
+[ "vernissar","to varnish"],
+[ "vernissator","varnisher"],
+[ "vernisse","varnish"],
+[ "vero","truly, really, indeed, even"],
+[ "verosimilante","likely, probable, verisimilar"],
+[ "verre","boar (= male swine)"],
+[ "verruca","wart; [Med., Zool.] veruca"],
+[ "verruciforme","wart-shaped, verruciform"],
+[ "verrucose","warty; [Med.] verrucose"],
+[ "verso","toward(s); to, in the direction of, etc."],
+[ "verter","to turn, turn round; to turn, bend"],
+[ "vertigine","dizziness, giddiness, vertigo"],
+[ "verve","animation, zest, verve"],
+[ "vespa","wasp"],
+[ "vespere","evening"],
+[ "iste vespere","tonight"],
+[ "le vespere","in the evening, evenings"],
+[ "heri vespere","last night"],
+[ "mane vespere","tomorrow night"],
+[ "vespertilion","[Zool.] bat"],
+[ "vespiario","wasp's nest"],
+[ "veste","(outer) garment"],
+[ "vestiario","cloakroom, checkroom"],
+[ "vestigio","1. footprint; 2. vestige"],
+[ "vestimento","1. garment, piece of clothing; 2. [Eccl.] vestment; vestimentos clothing, clothes, apparel"],
+[ "vestir","1. to dress (a person); 2. to put on (a garment); vestir de to dress (a person) in"],
+[ "vestitura","clothing, clothes, apparel"],
+[ "poner su veto (a un cosa)","to veto (something)"],
+[ "vetula","old woman"],
+[ "vetule","old (1. not young; 2. not new)"],
+[ "vetulessa","1. old age; 2. oldness"],
+[ "vetulo","old man"],
+[ "vetustate","1. old age; oldness; 2. antiqueness"],
+[ "vetuste","1. very old; 2. antiquated"],
+[ "viabile","passable (= that can be passed or traversed)"],
+[ "viagiar","to travel"],
+[ "viagiator","traveler; voyager"],
+[ "vicerege","viceroy"],
+[ "vicin","neighboring, adjoining, near"],
+[ "vicinal","neighboring, adjoining; via vicinal vicinal road"],
+[ "vicinar","to border upon, neighbor"],
+[ "vicinitate","neighborhood, vicinity (1. nearness; 2. region, surroundings)"],
+[ "vicino","neighbor"],
+[ "vico","1. street, alley; 2. village, hamlet"],
+[ "victualia","provisions, victuals"],
+[ "victualiar","to provision, victual"],
+[ "vidente","I. ppr of vider; II. adj seeing (1. having the power of sight; 2. clairvoyant) vidente n clairvoyant"],
+[ "vider","to see"],
+[ "vidite que","seeing that, considering that"],
+[ "vidua","1. widow; 2. [Bot.] mourning widow, sweet scabious"],
+[ "viduage","widowhood"],
+[ "vidual","belonging to widowhood"],
+[ "viduar","to widow (= to bereave of a husband)"],
+[ "vidue","widowed"],
+[ "viduitate","widowhood"],
+[ "viduo","widower"],
+[ "vigesime","adj twentieth"],
+[ "vigesimo","twentieth (part)"],
+[ "vigilar","1. to stay awake; 2. to watch, be on the lookout; vigilar super to watch over, look after"],
+[ "vigilator","1. one who stays awake; 2. watchman, guard"],
+[ "vigile","awake"],
+[ "viginti","twenty"],
+[ "vigorar","to invigorate"],
+[ "vil","1. cheap; 2. vile, base; a precio vil at a low price"],
+[ "vilipender","to hold cheap, despise, vilipend"],
+[ "vilitate","1. cheapness; 2. vileness, baseness"],
+[ "villan","1. living in a village; 2. vile, infamous, villainous"],
+[ "villanage","[Hist.] villenage, villeinage (= status of a villein)"],
+[ "villania","vile action, villainy"],
+[ "villano","1. villager, rustic; 2. [Hist.] villein; 3. scoundrel, villain"],
+[ "villetta","small villa"],
+[ "villo","hair, down"],
+[ "villose","hairy, villous"],
+[ "villositate","hairiness, villosity"],
+[ "villute","hairy"],
+[ "villuto","velvet"],
+[ "villuto costate","corduroy"],
+[ "vinagrar","to vinegar, season with vinegar"],
+[ "vinagre","vinegar"],
+[ "vinagreria","vinegar factory"],
+[ "vinagrero","vinegar maker or dealer"],
+[ "vinari","wine, of wine"],
+[ "vincer","to vanquish, overcome"],
+[ "vincibile","vincible, vanquishable"],
+[ "vincimento","vanquishment"],
+[ "vincitor","victor"],
+[ "vindemiar","to harvest grapes"],
+[ "vindemiator","vintager"],
+[ "vindicantia","vengeance, revenge"],
+[ "vindicar","1. to revenge, avenge; 2. [Law] to vindicate; vindicar se de to take vengeance for"],
+[ "vinifere","wine-producing"],
+[ "vinificar","to (cause to) turn into wine"],
+[ "vino","wine"],
+[ "vinolente","too fond of the bottle, winebibbing"],
+[ "vinolentia","winebibbing"],
+[ "vintesime (-ésime)","twentieth"],
+[ "le vintesime parte","the twentieth part"],
+[ "le vintesimo","the twentieth"],
+[ "vinti","twenty"],
+[ "violacee","violaceous (1. violet, violet-colored; 2. of the Violaceae)"],
+[ "violate","1. pp of violar; 2. adj violate, violated"],
+[ "viperin","viperine, viperous"],
+[ "viragine","virago"],
+[ "virga","1. rod (= straight, slender stick); 2. [Naut.] yard"],
+[ "virgula","[Gram.] comma"],
+[ "puncto e virgula","semicolon"],
+[ "bacillo virgula","[Med.]comma bacillus"],
+[ "virgular","to (put a) comma"],
+[ "virguletta","(single) quotation mark"],
+[ "poner (un parola) inter virgulettas","to put (a word) in quotation marks"],
+[ "viril","virile"],
+[ "etate viril","manhood"],
+[ "virilitate","I. virility (1. potency; 2. maculinity, manliness); II. manhood"],
+[ "viro","man (= male human being)"],
+[ "virose","virose, poisonous"],
+[ "virtute","I. manliness, valor; II. virtue (1. active property, potency; 2. moral excellence; 3. chastity in a woman; 4. [Theol.] one of the orders of celestial beings); per virtute de by virtue of; facer de necessitate virtute to make a virtue of necessity"],
+[ "visage","countenance, face, visage"],
+[ "visar","to aim (= to take aim); visar a to aim at"],
+[ "visco","1. mistletoe; 2. birdlime"],
+[ "viso","sight, vision (= power of seeing)"],
+[ "viste","considering, in view of; viste que considering that"],
+[ "vitar","1. to plant vines; 2. to screw, screw in -vitar see invitar"],
+[ "vite","1. vine, grapevine; 2. screw; matre vite [Mech.] nut"],
+[ "vitellin","calf, calf's"],
+[ "vitellin","1. yolk, yolk-like, yolk-colored; 2. vitelline (= pertaining to the vitellus)"],
+[ "vitellino","vellum"],
+[ "vitello","1. calf (= young of the cow); 2. veal"],
+[ "vitello","1. yolk (of an egg); 2. [Embryol.] vitellus"],
+[ "vitiar","1. to corrupt, deprave; II. to vitiate (1. to impair, spoil; 2. to destroy the legal force of)"],
+[ "viticola","winegrower, viticulturist viti·cola (-tí-) adj winegrowing, viticultural"],
+[ "viticultor","wine grower, viticulturist"],
+[ "vitio","1. vice (= moral fault or failing); 2. defect (as in defect of eyesight)"],
+[ "vitiose","1. depraved, wicked, vicious; 2. defective, faulty; cavallo vitiose vicious horse"],
+[ "vitrar","to glaze, furnish with glass"],
+[ "vitree","vitrcous (1. of, pertaining to, or derived from, glass; 2. glassy, resembling glass); humor vitree [Anat.] vitreous humor"],
+[ "vitrero","glazier"],
+[ "vitriera","stained glass window"],
+[ "vitrina","1. show window; 2. showcase, cabinet"],
+[ "vitro","I. glass (1. as in made of glass; 2. drinking glass); II. windowpane, pane"],
+[ "vitrose","vitreous (1. of, pertaining to, derived from, glass; 2. glassy)"],
+[ "vivacitate","vivaciousness, vivacity"],
+[ "vivanda","(dish of) food; vivandas viands, victuals"],
+[ "vivandera","(female) canteen manager, sutler"],
+[ "vivandero","(male) canteen manager, sutler"],
+[ "vivario","fishpond"],
+[ "vive","1. alive, live, living; 2. lively; (color) vive bright (color); de vive voce by word of mouth; de vive fortia by sheer force; al or in le vive to the quick"],
+[ "vivente","alive, living"],
+[ "viver","to live; viver de to live on (something); maniera de viver way of life, way of living; viver (in un loco) to live (in a place)"],
+[ "viveres","victuals, food"],
+[ "vivipare","viviparous (= producing living young)"],
+[ "vocar","to call (= to command, ask, etc. to come)"],
+[ "voga","1. (act of) sailing, moving, floating, drifting; 2. vogue; esser in voga to be in vogue or in fashion"],
+[ "vogar","to sail, move, float, drift"],
+[ "volante","1. flywheel; 2. steering wheel; 3. frill, ruffle; 4. shuttlecock"],
+[ "volar","to fly (as in birds fly)"],
+[ "volatile","flying animal, winged creature"],
+[ "voler","to wish, want; voler (facer un cosa) to want to (do something)"],
+[ "voler (un cosa)","to want (a thing)"],
+[ "voler dicer","to mean, signify"],
+[ "voler","will (= act of willing)"],
+[ "voltar","to vault (= to cover with a vault)"],
+[ "voltear","[Man.] to vault"],
+[ "volteo","[Man.] (act or art of vaulting)"],
+[ "volubilitate","1. tendency to roll; 2. volubility, volubleness"],
+[ "voluta","volute (1. [Arch.]; 2. [Zool.] any kind of gasteropods)"],
+[ "volver","to roll, turn round"],
+[ "vorar","to devour"],
+[ "votar","I. to vow (1. to promise solemnly; 2. to dedicate); II. to vote (1. to cast a vote; 2. to approve, determine, or grant by a vote)"],
+[ "voto","1. vow (= solemn promise); 2. vote (as in: to cast a vote); facer voto de to vow (= to promise solemnly)"],
+[ "vulgo","common people, vulgus"],
+[ "vulgo","commonly, vulgo"],
+[ "vulnerar","to wound"],
+[ "vulnere","wound"],
+[ "vulpe","fox"],
+[ "watta","(absorbent) cotton"],
+[ "wolfram","tungsten [Mineral.] wolframite"],
+[ "xylo-","wood"],
+[ "yo","[yo] pron pers I (= io)"],
+[ "yug-","yugo- (=south)"],
+[ "zebrate","striped"],
+[ "zelar","to be zealous (about)"],
+[ "zelator","zealot (zealous person)"],
+[ "zelo","zeal, ardor"],
+[ "zelose","1. zealous; 2. jealous"],
+[ "zelose de (le libertate)","jealous of (one's liberty)"],
+[ "zelosia","jealousy"],
+[ "zigzagar","to zigzag"],
+[ "zincar","to zinc, coat with zinc"],
+[ "zonar","to zone"],
+[ "zoolatria","zoolatry, animal worship"],
+[ "zym-","leaven, ferment"],
+
 ];
 
 /*
-a prep 1. to (a point in space or time, a goal, etc.); 2. at (a point in space or time, a stage of development, etc.);
-a (+inf) to; also: for (+gerund);
-sala a attender waiting room
 
-Hence: [apena] etc.
 
-[a-] prefixo verbal [used with verbs and, in combination with verbal suffixes, with nouns and adjectives] to, toward, into (expressing motion to, change into, increase of intensity, etc.)
-
-Hence: abatter etc.; abassar etc.
-
-a- prefixo [an- before -h- and vowels; used with nouns and adjectives] a-, an- (= not ...; without, lacking ...)
-
-Hence: agnostic etc.; amnesia etc.; analphabete etc.; anarchia etc.; anesthesia etc.; anesthetic etc.; anhydre etc.; athee etc.
-
-Aachen [G] npr Aachen, Aix-la-Chapelle
-
-ab prep since, from
-
-abandonamento n abandonment
-
-abandonar v to abandon;
-abandonar se a to indulge in
-
-abandono n I. abandonment (1. action of abandoning; 2. state of being abandoned); II. abandon
-
-Hence: abandonar-abandonamento
-
-abassamento n lowering; also: abasement;
-abassamento de un equation [Math.] reduction of an equation
-
-abassar v to lower; also: to abase;
-abassar un perpendicular [Geom.] to drop a perpendicular
-
-abatter v to knock or cast down
-
-Hence: abattimento; abattitor; abattitorio; abattite
-
-abattimento n despondency, dejection
-
-abattite 1. pp of abatter; 2. adj downcast, dejected
-
-abattitor n one who knocks down; also: feller, wood-cutter, slaughterer, etc.
-
-abattitorio n slaughterhouse, abattoir
-
-abbate n abbot
-
-Hence: abbatessa; abbatia-abbatial
-
-abbatessa n abbess
-
-abbatia (-ía) n 1. abbacy; 2. abbey
-
-abbatial adj abbatial
-
-abbordabile adj approachable, accessible
-
-abbordage (-aje) n [Naut.] (act of) boarding (a ship)
-
-abbordar v 1. to land (= to go ashore from a ship or boat); 2. [Navy] to board (= to come alongside in order to attack); 3. to accost, address
-
-Hence: abbordo; abbordage; abbordabile
-
-abbordo n 1. [Naut.] (act of) landing; 2. [Navy] (act of) boarding (a ship)
-
-abbreviamento n abridgement, abbreviation
-
-abbreviar v to abridge, abbreviate
-
-Hence: abbreviamento; abbreviation; abbreviative; abbreviator; abbreviatura
-
-abbreviation n abbreviation, abridgment
-
-abbreviative adj abridging, abbreviatory
-
-abbreviator n 1. abridger, abbreviator; 2. [R.C.Ch.] abbreviator
-
-abbreviatura n abbreviation (= shortened form of a word)
-
-abdicar v to abdicate
-
-Hence: abdication; abdicative
-
-abdication n abdication
-
-abdicative adj abdicative
-
-abdominal adj abdominal
-
-abdomine n abdomen
-
-Hence: abdominal
-
-abducer [-duc-/-duct-] v to lead away, abduce; 2. [Physiol.] to abduct
-
-Hence: abduction; abductor
-
-abduct- see abducer
-
-abduction n [Physiol.] abduction
-
-abductor n [Physiol.] abductor
-
-Abel nprm Abel
-
-aberrante adj aberrant (= deviating from the normal type)
-
-aberrar v to deviate, aberrate
-
-Hence: aberrante; aberration
-
-aberration n aberration
-
-abhorrer v to abhor
-
-Hence: abhorrimento; abhorribile
-
-abhorribile adj abominable, hateful
-
-abhorrimento n abhorrence
-
-abiberar v to water (1. to supply with drink; 2. to irrigate)
-
-abiberatorio n watering-place, water-hole
-
-abiete n fir (1. fir-tree; 2. fir wood);
-abiete de Canada hemlock (spruce)
-
--abile suffixo adjective [used with verbs in -ar] -able (= that can be ...ed; that is worthy to be ...ed)
-
-Hence: observabile etc.; admirabile etc.
-
-abiogenese (-génese) n abiogenesis, spontaneous generation
-
-abiogenesis (-génesis) n abiogenesis, spontaneous generation
-
-abiogenetic adj abiogenetic
-
-abject- see abjic-
-
-abjecte adj abject, mean
-
-abjection n abjection, abjectness
-
-abjic- [-jic-/-ject-] v [occurring in derivatives]
-
-Hence: abjection; abjecte
-
-abjurar v to abjure (1. to forswear; 2. to recant, repudiate)
-
-Hence: abjuration
-
-abjuration n abjuration
-
-ablandar v to soften; also: to mollify, mitigate, assuage, etc.
-
-ablativo n ablative;
-ablativo absolute ablative absolute
-
-abluer [-lu-/-lut-] v to wash, cleanse
-
-Hence: ablution
-
-ablut- see abluer
-
-ablution n ablution, washing
-
-abnegar v to deny oneself, abnegate
-
-Hence: abnegation
-
-abnegation n abnegation, self-denial
-
-abolimento n abolishment, abolition
-
-abolir v to abolish
-
-Hence: abolimento; abolition-abolitionismo, abolitionista
-
-abolition n abolition, abolishment
-
-abolitionismo n abolitionism
-
-abolitionista n abolitionist
-
-abominabile adj abominable
-
-abominar v to abominate
-
-Hence: abominabile; abomination
-
-abomination n abomination (1. loathing; 2. loathsome object)
-
-abonamento n subscription (to a periodical, etc.)
-
-abonar¹ v to enter the subscription (to a periodical, etc.) of (a person);
-abonar se to subscribe (to a periodical, etc.)
-
-Hence: abonamento
-
-abonar² v to improve (= to make better)
-
-abor- [-bor-/-bort-] v [occurring in derivatives]
-
-Hence: abortive; aborto-abortar-abortamento
-
-aborigines (-ígines) npl aborigines
-
-abort- see abor-
-
-abortamento n miscarriage, abortion
-
-abortar v I. to miscarry (1. to have a miscarriage; 2. to come to nought); II. [Biol.] to abort (= to remain undeveloped or shrink away)
-
-abortive adj abortive
-
-aborto n abortion
-
-ab ovo [L] ab ovo, from the beginning
-
-abrader [-rad-/-ras-] v to abrade
-
-Hence: abrasion; abrasive
-
-abras- see abrader
-
-abrasion n abrasion
-
-abrasive adj abrasive
-
-abrogabile adj abrogable
-
-abrogar v to abrogate
-
-Hence: abrogabile; abrogation; abrogative; abrogator; abrogatori
-
-abrogation n repeal, abrogation
-
-abrogative adj abrogative
-
-abrogator n abrogator
-
-abrogatori adj rescinding, abrogating
-
-abrumper [-rump-/-rupt-] v to break off, rend
-
-Hence: abrupte
-
-abrupt- see abrumper
-
-abrupte adj abrupt (= very steep)
-
-Abruzzi [I] nprpl Abruzzi
-
-Absalom nprm Absalom
-
-absceder [-ced-/-cess-] v to form (turn into) an abscess
-
-Hence: abscesso
-
-abscess- see absceder
-
-abscesso n abscess
-
-abscinder [-scind-/-sciss-] v to cut off, abscind
-
-Hence: abscissa
-
-absciss- see abscinder
-
-abscissa n [Math.] abscissa
-
-absentar v -;
-absentar se to absent oneself
-
-absente adj absent
-
-Hence: absentia; absentismo; absentista; absentar
-
-absentia n absence;
-brillar per su absentia to be conspicuous by one's absence
-
-absentismo n absenteeism
-
-absentista n absentee (owner)
-
-absinthic adj absinthial, absinthic
-
-absinthina n [Chem.] absinthin
-
-absinthio n absinthe (1. [Bot.] Absinthium; 2. "alcoholic liquor absinthe")
-
-Hence: absinthismo; absinthic; absinthina
-
-absinthismo n [Med.] absinthism
-
-absolut- see absolver
-
-absolute adj absolute;
-temperatura absolute absolute temperature;
-ablativo absolute ablative absolute
-
-absolution n absolution, remission; also: acquittal
-
-absolutismo n absolutism
-
-absolutista n absolutist
-
-absolutor n absolver
-
-absolutori adj absolutory, absolving
-
-absolver [-solv-/-solut-] v to absolve, acquit
-
-Hence: absolution; absolutor; absolutori; absolute-absolutismo, absolutista
-
-absorbente adj absorbent
-
-absorbente n absorbent (= absorbing substance)
-
-absorbentia n absorbency
-
-absorber [-sorb-/-sorpt-] v to absorb;
-absorbite in absorbed in
-
-Hence: absorbente-absorbentia; absorbibile; absorbtion; reabsorber-reabsorption
-
-absorbibile adj absorbable
-
-absorpt- see absorber
-
-absorption n absorption
-
-abstent- see abstiner
-
-abstention n abstention
-
-abstentionista n abstentionist
-
-abstinente adj abstemious
-
-abstinentia n abstinence
-
-abstiner [-tin-/-tent-] v -;
-abstiner se de to abstain from
-
-Hence: abstinente-abstinentia; abstention-abstentionista
-
-abstract- see abstraher
-
-abstracte adj abstract
-
-abstraction n abstraction (1. [Logic]; 2. state of being lost in thought); facer abstraction de to disregard, leave out of consideration
-
-abstraher [-trah-/-tract-] v [Logic] to abstract
-
-Hence: abstraction; abstracte
-
-abstruder [-trud-/-trus-] v 1. to thrust away; 2. to conceal
-
-Hence: abstruse
-
-abstrus- see abstruder
-
-abstruse adj abstruse
-
-absurde adj absurd
-
-Hence: absurditate
-
-absurditate n absurdity
-
-abuccamento n 1. (action of) seizing, snatching up (with the mouth); 2. (action of) interconnecting (two openings); 3. interview, conference
-
-abuccar v 1. to seize, snatch up (with the mouth); 2. to interconnect (two openings);
-abuccar se to come or get together (for an interview, a conference, etc.)
-
-Hence: abuccamento
-
-abundante adj abundant
-
-abundantia n abundance;
-corno del abundantia cornucopia, horn of abundance or plenty
-
-abundar v to abound, be plentiful; abundar in to abound in or with
-
-Hence: abundante-abundantia; superabundar-superabundante-superabundantia
-
-abus- see abut-
-
-abusar v -;
-abusar de to abuse, make bad use of
-
-abusator n abuser, misuser
-
-abusive adj abusive (= of improper or wrong use)
-
-abuso n abuse (= improper or wrong use)
-
-abut- [-ut-/-us-] v [occurring in derivatives]
-
-Hence: abusive; abuso-abusar-abusator, disabusar
-
-abysmal adj abysmal
-
-abysmo n abysm
-
-Hence: abysmal
-
-abyssal adj abyssal
-
-abyssin adj Abyssinian
-
-Hence: Abyssinia; abyssino
-
-Abyssinia npr Abyssinia
-
-abyssino n Abyssinian
-
-abysso n abyss
-
-Hence: abyssal
-
-acacia n [Bot.] acacia
-
-academia n academy
-
-Hence: academic, academico
-
-academic adj academic, academical
-
-academico n academician
-
-Academo npr [Gr. Mythol.] Academus
-
-Hence: academia &
-
-acaju [-jú] n 1. cashew; 2. mahogany;
-nuce de acaju cashew nut
-
-acantha n [Bot.] prickle, thorn
-
-Hence: acanthophore etc.; tragacantha etc.; notacanthe etc.
-
-acanthaceas n [Bot.] Acanthaceae
-
-acanthacee adj [Bot.] acanthaceous
-
-acantho n acanthus (1. [Bot.]; 2. [Arch.])
-
-Hence: acanthacee-acanthaceas
-
-acantho·phore [-óphore] adj spine-bearing, acanthophorous
-
-acceder [-ced-/-cess-] v 1. to approach; 2. to accede (= to assent)
-
-Hence: accessibile-accessibilitate, inaccessibile-inaccessibilitate; accession; accessori-accessorio; accesso
-
-accelerando [I] n [Mus.] accelerando
-
-accelerar v to accelerate
-
-Hence: acceleration; accelerator
-
-acceleration n acceleration
-
-accelerator n accelerator (1. anything which increases speed of motion; 2. contrivance for producing greater speed in a machine)
-
-accendalia n kindling (= wood, shavings etc. used to kindle a fire)
-
-accender [-cend-/-cens-] v to light, kindle
-
-Hence: accendalia; accendimento; accendibile; accensibile-accensibilitate; accenditor
-
-accendibile adj inflammable, combustible
-
-accendimento n lighting, kindling
-
-accenditor n lighter (= device for lighting cigarettes, gas, candles, etc.)
-
-accens- see accender
-
-accensibile adj inflammable, combustible, accensible
-
-accensibilitate n inflammability, combustibility, accensibility
-
-accento n 1. accent, stress; 2. accent mark
-
-Hence: accentuar-accentuation
-
-accentu- see accento
-
-accentuar v to accentuate, accent
-
-accentuation n accentuation
-
-accept- see accip-
-
-acceptabile adj acceptable
-
-acceptabilitate n acceptability
-
-acceptar v to accept
-
-acceptation n acceptance
-
-acception n acceptation (= standard meaning)
-
-access- see acceder
-
-accessibile adj accessible
-
-accessibilitate n accessibility
-
-accession n 1. accession ("accession to a dignity, a throne, etc."); 2. adherence ("adherence to a treaty, a party, etc.")
-
-accesso n access (1. "access to a place"; 2. fit)
-
-accessori adj accessory (= adjunct)
-
-accessorio n accessory
-
-accidental adj accidental (1. nonessential; 2. happening by chance)
-
-accidente n I. accident (1. nonessential quality; 2. contingency; 3. mishap); II. [Gram.] accidence
-
-accider v to happen, befall
-
-Hence: accidente-accidental
-
-accip- [-cip-/-cept-] v [occurring in derivatives]
-
-Hence: acception; acceptar-acceptabile-acceptabilitate, inacceptabile; acceptation
-
-accisia n excise
-
-acclamar v to acclaim (= to applaud)
-
-Hence: acclamation; acclamator
-
-acclamation n acclaim, acclamation;
-per acclamation by acclamation
-
-acclamator n acclaimer
-
-acclimatar v to acclimatize, acclimate
-
-acclimatation n acclimatization, acclimation
-
-accollada n accolade (= ceremonious salutation and embrace)
-
-accollar v to embrace, salute with an accolade
-
-Hence: accollada
-
-accommodabile adj 1. adaptable; 2. adjustable (as in "adjustable quarrel")
-
-accommodamento n settlement (of disputes, etc.)
-
-accommodar v to accommodate (1. to adapt; 2. to settle (disputes, etc.))
-
-Hence: accommodamento; accommodabile; accommodator; accommodation
-
-accommodation n adaptation, accommodation
-
-accommodator n accommodator
-
-accompaniamento n I. (action of) accompanying; II. retinue, attendance; III. accompaniment (1. concomitant; 2. [Mus.])
-
-accompaniar v to accompany
-
-Hence: accompaniamento; accompanitor
-
-accompaniator n [Mus.] accompanist
-
-accopulamento n coupling (1. act of coupling; 2. [Techn.]); specif.: [R.R.]
-
-accopular v 1. to couple (= to unite, bring together in pairs); 2. to mate (= to bring together for breeding)
-
-accordabile adj 1. reconcilable; 2. tunable; 3. grantable
-
-accordante I. ppr of accordar; II. adj accordant (1. conformable; 2. [Mus.] harmonious)
-
-accordar v 1. to harmonize (= to cause to agree); 2. to tune; 3. to grant, accord
-
-Hence: accordo; accordante; accordabile; accordator; accordatura; disaccordar-disaccordo
-
-accordator n tuner (of pianos, etc.);
-clave accordator tuning key
-
-accordatura n 1. tuning; 2. pitch (as in "concert pitch")
-
-accordion n accordion
-
-Hence: accordionista
-
-accordionista n accordionist
-
-accordo n 1. accord, agreement; 2. [Mus.] chord;
-de accordo in accord;
-esser de accordo to be in accord, agree;
-poner se de accordo to come to an agreement;
-de commun accordo by common consent
-
-accostabile adj approachable, accostable
-
-accostamento n approach (as in "new lines of approach")
-
-accostar v to accost
-
-Hence: acostamento; accostabile
-
-accostumar v to accustom
-
-Hence: accostumate-inaccostumate; disaccostumar
-
-accostumate 1. pp of accostumar; 2. adj accustomed, usual
-
-accreditar v to accredit (= to send with credentials)
-
-accrescer v to increase (= to cause to increase)
-
-Hence: accrescimento
-
-accrescimento n increase (= growth in size, amount, or degree)
-
-accular v to back up (a horse, cart, etc. against a wall, etc.)
-
-accumulamento n heaping or piling up, accumulation
-
-accumular v to accumulate, heap up
-
-Hence: accumulamento; accumulation; accumulator
-
-accumulation n accumulation
-
-accumulator n accumulator (1. one who accumulates; 2. storage battery)
-
-accurrer v to come running, rush up
-
-accurtamento n shortening (= act of making shorter)
-
-accurtar v to shorten, make shorter
-
-Hence: accurtamento
-
-accusabile adj blameworthy, liable to be accused; accusable
-
-accusabilitate n blameworthiness
-
-accusamento n accusing, accusation
-
-accusar v to accuse;
-accusar reception de to acknowledge receipt of
-
-Hence: accusamento; accusabile-accusabilitate; accusation; accusativo; accusator; accusatori; accusato-coaccusato
-
-accusation n accusation
-
-accusativo n [Gram.] accusative
-
-accusato n accused, defendant
-
-accusator n accuser
-
-accusatori adj accusing, accusatory; also: accusatorial
-
-acerbar v to acerbate
-
-acerbe adj acerb; also: sour, bitter, harsh
-
-Hence: acerbitate; acerbar-exacerbar &
-
-acerbitate n acerbity
-
-acere n maple, maple tree
-
-acetabulo n [Rom. Antiq.] acetabulum; also: [Anat.]
-
-acet·amido (-ámido) n [Chem.] acetamide
-
-acetato n [Chem.] acetate
-
-acetic adj acetic
-
-acetificar v to acetify
-
-acetification n acetification
-
-aceto n vinegar
-
-Hence: acetato; acetabulo; acetona; acetic; acetose; acetificar-acetification; acetamido etc.
-
-acetona n [Chem.] acetone
-
-acetose adj acetous, acetose
-
-acetylen n [Chem.] acetylene
-
-Acheronte npr Acheron
-
-achillea (-éa) n [Bot.] Achillea
-
-Achilles (-ílles) npr [Gr. Mythol.] Achilles;
-calce de Achilles Achilles' heel;
-tendon de Achilles Achilles' tendon
-
-Hence: achillea
-
-achromate adj achromatous, colorless
-
-achromatic adj [Opt.] achromatic
-
-achromatisar v [Opt.] to achromatize
-
-achromatisation n [Opt.] achromatization
-
-achromatismo n [Opt.] achromatism
-
-achromat·opsia (-ía) n achromatopsy (= complete color blindness)
-
-acicula n [Bot., etc.] acicula (= needle, prickle etc.)
-
-Hence: acicular
-
-acicular adj acicular
-
-acide (ácide) adj acid
-
-Hence: aciditate; acidule-acidular; acidificar-acidificabile, acidification; acido-amino-acido etc.; bydracido etc.; acidimetro etc.
-
-acidificabile adj acidifiable
-
-acidficar v to acidify (= to make acid, convert into an acid)
-
-acidification n acidification
-
-acidi·metro (-ímetro) n acidimeter
-
-aciditate n acidity
-
-acido (ácido) n acid;
-acido carbonic 1. carbonic acid; 2. carbon dioxide, carbonic acid gas;
-acido chlorhydric hydrochloric acid
-
-acidular v to acidulate, flavor with an acid
-
-acidule adj acidulous
-
-acierage (-aje) n steel plating, acierage
-
-acierar v to steel (1. to overlay, point, plate, etc., with steel; 2. to convert into or cause to resemble steel)
-
-acieration n acieration (= conversion into stee])
-
-acieria (-ía) n steelworks, steel mill
-
-aciero n steel
-
-Hence: acieria; acierar-acierage, aciration
-
-aco n needle
-
-Hence: acicula &; acupunctura etc.
-
-aco- n [occurring in compounds] aco-, -ac- (= remedy)
-
-Hence: acologia etc.; vanac- etc.
-
-aco·logia (-ía) n [Med.] acology
-
-Hence: acologic
-
-acologic adj [Med.] acologic
-
-acordonar v to lace (= to fasten or tighten with a lace)
-
-acquest- see acquirer
-
-acquesto n acquisition (= thing acquired)
-
-acquiescente 1. ppr of acquiescer; 2. adj acquiescent
-
-acquiescentia n acquiescence
-
-acquiescer v to acquiesce
-
-Hence: acquiescente-acquiescentia
-
-acquirer [-quir-/-quest-/-quisit-] v to acquire
-
-Hence: acquiribile; acquesto; acquisition; acquisitor; acquiritor
-
-acquiribile adj acquirable
-
-acquiritor n acquirer
-
-acquisit- see acquirer
-
-acquisition n acquisition (1. act of acquiring; 2. thing acquired)
-
-acquisitor n acquirer
-
-acr- adj [occurring in compounds] acro- (= terminal, topmost)
-
-Hence: acropole etc.; acrostichio etc. ...
-
-acre¹ [A] n acre
-
-acre² adj acrid
-
-Hence: acritate; acrimonia &
-
-acrimonia n acrimony
-
-Hence: acrimoniose
-
-acrimoniose adj acrimonious
-
-acritate n acridness
-
-acrobata (-óbata) n acrobat
-
-Hence: acrobatia; acrobatismo; acrobatic
-
-acrobatia (-ía) n acrobatics
-
-acrobatic adj acrobatic
-
-acrobatismo n acrobatism
-
-acro·pole n acropolis
-
-acro·stichio n [Pros.] acrostic
-
-act- see ager
-
-action n I. action (1. act, acting; 2. lawsuit); II. [Fin.] share;
-homine de action man of action;
-action civil civil action
-
-actionabile adj actionable
-
-actionar v 1. to actuate (= to set in action or motion); 2. [Law] to sue
-
-actionero n shareholder, stockholder
-
-actionista n shareholder, stockholder
-
-activar v to activate; also: to stir up, rouse
-
-activation n activation
-
-active adj active; le voce active the active voice
-
-activitate n activity
-
-activo n [Com.] assets
-
-acto n I. act (1. action, deed; 2. "act of a play"); II. [Law] instrument, deed, record, etc.
-
-actor n actor
-
-actrice n actress
-
-actual adj 1. actual, real; 2. current, present
-
-actualisar v to actualize
-
-actualisation n actualization
-
-actualitate n 1. actuality (= actual existence); 2. character of what is current or present, thing or event that is current or present;
-actualitates current events, news (as in "news report, newsreel, news film, etc.")
-
-actualmente adv 1. at present, (just) now; 2. actually
-
-actuar v to actuate (= to put into action)
-
-actuarial adj actuarial
-
-actuariato n actuary's office (or profession)
-
-actuario n actuary
-
-actuation n actuation
-
-aculeate adj [Zool., Bot.] aculeate
-
-aculei·forme adj aculeiform
-
-aculeo n 1. [Zool.] sting; 2. [Bot.] thorn
-
-Hence: aculeate; aculeiforme etc.
-
-acuminar v to sharpen, acuminate
-
-acuminate 1. pp of acuminar; 2. adj pointed, acuminate
-
-acumine n 1. [Bot.] a tapering point; 2. acumen
-
-Hence: acuminar-acuminate
-
-acu·punctura n acupuncture
-
-Hence: acupuncturar
-
-acupuncturar v to acupuncture
-
-acustic adj acoustic;
-tubo acustic speaking tube;
-corno acustic ear trumpet
-
-Hence: acustica
-
-acustica n acoustics
-
-acut·angule adj [Geom.] acute-angled, acutangular
-
-acute adj acute (1. sharp-pointed; 2. shrewd, penetrating, keen; 3. acting keenly on the senses);
-angulo acute [Geom.] acute angle;
-morbo acute acute disease;
-nota acute high-pitched sound;
-voce acute shrill voice;
-dolor acute acute or sharp pain;
-accento acute [Gram.] acute accent, ´
-
-Hence: acutessa; acutiar-acutiamento, acutiator; acutangule etc.
-
-acutessa n sharpness, acuteness
-
-acutiamento n sharpening
-
-acutiar v to sharpen (= to make sharp)
-
-acutiator n sharpener (= one who sharpens)
-
-[ad] prep 1. to; 2. at (= a)
-
-ad- prefixo verbal [subject to assimilation before single consonant; used with verbs and, in combination with verbal suffixes, with nouns and adjectives] ad- (= to, toward, into [expressing motion to, change into, increase of intensity, etc.])
-
-Hence: accurrer etc.; approximar, etc.; adjudicar, etc.
-
--ada suffixo substantive [used with nouns and verbs] -ade I. [used with nouns] (1. product made from ...; 2. series of ...); II. [used with verbs] (= action of ...ing)
-
-Hence: limonada etc.; columnada etc.; cavalcada etc.
-
-adagio n adage
-
-adagio [I] n [Mus.] adagio
-
-adagio [I] adv [Mus.] adagio
-
-Adam npr Adam;
-pomo de Adam Adam's apple
-
-Hence: adamitas; adamic
-
-adamic adj Adamic
-
-adamitas npl [Eccl. Hist.] Adamites
-
-adaptabile adj adaptable
-
-adaptabilitate n adaptability
-
-adaptar v to adapt;
-adaptar a to adapt to
-
-Hence: adaptabile-adaptabilitate, inadaptabile; adaptation
-
-adaptation n adaptation;
-facultate de adaptation adaptability, ability to adapt oneself
-
-addendum (pl addenda) [NL] n addendum
-
-adder v to add ("to add one thing to another")
-
-Hence: addition-additional, additionar; additive
-
-addition n addition (1. action of adding; 2. thing added)
-
-additional adj additional
-
-additionar v [Math.] to add up
-
-additive adj additive
-
-addormir v to put to sleep;
-addormir se to fall asleep
-
-addormite 1. pp of addormir; 2. adj asleep
-
-adducer [-duc-/-duct-] v to adduce
-
-Hence: adduction; adductor
-
-adduct- see adducer
-
-adduction n adduction (1. act of adducing; 2. [Physiol.])
-
-adductor n 1. adducer; 2. [Physiol.] adductor
-
-adelpho- n [occurring in compounds] adelpho-, adelph- (1. brother; 2. twin)
-
-Hence: monadelphe etc.; Philadelphia etc.
-
-aden [Gr.] n [Physiol.] gland
-
-Hence: adenitis; adenoma; adenoide; adenose; adenographia etc.
-
-adenitis (-ítis) n [Pathol.] adenitis
-
-adeno·graphia (-ía) n adenography
-
-adenoide adj adenoid, adenoidal
-
-adenoides npl adenoids
-
-adenoma n [Pathol.] adenoma
-
-adenose adj glandulous, adenose
-
-adeo (-éo) interj farewell, good-by(e)
-
-adepto n adept
-
-adequar v to equalize
-
-Hence: adequation; adequate-inadequate
-
-adequate 1. pp of adequar; 2. adj adequate
-
-adequation n adequation
-
-adherente n adherent, follower
-
-adherentia n adherence, attachment
-
-adherer [-her-/-hes-] v to adhere (1. to stick fast; 2. as in "to adhere to an opinion, party, etc.")
-
-Hence: adherente-adherentia; adhesion; adhesive
-
-adhes- see adherer
-
-adhesion n adhesion (1. sticking; 2. assent)
-
-adhesive adj adhesive, sticking
-
-ad hoc [L] ad hoc (= for the sake of this particular case, well-suited for this matter)
-
-ad hominem [L] ad hominem;
-argumento ad hominem argumentum ad hominem
-
-[adhuc] adv to this place, thus far, hitherto, as yet, until now, so far, yet, still
-
-adieu [F] n farewell, adieu
-
-adipe (ádipe) n animal fat, body fat; also: adeps
-
-Hence: adiposis; adipose-adipositate; adipocera etc.
-
-adipo·cera n adipocere
-
-adipose adj adipose, fat
-
-adiposis (-ósis) n adiposis, fatty degeneration
-
-adipositate n adiposity, fatness
-
-adir v 1. to approach; go to; 2. to attain, enter upon; also: [Law] to enter on (an inheritance, etc.)
-
-Hence: adition; adito
-
-adition n [Law] entering upon (an inheritance)
-
-adito (ádito) n adit, entrance (1. door, passage, etc. through which one enters; 2. access)
-
-adjacente adj adjacent;
-angulos adjacente adjacent angles
-
-adjacentia n adjacency (= state of being adjacent)
-
-adjacer v -;
-adjacer a to lie near or close to, border upon
-
-Hence: adjacente-adjacentia
-
-adject- see adjic-
-
-adjectival adj [Gram.] adjectival, adjective
-
-adjective adj [Gram.] adjective, adjectival
-
-Hence: adjectivo-adjectival
-
-adjectivo n [Gram.] adjective
-
-adjic- [-jic-/-ject-] v [occurring in derivatives]
-
-Hence: adjective &
-
-adjudicar v to adjudge (= to award judicially, as a prize, etc.);
-adjudicar a to knock down to (at an auction)
-
-Hence: adjudication; adjudicative; adjudicator; adjudicatario
-
-adjudicatario n highest bidder, purchaser (at an auction)
-
-adjudication n 1. adjudgment, award; 2. knocking down (at an auction)
-
-adjudicative adj adjudging, awarding
-
-adjudicator n adjudger, awarder
-
-adjunct- see adjunger
-
-adjunction n adjunction (= the act of joining or adding)
-
-adjunctive adj adjunctive
-
-adjuncto n 1. assistant, deputy; 2. [Gram.] adjunct
-
-adjunger [-jung-/junct-] v to join, unite (one thing to another)
-
-Hence: adjunction; adjunctive; adjuncto
-
-adjurar v to adjure
-
-Hence: adjuration
-
-adjuration n adjuration
-
-adjustabile adj adjustable
-
-adjustage (-aje) n [Mach.] assembly (of the parts of a machine)
-
-adjustamento n adjustment (= action of adjusting)
-
-adjustar v 1. to adjust; 2. [Mach.] to fit together, set up
-
-Hence: adjustage; adjustamento; adjustabile; adjustator; readjustar-readjustamento, readjustator
-
-adjustator n adjuster; [Mach.] fitter, setter, etc.
-
-adjut- see adjuvar
-
-adjuta n 1. aid, help; 2. aide (= assistant)
-
-adjutante n 1. helper, assistant; 2. [Mil.] adjutant
-
-adjutar v to aid, help;
-adjutar se de to use, make use of
-
-Hence: adjuta; adjutante
-
-adjutor n help, helper
-
-adjuvante 1. ppr of adjuvar; 2. adj helpful, adjuvant
-
-adjuvar [-juv-/-jut-] v to aid, help
-
-Hence: adjuvante; adjutor; adjutar &; coadjuvar &
-
-ad libitum, ad lib. [L] ad libitum, ad lib.
-
-administrabile adj administrable
-
-administrar v to administer (1. to direct, manage; 2. to furnish or apply)
-
-Hence: administrabile; administration; administrative; administrator
-
-administration n administration (1. action of furnishing or applying; 2. management of public affairs, an institution, business, etc.; 3. the persons collectively managing public affairs, an institution, business, etc.)
-
-administrative adj administrative
-
-administrator n administrator, manager
-
-admirabile adj admirable
-
-admiral n admiral
-
-Hence: admiralato; admiralitate
-
-admiralato n admiralship, admiralty
-
-admiralitate n admiralty (1. "law or court of the admiralty"; 2. government department in charge of naval affairs)
-
-admirar v to admire
-
-Hence: admirabile; admiration; admirative; admirator
-
-admiration n admiration
-
-admirative adj admiring
-
-admirator n admirer
-
-admiscer [-misc-/-mixt-] v to admix
-
-Hence: admixtion
-
-admiss- see admitter
-
-admissibile adj admissible
-
-admissibilitate n admissibility
-
-admission n admission (1. act of allowing entrance or access; 2. act of conceding the validity or truth of)
-
-admitter [-mitt-/-miss-] v to admit (1. to allow to enter; 2. to acknowledge as valid or true)
-
-Hence: admissibile-admissibilitate, inadmissibile-inadmissibilitate; admission-inadmission; readmitter-readmission
-
-admixt- see admiscer
-
-admixtion n admixture, admixtion
-
-admoner v to admonish
-
-Hence: admonition; admonitor; admonitori
-
-admonestar v to admonish
-
-Hence: admonestation
-
-admonestation n admonition, admonishment
-
-admonition n admonition
-
-admonitor n admonitor, admonisher
-
-admonitori adj admonitory
-
-adoculamento n (action of) fixing one's eyes upon
-
-adocular v to fix one's eyes upon, glue one's eyes to
-
-adolescente adj adolescent
-
-adolescente n adolescent
-
-adolescentia n adolescence
-
-adolescer v to grow up, to become adolescent
-
-Hence: adolescente-adolescentia
-
-adonic adj Adonic, Adonian
-
-adonico n [Pros.] Adonic
-
-adonie adj Adonian, Adonic
-
-adonio n [Pros.] Adonic
-
-Adonis (-dó-) npr [Gr. Mythol.] Adonis; adonis 1. [Bot.] Adonis, pheasant's eye; 2. fop, dandy
-
-Hence: adonic-adonico; adonie-adonio
-
-adoptabile adj adoptable
-
-adoptabilitate n adoptability
-
-adoptar v to adopt
-
-Hence: adoptabile-adoptabilitate, inadoptabile; adoptator
-
-adoptator n adopter
-
-adoption n adoption
-
-adoptive adj adoptive
-
-adorabile adj adorable
-
-adorabilitate n adorability
-
-adorar v to adore, worship
-
-Hence: adorabile-adorabilitate; adoration
-
-adoration n adoration, worship
-
-adornamento n adornment (= action of adorning)
-
-adornar v to adorn;
-adornar de to adorn with
-
-Hence: adornamento; adornator
-
-adornator n adorner
-
-adorsar v -;
-adorsar (un cosa) a to place (something) with its back against
-
-ad rem [L] ad rem, to the point
-
-adrenal adj [Anat.] adrenal;
-glandulas adrenal adrenal glands
-
-adrenalina n adrenalin
-
-adressar v to address (1. to write the address on, direct; 2. as in "to address a prayer to");
-adressar se to address oneself (to)
-
-adresse [F] n address (1. formal communication; 2. as in "address of a letter, package, etc.")
-
-Hence: adressar
-
-Adria npr (city of) Adria
-
-Hence: adriatic-Adriatico
-
-Adriano nprm Adrian
-
-Hence: Adrianopolis etc.
-
-Adriano·polis (-ópolis) npr Adrianople
-
-adriatic adj Adriatic (1. pertaining to the city of Adria; 2. pertaining to the Adriatic);
-Mar Adriatic Adriatic
-
-Adriatico n Adriatic
-
-adular v to adulate
-
-Hence: adulation; adulator; adulatori
-
-adulation n adulation
-
-adulator n adulator
-
-adulatori adj adulatory
-
-adulciamento n 1. (act of) sweetening; 2. (act of) softening, etc.
-
-adulciar v 1. to sweeten (= to make sweet); 2. to soften, to make milder or more pleasing, etc.; 3. to render ductile or malleable
-
-adulte adj adult, grown-up
-
-Hence: adulto
-
-adultera (-últera) n adulteress
-
-adulterar v 1. to adulterate; 2. to commit adultery
-
-Hence: adultero-adulterin, adulterose, adultera; adulterio; adulteration; adulterator
-
-adulteration n adulteration (= action of adulterating)
-
-adulterator n 1. adulterator; 2. adulterer
-
-adulterin adj adulterine
-
-adulterio n adultery;
-committer adulterio to commit adultery
-
-adultero (-últero) n adulterer
-
-adulterose adj adulterous
-
-adulto n adult
-
-adumbrar v to overshadow, adumbrate
-
-Hence: adumbration
-
-adumbration n adumbration, overshadowing
-
-adurer [-ur-/-ust-] v 1. to burn, scorch; 2. [Med.] to cauterize
-
-Hence: aduste; adustion
-
-adust- see adurer
-
-aduste adj burnt, scorched, adust
-
-adustion n 1. (act of) burning, scorching; 2. [Med.] cauterization
-
-ad valorem [L] [Com.] ad valorem
-
-advenimento n advent (= arrival)
-
-advenir [-ven-/-vent-] v to happen, come to pass
-
-Hence: advenimento; advento-adventicie
-
-advent- see advenir
-
-adventicie adj adventitious
-
-Advento n [Eccl.] Advent
-
-adverbial adj adverbial
-
-adverbio n adverb
-
-Hence: adverbial
-
-advers- see adverter
-
-adversar v to oppose
-
-adversario n adversary
-
-adversative adj [Gram.] adversative
-
-adverse adj 1. adverse (= contrary, unfavorable); 2. opposite (= placed opposite)
-
-adversitate n adversity
-
-[adverso] adv/prep 1. towards; 2. against; 3. opposite
-
-advertente 1. ppr of adverter; 2. adj advertent, attentive
-
-advertentia n advertence, advertency
-
-adverter [-vert-/-vers-] v to advert, have reference (to)
-
-Hence: advertente-advertentia, inadvertente-inadvertentia; adverse-adversario, adversitate; adversar-adversative; animadverter etc.
-
-advertimento n notice, warning
-
-advertir v to advise, give notice
-
-Hence: advertimento
-
-advocar v to call, summon; to call to one's aid
-
-Hence: advocato
-
-advocato n advocate (1. [Law; 2. champion, supporter)
-
-adyname (-íname) adj weak, without strength
-
-Hence: adynamia-adynamic
-
-adynamia (-ía) n [Med.] adynamia
-
-adynamic adj [Med.] adynamic
-
-aer n air (1. "atmospheric air"; 2. appearance; 3. melody);
-esser in le aer to be up in the air;
-facer castellos in le aer to build castles in the air;
-prender le aer to take an airing;
-dar se aeres to give oneself airs;
-parlar in le aer to talk at random;
-haber le aer de (facer un cosa) to appear to be (doing something);
-haber le aer (triste) to look (sad);
-aere libre open air
-
-Hence: aeree-antiaeree; aerifere; aerar-aerage, aeration; aerificar-aerification; aerodromo etc.; aerologia etc.; aeroplano etc.; aerobie etc.; aeriforme etc.; aerodynamic etc.
-
-aerage (-aje) n aeration, airing
-
-aerar v to air (= to expose to the open air)
-
-aeration n aeration, airing; also: [Chem.]
-
-aeree adj air (= airy, aerial);
-via aeree [Aeronaut.] airway;
-posta aeree air mail;
-vias aeree [Anat.] air-passages
-
-aerifere adj aeriferous
-
-aerificar v to aerify (= to change to an aeriform state)
-
-aerification n aerification
-
-aeri·forme adj aeriform
-
-aero·bie adj [Biol.] aerobic
-
-Hence: anaerobie-anaerobio; aerobio
-
-aerobio n [Biol.] aerobe
-
-aero·dromo (ódromo) n aerodrome; also: airfield
-
-aero·dynamic adj aerodynamic
-
-Hence: aerodynamica
-
-aerodynamica n aerodynamics
-
-aero·graphia (-ía) n aerography
-
-aerolitic adj aerolitic
-
-aero·litho (-ólito) n aerolite
-
-Hence: aerolithic
-
-aero·logia (-ía) n aerology
-
-aerometria (-ía) n aerometry
-
-aero·metro (-ómetro) n aerometer
-
-Hence: aerometria
-
-aero·nauta n aeronaut, airman
-
-Hence: aeronautic; aeronautica
-
-aeronautic adj aeronautic(al)
-
-aeronautica n aeronautics
-
-aero·nave n airship;
-aeronaves aircraft
-
-aero·plano n airplane
-
-Hence: hydroaeroplano etc.; portaaeroplanos etc.
-
-aero·porto n airport
-
-aero·static adj aerostatic
-
-Hence: aerostatica
-
-aerostatica n aerostatics
-
-aerostation n aerostation
-
-aero·stato (-óstato) n [Aeronaut.] aerostat
-
-Hence: aerostation
-
-affabile adj affable
-
-Hence: affabilitate
-
-affabilitate n affability
-
-affaire [F] n affair (1. concern; 2. event);
-affaires affairs, business
-
-affamar v to starve, famish (= to cause to starve or famish)
-
-Hence: affamator
-
-affamator n starver (as in "starver of the people")
-
-affect- see afficer
-
-affectabile adj impressionable
-
-affectar¹ v to affect (= to have an affection for)
-
-affectar² v to affect (to pretend, feign)
-
-Hence: affectation; affectate
-
-affectate adj affected (= full of affectation)
-
-affectation n affectation (= artificiality of manner)
-
-affectibile adj impressionable
-
-affectibilitate n impressionability
-
-affection n affection (1. the fact or state of being affected or acted upon); 2. fondness; 3. [Pathol.])
-
-Hence: affectionar-affectionate; disaffection-disaffectionar
-
-affectionar v to be fond of
-
-affectionate 1. pp of affectionar; 2. adj affectionate
-
-affective adj affective, emotional
-
-affecto n affection, fondness
-
-affectuose adj loving, affectionate
-
-afficer [-fic-/-fect-] v to affect (= to have an effect on)
-
-Hence: affectibile-affectibilitate; affection &; affective; affecto-affectuose, affectar¹-affectabile; affectar² &
-
-affidavit (-ávit) n affidavit (= written statement made on oath)
-
-affiger [-fig-/-fix-] v to affix, fasten
-
-Hence: affixo-affixar
-
-affilar v to whet, sharpen
-
-Hence: affilatoria
-
-affilatoria n sharpener, sharpening machine
-
-affiliar v to affiliate (= to receive or connect as member, branch, etc.);
-affiliar se con to affiliate with, join
-
-Hence: affiliation; affiliate
-
-affiliate 1. pp of affiliar; 2. adj affiliate, affiliated
-
-affiliation n affiliation (with a society, etc.)
-
-affin adj 1. resembling, like; 2. related by marriage;
-(patre, matre, etc.) affin (father-, mother-, etc.) in-law
-
-Hence: affinitate
-
-affinamento n (act of) refining, improving; also: [Metal.]
-
-affinar v 1. to refine, improve; also: [Metal.]
-
-Hence: affinamento; affinator; raffinar &
-
-affinator n refiner (of metals)
-
-affinitate n affinity (1. relationship by marriage; 2. resemblance, likeness; 3. attraction)
-
-affirmabile adj affirmable
-
-affirmar v 1. to strengthen, make firm; 2. to affirm, assert
-
-Hence: affirmabile; affirmation; affirmative-affirmativa; affirmator; reaffirmar
-
-affirmation n affirmation (1. assertion; 2. affirmative proposition)
-
-affirmativa n affirmative (= affirmative statement, reply, etc.)
-
-affirmative adj affirmative;
-responder affirmativemente to answer in the affirmative
-
-affirmator n affirmer
-
-affix- see affiger
-
-affixar v to affix, fasten
-
-affixo n [Gram.] affix
-
-afflict- see affliger
-
-affliction n affliction, distress
-
-afflictive adj giving pain, distressing;
-pena afflictive corporal punishment
-
-affliger [-flig-/-flict-] v to afflict;
-affliger se to be grieved
-
-Hence: affliction; afflictive
-
-affloramento n [Geol.] outcrop
-
-afflorar v [Geol.] to outcrop
-
-Hence: affloramento
-
-affluente I. ppr of affluer; II. adj 1. tributary (as in "tributary stream"); 2. affluent, opulent
-
-affluente n tributary (stream), affluent
-
-affluentia n affluence (1. concourse, flowing towards; 2. as in "affluence of people"; 3. profusion, opulence)
-
-affluer [-flu-/-flux-] v 1. to flow (into); 2. to crowd, flock, throng (to a place)
-
-Hence: affluente-affluentia; affluxo
-
-afflux- see affluer
-
-affluxo n afflux
-
-affollamento n 1. madness; 2. panic, terror
-
-affollar v to madden, drive mad;
-affollar se to go mad; also: to lose control of oneself, grow panicky
-
-Hence: affollamento
-
-affrontamento n 1. (act of) affronting, insulting; 2. open defiance
-
-affrontar v to affront (1. to insult to the face; 2. to face in defiance)
-
-Hence: affronto; affrontamento; affrontator
-
-affrontator n affronter, insulter
-
-affronto n affront
-
-affusar v to spindle, give a spindle shape to (as in "to spindle a column, etc.")
-
-Africa (á-) npr Africa
-
-Hence: african-africano
-
-african adj African
-
-africano n African
-
-agar-agar [Mal.] n agar-agar
-
-agata (á-) n agate (= the stone agate)
-
-Hence: agatifere; agatin; agatiforme etc.
-
-agatifere adj agatiferous
-
-agati·forme adj agatiform
-
-agatin adj agate, agatine
-
--age (-aje) suffixo substantive [used with nouns and verbs; -agi- before -a- and -o- of additional suffix] -age (1. collection of ...; 2. action or process of -ing)
-
-Hence: foliage etc.; acierage etc.
-
-agenda n agenda (= memorandum book)
-
-agente n agent (1. active power; 2. one who acts for another);
-agente (de cambio) (stock)broker
-
-agentia n agency (as in "news agency, real estate agency, etc.")
-
-ager [ag-/act-; -ig-/-act-] v to act (= to be doing)
-
-Hence: agenda: agente-agentia; agitar &: agibile; action-actionero, actionista, actionar-actionabile, inaction; active-activate, activar-activation, activo, inactive-inactivitate, radioactive etc.; actor; actrice; acto-actuario-actuariato, actuarial, actual-actualitate, actualisar-actualisation, actuar-actuation, interacto; coager &; reager &; retroager-retroaction, retroactive-retroactivitate; transiger &; ligitar etc.
-
-agglomerar v to agglomerate (= to gather or heap together)
-
-Hence: agglomeration; aglomerato
-
-agglomeration n agglomeration
-
-agglomerato n agglomerate
-
-agglutinante 1. ppr of agglutinar; 2. adj agglutinant, agglutinative;
-linguas agglutinante agglutinative languages
-
-agglutinar v to stick or glue together, agglutinate
-
-Hence: aglutinante; agglutination; agglutinative
-
-agglutination n agglutination
-
-agglutinative adj agglutinative, agglutinating
-
-aggrandimento n 1. enlargement; 2. aggrandizement
-
-aggrandir v 1. to make greater, enlarge; also: to magnify; 2. to aggrandize (= to increase the power, wealth, or rank, of)
-
-Hence: aggrandimento
-
-aggravamento n aggravation
-
-aggravar v to aggravate (= to make worse); aggravar se to grow worse or more serious
-
-Hence: aggravamento; aggravation; aggravator
-
-aggravation n aggravation (= act of aggravating, or state of being aggravated)
-
-aggravator n aggravator
-
-aggreder [-gred-/-gress-] v to assail, attack
-
-Hence: aggression; aggressive; aggressor
-
-aggregar v to aggregate (= to collect or unite into a mass or sum)
-
-Hence: aggregation; aggregative; aggregato; disaggregar-disaggregation
-
-aggregation n aggregation
-
-aggregative adj aggregative
-
-aggregato n aggregate
-
-aggress- see aggreder
-
-aggression n aggression
-
-aggressive adj aggressive
-
-aggressor n aggressor
-
-aggruppamento n 1. (act of) grouping; 2. group
-
-aggruppar v to group
-
--agi- see -age
-
-agibile adj 1. feasible; 2. manageable
-
-agile adj agile; nimble
-
-Hence: agilitate
-
-agilitate n agility; nimbleness
-
-agio (ajo) n [Com.] agio, exchange premium
-
-Hence: agiotar-agiotage, agiotator
-
-agiotage (ajotaje) n agiotage, exchange business, stockbroking
-
-agiotar (aj-) v to speculate (on the stock exchange)
-
-agiotator (aj-) n speculator (on the stock exchange)
-
-agitar v I. to agitate (1. to move or shake violently; to stir; 2. to perturb, excite); II. to debate
-
-Hence: agitation; agitator
-
-agitation n agitation (1. violent moving or shaking; 2. disturbance, excitement)
-
-agitator n agitator (1. [Pol.]; 2. apparatus for shaking or mixing; also: stirring rod, mixer)
-
-agno n lamb
-
-agnostic adj agnostic
-
-Hence: agnosticismo; agnostico
-
-agnosticismo n agnosticism
-
-agnostico n agnostic
-
--agog- adj [occurring in compounds] -agogue (1. ]eading; 2. drawing forth)
-
-Hence: sialagoge etc.; hypnagogic etc.; demagogo etc.; pedagogo etc.
-
-agon n [Gr. Antiq.] agon
-
-Hence: agonia; agonisar-agonista-protagonista etc., agonistic, agonisante, antagonisar &
-
-agonia (-ía) n agony (1. death struggle; 2. extreme pain of mind)
-
-agonisante 1. ppr of agonisar; 2. adj on the point of death
-
-agonisar v 1. to be on the point of death; 2. to agonize, suffer mental anguish
-
-agonista n [Gr. Antiq.] agonist
-
-agonistic adj [Gr. Antiq.] agonistic
-
-agora (ágora) n [Gr. Hist.] agora
-
-Hence: agoraphobe etc.
-
-agora·phobe (-áphobe) adj agoraphobic
-
-Hence: agoraphobia; agoraphobo
-
-agoraphobia (-ía) n [Psychopathol.] agoraphobia
-
-agoraphobo (-áphobo) n [Pychopathol.] agoraphobe
-
--agra [occurring in compounds]
-
-Hence: podagra etc. ...
-
-agradabile adj agreeable, pleasing
-
-agradamento n 1. pleasure; 2. agreeableness, pleasantness
-
-agradar v -;
-agradar a to please
-
-agrari adj agrarian; also: farm, field (as in "farm or field laborer")
-
-agreste adj rustic (1. rural; 2. awkward, uncouth)
-
-agri·cola (-ícola) n agriculturalist
-
-agri·cole adj agricultural
-
-agri·cultor n agriculturist; also: farmer, husbandman, etc.
-
-agri·cultura n agriculture, farming
-
-agri·mensor n surveyor (= one who surveys lands, highways, etc.)
-
-agri·mensura n 1. surveying; 2. [Topog.] survey
-
-agro n field (= arable land)
-
-Hence: agrari; agreste; agricola etc.: agricole etc.; agricultura etc.; agronomo etc.
-
-agronomia (-ía) n agronomy, agronomics
-
-agronomic adj agronomic, agricultural
-
-agro·nomo (-ró-) n agronomist
-
-Hence: agronomia, agronomic
-
-aguerrimento n (act of) inuring to war
-
-aguerrir v to inure to war
-
-Hence: aguerrimento
-
-agulia n needle; also: gramophone needle;
-agulia magnetic magnetic needle
-
-Hence: aguliata; agulietta
-
-aguliata n needleful (of thread, etc.)
-
-agulietta n aglet, aiguillette
-
-aigrette [F] n aigrette
-
-aira n threshing floor
-
-ajornamento n adjournment, postponement
-
-ajornar v to adjourn, postpone
-
-Hence: ajornamento
-
--al suffixo adjective [used with nouns] -al (= pertaining to ..., characteristic of ..., etc.)
-
-Hence: natural etc.; conversational etc.
-
-al- see alcohol, aldehydo, or aluminium
-
-al- v [occurring in derivatives and compounds]
-
-Hence: alimento &; alibile &; coal- &
-
--al- [occurring in compounds]
-
-Hence: nyctalopia etc.
-
-ala n wing (1. "wing of a bird, airplane etc."; 2. part of a building)
-
-Hence: aletta; alate
-
-à la [F] à la (as in "à la Newburgh")
-
-alabastrin adj alabastrine, alabaster
-
-alabastrite n alabaster (= Oriental alabaster)
-
-alabastro n alabaster (as in "gypseous alabaster")
-
-Hence: alabastrite; alabastrin
-
-à la carte [F] à la carte
-
-alacre (ál-) adj eager, brisk, alacritous
-
-Hence: alacritate
-
-alacritate n eagerness, briskness, alacrity
-
-alarma n alarm (1. call to arms; 2. fright)
-
-Hence: alarmista; alarmar-alarmante
-
-alarmante 1. ppr of alarmar; 2. adj alarming
-
-alarmar v to alarm (1. to call to arms; 2. to startle)
-
-alarmista n alarmist
-
-alate adj winged
-
-alauda see aloda
-
-alba n 1. dawn, break of day; 2. [Eccl.] alb
-
-alban- see Albania
-
-albanese adj/n Albanian
-
-Albania npr Albania
-
-Hence: albanese
-
-albatros n [Ornith.] albatross
-
-albe adj white (= of the color white)
-
-Hence: albin &; albumine &; albiflor etc.; alba
-
-albergar v to shelter, lodge
-
-albergero n innkeeper
-
-albergo n 1. shelter, lodging; 2. inn;
-albergo de juventute youth hostel
-
-Hence: albergero; albergar
-
-albi·flor adj white-flowered, albiflorous
-
-albin adj albino
-
-Hence: albinismo; albino
-
-albinismo n albinism
-
-albino n albino
-
-albricoc n apricot
-
-Hence: albricochiero
-
-albricoch- see albricoc
-
-albricochiero n apricot tree
-
-album (ál-) n album
-
-albumina (-úmina) n [Biochem.] albumin
-
-albumine n albumen (1. white of an egg 2. [Bot.])
-
-Hence: albuminoide; albuminose; albuminuria etc.; albumina
-
-albuminoide adj albuminoid, albuminoidal
-
-albuminoide n [Biochem.] albuminoid
-
-albuminose adj albuminous, albuminose
-
-albumin·uria n [Pathol.] albuminuria
-
-[al(c)-] [occurring in compounds] some-, any- (= ali(c)-)
-
-Hence: alco; alcun etc.; alcuno etc.; alquando etc.
-
-alca n [Ornith.] auk
-
-alcal- see alcali
-
-alcalde [H] n alcalde (= mayor of a Spanish town, etc.)
-
-alcali (ál-) [Chem.] alkali;
-alcali volatile ammonia
-
-Hence: alcalin-alcalinitate, alcalino; alcaloide; alcalisar-alcalisation; alcalimetro etc.
-
-alcali·metro (-í-) n alkalimeter
-
-alcalin adj alkaline
-
-alcalinitate n alkalinity
-
-alcalino n alkaline
-
-alcalisar v to alkalize
-
-alcalisation n alkalization
-
-alcaloide n alkaloid
-
-alce n [Zool.] elk
-
-alchimia (-ía) n alchemy Hencc: alchimista; alchimic
-
-alchimic adj alchemical
-
-alchimista n alchemist
-
-[alco] pron something, anything; adv somewhat (= alique)
-
-alcohol [NL] n alcohol
-
-Hence: alcoholismo; alcoholic-alcoholico; alcoholisar-alcoholisation; chloral etc.
-
-alcoholic adj alcoholic
-
-alcoholico n alcoholic
-
-alcoholisar v to alcoholize
-
-alcoholisation n alcoholization
-
-alcoholismo n alcoholism
-
-alcova n alcove (= recessed portion of a room)
-
-[alc·un] adj some, any; also: a few (= alicun)
-
-[alc·uno] indef pron someone, anyone (= alicuno)
-
-ale [A] n ale
-
-alerta n [Mil.] alert
-
-Hence: alerte
-
-alerte adj alert (= vigilant)
-
-aletta n 1. small wing, winglet; 2. (small) wingshaped appendage (= flange, rib, fin, etc.)
-
-aleut n Aleut
-
-Hence: aleutic; Aleutas
-
-Aleutas nprpl Aleutians
-
-aleutic adj Aleutian;
-Insulas Aleutic Aleutian Islands
-
-Alexandra nprf Alexandra
-
-Alecandria npr Alexandria
-
-alexandrian adj Alexandrian (= of Alexandria)
-
-alexandrin adj I. Alexandrian (1. of Alexandria; 2. of Alexander the Great); II. [Pros.] Alexandrine
-
-alexandrino n [Pros.] Alexandrine
-
-Alexandro nprm Alexander
-
-Hence: Alexandria-alexandrian, alexandrin-alexandrino; Alexandra
-
-alga n alga
-
-algebra (ál-) n algebra
-
-Hence: algebrista; algebric
-
-algebric adj algebraic, algebraical
-
-algebrista n algebrist
-
-Alger npr 1. Alger; 2. Algiers
-
-Hence: Algeria-algerian-algeriano
-
-Algeria npr Algeria
-
-algerian adj Algerian, Algerine
-
-algeriano n Algerian
-
-algesia (-ía) n [Med.] algesia (= sensitivity to pain)
-
-Hence: analgesia-analgesic
-
--algia (-ía) [occurring in compounds] -algia (= pain)
-
-algo n [occurring in derivatives and compounds] algo-, alg- (= pain)
-
-Hence: algia-analgia-analgic, neuralgia etc.; nostalgia etc.; algometro etc.
-
-algometria (-ía) n [Psychol.] algometry (= measurement of sensitivity to pain)
-
-algometric adj [Psychol.] algometric
-
-algo·metro (-ónetro) n [Psychol.] algometer
-
-Hence: alometria; algometric
-
-[alia] [L] npl other things;
-inter alia inter alia, among other things
-
--alia suffixo substantive [used with nouns] (= worthless collection of ...s)
-
-Hence: ferralia etc.
-
-alias (ál-) adv 1. otherwise (= in another manner); 2. alias; 3. at another time
-
-alibi (ál-) adv elsewhere
-
-alibi (ál-) n alibi
-
-alibile adj nutritive, nourishing, alible
-
-Hence: alibilitate
-
-alibilitate n alibility
-
-ali(c)- [occurring in compounds] any-, some-
-
-Hence: alique etc.; aliquando etc.; alicubi etc.; alicun etc.; [aliquid] etc.; [aliqua] etc.
-
-alic·ubi (-ícubi) adv 1. somewhere; 2. anywhere as in ("did you see him anywhere?")
-
-alic·un adj some, any; also: a few;
-alicun cosa something, anything
-
-Hence: alicuno
-
-alicuno indef pron someone, somebody; anyone, anybody
-
-[alie] adj other
-
-alien adj alien (= differing in nature)
-
-Hence: alienismo; alienista; alienar-alienabile-alienabilitate, inalienabile-inalienabilitate, alienation, alienator, alienate-alienatario
-
-alienabile adj alienable
-
-alienabilitate n alienability
-
-alienar v to alienate (1. to transfer ownership of; 2. to estrange)
-
-alienatario n alienee
-
-alienate 1. pp of alienar; 2. adj insane
-
-alienation n alienation (1. transfer of ownership to another; 2. estrangement; 3. insanity)
-
-alienator n alienator
-
-alienismo n [Med.] alienism
-
-alienista n alienist
-
-alimentar v to feed
-
-alimentari adj alimentary
-
-alimentation n nourishment, alimentation
-
-alimentator n feeder, alimenter
-
-alimento n food;
-alimentos allowance; specif.: alimony
-
-Hence: alimentari; alimentose; alimentar-alimentation, alimentator, subalimentar-subalimentation, superalimentar-superalimentation
-
-alimentose adj nutritious
-
-alineamento n alignment (= action of aligning)
-
-alinear v to align (= to range or place in a line)
-
-Hence: alineamento
-
-[ali·qua] (ál-) adv 1. somewhere; 2. somehow
-
-ali·quando adv at some time or other,;at any time; sometime; in future time
-
-ali·quanto adv somewhat, to some degree
-
-ali·que (ál-) pron something, anything; adv somewhat
-
-[ali·quid] (ál-) pron something
-
-[aliquot] (ál-) adj/indef pron some, several, a few
-
-alizari n madder root
-
-Hence: alizarina
-
-alizarina n alizarin, madder root
-
-all- adj [occurring in compounds] allo-, all- (= other)
-
-Hence: allotrope etc.
-
-allactamento n (act of) suckling, nursing
-
-allactar v to suckle, nurse
-
-Hence: allactamento
-
-allargamento n widening, broadening
-
-allargar v to widen (= to make broad(er))
-
-allectar v to lay up (through illness)
-
-Hence: allectate
-
-allectate 1. pp of allectar; 2. adj bedridden
-
-allée [F] n avenue, walk, alley
-
-allegar v to allege (= to bring forward as an argument or excuse)
-
-Hence: allegation
-
-allegation n [Law] allegation
-
-allegoria (-ía) n allegory
-
-Hence: allegorista; allegoric; allegorisar-allegorisation, allegorisator
-
-allegoric adj allegoric, allegorical
-
-allegorisar v to allegorize
-
-allegorisaion n allegorization
-
-allegorisator n allegorizer
-
-allegorista n allegorist
-
-allegrar v to cheer up, brighten up (= to make gay or cheerful);
-allegrar se to rejoice
-
-allegre adj gay, sprightly; merry; cheerful
-
-Hence: allegressa; allegrar; allegro-allegretto
-
-allegressa n gayness, sprightliness; merriness; cheerfulness
-
-allegretto n [Mus.] allegretto
-
-allegro n [Mus.] allegro
-
-alleluia (-úya) alleluia, hallelujah
-
-allergia (-ía) n [Pathol.] allergy
-
-Hence: allergic
-
-allergic adj [Pathol.] allergic
-
-allerta n alert, alarm
-
-allertar v to give the alarm to, alarm
-
-allerte adj alert, watchful
-
-Hence: allerta-allertar
-
-alleviar v to lighten (= to make less heavy); also: to alleviate
-
-Hence: alleviation; alleviator
-
-alleviation n lightening (= making less heavy); also: alleviation
-
-alleviator n lightener; also: alleviator
-
-alliantia n alliance;
-le arca del alliantia the Ark of the Covenant
-
-alliar v to ally;
-alliar se to form an alliance
-
-Hence: alliantia; alliato
-
-alliato n ally
-
-alligar v 1. to bind, attach (to); 2. to alloy (as in "to alloy silver with copper")
-
-Hence: alligato
-
-alligato n alloy
-
-alligator [A] n alligator
-
-allio n garlic
-
-alliterar v to alliterate
-
-Hence: alliteration
-
-alliteration n alliteration
-
-allitter- see alliter-
-
-allocut- see alloquer
-
-allocution n allocution
-
-allongamento n (act of) lengthening
-
-allongar v to lengthen (= to make longer);
-allongar (le bracio) to stretch out (one's arm)
-
-Hence; allongamento
-
-allo·pathe (-ó-) n allopath
-
-allo·pathia (-ía) n allopathy
-
-alloquer [-loqu-/-locut-] v to pronounce an allocution
-
-Hence: allocution
-
-allo·trope (-ótrope) adj 1. [Chem.] allotropic; 2. [Zoo.] allotropous
-
-Hence: allotropia; allotropic; allotropo
-
-allotropia (-ía) n [Chem.] allotropy
-
-allotropic adj [Chem.] allotropic
-
-allotropo (-ótropo) n [Chem.] allotrope
-
-all right [A] all right
-
-allu- v [occurring in derivatives]
-
-Hence: alluvion; alluvial
-
-alluder [-lud-/-lus-] v to allude
-
-Hence: allusion; allusive
-
-allus- see alluder
-
-allusion n allusion;
-facer allusion a to allude to
-
-allusive adj allusive; alluding
-
-alluv- see allu-
-
-alluvial adj alluvial
-
-alluvion n 1. inundation; alluvion; 2. alluvium
-
-alma mater [L] alma mater
-
-almanac n almanac
-
-almosna n alms;
-facer almosna to give alms
-
-Hence: almosnero; almosneria; almosniera
-
-almosneria (-ía] n almonry
-
-almosnero n almoner; almsgiver
-
-almosniera n alms purse, alms bag
-
-aloda(?) n lark (= singing bird of the family Alaudidae)
-
-[alora] adv then (1. at that time; 2. in that case, consequently)
-
-Alpes nprpl Alps
-
-Hence: alpestre; alpin-alpinismo, alpinista, cisalpin, transalpin-transalpino
-
-alpestre adj Alpine, Alpestrine
-
-alpha n alpha (= the first letter of the Greek alphabet);
-alpha e omega alpha and omega;
-particula alpha alpha particle;
-radio alpha alpha ray
-
-Hence: alphabeto etc.
-
-alphabetic adj alphabetical
-
-alphabetisar v to alphabetize
-
-alphabetisation n alphabetization
-
-alpha·beto n alphabet
-
-Hence: alphabetic; alphabetisar-alphabetisation; analphabete-analphabetismo, analphabeto-analphabetic
-
-alpin adj Alpine, alpine; also: [Ethnol.]
-
-alpinismo n Alpinism; mountaineering
-
-alpinista n Alpinist; Alpine climber
-
-[al·quando] adv at some time or other; at any time; sometime; in future time (= aliquando)
-
-[al·quanto] adv somewhat, to some degree (= aliquanto)
-
-Alsatia npr Alsace
-
-Hence: alsatian-alsatiano
-
-alsatian adj Alsatian
-
-alsatiano n Alsatian
-
-[alsi] (-í) adv 1. also, too; 2. likewise, moreover, furthermore
-
-Altai (-ái) npr Altai (1. Altai mountains; 2. Altai region)
-
-Hence: altaic-uraloaltaic etc.
-
-altaic (-áic) adj Altaic
-
-altar n altar
-
-alte adj 1. high; 2. loud;
-in alte voce aloud (1. not in a whisper; 2. loudly)
-
-Hence: altessa; altitude; exaltar &; altiar &; altimetro etc.; altisone etc.; altisonante etc.; altoparlator etc.; alto-contralto
-
-alterabile adj alterable
-
-alterar v 1. to alter (= to make different); 2. to adulterate;
-su voce se alterava (con emotion) his voice broke (with emotion)
-
-alteration n 1. alteration; 2. adulteration (= action of adulterating)
-
-altercar v to quarrel, wrangle, altercate
-
-Hence: altercation
-
-altercation n altercation
-
-altere adj other (1. additional; 2. different);
-un altere another;
-le un le altere, le unes le alteres one another, each other;
-altere vice a second time, once again, once more
-
-Hence: alterne &; alterar-alterabile-inalterabile-inalterabilitate, alteration; altruismo; altruista; [alterubi] etc.; [unaltere] etc.; sesquialtere etc.
-
-alternar v to alternate (1. to do by turns; 2. to occur by turns)
-
-alternate adj alternate, alternating
-
-alternation n alternation
-
-alternativa n 1. alternation; 2. alternative (= choice between two possible things or lines of action)
-
-alternative adj 1. alternate, alternating; 2. alternative;
-currente alternative alternating current
-
-alterne adj [Math., Bot.] alternate;
-angulos alterne alternate angles
-
-Hence: alternar-alternation, alternative-alternativa, alternate; subalterne
-
-[alter·ubi] (-érubi) adv elsewhere
-
-altessa n Highness
-
-altiamento n (act of) raising or lifting
-
-altiar v to raise (1. to make higher; 2. to raise the position or level of);
-altiar le voce to raise one's voice
-
-Hence: altiamento; realtiar
-
-alti·metro (-í-) n altimeter
-
-alti·sonante adj altisonant, high-sounding
-
-alti·sone adj altisonant, high-sounding
-
-altitude n 1. altitude; 2. height;
-al altitude del (situation, etc.) equal to (the situation, etc.);
-al altitude de (un capo, un insula, etc.) off (a cape, an island, etc.)
-
-alto n I. top, upper part; II. [Mus.] alto (1. contralto voice; 2. tenor violin);
-le altos e (le) bassos the ups and downs;
-in alto 1. upward(s), up; also: upstairs; 2. (up) on top; also: upstairs;
-de alto a basso 1. from the top to the bottom; 2. from top to bottom, from top to toe
-
-alto-parlator n loud-speaker
-
-altru- see altere
-
-altruismo n altruism
-
-altruista n altruist
-
-aluminium (-ínium) n aluminum, aluminium
-
-alveo n trough, tub; also: bathtub
-
-Hence: alveolo-alveolari, alveolate
-
-alveolari adj 1. cell-like; honeycomb (as in "honeycomb pattern"); 2. [Anat.] alveolar
-
-alveolate adj honeycombed, pitted, alveolate
-
-alveolo (-éolo) n 1. cell (of a honeycomb); 2. socket (of a tooth)
-
-am- see ammoniaco
-
-amabile adj lovable, amiable
-
-amabilitate n amiability
-
-amalgama (-m l-) n amalgam
-
-Hence: amalgamar-amalgamation, amalgamator
-
-amalgamar v to amalgamate (1. [Metal.]; 2. to combine, consolidate)
-
-amalgamation n amalgamation (1. union, consolidation; 2. [Metal.])
-
-amalgamator n amalgamator
-
-amandola (-ándola) n almond
-
-Hence: amandoliero
-
-amandoliero n almond-tree
-
-amante n lover, paramour
-
-amar¹ adj bitter
-
-Hence: amaritude; amarisar
-
-amar² v to love; also: to like, be fond of, etc.
-
-Hence: amante; amabile-amabilitate; amator; amatori; amate
-
-amarage (-aje) n [Aeronaut.] action of alighting on water
-
-amarar v [Aeronaut.] to alight on water
-
-Hence: amarage
-
-amarisar v to make bitter; to embitter
-
-amaritude n bitterness
-
-amassamento n amassment
-
-amassar v to amass
-
-Hence: amassamento; amassator
-
-amassator n amasser
-
-amate 1. pp of amar²; 2. adj beloved
-
-amateur [F] n amateur
-
-amator v lover (= one who has a strong liking for something)
-
-amatori adj amatory
-
-Amazon npr Amazon (1. Gr. Mythol.]; 2. [Geog.]);
-amazon amazon, horsewoman; also: virago
-
-Hence: amazonie
-
-amazonie adj Amazonian (1. pertaining to the Amazons; 2. pertaining to the Amazon river)
-
-ambass- v [occurring in derivatives]
-
-Hence: ambassada; ambassator
-
-ambassada n embassy
-
-ambassator n ambassador
-
-ambe adj both; ambes pron. both
-
-ambidextere, ambidextre adj ambidextrous
-
-ambiente adj ambient, surrounding ambiente n environment (= all of the surrounding conditions and influences)
-
-ambigue adj ambiguous
-
-Hence: ambiguitate; inambigue-inambiguitate
-
-ambiguitate n ambiguity (1. double or dubious meaning; 2. ambiguous expression)
-
-ambir v 1. to go round (something), surround; 2. to go round after, solicit
-
-Hence: ambiente; ambition &; ambito
-
-ambition n ambition
-
-Hence: ambitiose
-
-ambitiose adj ambitious
-
-ambito (ám-) n ambit, circuit, circuitous route
-
-ambivert- v [occurring in derivatives]
-
-Hence: ambivertito
-
-ambivertito n [Psychol.] ambivert
-
-ambly- adj [occurring in compounds] ambly- (= dull; dim; blunt; obtuse, etc.)
-
-Hence: amblyopia etc. ...
-
-ambly·opia (-ía) n [Med.] amblyopia
-
-Hence: amblyopic
-
-amblyopic adj amblyopic
-
-ambra n 1. amber; 2. ambergris;
-ambra grise ambergris
-
-Hence: ambrar
-
-ambrar v to perfume with ambergris
-
-ambrosia n ambrosia (1. food intended or fit for the gods; 2. [Bot.] wormseed)
-
-ambrosial adj ambrosial
-
-ambrosian adj Ambrosian;
-canto ambrosian Ambrosian chant;
-rito ambrosian Ambrosian rite
-
-ambrosie adj ambrosial
-
-Hence: ambrosia-ambrosial
-
-Ambrosio nprm Ambrose;
-Sancte Ambrosio Saint Ambrose
-
-Hence: ambrosian
-
-ambulante 1. ppr of ambular; 2. adj ambulant
-
-ambulantia n ambulance (1. field hospital; 2. "hospital ambulance")
-
-ambular v to walk (= to go on foot)
-
-Hence: ambulante-ambulantia; ambulatori; ambulatura; deambular-deambulation, deambulatori; preambular-preambulo; funambulo etc.; noctambule etc.
-
-ambulatura n gait, walk
-
-ameba n [Zool.] amoeba
-
-Hence: amebic; ameboide; amebiforme etc.
-
-amebic adj amoebic
-
-amebi·forme adj amoebiform
-
-ameboide adj amoeboid;
-movimentos ameboide [Zool., Physiol.] amoeboid movements
-
-amen [L] interj amen
-
--amento suffixo substantive [used with verbs in -ar] -ament, -ement, -ment (= action or result of ...ing)
-
-Hence: arrangiamento etc.; commandamento etc; discoragiamento etc.; governamento etc.; ornamento etc.
-
-America npr America;
-America del nord North America;
-America del sud South America;
-America latin Latin America
-
-Hence: american-americanismo, americanisar, angloamerican etc., panamerican etc., americano
-
-american adj American (1. belonging to North or South America; 2. belonging to the United States)
-
-americanisar v to Americanize
-
-americanismo n Americanism (1. American custom or characteristic; 2. word or phrase peculiar to American English)
-
-americano n American (1. an inhabitant of North or South America; 2. an inhabitant of the United States)
-
-amethysto n amethyst
-
-amic (-íc) adj friendly (= not enemy);
-(nation) amic friendly (nation)
-
-Hence: amicitate; amicar-amicabile-amicabilitate; inimic &; amico-amical-inamical; amica
-
-amica (-íca) n friend (fem.)
-
-amicabile adj amicable, friendly
-
-amicabilitate n friendliness, amicability
-
-amical adj friendly;
-(reguardo) amical friendly (look)
-
-amicar v to make friends of;
-amicar se to make friends (with)
-
-amicitate n friendship
-
-amico (-íco) n friend (masc.)
-
-amido (á-) n [Chem.] amide
-
-Hence: amidogeno etc.; acetamido etc.
-
-amido·geno (-ógeno) n [Chem.] amidogen
-
-amino n [Chem.] amine
-
-Hence: aminophenol etc.; amino-acido etc.; methylamino etc.; vitamina etc.
-
-amino-acido (-ácido) n [Chem.] amino acid
-
-amino·phenol n [Chem.] aminophenol
-
-amita (ám-) n aunt
-
-Hence: granamita
-
-Ammon npr Ammon (1. [Egypt. Relig.]; 2. [Gr., Rom. Relig.]);
-corno de Ammon horn of Ammon
-
-Hence: ammonite; ammoniac-ammoniaco &
-
-ammon- see ammoniaco or ammonium
-
-ammon·al n [Technol.] ammonal
-
-ammoniac adj ammoniac;
-gumma ammoniac gum ammoniac;
-aqua ammoniac ammonia (water)
-
-ammoniacal adj ammoniacal
-
-ammoniaco n 1. ammonia (= [Chem.] NH3); 2. ammoniac, gum ammoniac;
-ammoniaco (liquide) (liquid) ammonia, ammonia (water)
-
-Hence: ammoniacal; ammonium-ammonal etc.; ammonic; ammonifiar-ammonification; amido &; amino &
-
-ammonic adj ammonic, ammoniacal
-
-ammonificar v to ammonify
-
-ammonification n ammonification (1. impregnation with ammonia; 2. decomposition with production of ammonia)
-
-ammonite n [Paleontol.] ammonite
-
-ammonium (-ónium) n ammonium
-
-amnesia (-ía) n amnesia, loss of memory
-
-Hence: cryptomnesia etc.
-
-amnestia (-ía) n amnesty
-
-Hence: amnestic; amnestiar
-
-amnestiar v to amnesty, give or proclaim amnesty (to)
-
-amnestic adj amnesty, amnestic
-
-amollimento n softening, making soft
-
-amollir v to soften (= to make soft)
-
-Hence: amollimento
-
-amonta n amount
-
-amontar v to amount
-
-Hence: amonta
-
-amor n love (= passionate affection);
-amor proprie self-esteem;
-amores amours, love-affairs
-
-Hence: amoretto; amorose-amorositate; inamorar-inamorate
-
-amoral adj amoral, nonmoral
-
-Hence: amoralismo
-
-amoralismo n amoralism
-
-amoretto n love affair, flirtation
-
-amorose adj amorous (1. loving; 2. pertaining to love)
-
-amorositate n amorousness
-
-amorphe adj amorphous; specif.: [Chem.; Geol.; Biol.; etc.]
-
-amorphia (-ía) n amorphism
-
-amorphismo n amorphism
-
-amortimento n (act of) deadening, subduing
-
-amortir v to deaden (feelings, taste, etc.)
-
-Hence: amortimento
-
-amortisar v to amortize (= to extinguish a debt by means of a sinking fund)
-
-Hence: amortisation
-
-amortisation n amortization
-
-amover v to amove, remove (from office, etc.)
-
-Hence: amovibile-amovibilitate, inamovibile
-
-amovibile adj amovable, removable (= subject to removal)
-
-amovibilitate n amovability, removability
-
-amperage (-aje) n amperage
-
-Ampère, André Marie npr [1775-1836; physicist after whom the "ampere" is named];
-lege de Ampère Ampère's law
-
-Hence: ampere-amperage, amperometro etc., ampere-hora etc., ampere-torno etc., voltampere etc.
-
-ampere (ampér) n ampere
-
-ampere-hora (amper-hóra) n ampere-hour
-
-ampere-torno (amper-tórno) n ampere turn
-
-ampero·metro (-ómetro) n amperometer, ammeter
-
-amphi- prefixo [used chiefly to form technical terms] amphi- (1. both; 2. around, about)
-
-Hence: amphibie etc.; amphitheatro etc.
-
-amphibie adj amphibious
-
-Hence: amphibio-amphibiologia etc.
-
-amphibio n amphibian (1. [Zool.]; 2. amphibian airplane)
-
-amphibio·logia (-ía) n amphibiology
-
-amphitheatral adj amphitheatric, amphitheatrical
-
-anphitheatro n amphitheater
-
-Hence: amphitheatral
-
-amphora (ám-) n amphora
-
-ample adj ample (1. spacious, extensive; 2. copious)
-
-Hence: amplitude; ampliar-ampliation; amplificar-amplification, amplificative, amplificator
-
-ampliar v to enlarge (= to make larger)
-
-ampliation n enlargement, enlarging
-
-amplificar v to amplify (1. as in "to amphfy a story, etc."; 2. [Elec.]; 3. to exaggerate)
-
-amplification n amplification
-
-amplificative adj amplifying, magnifying
-
-amplificator n amplifier; also: [Photog.] enlarger
-
-amplitude n amplitude
-
-ampulla n 1. [Pathol.] blister; 2. [Eccl.] ampulla; 3. phial, flask; also: ampoule; 4. (electric) bulb
-
-amputar v to amputate
-
-Hence: amputation
-
-amputation n amputation
-
-amuleto n amulet; also: charm
-
-amusamento n amusement
-
-amusar v to amuse, entertain;
-amusar se to amuse or divert oneself
-
-Hence: amusamento
-
-[an] 1. interr part -;
-an il habe le libro? has he the book?; 2. conj whether
-
-Hence: annon etc.
-
--an suffixo adjective [used with names of places and persons] -an (1. pertaining to ...; 2. native to, citizen of, or inhabiting ...)
-
-Hence: -ano; african etc.; italian etc.; urban etc.; mohammedan etc.
-
-an- prefixo [a- in positions other than before -h- and vowels; used with nouns and adjectives] a-, an-, (= not ...; without or lacking ...)
-
-Hence: agnostic etc.; amnesia etc.; analphabete etc.; anarchia etc.; anesthesia etc.; anesthetic etc.; anhydre etc.; athee etc.
-
-ana- prefixo ana- (1. up, upwards; 2. backwards; 3. again)
-
-Hence: anachrone etc.; anabaptisar etc.
-
-anabaptisar v to anabaptize, rabaptize
-
-anabaptismo n Anabaptism
-
-anabaptista n Anabaptist
-
-anacardiaceas npl [Bot.] Anacardiaceae
-
-anacardiacee n [Bot.] anacardiaceous
-
-anacardio n [Bot.] anacardium
-
-Hence: anacardiacee-anacardiaceas
-
-anachrone adj anachronous, anachronic
-
-Hence: anachronic; anachronisar-anachronismo
-
-anachronic adj anachronous, anachronic, anachronistic
-
-anachronisar v to anachronize, commit anachronisms
-
-anachronismo n anachronism
-
-Anacreonte npr [Gr. Lit.] Anacreon
-
-Hence: anacreontic
-
-anacreontic adj Anacreontic
-
-anaerobie adj [Biol.] anaerobic
-
-anaerobio n [Biol.] anaerobe
-
-anagramma n anagram
-
-anal adj [Anat.] anal
-
-analectos npl analects, analecta
-
-analgesia (-ía) n [Med.] analgesia (= insensitivity to pain)
-
-analgesic adj [Med.] analgesic
-
-analgia (-ía) n [Med.] analgia, analgesia (= insensitivity to pain)
-
-analgic adj [Med.] analgic, analgesic
-
-analoge (-áloge) adj analogous (= corresponding in some ways);
-analoge a analogous to
-
-Hence: analogia-analogic
-
-analogia (-ía) n analogy
-
-analogic adj analogic, analogical (= founded on analogy)
-
-analphabete adj illiterate
-
-analphabetic adj 1. illiterate; 2. [Phonet.] analphabetic; 3. unwritten, without an alphabet
-
-analphabetismo n 1. illiteracy; 2. [Phonet.] analphabetism, analphabetic notation
-
-analphabeto n illiterate
-
-analysabile adj analyzable
-
-analysar v to analyze
-
-analysator n analyzer, analyst
-
-analyse (-ályse) n analysis;
-analyse qualitative qualitative analysis;
-analyse quantitative quantitative analysis;
-analyse infinitesimal infinitesimal calculus;
-in le ultime analyse in the last analysis, all things considered
-
-Hence: analysar-analysabile, analysator, analysta; psychoanalyse etc.
-
-analysta n analyst, analyzer
-
-analytic adj analytic, analytical;
-geometria analytic analytic geometry
-
-Hence: psychoanalytic etc.
-
-ananas (-ás) n [Bot.] pineapple
-
-anarch- adj [occurring in derivatives and compounds] anarch-, anarcho- (= anarchic, anarchical)
-
-Hence: anarchia-anarchismo, anarchista, anarchic; anarchosyndicalismo etc.; anarchosyndicalista etc.
-
-anarchia (-ía) n anarchy
-
-anarchic adj anarchic, anarchical
-
-anarchismo n anarchism
-
-anarchista n anarchist
-
-anarcho·syndicalismo n anarchosyndicalism
-
-anarcho·syndicalista n anarchosyndicalist; also: attrib.
-
-anate (á-) n [Zool.] duck
-
-anathema [-ma/-mat-] (-átema) n [Eccl.] anathema
-
-Hence: anathematisar
-
-anathemat- see anathema
-
-anathematisar v [Eccl.] to anathematize
-
-Anatolia npr Anatolia
-
-anatom- n [occurring in derivatives] anatom- (= anatomy)
-
-Hence: anatomia-anatomista; anatomic
-
-anatomia (-ía) n anatomy
-
-anatomic adj anatomic, anatomical
-
-anatomista n anatomist
-
-ancestral adj ancestral
-
-ancestre n ancestor
-
-Hence: ancestral
-
-ancian adj ancient, old;
-(le) ancianos (the) ancients
-
-Hence: ancianitate
-
-ancianitate n 1. oldness, antiquity; 2. seniority (= length of service)
-
-ancora (án-) n anchor
-
-Hence: ancorar-ancorage; disancorar
-
-[ancora] 1. adv still, yet; 2. interj encore!
-
-ancorage (-aje) n anchorage (1. action of anchoring; 2. place to anchor; 3. anchorage dues)
-
-ancorar v to anchor
-
-andaluse adj Andalusian
-
-Hence: andaluso-Andalusia
-
-Andalusia npr Andalusia
-
-andaluso n Andalusian
-
-andante [I] adj/adv/n [Mus.] andante
-
-andantino [I] adj/n [Mus.] andantino
-
-Andes nprpl Andes;
-Cordillera del Andes Cordillera of the Andes
-
-andr- n [occurring in derivatives and compounds] andr-, andro- (= man, male, husband)
-
-Hence: androide; androphobia etc.; androgyne etc.; gynandre etc.; polyandre etc.; monandre etc.
-
-Andreas (-éas) nprm Andrew
-
-andro·gyne adj androgynous (1. hermaphroditic; 2. [Bot.])
-
-Hence: androgynia; androgyno
-
-androgynia (-ía) n androgyny
-
-androgyno (-ró-) n androgyne (1. hermaphrodite; 2. [Bot.])
-
-androide n android
-
-andro·phobia (-ía) n androphobia
-
-anecdota (-éc-) n anecdote
-
-Hence: anecdotista; anecdotic
-
-anecdotic adj anecdotal
-
-anecdotista n anecdotist
-
-anellar v to (cause to) curl in ringlets, locks, etc.
-
-anellides (-él-) npl [Zool.] Annelides
-
-anello n ring (= circle of metal or other material); also: link (of a chain);
-anello nuptial wedding ring;
-anello del piscator fisherman's ring
-
-Hence: anellides; anellar
-
-anemia (-ía) n [Med.] anemia, anaemia
-
-Hence: anemic
-
-anemic adj anemic, anaemic
-
-anemo- n [occurring in derivatives and compounds] anemo- (= wind)
-
-Hence: anemone; anemometro etc.
-
-anemographia (-ía) n [Meterol.] anemography
-
-anemo·grapho (-ó-) n anemograph
-
-anemo·metro (-ó-) n anemometer
-
-anemone (-óne) n anemone;
-anemone de mar sea anemone
-
-anemo·scopio n anemoscope
-
-anesthesia (-ía) n anesthesia
-
-anesthesiar v to anesthetize
-
-anesthetic adj anesthetic
-
-anesthetico n anesthetic
-
-anetho n dill
-
--ange- see angio-
-
-Angela (á-) nprf Angela
-
-angelic adj angelic;
-le salutation angelic the Angelic Salutation, the Ave Maria
-
-Angelica nprf Angelica
-
-angelica n [Bot.] angelica
-
-angelo (á-) n angel;
-angelo tutelar guardian angel
-
-Hence: angelic-angelica, Angelica; archangelo etc.; Angela
-
-angelus (á-) n [R.C.Ch.] Angelus; also: Angelus bell
-
-angina n [Pathol.] quinsy, angina;
-angina de pectore angina pectoris
-
-Hence: anginose
-
-anginose adj quinsied
-
-angio- n [occurring in derivatives and compounds] angio- (= vessel)
-
-Hence: angiographia etc.; angiosperme etc.; sporangio etc.; hydrangea etc.
-
-angio·graphia (-ía) n angiography
-
-angio·logia (-ía) n anglology
-
-angiosperma n [Bot.] angiosperm;
-angiospermas Angiospermae
-
-angio·sperme adj [Bot.] angiospermous
-
-Hence: angiosperma
-
-Anglaterra npr England
-
-anglese¹ adj English
-
-anglese² n 1. English (= English language); 2. Englishman, Englishwoman
-
-Anglia npr [Hist.] Anglia
-
-anglic adj Anglic, Anglian
-
-anglican adj [Eccl.] Anglican;
-ecclesia anglican Church of England
-
-anglicanismo n [Eccl.] Anglicanism
-
-anglicano n [Eccl.] Anglican
-
-anglicisar v to Anglicize
-
-anglicismo n Anglicism (1. English idiom; 2. quality of being English)
-
-anglo·american adj Anglo-American
-
-Hence: angloamericano
-
-angloamericano n Anglo-American
-
-anglo·catholic adj [Eccl.] Anglo-Catholic, High-Church
-
-Hence: anglocatholico
-
-anglocatholico n [Eccl.] Anglo-Catholic, High-churchman
-
-anglo·mania (-ía) n Anglomania
-
-anglo·mano (-ó-) n Anglomaniac
-
-anglo·phile adj Anglophile
-
-Hence: anglophilo
-
-anglophilo (-ó-) n Anglophile
-
-anglo·phobe (-ó-) adj Anglophobe, Anglophobic
-
-Hence: anglophobia; anglophobo
-
-anglophobia (-ía) n Anglophobia
-
-anglophobo (-óphoho) n Anglophobe
-
-anglos npl [Hist.] Angles
-
-Hence: Anglia; anglese; anglic-anglicismo, anglican-anglicanismo, anglicano, anglicisar; angloamerican etc; anglocatholic etc.; anglosaxone etc.; anglophile etc.; Anglaterra etc.
-
-anglo·saxone adj/n Anglo-Saxon
-
-angue n snake, serpent
-
-Hence: anguilla &; anguin; anguiforme etc.
-
-angui·forme adj anguiform
-
-anguilla n eel
-
-Hence: anguilliforme etc.
-
-anguilli·forme adj anguilliform, eel-shaped
-
-anguin adj anguine
-
-angular adj angular
-
-angularitate n angularity, angularness
-
-angulate adj angulate, angled
-
-angulo (án-) n angle, corner;
-angulo acute, angulo obtuse acute angle, obtuse angle
-
-Hence: angular-angularitate; angulate; angulose; trilangule etc.; rectangule etc.
-
-angulose adj angulous, angular
-
-angustia n anguish (1. [Pathol.]; 2. agony, distress)
-
-Hence: angustiose; angustiar
-
-angustiar v to anguish
-
-angustiose adj anguished
-
-anhelante 1. ppr of anhelar; 2. adj panting, gasping
-
-anhelar v to pant, gasp
-
-Hence: anhelante; anhelation
-
-anhelation n panting, gasping
-
-anhydre (á-) adj anhydrous
-
-anhydrido n [Chcm.] anhydride;
-anhydrido carbonic carbon dioxide
-
-anhydrite n [Mineral.] anhydrite
-
-anil n anil (1. Indigo shrub; 2. indigo dye)
-
-Hence: anilic; anilina
-
-anilic adj anilic (1. pertaining to anil; 2. pertaining to aniline)
-
-anilina n [Chem.] aniline; attrib.: aniline
-
-anima (á-) n soul;
-render le anima give up the ghost;
-stato de anima state of mind, frame of mind
-
-Hence: animismo; animista; animar-animation, animator, animate-inanimate, disanimar-disanimate, reanimar; pusillanime etc.; equanime etc.; unanime etc.; see also animo
-
-animadvers- see animadverter
-
-animadversion n animadversion (= adverse criticism)
-
-anim·adverter [-vert-/-vers-] v to animadvert (= to express adverse criticism)
-
-Hence: animadversion
-
-animal adj animal (= pertaining to animals)
-
-Hence: animalitate; animalisar-animalisation; vegetoanimal etc.; animal²-animalculo, animalesc
-
-animal n animal
-
-animalculo n animalcule
-
-animalesc adj animal (= characteristic of an animal)
-
-animalisar v to animalize (1. to convert into animal matter; 2. to reduce to animal nature)
-
-animalisation n animalization (1. conversion into animal matter; 2. reduction to animal nature)
-
-animalitate n animality
-
-animar v to animate
-
-animate I. pp of animar; II. adj 1. animate, living; 2. animated, lively
-
-animation n animation (1. the action of animating; 2. vivacity, sprightliness)
-
-animator n animater, animator
-
-animismo n animism
-
-animista n animist
-
-animo (á-) n animating spirit
-
-Hence: animositate; animadverter etc.; pusillanime etc.; equanime etc.; unanime etc; see also anima
-
-animositate n animosity
-
-anion (á-) n [Phys.] anion
-
-anis [F] n anise
-
-Hence: anisar
-
-anisar v to flavor with anise
-
-Anna nprf Ann
-
-Hence: Marianna etc.
-
-annal adj annual (= lasting one year)
-
-annales (-áles) npl annals
-
-annecter [-nect-/-nex-] v to annex (= to join as an addition to existing possessions)
-
-Hence: annexion; annexo-annexar
-
-annex- see annecter
-
-annexar v to annex (1. to add, append; 2. to join as an addition to existing possessions)
-
-annexion n annexation
-
-annexo n annex
-
-annidar v to nest
-
-annihilabile adj 1. annihilable; 2. voidable
-
-annihilar v 1. to annihilate; 2. to annul
-
-Hence: annihilabile; annihilation
-
-annihilation n 1. annihilation; 2. annulment, voiding
-
-anni·versari adj anniversary
-
-Hence: anniversario
-
-anniversario n anniversary
-
-anno n year;
-anno bissextil leap year;
-anno nove New Year;
-anno de lumine [Astron.] light-year
-
-Hence: annuario; annue-amnuitate; annal-annales; annual; anniversari etc.; trienne etc.; perenne etc.; millenio etc.; biennal etc.
-
-annoctar v to grow dark (as in "it is growing dark, evening is coming")
-
-anno Domini [L] anno Domini, in the year of Our Lord
-
-[an·non] (án-) conj or not
-
-annotar v to annotate
-
-Hence: annotation; annotator
-
-annotation n annotation
-
-annotator n annotator
-
-annual adj annual (= coming once a year)
-
-annuario n yearbook
-
-annue adj annual (1. coming once a year; 2. lasting one year)
-
-annuitate n annuity
-
-annullabile adj voidable
-
-annullar v to annul, cancel
-
-Hence: annullabile; annullation; annullative
-
-annullation n annulment, cancellation
-
-annullative adj annulling, quashing
-
-annunciar v to announce
-
-Hence: annuncio; annunciation; annunciator
-
-annunciation n announcement; le Annunciation the Annunciation
-
-annunciator n announcer
-
-annuncio n 1. announcement; 2. advertisement
-
-ano n [Anat.] anus
-
-Hence: anal; anello &; anulo &
-
--ano suffixo substantive [used with names of places and persons] -an (1. native, citizen, or inhabitant of ...; 2. language of ...; 3. adherent of ...)
-
-Hence: africano etc.; italiano etc.; mohammedano etc.
-
-anodic adj anodic; also: [Med., Bot.]
-
-anodo (á-) n [Elec.] anode
-
-Hence: anodic
-
-anomale adj anomalous
-
-anomalia (-ía) n anomaly
-
-anonyme (-ó-) adj anonymous;
-societate anonyme joint-stock company, limited company
-
-Hence: anonymitate
-
-anonymitate n anonymity, anonymousness
-
-anormal adj abnormal
-
-anormalitate n abnormality
-
-[anque] (anke) adv also, too;
-anque (io) (I) too, (me) too;
-non solmente ... ma anque not only ... but also
-
-ansa n handle (of a cup, jug, basket, etc.); also: [Anat.] ansa
-
-Hence: ansate
-
-ansate adj ansate, looped;
-cruce ansate crux ansata, ansate cross
-
-ansere (án-) n goose
-
-Hence: anserin
-
-anserin adj goose (as in "goose liver");
-cute anserin goose flesh, goose skin
-
-antagonisar v to antagonize (= to contend with; to act in opposition to)
-
-Hence: antagonismo; antagonista; antagonistic
-
-antagonismo n antagonism
-
-antagonista n antagonist (1. opponent; 2. [Physiol.]); attrib.: antagonistic
-
-antagonistic adj antagonistic
-
-antarctic adj antarctic;
-polo antarctic antarctic pole, south pole;
-circulo antarctic antarctic circle;
-Oceano Antarctic Antarctic (Ocean)
-
-ante I. prep before (1. in front of; 2. earlier than; 3. above); II. adv before (1. in front, ahead; also: forward; 2. earlier);
-ante que (io iva al theatro) before (I went to the theater)
-
-Hence: ante-heri etc.; [antea] etc.
-
--ante suffixo adjective [used with verbs in -ar; forming verbal adjectives] -ing, -ant (as in "abounding," "abundant")
-
-Hence: -antia; abundante etc.; brillante etc.
-
--ante suffixo substantive [used with verbs in -ar] -ant (1. one who or that which is ...ant; 2. one who or that which ...s)
-
-Hence: amante etc.; brillante etc.; disinfectante etc.; litigante etc.
-
-ante- prefixo [used with nouns, adjectives; also in combination with adjectival suffixes] ante- (= before in time or position)
-
-Hence: antecamera etc.; antepenultime etc; antediluvial etc.
-
-[ant·ea] adv before, formerly, previously
-
-antebracio n forearm
-
-antecamera (-cá-) n anteroom; also: waiting room (at a doctor's office, etc.);
-facer antecamera to wait in the antichamber
-
-antecedente n antecedent (1. [Logic, Math.]; 2. [Gram.]);
-le antecedentes de un persona someone's antecedents
-
-anteceder [-ced-/-cess-] v to antecede, be the antecedent
-
-Hence: antecedente; antecessor
-
-antecess- see anteceder
-
-antecessor n predecessor
-
-antedata n antedate
-
-antedatar v to antedate (= to affix an earlier date than the actual one)
-
-antediluvian adj antediluvian
-
-antefixa n [Arch.] antefix
-
-ante-heri adv day before yesterday
-
-antemeridian adj antemeridian
-
-antemural n [Fortif.] barbican
-
-antenna n I. [Naut.] lateen yard; II. antenna (1. [Zool.]; 2. [Radio] aerial)
-
-antepenultima (-úl-) n antepenult
-
-antepenultime (-úl-) adj last but two, antepenultimate
-
-anteponer [-pon-/-posit-] v to prepose, place before or in front
-
-Hence: antoposition
-
-anteposit- see anteponer
-
-anteposition n (act of) preposing, (act of) placing before or in front
-
-anterior adj anterior;
-(periodo) anterior former (period);
-(data) anterior earlier (date);
-(gamba) anterior fore(leg);
-(muro) anterior front (wall)
-
-Hence: anterioritate
-
-anterioritate n anteriority
-
-anteriormente adv formerly, before
-
-anthelminthic adj anthelminthic, vermifuge
-
-anthelminthico n anthelminthic, vermifuge
-
-anthemo- (á-) n [occurring in compounds] -anthemum (= flower)
-
-Hence: chrysanthemo etc.
-
-antho- n [occurring in compounds] antho-, anth- (= flower)
-
-Hence: perianthio; anthologia etc.; anthocyanina etc.; diantho etc.; heliantho etc.; sclerantho etc.; argyranthe etc.
-
-antho·cyanina n [Chem.] anthocyanin
-
-antho·graphia (-ía) n [Bot.] anthography
-
-antho·logia (-ía) n anthology
-
-Hence: anthologista
-
-anthologista n anthologist
-
-anthra- see anthrace
-
-anthrace (á-) n [Med., Veter.] anthrax
-
-Hence: anthracen; anthracite &; anthracic; anthracifere; anthraciforme etc.; anthracometro etc.; anthraquinon etc.
-
-anthracen n [Chem.] anthracene
-
-anthracic adj anthracic
-
-anthracifere adj anthraciferous
-
-anthraci·forme adj anthraciform
-
-anthracite n anthracite (coal), hard coal
-
-Hence: anthracitic; anthracitose
-
-anthracitic adj anthracitic
-
-anthracitose adj anthracitous
-
-anthraco·metro (-ó-) n anthracometer
-
-anthra·quinon n [Chem.] anthraquinone
-
-anthropo- n [occurring in derivatives and compounds] anthropo- (= man)
-
-Hence: anthropoide; anthropogenese etc.: anthropologo etc.; anthropometria etc.; anthropomorphe etc.; anthropophage etc.; lycanthrope etc.; eoanthropo etc.; misanthrope etc.
-
-anthropo·genese (-gé-) n anthropogenesis
-
-anthropo·genesis (-gé-) n anthropogenesis
-
-anthropoide¹ adj anthropoid
-
-anthropoide² n anthropoid
-
-anthropologia (-ía) n anthropology
-
-anthropologic adj anthropological
-
-anthropologista n anthropologist
-
-anthropo·logo (-ólogo) n anthropologist
-
-Hence: anthropologia-anthropologista; anthropologic
-
-anthropo·metria (-ía) n anthropometry
-
-Hence: anthropometric
-
-anthropometric adj anthropometric
-
-anthropo·morphe adj anthropomorphous
-
-Hence: anthropomorphismo; anthropomorphista
-
-anthropomorphismo n anthropomorphism
-
-anthropomorphista n anthropomorphist
-
-anthropo·phage (-óphage) adj man-eating, cannibal, anthropophagous
-
-Hence: anthropophagia; anthropophago
-
-anthropophagia (-ía) n anthropophagy, cannibalism
-
-anthropophago (-óphago) n man-eater, cannibal;
-anthropophagos anthropophagi
-
-anthropo·sophe (-ósophe) adj anthroposophical
-
-Hence: anthroposophia-anthroposophic; anthroposopho
-
-anthroposophia (-ía) n anthroposophy
-
-anthroposophic adj anthroposophical
-
-anthroposopho (-ósopho) n anthroposophist
-
-anti- preffixo [used with nouns and adjectives; also: in combination with substantival and adjectival suffixes] anti-
-
-Hence: antichristo etc.; antinational etc.; antialkoholista etc.
-
--antia suffixo substantive [used with verbs in -ar] -ance, -ancy (= state or quality of ...ing or being ...ant)
-
-Hence: importantia etc.; tolerantia etc.; vigilantia etc.
-
-antiaeree adj [Mil.] antiaircraft
-
-antiasthmatic adj antasthmatic
-
-anticatholic adj anti-Catholic
-
-antichristian¹ adj antichristian
-
-antichristian² adj anti-Christian
-
-Antichristo npr Antichrist;
-antichristo antichrist
-
-anticipar v to anticipate (= to do or use in advance);
-anticipar un pagamento to advance a payment
-
-Hence: anticipation
-
-anticipation n 1. anticipation (= act of doing or using in advance); 2. [Rhet.] prolepsis
-
-anticlerical adj anticlerical
-
-anticlericalismo n anticlericalism
-
-anticonception n contraception
-
-anticonceptional adj contraceptive;
-medio anticonceptional contraceptive
-
-anticonstitutional adj unconstitutional
-
-anticyclon n [Meteorol.] anticyclone
-
-antidotar v to antidote
-
-antidoto (-í-) n antidote;
-antidoto de antidote to, for, against
-
-Hence: antidotar
-
-antifascista n antifascist; also: attrib. antifascist
-
-Antilibano (-lí-) npr Anti-Lebanon (= mountain range parallel to the Lebanon Mountains)
-
-antilope (-í-) n antelope
-
-antimonial adj antimonial
-
-antimonio n antimony
-
-Hence: antimonial
-
-antinational adj antinational
-
-antinephritic adj antinephritic
-
-antinomia (-ía) n antinomy
-
-antinomic adj antinomic
-
-antinomio n [Eccl. Hist.] antinomian
-
-antinomismo n [Eccl. Hist.] antinomianism
-
-Antiochia (-ía) npr Antioch
-
-antipapa n antipope
-
-antiparlamentari adj antiparliamentary
-
-antipath- adj [occurring in derivatives] antipath- (= antipathetic)
-
-Hence: antipathia-antipathic
-
-antipathia (-ía) n antipathy
-
-antipathic adj antipathetic
-
-antiperistase (-ístase) n antiperistasis (= intensification of a quality by an opposing quality)
-
-antiphona (-tí-) n [Eccl.] antiphon, antiphony
-
-Hence: antiphonal; antiphonario
-
-antiphonal adj antiphonal
-
-antiphonario n antiphonary, antiphonal
-
-antiphras- v [occurring in derivatives]
-
-Hence: antiphrase; antiphrastic
-
-antiphrase (-í-) n antiphrasis
-
-antiphrastic adj antiphrastic
-
-antipode (-í-) n opposite, contrary, antipode;
-antipodes antipodes
-
-Hence: antipodic
-
-antipodic adj antipodal
-
-antiqualia n old stuff, trash
-
-antiquar v to antiquate
-
-antiquario n 1. antiquary; 2. antiquedealer
-
-antiquate adj antiquated, old-fashioned
-
-antique adj antique, ancient;
-(le) antiquos (the) ancients
-
-Hence: antiqualia; antiquario; antiquitate; antiquar-antiquate
-
-antiquitate n antiquity (1. ancient character; 2. early ages of history; 3. antique)
-
-antireligiose adj antireligious
-
-antiscios npl antiscians, antiscii
-
-antiscorbutic adj antiscorbutic
-
-antisemita n anti-Semite
-
-antisemitic adj anti-Semitic
-
-antisemitismo n anti-Semitism
-
-antisepsis n antisepsis
-
-antiseptic adj antiseptic, antiseptical
-
-antiseptico n antiseptic
-
-antisocial adj antisocial
-
-antispasmodic adj [Med.] antispasmodic
-
-antithese (-ítese) n antithesis (1. [Rhet.]; 2. opposition)
-
-antitoxina n antitoxin
-
-antitrinitari adj anti-Trinitarian
-
-Antonio nprm Anthony
-
-antonyme (-ó-) adj antonymous
-
-Hence: antonymia; antonymo
-
-antonymia (-ía) n antonymy
-
-antonymo (-ó-) n antonym
-
-Antwerpen [Flem.] npr Antwerp
-
-anular adj ring-shaped, annular;
-digito anular ring finger, annular;
-eclipse anular annular eclipse
-
-anuletto n small ring, annulet
-
-anulo n ring (= circle of metal or other material); also: ringlike object;
-anulo piscatori fisherman's ring
-
-Hence: anuletto; anular; anulose
-
-anulose adj [Zool.] annulose
-
-anxie adj anxious (1. uneasy, worried; 2. eagerly desiring)
-
-Hence; anxietate
-
-anxietate n anxiety (1. uneasiness; 2. eager desire)
-
-aorta n aorta
-
-Hence: aortic
-
-aortic adj aortic
-
-à outrance [F] à outrance, in the extreme
-
-ap- see apo-
-
-apath- adj [occurring in derivatives] apath- (= apathetic)
-
-Hence: apathia-apatic
-
-apathia (-ía) n apathy
-
-apathic adj apathetic
-
-ape n bee;
-ape operari, ape neutre working bee;
-ape matre, ape regina, ape femine queen bee;
-ape mascule drone
-
-Hence: apiario¹; apiario², apicula-apiculario; apicultura etc.; apivore etc.
-
-[a·pena] adv hardly, scarcely (= a pena)
-
-apennin adj Apennine
-
-Hence: Apenninos
-
-Apenninos nprpl Apennines
-
-apepsia (-ía) n [Pathol.] apepsy
-
-apercept- see aperciper
-
-aperiente 1. ppr of aperir; 2. adj aperient, laxative
-
-aperir [-per-/-pert-] v to open (1. to unclose; 2. to begin)
-
-Hence: aperiente; apertura; aperte; aperitive-aperitivo; aperitor; reaperir-reapertura
-
-aperitive adj aperitive, aperient, laxative
-
-aperitivo n 1. aperient, laxative; 2. apéritif
-
-aperitor n opener
-
-apert- see aperir
-
-aperte adj open (= not closed, limited or hidden)
-
-apertura n opening (1. action of opening; 2. aperture; 3. beginning)
-
-apetale adj [Bot.] apetalous
-
-aphasia (-ía) n [Pathol.] aphasia
-
-aphasic adj aphasic, aphasiac
-
-aphasico n aphasic, aphasiac
-
-aphone adj aphonic, voiceless
-
-aphonia (-ía) n aphonia
-
-aphonic adj aphonic, voiceless
-
-aphorisar v to aphorize (= to speak, write, etc., in aphorisms)
-
-Hence: aphorismo; aphorista-aphoristic
-
-aphorismo n aphorism
-
-aphorista n aphorist
-
-aphoristic adj aphoristic
-
-aphrodis- see Aphrodite
-
-aphrodisiac (íac) adj aphrodisiac
-
-aphrodisiaco (-íaco) n aphrodisiac
-
-Aphrodite npr [Gr. Mythol.] Aphrodite
-
-Hence: aphroditic; aphrodisiac-aphrodisiaco; Hermaphrodito etc.
-
-aphroditic adj aphroditic, venereal
-
-apiario¹ n bee-keeper
-
-apiario² n apiary
-
-apice (á-) n apex
-
-apicula n honey-bee
-
-apiculario n bee-hive
-
-api·cultor n bee-keeper, apiculturist
-
-api·cultura n bee-keeping, apiculture
-
-api·vore adj bee-eating
-
-apo- prefixo [ap- before -h- and vowels; used chiefly to form technical terms] apo-, ap- (1. off, away; 2. separate)
-
-Hence: apogee etc.: apostasia etc.
-
-apocryphe (-ócryphe) adj apocryphal; specif.: [Eccl.]; also: spurious, unauthenticated
-
-Hence: apocrypho
-
-apocrypho (-ócrypho) n apocryphon, also: apocrypha;
-apocryphos apocrypha, apocryphas
-
-apogee (-ée) adj apogean, apogeal
-
-apogeo (-éo) n apogee (1. [Astron.]; 2. highest point, culmination)
-
-Apolline npr [Gr.Myth.] Apollo
-
-Hence: apollinee
-
-apollinee adj Apolline, Apollonian
-
-Apollon npr [Gr. Mythol.] Apollo
-
-apolog- see apologia
-
-apologetic adj apologetic (= defending by speech or writing)
-
-Hence: apologetica
-
-apologetica n apologetics
-
-apologia (-ía) n apology, apologia
-
-Hence: apologista; apologetic &
-
-apologista n apologist
-
-apologo (-ólogo) n apologue
-
-apophysis (-ó-) n [Anat., Zool., etc.] apophysis
-
-apoplectic adj apoplectic, apoplectical
-
-apoplexia (-ía) n apoplexy
-
-apostasia (-ía) n apostasy
-
-apostata (-ó-) n apostate
-
-Hence: apostatic
-
-a posteriori [L] adv a posteriori
-
-apostolato n apostolate
-
-apostolic adj apostolic (1. pertaining to the apostles or their teachings; 2. papal)
-
-apostolicitate n apostolicity
-
-apostolo (-ós-) n apostle;
-le Symbolo del Apostolos the Apostles' Creed
-
-Hence: apostolato; apostolic-apostolicitate
-
-apostrophar v [Rhet.] to apostrophize (= to address in an apostrophe)
-
-apostrophe (-pós-) n [Rhet.] apostrophe
-
-Hence: apostrophar
-
-apostropho n apostrophe (= the mark ' as used in "ne'er, boy's, etc.")
-
-apotheca n pharmacy, apothecary's
-
-Hence: apothecario
-
-apothecario n apothecary
-
-apotheosis (-ósis) n apotheosis (1. [Class. Hist.] deification; 2. glorification)
-
-appaciabile adj appeasable
-
-appaciamento n appeasement; pacification
-
-appaciar v to appease
-
-Hence: appaciamento; appaciabile-inappaciabile; appaciator
-
-appaciator n appeaser
-
-apparar v to prepare
-
-Hence: apparato
-
-apparato n I. apparatus (1. appliance, instrument; 2. collection of mechanical contrivances for carrying out a given work); II. pomp, display;
-apparato respiratori respiratory apparatus;
-apparato photographic [Photog.] camera
-
-apparentar v to ally or connect by marriage
-
-apparente adj apparent (1. plain to see; 2. seeming);
-diametro apparente apparent diameter;
-morte apparente suspended animation
-
-apparentia n appearance (= aspect);
-salvar le apparentias to keep up appearances
-
-apparer v to appear (= to come in sight)
-
-Hence: apparente-apparentia; apparition; reapparer-reapparition
-
-apparition n apparition (1. act of appearing, appearance; 2. phantom, ghost)
-
-appartamento n 1. (act of) separating; 2. apartment, flat
-
-appartar v to separate
-
-Hence: appartamento
-
-appellabile adj appealable
-
-appellante n [Law] appellant
-
-appellar v 1. [Law] to appeal; 2. to call, name;
-appellar a to appeal to (for help etc.);
-appellar de (un sententia) to appeal against (a sentence)
-
-Hence: appello; appellante; appellabile-inappellabile; appellation; appellative-appellativo
-
-appellation n I. appeal (1. [Law]; 2. as in "the appeal to reason"); II. appellation
-
-appellative adj appellative (1. denominative of a class; 2. as in "the appellative faculty of children")
-
-appellativo n [Gram.] appellative (= common or class name)
-
-appello n appeal (1. [Law]; 2. earnest request);
-corte de appello Court of Appeal, Appellate Court;
-appello nominal roll call
-
-appender v 1. to hang up (on, to, onto, etc.); 2. to append
-
-Hence: appendice &
-
-appendice (-én-) n appendix (1. appendage; 2. "appendix to a book, etc."; 3. [Anat.])
-
-Hence: appendicitis; appendicula-appendicular; appendicectomia etc.
-
-appendic·ectomia (-ía) n [Surg.] appendectomy
-
-appendicitis (-ítis) n appendicitis
-
-appendicula n appendicle, small appendix or appendage
-
-appendicular adj [Pathol.] appendicular
-
-appercept- see apperciper
-
-apperception n [Psychol.] apperception
-
-apperciper [-cip-/-cept-] v to perceive, apprehend (mentally)
-
-Hence: apperception
-
-appertinente adj appurtenant, appertinent
-
-appertinentia n [Law] appurtenance
-
-appertiner v to appertain
-
-appestar v to infect (with a plague)
-
-appetente 1. ppr of appeter; 2. adj longing, desirous (of)
-
-appetentia n appetency, appetence (= fixed and strong desire); also: appetite
-
-appeter v to crave, have a craving for
-
-Hence: appetente-appetentia, inappetente-inappetentia; appetibile; appetive; appetito
-
-appetibile adj appetible, desirable
-
-appetitive adj appetitive (= having appetite; giving appetite)
-
-appetito n appetite
-
-applanamento n (act of) flattening, smoothing, planing
-
-applanar v to flatten, smooth, plane;
-applanar difficultates to smooth away difficulties
-
-Hence: applanamento
-
-applattar v to flatten (= to make flat, bring level)
-
-applauder [-plaud-/-plaus-] v to applaud
-
-Hence: applauso; applauditor
-
-applauditor n applauder
-
-applaus- see applauder
-
-applauso n applause
-
-applicabile adj 1. that can be applied or put on; 2. applicable, appropriate
-
-applicabilitate n appropriateness, applicability
-
-applicar v to apply (1. to put on; 2. to put to use);
-applicar se a to apply oneself, put one's mind to;
-scientias applicate applied sciences
-
-Hence: applicabile-applicabilitate, inapplicabile-inapplicabilitate; application-inapplication
-
-application n application (1. act of putting on; 2. act of putting to use; 3. diligence)
-
-appoiar v 1. to keep up, prop (up); also: to support, back, aid;
-appoiar (un cosa) contra to lean (something) against;
-appoiar (un cosa) super to rest (something) on;
-appoiar se (super, contra) to lean (on, against)
-
-Hence: appoio
-
-appoio (-óyo) n support (1. backing, aid; 2. prop, rest, shore)
-
-apponer [-pon-/-posit-] v to appose (as in "to appose one's seal to")
-
-Hence: apposition; appositivo; apposite
-
-apportar v to bring
-
-apportionamento n apportionment
-
-apportionar v to apportion
-
-Hence: apportionamento
-
-apposit- see apponer
-
-apposite (-pó-) adj apposite, relevant
-
-apposition n apposition (1. act of placing near; 2. [Gram.]);
-in apposition in apposition
-
-appositive adj [Gram.] appositive
-
-appreciabile adj 1. appreciable; 2. worthy of esteem
-
-appreciamento n appraisal
-
-appreciar v 1. to appraise (= to estimate the value of); 2. to appreciate (= to esteem highly)
-
-Hence: appreciabile-inappreciabile; appreciamento; appreciation; appreciator
-
-appreciation n appreciation (1. appraisal; 2. adequate or high estimation of value)
-
-appreciator n 1. appraiser; 2. one who appreciates, esteems highly
-
-apprehender [-hend-/-hens-] v to apprehend (1. to seize, arrest; 2. to grasp mentally, understand; 3. to dread)
-
-Hence: apprehensibile-apprehensibilitate; apprehension; apprehensive
-
-apprehens- see apprehender
-
-apprehensibile adj apprehensible, understandable
-
-apprehensibilitate n apprehensibility, understandability
-
-apprehension n apprehension (1. act of grasping mentally; 2. dread)
-
-apprehensive adj apprehensive (= dreading)
-
-apprender v to learn (1. to gain knowledge of, by study or instruction; 2. to acquire information about, find out about)
-
-Hence: disapprender
-
-apprentissage (-aje) n apprenticeship
-
-apprentisse n apprentice
-
-Hence: apprentissage
-
-apprestar v to prepare, make ready
-
-Hence: appresto
-
-appresto n preparation
-
-approbabile adj approvable
-
-approbar v to approve, approve of
-
-Hence: approbabile; approbation; approbative; approbator; approbatori; disapprobar-disapprobation, disapprobator
-
-approbation n approval, approbation
-
-approbative adj approving, approbative
-
-approbator n approver
-
-approbatori adj approbatory, approbative
-
-approchabile (-sh-) adj approachable
-
-approchar (-sh-) v to approach (= to come or go near to)
-
-Hence: approche; approchabile
-
-approche (-sh-) n approach (= action of approaching);
-approches [Mil.] approaches
-
-approfundamento n 1. (action of) deepening, making deeper in level; 2. (thorough) investigation
-
-approfundar v 1. to deepen (= to make deeper in level); 2. to go deeply into, fathom, investigate
-
-appropriabile adj 1. that may be appropriated; 2. adaptable
-
-appropriar v to adapt;
-appropriar se un cosa to appropriate something (= to take something for one's own)
-
-Hence: appropriabile; appropriation; appropriate
-
-appropriate 1. pp of appropriar; 2. adj appropriate
-
-appropriation n 1. appropriation (= action of appropriating); 2. adaptation (= action of adapting)
-
-approvisionamento n (act of) supplying, furnishing
-
-approvisionar v to supply, furnish, cater
-
-approximar v to approximate, bring near;
-approximar se (a) to approach, come near
-
-Hence: approximation; approximative
-
-approximation n approximation (1. action of approximating; 2. close estimate)
-
-approximative adj approximate, approximative
-
-appunctamento n appointment, rendez-vous
-
-appunctar v 1. to appoint (as in "to appoint someone to a post"); 2. to point, sharpen
-
-Hence: appunctamento, disappunctar &
-
-appuramento n 1. purification; 2. verification, audit
-
-appurar v I. to clear (1. to free from impurities; 2. to free from obligation); II. to free from errors; to verify, audit, etc.
-
-Hence: appuramento
-
-april n April
-
-a priori [L] adv a priori
-
-Hence: apriorismo; apriorista-aprioristic
-
-apriorismo n a priori reasoning
-
-apriorista n a priori reasoner
-
-aprioristic adj a priori
-
-apsidal adj apsidal (1. [Astron.]; 2. [Arch.])
-
-apside (ápside) n apse (1. [Astron.] apsis; 2. [Arch.])
-
-Hence: apsidal
-
-aptar v to adapt
-
-apte adj apt (= suited to its purpose)
-
-Hence: aptitude; aptar-adaptar &; inepte &; inapte-inaptitude
-
-aptere adj [Entom.] apterous
-
-apteros (áp-) npl [Entom.] Aptera
-
-aptitude n aptitude (= natural capacity or propensity)
-
-apud (á-) prep near, with, at, by
-
-aqua n water (1. the liquid "water"; 2. limpidity and luster of a precious stone);
-aqua de Colonia cologne, eau de Cologne;
-aqua forte 1. aqua fortis, nitric acid; 2. etching (= picture printed from etched plate);
-aqua pesante heavy water;
-via de aqua [Naut.] leak;
-facer aqua [Naut.] to leak
-
-Hence: aquarella &; aquario; aquiero; aquatic; aquatile; aquee-terraquee etc; aquose-aquositate; aquar-disaquar-disaquamento; aquamarin etc; aqueducto etc.
-
-aqua·marin adj aquamarine
-
-Hence: aquamarina
-
-aquamarina n 1. (the stone) aquamarine; 2. (the color) aquamarine
-
-aquar v to water (plants, etc.); to sprinkle (with water)
-
-aquarella n water color (painting)
-
-Hence: aquarellista
-
-aquarellista n water-color painter
-
-aquario n aquarium;
-Aquario [Astron.] Aquarius, Water Bearer
-
-aquatic adj aquatic
-
-aquatile adj aquatic
-
-aque·ducto n [Arch.] aqueduct
-
-aquee adj aqueous
-
-aquiero n drain (= channel or pipe for carrying away water or other liquid)
-
-aquila (á-) n eagle
-
-Hence: aquilin
-
-aquilegia n [Bot.] columbine
-
-aquilin adj aquiline
-
-Aquisgrano npr Aachen, Aix-la-Chapelle
-
-aquose adj aqueous, watery
-
-aquositate n aquosity, wateriness
-
-ar n are (= one hundredth part of a hectare)
-
-Hence: hectar etc.; deciar etc.
-
--ar suffixo adjective [used instead of -al with nouns containing -l-] -ar (= pertaining to ..., characteristic of ..., etc.)
-
-Hence: lunar etc.; regular etc.
-
--ar suffixo verbal [used with nouns and adjectives] -ate or zero (as in "to catenate; to chain, etc.") (1. [with nouns] to make use of ..., to apply ..., etc.; 2. [with adjectives] to render ..., to + '. ., etc.)
-
-Hence: martellar etc.; acierar etc.; examinar etc.; vulnerar etc.; siccar etc.; duplicar etc.
-
-arabe¹ (á-) adj Arab, Arabian, Arabic;
-cavallo arabe Arabian horse
-
-Hence: arabe²-Arabia-arabic, arabismo, arabista, arabesc-arabesco
-
-arabe² (á-) n 1. Arab; 2. Arabic
-
-arabesc adj [Art] arabesque
-
-arabesco n [Art] arabesque
-
-Arabia npr Arabia
-
-arabic adj Arab, Arabian, Arabic;
-cifra arabic Arabic number;
-gumma arabic gum Arabic
-
-arabile adj arable
-
-arabismo n Arabicism, Arabism, Arabic idiom
-
-arabista n Arabist (= student of Arabic language and culture)
-
-arachide (-rá-) n 1. [Bot.] Arachis; 2. peanut;
-oleo de arachide peanut oil
-
-Hence: arachidic
-
-arachidic adj arachidic;
-acido arachidic arachidic acid
-
-aranea n spider;
-tela de aranea cobweb, spider web
-
-arar v to plow
-
-Hence: arabile; arator; aratori; aratura
-
-arator n plower, plowman
-
-aratori adj agricultural, farming
-
-aratro n plow
-
-aratura n 1. (act of) plowing; 2. plowed field
-
-arbitrage (-aje) n 1. arbitration, arbitrament; 2. [Bank. etc.] arbitrage
-
-arbitramento n arbitration, arbitrament
-
-arbitrar v to arbitrate
-
-arbitrari adj arbitrary
-
-arbitrarietate n arbitrariness
-
-arbitration n arbitration
-
-arbitrator n arbitrator
-
-arbitro (á-) n arbiter; also: umpire
-
-Hence: arbitrari-arbitrarietate; arbitrar-arbitrage, arbitramento, arbitration, arbitrator
-
-arbore n [Bot.] tree;
-arbore genealogic family tree, genealogical tree
-
-Hence: arboreto; arboretto; arborista; arboree; arborescer-arborescente-arborescentia; arborisar-arborisation, arborisate
-
-arboree adj arboreal, tree
-
-arborescente 1. ppr of arborescer; 2. adj [Bot.] arborescent (= of treelike growth)
-
-arborescentia n [Bot.] arborescence
-
-arborescer v [Bot.] to arboresce, grow into a tree
-
-arboreto n grove; also: arboretum
-
-arboretto n small tree
-
-arborisar v to give a treelike appearance to, arborize
-
-arborisate 1. pp of arborisar; 2. adj [Mineral.] dendritic
-
-arborisation n arborization; also: [Mineral.; Anat.; etc.]
-
-arborista n arborist
-
-arbusto n shrub, bush
-
-arca n ark
-
-Hence: arcan &
-
-arcada n 1. archway; 2. arcade
-
-Arcadia npr Arcadia
-
-Hence: arcadian
-
-arcadian adj Arcadian
-
-arcan adj secret, mysterious
-
-Hence: arcano
-
-arcano n secret, mystery
-
-arcar v to arch (1. to cause to arch or curve; 2. to furnish with arches)
-
-arch- [occurring in compounds] I. -arch-, -arch (= rule, ruling, ruler, etc.); II. archi-, arche-, arch- (1. chief, principal, leading; 2. primitive, original, archetypal)
-
-Hence: anarch- &; archetypo etc.; archiduce etc.; archipresbytero etc.; architrave etc.; hierarcha etc.; patriarcha etc.; syriarcha etc.; tetrarcha etc.; pentarchia etc.; archonte; exarch- &; oligarch- etc.; monarch- etc.
-
-arch- see also arco
-
-archa- see arche-
-
-archaic (-áic) adj archaic
-
-archaisar v to archaize
-
-archaismo (-ísmo) n archaism
-
-archaista (-ísta) n archaist
-
-arch·angelo (-án-) n archangel
-
-arche- adj [occurring in derivatives and compounds] archaeo-, archae- (= old)
-
-Hence: archaic; archaisar-archaismo, archaista; archeologo etc.
-
-archeologia (-ía) n archaeology
-
-archeologic adj archaeological
-
-archeo·logo (-ólo-) n archaeologist
-
-Hence: archeologia; archeologic
-
-archero n archer
-
-archetto n (violin) bow
-
-arche·typo (-é-) n archetype
-
-archi·diacono (-diá-) n archdeacon
-
-archiducal adj archducal
-
-archiducato n archduchy
-
-archi·duce n archduke
-
-Hence: archiducato; archiduchessa; archiducal
-
-archiduchessa n archduchess
-
-archiepiscopal adj archiepiscopal
-
-archiepiscopato n archiepiscopate; also: archbishopric
-
-archi·episcopo (-ís-) n archbishop
-
-Hence: archiepiscopato; archiepiscopal
-
-Archimedes (-mé-) npr Archimedes;
-principio de Archimedes Archimedean principle, Archimedes' principle;
-vite de Archimedes Archimedean screw, Archimedes' screw
-
-archipelago (-pé-) n archipelago
-
-archi·presbytero (-bí-) n archpriest
-
-archi·prestre n archpriest
-
-architect- see architecton-
-
-architecto n architect
-
-archi·tecton- n [occurring in derivatives] architecton- (= architect)
-
-Hence: architectonic; architectonica; architecto-architectura
-
-architectonic adj architectonic (= architectural; also: constructive)
-
-architectonica n architectonics (= science or principles of architecture)
-
-architectura n architecture
-
-archi·trave n [Arch.] architrave
-
-archival adj archival
-
-archivamento n (action of) filing in archives
-
-archivar v to file in archives
-
-archivista n archivist
-
-archivo n archive
-
-Hence: archivista; archival; archivar-archivamento
-
-archi·volta n archivolt
-
-archonte n [Gr. Hist.] archon
-
-arcion n saddlebow
-
-arco n I. arc; II. arch; III. bow (1. weapon for shooting arrows; 2. rod for playing the violin, etc.);
-arco triumphal or de triumpho triumphal arch
-
-Hence: arcada; archero; archetto; arcion; arcar; archivolta etc.; arcobalista etc.
-
-arco·ballista n crossbow
-
-arct- n [occurring in derivatives and compounds] arct- (= bear)
-
-Hence: arctic-antarctic, holarctic etc.
-
-arctic adj arctic;
-polo arctic arctic pole, north pole;
-circulo arctic arctic circle;
-Oceano Arctic Arctic (Ocean)
-
-Arcturo npr [Astron.] Arcturus
-
-ardente I. ppr of arder; II. adj ardent (1. burning; 2. fervent)
-
-arder v to burn (1. to be on fire; 2. to cause to be consumed by fire)
-
-Hence: ardente; ardimento; ardor-ardorose; arditura
-
-ardesia n slate (1. [Mineral.]; 2. roofing slate; 3. writing slate)
-
-Hence: ardesiero; ardesiera; ardesiose
-
-ardesiera n slate quarry
-
-ardesiero n slate worker; slate-quarry owner
-
-ardesiose adj slate, slaty
-
-ardimento n burning (1. being on fire; 2. causing to be consumed by fire)
-
-arditura n burn (= hurt, injury, or effect caused by burning)
-
-ardor n ardor (1. fierce heat; 2. fervor)
-
-ardorose adj ardent, ardurous
-
-ardue adj arduous (1. steep; 2. difficult to achieve)
-
-Hence: arduitate
-
-arduitate n arduousness
-
-area n area (1. clear space within a building; 2. surface extent)
-
-arena n I. sand; II. arena (1. place of combat; 2. [Med.] gravel)
-
-Hence: arenari-arenario; arenero; arenacee; arenose-arenositate; arenar-arenamento
-
-arenacee adj sandy, arenaceous
-
-arenamento n stranding, grounding
-
-arenar v I. to sand (1. to cover with sand; 2. to rub with sand); II. to strand, run aground
-
-arenari adj (of) sand;
-petra arenari sandstone
-
-arenario n sandpit
-
-arenero n dealer in sand
-
-arenose adj sandy, gravelly; gritty
-
-arenositate n sandiness, gravelliness; grittiness
-
-areopagita n [Gr. Hist.] Arcopagite
-
-Areopago (-ó-) [Gr. Hist.] Areopagus
-
-Hence: areopagita
-
-Ares (á-) npr [Gr. Mythol.] Ares
-
-argentano n argentan, German silver
-
-argentar v to silver, cover or plate with silver
-
-argentate adj argentate
-
-argentator n silverer, silver plater
-
-argentee adj silvery (= silver-colored)
-
-argenteria (-ía) n silver plate
-
-argentero n silversmith
-
-argentifere adj argentiferous, yielding silver
-
-argentin adj. I. silvery, argentine (1. silvercolored; 2. silver-toned); II. Argentine
-
-Argentina¹ npr Argentina
-
-argentina² n [Zool.] argentine
-
-argentino n Argentine, Argentino
-
-argento n silver;
-argento vive quicksilver, mercury
-
-Hence: argentano; argentero; argenteria; argentee; argentifere; argentin-argentino, argentina, Argentina; argentose; argentar-argentator, argentate, disargentar
-
-argentose adj containing silver, argentous
-
-argilla n clay, argil
-
-Hence: argillaria; argillose
-
-argillaria n clay-pit
-
-argillose adj clayey
-
-Argo npr [Gr. Mythol.] Argo
-
-Hence: Argonauta etc.
-
-argon (ár-) n [(Chem.] argon
-
-Argo·nauta npr [Gr. Mythol.] Argonaut;
-argonauta 1. pioneer, explorer etc.; 2. [Zool.] argonaut
-
-argot [F] n argot; also: slang
-
-Hence: argotic
-
-argotic adj argotic; also: slangy (as in "a slangy expression")
-
-arguer v 1. to argue (= to offer arguments for or against); 2. to show, make clear; 3. to infer
-
-Hence: argumento &; arguibile; argute &
-
-arguibile adj arguable, debatable
-
-argumentar v to argue (= to offer arguments for or against)
-
-argumentation n argumentation
-
-argumentative adj 1. [Lit.] expository, giving the argument of; 2. argumentative (= containing a process of reasoning)
-
-argumento n argument (1. reason offered in proof; 2. summary)
-
-Hence: argumentar-argumentation, argumentative
-
-argute adj 1. clear (to the ear); shrill, piercing; 2. keen, quick-witted, subtle
-
-Hence: argutia-argutiose, argutiar
-
-argutia n 1. quick-wittedness; subtlety; 2. quibble, cavil; 3. witticism
-
-argutiar v to quibble, cavil
-
-argutiose adj quibbling, caviling
-
-argyr·anthe adj argyranthous
-
-argyric adj argyric
-
-argyrite n [Mineral.] argyrite
-
-argyro- n [occurring in derivatives and compounds] argyro-, argyr- (= silver)
-
-Hence: argyrite; argyric; argyroneta etc.; argyranthe etc.; lithargyro etc.
-
-argyro·neta n [Zool.] Argyroneta, water spider
-
--ari suffixo adjective [used with nouns] -ary (= pertaining to ..., consisting of ..., etc.)
-
-Hence: -ario; legendari etc.; cotonari etc.; sanitari etc.; nonagenari etc.
-
-aria [I] n [Mus.] aria
-
-Hence: arietta; ariose-arioso
-
-Ariadna nprf [Gr. Mythol.] Ariadne;
-filo de Ariadna Ariadne's clew
-
-aride (á-) adj arid
-
-Hence: ariditate
-
-ariditate n aridity
-
-Aries (á-) npr [Astron.] Aries, Ram
-
-arietar v to ram
-
-arietari adj ram, ram's (= of a ram or battering ram)
-
-arietation n ramming, arietation
-
-ariete n 1. ram; 2. battering ram; also: [Rom. Antiq.] aries;
-ariete hydraulic hydraulic ram;
-Ariete [Astron.] Aries, Ram
-
-Hence: arietari; arietar-arietation
-
-arietta n [Mus.] arietta
-
--ario¹ suffixo substantive [used with nouns] -ary, -arian, -aire (= person concerned with ... or characterized by ...)
-
-Hence: missionario etc.; pensionario etc.; millionario etc.
-
--ario² suffixo substantive [used with nouns] -ary, -arium (1. collection of ...; 2. place containing ... or place containing a collection of ...)
-
-Hence: aquario etc.; aviario etc.; granario etc.
-
-ariose adj [Mus.] ariose, arioso
-
-arioso n [Mus.] arioso
-
-arist- adj [occurring in compounds] aristo-, arist- (= best)
-
-Hence: aristocrate etc.; aristocratia etc.; aristocratic etc.
-
-aristo·crate (-ó-) n aristocrat
-
-aristo·cratia (-ía) n aristocracy
-
-aristo·cratic adj aristocratic
-
-Aristotele npr [Gr. Philos.] Aristotle
-
-Hence: aristotelismo; aristotelic
-
-aristotelic adj Aristotelian
-
-aristotelismo n Aristotelianism
-
-arithme- v [occurring in derivatives]
-
-arithmetic adj arithmetic, arithmetical
-
-arithmetica n arithmetic;
-arithmetica superior higher arithmetic
-
-arithmetico n arithmetician
-
-arithmo- n [occurring in derivatives and compounds] arithmo-, arithm- (= number)
-
-Hence: arithme-arithmetic-arithmetico, arithmetica; arithmometro etc.; arithmomantia etc.; logarithmo etc.
-
-arithmo·mantia (-ía) n arithmomancy
-
-arithmo·metro (-ó-) n arithmometer
-
-Arlequin npr Harlequin;
-arlequin harlequin, buffoon
-
-Hence: arlequinada
-
-arlequinada n harlequinade; also: buffoonery
-
-arma n arm (1. weapon; 2. branch of the military service);
-armas blanc side-arms;
-armas de foco fire-arms;
-homine de armas man-at-arms;
-prender le armas to take up arms;
-armas [Her.] arms
-
-Hence: armero; armar-armamento, armatura, armea, disarmar-disarmamento, rearmar-rearmamento; armistitio etc.; armipotente etc.
-
-armamento n 1. armament (= equipment with arms); 2. commissioning (of a ship)
-
-armar v to arm (1. to supply with weapons; 2. to equip, fit out);
-armar un persona cavallero to dub someone a knight;
-armar se de patientia to exercise patience
-
-armario n wardrobe, cupboard
-
-armatura n 1. armor; 2. [Magnet., Elec.] armature; 3. frame, framework
-
-armea (-éa) n army;
-armea aeree air force
-
-Armenia npr Armenia
-
-Hence: armeniaca; armenie-armenio
-
-armeniaca (-í-) n apricot
-
-armenie adj Armenian
-
-armenio¹ n Armenian (1. Armenian language; 2. inhabitant of Armenia)
-
-armenio² n ermine (1. the animal "ermine"; 2. ermine fur)
-
-armero n armorer (1. manufacturer of arms; 2. official in charge of armament or arms)
-
-armi·potente adj armipotent
-
-armi·stitio n armistice
-
-aroma [-ma/-mat-] n aroma
-
-Hence: aromatic; aromatisar-aromatisation
-
-aromat- see aroma
-
-aromate (-ó-) n aroma
-
-Hence: aromatic; aromatisar-aromatisation
-
-aromatic adj aromatic, fragrant
-
-aromatisar v to aromatize
-
-aromatisation n aromatization
-
-arpeggio [I] n [Mus.] arpeggio
-
-arrangiamento (-ja-) n arrangement (1. order; 2. preparation, plan)
-
-arrangiar (-ja-) v to arrange (1. to set in order; 2. to contrive; 3. to settle, straighten out);
-arrangiar se to manage, get along
-
-Hence: arrangiamento
-
-arrentar v to rent or let (for hire)
-
-arrestar v to arrest (1. to stop, bring to a standstill; 2. to seize (someone) by legal authority)
-
-Hence: arresto; arrestation
-
-arrestation n 1. arresting, stopping (= bringing to a standstill); 2. arrest (= act of seizing someone by legal authority)
-
-arresto n 1. arresting, stopping (= bringing to a standstill); 2. arrest (= apprehension by legal authority)
-
-arretrar v 1. to draw backwards; 2. to delay;
-arretrar se 1. to withdraw, draw (oneself) back; 2. to be behindhand or in arrears
-
-arretrate 1. pp of arretrar; 2. adj behindhand, in arrears;
-pagamento arretrate overdue payment;
-soldo arretrate [Mil.] back pay
-
-arretrato n arrears
-
-arrha n [Law] earnest, earnest money
-
-arrivar v to arrive
-
-Hence: arrivismo; arrivista; arrivata
-
-arrivata n arrival
-
-arrivismo n unscrupulous ambition
-
-arrivista n (social) climber
-
-arrogante adj arrogant
-
-arrogantia n arrogance
-
-arrogar v to arrogate (1. [Rom. Law] to adrogate; 2. to claim as one's own);
-arrogar se to arrogate to oneself
-
-Hence: arrogante-arrogantia; arrogation
-
-arrogation n arrogation (1. act of making exorbitant claims; 2. [Rom. Law])
-
-arrotundar v to round, make round
-
-arrugar v to wrinkle, crease;
-arrugar le fronte to frown
-
-arsen- see arsenico
-
-arsenal n 1. dockyard; 2. arsenal
-
-arsenical adj arsenical; [Chem.] arsenic
-
-arsenico n arsenic
-
-Hence: arsenical; arsenite; arsenium; arseniose-arseniophosphato etc.
-
-arsenio- see arseniose
-
-arsenio·phosphato n arseniophosphate
-
-arseniose adj arsenious
-
-arsenio·sulfato n arseniosulfate
-
-arsenite n [Chem.] arsenite
-
-arsenium (-sé-) n arsenium, arsenic
-
-arte n art (1. "fine art"; 2. skill);
-opera de arte work of art;
-artes liberal liberal arts;
-belle artes fine arts
-
-Hence: artisano; artista-artistic; artifice etc.; artefacto etc.
-
-arte·facto n artifact, man-made product
-
-arteria n artery
-
-Hence: arterial; arteriosclerosis etc.; arteriotomia etc.
-
-arterial adj arterial;
-sanguine arterial arterial blood;
-pression arterial blood pressure
-
-arterio·sclerosis (-ósis) n arteriosclerosis
-
-arterio·tomia (-ía) n arteriotomy
-
-arthritic adj [Pathol.] arthritic
-
-arthritis (-ítis) n [Pathol.] arthritis
-
-arthritismo n [Pathol.] arthritism
-
-arthro- n [occurring in derivatives and compounds] arthro- (= joint)
-
-Hence: arthritis-arthritismo, arthritic; arthropode etc.
-
-arthro·pode (-ró-) adj arthropod
-
-Hence: arthropodo
-
-arthropodo (-ró-) n arthropod; arthropodos [Zool.] Arthropoda
-
-artichoc n artichoke
-
-articulabile adj pronounceable (that can be articulated)
-
-articular¹ adj articular
-
-articular² v to articulate (1. to form, move in, a joint; 2. to speak distinctly)
-
-articulate adj articulate (1. jointed; 2. uttered in distinct syllables)
-
-articulation n articulation (1. [Anat.] joint; 2. enunciation)
-
-articulista n writer of articles
-
-articulo n I. [Anat.] joint; II. article (1. paragraph, section; 2. "article in a magazine, newspapcr, etc.); 3. "article of merchandise"; 4. [Gram]);
-articulo de fide article of faith;
-articulo de fundo editorial, leading article;
-articulo definite (indefinite) definite (indefinite) article
-
-Hence: articulista; articular¹; articular²-articulabile-inarticulabile, articulation, articulate-inarticulate, multiarticulate etc., multarticulate etc.; disarticular-disarticulation
-
-arti·fice (-tí-) n artificer (= skilled or artistic worker)
-
-Hence: artificio-artificial, artificiose
-
-artificial adj artificial;
-seta artificial rayon
-
-artificio n artifice, trick;
-foco de artificio fireworks
-
-artificiose adj artful, crafty
-
-artillar v to arm (= to equip with artillery)
-
-Hence: artilleria-artillerista
-
-artilleria (-ía) n artillery; ordnance, gunnery;
-artilleria de campania field artillery;
-artilleria a cavallo horse artillery
-
-artillerista n artilleryman
-
-artisano n artisan
-
-artista n artist
-
-artistic adj artistic
-
-Arya [Skr.] n Arya, Aryan
-
-Hence: aryan-aryano
-
-aryan adj Aryan (1. Indo-Iranian; 2. Indo-European)
-
-aryano n Aryan (1. Indo-Iranian; 2. Indo-European)
-
-asbesto n asbestos
-
-ascendente n 1. ancestor; 2. ascendant, ascendancy
-
-ascendentia n ancestry (= ancestral lineage)
-
-ascender [-scend-/-scens-] v to ascend
-
-Hence: ascendente-ascendentia; ascension-ascensional, ascensionista; ascensor
-
-ascens- see ascender
-
-ascension n ascent, ascension;
-le Ascension the Ascension
-
-ascensional adj ascensional
-
-ascensionista n mountain climber, ascensionist
-
-ascensor n elevator, lift
-
-ascese n ascetic practice; asceticism
-
-asceta n ascetic
-
-Hence: ascetismo; ascetic; ascetica
-
-ascetic adj ascetic, ascetical
-
-ascetica n ascetics; ascetical theology
-
-ascetismo n asceticism
-
-asclepiadaceas npl [Bot.] Asclepiadaceae
-
-asclepiades (-í-) npl [Bot.] Asclepias
-
-Asclepio nprm [Gr. Mythol.] Asclepius
-
-Hence: asclepiades-asclepiadaceas
-
-ascolta n 1. listening, hearing; 2. eavesdropping; 3. listening place or post
-
-ascoltamento n listening
-
-ascoltar v to listen to (1. to hearken to; 2. to mind, heed)
-
-Hence: ascolta; ascoltamento; ascoltator
-
-ascoltator n listener
-
-ascriber [-scrib-/-script-] v to ascribe, attribute
-
-Hence: ascription
-
-ascript- see ascriber
-
-ascription n ascription
-
-asepsis n asepsis
-
-aseptic adj aseptic
-
-aseptico n aseptic
-
-asexual adj asexual, sexless
-
-Asia npr Asia (1. Roman Province in Asia Minor; 2. the continent Asia);
-Asia Minor Asia Minor
-
-Hence: asiatic-asiatico; Australasia etc.
-
-asiatic adj Asiatic (1. pertaining to Asia; 2. [Rhet.] florid, ornate)
-
-asiatico n Asiatic
-
-asineria (-ía) n 1. asininity; 2. asinine act
-
-asinero n donkey driver
-
-asinin adj asinine
-
-asininitate n asininity
-
-asino (á-) n donkey, ass
-
-Hence: asinero; asineria; asinin-asininitate
-
-asparago (-pá-) n asparagus;
-asparago plumose asparagus fern
-
-aspect- see aspic-
-
-aspecto n aspect (1. look, appearance; 2. "one of the aspects of a question"; 3. [Astrol.])
-
-asperar v to make rough, roughen
-
-aspere (á-) adj rough, harsh
-
-Hence: asperitate; asperar-exasperar &
-
-asperger [-sperg-/-spers-] v to besprinkle
-
-Hence: aspersion; aspersorio
-
-asperitate n roughness, harshness, asperity
-
-aspers- see asperger
-
-aspersion n (act of) sprinkling, aspersion
-
-aspersorio n [Eccl.] aspergillum
-
-asphalto n asphalt
-
-aspic [F] n [Cookery] aspic
-
-aspic- [-spic-/-spect-] v [occurring in derivatives]
-
-Hence: aspecto
-
-aspirante n 1. aspirant; 2. [Mil., Nav.] midshipman, cadet, etc.
-
-aspirar v 1. to aspire (= to desire earnestly); 2. [Phonet.] to aspirate; 3. to inhale;
-aspirar a to aspire to
-
-Hence: aspirante; aspiration; aspirator
-
-aspiration n I. aspiration (1. desire for; 2. [Phonet.] action of aspirating); II. inspiration, inhaling
-
-aspirator n 1. [Mech.] aspirator; 2. vacuum cleaner
-
-aspirina n aspirin
-
-asplenio n [Bot.] Asplenium; also: spleenwort
-
-assalir [-sal-/-salt-] v to attack, assail
-
-Hence: assalto-assaltar-assaltator; assalitor
-
-assalitor n attacker, assailant, assailer
-
-assalt- see assalir
-
-assaltar v to attack, assault, assail
-
-assaltator n attacker, assaulter, assailant
-
-assalto n attack, assault
-
-assassinamento n murder(ing), assassinating
-
-assassinar v to assassinate, murder
-
-assassination n assassination
-
-assassinato n murder
-
-assassinator n assassin, murderer
-
-assassino n 1. Assassin; 2. assassin, murderer; attrib. murderous, killing
-
-Hence: assassinar-assassinamento, assassination, assassinator, assassinato
-
-assatis (-sá-) adv 1. enough; 2. rather (= fairly, quite)
-
-asse n I. [Rom. Antiq.] as; II. ace (1. [Cards, Dice, etc.]; 2. highly skilled person; also: [Aviation])
-
-assecurabile adj insurable
-
-assecurantia n 1. assurance (= positive statement); 2. [Com.] insurance
-
-assecurar v I. to secure (= to make firm or fast); II. to assure (= to state positively); III. [Com.] to insure;
-assecurar se de un cosa to make sure of, ascertain, something;
-assecurar se de un persona to lay hold of, apprehend, a person;
-assecurar se que to make sure that
-
-Hence: assecurantia; assecurabile; assecurator; reassecurar-reassecurantia
-
-assecurator n insurer, assurer, underwriter
-
-assediar v to besiege
-
-assediator n besieger
-
-assedio n siege (= act of besieging)
-
-Hence: assediar-assediator
-
-assemblar v to assemble (= to gather or fit together)
-
-Hence: assemblea; reassemblar
-
-assemblea (-éa) n assembly, meeting
-
-assentimento n assent
-
-assentir v to assent
-
-Hence: assentimento
-
-asserer [-ser-/-sert-] v to assert, affirm
-
-Hence: assertion; assertive; assertor; assertori
-
-assert- see asserer
-
-assertion n assertion, affirmation
-
-assertive adj assertive, affirmative
-
-assertor n asserter, assertor
-
-assertori adj assertory, affirming
-
-assess- see assider
-
-assessor n assessor (as in "assessor to a judge, magistrate, etc.")
-
-assetar v to make thirsty
-
-assetate 1. pp of assetar; 2. adj thirsty, thirsting
-
-asseverar v to affirm positively, asseverate
-
-Hence: asseverative
-
-asseverative adj asseverating, asseverative
-
-[as·si] (-sí) adv thus, so;
-assi . . como as ... as;
-(un libro) assi (belle) so (beautiful a book), such (a beautiful book) (= si)
-
-assider [-sid-/-sess-] v to sit (by or near)
-
-Hence: assidue &; assessor
-
-assidue adj assiduous
-
-Hence: assiduitate
-
-assiduitate n assiduity
-
-assignabile adj assignable
-
-assignar v to assign (1. to allot; 2. to fix, determine)
-
-Hence: assignabile; assignation
-
-assignation n assignation, assignment (1. act of allotting; 2. [Law] transfer of property, a right, etc.)
-
-assimilabile adj assimilable
-
-assimilar v I. to assimilate (1. to make like; 2. to absorb); II. to liken, compare
-
-Hence: assimilabile; assimilation; assimilative; assimilator; disassimilar &
-
-assimilation n I. assimilation (1. action of making like; 2. absorption); II. likening, comparison
-
-assimilative adj assimilative
-
-assimilator n [Physiol.] assimilator
-
-assistente n assistant
-
-assistentia n 1. assistance; 2. attendance;
-assistentia public (poor) relief;
-assistentia social social welfare
-
-assister v to assist, help;
-assister a to attend, be present at
-
-Hence: assistente-assistentia
-
-associar v to associate (= to connect, combine)
-
-Hence: association; associato; disassociar
-
-association n association (1. act of connecting, combining; 2. group of people joined together for some purpose)
-
-associato n 1. associate (= business partner); 2. member of an association
-
-assonante 1. ppr of assonar; 2. adj assonant
-
-assonantia n assonance; also: [Pros.]
-
-assonar v to assonate (= to put or be in assonance)
-
-Hence: assonante-assonantia
-
-assortimento n assortment (= collection of various kinds of goods)
-
-assortir v to sort, assort
-
-Hence: assortimento
-
-assumer [-sum-/-sumpt-] v to assume (= to take to or upon oneself)
-
-Hence: assumption; reassumer
-
-assumpt- see assumer
-
-assumption n assumption (1. taking to or upon oneself; 2. [Logic]);
-le Assumption [Eccl.] the Assumption
-
-assurdar v 1. to deafen (= to stun with noise); 2. to mute, muffle
-
-Assyria npr Assyria
-
-Hence: assyrie-assyrio; assyriologo etc.
-
-assyrie adj Assyrian
-
-assyrio n Assyrian
-
-assyriologia (-ía) n Assyriology
-
-assyrio·logo (-ólogo) n Assyriologist, Assyriologue
-
-Hence: assyriologia
-
-astere n I. star (1. heavenly body; 2. starshaped figure, etc.); II. [Bot.] aster
-
-Hence: asteria; asterisco; asterismo; asteroide
-
-asteria n 1. starfish; 2. asteriated opal
-
-asterisco n [Print.] asterisk
-
-asterismo n [Astron.] asterism
-
-asteroide n [Astron.] asteroid
-
-asthen- adj [occurring in derivatives] asthen- (= weak)
-
-asthenia (-ía) n asthenia
-
-asthenic adj asthenic
-
-asthenico n asthenic
-
-asthma [-ma/-mat-] n asthma
-
-Hence: asthmatic-antiasthmatic; asthmatico
-
-asthmat- see asthma
-
-asthmatic adj asthmatic
-
-asthmatico n asthmatic
-
-astigmatic adj astigmatic
-
-astigmatismo n astigmatism
-
--astra suffixo substantive fem [used with nouns] step- (as in "stepmother")
-
-Hence: matrastra
-
-astral adj astral;
-corpore astral astral body
-
-astrict- see astringer
-
-astriction n astriction
-
-astrictive adj astringent, astrictive
-
-astringente¹ 1. ppr of astringer; 2. adj astringent
-
-astringente² n astringent
-
-astringentia n astringency
-
-astringer [-string-/-strict-] v to astringe
-
-Hence: astringente-astringentia; astriction; astrictive
-
-astro n star (1. heavenly body; 2. starshaped figure, etc.)
-
-Hence: astral; disastro &; astrophotographia etc.; astrolatria etc.; astrophysic etc.; astronomo etc.; astrolabio etc.
-
--astro suffixo substantive [used with nouns] 1. -aster (= inferior or worthless ...); 2. step- (as in "stepfather")
-
-Hence: -astra; poetastro etc.; patrastro etc.
-
-astro·labio n astrolabe
-
-astro·latria (-ía) n astrolatry
-
-astrologia (-ía) n astrology
-
-astrologic adj astrological
-
-astro·logo (-tró-) n astrologer
-
-Hence: astrologia; astrologic
-
-astronomia (-ía) n astronomy
-
-astronomic adj astronomic, astronomical
-
-astro·nomo (-tró-) n astronomer
-
-Hence: astronomia; astronomic
-
-astro·photographia (-ía) n astrophotography
-
-Hence: astrophotographic
-
-astrophotographic adj astrophotographic
-
-astro·physic adj astrophysical
-
-Hence: astrophysica
-
-astrophysica n astrophysics
-
-astute adj astute (1. sagacious; 2. crafty)
-
-Hence: astutia
-
-astutia n astuteness; also: wiliness, cunning
-
-asylo n asylum (1. shelter, refuge; 2. institution for protection or relief);
-derecto de asylo right of sanctuary;
-asylo de nocte night-shelter, flop-house
-
-asymmetre (-sím-) adj asymmetric, asymmetrical
-
-asymmetria (-ía) n asymmetry
-
-asymmetric adj asymmetric
-
--ata suffixo substantive [used with nouns] -ful (= contents of or quantity contained in one ...)
-
-Hence: buccata etc.; carrettata etc.; coclearata etc.; furcata etc.
-
-atavic adj atavistic
-
-atavismo n atavism
-
-atavista n atavist
-
-atavistic adj atavistic
-
-atavo (á-) n forefather, ancestor
-
-Hence: atavismo; atavista-atavistic; atavic
-
-ataxia (-ía) n [Pathol.] ataxia, ataxy;
-ataxia locomotor locomotor ataxia
-
--ate suffixo adjective [used with nouns] -ate, -ated, -ed (= having a ... or ...s)
-
-Hence: litterate etc.; vertebrate etc.; decorate etc.
-
-atele (-té-) n spider monkey; Ateles
-
--atelia (-ía) n [occurring in compounds]
-
-Hence: philatelia etc.
-
-atettar n to give the breast to, suckle
-
-athee adj atheist, atheistic; godless
-
-Hence: atheismo; atheista; atheo
-
-atheismo n atheism
-
-atheista n atheist
-
-athematic adj athematic; specif.: [Gram., Mus.]
-
-Athena npr [Gr. Mythol.] Athena
-
-Hence: Atheneo
-
-Athenas (-té-) npr Athens
-
-Hence: atheniese
-
-Atheneo (-éo) npr Athenaeum (1. [Gr. Hist.]; 2. [Rom. Hist.]);
-atheneo athenaeum (= meeting place or organization for the study of letters)
-
-atheniese adj/n Athenian
-
-atheo n atheist
-
-athleta n athlete
-
-Hence: athletismo; athletic; athletica
-
-athletic adj athletic
-
-athletica n athletics
-
-athletismo n athleticism; athletics
-
-athlo- n [occurring in compounds] athlo- (= contest)
-
-Hence: pentathlo etc.
-
--ation suffixo substantive [used with verbs in -ar; note: -ation + -ose = -atiose] -ation (= action or result of ...ing)
-
-Hence: deviation etc.; installation etc.; ventilation etc.
-
--ative suffixo adjective [used with verbs in -ar] -ative (1. tending to ...; 2. having the function of ...ing)
-
-Hence: comparative etc.; cooperative etc.
-
-Atlanta npr Atlanta
-
-Atlante npr [Gr. Mythol.] Atlas;
-atlante atlas (1. [Arch.]; 2. [Anat.])
-
-Hence: Atlantida; atlantic; Atlanta
-
-atlantic adj Atlantic (as in "Atlantic coast");
-Oceano Atlantic or le Atlantico Atlantic Ocean, the Atlantic
-
-Atlantida (-lán-) npr Atlantis
-
-Atlas (át-) npr 1. [Gr. Mythol.] Atlas; 2. [Geog.] Atlas Mountains;
-atlas atlas (= book of maps)
-
-atmo- n [occurring in compounds] atmo- (= steam, vapor)
-
-Hence: atmosphera etc...
-
-atmo·sphera n atmosphere
-
-atmospheric adj atmospheric, atmospherical
-
--ato suffixo substantive [used with titles, designations of rank, etc.] -ate, -dom (= function, status, rank, jurisdiction, period of office, or territory of a ...)
-
-Hence: ducato etc.; episcopato etc.; noviciato etc.
-
-atollo n atoll
-
-atomic adj atomic;
-peso atomic atomic weight
-
-atomicitate n atomicity
-
-atomisar v to atomize (= to reduce to atoms)
-
-atomismo n [Philos.] atomism
-
-atomista n atomist
-
-atomistic adj atomistic
-
-atomo (á-) n atom
-
-Hence: atomismo; atomista-atomistic; atomic-atomicitate, polyatomic etc., pentatomic etc.; atomisar
-
-atone adj 1. [Med.] atonic; 2. unstressed
-
-Hence: atonia; atonic
-
-atonia (-ía) atony (1. [Med.]; 2. [Phonet.])
-
-atonic adj atonic (1. [Med.]; 2. [Phonet.])
-
--ator suffixo substantive [used with verbs in -ar] -ator, - er (= one who, or that which ...s)
-
-Hence: administrator etc.; accelerator etc.
-
--atori suffixo adjective [used with verbs in -ar] -atory (= pertaining to, or serving for, the action of ...ing)
-
-Hence: -atoria; -atorio; circulatori etc.; inflammatori etc.; proparatori etc.
-
--atoria suffixo substantive [used with verbs in -ar] -er (= instrument for ...ing)
-
-Hence: mangiatoria etc.
-
--atorio suffixo substantive [used with verbs in -ar] -atory, -atorium (= place where ...ing is done)
-
-Hence: laboratorio etc.; sanatorio etc.
-
-[atque] conj and, and also, and even
-
-atr- adj [occurring in derivatives and compounds] atro- (= black)
-
-Hence: atrabile etc. ...
-
--atra see -latra
-
-atra·bile (-íle) n atrabile, melancholy (1. [Anc. Med.] black bile; 2. gloom)
-
-Hence: atrabiliari
-
-atrabili- see atrabile
-
-atrabiliari adj atrabiliary, melancholic (1. [Med.]; 2. gloomy, depressed in spirit)
-
-atroce adj atrocious
-
-Hence: atrocitate
-
-atrocitate n atrocity (1. horrible wickedness; 2. atrocious deed)
-
-atrophe (á-) adj atrophic
-
-Hence: atrophia-atrophiar
-
-atrophia (-ía) n atrophy
-
-atrophiar v to atrophy (= to cause to atrophy)
-
-attaccabile¹ adj attackable, assailable
-
-attaccabile² adj attachable
-
-attaccamento n attachment (1. action of fastening; 2. affection)
-
-attaccar¹ v to attack, assail
-
-Hence: attacco; attaccabile-inattaccabile; reattaccar
-
-attaccar² v to attach, fasten
-
-Hence: attaccamento; attaccabile; reattaccar-reattaccamento
-
-attacco n attack (1. assault; 2. [Med.])
-
-attaché [F] n [Admin.; Dipl., Mil.; etc.] attaché;
-attaché militar military attaché
-
-attemperar v to attemper (1. to temper, moderate by mixture; 2. to accommodate)
-
-attendente n attendant (= one attending to someone's needs)
-
-attender [-tend-/-tent-] v 1. to give attention to, attend to; 2. to await, wait for
-
-Hence: attendente; attention-inattention; attentive; attente
-
-attent- see attender
-
-attentar v to make a criminal attempt;
-attentar al vita de un persona to make an attempt on someone's life
-
-Hence: attentatori; attentato
-
-attentato n criminal attempt
-
-attentatori adj attacking, making a criminal attempt on
-
-attente adj attentive, intent
-
-attention n attention (1. careful notice, heed; 2. act of courtesy);
-prestar attention to pay attention
-
-attentive adj attentive (1. intent; 2. courteous)
-
-attenuante 1. ppr of attenuar; 2. adj extenuating;
-circumstantias attenuante extenuating circumstances
-
-attenuar v 1. to attenuate (= to make thin or slender); 2. to extenuate (as in "to extenuate an offense")
-
-Hence: attenuante; attenuation
-
-attenuation n attenuation
-
-atter- [-ter-/-trit-] v [occurring in derivatives]
-
-Hence: attrition, attrite
-
-atterrage (-aje) n [Aeronaut.] landing
-
-atterrar v [Aeronaut.] to land
-
-Hence: atterrage
-
-attestar v to attest (1. to testify to; 2. to certify)
-
-Hence: attestation; attestator
-
-attestation n 1. attestation (= attesting, witnessing); 2. certificate, certification
-
-attestator n attester, attestant
-
-attinger v to attain (= to arrive at, reach)
-
-Hence: attingimento
-
-attingimento n attainment (= action or process of attaining)
-
-attitude n attitude (1. position of the body; 2. way of thinking, acting, or feeling)
-
-attract- see attraher
-
-attraction n attraction; also: [Phys.];
-attractiones attractions (= things that delight or attract people)
-
-attractive adj attractive (1. [Phys.]; 2. alluring)
-
-attractivitate n 1. [Phys.] (force of) attraction; 2. attractiveness
-
-attrahente 1. ppr of attraher; 2. adj attractive, attracting
-
-attraher [-trah-/-tract-] v to attract (1. to draw to oneself; 2. to allure)
-
-Hence: attrahente; attraction; attractive-attractivitate
-
-attrappar v to catch, seize
-
-attribuer [-tribu-/-tribut-] v 1. to assign, allot; 2. to attribute, ascribe;
-attribuer se un cosa to arrogate something to oneself
-
-Hence: attribution; attributive; attributo
-
-attribut- see attribuer
-
-attribution n attribution
-
-attributive adj attributive (1. attributing; 2. [Gram.])
-
-attributo n attribute (1. inherent quality; 2. conventional symbol; 3. [Gram.])
-
-attristar v to sadden, make sad
-
-attrit- see atter-
-
-attrite adj [Theol.] attrite
-
-attrition n attrition; specif.: [Theol.]
-
-attruppamento n 1. (act of) assembling, gathering; 2. crowd, gathering
-
-attruppar v to troup, gather, assemble;
-attruppar se to flock together, assemble
-
--atura suffixo substantive [used with verbs in -ar] -ature (= action or result of ...ing)
-
-Hence: caricatura etc.; creatura etc.; ligatura etc.
-
-auction n auction
-
-Hence: auctionar-auctionator
-
-auctionar v to auction, auctioneer
-
-auctionator n auctioneer
-
-audace adj audacious, daring
-
-Hence: audacia-audaciose
-
-audacia n audacity, daring
-
-audaciose adj audacious, daring
-
-audibile adj audible
-
-audibitate n audibility
-
-audientia n I. the perception of sounds; II. audience (1. interview with a person of high rank; 2. hearing)
-
-audio·metro (-ó-) n [Acous.] audiometer
-
-audir v to hear (= to perceive by the ear)
-
-Hence: audientia; audibile-audibilitate, inaudibile; audition; auditive; auditor; auditori; auditorio; inaudite; audito; audita; audiometro etc.
-
-audita n audition (= act of hearing)
-
-audition n audition (= act of hearing)
-
-auditive adj auditory
-
-audito n hearing, sense of hearing
-
-auditor n auditor, hearer, listener
-
-auditori adj auditory
-
-auditorio n 1. auditorium, auditory; 2. audience (= assembly of listeners)
-
-augmentabile adj augmentable
-
-augmentar v to augment, increase;
-augmentar le precio de un cosa to raise, advance the price of something;
-augmentar de precio to rise, advance in price
-
-augmentation n increase, augmentation
-
-augmentative adj [Gram.] augmentative
-
-augmentator n augmenter
-
-augmento n 1. increase, augmentation; 2. [Gram.] augment
-
-Hence: augmentar-augmentabile, augmentation, augmentative, augmentator
-
-augurar v to augur (1. to act as augur; 2. to predict, foretell)
-
-augure (áugure) n augur (1. [Rom. Hist.]; 2. soothsayer)
-
-Hence: augurio; augurar-inaugurar-inauguration, inaugurator
-
-augurio n augury (1. art of the augur; 2. omen, sign);
-de bon augurio auspicious;
-de mal augurio ominous
-
-Augusta nprf Augusta
-
-auguste adj august
-
-Hence: augusto
-
-augustee adj Augustan
-
-augustinian adj Augustinian
-
-augustinianismo n Augustinianism
-
-augustiniano n Augustinian
-
-Augustino nprm Augustine;
-Sancte Augustino St. Augustine
-
-Hence: augustinian-augustinianismo, augustiniano
-
-augusto¹ n (the) august (one);
-Augusto Augustus (= honorific of Roman emperors)
-
-Augusto² nprm Augustus, August;
-augusto (the month of) August
-
-Hence: Augustee; Augustino &; Augusta
-
-aulo- n [occurring in derivatives and compounds] aulo- (= flute; pipe)
-
-Hence; hydraulic etc. ...
-
-aura n aura; specif.: [Pathol.]
-
-aural adj aural
-
-aurar v to gild;
-aurar le pillula to gild or sugar the pill
-
-aurate 1. pp of aurar; 2. golden, gold-colored;
-juventute aurate jeunesse dorée, gilded youth
-
-aure n ear (= organ and faculty of hearing);
-esser tote aures to be all ears;
-prestar le aure a to lend an ear to;
-aure de mure [Bot.] mouse-ear, forget-me-not
-
-Hence: auricula; aurista; aural; auriforme etc.
-
-auree adj golden
-
-aureola (-ré-) n aureole, halo
-
-Hence: aureolari; aureolate; aureolar
-
-aureolar¹ adj halo-like
-
-aureolar² v to halo, invest with a halo
-
-aureolate adj haloed, invested with a halo
-
-au revoir [F] au revoir
-
-auricula n I. auricle (1. "auricle of the ear"; 2. "auricle of the heart"); II. [Bot.] auricula, bear's ear;
-auricula de urso [Bot.] bear's ear, auricula;
-auricula de mure [Bot.] mouse-ear, forget-me-not
-
-aurifere adj auriferous, gold-bearing
-
-aurificar v [Dent.] to fill with gold
-
-aurification n [Dent.] (making of a) gold filling
-
-aurifice (-rí-) n goldsmith
-
-auri·forme adj auriform, ear-shaped
-
-auri·pelle n 1. tinsel, foil; 2. sham (= tawdry object)
-
-auri·pigmento n [Chem.] orniment
-
-aurista n aurist, otologist (= ear specialist)
-
-auro n gold;
-folio de auro gold foil or leaf;
-natar in le auro to be rolling in wealth;
-auro virgine virgin or native gold;
-pagar in auro to pay in gold;
-de auro golden, gold (= made of gold);
-etate de auro golden age
-
-Hence: auree; aurifere; aurar-aurate, disaurar; aurifice-aurificar-aurification; auripigmento etc.; auriforme etc.
-
-aurora n dawn;
-aurora boreal northern lights, aurora borealis
-
-auspice (áu-) n [Hist.] auspex
-
-Hence: auspicio
-
-auspicio n [Hist.] auspice (= sign or token derived from the observation of birds);
-auspicios auspices, patronage;
-sub le auspicios de under the auspices of
-
-auster adj austere
-
-Hence: austeritate
-
-austeritate n austerity, austereness
-
-austral adj southern, austral
-
-Austral·asia n Australasia
-
-Hence: australasian
-
-australasian adj Australasian
-
-Australia npr Australia
-
-Hence: australian-australiano
-
-australian adj Australian
-
-australiano n Australian
-
-Austria npr Austria
-
-Hence: austriac-austriaco
-
-austriac (-í-) adj Austrian
-
-austriaco (-í-) n Austrian
-
-austro n south wind, Auster
-
-Hence: austral-Australia &; Australasia etc.
-
-[aut] conj or;
-aut ... aut either ... or (= o)
-
-autarchia (-ía) n autarchy, self-sufficiency
-
-authentic adj authentic
-
-Hence: authenticitate; authenticar-authentication; inauthentic-inauthenticitate
-
-authenticar v to authenticate (1. to render authentic; 2. to prove authentic)
-
-authentication n authentication
-
-authenticitate n authenticity
-
-auto n auto, motorcar, car
-
-Hence: autoista; autodromo etc.; autobus etc.
-
-auto- prefixco auto-, aut- (= self)
-
-Hence: autobiographia etc.; automobile etc.; autonome etc.
-
-autobiographia (-ía) n autobiography
-
-autobiographic adj autobiographic, autobiographical
-
-auto·bus (-bús) n (motor)bus, autobus
-
-auto·car n motor coach; also: sight-seeing bus, etc.
-
-autochthone adj autochthonous
-
-Hence: autochthonia; autochthono
-
-autochthonia (-ía) n autochthony
-
-autochthono (-óctono) n autochthon
-
-autoclave n pressure cooker, autoclave
-
-autocrate (-ó-) n autocrat
-
-autocratia (-ía) n autocracy
-
-autocratic adj autocratic
-
-autodafé [P] n auto-da-fé
-
-autodidacte adj self-taught
-
-Hence: autodidactic; autodidactico
-
-autodidactic adj autodidactic
-
-autodidacto n autodidact (= one who is self-taught)
-
-auto·dromo (-tó-) n autodrome (= race course for automobiles)
-
-autographia (-ía) n autography (= art of autographic reproduction)
-
-autographiar v to make autographic reproductions, to autograph
-
-autographic adj autographic
-
-autographo (-tó-) n autograph
-
-Hence: autographia-autographiar; autographic; telautographo etc.
-
-autogyro n autogiro
-
-autoista n autoist
-
-automate (-tó-) adj automatous, automatic
-
-Hence: automato-automatismo, automatic-automaticitate, automatisar
-
-automatic adj automatic
-
-automaticitate n automaticity, automatism (= state of being automatic)
-
-automatisar v to automatize, render automatic
-
-automatismo n automatism
-
-automato (-tó-) n automaton
-
-automobile adj self-propelling, automobile;
-(vehiculo) automobile motor vehicle
-
-Hence: automobilismo; automobilista
-
-automobile n automobile, motor vehicle
-
-automobilismo n automobilism
-
-automobilista n automobilist, motorist
-
-autonome (-tó-) adj autonomous (= self-governing)
-
-Hence: autonomia
-
-autonomia (-ía) n autonomy; self-government
-
-autopsia (-ía) n [Med.] autopsy
-
-autor n author (1. originator; 2. writer);
-derectos de autor author's rights
-
-Hence: autorato; autoritate &; autorisar &
-
-autorato n authorship
-
-autorisabile adj authorizable
-
-autorisar v to authorize
-
-Hence: autorisabile; autorisation; autorisate
-
-autorisate 1. pp of autorisar; 2. adj authorized
-
-autorisation n authorization
-
-autoritari adj 1. authoritative, dictatorial; 2. authoritarian
-
-autoritatismo n authoritarianism
-
-autoritate n authority
-
-Hence: autoritari-autoritarismo
-
-auto·strata n (auto) highway
-
-autumnal adj autumnal
-
-autumno n autumn, fall
-
-Hence: autumnal
-
-auxiliar¹ adj auxiliary;
-verbos auxiliar auxiliary verbs
-
-auxiliar² v to help, aid
-
-auxiliator n helper
-
-auxilio n help, aid
-
-Hence: auxiliar¹; auxiliar²-auxiliator
-
-ava n grandmother
-
-aval n [Com.] endorsement, backing (of a bill of exchange)
-
-Hence: avalista; avalisar
-
-avalanche [F] n avalanche
-
-avalisar v [Com.] to endorse, back (a bill of exchange)
-
-avalista n [Com.] endorser, backer (of a bill of exchange)
-
-avantage (-aje) n advantage;
-haber le avantage super un persona to have an advantage over someone;
-prender avantage de un cosa to take advantage of something, to turn to account;
-dar avantage a un persona to give someone odds
-
-Hence: avantagiose; avantagiar; disavantage-disavantagiose
-
-avantagiar (-ajar) v to give an advantage to
-
-avantagiose (-ajo-) adj advantageous
-
-avantal n apron
-
-avante adv before (= in front, ahead)
-
-Hence: avantage &; avantal; avantiar &
-
-avantia n advance (= payment beforehand)
-
-avantiamento n 1. advance (= forward motion); 2. advancement (= promotion in rank)
-
-avantiar v to advance (1. to move forward; 2. as in "to advance a proposition"; 3. to promote in rank)
-
-Hence: avantia; avantiamento; avantiate-avantiata
-
-avantiata n [Mil.] outpost, advance guard
-
-avantiate I. pp of avantiar; II. adj advanced (1. far on in progress; 2. far on in life, time or course);
-posto avantiate advanced post
-
-avar adj avaricious, miserly
-
-Hence: avaritia-avaritiose; avaro
-
-avaritia n avarice
-
-avaritiose adj avaricious
-
-avaro n miser
-
-ave¹ n bird;
-ave de appello decoy (bird);
-aves domestic poultry
-
-Hence: aviario-aviarista; avion; aviar &; avicultura etc.; avestruthio etc.; espaventaaves etc.
-
-ave² n ave (1. Ave Maria; 2. time of ringing the Ave bell; 3. Ave bead of the rosary)
-
-Ave³! [L] interj ave!, hail!
-
-avellana n hazelnut, filbert
-
-Hence: avellaniero
-
-avellaniero n hazel (tree)
-
-aveller [-vell-/-vuls-] v to tear away, avulse
-
-Hence: avulsion
-
-Ave Maria [L] Ave Maria, Hail Mary
-
-avena n oat, oats
-
-aventura n adventure;
-per aventura by chance;
-al aventura at random
-
-Hence: aventurero; aventurose; aventurar
-
-aventurar v to venture, risk
-
-aventurero n adventurer
-
-aventurose adj adventurous
-
-avenue [F] n avenue
-
-averar v to aver (= to avouch, verify)
-
-avergoniar v to shame, put to shame; to make (feel) ashamed
-
-avergoniate 1. pp of avergoniar; 2. adj ashamed
-
-avers- see averter
-
-aversion n aversion (1. act of averting turning away; 2. strong dislike);
-haber un aversion a un persona to have an aversion to someone
-
-averter [-vert-/-vers-] v to turn away, avert
-
-Hence: aversion
-
-ave·struthio n ostrich;
-haber un stomacho de avestruthio to have the digestion of an ostrich
-
-aviar v to aviate
-
-Hence: aviation; aviator; aviatrice
-
-aviario n aviary
-
-aviarista n aviarist
-
-aviation n aviation;
-base de aviation air base;
-campo de aviation airfield
-
-aviator n aviator
-
-aviatrice n aviatrix
-
-avicinar v to border upon, neighbor
-
-avi·cultura n aviculture
-
-avide (á-) adj avid, greedy
-
-Hence: anviditate
-
-aviditate n avidity, greed, greediness
-
-avinar v -;
-avinar se to tipple, get drunk
-
-Hence: avinate
-
-avinate adj drunk, in one's cups
-
-avion n airplane
-
-avisar v to advise (1. to give information or notice to; 2. to counsel)
-
-Hence: avisate
-
-avisate 1. pp of avisar; 2. adj prudent, circumspect;
-mal avisate ill-advised, imprudent
-
-ariso n I. opinion, judgment; II. advice (1. notice; 2. counsel);
-littera de aviso [Com.] notification of dispatch, letter of advice
-
-avivamento n 1. (action of) reviving, vivifying; 2. (action of) heightening (colors)
-
-avivar v 1. to revive, vivify; 2. to heighten (colors)
-
-Hence: avivamento; reavivar
-
-avo n grandfather
-
-Hence: avunculo &; atavo &: bisavo etc.: bisava etc.
-
-avocatiero n avocado (tree)
-
-avocato n avocado, alligator pear
-
-Hence: avocatiero
-
-avoirdupois [A] n avoirdupois
-
-avuls- see aveller
-
-avulsion n avulsion (= tearing away)
-
-avuncular adj avuncular
-
-avunculo n uncle
-
-Hence: avuncular
-
-axe n 1. axis; 2. axle, axletree
-
-Hence: axilla &; axial; axungia etc.
-
-axial adj axial
-
-axilla n 1. armpit, axilla; 2. [Bot.] axil
-
-Hence: axillari
-
-axillari adj axillary (1. pertaining to the axilla; 2. [Bot.])
-
-axioma [-ma/-mat-] n axiom
-
-Hence: axiomatic
-
-axiomat- see axioma
-
-axiomatic adj axiomatic
-
-ax·ungia n [Pharm.] axunge
-
-azalea n [Bot.] azalea
-
-azoic adj azoic; also: [Geol.]
-
-Azores (-zó-) nprpl Azores
-
-azur adj azure; also: blue
-
-Hence: azuro-azurato
-
-azurato n azure (= color of the clear sky)
-
-azuro n azure (= the blue color of the clear sky); also: blue, bluing
-
-azyme (á-) adj azymous, unleavened;
-(festa del) azymos [Jewish Rel.] Feast of Unleavened Bread
-
-
-
-Wayback Machine
-  
-http://www.bowks.net/worldlang/aux/b_IED_b.html
-NOV	JAN	MAR
-Previous capture	05	Next capture
-2007	2008	2009
-27 captures
-15 Nov 2004 - 14 May 2008
- About this capture
-
-Interlingua-English Dictionary B
-A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, XYZ
-Babel npr Babel;
-(le) turre de Babel (the) Tower of Babel
 
 ba·bordo n [Naut.] port (= left side of a ship)
 
@@ -28730,19 +23254,11 @@ governabde adj governable
 
 governaculo n [Naut., Aviation] rudder
 
-governamental adj govermental
-
-governamento n government (1. rule, direction, control; 2. body of persons governing a State)
 
 governante n governess
 
 governar v 1. [Naut.] to steer; 2. to govern (= to rule, direct, control)
 
-Hence: governaculo; governamento-governamental; governante; governabile-ingovernabile; governator
-
-governator n governor
-
-Graccho npr [Rom. Hist.] Gracchus
 
 gracile adj slender, slim
 
@@ -66694,3051 +61210,6 @@ tyrrheno n Tyrrhenian, Etruscan
 
 Hence: Tyrrhenia; tyrrhen
 
-Wayback Machine
-  
-http://www.bowks.net/worldlang/aux/b_IED_u.html
-NOV	JAN	MAR
-Previous capture	05	Next capture
-2007	2008	2016
-36 captures
-18 Nov 2004 - 31 Dec 2016
- About this capture
-
-Interlingua-English Dictionary U
-A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, XYZ
-ubere n udder ubere adj fruitful, abundant, uberous
-
-Hence: ubertate, exuberar &
-
-ubertate n fertility, abundance uberty
-
-ubi 1. adv where (= in or at what place); 2. conj where; when, as soon as; wherewith; in which;
-a ubi where, whither;
-de ubi from where, whence
-
-Hence: ubicar &; ubique etc.; ubicunque etc.; alicubi etc.; [alterubi] etc.
-
-ubicar v to have one's location, be (somewhere)
-
-Hence: ubication
-
-ubication n location (= fact of being located in a certain place), ubication
-
-ubi·cunque adv/conj wherever
-
-ubi·que adv everywhere; anywhere, wheresoever, wherever
-
-Hence: ubiquitate
-
-ubiquitate n ubiquitousness
-
-ukaz [R] n ukase
-
-Ukraina npr Ukraine
-
-Hence: ukrainian-ukrainiano
-
-ukrainian adj Ukrainian
-
-ukrainiano n Ukrainian (1. native of the Ukraine; 2. Ukrainian language)
-
-ulcerar v to ulcerate (= to affect with ulcers)
-
-ulceration n [Med.] ulceration
-
-ulcere n [Med.] ulcer
-
-Hence: ulcerose; ulcerar-ulceration
-
-ulcerose adj ulcerous (1. having the nature of an ulcer; 2. ulcerated)
-
-[ulle] adj/pron any, anyone
-
-Hence: nulle &
-
-ulmacee adj [Bot.] ulmaceous
-
-ulmaria n [Bot.] meadosweet, queen of the meadows
-
-ulmeto n elm grove
-
-ulmic adj [Chem.] ulmic
-
-ulmina n [Chem.] ulmin
-
-ulmo n elm
-
-Hence: ulmeto; ulmacee; ulmaria; ulmic; ulmina
-
-Ulster [A] npr Ulster; ulster [Clothing] ulster
-
-ulterior adj 1. ulterior, situated beyond, thither; 2. subsequent, later
-
-ulteriormente adv later (on), subsequently
-
-ultimar v to bring to a close, to bring to completion
-
-ultimate 1. pp of ultimar; 2. adj ultimate
-
-ultimation n (action of) bringing to a close or to completion
-
-ultimatum [NL] n ultimatum
-
-ultime (úl-) adj last
-
-Hence: penultime &; ultimar-ultimation, ultimate
-
-ultra I. adv on the other side, beyond, farther; II. prep 1. on the farther side of; beyond, past; 2. besides; ultra ille besides, moreover; ultra que aside from the fact that
-
-Hence: ultrage &; ultrar-ultrantia
-
-ultra- prefixo ultra- (= beyond)
-
-Hence: ultramarin etc.; ultraviolette etc.; ultrapassar etc.
-
-ultrage (-aje) n outrage
-
-Hence: ultragiose; ultragiar
-
-ultragiar (-ajár) v to outrage
-
-ultragiose (-jose) adj outrageous
-
-ultramar adv overseas; (paises) de ultramar overseas (countries)
-
-ultramarin adj ultramarine (blue)
-
-ultramontan adj ultramontane (1. transmontane; 2. [R.C.Ch.])
-
-Hence: ultramontanismo
-
-ultramontanismo n ultramontanism
-
-ultrantia n excess, extreme; a ultrantia to the bitter end
-
-ultrapassar v to go beyond
-
-ultrar v to carry to excess or to extremes
-
-ultraviolette adj ultraviolet; radios ultraviolette ultraviolet rays
-
-uluco (ú-) n owl
-
-ulula (úlula) n barn owl
-
-ulular v to howl, ululate
-
-Hence: ululation; ululator
-
-ululation n howling, ululation
-
-ululator n howler (= one who howls); specif.: howling monkey
-
-Ulysses (-lís-) npr [Gr. Mythol.] Ulysses
-
-umbella n [Bot.] umbel
-
-Hence: umbellate; umbellifere; umbelliforme etc.
-
-umbellate adj [Bot.] umbellate
-
-umbellifere adj [Bot.] umbelliferous
-
-umbelli·forme adj [Bot.] umbelliform
-
-umbilical adj umbilical; cordon umbilical umbilical cord
-
-umbilicate adj umbilicate
-
-umbilico (-íco) n [Anat.] navel, umbilicus
-
-Hence: umbilical; umbilicate
-
-umbra¹ n 1. shade (as in "light and shade"; also: as in "the shades in Hades"); 2. shadow; al umbra de under or in the shadow of; umbras (del nocte) shadows (of the night); umbra de (dubita, etc.) shade or shadow of (doubt etc.)
-
-Hence: umbrella; umbratile; umbrifere; umbrina; umbrose; umbrar-adumbrar &; penumbra
-
-umbra² n umber (1. [Mineral.]; 2. "the color umber"); terra de umbra sienna
-
-umbrar v to shade, darken (= to put shading in or on)
-
-umbratile adj shady, umbrageous
-
-umbre adj Umbrian
-
-umbrella n umbrella (= cloth-covered frame used for protection against rain or sun)
-
-Umbria npr Umbria
-
-umbrifere adj umbriferous
-
-umbrina n [Zool.] umbrina, umbrine
-
-umbro n Umbrian (1. inhabitant of Umbria; 2. Umbrian dialect)
-
-Hence: Umbria; umbre
-
-umbrose adj shady, umbrageous
-
-un 1. adj one; 2. indef art a, an;
-le un le altere one another, each other, each (one) ... the other (one);
-le unes le alteres one another, each other, each (of them) ... the others, other ones
-
-Hence: union &; unitate &; unic &; unir &; unificar &; unicorne etc.; unilateral etc.; uniforme etc.; unanime etc.; unicolor etc.; unipare etc.; [unaltere] etc.; undece etc.; dece-un etc.; alicun etc.; [qualcun] etc.; [alcun] etc.; [necun] etc.; uno-[qualcuno] etc., alcuno etc.
-
-[un-altere] pron each other, one another
-
-un·anime (-ánime) adj unanimous
-
-Hence: unanimitate
-
-unanimitate n unanimity
-
-uncia n 1. ounce; 2. inch
-
-Hence: uncial-semiuncial etc.
-
-uncial adj uncial
-
-unci·forme n unciform, hook-shaped
-
-uncinate adj uncinate
-
-uncino n hook (as in "wall hook", "hook and eye")
-
-unco n hook, barb
-
-Hence: uncino-uncinate; unciforme etc.
-
-unct- see unguer
-
-unction n unction (1. act of anointing; 2. unctuousness)
-
-uncto¹ n anointed; le Uncto del Senior the Lord's Anointed
-
-uncto² n unguent, ointment
-
-Hence: unctuose-unctuositate
-
-unctu- see uncto²
-
-unctuose adj unctuous (1. oily, greasy; 2. oily, suave)
-
-unctuositate n unctuosity, unctuousness
-
-unda n wave (1. "wave of the sea, etc."; 2. [Phys.]); unda sonor sound wave; unda luminose light wave; undas curte [Radio] short waves; undas longe [Radio] long waves
-
-Hence: undulose; undular &; undina; undose; undear; inundar &; undisone etc.
-
-[unde] adv whence (1. from which place; 2. wherefore, for which reason or cause)
-
-undear v to wave (= to move in waves or undulations)
-
-un·dece (ún-) adj eleven
-
-undina n undine
-
-undi·sone adj wavelike (= sounding like waves)
-
-undose adj wavy
-
-undular v to wave, undulate (1. to move in, or like, waves; 2. to impart a wavy appearance to)
-
-Hence: undulation; undulatori; undulate
-
-undulate 1. pp of undular; 2. adj wavy, undulating
-
-undulation n I. undulation (1. waving motion; 2. wavy form); II. [Hairdressing] wave; undulation permanente permanent wave
-
-undulatori adj undulatory
-
-undulose adj rolling, wavy, undulous
-
-UNESCO [A] n UNESCO
-
-ungue n nail (of a finger or toe); also: unguis
-
-Hence: unguiculo-unguiculate; ungula &; unguifere
-
-unguentari adj unguentary
-
-unguento n ointment, salve
-
-unguer [ung-/unct-] v to anoint (1. to rub with an ointment; 2. to make sacred with oil)
-
-Hence: ungento-ungentari; unction; uncto¹; uncto² &; axungia etc.
-
-unguiculate adj unguiculate
-
-unguiculo n small nail or claw
-
-unguifere adj unguiferous
-
-ungula (úngula) n 1. nail (of a finger or toe); 2. claw (of a canine, feline, or bird); 3. hoof (of an animal)
-
-Hence: ungulate-ungulato, multungulate etc.; multungule etc.
-
-ungulate adj ungulate (1. having hoofs; 2. pertaining to the ungulates)
-
-ungulato n [Zool.] ungulate
-
-unibile adj uniteable
-
-unic adj 1. sole, only; 2. unique (= that has no like or equal); filio unic only son
-
-Hence: unicitate
-
-unicitate n 1. oneness, singleness; 2. uniqueness
-
-uni·color adj one-colored, unicolorous
-
-uni·corne adj one-horned
-
-Hence: unicornio
-
-uni·corne n unicorn
-
-unicornio n unicorn
-
-uni·ficar v to unify
-
-Hence: unification
-
-unification n unification
-
-uni·flor adj [Bot.] uniflorous
-
-uni·foliate adj [Bot.] unifoliate
-
-uniformar v to uniform (1. to make uniform; 2. to put into uniform)
-
-uni·forme adj uniform
-
-Hence: uniformitate; uniformar
-
-uniforme n uniform
-
-uniformitate n uniformity
-
-uni·lateral adj unilateral (1. [Bot.]; 2. [Law])
-
-unimento n (action of) uniting, joining, etc.
-
-union n union; tracto de union hyphen (= sign used to join two words together)
-
-Hence: unionismo; unionista; disunion
-
-unionismo n unionism
-
-unionista n unionist
-
-uni·pare adj uniparous (= producing but one offspring at a time)
-
-uni·personal adj [Gram.] unipersonal; also: impersonal
-
-uni·polar adj unipolar
-
-unir v to unite, join, connect
-
-Hence: unimento; unibile; unitive; unite; disunir; reunir-reunion
-
-uni·sexual adj unisexual
-
-uni·sone adj unison, unisonous
-
-Hence: unisono
-
-unisono (-í-) n unison
-
-unit- see unitate
-
-unitari adj 1. unitary; 2. [Theol.] Unitarian
-
-unitario n 1. unitarist; 2. [Theol.] Unitarian
-
-unitarismo n 1. unitarism; 2. [Theol.] Unitarianism
-
-unitate n 1. unit; 2. unity; also: oneness
-
-Hence: unitari-unitarismo; unitario; disunitate
-
-unite 1. pp of unir; 2. adj smooth, even; (le) Statos Unite (the) United States; Nationes Unite United Nations
-
-unitive adj unitive, uniting
-
-uni·valve adj [Bot., Zool.] univalve, univalved
-
-universal adj universal; suffragio universal universal franchise or suffrage
-
-universalisar v to universalize
-
-universalismo n [Theol.] Universalism
-
-universalista n [Theol.] Universalist
-
-universalitate n 1. universality; 2. totality
-
-universe adj universal
-
-Hence: universitate &; nniverso-universal-universalismo, universalista, universalitate, universalisar
-
-universit- see universitate
-
-universitari adj university
-
-universitate n university
-
-Hence: universitari
-
-universo n universe
-
-uno indef pron one
-
-unquam (únquam) adv ever, at any time
-
-upas [Mal.] n [Bot.] upas
-
-ur- n [occurring in compounds] ur-, uro- (= tail)
-
-Hence: cenuro etc. ...
-
-ur- v [occurring in derivatives]
-
-Hence: ureter &; urethra &
-
--ura suffixo substantive [used with the second stem of verbs in -er and -ir] -ure (= action or result of ...ing)
-
-Hence: mixtura etc.; pictura etc.; fissura etc.; cultura etc.; copertura etc.
-
-Ural npr 1. Ural (River); 2. Urals, Ural Mountains
-
-Hence: uralian; uraloaltaic etc.
-
-uralian adj Uralian
-
-uralo·altaic (-táic) adj uralaltaic
-
-Urania npr [Gr. Mythol.] Urania (1. Muse of astronomy; 2. epithet of Aphrodite)
-
-uranic adj uranic
-
-uranie adj uranian (1. pertaining to the god Uranus; 2. pertaining to the planet Uranus; 3. pertaining to Urania; 4. pertaining to the heavens)
-
-uranite n [Mineral.] uranite
-
-uranium (-rá-) n uranium
-
-Hence: uranite; uranic
-
-Urano npr Uranus (1. [Gr. Mythol.]; 2. [Astron.])
-
-Hence: uranie-uranium &, urania; uranographo etc.; uranometria etc.
-
-uranographia (-ía) n uranography
-
-urano·grapho (-ógrapho) n uranographer
-
-Hence: uranographia
-
-urano·metria (-ía) n (science of) uranometry
-
-urban adj 1. urban; 2. urbane
-
-urbanisar v to urbanize
-
-urbanisation n urbanization
-
-urbanismo n town planning, city planning
-
-urbanista n 1. city planner; 2. [Eccl.] urbanist
-
-urbanitate n urbanity (1. urbanness; 2. urbaneness)
-
-urbe n town, city
-
-Hence: urban-urbanismo, urbanista, urbanitate, urbanisar-urbanisation, inurban, suburban; suburbio; suburbicari
-
-urceo n pitcher, jug
-
-uredine n [Bot.] uredinium
-
-Hence: uredineas
-
-uredineas npl rust fungi, Uredinales
-
-ur·emia (-ía) n [Med.] uremia, uraemia
-
-Hence: uremic
-
-uremic adj uremic, uraemic
-
-urente 1. ppr of urer; 2. adj [Med.] caustic
-
-urer [ur-/ust-] v 1. to burn, burn up; 2. [Med.] to cauterize
-
-Hence: uredine &; urente; ustion; adurer &; comburer &
-
-ureter n [Anat.] ureter
-
-Hence: ureteritis; ureteral; ureterotomia etc.
-
-ureteral adj ureteral
-
-ureteritis (-ítis) n [Pathol.] ureteritis
-
-uretero·tomia (-ía) n [Surg.] ureterotomy
-
-urethra n [Anat.] urethra
-
-Hence: urethritis; urethral; urethroscopio etc.
-
-urethral adj urethral
-
-urethritis (-ítis) n [Pathol.] urethritis
-
-urethroscopia (-ía) n [Med.] urethroscopy
-
-urethro·scopio n [Med.] urethroscope
-
-Hence: urethroscopia
-
-urgente adj urgent (= demanding immediate attention or action)
-
-urgentia n urgency (= need for immediate attention or action)
-
-urger v to urge, be insistent or pressing; also: to be urgent
-
-Hence: urgente-urgentia
-
--urgo [occurring in compounds] -urge (= worker)
-
-Hence: chirurgo etc.; metallurgo etc.; thaumaturgo etc.; siderurgia etc.
-
--uria [occurring in compounds]
-
-urina n urine
-
-Hence: urinal; urinose; urinar-urinatorio
-
-urinal n urinal (= vessel for holding urine)
-
-urinar v to urinate
-
-urinatorio n urinal (= building for urinating purposes)
-
-urinose adj urinous
-
-urna n 1. urn; 2. ballot box; urna cinerari cinerary urn
-
-uro- n [occurring in derivatives and compounds] (= urine)
-
-Hence: -uria-albuminuria etc.; uremia etc. ...
-
-ursa n she-bear; ursa major [Astron.] Ursa Major, Great Bear, (Big) Dipper; ursa minor [Astron.] Ursa Minor, Little Bear or Little Dipper
-
-ursin adj ursine
-
-urso n bear; urso polar or blanc polar bear
-
-Hence: urson; ursin; ursa
-
-urson n [Zool.] Canada porcupine; urson
-
-U.R.S.S. n U.S.S.R.
-
-urtica (-tíca) n nettle, urtica
-
-Hence: urticaria; urticacee-urticaceas; urticar-urticante, urtication
-
-urticaceas npl [Bot.] Urticaceae
-
-urticacee adj urticaceous
-
-urticante 1. ppr of urticar; 2. adj urticant, stinging
-
-urticar v to nettle, urticate
-
-urticaria n [Pathol.] urticaria, nettle rash
-
-urtication n urtication
-
-Uruguay (-ái) npr Uruguay (1. Uruguay river; 2. Republic of Uruguay); Republica Oriental del Uruguay Republic of Uruguay
-
-us- see ut-
-
-U.S.A. [A] n U.S.A.
-
-usabile adj usable
-
-usabilitate n usability, usableness
-
-usage (-aje) n 1. use (= act of using); 2. usage, custom
-
-usantia n usage, custom, habit
-
-usar v 1. to use, make use of; 2. to use up; usar (facer, etc.) to be used to (doing, etc.)
-
-uso n use (1. act of using; 2. habit); facer uso de to make use of; in uso in use; foras de uso out of use
-
-Hence: usual-inusual; usar-usage, usantia, usabile-usabilitate, inusabile; disuso-disusar; misuso-misusar-misusage; usufruer etc.
-
-usquam (ús-) adv somewhere
-
-usque prep (all the way) to, up to (a point in space or time); also: till, until; usque nunc up to now; usque al presente up to the present
-
-ust- see urer
-
-ustion n 1. (act of) burning, destroying by fire; 2. [Med.] cauterization
-
-usual adj usual (1. ordinary; 2. customary)
-
-usufruct- see usufruer
-
-usufructo n [Law] usufruct
-
-usufructuari adj [Law] usufructuary
-
-usufructuario n [Law] usufructuary
-
-usu·fruer [-fru-/-fruct-] v [Law] to enjoy the usufruct
-
-Hence: usufructo-usufructuari, usufructario
-
-usura n usury
-
-Hence: usuria; usuari; usurero; usurar
-
-usurar v to practice usury
-
-usurari adj usurious
-
-usurero n usurer
-
-usuria (-ía) n usury
-
-usurpar v to usurp
-
-Hence: usurpation; usurpator; usurpatori
-
-usurpation n usurpation
-
-usurpator n usurper
-
-usurpatori adj usurpatory
-
-[ut] adv as, how, in order that, to the end that, just as; ut ... ita ... the ... the ..., as ... so ...
-
-Hence: sicut etc.
-
-ut n [Mus.] (the note) C
-
-ut- [ut-/us-] v [occurring in derivatives and compounds]
-
-Hence: utile &; uso &; abut- &
-
-utensile n utensil, tool
-
-uterin adj uterine (1. pertaining to the uterus; 2. born of
-
-the same mother, but of a different father)
-
-utero (ú-) n uterus, womb
-
-Hence: uterin; uterologia etc.
-
-utero·logia (-ía) n uterology
-
-utile adj useful
-
-Hence: utilitate-utilitari-utilitario, utilitarismo; utilisar-utilisabile-inutilisabile, utilisation, utilisator, utilisate-inutilisate; inutile-inutilitate, inutilisar
-
-utilisabile adj available (= capable of being turned to account)
-
-utilisar v to utilize
-
-utilisate adj utilized, used
-
-utilisation n utilization
-
-utilisator n utilizer
-
-utilitari adj utilitarian (as in "utilitarian ethics")
-
-utilitario n utilitarian
-
-utilitarismo n utilitarianism
-
-utilitate n utility, usefulness
-
-Utopia n Utopia; utopia utopia
-
-Hence: utopismo; utopista; utopic
-
-utopic adj utopian
-
-utopismo n utopianism
-
-utopista n utopian
-
-[utroque] indef pron either or both of two
-
-[utrum ... an] (ú-) conj whether ... or
-
-uva n 1. grape; 2. grapes, bunch of grapes;
-
-uva de Corintho currant (= small seedless raisin used in cooking); uva sic raisin
-
-Hence: uvula &; uvea
-
-uvea n [Anat.] uvea
-
-uvula n uvula
-
-Hence: uvular
-
-uvular adj uvular
-
-uxor n wife
-
-Hence: uxoricida etc.; uxoricidio etc.
-
-uxori·cida n uxoricide (= one who kills his wife)
-
-uxori·cidio n uxoricide (= act of killing one's wife)
-
-Wayback Machine
-  
-http://www.bowks.net/worldlang/aux/b_IED_v.html
-NOV	JAN	MAR
-Previous capture	05	Next capture
-2007	2008	2009
-23 captures
-17 Dec 2004 - 9 May 2008
- About this capture
-
-Interlingua-English Dictionary V
-A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, XYZ
-va pr of vader 1. go, goes; [grammatical function: auxiliary, forming the future or immediate future]; va! go!; io va comenciar I shall begin, I am going to begin va see also vader
-
-Vaal npr Vaal (river)
-
-Hence: Transvaal
-
-vacante 1. ppr of vacar; 2. adj vacant, not occupied
-
-vacantia n vacancy (= unoccupied post); vacantias vacation, recess
-
-vacar v 1. to be vacant, unoccupied; 2. to be in recess
-
-Hence: vacante-vacantia
-
-vacca n 1. cow (= female bovine); 2. cowhide
-
-Hence: vacchero; vaccheria; vaccin-vaccino &
-
-vacch- see vacca
-
-vaccheria (-ía) n 1. cow stables; 2. dairy farm
-
-vacchero n cowherd, cowboy
-
-vaccin adj vaccine
-
-vaccinal adj vaccinal
-
-vaccinar v to vaccinate
-
-vaccination n vaccination
-
-vaccinator n vaccinator (= one who vaccinates)
-
-vaccinic adj vaccinal, vaccinic
-
-vaccino n vaccine (= preparation for vaccination and inoculation)
-
-Hence: vaccinal; vaccinic; vaccinar-vaccination, vaccinator, revaccinar-revaccination; vaccinogene etc.
-
-vaccino·gene adj vaccinogenic
-
-vacillamento n (act of) vacillating, vacillation
-
-vacillar v 1. to vacillate; 2. to flicker; 3. to be unsteady or shaky
-
-Hence: vacillamento; vacillation; vacillatori
-
-vacillation n 1. vacillation; 2. (act of) flickering, shaking, etc.; le vacillation de un barca the rocking of a (row)boat
-
-vacillatori adj 1. vacillatory; 2. flickering, shaking, etc.
-
-vacuar v to empty, make empty
-
-vacue adj empty
-
-Hence: vacuitate; vacuar; evacuar &; vacuo-vacuolo
-
-vacuitate n emptiness, vacuity
-
-vacuo n emptiness; void; also: vacuum
-
-vacuolo (-cú-) n [Biol.] vacuole
-
-vadabile adj fordable
-
-vadar v to ford, wade through
-
-vademecum (-mé-) n vade mecum
-
-vader [vad-/-vas-] v to go
-
-Hence: evader &; invader &; see verbal forms va, [van], [vamos]
-
-vado n ford
-
-Hence: vadar-vadabile
-
-vagabundage (-aje) n vagabondage
-
-vagabundar v to vagabond
-
-vagabunde adj vagabond
-
-Hence: vagabundar-vagabundage; vagabundo
-
-vagabundo n vagabond
-
-vagar n to wander about, ramble
-
-vage adj 1. wandering about, rambling; 2. vague (= not clearly defined)
-
-Hence: vagar-vagabunde &, divagar &, extravagar &; noctivage etc.; multivage etc.
-
-vagina n 1. sheath; 2. [Anat.] vagina
-
-Hence: vaginismo; vaginitis; vaginula; vaginal; evaginar &; invaginar &
-
-vaginal adj [Anat.] vaginal
-
-vaginismo n [Med.] vaginismus (= spasmodic contractions of the vagina)
-
-vaginitis (-ítis) n [Pathol.) vaginitis
-
-vaginula n [Bot.] vaginule
-
-vaina (-ína) n sheath, scabbard, etc.
-
-Hence: vainero; disvainar; invainar
-
-vainero n sheather, scabbard maker
-
-[valde] adv 1. vehemently, strongly; 2. exceedingly, very much
-
-valdese adj/n Waldensian; valdeses Waldenses
-
-Valdo, Peter npr Peter Waldo [founder of the Waldenses]
-
-Hence: valdese
-
-vale! interj vale! (= farewell!)
-
-valente 1. ppr of valer; 2. adj valiant
-
-valentia n 1. valor, bravery; 2. [Chem.] valence
-
-valer v 1. to be worth (= to be equal to, in value or in price); 2. to be courageous
-
-Hence: valide &; valente-valentia; valor &; valetude &; prevaler &; convalescer &; eguivaler etc.
-
-valetude n (state of) health
-
-Hence: valetudinari; valetudinario
-
-valetudin- see valetude
-
-valetudinari adj invalid, infirm
-
-valetudinario n invalid
-
-valge adj bow-legged
-
-Valhalla n [Mythol.] Valhalla
-
-validar v to validate (= to render valid)
-
-validation n validation (= act of rendering valid)
-
-valide adj 1. able-bodied, robust; 2. valid
-
-Hence: validitate; validar-validation; invalide-invaliditate, invalidar-invalidation, invalido
-
-validitate n 1. robustness, vigor; 2. validity
-
-valise [F] n traveling bag, valise; also: suitcase, satchel, etc.
-
-valkyria n Valkyrie
-
-vallar v to surround with a rampart
-
-vallata n valley
-
-vallation n 1. (act of) surrounding with a rampart; 2. rampart, circumvallation
-
-valle n valley; lilio del valles lily of the valley; per (le) montes e valles over hill and dale; valle de lacrimas vale of tears
-
-Hence: vallata; vallea
-
-vallea (-éa) n valley
-
-vallo n rampart, circumvallation
-
-Hence: vallar-vallation-contravallation, circumvallar-circumvallation, circumvallate; intervallo
-
-valor n 1. value, worth; 2. valor; valores [Com.] holdings (as stock, shares, etc.)
-
-Hence: valorose; valorisar-valorisation, revalorisar; plus-valor etc.
-
-valorisar v to valorize (= to fix prices by valorization)
-
-valorisation n valorization
-
-valorose adj valorous
-
-valuta n 1. value (= monetary worth of a thing); 2. [Fin.] (monetary) standard
-
-Hence: valutar-valutation; devalutar-devalutation; evalutar &
-
-valutar v to value, appraise
-
-valutation n valuation, appraisal
-
-valva n 1. leaf or wing (of a folding door); 2. [Bot., Zool., etc.] valve (as in "valves of the pericarp")
-
-Hence: valvate; valvula &; valvar; multivalve etc.; bivalve etc.
-
-valvar adj [Zool.] valvar, valvular
-
-valvate adj [Bot., Zool.] valvate
-
-valvula n valve (1. [Anat.] as in "heart valves"; 2. [Engin.]; also: tap, spigot, faucet, etc.; 3. [Radio, Elec., etc.] tube); valvula de securitate safety valve
-
-Hence: valvular-multivalvular etc.
-
-valvular adj [Anat., etc.] valvular
-
-[vamos] (vá-) pr 1me pers pl of vader I. (we) go, are going; II. let's go, let us go; III. [Grammatical functions: 1. auxiliary, forming the future or immediate future; 2. auxiliary, forming the imperative]; vamos comenciar 1. we shall begin, are going to begin; 2. let's begin, let us begin
-
-vampir n vampire (1. bloodsucking ghost or reanimated corpse; 2. [Zool.] vampire bat)
-
-Hence: vampirismo
-
-vampirismo n vampirism
-
-van adj vain (1. futile; 2. worthless; 3. conceited); in van in vain
-
-Hence: vanitate-vanitose; evanescer &; vangloria etc.
-
-[van] pr pl of vader 1. go; 2. [grammatical function: auxiliary forming the future or immediate future]; nos van comenciar we shall begin, we are going to begin
-
-vandale adj 1. Vandal, Vandalic (= pertaining to the Vandals);
-
-2. vandal, vandalish (= wantonly destructive)
-
-vandalic adj 1. Vandal, Vandalic (= pertaining to the Vandals;
-
-2. vandal, vandalish (= wantonly destructive)
-
-vandalismo n vandalism
-
-vandalo (ván-) n 1. [Hist.] Vandal; 2. vandal (= wanton destroyer)
-
-Hence: vandalismo; vandalic; vandale
-
-van·gloria n boastfulness, vainglory
-
-Hence: vangloriose; vangloriar
-
-vangloriar v -; vangloriar se to brag, boast
-
-vangloriose adj vainglorious, boastful
-
-vanguarda n [Mil.] vanguard
-
-vanilla n vanilla
-
-Hence: vanillina; vanillismo; vanillate
-
-vanillate adj vanilla-flavored
-
-vanillina n [Bot., Chem.] vanillin
-
-vanillismo n [Med.] vanillism
-
-vanitate n vanity (1. futility; 2. conceit, vainglory)
-
-vanitose adj vainglorious, conceited
-
-vannar v to winnow
-
-vannatura n chaff (= husks separated from the grain hy winnowing)
-
-vanno n winnow, winnowing fan
-
-Hence: varnar-vannatura
-
-vantar v to boast, of vaunt; vantar se to boast (about oneself)
-
-Hence: vanteria
-
-vanteria (-ía) n boasting, vauntery
-
-vapor n 1. steam, vapor; 2. steamer, steamship; machina de vapor steam engine; banio de vapor steam bath; nave a vapor steamer, steamship
-
-Hence: vaporose-vaporositate; vaporisar-vaporisation, vaporisator; evaporar &; cavallo-vapor etc.
-
-vaporisar v to vaporize (1. to evaporate; 2. to atomize, spray)
-
-vaporisation n vaporization, evaporation
-
-vaporisator n vaporizer, atomizer
-
-vaporose adj vaporous
-
-vaporositate n vaporosity, vaporousness
-
-var adj knock-kneed
-
-vari- see variola
-
-variabile adj variable
-
-variabilitate n variability
-
-variante 1. ppr of variar; 2. adj variant, varying variante n variant
-
-variar v to vary (1. to differ; 2. to modify, alter)
-
-variate 1. pp of variar; 2. adj varied
-
-variation n variation; thema con variationes theme with variations; calculo del variationes calculus of variations
-
-varice (vá-) n [Med.] varix, varicose vein
-
-Hence: varicose; varicocele etc.
-
-varicella n [Med.] chicken pox, varicella
-
-varico·cele n varicocele
-
-varicose adj varicose
-
-varie adj 1. various (1. different, diverse; 2. several, diverse); II. variable, inconstant
-
-Hence: varietate; variola &; variar-variante, variabile-variabilitate, invariabile-invariabilitate, variation, variate
-
-varietate n variety (1. variedness, difference; 2. [Biol.]); theatro de varietates vaudeville theater
-
-variola (-rí-) n [Med.] smallpox, variola
-
-Hence: varicella; variolar; variolic; varioloide;
-
-variolose
-
-variolar adj [Med.] variolar, variolous, variolic
-
-variolic adj [Med.] variolic, variolar, variolous
-
-varioloide n [Med.] varioloid
-
-variolose adj [Med.] variolous, variolic, variolar
-
-varion n minnow
-
-Varsovia npr Warsaw
-
-vascello n vessel (= ship)
-
-vascular adj [Anat., Bot.] vascular (as in "vascular membrane, tissue, etc.")
-
-vascularitate n [Anat., Bot.] vascularity
-
-vasculo n 1. vessel, container; 2. vasculum
-
-Hence: vascular-vascularitate; vasculose
-
-vasculose adj [Anat., Bot.] vascular
-
-vaselina n Vaseline
-
-vaso n 1. vessel (= hollow container); 2. vase; vasos communicante communicating vessels; vaso de election [Eccl.] chosen vessel; vaso sanguinari blood vessel
-
-Hence: vascello; vasculo &; extravasar &: invasar; transvasar; vasomotor etc.
-
-vaso·motor adj [Anat.] vasomotor
-
-vassallage (-aje) n [Hist.] vassalage (= state of being a vassal)
-
-vassallo n [Hist.] vassal; also: attrib
-
-Hence: vassallage
-
-vastar v to lay waste
-
-vaste adj 1. waste (as in "to lay waste"); 2. vast (= extensive in area or range)
-
-Hence: vastitate; vastar-devastar &
-
-vastitate n vastness
-
-vatican adj Vatican (1. as in "Vatican Hill"; 2. pertaining to the Vatican); Citate Vatican Vatican City
-
-Hence: Vaticano
-
-Vaticano n 1. Vatican Hill; 2. Vatican
-
-vaudeville [F] n vaudeville
-
-[vece] n time (as in "three times"); alcun veces sometimes; un vece once (= one time; at one time); a veces at times; altere vece again; plure veces several times, repeatedly (= vice)
-
-vect- see veher
-
-vecte n 1. crowbar, pry, lever, etc.
-
-vector n 1. conveyer, conveyor; 2. [Math.] vector
-
-Hence: vectorial
-
-vectorial adj [Math.] vectorial
-
-veget- see vegetal
-
-vegetabile adj vegetable
-
-vegetal adj vegetal, vegetable; le regno vegetal the vegetable kingdom vegetal n vegetable
-
-vegetar v to vegetate (1. to grow, as plants, seeds, etc.; 2. to live a merely physical life)
-
-vegetarian adj vegetarian
-
-vegetarianismo n vegetarianism
-
-vegetariano n vegetarian
-
-vegetation n vegetation (1. action of vegetating; 2. plant life, plants collectively)
-
-vegetative adj vegetative
-
-vegete (vé-) adj healthy, vigorous, flourishing
-
-Hence: vegetal¹-vegetal²-vegetarian-vegetarianismo, vegetariano; vegetar-vegetabile, vegetation, vegetative; vegetoanimal etc.
-
-vegeto·animal adj vegeto-animal
-
-vegeto·mineral adj vegeto-mineral
-
-vehemente adj vehement, impetuous
-
-Hence: vehementia
-
-vehementia n vehemence
-
-veher [veh-/vect-] v [occurring in compounds and derivatives]
-
-Hence: vehiculo &; vector &; eveher &; inveher &
-
-vehicular adj vehicular vehicular v to convey in a vehicle
-
-vehiculo n vehicle; also: [Pharm.]
-
-Hence: vehicular¹; vehicular²
-
-[vel] conj or, or rather; vel ... vel either ... or
-
-vela n sail ("the sail of a ship"); facer vela to make sail; poner al vela to set sail; a plen vela under full sail; sub vela under sail
-
-Hence: velero; veliero
-
-velar adj velar; also: [Phonet.] velar v to veil
-
-velario n [Rom. Antiq.] velarium
-
-velero n sailmaker
-
-velia n waking, being awake
-
-veliar v 1. to stay awake; 2. to watch, be on the lookout
-
-Hence: velia; eveliar &; surveliar &
-
-veliero n sailing ship; sailboat
-
-[velle] subj pass of voler 1. would, would wish, would like; 2. [Grammatical function: auxiliary, forming the conditional];
-
-ille velle comenciar 1. he would like to begin; 2. he would begin
-
--veller [-vell-/-vuls-] v [occurring in compounds]
-
-Hence: aveller &; conveller &; diveller &; eveller &; reveller &
-
-velo n veil (as in "bridal veil"); velo (del palatio) soft palate, velum
-
-Hence: velario; velar¹; velar²-disvelar, revelar &
-
-velo- see velocipede
-
-veloce adj speedy, swift
-
-Hence: velocitate; velocifero; velocimetro etc.; velocipede etc.
-
-velocifero (-cí-) n 1. stagecoach express; 2. velocipede, dandy horse
-
-veloci·metro (-cí-) n speedometer, velocimeter
-
-veloci·pede (-cí-) n velocipede
-
-Hence: velocipedista; velodromo etc.
-
-velocipedista n velocipedist
-
-velocitate n speed, velocity; de alte velocitate high-speed
-
-velo·dromo n velodrome
-
--velopp- [occurring in compounds]
-
-Hence: disveloppar &; inveloppar &
-
-velvet [A] n velveteen
-
-vena n vein (1. blood vessel; 2. as in "veins and arteries"); also: [Bot., Mineral., Geol., etc.]; vena musical musical vein
-
-Hence: venula; venate; venose-venositate, intravenose; venar-venatura
-
-venar¹ v to hunt, chase
-
-Hence: veneria; venation; venator; venatori
-
-venar² v to vein, grain
-
-venate adj veiny, veined
-
-venation n (action of) hunting; venation
-
-venator n hunter, huntsman
-
-venatori adj hunting, hunter's; venatory
-
-venafura n venation, veining
-
-vender v to sell (= to exchange for money or other payment)
-
-Hence: vendibile-invendibile; venditor; vendita; revender-revenditor, revendita
-
-vendibile adj vendible, salable
-
-vendita (vén-) n sale (= act of selling)
-
-venditor n vendor (= seller; also: vending machine); venditor ambulante peddler
-
-vene- see veneno
-
-vene·ficio n (act of) poisoning
-
-venenifere adj poison-bearing
-
-venenific adj poison-producing, venenific
-
-veneno n poison; also: venom (= poisonous fluid secreted by certain snakes, etc.)
-
-Hence: venenifere; venenific; venenose-venenositate; invenenar-invenenamento; contraveneno; veneficio etc.
-
-venenose adj poisonous, venomous
-
-venenositate n venomousness
-
-venerabile adj venerable
-
-venerabilitate n venerability, venerableness
-
-venerar v to venerate, revere
-
-Hence: venerabile-venerabilitate; veneration; venerator
-
-veneration n veneration, reverence
-
-venerator n venerator
-
-vener·di (-dí) n Friday; Venerdi Sancte Good Friday
-
-Venere npr Venus (1. [Rom. Relig.]; 2. [Astron.])
-
-Hence: veneree; venerdi etc.
-
-veneree adj venereal
-
-veneria (-ía) n hunt, chase, hunting; venery
-
-venete (vé-) adj 1. [Rom. Antiq.] Venetic (= of Venetia or the Veneti); 2. of Venezia
-
-Hence: veneto-Venetia-venetian-venetiano
-
-Venetia npr 1. [Rom. Antiq.] Venetia; 2. Venezia; 3. Venice
-
-venetian adj Venetian, of Venice
-
-venetiano n Venetian
-
-veneto (vé-) n 1. Venetic (= language of the Veneti); 2. one of the Veneti
-
-Venezuela npr Venezuela
-
-Hence: venezuelan-venezuelano
-
-venezuelan adj Venezuelan
-
-venezuelano n Venezuelan
-
-vengiabile (-já-) adj worthy of revenge
-
-vengiantia (-ján-) n vengeance, revenge
-
-vengiar (-jár) v to avenge; vengiar se to avenge oneself, take revenge
-
-Hence: vengiantia; vengiabile; vengiative; vengiator
-
-vengiative (-ja-) adj vengeful, vindictive
-
-vengiator (-ja-) n avenger
-
-venia n mercy, indulgence
-
-Hence: venial-venialitate
-
-venial adj venial; peccato venial venial sin
-
-venialitate n veniality
-
-venir [ven-/vent-] v to come; venir al mundo to come into the world, be born; venir al manos to come to blows; facer venir to send for
-
-Hence: venita; advenir &; circumvenir; convenir &; contravenir &; devenir; evenir &; intervenir &; pervenir; prevenir &; provenir &; revenir; subvenir &; supervenir &; benvenite etc.
-
-venita n coming
-
-venose adj venous, venose
-
-venositate n venosity, venousness
-
-ventalio n ventail
-
-ventar v to blow, be windy
-
-ventilar v I. to fan, winnow (grain); II. to ventilate (1. to supply with fresh air; 2. to discuss openly)
-
-Hence: ventilation; ventilator
-
-ventilation n ventilation (1. supplying with fresh air; 2. as in "ventilation of one's grievance")
-
-ventilator n ventilator; ventilator (electric) (electric) fan
-
-vento n wind (as in "east wind")
-
-Hence: ventose &; ventar-ventalio; ventilar &; paravento etc.
-
-ventose adj 1. windy, gusty; 2. ventose, flatulent
-
-Hence: ventositate
-
-ventositate n ventosity, flatulence
-
-ventral adj abdominal, ventral
-
-ventrata n 1. litter (of puppies, etc.); 2. hearty feed
-
-ventre n belly
-
-Hence: ventrata; ventriculo &; ventral; eventrar &; ventrilogue etc.
-
-ventricular adj ventricular
-
-ventriculo n [Anat.] ventricle
-
-Hence: ventricular
-
-ventri·loque (-trí-) adj ventriloquous, ventriloquial
-
-Hence: ventriloquia; ventriloquo
-
-ventriloquia (-ía) n ventriloquism, ventriloquy
-
-ventriloquo (-trí-) n ventriloquist
-
-venula n [Anat.] venule, veinlet
-
-Venus (vé-) npr Venus (1. [Rom. Relig.]; 2. [Astron.])
-
-ver n spring, springtime
-
-Hence: vernal; primavera etc.
-
-ver adj true (= truthful; in accordance with truth or reality)
-
-Hence: verismo; verista; veritate; verace &; verificar &; averar; veridic etc.; verisimile etc.; verdicto etc.; verosimilante etc.; [vere], [vero]
-
-verace adj veracious
-
-Hence: veracitate
-
-veracitate n veracity
-
-veranda n veranda, verandah
-
-verbal adj verbal (1. as in "a verbal contract"; 2. [Gram.])
-
-verberar v to beat, whip, flog
-
-Hence: verberation; reverberar &
-
-verberation n (action of) beating, whipping, flogging; verberation
-
-verbo n 1. word; 2. [Gram.] verb; le Verbo the Word
-
-Hence: verbal; verbose-verbositate; adverbio &; proverbio &
-
-verbose adj verbose
-
-verbositate n verbosity
-
-verde adj green; fructo verde green fruit (= unripe fruit); vino verde hard, sharp, wine; le annos verde the green years; verde vetulessa green old age
-
-Hence: verdiero; verdura; verdear; verdemar etc.; semperverde etc.; biliverdina etc.
-
-verde n (the color) green
-
-verdear v to become green
-
-verde·mar adj sea-green
-
-ver·dicto n verdict
-
-verdiero n orchard
-
-verdura n I. verdure (1. fresh greenness; 2. green vegetation); II. greens (= green vegetables)
-
-[vere] adv truly, really, indeed, even (= vero)
-
-verger v to verge (as in "a hill verges to the north")
-
-Hence: converger &; diverger &
-
-vergilian, virgilian adj Vergilian
-
-Vergilio, Virgilio nprm Vergil
-
-Hence: vergilian
-
-vergonia n shame (1. "feeling of shame"; 2. disgrace); haber vergonia to be ashamed
-
-Hence: vergoniose; vergoniar-avergoniate
-
-vergoniose adj 1. bashful, modest; 2. shameful, disgraceful
-
-veri·dic (-rí-) adj truthful, veridical
-
-Hence: veridicitate
-
-veridicitate n truthfulness, veracity
-
-verificabile adj verifiable
-
-verificar v to verify (1. to confirm the truth of; 2. to test or check the correctness of); verificar un conto to check, audit an account
-
-Hence: verificabile; verification; verificator
-
-verification n verification
-
-verificator n verifier
-
-veri·simile adj likely, probable, verisimilar
-
-Hence: verisimilitude; inverisimile
-
-verisimilitude n likelihood, probability, verisimilitude
-
-verismo n verism
-
-verista n verist; attrib verist, veristic
-
-veritate n truth; also: verity; dicer le veritate to tell the truth; a dicer le veritate to tell the truth; in veritate in truth, truly, really
-
-verme n worm; verme de terra earthworm
-
-Hence: vermiforme etc.; vermicida etc.; vermivore etc.
-
-vermente adv really, truly; indeed
-
-vermicelli [I] npl vermicelli
-
-vermi·cida n vermicide; attrib vermicidal
-
-vermi·forme adj vermiform; appendice vermiforme vermiform appendix
-
-vermi·fuge (-í-) adj vermifuge vermi·fuge (-í-) n vermifuge
-
-vermilie adj bright red, scarlet, vermilion, etc.
-
-Hence: vermilion
-
-vermilion n vermilion
-
-vermina (vér-) n vermin
-
-Hence: verminose
-
-verminose adj verminous (1. infested with vermin; 2. [Pathol.])
-
-vermi·vore adj vermivorous
-
-vermut n vermouth
-
-vernal adj vernal, spring; equinoctio vernal vernal equinox
-
-vernissar v to varnish
-
-vernissator n varnisher
-
-vernisse n varnish
-
-Hence: vernissar-vernissator
-
-[vero] adv truly, really, indeed, even (= vere)
-
-vero·similante adj likely, probable, verisimilar
-
-Hence: verosimilantia; inverosimilante-inverosimilantia
-
-verosimilantia n verisimilitude, probability
-
-verre n boar (= male swine)
-
-verruca n wart; also: [Med., Zool.] veruca
-
-Hence: verrucaria; verrucose-verrucositate; verruciforme etc.
-
-verrucaria n [Bot.] Verrucaria
-
-verruci·forme adj wart-shaped, verruciform
-
-verrucose adj warty; also: [Med.] verrucose
-
-verrucositate n verrucosity
-
-vers- see verter
-
-versar v -; versar se in to become familiar or conversant with, to verse oneself in
-
-versate adj -; versate in versed in, conversant with
-
-versatile adj versatile (1. fickle, variable; 2. as in "versatile genius")
-
-Hence: versatilitate
-
-versatilitate n versatility
-
-versetto n 1. verse (of the Bible); 2. [Liturgy] versicle
-
-versiculo n versicle
-
-versificar v to versify (1. to write verse; 2. to relate in verse)
-
-versification n versification
-
-versificator n versifier
-
-version n I. (act of) turning or turning round; II. version (1. translation; 2. as in "two versions of an affair")
-
-verso n 1. [Poet.] verse; 2. [Typog., etc.] verso (= reverse or left-hand page); verso leonin Leonine verse; verso libre free verse
-
-Hence: versetto; versiculo; versificar-versification, versificator
-
-verso prep toward(s); also: to, in the direction of, etc.
-
-versta [R] n verst
-
-vertebra (vér-) n vertebra
-
-Hence: vertebral-intervertebral; vertebrate-invertebrate-invertebrato, vertebrato
-
-vertebral adj vertebral
-
-vertebrate adj vertebrate
-
-vertebrato n [Zool.] vertebrate
-
-verter [vert-/-vers-] v to turn, turn round; also: to turn, bend
-
-Hence: vertice &; version; verso¹; verso² &; anniversari etc.; versar-versatile &, versate, malversar etc., tergiversar etc., ambivert- &; averter &; adverter &; converter &; controverter &; diverter &; everter &; extroverter &; introverter &; inverter &; perverter &; reverter &; subverter &; transverter &; sinistrorse etc.
-
-vertical adj vertical
-
-Hence: verticalitate
-
-verticalitate n verticality
-
-vertice (vér-) n vertex (1. top, summit; 2. [Anat.]; 3. [Math.])
-
-Hence: verticillo-verticillate; verticitate; vertical &
-
-verticillate adj [Bot.] verticillate, verticillated
-
-verticillo n [Bot.] verticil
-
-verticitate n verticity
-
-vertigine n dizziness, giddiness, vertigo
-
-Hence: vertiginose
-
-vertiginose adj vertiginous (1. dizzy, giddy; 2. causing vertigo or giddiness; 3. whirling, rotatory)
-
-verve [F] n animation, zest, verve
-
-vesica (-íca) n [Anat.] (urinary) bladder; vesica biliari [Anat.] gall bladder; vesica natatori [Ichthyol.] air bladder, swim or swimming bladder
-
-Hence: vesicula-vesicular; vesical; vesicar-vesicante, vesicatori
-
-vesical adj vesical
-
-vesicante 1. pp of vesicar; 2. adj vesicant, vesicatory vesicante n vesicant, vesicatory
-
-vesicar v [Med.] to blister, vesicate
-
-vesicatori adj vesicatory, vesicant
-
-vesicula n vesicic (1. [Anat.]; 2. [Med.] blister; 3. [Bot.])
-
-vesicular adj vesicular (= having the form or structure of a visicle)
-
-vesir [Tu.] n vizier
-
-Hence: vesirato
-
-vesirato n vizierate
-
-vespa n wasp
-
-Hence: vespiario
-
-vespera (vés-) n evening; iste vespera this evening, tonight; le vespera in the evening, evenings; heri vespera last night; mane vespera tomorrow night; vesperas [Eccl.] vespers
-
-vesperal adj vesperal, vespertine vesperal n [Eccl.] vesperal
-
-vespere n evening; iste vespere tonight; le vespere in the evening, evenings; heri vespere last night; mane vespere tomorrow night
-
-Hence: vespera-vesperal; vespertilion; vespertin
-
-vespertilion n [Zool.] bat
-
-vespertin adj vespertine, vespertinal
-
-vespiario n wasp's nest
-
-Vesta npr Vesta (1. [Rom. Rel.]; 2. [Astron.])
-
-Hence: vestal
-
-vestal adj vestal (1. pertaining to Vesta; 2. pertaining to a vestal virgin) vestal n vestal (virgin)
-
-veste n (outer) garment
-
-Hence: vestiario; vestir-vestimento-subvestimentos, vestitura, disvestir, investir &, revestir &, travestir &
-
-vestiario n cloakroom, checkroom
-
-vestibulo (-tí-) n vestibule; also: [Anat.]
-
-vestigial adj vestigial
-
-vestigio n 1. footprint; 2. vestige
-
-Hence: vestigial
-
-vestimento n 1. garment, piece of clothing; 2. [Eccl.] vestment; vestimentos clothing, clothes, apparel
-
-vestir v 1. to dress (a person); 2. to put on (a garment); vestir de to dress (a person) in
-
-vestitura n clothing, clothes, apparel
-
-vesuvian adj Vesuvian
-
-vesuvianite n [Geol.] veruvianite
-
-Vesuvio npr Vesuvius
-
-Hence: vesuvian-vesuvianite
-
-vet- see vetere
-
-veteran adj veteran
-
-Hence: veterano
-
-veterano n veteran
-
-vetere adj old (1. not young; 2. not new); le Vetere Testamento the Old Testament; le Vetere Mundo the Old World
-
-Hence: veteran &; vetuste-vetustate; inveterar &; vetule
-
-&
-
-veterinari adj veterinary
-
-Hence: veterinario
-
-veterinario v veterinarian, veterinary surgeon
-
-veto n veto; poner su veto (a un cosa) to veto (something)
-
-vetula (vé-) n old woman
-
-vetule adj old (1. not young; 2. not new)
-
-Hence: vetulessa; vetulo; vetula
-
-vetulessa n 1. old age; 2. oldness
-
-vetulo (vé-) n old man
-
-vetus- see vetere
-
-vetustate n 1. old age; oldness; 2. antiqueness
-
-vetuste adj 1. very old; 2. antiquated
-
-vexar v to vex, annoy, irritate
-
-Hence: vexation; vexator; vexatori
-
-vexation n vexation, irritation
-
-vexator n vexer
-
-vexatori adj vexatious
-
-via n way (=road, path); also: route; course (of action); vias (respiratori, digestive, etc.) [Anat.] (respiratory, digestive, etc.) tracts, passages, etc.; via sic (humide) [Chem.] dry (wet) process; via lactee Milky Way; vias de facto acts of violence, assault and battery
-
-Hence: viatico; viage &; viabile &; devie &; obvie &; pervie &; previe; conviar &; disviar; inviar &; viaducto etc.; ferrovia etc.; tramvia etc.; multivie etc.; trivio etc.
-
-via prep via, by way of
-
-viabile¹ adj passable (= that can be passed or traversed)
-
-Hence: viabilitate¹
-
-viabile² adj viable, capable of living
-
-Hence: viabilitate²
-
-viabilitate¹ n passableness (= state of being passable or traversable)
-
-viabilitate² n viability (= capacity for living)
-
-via·ducto n viaduct
-
-viage (-aje) n journey, trip; also: voyage; facer un viage to make or take a trip
-
-Hence: viagiar-viagiator
-
-viagiar (-jár) v to travel
-
-viagiator (-ja-) n traveler; voyager
-
-viatico n viaticum (1. provisions for a journey; 2. [R.C.Ch.])
-
-vibrante 1. ppr of vibrar; 2. adj vibrant
-
-vibrar v to vibrate
-
-Hence: vibrante; vibratile; vibration; vibrator; vibratori; vibrato
-
-vibratile adj vibratile
-
-vibration n vibration
-
-vibrato n [Mus.] vibrato
-
-vibrator n vibrator
-
-vibratori adj vibratory, vibrating
-
-vic- see viginti
-
-vicari adj vicarious
-
-vicarial adj vicarial (= pertaining to a vicar)
-
-vicariato n vicariate
-
-vicario n vicar (1. deputy, proxy; 2. [Eccl.])
-
-Hence: vicariato; vicarial
-
-vice n 1. turn (as in "my turn"); also: stead; 2. time (as in "three times"); alicun vices sometimes; un vice once (1. on a single occasion; 2. formerly, at one time); un vice que once, once that; in vice de instead of; a vices at times; altere vice a second time, once more, once again; plure vices several times; repeatedly
-
-Hence: vicari; vicario &; vicissitude
-
-vice- prefixo [used with titles] vice- (= one who takes the place of)
-
-Hence: vicepresidente etc.; vicerege etc.
-
-vicecontato n viscountcy
-
-viceconte n viscount
-
-Hence: vicecontessa; vicecontato
-
-vicecontessa n viscountess
-
-vic·ennal adj vicennial (1. lasting twenty years; 2. occurring once in twenty years)
-
-vicepresidente n vice-president, vicechairman, etc.
-
-vicepresidentia n vice-presidency, vice-chairmanship, etc.
-
-vicerege n viceroy
-
-vice versa [L] vice versa
-
-vicin adj neighboring, adjoining, near
-
-Hence: vicinitate; vicinal; vicinar; avicinar; circumvicin; vicino
-
-vicinal adj neighboring, adjoining; via vicinal vicinal road
-
-vicinar v to border upon, neighbor
-
-vicinitate n neighborhood, vicinity (1. nearness; 2. region, surroundings)
-
-vicino n neighbor
-
-vicissitude n vicissitude (as in "after many vicissitudes")
-
-vico n 1. street, alley; 2. village, hamlet
-
-Hence: vicin &
-
-vict- see vincer
-
-victima (víc-) n victim
-
-victo n sustenance, food
-
-Hence: victualia-victualiar
-
-victor n victor
-
-victoria n victory
-
-Hence: victoriose
-
-victoriose adj victorious
-
-victu- see victo
-
-victualia n provisions, victuals
-
-victualiar v to provision, victual
-
-vidente I. ppr of vider; II. adj seeing (1. having the power of sight; 2. clairvoyant) vidente n clairvoyant
-
-vider [vid-/vis-/vist-] v to see; vidite que seeing that, considering that
-
-Hence: vidente-evidente &, clairividente etc.; onmividente etc.; visibile-visibilitate, invisibile-invisibilitate; vision-visionari-visionario, television etc.; viso-visage, visiera, visual, visar, aviso, avisar &; viste; vista; intervider &; previder &; provider &; revider &
-
-vidua n 1. widow; 2. [Bot.] mourning widow, sweet scabious
-
-viduage (-aje) n widowhood
-
-vidual adj belonging to widowhood
-
-viduar v to widow (= to bereave of a husband)
-
-vidue adj widowed
-
-Hence: viduo; vidua-viduage, viduitate, vidual, viduar
-
-viduitate n widowhood
-
-viduo n widower
-
-Vienna npr Vienna
-
-Hence: viennese
-
-viennese adj/n Viennese
-
-vig- see viginti
-
-viger v to be vigorous
-
-Hence: vigor &
-
-vigesimal adj vigesimal
-
-vigesime (-gé-) adj twentieth
-
-vigesimo (-gé-) n twentieth (part)
-
-vigilante 1. ppr of vigilar; 2. adj vigilant, watchful
-
-vigilantia n vigilance, watchfulness
-
-vigilar v 1. to stay awake; 2. to watch, be on the lookout; vigilar super to watch over, look after
-
-vigilator n 1. one who stays awake; 2. watchman, guard
-
-vigile adj awake
-
-Hence: vigilia; vigilar-vigilante-vigilantia, vigilator
-
-vigilia n vigil (1. wakefulness; 2. wakeful attention, watch; 3. eve of a festival)
-
-viginti adj twenty
-
-Hence: vigesime-vigesimal, vigesimo; vicennal etc.
-
-vignette [F] n vignette
-
-vigor n vigor; also: validity
-
-Hence: vigorose; vigorar
-
-vigorar v to invigorate
-
-vigorose adj vigorous
-
-vil adj 1. cheap; 2. vile, base; a precio vil at a low price
-
-Hence: vilitate; vilificar &; vilipender etc.
-
-vilayet [Tu.] n vilayet
-
-vilificar v to vilify
-
-Hence: vilification
-
-vilification n vilification
-
-vili·pender v to hold cheap, despise, vilipend
-
-vilitate n 1. cheapness; 2. vileness, baseness
-
-villa n villa
-
-Hence: village; villetta; villan &
-
-village (-aje) n village
-
-villan adj 1. living in a village; 2. vile, infamous, villainous
-
-Hence: villanage; villania; villano
-
-villanage (-aje) n [Hist.] villenage, villeinage (= status of a villein)
-
-villania (-ía) n vile action, villainy
-
-villano n 1. villager, rustic; 2. [Hist.] villein; 3. scoundrel, villain
-
-villetta n small villa
-
-villo n hair, down
-
-Hence: villose-villositate; villute-villuto
-
-villose adj hairy, villous
-
-villositate n hairiness, villosity
-
-villute adj hairy
-
-villuto n velvet; villuto costate corduroy
-
-Vilna [Lithuanian] npr Vilna, Wilno
-
-vin- [occuring in compounds]
-
-Hence: vindice etc
-
-vinagrar v to vinegar, season with vinegar
-
-vinagre n vinegar
-
-Hence: vinagrero; vinagreria; vinagrar
-
-vinagreria (-ía) n vinegar factory
-
-vinagrero n vinegar maker or dealer
-
-vinari adj wine, of wine
-
-vincer [vinc-/-vict-] v to vanquish, overcome
-
-Hence: vincimento; vincibile-invincibile-invincibilitate; victor-victoria &; invicte; vincitor; convincer &; evincer &
-
-vincibile adj vincible, vanquishable
-
-vincimento n vanquishment
-
-vincitor n victor
-
-vin·demia n vintage
-
-Hence: vindemiar-vindemiator
-
-vindemiar v to harvest grapes
-
-vindemiator n vintager
-
-vindicabile adj vindicable (= that can or deserves to be vindicated)
-
-vindicantia n vengeance, revenge
-
-vindicar v 1. to revenge, avenge; 2. [Law] to vindicate; vindicar se de to take vengeance for
-
-vindicative adj vindictive
-
-vindicator n avenger
-
-vin·dice (vín-) n avenger
-
-Hence: vindicar-vindicantia, vindicabile, vindicative, vindicator, revendicar-revindication
-
-vinia n vineyard
-
-vinic adj vinic
-
-vini·cole adj wine-growing
-
-vini·cultura n viniculture
-
-vinifere adj wine-producing
-
-vinificar v to (cause to) turn into wine
-
-vinification n vinification
-
-vino n wine
-
-Hence: vinari; vinia; vinic; vinifere; vinolente &; vinose-vinositate; vinificar-vinification; avinar &; vinicultura etc.; vinicole etc.; vindemia etc.
-
-vinolente adj too fond of the bottle, winebibbing
-
-Hence: vinolentia
-
-vinolentia n winebibbing
-
-vinose adj vinous
-
-vinositate n vinosity (= quality of being vinous)
-
-vintesime (-ésime) adj twentieth; le vintesime parte, le vintesimo the twentieth part, the twentieth
-
-vinti adj twenty
-
-Hence: vintesime
-
-viola¹ n [Bot.] Viola; viola; specif.: violet
-
-Hence: violetta &; violacee-violaceas
-
-viola² n [Mus.] viola
-
-Hence: violista; violino &; violon
-
-violabile adj violable
-
-violaceas n pl [Bot.] Violaceae
-
-violacee adj violaceous (1. violet, violet-colored; 2. of the Violaceae)
-
-violar v to violate (1. "to violate a law, rule, etc."; 2. "to violate a sacred place"; 3. to rape)
-
-Hence: violabile-inviolabile-inviolabilitate; violation; violator; violate-inviolate
-
-violate 1. pp of violar; 2. adj violate, violated
-
-violation n violation (1. "violation of a law, rule, etc."; 2. "violation of a sacred place"; 3. rape)
-
-violator n violator
-
-violentar v to do violence to
-
-violente adj violent
-
-Hence: violentia; violentar
-
-violentia n violence; facer violentia a to do violence to
-
-violetta n [Bot.] violet
-
-Hence: violette-ultraviolette, violetto
-
-violette adj violet
-
-violetto n violet (= color violet)
-
-violinista n violinist
-
-violino n violin
-
-Hence: violinista
-
-violista n violist
-
-violon n bass viol
-
-violoncellista n violoncellist
-
-violoncello [I] n violoncello
-
-Hence: violoncellista
-
-vipera (ví-) n viper
-
-Hence: viperides; viperin
-
-viperides (-pér-) npl [Zool.] Viperidae
-
-viperin adj viperine, viperous
-
-viragine n virago
-
-virga n 1. rod (= straight, slender stick); 2. [Naut.] yard
-
-Hence: virgula &; invirgar-invirgatura
-
-virginal adj virginal
-
-virgine n virgin; Virgine [Astron.] Virgo; le Virgine the Virgin Mary
-
-Hence: Virginia &; virginitate; virginal
-
-virgine adj virgin, virginal; foreste virgine virgin forest
-
-Virginia n (State of) Virginia; tabaco de Virginia Virginia (tobacco)
-
-Hence: virginian-virginiano
-
-virginian adj Virginian (= pertaining to Virginia)
-
-virginiano n Virginian (= native or inhabitant of Virginia)
-
-virginitate n virginity
-
-virgula n [Gram.] comma; puncto e virgula semicolon; bacillo virgula [Med.] comma bacillus
-
-Hence: virguletta; virgular
-
-virgular v to (put a) comma
-
-virguletta n (single) quotation mark; virgulettas quotation mark or marks;
-
-poner (un parola) inter virgulettas to put (a word) in quotation marks
-
-viril adj virile; etate viril manhood
-
-Hence: virilitate
-
-virilitate n I. virility (1. potency; 2. maculinity, manliness); II. manhood (as in "to arrive at manhood")
-
-viro n man (= male human being)
-
-Hence: viragine; virtute &; viril &; triumviro etc.
-
-virose adj virose, poisonous
-
-virtu- see virtute
-
-virtual adj virtual
-
-Hence: virtualitate
-
-virtualitate n virtuality
-
-virtuose adj virtuous (1. having or exhibiting moral virtue; 2. efficacious, potent)
-
-virtuositate n virtuosity (= great skill in the methods of an art, especially music)
-
-virtuoso n virtuoso (= person skilled in the methods of an art, especially music)
-
-Hence: virtuositate
-
-virtute n I. manliness, valor; II. virtue (1. active property, potency; 2. moral excellence; 3. chastity in a woman; 4. [Theol.] one of the orders of celestial beings); per virtute de by virtue of; facer de necessitate virtute to make a virtue of necessity
-
-Hence: virtual &: virtuose-virtuoso &
-
-virulente adj virulent (1. [Bacteriol.]; 2. as in "virulent invective")
-
-Hence: virulentia
-
-virulentia n virulence, virulency
-
-virus (ví-) n [Pathol.] virus
-
-Hence: virulente &; virose
-
-vis- see vider
-
-visa n visa, visé
-
-visage (-aje) n countenance, face, visage
-
-visar v to aim (= to take aim); visar a to aim at
-
-vis-à-vis [F] adv opposite, face to face, vis-à-vis
-
-visco n 1. mistletoe; 2. birdlime
-
-Hence: viscose-viscositate
-
-viscose adj viscous
-
-viscositate n viscosity
-
-visibile adj visible
-
-visibilitate n visibility
-
-visiera n visor (1. of a helmet; 2. of a cap)
-
-vision n vision
-
-visionari adj visionary
-
-visionario n visionary
-
-visita (ví-) n visit; facer un visita a un persona to call on someone; visita domiciliari domiciliary visit; derecto de visita right of search or visit; visita pastoral pastoral visitation (of a bishop)
-
-visitante n visitant, visitor
-
-visitar v to visit
-
-Hence: visita-contravisita; visitante; visitation; visitator
-
-visitation n visitation
-
-visitator n visitor, caller
-
-viso n sight, vision (= power of seeing)
-
-vist- see vider
-
-vista n view (1. sight; 2. things seen; 3. mental picture); a prime vista at first sight; perder de vista to lose sight (of); secunde vista second sight; puncto de vista point of view; in vista de in view of
-
-viste prep considering, in view of; viste que considering that
-
-Vistula (vís-) npr Vistula
-
-visual adj visual (= pertaining to the sense of sight)
-
-vita n life; ganiar le vita to make a living; sin vita without life, lifeless; plen de vita full of life, lively
-
-Hence: vital-vitalismo, vitalista, vitalitate; vitamina etc.
-
-vital adj vital; fortia vital vital force
-
-vitalismo n [Philos., Biol.] vitalism
-
-vitalista n vitalist
-
-vitalitate n vitality
-
-vit·amina n vitamin
-
-Hence: vitaminic; vitaminisar; vitaminologia etc.
-
-vitaminic adj vitamin, vitaminic
-
-vitaminisar v to vitaminize
-
-vitamino·logia (-ía) n vitaminology
-
-vitar v 1. to plant vines; 2. to screw, screw in -vitar see invitar
-
-vite n 1. vine, grapevine; 2. screw; matre vite [Mech.] nut
-
-Hence: vitar; viticultura etc.; viticola etc.; viticole etc.; tornavite etc.
-
-vitelli·gene adj vitelligenous, vitellogenous (= producing the yolk or vitellus)
-
-vitellin¹ adj calf, calf's
-
-vitellin² adj 1. yolk, yolk-like, yolk-colored; 2. vitelline (= pertaining to the vitellus)
-
-vitellino n vellum
-
-vitello¹ n 1. calf (= young of the cow); 2. veal
-
-Hence: vitellin¹-vitellino
-
-vitello² n 1. yolk (of an egg); 2. [Embryol.] vitellus
-
-Hence: vitellin²; vitelligene etc.
-
-vitiar v 1. to corrupt, deprave; II. to vitiate (1. to impair, spoil; 2. to destroy the legal force of)
-
-vitiation n vitiation
-
-viti·cola (-tí-) n winegrower, viticulturist viti·cola (-tí-) adj winegrowing, viticultural
-
-viti·cole adj viticultural
-
-viti·cultor n wine grower, viticulturist
-
-viti·cultura n viticulture
-
-vitio n 1. vice (= moral fault or failing); 2. defect (as in "defect of eyesight")
-
-Hence: vitiose; vitiar-vitiation
-
-vitiose adj 1. depraved, wicked, vicious; 2. defective, faulty; cavallo vitiose vicious horse
-
-vitrar v to glaze, furnish with glass
-
-vitree adj vitrcous (1. of, pertaining to, or derived from, glass; 2. glassy, resembling glass); humor vitree [Anat.] vitreous humor
-
-vitrero n glazier
-
-vitriera n stained glass window
-
-vitrificabile adj vitrifiable
-
-vitrificar v to vitrify
-
-vitrification n vitrification, vitrifaction
-
-vitrina n 1. show window; 2. showcase, cabinet
-
-vitriolar v to throw vitriol at
-
-vitriolic adj vitriolic
-
-vitriolisar v to vitriolize (= convert into vitriol)
-
-vitriolo n [Chem.] vitriol
-
-Hence: vitrolic, vitriolar, vitriolisar
-
-vitro n I. glass (1. as in "made of glass"; 2. drinking glass); II. windowpane, pane
-
-Hence: vitrero; vitriera; vitrina; vitree-vitriolo &; vitrose; vitrar; vitrificar-vitrificabile, vitrification
-
-vitrose adj vitreous (1. of, pertaining to, derived from, glass; 2. glassy)
-
-vituperabile adj vituperable, reprehensible, vile
-
-vituperar v to vituperate
-
-Hence: vituperabile; vituperation; vituperative; vituperator
-
-vituperation n vituperation
-
-vituperative adj vituperative
-
-vituperator n vituperator
-
-vivace adj vivacious; also: [Mus.] vivace
-
-Hence: vivacitate
-
-vivacitate n vivaciousness, vivacity
-
-vivanda n (dish of) food; vivandas viands, victuals
-
-Hence: vivandero, vivandera
-
-vivandera n (female) canteen manager, sutler
-
-vivandero n (male) canteen manager, sutler
-
-vivario n fishpond
-
-vivat (ví-) viva, vivat
-
-vive adj 1. alive, live, living; 2. lively; (color) vive bright (color); de vive voce by word of mouth; de vive fortia by sheer force; al or in le vive to the quick
-
-Hence: vivario; vivific; vivificar-vivification, vivificator, revivificar-revivification; avivar &; vivisection etc.; vivipare etc.; semivive etc.
-
-vivente adj alive, living
-
-viver v to live; viver de to live on (something); maniera de viver way of life, way of living; viver (in un loco) to live (in a place)
-
-Hence: conviva &; vive &; vivace &; vivide; vivanda &; vivente; conviver; reviver; superviver &; reviviscer &
-
-viveres npl victuals, food
-
-vivide adj vivid
-
-vivific adj vivifying
-
-vivificar v to vivify
-
-vivification n vivification
-
-vivificator n vivifier
-
-vivi·pare adj viviparous (= producing living young)
-
-Hence: ovovivipare etc.
-
-vivi·section n vivisection
-
-Hence: vivisectionista
-
-vivisectionista n vivisectionist
-
-[vix] adv 1. with difficulty; 2. hardly, scarcely, barely
-
-vocabulario n vocabulary (1. list of words with their meanings; 2. stock of words used by a person, class of people, profession, etc.)
-
-vocabulo n word, vocable
-
-Hence: vocabulario
-
-vocal adj vocal (= pertaining to voice or speech) vocal n vowel
-
-Hence: vocalic-intervocalic; vocalismo; vocalisar-vocaliso, vocalisation, vocalisator; semivocal etc.
-
-vocalic adj vocalic
-
-vocalisation n vocalization (1. act of changing into a vowel; 2. [Mus.])
-
-vocalisator n [Mus.] vocalizer
-
-vocalismo n vocalism (= system of vowels)
-
-vocaliso n [Mus.] exercise in vocalization, vocalizing
-
-vocar v to call (= to command, ask, etc. to come)
-
-Hence: vocabulo &; vocation; vocative-vocativo; advocar &; convocar &; evocar &; invocar &; provocar &; revocar &; equivoc etc.
-
-vocation n vocation (1. divine call; 2. action or activity a person feels called upon to perform); le vocation de Abraham the call of Abraham
-
-vocative adj vocative
-
-vocativo n [Gram.] vocative, vocative case
-
-voce n voice (1. as in "human voice"; 2. [Gram.])
-
-Hence: vocal¹-vocal² &; vociferar &; portavoce etc.
-
-vociferante adj vociferous
-
-vociferar v to bawl, vociferate
-
-Hence: vociferante; vociferation; vociferator
-
-vociferation n vociferation
-
-vociferator n vociferator
-
-vodka [R] n vodka
-
-voga n 1. (act of) sailing, moving, floating, drifting; 2. vogue; esser in voga to be in vogue or in fashion
-
-vogar v to sail, move, float, drift
-
-Hence: voga
-
-[voi] pron you (= vos)
-
-[vol] pr of voler; 1. will(s), wish(es); 2. [Grammatical function: auxiliary, forming the future]; io vol comenciar 1. I wish to begin; 2. I shall begin
-
-volante n 1. flywheel; 2. steering wheel; 3. frill, ruffle; 4. shuttlecock
-
-volapük [Vol.] n [Interling.] Volapük
-
-Hence: volapükismo, volapükista
-
-volapükismo n [Interling.] Volapükism
-
-volapükista n [Interling.] Volapükist
-
-volar v to fly (as in "birds fly")
-
-Hence: volo; volante; volatile &; volata; revolar
-
-volata n 1. flight (as in "the flight of a shot," "within an eagle's flight," etc.); 2. [Artil.] chase
-
-volatile adj 1. flying;
-
-2. volatile (= evaporating rapidly); sal volatile smelling salts
-
-Hence: volatilitate; volatilisar-volatilisation
-
-volatile n flying animal, winged creature
-
-volatilisar v to volatilize
-
-volatilisation n volatilization
-
-volatilitate n volatility
-
-voler v to wish, want; voler (facer un cosa) to want to (do something); voler (un cosa) to want (a thing); voler dicer to mean, signify
-
-Hence: benevolente etc.; volition; volitive; benevole etc.; see verbal forms [vol], [velle]
-
-voler n will (= act of willing)
-
-Volga npr Volga
-
-volition n volition
-
-volitive adj volitive, volitional
-
-volo n flight (1. action or manner of flying; 2. distance covered in flying)
-
-volt n [Elec.] volt
-
-volt- see volver
-
-volta n 1. [Man.] volt; 2. vault (= arched ceiling or roof)
-
-Hence: voltar; voltear-volteo; archivolta etc.
-
-Volta, Alessandro npr [1745-1827; physicist after whom the "volt" is named]; lege de Volta Volta's law; effecto Volta Volta effect
-
-Hence: voltaismo; voltaic-voltametro etc.; volt-voltage, voltimetro etc., voltampere etc.
-
-voltage (-aje) n voltage
-
-voltaic (-áic) adj voltaic; pila voltaic voltaic pile; arco voltaic voltaic arc
-
-voltaismo (-ímo) n voltaism
-
-volta·metro (-tá-) n voltameter
-
-volt·ampere (-pér) n voltampere
-
-voltar v to vault (= to cover with a vault)
-
-voltear v [Man.] to vault
-
-volteo (-éo) n [Man.] (act or art of vaulting)
-
-volti·metro (-ímetro) n voltmeter
-
-volu- see volver
-
-volubile adj voluble (1. apt to roll; 2. [Bot.]; 3. glib, garrulous)
-
-Hence: volubilitete
-
-volubilitate n 1. tendency to roll; 2. volubility, volubleness
-
-volumine n volume (1. as in "a work in three volumes"; 2. space occupied, compass)
-
-Hence: voluminose
-
-voluminose adj voluminous
-
-volunt- see voluntate
-
-voluntari adj voluntary
-
-voluntariato n [Mil.] voluntariate, voluntary service
-
-voluntario n [Mil.] volunteer
-
-voluntate n will; a voluntate at will; bon (mal) voluntate good (ill) will; de bon voluntate willingly, gladly; de mal voluntate unwillingly, grudgingly; le ultime voluntate the last will
-
-Hence: voluntari-involuntari; voluntario-voluntariato
-
-volupt- see voluptate
-
-voluptate n pleasure, delight; specif.: sexual pleasure
-
-Hence: voluptuari; voluptuario; voluptuose-voluptuositate
-
-voluptuari adj voluptuous, voluptuary
-
-voluptuario n voluptuary
-
-voluptuose adj voluptuous
-
-voluptuositate n voluptuousness
-
-volut- see volver
-
-voluta n volute (1. [Arch.]; 2. [Zool.] any kind of gasteropods)
-
-volver [volv-/volut-/volt-] v to roll, turn round
-
-Hence: volvulo; volubile &; voluta; volta &; circumvolver &; convolver &; devolver &; evolver &; involver &; revolver &
-
-volvulo n [Med.] volvulus
-
-vomic adj vomitive, vomitory; nuce vomic [Bot.] nux vomica
-
-Hence: vomica
-
-vomica (vó-) n [Med.] vomica
-
-vomir v to vomit
-
-Hence: vomic &; vomitive-vomitivo; vomitorio; vomito; vomitar-vomitator; vomiturition; ignivome etc.
-
-vomitar v to vomit
-
-vomitator n vomiter
-
-vomitive adj vomitive, vomitory
-
-vomitivo n vomitory, emetic
-
-vomito (vó-) n vomit, vomiting
-
-vomitorio n [Arch.] vomitory, vomiitorium
-
-vomiturition n [Mcd.] vomiturition
-
-vorace adj voracious
-
-Hence: voracitate
-
-voracitate n voraciousness, voracity
-
-vorar v to devour
-
-Hence: vorace &; devorar &; carnivore etc.; omnivore etc.
-
-vortice (vór-) n whirlpool, vortex
-
-Hence: vorticose
-
-vorticose adj vortical, vorticose
-
-vos pron I. pers you [1. in polite or formal use; addressing one person or several persons (as in "you are", "I love you" "for you"); 2. in familiar or informal use; addressing several persons (as in "you are", "I love you", "for you")]; II. refl 1. yourself [in polite or formal use (as in "you hurt yourself," "to yourself")]; 2. yourselves [in all uses (as in "you hurt yourselves", "to yourselves")]
-
-Hence: vostre
-
-vosgian adj Vosgian (= pertaining to the Vosges Mountains)
-
-Vosgos nprpl Vosges Mountains
-
-Hence: vosgian
-
-vostre I. adj poss your [1. in polite or formal use; addressing one person or several persons; 2. in familiar or informal use, addressing several persons]; II. pron poss yours [1. in polite or formal use; addressing one person or several persons; 2. in familiar or informal use; addressing several persons]
-
-vot- see vov-
-
-votante n voter
-
-votar v I. to vow (1. to promise solemnly; 2. to dedicate); II. to vote (1. to cast a vote; 2. to approve, determine, or grant by a vote)
-
-votive adj votive
-
-voto n 1. vow (= solemn promise); 2. vote (as in "to cast a vote"); facer voto de to vow (= to promise solemnly)
-
-vov- [vov-/vot-] v [occurring in derivatives and compounds]
-
-Hence: votive; voto; votar-votante; devov- &
-
-vulcanic adj 1. Vulcanic, Vulcanian; 2. volcanic; also: [Geol.]
-
-vulcanie adj Vulcanian
-
-vulcanisar v 1. [Geol.] to volcanize; 2. [Technol.] to vulcanize
-
-vulcanisation n 1. [Gcol.] volcanization; 2. [Technol.] vulcanization
-
-vulcanismo n [Geol.] volcanism; also: vulcanism
-
-Vulcano npr [Rom. Relig.] Vulcan; vulcano volcano
-
-Hence: vulcanismo; vulcanic; vulcanie; vulcanisar-vulcanisation
-
-vulgar adj vulgar (1. of the common people; 2. low, coarse); lingua vulgar vulgar tongue, vernacular
-
-vulgarisar v to vulgarize
-
-vulgarisation n vulgarization
-
-vulgarisator n vulgarizer
-
-vulgarismo n vulgarism (1. vulgarity; 2. vulgar phrase or expression)
-
-vulgaritate n vulgarity
-
-Vulgata [L] n [Theol.] Vulgate
-
-vulgo n common people, vulgus
-
-Hence: vulgar-vulgarismo, vulgaritate, vulgaisar-vulgarisation, vulgarisator; divulgar &
-
-vulgo [L] adv commonly, vulgo
-
-vulnerabile adj vulnerable
-
-vulnerabilitate n vulnerability
-
-vulnerar v to wound
-
-vulnerari adj vulnerary
-
-vulneraria n vulnerary (= vulnerary remedy)
-
-vulnere n wound
-
-Hence: vulnerari-vulneraria; vulnerar-vulnerabile-vulnerabilitate, invulnerabile-invulnerabilitate
-
-vulpe n fox
-
-Hence: vulpin
-
-vulpin adj vulpine (1. pertaining to a fox; 2. foxy)
-
-vulture n vulture
-
-Hence: vulturides; vulturin
-
-vulturides (-túr-) npl [Zool.] Vulturidae
-
-vulturin adj vulturine
-
-Wayback Machine
-  
-http://www.bowks.net/worldlang/aux/b_IED_w.html
-NOV	JAN	MAR
-Previous capture	05	Next capture
-2007	2008	2009
-26 captures
-17 Dec 2004 - 9 May 2008
- About this capture
-
-Interlingua-English Dictionary W
-A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, XYZ
-wadi (-dí) [Ar.] n wadi
-
-wafla n waffle
-
-wagon n (railroad) car; wagon restaurante dining car, diner; wagon lectos sleeping car
-
-waldense adj/n Waldensian; waldenses Waldenses
-
-Waldo, Peter npr [founder of the Waldenses]
-
-Hence: waldense
-
-walzer [G] n waltz
-
-water-closet [A] n water closet, toilet
-
-water-polo [A] n water polo
-
-watt n [Elec.] watt
-
-Hence: wattage; wattimetro etc., watt-hora etc.; kilowatt etc.
-
-watta n (absorbent) cotton
-
-Hence: wattar
-
-wattage (-aje) n [Elec.] wattage
-
-wattar v to pad, wad, quilt, etc.
-
-watt-hora n watt-hour
-
-watti·metro (-í-) n wattmeter
-
-W.C. [A] n W.C., water closet
-
-week-end [A] n week end
-
-west n west; (ir) al west (to go or travel) west; (vento) del west west (wind), westerly (wind)
-
-Hence: Westfalia etc.; sud-west etc.
-
-West·falia npr Westphalia
-
-Hence: westfalic
-
-westfalic adj Westphalian
-
-whig [All n whig
-
-whisky [A] n whisky
-
-whist [A] n whist
-
-wigwam [A] n wigwam
-
-Wilno [Polish] npr Wilno, Vilna
-
-wolfram [G] n wolfram (1. [Chem.] tungsten; 2. [Mineral.] wolframite)
-
-Hence: wolframite
-
-wolframite n [Mineral.] wolframite
-
-wombat (wóm-) n [Zool.] wombat
-
-Worms [G] npr Worms
-
-Wayback Machine
-  
-http://www.bowks.net/worldlang/aux/b_IED_xyz.html
-NOV	JAN	MAR
-Previous capture	05	Next capture
-2007	2008	2009
-21 captures
-17 Dec 2004 - 9 May 2008
- About this capture
-
-Interlingua-English Dictionary XYZ
-A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, XYZ
-xen- adj [occurring in derivatives and compounds] xeno-, xen- (1. strange, foreign; 2. guest)
-
-Hence: xenio; xenophobe etc.; pyroxeno etc.
-
-xenio n [Antiq.] xenium (= present given to a guest or to an ambassador)
-
-xenon (ksé-) n [Chem.] xenon
-
-xeno·phile adj xenophile
-
-Hence: xenophilia; xenophilo
-
-xenophilia (-ía) n xenophilism
-
-xenophilo (-nó-) n xenophile
-
-xeno·phobe (-nó-) adj xenophobe, xenophobian
-
-Hence: xenophobia; xenophobo
-
-xenophobia (-ía) n xenophobia
-
-xenophobo (-nó-) n xenophobe
-
-xylo- n [occurring in compounds] xylo- (= wood)
-
-Hence: xylographo etc.; xylologia etc.; xylophono etc.; xylophage etc.; pyroxylo etc.
-
-xylographia (-ía) n xylography (art of engraving on wood or taking impressions from such engravings)
-
-xylographic adj xylographic
-
-xylo·grapho (-ógrapho) n xylographer
-
-Hence: xylographia; xylographic
-
-xylo·logia (-ía) n xylology
-
-xylo·phage (-ó-) adj [Zool.] xylophagous
-
-Hence: xylophago
-
-xylophago (-ó-) n [Zool.] xylophage
-
-xylophonista n xylophonist
-
-xylo·phono n [Mus.] xylophone
-
-Hence: xylophonista
-
-[ya] adv already (= ja, jam)
-
-yacht [A] n yacht
-
-yak n [Zool.] yak
-
-yankee [A] n Yankee
-
-yard [A] n [Meas.] yard
-
-yo: [yo] pron pers I (= io)
-
-yogurt n yogurt
-
-York [A] npr York
-
-Hence: Nove York etc.
-
-yug- n [occurring in geographical compounds] yugo-, jugo- (=south)
-
-Hence: yugoslave etc.
-
-yugo·slave adj Yugoslav
-
-Hence: yugoslavo-Yugoslavia
-
-Yugoslavia npr Yugoslavia
-
-yugoslavo n Yugoslav (1. native of Yugoslavia; 2. Serbo-Croatian language)
-
-Zacharia (-ía) npr Zachariah; Zachary
-
-Zarathustra npr Zarathustra
-
-ze- n [occurring in geographical compounds] Zea-, Zee- (= sea)
-
-Hence: Zelanda etc.
-
-zebra [Amh.] n [Zool.] zebra
-
-Hence: zebrate
-
-zebrate adj striped
-
-zebu (-bú) n [Zool.] zebu
-
-Ze·landa npr Zeeland (= province in the Netherlands)
-
-Hence: Nove Zelanda etc.; neozelandese etc.
-
-zelar v to be zealous (about)
-
-zelator n zealot (1. zealous person; 2. [Jewish Antiq.])
-
-zelo n zeal, ardor
-
-Hence: zelote &; zelose &; zelar-zelator
-
-zelose adj 1. zealous; 2. jealous;
-
-zelose de (le libertate) jealous of (one's liberty)
-
-Hence: zelosia
-
-zelosia (-ía) n jealousy
-
-zelote n zealot (1. zealous person; 2. [Jewish Antiq.])
-
-Hence: zelotismo
-
-zelotismo n zealotism, zealotry
-
-zenit n zenith
-
-Hence: zenital
-
-zenital adj zenith, zenithal
-
-Zephyro npr [Cr. Mythol.] Zephyrus; zephyro zephyr (1. west wind; 2. soft, gentle breeze; 3. zephyr cloth)
-
-zeppelin [G] n Zeppelin
-
-zero n 1. zero, cipher; 2. as in "zero centigrade"; zero absolute absolute zero
-
-zeta n 1. zeta (= sixth letter of the Greek alphabet); 2. zed, zee (= the letter "z")
-
-Zeus (Zéus) npr [Gr. Relig.] Zeus
-
-Hence: diantho etc.
-
-zigzag (zígzág) n zigzag
-
-Hence: zigzagar
-
-zigzagar v to zigzag
-
-zinc n [Chem.] zinc; oxydo de zinc zinc oxide; blanco de zinc zinc white
-
-Hence: zincar-zincaga; zincographo etc.
-
-zincage (-aje) n (act of) zincking
-
-zincar v to zinc, coat with zinc
-
-zincographia (-ía) n zincography, zinc etching
-
-zincographic adj zincographic, zincographical
-
-zinco·grapho (-có-) n zincographer
-
-Hence: zincographia; zincographic
-
-zircon n [Mineral.] zircon
-
-Hence: zirconium-zirconic
-
-zirconic adj [Chem.] zirconic
-
-zirconium n [Chem.] zirconium
-
-zodiacal adj zodiacal
-
-zodiaco (-dí-) n zodiac
-
-Hence: zodiacal
-
-zoic (zóic) adj [Zool.] zoic
-
-zona n zone; le zona torride the Torrid Zone; zona temperate Temperate Zone; zona frigide or glacial Frigid Zone
-
-Hence: zonal-bizonal etc.; zonar
-
-zonal adj zonal
-
-zonar v to zone
-
-zoo·graphia (-ía) n zoography
-
-Hence: zoographic
-
-zoographic adj zoographic
-
-zooide n zooid
-
-zoo·latra (zo-ó-) n zoolater, animal worshiper
-
-Hence: zoolatria
-
-zoolatria (-ía) n zoolatry, animal worship
-
-zoo·litho (zo-ó-) n zoolith, zoolite
-
-zoologia (-ía) n zoology
-
-zoologic adj zoological; jardin zoologic zoological garden
-
-zoologista n zoologist
-
-zoo·logo (zo-ó-) n zoologist
-
-Hence: zoologia-zoologista; zoologic
-
-zoon (zó-on) (pl zoa) n [Zool.] zoon
-
-Hence: zoic-cenozoic etc, paleozoic etc; zoide; epizoon; azoic; zoolitho etc; zoologo etc; zoographia etc; zoophyto etc; spermatozoon etc; entozoon etc.; protozoon etc.
-
-zoophytic adj [Zool.] zoophytal, zoophytic
-
-zoo·phyto (zo-ó-) n [Zool.] zoophyte
-
-zoophyto·logia (-ía) n zoophyto]ogy
-
-zoo·spora (zo-ó-) n [Bot.] zoospore
-
-zoo·tomia (-ía) n zootomy
-
-Zoroastre npr Zoroaster
-
-Hence: zoroastrismo; zoroastrian-zoroastriano
-
-zoroastrian adj Zoroastrian
-
-zoroastriano n Zoroastrian
-
-zoroastrismo n Zoroastrianism
-
-zuavo n zouave
-
-zulu n Zulu
-
-zym- n [occurring in compounds] zymo-, zym- (= leaven, ferment)
-
-Hence: azyme; enzyma
 
 */
 
