@@ -19,6 +19,8 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
+const WindowSize = 10;
+
 
 function startup()
 {
@@ -202,7 +204,6 @@ function newQuestion()
 	if (data.windowStart<0) { data.windowStart=0; }
 	console.log('windowStart:', data.windowStart);
 	
-	const WindowSize = 10;
 	const N = data.dict.length;
 	
 	data.currentIndex = Math.floor(data.windowStart + Math.random()*WindowSize) % N;
@@ -223,7 +224,7 @@ function newQuestion()
 function calcCorrectnessRatio()
 {
 	const res = 1.0*data.ansCorrectly 
-		/ (data.ansCorrectly + data.ansIncorrectly);
+		/ (data.ansCorrectly + data.ansIncorrectly) || 0;
 	return res;
 }
 
@@ -238,10 +239,10 @@ function showDebug()
 	data.debugInfo = ''
 	+ data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
-	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
+	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
-	+ ' k:'+data.windowStart
+	+ ' k:'+data.windowStart.toFixed(1)
 	+ '<br>ver:4.07'
 	+ ' ' + window.location.search
 	+ '';
@@ -265,15 +266,15 @@ function onAnswer(x)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 		}
-		++data.windowStart;
+		data.windowStart += calcCorrectnessRatio();
 	}
 	else
 	{
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
-		const shift = 10.0 / data.dict.length;
-		data.dict[data.currentIndex][2] += shift; // '+' = hard
+		const shift = WindowSize / data.dict.length;
+		data.dict[data.currentIndex][2] += shift; // '+' = mark it as hard
 		--data.windowStart;
 		--data.windowStart;
 	}
