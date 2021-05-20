@@ -243,7 +243,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart.toFixed(1)
-	+ '<br>ver:4.07'
+	+ '<br>ver:4.08'
 	+ ' ' + window.location.search
 	+ '';
 	
