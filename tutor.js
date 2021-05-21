@@ -243,7 +243,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart.toFixed(1)
-	+ '<br>ver:4.08a'
+	+ '<br>ver:4.09'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -276,11 +276,20 @@ function onAnswer(x)
 		const shift = WindowSize / data.dict.length;
 
                 const a = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+                const b = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+                const c = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+
+                a[2] += shift;
+                b[2] += shift;
+                c[2] += shift;
 
                 data.dict.push(a);
+                data.dict.push(b);
+                data.dict.push(c);
 
-		data.dict[data.currentIndex][2] += shift; // '+' = mark it as hard
-		--data.windowStart;
+		//data.dict[data.currentIndex][2] += shift; // '+' = mark it as hard
+		
+                --data.windowStart;
 		--data.windowStart;
 	}
 	showDebug();
