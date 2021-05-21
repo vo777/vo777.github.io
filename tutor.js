@@ -279,9 +279,9 @@ function onAnswer(x)
                 const b = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
                 const c = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
 
-                a[2] += shift;
-                b[2] += 2*shift;
-                c[2] += 3*shift;
+                a[2] += 2*shift;
+                b[2] += 4*shift;
+                c[2] += 8*shift;
 
                 data.dict.push(a);
                 data.dict.push(b);
