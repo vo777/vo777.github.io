@@ -243,7 +243,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart.toFixed(1)
-	+ '<br>ver:4.09'
+	+ '<br>ver:4.11'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -280,8 +280,8 @@ function onAnswer(x)
                 const c = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
 
                 a[2] += shift;
-                b[2] += shift;
-                c[2] += shift;
+                b[2] += 2*shift;
+                c[2] += 3*shift;
 
                 data.dict.push(a);
                 data.dict.push(b);
