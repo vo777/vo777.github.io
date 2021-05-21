@@ -243,7 +243,7 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	//+ ' i:'+data.currentIndex
 	+ ' k:'+data.windowStart.toFixed(1)
-	+ '<br>ver:4.08'
+	+ '<br>ver:4.08a'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -274,6 +274,11 @@ function onAnswer(x)
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 		const shift = WindowSize / data.dict.length;
+
+                const a = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+
+                data.dict.push(a);
+
 		data.dict[data.currentIndex][2] += shift; // '+' = mark it as hard
 		--data.windowStart;
 		--data.windowStart;
