@@ -206,8 +206,15 @@ function newQuestion()
 	
 	const N = data.dict.length;
 	
+const oldQ = data.dict[data.currentIndex][0];
+
+for (let i=0: i<100; ++i)
+{
+
 	data.currentIndex = Math.floor(data.windowStart + Math.random()*WindowSize) % N;
-	
+	if (data.dict[data.currentIndex][0] != oldQ) break;
+}
+
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 	
 	data.answerIndices 
