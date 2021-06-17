@@ -19,7 +19,7 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 50;
+const minQ = 300;
 const maxQ = 400; // limited by cookie size
 
 
@@ -266,7 +266,7 @@ function showDebug()
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
-	+ '<br>ver:5.01'
+	+ '<br>ver: 5.01'
 	+ ' ' + window.location.search
 	+ '';
 	
