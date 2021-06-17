@@ -266,7 +266,8 @@ function showDebug()
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
-	+ '<br>ver: 5.01'
+	+ '<br>w:'+data.wset.length
+	+ '<br>ver:5.01'
 	+ ' ' + window.location.search
 	+ '';
 	
