@@ -277,6 +277,13 @@ function showDebug()
 
 function onAnswer(x)
 {
+	if (data.currentIndex != data.wset[0])
+	{
+		// user accidentally double clicked on correct answer
+		data.timeRemaining = 10;
+		return;
+	}
+	
 	++data.answerCount;
 	
 	const answered = data.answers[x].innerHTML;
@@ -285,19 +292,17 @@ function onAnswer(x)
 	if (answered == correctAnswer)
 	{
 		data.timeRemaining = 10;
-		if (data.currentIndex == data.wset[0])
-		{
-			++data.ansCorrectly;
-			for (let i=0; i<4; ++i)
-			{
-				data.answers[i].innerHTML = correctAnswer;
-			}
 		
-			if (Math.random() < calcCorrectnessRatio())
-			{
-				/*const a = */ data.wset.shift(); // rm wset[0]
-				//console.log('rm', a);
-			}
+		++data.ansCorrectly;
+		for (let i=0; i<4; ++i)
+		{
+			data.answers[i].innerHTML = correctAnswer;
+		}
+		
+		if (Math.random() < calcCorrectnessRatio())
+		{
+			/*const a = */ data.wset.shift(); // rm wset[0]
+			//console.log('rm', a);
 		}
 	}
 	else
