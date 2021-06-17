@@ -19,8 +19,8 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 300;
-const maxQ = 400; // limited by cookie size
+const minQ = 400;
+const maxQ = 420; // limited by cookie size
 
 
 function startup()
