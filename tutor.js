@@ -284,17 +284,20 @@ function onAnswer(x)
 	
 	if (answered == correctAnswer)
 	{
-		++data.ansCorrectly;
 		data.timeRemaining = 10;
-		for (let i=0; i<4; ++i)
+		if (data.currentIndex == data.wset[0])
 		{
-			data.answers[i].innerHTML = correctAnswer;
-		}
+			++data.ansCorrectly;
+			for (let i=0; i<4; ++i)
+			{
+				data.answers[i].innerHTML = correctAnswer;
+			}
 		
-		if (Math.random() < calcCorrectnessRatio())
-		{
-			/*const a = */ data.wset.shift(); // rm wset[0]
-			//console.log('rm', a);
+			if (Math.random() < calcCorrectnessRatio())
+			{
+				/*const a = */ data.wset.shift(); // rm wset[0]
+				//console.log('rm', a);
+			}
 		}
 	}
 	else
