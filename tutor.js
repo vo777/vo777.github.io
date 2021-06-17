@@ -229,7 +229,9 @@ function newQuestion()
 	for (let i=0; i<100; ++i)
 	{
 		shuffle(data.wset);
-		data.currentIndex = data.wset[0] % N;
+		// in case the dictionary changed since the last run:
+		data.wset[0] = data.wset[0] % N;
+		data.currentIndex = data.wset[0];
 		if (data.dict[data.currentIndex][0] != oldQ) break;
 	}
 
@@ -267,7 +269,7 @@ function showDebug()
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
 	+ '<br>w:'+data.wset.length
-	+ '<br>ver:5.01'
+	+ '<br>ver:5.03'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -299,11 +301,11 @@ function onAnswer(x)
 			data.answers[i].innerHTML = correctAnswer;
 		}
 		
-		if (Math.random() < calcCorrectnessRatio())
-		{
+		//if (Math.random() < calcCorrectnessRatio())
+		//{
 			/*const a = */ data.wset.shift(); // rm wset[0]
 			//console.log('rm', a);
-		}
+		//}
 	}
 	else
 	{
