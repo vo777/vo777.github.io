@@ -269,7 +269,7 @@ function showDebug()
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
 	+ '<br>w:'+data.wset.length
-	+ '<br>ver:5.03'
+	+ '<br>ver:5.01'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -301,11 +301,7 @@ function onAnswer(x)
 			data.answers[i].innerHTML = correctAnswer;
 		}
 		
-		//if (Math.random() < calcCorrectnessRatio())
-		//{
-			/*const a = */ data.wset.shift(); // rm wset[0]
-			//console.log('rm', a);
-		//}
+		data.wset.shift(); // rm wset[0]
 	}
 	else
 	{
