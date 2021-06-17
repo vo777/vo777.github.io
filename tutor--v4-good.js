@@ -1,7 +1,7 @@
 
 const data =
 {
-	dict : [],  // format:  [0:q, 1:a]
+	dict : [],  // format:  [0:q, 1:a, 2:score]
 	ansCorrectly : 0,
 	ansIncorrectly : 0,
 	questionCount : 0,
@@ -10,17 +10,16 @@ const data =
 	debugInfo : "",
 	debugInfoFlag : false,
 	currentIndex : 0,
+	windowStart : 0,
 	answerIndices : [0,0,0,0],
 	question : undefined,
 	answers : undefined,
-	summary : undefined,
-	wset : undefined
+	summary : undefined
 };
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 50;
-const maxQ = 400; // limited by cookie size
+const WindowSize = 10;
 
 
 function startup()
@@ -132,7 +131,9 @@ function startup()
 	{
 		data.dict[i][0] = data.dict[i][0].toLowerCase().trim();
 		data.dict[i][1] = data.dict[i][1].toLowerCase().trim();
+		data.dict[i][2] = Math.random();
 	}
+	data.dict.sort((a,b)=>a[2] - b[2]);
 	console.log('dictionary loaded and checked');
 	
 	data.timeRemaining = 0;
@@ -181,57 +182,38 @@ function worker()
 */
 function newQuestion()
 {
-	const CookieName = 'workset';
-	
-	if (! data.wset)
+	if (data.ansCorrectly > data.questionCount + 5)
 	{
-		const spl1 = document.cookie.split(';');
-		for (let a of spl1)
+		// re-init
+		data.ansCorrectly = 0;
+		data.ansIncorrectly = 0;
+		data.questionCount = 0;
+		data.answerCount = 0;
+		data.currentIndex = 0;
+		data.windowStart = 0;
+		for (let i=0; i<data.dict.length; ++i)
 		{
-			console.log("a:", a);
-			const spl2 = a.split('=');
-			if (spl2.length == 2 && spl2[0].trim() == CookieName)
-			{
-				data.wset = JSON.parse(spl2[1]);
-			}
+			data.dict[i][2] = Math.random();
 		}
-		console.log("parsed wset:", data.wset);
-	}
-	else
-	{
-		//console.log("no need to parse wset:", data.wset);
 	}
 	
-	const N = data.dict.length;
-	
-	if (!data.wset)
-	{
-		// cookie not found
-		data.wset = [];
-	}
-	
-	while (data.wset.length < minQ)
-	{
-		data.wset.push(Math.floor(Math.random()*N));
-	}
-	
-	document.cookie = CookieName 
-		+ "="
-		+ JSON.stringify(data.wset)
-		+ "; expires=Thu, 18 Dec 3000 12:00:00 UTC";
+	data.dict.sort((a,b)=>a[2] - b[2]);
 	
 	++data.questionCount;
 	
+	if (data.windowStart<0) { data.windowStart=0; }
+	console.log('windowStart:', data.windowStart);
 	
-	// anti-repeat
-	const oldQ = data.dict[data.currentIndex][0];
+	const N = data.dict.length;
+	
+ const oldQ = data.dict[data.currentIndex][0];
 
-	for (let i=0; i<100; ++i)
-	{
-		shuffle(data.wset);
-		data.currentIndex = data.wset[0] % N;
-		if (data.dict[data.currentIndex][0] != oldQ) break;
-	}
+for (let i=0; i<100; ++i)
+{
+
+	data.currentIndex = Math.floor(data.windowStart + Math.random()*WindowSize) % N;
+	if (data.dict[data.currentIndex][0] != oldQ) break;
+}
 
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 	
@@ -266,7 +248,9 @@ function showDebug()
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
-	+ '<br>ver:5.01'
+	//+ ' i:'+data.currentIndex
+	+ ' k:'+data.windowStart.toFixed(1)
+	+ '<br>ver:4.11'
 	+ ' ' + window.location.search
 	+ '';
 	
@@ -289,26 +273,31 @@ function onAnswer(x)
 		{
 			data.answers[i].innerHTML = correctAnswer;
 		}
-		
-		if (Math.random() < calcCorrectnessRatio())
-		{
-			/*const a = */ data.wset.shift(); // rm wset[0]
-			//console.log('rm', a);
-		}
+		data.windowStart += calcCorrectnessRatio();
 	}
 	else
 	{
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
+		const shift = WindowSize / data.dict.length;
+
+                const a = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+                const b = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+                const c = JSON.parse(JSON.stringify(data.dict[data.currentIndex]));
+
+                a[2] += 2*shift;
+                b[2] += 4*shift;
+                c[2] += 8*shift;
+
+                data.dict.push(a);
+                data.dict.push(b);
+                data.dict.push(c);
+
+		//data.dict[data.currentIndex][2] += shift; // '+' = mark it as hard
 		
-		if (data.wset.length < maxQ)
-		{
-			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
-		}
-		
+                --data.windowStart;
+		--data.windowStart;
 	}
 	showDebug();
 }
@@ -343,5 +332,7 @@ function genRandomIncorrectAnswers(m, dict)
 	return res;
 }
 
+// this 'shuffle' is *not* reliable for long arrays
+// it is used here only to shuffle answers (4 items)
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
 
