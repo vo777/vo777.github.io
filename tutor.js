@@ -263,12 +263,16 @@ function toggleDebug()
 
 function showDebug()
 {
+	const wUnique = new Set(data.wset).size;
+	const wCurrent 
+		= data.wset.filter((v) => (v === data.currentIndex)).length;
+	
 	data.debugInfo = ''
 	+ data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
-	+ '<br>w:'+data.wset.length
+	+ '<br>w:'+data.wset.length+' '+wUnique+' '+wCurrent
 	+ '<br>ver:5.01'
 	+ ' ' + window.location.search
 	+ '';
