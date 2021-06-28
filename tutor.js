@@ -317,6 +317,7 @@ function onAnswer(x)
 		{
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
+			data.wset.push(data.answerIndices[x]);
 		}
 		
 	}
