@@ -268,11 +268,11 @@ function showDebug()
 		= data.wset.filter((v) => (v === data.currentIndex)).length;
 	
 	data.debugInfo = ''
-	+ data.questionCount + ', '
+	+ 'w:'+data.wset.length+' '+wUnique+' '+wCurrent
+	+ '<br>' + data.questionCount + ', '
 	+ data.ansCorrectly+'/'+data.answerCount
 	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
 	+ '<br>n:'+data.dict.length
-	+ '<br>w:'+data.wset.length+' '+wUnique+' '+wCurrent
 	+ '<br>ver:5.01'
 	+ ' ' + window.location.search
 	+ '';
