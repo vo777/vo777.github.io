@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>N toll bridges</title>
+</head>
+
+<body>
+<h3>Simulating N consecutive toll bridges...</h3>
+
+<p>
+<label for="Nbr">Number of bridges:</label>
+<br>
+<select name="Nbr" id="Nbr">
+  <option selected>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+</select>
+</p>
+
+<p>
+<label for="fname">Demand curve (e.g. 1000-x):<br>
+Input: x : total price on all bridges.<br>
+Output: no. of people who agree to pay this total price.<br></label>
+<input type="text" id="fname" name="fname" value="1000-x"></input><br>
+</p>
+
+<p>
+<label for="varExp">Variable expenses per person per bridge:</label><br>
+<input type="text" id="varExp" name="varExp" value="0"></input><br>
+</p>
+
+<p>
+  <input type="checkbox" id="runCheckbox" name="runCheckbox" checked>
+  <label for="runCheckbox">Run simulation</label>
+</p>
+
+
+<p>
+Total price: <b><span id='totalPrice'> </span></b>
+<br>
+Total demand: <b><span id='totalDemand'> </span></b>
+<br>
+Total revenue: <b><span id='totalRevenue'> </span></b>
+<br>
+Prices: <b><span id='pricesOutput'> </span></b>
+<br>
+
+</p>
+
+
+<script>
+
+const Nbr = document.getElementById("Nbr");
+const varExp = document.getElementById("varExp");
+
+const totalPrice = document.getElementById("totalPrice");
+const totalDemand = document.getElementById("totalDemand");
+const totalRevenue = document.getElementById("totalRevenue");
+const pricesOutput = document.getElementById("pricesOutput");
+
+const runCheckbox = document.getElementById("runCheckbox");
+
+let prices = [];
+let demandFunction;
+
+let x = 0; // global val, sum of all prices, used by demandFunction
+let varExpValue;
+
+setInterval(simulate, 0);
+
+function simulate()
+{
+	if (! runCheckbox.checked) { return; }
+
+	console.log('simulate()');
+	if (prices.length != +Nbr.value)
+	{
+		prices = [];
+		for (let i=0; i<+Nbr.value; ++i)
+		{
+			prices.push(0);
+		}
+	}
+	
+	demandFunction = new Function('return ' + fname.value + ';');
+	varExpValue = +varExp.value;
+	
+	work();
+}
+
+function work()
+{
+	for (let i=0; i<prices.length; ++i) { opt(i); }
+	
+	// hack for case when prices stuck at high
+	x = prices.reduce((pv, cv) => pv + cv, 0); // sum
+	demandValue = demandFunction();
+	if (demandValue < 0)
+	{
+		for (let i=0; i<prices.length; ++i) { prices[i] /= 2; }
+	}
+	shuffle(prices);
+	// end of hack
+
+	redraw();
+
+}
+
+function redraw()
+{
+	x = prices.reduce((pv, cv) => pv + cv, 0); // sum
+	demandValue = demandFunction();
+	
+	totalPrice.textContent = Math.round(x * 100) / 100;
+	totalDemand.textContent = Math.round(demandValue * 100) / 100 + '  people.';
+	totalRevenue.textContent = Math.round(x*demandValue * 10000) / 10000 + '  (total_price * demand).';
+	pricesOutput.textContent = prices;
+}
+
+
+function opt(k)
+{
+	//console.log('demandFunction:', demandFunction, demandFunction());
+	
+	const minP = 0;
+	
+	const MaxSteps = 1e6;
+	const step = 0.01;
+	
+	const profits = [];
+	
+	for (let i = 0; i<=MaxSteps; ++i)
+	{
+		prices[k] = minP + step * i;
+		x = prices.reduce((pv, cv) => pv + cv, 0); // sum
+		demandValue = demandFunction();
+		
+		//console.log('prices:', prices, '  x:', x,
+		//' demandValue:', demandValue);
+		
+		profits.push((prices[k]-varExpValue) * demandValue);
+
+		if (demandValue < 0) break; // speedup
+	}
+	
+	const best = argMax(profits);
+	prices[k] = Math.round(minP + step * best * 100) / 100;
+	
+	//console.log('iterCounter:', iterCounter, '  k:', k, ' p:', prices);
+}
+
+function argMax(array) {
+  return array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
+}
+
+function shuffle(array) { array.sort(() => Math.random() - 0.5); }
+
+</script>
+
+</body>
+
+</html>
