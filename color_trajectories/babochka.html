@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.myCanvas
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+</style>
+<body>
+
+<canvas id="myCanvas" class="myCanvas"></canvas>
+
+<script>
+
+const canvas = document.getElementById("myCanvas");
+
+let d1 = {
+	r:120,
+	g:120,
+	b:120,
+	a:0.5
+};
+
+let d2 = {};
+let A = 0.05, dt = 0.2;
+
+setup();
+
+function setup()
+{
+	init(d1);
+	setInterval(worker, 1);
+}
+
+function init(d)
+{
+	const W = window.innerWidth;
+	const H = window.innerHeight;
+	d.x = 0.5*W;
+	d.y = 0.5*H + 2*Math.random()/A;
+	d.z = 2*Math.random()/A;
+}
+
+function reBlack()
+{
+	const W = window.innerWidth;
+	const H = window.innerHeight;
+	canvas.width = W;
+	canvas.height = H;
+	const ctx = canvas.getContext("2d");
+	ctx.fillStyle='black';
+	ctx.fillRect(0,0,canvas.width,canvas.height);
+}
+
+function step()
+{
+	const ρ = 28, σ = 10, β = 2.667;
+	
+	const x = A * (d1.x - 0.5*canvas.width);
+	const y = A * (d1.y - 0.5*canvas.height);
+	const z = A * d1.z;
+	
+	const dx = σ * (y - x);
+	const dy = x * (ρ - z) - y;
+	const dz = x * y - β * z;
+	
+	d2.x = d1.x + dx*dt;
+	d2.y = d1.y + dy*dt;
+	d2.z = d1.z + dz*dt;
+	
+	//console.log(d2.x, d2.y, d2.z);
+}
+
+function bound(x, a, b)
+{
+	if (x < a) return a;
+	if (x > b) return b;
+	return x;
+}
+
+function colorStep()
+{
+	d2.r = bound(d1.r + 10*(Math.random() - 0.5), 0, 255.99);
+	d2.g = bound(d1.g + 10*(Math.random() - 0.5), 0, 255.99);
+	d2.b = bound(d1.b + 10*(Math.random() - 0.5), 0, 255.99);
+	d2.a = 1.0; //bound(d1.a + 0.01*(Math.random() - 0.5), 0, 1.0);
+	const res = 'rgba(' + Math.floor(d2.r) +
+	', ' + Math.floor(d2.g) +
+	', ' + Math.floor(d2.b) +
+	', ' + d2.a + ')';
+	return res;
+}
+
+
+function worker()
+{
+	const W = window.innerWidth;
+	const H = window.innerHeight;
+
+	if (W != canvas.width || H != canvas.height)
+	{
+		reBlack();
+		init(d1);
+	}
+	
+	step();
+	const c = colorStep();
+	//console.log(c);
+	
+	if (isFinite(d2.x) && d2.x >= 0 && d2.x < W && 
+		isFinite(d2.y) && d2.y >= 0 && d2.y < H)
+	{
+		const ctx = canvas.getContext("2d");
+
+		ctx.beginPath();
+		ctx.moveTo(d1.x+0.1*d1.z, d1.y+0.05*d1.z);
+		ctx.lineTo(d2.x+0.1*d2.z, d2.y+0.05*d2.z);
+	
+		ctx.strokeStyle = c;
+		ctx.stroke();
+	}
+	else
+	{
+		reBlack();
+		A *= 1.2;
+		dt /= 1.2;
+		init(d2);
+	}
+	
+	const tmp = d1;
+	d1 = d2;
+	d2 = tmp;
+}
+
+</script>
+
+</body>
+</html>
