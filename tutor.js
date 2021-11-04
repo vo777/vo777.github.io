@@ -19,7 +19,7 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 3;   // any small number should work
+const minQ = 20;
 const maxQ = 420; // limited by cookie size
 
 
@@ -209,8 +209,8 @@ function newQuestion()
 		// cookie not found
 		data.wset = [];
 	}
-	
-	while (data.wset.length < minQ)
+//	while (data.wset.length < minQ)
+	while (new Set(data.wset).size < minQ)
 	{
 		data.wset.push(Math.floor(Math.random()*N));
 	}
