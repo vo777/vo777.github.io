@@ -14,7 +14,8 @@ const data =
 	question : undefined,
 	answers : undefined,
 	summary : undefined,
-	wset : undefined
+	wset : undefined,
+	errSet : new Set(),
 };
 
 const timePerQuestion = 70; // 10 = 1 second
@@ -275,7 +276,13 @@ function showDebug()
 	+ '<br>n:'+data.dict.length
 	+ '<br>ver:5.01'
 	+ ' ' + window.location.search
-	+ '';
+	+ '<br>';
+
+	const errArray = [...data.errSet];
+	for (let e of errArray)
+	{
+		data.debugInfo += '<br>' + data.dict[e][0] + ' - ' + data.dict[e][1];
+	}
 	
 	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
 	else{ data.summary.innerHTML = ''; }	
@@ -319,6 +326,8 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.answerIndices[x]);
 		}
+
+		data.errSet.add(data.currentIndex);
 		
 	}
 	showDebug();
