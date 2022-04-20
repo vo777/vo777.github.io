@@ -20,8 +20,8 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 200; // a typical daily run
-const maxQ = 420; // limited by cookie size
+const minQ = 1000; // ~ 5 * [a typical daily run]
+const maxQ = 2000; // limited by cookie size
 
 
 function startup()
@@ -186,16 +186,18 @@ function newQuestion()
 	
 	if (! data.wset)
 	{
-		const spl1 = document.cookie.split(';');
-		for (let a of spl1)
-		{
-			console.log("a:", a);
-			const spl2 = a.split('=');
-			if (spl2.length == 2 && spl2[0].trim() == CookieName)
-			{
-				data.wset = JSON.parse(spl2[1]);
-			}
-		}
+		// const spl1 = document.cookie.split(';');
+		// for (let a of spl1)
+		// {
+		// 	console.log("a:", a);
+		// 	const spl2 = a.split('=');
+		// 	if (spl2.length == 2 && spl2[0].trim() == CookieName)
+		// 	{
+		// 		data.wset = JSON.parse(spl2[1]);
+		// 	}
+		// }
+		const tmp = localStorage.getItem(CookieName);
+		if (tmp) { data.wset = JSON.parse(tmp); }
 		console.log("parsed wset:", data.wset);
 	}
 	else
@@ -216,13 +218,14 @@ function newQuestion()
 		data.wset.push(Math.floor(Math.random()*N));
 	}
 	
-	document.cookie = CookieName 
-		+ "="
-		+ JSON.stringify(data.wset)
-		+ "; expires=Thu, 18 Dec 3000 12:00:00 UTC";
+	// document.cookie = CookieName 
+	// 	+ "="
+	// 	+ JSON.stringify(data.wset)
+	// 	+ "; expires=Thu, 18 Dec 3000 12:00:00 UTC";
 	
+	localStorage.setItem(CookieName, JSON.stringify(data.wset));
+
 	++data.questionCount;
-	
 	
 	// anti-repeat
 	const oldQ = data.dict[data.currentIndex][0];
@@ -322,6 +325,9 @@ function onAnswer(x)
 		
 		if (data.wset.length < maxQ)
 		{
+			data.wset.push(data.currentIndex);
+			data.wset.push(data.currentIndex);
+			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.answerIndices[x]);
