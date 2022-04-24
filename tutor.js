@@ -21,7 +21,7 @@ const data =
 const timePerQuestion = 70; // 10 = 1 second
 
 const minQ = 1000; // ~ 5 * [a typical daily run]
-const maxQ = 2000; // limited by cookie size
+const maxQ = 10000; // limited by cookie size
 
 
 function startup()
