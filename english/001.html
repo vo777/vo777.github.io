@@ -73,8 +73,6 @@
     process();
   }
   
-  init();
-  process();
   
   function submitForm(event){
         event.preventDefault();
@@ -95,43 +93,43 @@
   <tr>
   <td>
   <br>
-  <span onClick="speak('Will I ${a}?');"><b>Will</b> I/you/they/we/he/she <b>${a}</b>?</span>
+  <span onClick="say('Will I ${a}?');"><b>Will</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
   <br>
-  <span onClick="speak('Do I ${a}?');"><b>Do</b> I/you/they/we <b>${a}</b>?</span>
+  <span onClick="say('Do I ${a}?');"><b>Do</b> I/you/they/we <b>${a}</b>?</span>
   <br>
-  <span onClick="speak('Does he ${a}?');"><b>Does</b> he/she <b>${a}</b>?</span>
-  <br>
-  <br>
-  <span onClick="speak('Did I ${a}?');"><b>Did</b> I/you/they/we/he/she <b>${a}</b>?</span>
+  <span onClick="say('Does he ${a}?');"><b>Does</b> he/she <b>${a}</b>?</span>
   <br>
   <br>
-  </td>
-  <td>
-  <br>
-  <span onClick="speak('I will ${a}.');">I/you/they/we/he/she   <b>will ${a}</b>.</span>
-  <br>
-  <br>
-  <span onClick="speak('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
-  <br>
-  <span onClick="speak('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
-  <br>
-  <br>
-  <span onClick="speak('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
+  <span onClick="say('Did I ${a}?');"><b>Did</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
   <br>
   </td>
   <td>
   <br>
-  <span onClick="speak('I will not ${a}.');">I/you/they/we/he/she <b>will not ${a}</b>.</span>
+  <span onClick="say('I will ${a}.');">I/you/they/we/he/she   <b>will ${a}</b>.</span>
   <br>
   <br>
-  <span onClick="speak('I do not ${a}.');">I/you/they/we <b>do not ${a}</b>.</span>
+  <span onClick="say('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
   <br>
-  <span onClick="speak('He does not ${a}.');">He/she <b>does not ${a}</b>.</span>
+  <span onClick="say('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
   <br>
   <br>
-  <span onClick="speak('I did not ${a}.');">I/you/they/we/he/she <b>did not ${a}</b>.</span>
+  <span onClick="say('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
+  <br>
+  <br>
+  </td>
+  <td>
+  <br>
+  <span onClick="say('I will not ${a}.');">I/you/they/we/he/she <b>will not ${a}</b>.</span>
+  <br>
+  <br>
+  <span onClick="say('I do not ${a}.');">I/you/they/we <b>do not ${a}</b>.</span>
+  <br>
+  <span onClick="say('He does not ${a}.');">He/she <b>does not ${a}</b>.</span>
+  <br>
+  <br>
+  <span onClick="say('I did not ${a}.');">I/you/they/we/he/she <b>did not ${a}</b>.</span>
   <br>
   <br>
   </td>
@@ -188,68 +186,15 @@
   }
   </script>
 
-  <select id="voice_select"></select>
-  <br>
-  <button onclick="speak(textToSpeak);">sprechen</button>
+  <button onclick="say(textToSpeak);">sprechen</button>
   <button onclick="speechSynthesis.cancel();">halt</button>
   
-  <script>
 
-let voices = [];
+<script src="speaker.js"></script>
 
-function list() 
-{
-  voices = window.speechSynthesis.getVoices();
-  if (voices.length > 0)
-  {
-    console.log(voices);
-
-    const voiceSelect = document.getElementById('voice_select');
-    for (let i = 0; i < voices.length ; ++i) 
-    {
-      const voice = voices[i];
-      if (voice.lang.startsWith('en-'))
-      {
-        var option = document.createElement('option');
-        option.textContent = voice.name + ' (' + voice.lang + ')';
-
-        if(voice.default) {
-          option.textContent += ' -- DEFAULT';
-        }
-        option.setAttribute('data-name', voice.name);
-        voiceSelect.appendChild(option);
-    }
-  }
-
-  }
-  else
-  {
-    setTimeout(list, 500);
-  }
-}
-
-list();
-
-function speak(x)
-{
-  const utterThis = new SpeechSynthesisUtterance(x);
-  const voiceSelect = document.getElementById('voice_select');
-  const selectedOption = voiceSelect.selectedOptions[0] || voiceSelect.options[0];
-
-  if (selectedOption)
-  {
-    for (let i=0; i<voices.length; ++i)
-    {
-      if (voices[i].name === selectedOption.getAttribute('data-name'))
-      {
-        utterThis.voice = voices[i];
-        break;
-      }
-    }
-  }
-  speechSynthesis.speak(utterThis);
-}
-  
+<script>
+  init();
+  process();
 </script>
 
 </body>
