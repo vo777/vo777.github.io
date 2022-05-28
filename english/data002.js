@@ -27,8 +27,14 @@ often
 I
 we
 /
-do not call
-do not help
+do not
+will not
+/
+call
+help
+talk to
+remember
+work with
 /
 him
 her
@@ -43,6 +49,9 @@ I
 we
 /
 forgot
+remember
+will forget
+will remember
 /
 him
 her
@@ -67,6 +76,20 @@ Ukraine
 /
 ?
 `
+,
+`
+How often
+/
+do you
+does he
+/
+help me
+/
+to cook
+to drive
+to study
+/
+?`
 ,
 `
 Who
@@ -98,6 +121,75 @@ party
 /
 in New York
 in France
+/
+?
+`,
+`
+who
+/
+called
+talked to
+helped
+/
+you
+us
+me
+/
+?`
+,
+`
+I
+you
+we
+they
+he
+she
+/
+will
+/
+call you
+help you
+/
+tomorrow
+in three weeks
+in two months
+`,
+`
+where
+/did you
+do you
+will you
+/
+work
+go
+party
+/
+next month
+this weekend
+when you grow up
+/
+?
+`
+,
+`
+how
+/
+did
+do
+will
+/
+you
+/get to Miami
+cook the breakfast
+/?`,
+`
+how fast
+/
+does he
+/
+cook eggs
+drive to New York
+study languages
 /
 ?
 `
