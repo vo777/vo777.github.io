@@ -146,7 +146,10 @@ will meet you
 if you want
 if you let me`,
 `
-I want
+I
+/
+want
+would like
 /
 to speak English
 to come to New York
