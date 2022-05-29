@@ -151,5 +151,8 @@ I want
 to speak English
 to come to New York
 to be your friend
+a candy
+coffee
+a break
 `
 ];
