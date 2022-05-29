@@ -18,7 +18,7 @@ const data =
 	errSet : new Set(),
 };
 
-const timePerQuestion = 70; // 10 = 1 second
+const timePerQuestion = 200; // 10 = 1 second
 
 const minQ = 10;
 const maxQ = 10000; // limited by cookie size
