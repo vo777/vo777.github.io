@@ -144,5 +144,12 @@ will help you
 will meet you
 /
 if you want
-if you let me`
+if you let me`,
+`
+I want
+/
+to speak English
+to come to New York
+to be your friend
+`
 ];
