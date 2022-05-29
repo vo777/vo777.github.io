@@ -12,21 +12,33 @@
 
   <table>
     <tr><th>Who?<br>Кто?</th><th>Whom?<br>Кого? Кому?</th><th>Whose?<br>Чей?</th></tr>
-    <tr><td>I</td><td>me</td><td>my</td></tr>
-    <tr><td>you</td><td>you</td><td>your</td></tr>
-    <tr><td>we</td><td>us</td><td>our</td></tr>
-    <tr><td>they</td><td>them</td><td>their</td></tr>
-    <tr><td>he</td><td>him</td><td>his</td></tr>
-    <tr><td>she</td><td>her</td><td>her</td></tr>
+    <tr><td><span onclick="say('I')">I</span></td>
+      <td><span onclick="say('me')">me</span></td>
+      <td><span onclick="say('my')">my</span></td></tr>
+    <tr><td><span onclick="say('you')">you</span></td>
+      <td><span onclick="say('you')">you</span></td>
+      <td><span onclick="say('your')">your</span></td></tr>
+    <tr><td><span onclick="say('we')">we</span></td>
+      <td><span onclick="say('us')">us</span></td>
+      <td><span onclick="say('our')">our</span></td></tr>
+    <tr><td><span onclick="say('they')">they</span></td>
+      <td><span onclick="say('them')">them</span></td>
+      <td><span onclick="say('their')">their</span></td></tr>
+    <tr><td><span onclick="say('he')">he</span></td>
+      <td><span onclick="say('him')">him</span></td>
+      <td><span onclick="say('his')">his</span></td></tr>
+    <tr><td><span onclick="say('she')">she</span></td>
+      <td><span onclick="say('her')">her</span></td>
+      <td><span onclick="say('her')">her</span></td></tr>
   </table>
 
 
   <button onclick="generate()">Generate</button>
-  <button onclick="read()">Read</button>
+  <button onclick="read()">Say</button>
   <br>
   <input type="text" id="text1" size=100/>
   <br>
-  <button onclick="generate();read()">Generate and read</button>
+  <button onclick="generate();read()">Generate and say</button>
   <br>
 
 

@@ -7,6 +7,8 @@
 </head>
 
 <body>
+<input type="text" id="text1"/>
+<button onclick="hru()">Say</button>
 <h3>Eng-Rus dictionary</h3>
 <h4>Ordered by frequency</h4>
 
@@ -17,6 +19,12 @@
 
 <script>
 const table1 = document.getElementById("table1");
+const text1 = document.getElementById("text1");
+
+function hru()
+{
+  say(text1.value);
+}
 
 init();
 
