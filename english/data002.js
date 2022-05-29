@@ -69,7 +69,7 @@ he
 they
 /
 go to
-came from
+come from
 /
 New York
 Ukraine
