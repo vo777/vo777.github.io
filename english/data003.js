@@ -113,12 +113,17 @@ watching TV
 `
 I
 /
-like to
-want to
-am going to
+like
+want
+am going
+try
+am trying
 don't want
 don't like
-am not going to
+am not going
+am not trying
+/
+to
 /
 watch TV
 go for a walk
