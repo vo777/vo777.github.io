@@ -203,10 +203,12 @@ she
 /
 worried
 thought
-talked about
+talked
 will worry
 will think
-will talk about
+will talk
+/
+about
 /
 work 
 politics
@@ -228,7 +230,9 @@ they
 /
 worry
 think 
-talk about
+talk
+/
+about
 /
 work 
 politics
@@ -247,7 +251,9 @@ she
 /
 worries
 thinks
-talks about
+talks
+/
+about
 /
 work 
 politics

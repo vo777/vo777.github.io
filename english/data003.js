@@ -16,6 +16,7 @@ she is
 
 /
 here
+there
 at work
 watching TV
 `
@@ -30,6 +31,7 @@ she
 / will be
 /
 here
+there
 at work
 watching TV
 `
@@ -52,6 +54,7 @@ she is
 not
 /
 here
+there
 at work
 watching TV
 `
@@ -66,6 +69,7 @@ she
 / will not be
 /
 here
+there
 at work
 watching TV
 `
@@ -87,6 +91,7 @@ is she
 
 /
 here
+there
 at work
 watching TV
 /
@@ -104,6 +109,7 @@ she
 / be
 /
 here
+there
 at work
 watching TV
 /

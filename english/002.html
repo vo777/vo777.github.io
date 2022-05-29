@@ -36,98 +36,29 @@
   </table>
 
 
-  <button onclick="generate()">Generate</button>
-  <button onclick="read()">Say</button>
+  <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
+  <button onclick="say(text1.value);">Say</button>
   <br>
-  <input type="text" id="text1" size=100/>
+  <input type="text" id="text1" size=100 />
   <br>
-  <button onclick="generate();read()">Generate and say</button>
+  <button onclick="text1.value = randomSentence(parsedData);say(text1.value);">Generate and say</button>
   <br>
 
 
   <table id="table1"></table>
 
   <script src="speaker.js"></script>
+  <script src="example_gen.js"></script>
   <script src="data002.js"></script>
 
   <script>
-    const parsed_data = [];
+    const parsedData = [];
     const table1 = document.getElementById('table1');
     const text1 = document.getElementById('text1');
 
-    parse();
-    makeTable();
+    parseInput(data002, parsedData);
 
-    function generate()
-    {
-      text1.value = randomSentence();
-    }
-
-    function read()
-    {
-      say(text1.value);
-    }
-
-
-    function randomSentence() {
-      const data_row = parsed_data[Math.floor(parsed_data.length * Math.random())];
-      let acc = '';
-
-      for (let i=0; i<data_row.length; ++i)
-      {
-        acc += data_row[i][Math.floor(data_row[i].length * Math.random())] + ', ';
-      }
-
-
-      return acc;
-    }
-
-    function parse() {
-      for (let split1 of data002) {
-        const split2_arr = [];
-        const split2 = split1.split('/');
-        for (let split3 of split2) {
-          const split3_arr = [];
-          const split4 = split3.split('\n');
-
-          for (let split5 of split4) {
-            const tmp = split5.trim();
-            console.log(tmp);
-            if (tmp.length) {
-              split3_arr.push(tmp);
-            }
-          }
-          if (split3_arr.length) {
-            split2_arr.push(split3_arr);
-          }
-        }
-        if (split2_arr.length) {
-          parsed_data.push(split2_arr);
-        }
-      }
-
-      console.log(parsed_data);
-    }
-
-
-    function makeTable() {
-      for (let data_row of parsed_data) {
-        const row = table1.insertRow(-1);
-        for (let i = 0; i < data_row.length; ++i) {
-          const cell = row.insertCell(i);
-          let acc = '';
-          for (let j = 0; j < data_row[i].length; ++j) {
-            const a = data_row[i][j];
-            acc += `<span onclick='say("${a}")'>${a}</span>`;
-            if (j != data_row[i].length - 1) { acc += '<br>'; }
-          }
-          cell.innerHTML = acc;
-        }
-
-      }
-
-    }
-
+    makeTable(parsedData, table1);
 
   </script>
 
