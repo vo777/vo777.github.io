@@ -29,7 +29,7 @@ const all_examples = [
     /
     already
     before`
-    ,`
+    , `
     I've seen
     He has seen
     /
@@ -84,5 +84,4 @@ const all_examples = [
     breakfast
     `
 
-    ];
-    
+];
