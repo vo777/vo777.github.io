@@ -11,7 +11,10 @@ const all_examples = [
     them
     /
     for 3 hours
+    for less than an hour
     since morning
+    for too long
+    forever
     `,
     `
     I've been
@@ -28,8 +31,11 @@ const all_examples = [
     before`
     ,
     `
-    I am leaving
-    I am going to New York
+    I am
+    /
+    leaving
+    going to New York
+    starting work
     /
     next week
     tomorrow
