@@ -192,5 +192,71 @@ drive to New York
 study languages
 /
 ?
+`,
 `
+I
+you
+we
+they
+he
+she
+/
+worried
+thought
+talked about
+will worry
+will think
+will talk about
+/
+work 
+politics
+fashion
+news
+weather
+/
+often
+every day
+every evening
+`,
+
+
+`
+I
+you
+we
+they
+/
+worry
+think 
+talk about
+/
+work 
+politics
+fashion
+news
+weather
+/
+often
+every day
+every evening
+`,
+
+`
+he
+she
+/
+worries
+thinks
+talks about
+/
+work 
+politics
+fashion
+news
+weather
+/
+often
+every day
+every evening
+`,
 ];
