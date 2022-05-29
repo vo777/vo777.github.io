@@ -52,6 +52,37 @@ const all_examples = [
     tomorrow
     soon
     `
+    ,
+    `
+    I
+    we
+    they
+    you
+    /
+    like
+    hate
+    dislike
+    enjoy
+    /
+    cucumbers
+    movies
+    to eat cucumbers
+    to travel
+    to watch movies
+    to bring good news
+    `
+    ,
+    `
+    I
+    /
+    will
+    am going to
+    /
+    cook
+    /
+    dinner
+    breakfast
+    `
 
     ];
     
