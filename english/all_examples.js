@@ -29,6 +29,17 @@ const all_examples = [
     /
     already
     before`
+    ,`
+    I've seen
+    He has seen
+    /
+    New York
+    this movie
+    this story
+    /
+    many times
+    already
+    before`
     ,
     `
     I am
