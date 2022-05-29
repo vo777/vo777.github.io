@@ -16,7 +16,7 @@ she is
 
 /
 here
-a boss
+at work
 watching TV
 `
 ,
@@ -30,7 +30,7 @@ she
 / will be
 /
 here
-a boss
+at work
 watching TV
 `
 ,
@@ -52,7 +52,7 @@ she is
 not
 /
 here
-a boss
+at work
 watching TV
 `
 ,
@@ -66,7 +66,7 @@ she
 / will not be
 /
 here
-a boss
+at work
 watching TV
 `
 ,
@@ -87,7 +87,7 @@ is she
 
 /
 here
-a boss
+at work
 watching TV
 /
 ?
@@ -104,7 +104,7 @@ she
 / be
 /
 here
-a boss
+at work
 watching TV
 /
 ?
