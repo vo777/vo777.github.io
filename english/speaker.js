@@ -36,9 +36,15 @@ function list()
   }
 }
 
-function say(x)
+function say(x, brks)
 {
-  const utterThis = new SpeechSynthesisUtterance(x);
+  let txt = x;
+  if (brks)
+  {
+    txt = txt.replaceAll(' ', ', ');
+  }
+  console.log(txt);
+  const utterThis = new SpeechSynthesisUtterance(txt);
   const voiceSelect = document.getElementById('voice_select');
   const selectedOption = voiceSelect.selectedOptions[0] || voiceSelect.options[0];
 

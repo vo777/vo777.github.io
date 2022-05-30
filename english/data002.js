@@ -1,5 +1,4 @@
-const data002 = [
-`
+const data002 = `
 I
 we
 /
@@ -22,8 +21,7 @@ them
 /
 every day
 often
-`,
-`
+==============================
 I
 we
 /
@@ -43,8 +41,8 @@ them
 any more
 at all
 ever
-`,
-`
+======================
+
 I
 we
 /
@@ -55,11 +53,11 @@ will remember
 /
 him
 her
-`,
-`
+=========================
+
 When
 Why
-How ofter
+How often
 /
 did
 will
@@ -75,9 +73,8 @@ New York
 Ukraine
 /
 ?
-`
-,
-`
+=====================
+
 How often
 /
 do you
@@ -89,9 +86,9 @@ to cook
 to drive
 to study
 /
-?`
-,
-`
+?
+=====================
+
 Who
 /
 did
@@ -110,8 +107,8 @@ often
 two months ago
 /
 ?
-`,
-`
+==========================
+
 do you
 does he
 /
@@ -123,8 +120,8 @@ in New York
 in France
 /
 ?
-`,
-`
+====================
+
 who
 /
 called
@@ -135,9 +132,9 @@ you
 us
 me
 /
-?`
-,
-`
+?
+==================
+
 I
 you
 we
@@ -153,8 +150,8 @@ help you
 tomorrow
 in three weeks
 in two months
-`,
-`
+==================================
+
 where
 /did you
 do you
@@ -166,12 +163,10 @@ party
 /
 next month
 this weekend
-when you grow up
 /
 ?
-`
-,
-`
+========================
+
 how
 /
 did
@@ -181,8 +176,9 @@ will
 you
 /get to Miami
 cook the breakfast
-/?`,
-`
+/?
+=========================
+
 how fast
 /
 does he
@@ -192,8 +188,7 @@ drive to New York
 study languages
 /
 ?
-`,
-`
+=========================
 I
 you
 we
@@ -219,10 +214,9 @@ weather
 often
 every day
 every evening
-`,
 
+==========================
 
-`
 I
 you
 we
@@ -243,9 +237,9 @@ weather
 often
 every day
 every evening
-`,
 
-`
+====================
+
 he
 she
 /
@@ -264,5 +258,4 @@ weather
 often
 every day
 every evening
-`,
-];
+`;

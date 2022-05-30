@@ -34,15 +34,18 @@
       <td><span onclick="say('her')">her</span></td>
       <td><span onclick="say('her')">her</span></td></tr>
   </table>
-
+<br>
 
   <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
-  <button onclick="say(text1.value);">Say</button>
+  <button onclick="say(text1.value, document.getElementById('brk1').checked);">Say</button>
+  <input type="checkbox" id="brk1">Breaks between words</input>
   <br>
   <input type="text" id="text1" size=100 />
   <br>
-  <button onclick="text1.value = randomSentence(parsedData);say(text1.value);">Generate and say</button>
+  <button onclick="text1.value = randomSentence(parsedData);say(text1.value, document.getElementById('brk1').checked);">Generate and say</button>
   <br>
+  <br>
+
 
 
   <table id="table1"></table>

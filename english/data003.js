@@ -1,5 +1,4 @@
-const data003 = [
-    `
+const data003 =     `
 I was
 you were
 we were
@@ -19,9 +18,8 @@ here
 there
 at work
 watching TV
-`
-    ,
-    `
+
+================================
 I
 you 
 we
@@ -34,9 +32,7 @@ here
 there
 at work
 watching TV
-`
-    ,
-    `
+=================================
 I was
 you were
 we were
@@ -57,9 +53,7 @@ here
 there
 at work
 watching TV
-`
-    ,
-    `
+================================
 I
 you 
 we
@@ -72,9 +66,7 @@ here
 there
 at work
 watching TV
-`
-    ,
-    `
+==========================
 was I
 were you
 were you
@@ -96,9 +88,7 @@ at work
 watching TV
 /
 ?
-`
-    ,
-    `
+==========================
 Will/
 I
 you 
@@ -114,9 +104,7 @@ at work
 watching TV
 /
 ?
-`
-    ,
-    `
+======================
 I
 /
 like
@@ -134,9 +122,7 @@ to
 watch TV
 go for a walk
 study languages
-`
-    ,
-    `
+=========================
 I
 /
 will call you
@@ -144,8 +130,8 @@ will help you
 will meet you
 /
 if you want
-if you let me`,
-    `
+if you let me
+=============================
 I
 /
 want
@@ -158,4 +144,4 @@ a candy
 coffee
 a break
 `
-];
+;

@@ -1,6 +1,6 @@
 // Additional examples:
-const all_examples = [
-    `
+const all_examples = `
+    
     I've been
     I have been/
     waiting for
@@ -16,8 +16,7 @@ const all_examples = [
     since morning
     for too long
     forever
-    `,
-    `
+  ===================
     I've been
     He's been
     /
@@ -29,8 +28,8 @@ const all_examples = [
     once
     /
     already
-    before`
-    , `
+    before
+ ====================
     I've seen
     He has seen
     /
@@ -40,9 +39,8 @@ const all_examples = [
     /
     many times
     already
-    before`
-    ,
-    `
+    before
+    ==============
     I am
     /
     leaving
@@ -52,9 +50,7 @@ const all_examples = [
     next week
     tomorrow
     soon
-    `
-    ,
-    `
+ =================
     I
     we
     they
@@ -71,9 +67,7 @@ const all_examples = [
     to travel
     to watch movies
     to bring good news
-    `
-    ,
-    `
+  ==========================
     I
     /
     will
@@ -83,9 +77,7 @@ const all_examples = [
     /
     dinner
     breakfast
-    `
-    ,
-    `
+ ==========================
 I
 we
 you 
@@ -100,8 +92,8 @@ will have to
 will not have to
 won't have to
 /
-work on Sunday`,
-    `
+work on Sunday
+==================
 I
 we
 you
@@ -112,8 +104,7 @@ don't have to
 do not have to
 /
 work on Sundays
-`,
-    `
+================================
 he
 she
 /
@@ -121,8 +112,8 @@ has to
 does not have to
 doesn't have to
 /
-work on Sundays`,
-    `
+work on Sundays
+============================
 I'd better
 we'd better
 you'd better
@@ -130,30 +121,31 @@ you'd better
 find a better
 /
 work
-place to live`,
-    `
+place to live
+=============================
 it seems to me
 /
-...`,
-    `
+...
+===========================
 I've heard
 /
-...`, `
+...
+==============================
 I mean
 /
-...`,
-    `
+...
+==============================
 France
 Poland
 /
 is located
 /
 in Europe
-near Germany`,
-    `
+near Germany
+=================================
 I've never seen
 /
 France
 Paris
 `
-];
+;

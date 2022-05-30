@@ -4,14 +4,14 @@ function randomSentence(parsed_data) {
     let acc = '';
 
     for (let i = 0; i < data_row.length; ++i) {
-        acc += data_row[i][Math.floor(data_row[i].length * Math.random())] + ', ';
+        acc += data_row[i][Math.floor(data_row[i].length * Math.random())] + ' ';
     }
 
     return acc;
 }
 
 function parseInput(input_data, parsed_data) {
-    for (let split1 of input_data) {
+    for (let split1 of input_data.split('=')) {
         const split2_arr = [];
         const split2 = split1.split('/');
         for (let split3 of split2) {
