@@ -1,5 +1,5 @@
 const data003 = [
-`
+    `
 I was
 you were
 we were
@@ -20,8 +20,8 @@ there
 at work
 watching TV
 `
-,
-`
+    ,
+    `
 I
 you 
 we
@@ -35,8 +35,8 @@ there
 at work
 watching TV
 `
-,
-`
+    ,
+    `
 I was
 you were
 we were
@@ -58,8 +58,8 @@ there
 at work
 watching TV
 `
-,
-`
+    ,
+    `
 I
 you 
 we
@@ -73,8 +73,8 @@ there
 at work
 watching TV
 `
-,
-`
+    ,
+    `
 was I
 were you
 were you
@@ -97,8 +97,8 @@ watching TV
 /
 ?
 `
-,
-`
+    ,
+    `
 Will/
 I
 you 
@@ -115,8 +115,8 @@ watching TV
 /
 ?
 `
-,
-`
+    ,
+    `
 I
 /
 like
@@ -135,8 +135,8 @@ watch TV
 go for a walk
 study languages
 `
-,
-`
+    ,
+    `
 I
 /
 will call you
@@ -145,7 +145,7 @@ will meet you
 /
 if you want
 if you let me`,
-`
+    `
 I
 /
 want

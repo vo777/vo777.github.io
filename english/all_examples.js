@@ -1,3 +1,4 @@
+// Additional examples:
 const all_examples = [
     `
     I've been
@@ -83,8 +84,8 @@ const all_examples = [
     dinner
     breakfast
     `
-,
-`
+    ,
+    `
 I
 we
 you 
@@ -100,7 +101,7 @@ will not have to
 won't have to
 /
 work on Sunday`,
-`
+    `
 I
 we
 you
@@ -112,7 +113,7 @@ do not have to
 /
 work on Sundays
 `,
-`
+    `
 he
 she
 /
@@ -121,7 +122,7 @@ does not have to
 doesn't have to
 /
 work on Sundays`,
-`
+    `
 I'd better
 we'd better
 you'd better
@@ -130,18 +131,18 @@ find a better
 /
 work
 place to live`,
-`
+    `
 it seems to me
 /
 ...`,
-`
+    `
 I've heard
 /
-...`,`
+...`, `
 I mean
 /
 ...`,
-`
+    `
 France
 Poland
 /
@@ -149,7 +150,7 @@ is located
 /
 in Europe
 near Germany`,
-`
+    `
 I've never seen
 /
 France
