@@ -18,69 +18,20 @@ const data =
 	errSet : new Set(),
 };
 
-const timePerQuestion = 70; // 10 = 1 second
+const timePerQuestion = 200; // 10 = 1 second
 
-const minQ = 1000; // ~ 5 * [a typical daily run]
+const minQ = 10;
 const maxQ = 10000; // limited by cookie size
 
 
 function startup()
 {
-	let langCodes = window.location.search;
-	
-	if (langCodes.length == 0)
+	// parse
+	for (line of rus_eng)
 	{
-		langCodes = "s";
+		data.dict.push([line[2], line[1]]);
 	}
-	langCodes = langCodes.toLowerCase();
 
-	if (langCodes.includes('*'))
-	{
-		langCodes += "-bcdef--ijklmnopqrstuvwxyz0123456789";
-		// all except agh
-	}
-	
-	if (langCodes.includes('z'))
-	{
-		langCodes += "sq dfipu elr";// all west eur
-	}
-	
-	if (langCodes.includes('a')) {data.dict = data.dict.concat(arabic);} 
-	// running out of letters...
-	if (langCodes.includes('b')) {data.dict = data.dict.concat(hungarian);} 
-	if (langCodes.includes('c')) {data.dict = data.dict.concat(czech);} 
-	if (langCodes.includes('d')) {data.dict = data.dict.concat(german);} 
-	if (langCodes.includes('e')) {data.dict = data.dict.concat(esperanto);} 
-	if (langCodes.includes('f')) {data.dict = data.dict.concat(french);} 
-	if (langCodes.includes('g')) {data.dict = data.dict.concat(greek);} 
-	if (langCodes.includes('h')) {data.dict = data.dict.concat(hebrew);} 
-	if (langCodes.includes('i')) {data.dict = data.dict.concat(italian);} 
-	if (langCodes.includes('l')) {data.dict = data.dict.concat(latin);} 
-	if (langCodes.includes('m')) {data.dict = data.dict.concat(malay);} 
-	if (langCodes.includes('n')) {data.dict = data.dict.concat(indonesian);} 
-	if (langCodes.includes('o')) {data.dict = data.dict.concat(polish);} 
-	if (langCodes.includes('p')) {data.dict = data.dict.concat(portuguese);} 
-	if (langCodes.includes('q')) 
-	{
-		// loadSynonyms -- moved to the end 
-//		loadSynonyms(data.dict, spanishSynonims);
-		data.dict = data.dict.concat(spanishQ);
-	}
-	if (langCodes.includes('r')) {data.dict = data.dict.concat(romanian);} 
-	if (langCodes.includes('s')) 
-	{	
-		data.dict = data.dict.concat(spanish);
-		data.dict = data.dict.concat(spanish001);
-	}		
-	if (langCodes.includes('t')) {data.dict = data.dict.concat(turkish);} 
-	if (langCodes.includes('u')) {data.dict = data.dict.concat(dutch);} 
-	if (langCodes.includes('v')) {data.dict = data.dict.concat(vietnamese);} 
-	if (langCodes.includes('x')) {data.dict = data.dict.concat(tagalog);} 
-	if (langCodes.includes('y')) {data.dict = data.dict.concat(interlingua);} 
-
-	if (langCodes.includes('0')) {data.dict = data.dict.concat(lang_0);} 
-
-	
 	// remove dupes
 	for (let i=0; i<data.dict.length; ++i)
 	{
@@ -100,33 +51,6 @@ function startup()
 			console.log('skip: ' + tmp)
 		}
 	}
-
-	if (langCodes.includes('-')) // invert the word pairs if requested
-	{
-		for (let arr of data.dict)
-		{
-			[arr[0], arr[1]] = [arr[1], arr[0]];
-		}
-	}
-
-	if (langCodes.includes('+')) // dupe the word pairs if requested
-	{
-		const N = data.dict.length;
-		for (let i=0; i<N; ++i)
-		{
-			// push inverted pair
-			data.dict.push([data.dict[i][1], data.dict[i][0]]);
-		}
-	}
-	
-	if (langCodes.includes('q')) 
-	{
-		// synonyms are already inverted and duped, so had to move
-		// this line to the end
-		loadSynonyms(data.dict, spanishSynonims);
-	} 
-	
-	
 
 	// normalize
 	for (let i=0; i<data.dict.length; ++i)
@@ -182,7 +106,9 @@ function worker()
 */
 function newQuestion()
 {
-	const CookieName = 'workset';
+	shutUp();
+
+	const CookieName = 'engrusset';
 	
 	if (! data.wset)
 	{
@@ -241,6 +167,8 @@ function newQuestion()
 
 	console.log(data.currentIndex, ':', data.dict[data.currentIndex]);
 	
+	say3();
+
 	data.answerIndices 
 			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
 	data.question.innerHTML = data.dict[data.currentIndex][0];
@@ -319,6 +247,7 @@ function onAnswer(x)
 	}
 	else
 	{
+		say3();
 		++data.ansIncorrectly;
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
@@ -368,6 +297,14 @@ function genRandomIncorrectAnswers(m, dict)
 	shuffle(res); // for good measure
 	return res;
 }
+
+function say3()
+{
+	const txt = data.dict[data.currentIndex][0];
+	say(txt + ', ' + txt + ', ' + txt);
+}
+
+function shutUp() { speechSynthesis.cancel(); }
 
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
 

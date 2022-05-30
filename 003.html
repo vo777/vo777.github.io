@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Lesson 003</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+  <a href="./index.html">Back</a> to main page.<br>
+
+  <h3>Lesson 3</h3>
+  <h4>Continuous times + more combinations</h4>
+
+  <table>
+    <tr>
+      <th>Who?<br>Кто?</th>
+      <th>Whom?<br>Кого? Кому?</th>
+      <th>Whose?<br>Чей?</th>
+    </tr>
+    <tr>
+      <td><span onclick="say('I')">I</span></td>
+      <td><span onclick="say('me')">me</span></td>
+      <td><span onclick="say('my')">my</span></td>
+    </tr>
+    <tr>
+      <td><span onclick="say('you')">you</span></td>
+      <td><span onclick="say('you')">you</span></td>
+      <td><span onclick="say('your')">your</span></td>
+    </tr>
+    <tr>
+      <td><span onclick="say('we')">we</span></td>
+      <td><span onclick="say('us')">us</span></td>
+      <td><span onclick="say('our')">our</span></td>
+    </tr>
+    <tr>
+      <td><span onclick="say('they')">they</span></td>
+      <td><span onclick="say('them')">them</span></td>
+      <td><span onclick="say('their')">their</span></td>
+    </tr>
+    <tr>
+      <td><span onclick="say('he')">he</span></td>
+      <td><span onclick="say('him')">him</span></td>
+      <td><span onclick="say('his')">his</span></td>
+    </tr>
+    <tr>
+      <td><span onclick="say('she')">she</span></td>
+      <td><span onclick="say('her')">her</span></td>
+      <td><span onclick="say('her')">her</span></td>
+    </tr>
+  </table>
+  <br>
+
+
+  <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
+  <button onclick="say(text1.value, document.getElementById('brk1').checked);">Say</button>
+  <input type="checkbox" id="brk1">Breaks between words</input>
+  <br>
+  <input type="text" id="text1" size=100 />
+  <br>
+  <button onclick="text1.value = randomSentence(parsedData);say(text1.value, document.getElementById('brk1').checked);">Generate and say</button>
+  <br>
+  <br>
+
+  <table id="table1"></table>
+
+  <script src="speaker.js"></script>
+  <script src="example_gen.js"></script>
+  <script src="data003.js"></script>
+
+  <script>
+    const parsedData = [];
+    const table1 = document.getElementById('table1');
+    const text1 = document.getElementById('text1');
+
+    parseInput(data003, parsedData);
+
+    makeTable(parsedData, table1);
+
+  </script>
+
+</body>
+
+</html>
