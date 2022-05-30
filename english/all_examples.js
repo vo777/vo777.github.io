@@ -83,5 +83,76 @@ const all_examples = [
     dinner
     breakfast
     `
-
+,
+`
+I
+we
+you 
+they
+he
+she
+/
+had to
+didn't have to
+did not have to
+will have to
+will not have to
+won't have to
+/
+work on Sunday`,
+`
+I
+we
+you
+they
+/
+have to
+don't have to
+do not have to
+/
+work on Sundays
+`,
+`
+he
+she
+/
+has to
+does not have to
+doesn't have to
+/
+work on Sundays`,
+`
+I'd better
+we'd better
+you'd better
+/
+find a better
+/
+work
+place to live`,
+`
+it seems to me
+/
+...`,
+`
+I've heard
+/
+...`,`
+I mean
+/
+...`,
+`
+France
+Poland
+/
+is located
+/
+in Europe
+near Germany`,
+`
+I've never seen
+/
+France
+Paris
+`
 ];
