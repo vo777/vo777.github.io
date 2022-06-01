@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Adjectives</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+  <a href="./index.html">Back</a> to main page.<br>
+
+  <h3>Adjectives</h3>
+
+  <table id="table1"></table>
+
+  <script src="speaker.js"></script>
+  <script src="adjectives.js"></script>
+
+  <script>
+    const table1 = document.getElementById('table1');
+
+    for (let data_row of adj.split('\n')) {
+        const row = table1.insertRow(-1);
+        const data_elements = data_row.split('\t');
+        for (let i = 0; i < data_elements.length; ++i) {
+            const cell = row.insertCell(i);
+            const a = data_elements[i];
+            cell.innerHTML = `<span onclick='say("${a}")'>${a}</span>`;
+        }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
