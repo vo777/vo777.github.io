@@ -1,6 +1,6 @@
 let voices = [];
 
-function list() 
+function listVoices(lang) 
 {
   voices = window.speechSynthesis.getVoices();
   if (voices.length > 0)
@@ -16,7 +16,7 @@ function list()
     for (let i = 0; i < voices.length ; ++i) 
     {
       const voice = voices[i];
-      if (voice.lang.startsWith('en'))
+      if (lang.length == 0 || voice.lang.startsWith(lang))
       {
         var option = document.createElement('option');
         option.textContent = voice.name + ' (' + voice.lang + ')';
@@ -32,7 +32,7 @@ function list()
   }
   else
   {
-    setTimeout(list, 500);
+    setTimeout(listVoices, 500, lang);
   }
 }
 
@@ -78,6 +78,4 @@ function sayIn(lang, x)
   utterThis.lang = utterThis.voice.lang; // required on Android
   speechSynthesis.speak(utterThis);
 }
-
-list();
 
