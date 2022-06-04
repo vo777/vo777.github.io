@@ -16,7 +16,7 @@ function list()
     for (let i = 0; i < voices.length ; ++i) 
     {
       const voice = voices[i];
-      if (voice.lang.startsWith('en-'))
+      if (voice.lang.startsWith('en'))
       {
         var option = document.createElement('option');
         option.textContent = voice.name + ' (' + voice.lang + ')';
@@ -68,13 +68,13 @@ function sayIn(lang, x)
 
   for (let i=0; i<voices.length; ++i)
   {
-    if (voices[i].lang.startsWith(lang + '-'))
+    if (voices[i].lang.startsWith(lang))
     {
       utterThis.voice = voices[i];
       break;
     }
   }
-
+  utterThis.lang = utterThis.voice.lang
   speechSynthesis.speak(utterThis);
 }
 
