@@ -79,8 +79,10 @@ How often
 /
 do you
 does he
+did you
+did he
 /
-help me
+help her
 /
 to cook
 to drive
@@ -136,7 +138,6 @@ me
 ==================
 
 I
-you
 we
 they
 he
