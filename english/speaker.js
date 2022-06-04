@@ -59,6 +59,7 @@ function say(x, brks)
       }
     }
   }
+  utterThis.lang = utterThis.voice.lang; // required on Android
   speechSynthesis.speak(utterThis);
 }
 
@@ -74,7 +75,7 @@ function sayIn(lang, x)
       break;
     }
   }
-  utterThis.lang = utterThis.voice.lang
+  utterThis.lang = utterThis.voice.lang; // required on Android
   speechSynthesis.speak(utterThis);
 }
 
