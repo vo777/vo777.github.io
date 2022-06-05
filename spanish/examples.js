@@ -210,6 +210,82 @@ hacerlo
 /
 ayer
 para ti
+================
+creo que
+no creo que
+/
+ha
+haya
+han
+hayan
+/
+suspendido
+aprobado
+salido
+terminado
+llegado
+vuelto
+muerto
+================
+lo haremos
+los llamare
+/
+a menos que
+con tal de que
+para que
+antes de que
+/
+vengan a ayudar
+tengan algo que hacer
+lo hagan
+salgan
+traigan las bebidas
+===================
+quero
+puedo
+voy a
+acabo de
+suelo
+tengo que
+me gustaria
+decidi
+/
+ir al banco
+ir a la playa
+ir al supermercado
+jugar al futbol
+hacer algo differente
+hacer algo importante
+hablar
+salir
+/
+contigo
+con Pablo
+mañana
+al final
+======
+no se si puedo
+/
+jugar al rugby
+jugar al tenis mañana
+ir
+ir a la fiesta
+ir a la playa mañana
+===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 =============
 yo estoy
 tú estás
