@@ -1,6 +1,5 @@
 const data_call_example =     `
 
-
 ==
 I call him
 I do not call him
@@ -26,19 +25,29 @@ I want to
 I promise to
 I should
 I am trying to
+I am trying to not
 I would better
 I would never
+I am going to
+I am going to try to
 /
 call him
 ==
 I wanted to
 I promised to
+/
+call him
+/
+...
+but I forgot
+==
 I should have
 /
 called him
 /
 ...
 but I forgot
+
 ==
 I tried to
 /
@@ -76,6 +85,40 @@ calling him
 for 3 hours
 since yesterday
 ==
+I will
+I promise I will
+I will try to
+/
+call him
+/
+when I have time
+==
+did you
+did you try to
+did you promise to
+are you going to
+do you
+do you promise
+will you
+when did you
+how often do you
+how do you
+how did you
+how will you
+/
+call him?
+==
+when did you
+/
+call him
+/
+last time?
+==
+have you ever
+/
+called him?
+==
+
 
 `;
 
