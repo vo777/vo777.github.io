@@ -9,6 +9,7 @@ often
 ==
 I will call him
 I will not call him
+I can call him
 /
 tomorrow
 in three days
@@ -16,6 +17,7 @@ next Monday
 ==
 I called him
 I did not call him
+I could call him
 /
 yesterday
 three days ago
@@ -43,6 +45,7 @@ call him
 but I forgot
 ==
 I should have
+I could have
 /
 called him
 /
@@ -107,6 +110,10 @@ how often do you
 how do you
 how did you
 how will you
+are you still trying to
+do you want to
+do you still want to
+can you
 /
 call him?
 ==
@@ -118,7 +125,15 @@ last time?
 ==
 have you ever
 /
-called him?
+tried to call
+called
+/
+him?
+==
+were
+are
+/
+you going to call him?
 ==
 
 
