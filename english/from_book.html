@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>Lesson 005</title>
+  <title>Examples from the book</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="../langscripts/styles.css">
 
@@ -11,11 +11,9 @@
 <body>
   <a href="./index.html">Back</a> to main page.<br>
 
-  <h3>Lesson 5</h3>
-  <h4>Adjectives and Times.</h4>
+  <h3>Examples from the book</h3>
+  <h4></h4>
 
-  See also: <a href="adjectives.html"> this list.</a>
-  <br>
   <br>
 
   <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
@@ -32,14 +30,14 @@
 
   <script src="../langscripts/speaker.js"></script>
   <script src="../langscripts/example_gen.js"></script>
-  <script src="data005.js"></script>
+  <script src="from_book.js"></script>
 
   <script>
     const parsedData = [];
     const table1 = document.getElementById('table1');
     const text1 = document.getElementById('text1');
 
-    parseInput(data005, parsedData);
+    parseInput(data_from_book, parsedData);
 
     makeTable(parsedData, table1);
 
