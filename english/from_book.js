@@ -43,6 +43,8 @@ pick up a paper
 get up from a chair
 wake up from a long sleep
 =================
+he
+/
 held back
 /
 laugh
