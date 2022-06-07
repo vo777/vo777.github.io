@@ -2,12 +2,26 @@ const data_call_example =     `
 
 ==
 I
+I do
 I do not
 /
 call him
 /
 every day
+almost evry day
+almost daily
 often
+==
+I
+/
+always
+sometimes
+occasionally
+rarely
+almost never
+never
+/
+call him
 ==
 I will
 I will not
@@ -21,12 +35,15 @@ in three days
 next Monday
 ==
 I called him
+I did call him
 I did not call him
 I could call him
 /
 yesterday
 three days ago
 on Monday
+sometimes
+occasionally
 ==
 I want to
 I promise to
@@ -83,6 +100,8 @@ I have called him
 .
 5 times
 many times
+already
+before
 ==
 I was calling him/
 last night at 7 pm
@@ -158,9 +177,7 @@ don't even think about
 /
 calling him !!!
 ===
-I should have
-/
-called him
+I should have called him
 /
 when
 whenever
