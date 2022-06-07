@@ -1,15 +1,20 @@
 const data_call_example =     `
 
 ==
-I call him
-I do not call him
+I
+I do not
+/
+call him
 /
 every day
 often
 ==
-I will call him
-I will not call him
-I can call him
+I will
+I will not
+I can
+I would like to
+/
+call him
 /
 tomorrow
 in three days
