@@ -135,11 +135,15 @@ are
 /
 you going to call him?
 ==
-I am looking for a way to
-I want to find a way to
-I should find some time to
+I am looking for a way
+I want to find a way
+I should find some time
+I forgot
+I never forget
+I will never forget
+I always remember
 /
-call him
+to call him
 ===
 
 
