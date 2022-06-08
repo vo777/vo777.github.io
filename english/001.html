@@ -6,6 +6,17 @@
 </head>
 
 <body>
+
+<style>
+.cc1{
+background-color:#BFE;
+}
+
+.cc2{
+background-color:#EEA;
+}
+</style>
+
   <a href="./index.html">Back</a> to main page.<br>
   <h3>Lesson 1</h3>
   <h4>Verb forms</h4>
@@ -19,9 +30,9 @@
   <div>
     (make) <input type="text" id="a" value="make" oninput="process()">
     <button onclick="say(document.getElementById('a').value);">Say</button><br>
-    (makes) <input type="text" id="s" value="makes" oninput="process()" style="background-color:#8FD;">
+    (makes) <input type="text" id="s" value="makes" oninput="process()" class="cc1">
     <button onclick="say(document.getElementById('s').value);">Say</button><br>
-    (made) <input type="text" id="p" value="made" oninput="process()" style="background-color:#FFC;">
+    (made) <input type="text" id="p" value="made" oninput="process()" class="cc2">
     <button onclick="say(document.getElementById('p').value);">Say</button><br>
   </div>
 
@@ -140,10 +151,10 @@ learn learns learned учиться
   <br>
   <span onClick="say1('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
   <br>
-  <span  style="background-color:#8FD;" onClick="say1('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
+  <span  class="cc1" onClick="say1('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
   <br>
   <br>
-  <span  style="background-color:#FFC;" onClick="say1('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
+  <span  class="cc2" onClick="say1('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
   <br>
   <br>
   </td>
