@@ -8,7 +8,7 @@ I do not
 call him
 /
 every day
-almost evry day
+almost every day
 almost daily
 often
 ==
@@ -27,6 +27,8 @@ I will
 I will not
 I can
 I would like to
+I have to
+I will have to
 /
 call him
 /
@@ -38,6 +40,7 @@ I called him
 I did call him
 I did not call him
 I could call him
+I had to call him
 /
 yesterday
 three days ago
