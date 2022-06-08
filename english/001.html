@@ -10,150 +10,154 @@
   <h3>Lesson 1</h3>
   <h4>Verb forms</h4>
 
-<div>
-<center>Press any verb here:</center>
-<p id="verbs_div"></p>
-</div>
+  <div>
+    <center>Press any verb here:</center>
+    <p id="verbs_div"></p>
+    <p id="translation_div"></p>
+  </div>
 
-<div>
-<form id="form1" onsubmit="submitForm(event)">
-(make) <input type="text" id="a" value="make"><br>
-(makes)  <input type="text" id="s" value="makes"><br>
-(made)  <input type="text" id="p" value="made"><br>
-  <button type="submit">Submit</button>
-</form>
-</div>
+  <div>
+    (make) <input type="text" id="a" value="make" oninput="process()">
+    <button onclick="say(document.getElementById('a').value);">Say</button><br>
+    (makes) <input type="text" id="s" value="makes" oninput="process()" style="background-color:#FFC;">
+    <button onclick="say(document.getElementById('s').value);">Say</button><br>
+    (made) <input type="text" id="p" value="made" oninput="process()" style="background-color:#FFC;">
+    <button onclick="say(document.getElementById('p').value);">Say</button><br>
+  </div>
 
-<div>
-<p id='res'></p>
-</div>
+  <div>
+    <p id='res'></p>
+  </div>
 
-<script>
+  <script>
 
-  const verbs = [
-  'do does did',
-  'say says said',
-  'get gets got',
-  'make makes made',
-  'go goes went',
-  'know knows knew',
-  'take takes took',
-  'see sees saw',
-  'come comes came',
-  'think thinks thought',
-  'look looks looked',
-  'want wants wanted',
-  'give gives gave',
-  'use uses used',
-  'find finds found',
-  'tell tells told',
-  'ask asks asked',
-  'work works worked',
-  'seem seems seemed',
-  'feel feels felt',
-  'try tries tried',
-  'leave leaves left',
-  'call calles called',
-  'help helps helped',
-  'buy buys bought',
-  'sell sells sold',
-  'pay pays paid',
-  'choose chooses chose',
-  'change changes changed',
-  'show shows showed',
-  'play plays played',
-  'turn turns turned',
-  'shoot shoots shot',
-  'fall falls fell',
-  'miss misses missed',
-  'cut cuts cut',
-  'swim swims swam',
-  '',
-  '',
-  '',
-  ];
-  
-  let textToSpeak;
+    const verbs = `
 
-  function init()
-  {
-    let tmp = "";
-    for (let e of verbs)
-    {
-      const split = e.split(" ");
-      const tmp1 = `<span onclick=onSpan("${split[0]}","${split[1]}","${split[2]}")> ${split[0]} </span> `;
-      console.log(tmp1);
-      tmp += tmp1;
+do does did делать
+say says said говорить,сказать
+get gets got получать
+make makes made сделать
+have has had иметь
+go goes went идти,собираться
+know knows knew знать
+take takes took брать
+see sees saw видеть
+come comes came приходить
+think thinks thought думать
+look looks looked смотреть
+want wants wanted хотеть
+give gives gave давать
+use uses used использовать
+find finds found находить
+tell tells told рассказывать
+ask asks asked спрашивать,просить
+work works worked работать
+seem seems seemed казаться
+feel feels felt чувствовать
+try tries tried пытаться,пробовать,примерять
+leave leaves left уходить
+call calles called звонить
+help helps helped помогать
+buy buys bought покупать
+sell sells sold продавать
+pay pays paid платить
+choose chooses chose выбирать
+change changes changed менять
+show shows showed показывать
+play plays played играть
+turn turns turned поворачивать
+shoot shoots shot стрелять,снимать_кино 
+fall falls fell падать
+miss misses missed промахнуться,скучать
+cut cuts cut резать
+swim swims swam плавать
+consider considers considered считать,рассматривать
+open opens opened открывать
+close closes closed закрывать
+remember remembers remembered помнить
+forget forgets forgot забывать
+drive drives drove рулить
+write writes wrote писать
+teach teaches teached учить
+study studies studied учиться
+learn learns learned учиться
+
+
+  `;
+
+    let textToSpeak;
+
+    function init() {
+      let tmp = "";
+      for (let e of verbs.split('\n')) {
+        const split = e.split(" ");
+        const tmp1 = `<span onclick=onSpan("${split[0]}","${split[1]}","${split[2]}","${split[3]}")> ${split[0]} </span> `;
+        console.log(tmp1);
+        tmp += tmp1;
+      }
+      const verbs_div = document.getElementById('verbs_div');
+      verbs_div.innerHTML = tmp;
     }
-    const verbs_div = document.getElementById('verbs_div');
-    verbs_div.innerHTML = tmp;
-  }
-  
-  function onSpan(a,s,p)
-  {
-    document.getElementById('a').value = a;
-    document.getElementById('s').value = s;
-    document.getElementById('p').value = p;
-    process();
-  }
-  
-  
-  function submitForm(event){
-        event.preventDefault();
-        process();
-  }
-  
-  function process()
-  {
-        speechSynthesis.cancel();
-        const a = document.getElementById('a').value;
-        const s = document.getElementById('s').value;
-        const p = document.getElementById('p').value;
-        const res = document.getElementById('res');
-        //console.log(res);
-        res.innerHTML = 
-  `
+
+    function onSpan(a, s, p, rus) {
+      document.getElementById('a').value = a;
+      document.getElementById('s').value = s;
+      document.getElementById('p').value = p;
+      document.getElementById('translation_div').innerHTML = '<h4>' + a + ' --> ' + rus + '</h4>';
+      process();
+      say(a);
+    }
+
+    function process() {
+      speechSynthesis.cancel();
+      const a = document.getElementById('a').value;
+      const s = document.getElementById('s').value;
+      const p = document.getElementById('p').value;
+      const res = document.getElementById('res');
+      //console.log(res);
+      res.innerHTML =
+        `
   <table>
   <tr>
   <td>
   <br>
-  <span onClick="say('Will I ${a}?');"><b>Will</b> I/you/they/we/he/she <b>${a}</b>?</span>
+  <span onClick="say1('Will I ${a}?');"><b>Will</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
   <br>
-  <span onClick="say('Do I ${a}?');"><b>Do</b> I/you/they/we <b>${a}</b>?</span>
+  <span onClick="say1('Do I ${a}?');"><b>Do</b> I/you/they/we <b>${a}</b>?</span>
   <br>
-  <span onClick="say('Does he ${a}?');"><b>Does</b> he/she <b>${a}</b>?</span>
-  <br>
-  <br>
-  <span onClick="say('Did I ${a}?');"><b>Did</b> I/you/they/we/he/she <b>${a}</b>?</span>
+  <span onClick="say1('Does he ${a}?');"><b>Does</b> he/she <b>${a}</b>?</span>
   <br>
   <br>
-  </td>
-  <td>
-  <br>
-  <span onClick="say('I will ${a}.');">I/you/they/we/he/she   <b>will ${a}</b>.</span>
-  <br>
-  <br>
-  <span onClick="say('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
-  <br>
-  <span onClick="say('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
-  <br>
-  <br>
-  <span onClick="say('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
+  <span onClick="say1('Did I ${a}?');"><b>Did</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
   <br>
   </td>
   <td>
   <br>
-  <span onClick="say('I will not ${a}.');">I/you/they/we/he/she <b>will not ${a}</b>.</span>
+  <span onClick="say1('I will ${a}.');">I/you/they/we/he/she   <b>will ${a}</b>.</span>
   <br>
   <br>
-  <span onClick="say('I do not ${a}.');">I/you/they/we <b>do not ${a}</b>.</span>
+  <span onClick="say1('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
   <br>
-  <span onClick="say('He does not ${a}.');">He/she <b>does not ${a}</b>.</span>
+  <span  style="background-color:#FFC;" onClick="say1('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
   <br>
   <br>
-  <span onClick="say('I did not ${a}.');">I/you/they/we/he/she <b>did not ${a}</b>.</span>
+  <span  style="background-color:#FFC;" onClick="say1('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
+  <br>
+  <br>
+  </td>
+  <td>
+  <br>
+  <span onClick="say1('I will not ${a}.');">I/you/they/we/he/she <b>will not ${a}</b>.</span>
+  <br>
+  <br>
+  <span onClick="say1('I do not ${a}.');">I/you/they/we <b>do not ${a}</b>.</span>
+  <br>
+  <span onClick="say1('He does not ${a}.');">He/she <b>does not ${a}</b>.</span>
+  <br>
+  <br>
+  <span onClick="say1('I did not ${a}.');">I/you/they/we/he/she <b>did not ${a}</b>.</span>
   <br>
   <br>
   </td>
@@ -164,65 +168,51 @@
   
   `;
 
-  
-  textToSpeak = 
-  `
-  <table>
-  <tr>
-  <td>
-  <br>
-  <b>Will</b> I <b>${a}</b>?<br>
-  <br>
-  <b>Do</b> I <b>${a}</b>?<br>
-  <b>Does</b> he <b>${a}</b>?<br>
-  <br>
-  <b>Did</b> I <b>${a}</b>?<br>
-  <br>
-  </td>
-  <td>
-  <br>
-  I <b>will ${a}</b>.<br>
-  <br>
-  I <b>${a}</b>.<br>
-  He <b>${s}</b>.<br>
-  <br>
-  I <b><u>${p}</u></b>. <br>
-  <br>
-  </td>
-  <td>
-  <br>
-  I <b>will not ${a}</b>.<br>
-  <br>
-  I <b>do not ${a}</b>.<br>
-  He <b>does not ${a}</b>.<br>
-  <br>
-  I <b>did not ${a}</b>.<br>
-  <br>
-  </td>
-  
-  </tr>
-  </table>
-  
-  
+
+      textToSpeak =
+        `Will I ${a}?
+  Do I ${a}?
+  Does he ${a}?
+  Did I ${a}?
+  I will ${a}.
+  I ${a}.
+  He ${s}.
+  I ${p}.
+  I will not ${a}.
+  I do not ${a}.
+  He does not ${a}.
+  I did not ${a}.
   `;
 
+    }
 
+function say1(txt)
+{
+  if (document.getElementById('brk1').checked)
+  {
+    txt = txt.replaceAll(' ', ', ').replaceAll('\n',', ');
   }
+  say(txt);
+}
+
   </script>
 
-  <button onclick="say(textToSpeak);">sprechen</button>
-  <button onclick="speechSynthesis.cancel();">halt</button>
-  
+  <button onclick="say1(textToSpeak);">Say all</button>
+  <button onclick="speechSynthesis.cancel();">Shut up</button>
+  <input type="checkbox" id="brk1">Breaks between words</input>
+  <br>
 
-<script src="../langscripts/speaker.js"></script>
 
-<script>
-  init();
-  process();
-  
-  listVoices('en');
+  <script src="../langscripts/speaker.js"></script>
 
-</script>
+  <script>
+    init();
+    process();
+
+    listVoices('en');
+
+  </script>
 
 </body>
+
 </html>
