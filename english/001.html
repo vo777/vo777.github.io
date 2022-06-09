@@ -15,6 +15,14 @@ background-color:#BFE;
 .cc2{
 background-color:#EEA;
 }
+
+.center {
+  text-align: center;
+}
+
+td{
+  text-align: center;
+}
 </style>
 
   <a href="./index.html">Back</a> to main page.<br>
@@ -22,7 +30,7 @@ background-color:#EEA;
   <h4>Verb forms</h4>
 
   <div>
-    <center>Press any verb here:</center>
+    <p class=center>Press any verb here:</p>
     <p id="verbs_div"></p>
     <p id="translation_div"></p>
   </div>
@@ -92,6 +100,17 @@ write writes wrote писать
 teach teaches teached учить
 study studies studied учиться
 learn learns learned учиться
+laugh laughs laughed смеяться
+sigh sighs sighed вздыхать
+fear fears feared бояться
+cry cries cried плакать
+dry dries dried сушить
+fly flies flied летать
+fry fries fried жарить
+deny denies denied отрицать
+apply applies applied применять
+send sends sent отправлять
+receive receives received получать
 
 
   `;
@@ -134,12 +153,12 @@ learn learns learned учиться
   <br>
   <span onClick="say1('Will I ${a}?');"><b>Will</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
-  <br>
+  <hr>
   <span onClick="say1('Do I ${a}?');"><b>Do</b> I/you/they/we <b>${a}</b>?</span>
   <br>
   <span onClick="say1('Does he ${a}?');"><b>Does</b> he/she <b>${a}</b>?</span>
   <br>
-  <br>
+  <hr>
   <span onClick="say1('Did I ${a}?');"><b>Did</b> I/you/they/we/he/she <b>${a}</b>?</span>
   <br>
   <br>
@@ -148,12 +167,12 @@ learn learns learned учиться
   <br>
   <span onClick="say1('I will ${a}.');">I/you/they/we/he/she   <b>will ${a}</b>.</span>
   <br>
-  <br>
+  <hr>
   <span onClick="say1('I ${a}.');">I/you/they/we   <b>${a}</b>.</span>
   <br>
   <span  class="cc1" onClick="say1('He ${s}.');">He/she   <b><u>${s}</u></b>.</span>
   <br>
-  <br>
+  <hr>
   <span  class="cc2" onClick="say1('I ${p}.');">I/you/they/we/he/she <b><u>${p}</u></b>.</span>
   <br>
   <br>
@@ -162,12 +181,12 @@ learn learns learned учиться
   <br>
   <span onClick="say1('I will not ${a}.');">I/you/they/we/he/she <b>will not ${a}</b>.</span>
   <br>
-  <br>
+  <hr>
   <span onClick="say1('I do not ${a}.');">I/you/they/we <b>do not ${a}</b>.</span>
   <br>
   <span onClick="say1('He does not ${a}.');">He/she <b>does not ${a}</b>.</span>
   <br>
-  <br>
+  <hr>
   <span onClick="say1('I did not ${a}.');">I/you/they/we/he/she <b>did not ${a}</b>.</span>
   <br>
   <br>
