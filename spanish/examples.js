@@ -290,8 +290,8 @@ ir a la playa mañana
 yo estoy
 tú estás
 él está
-ns estamos
-vs estáis
+nosotros estamos
+vosotros estáis
 ellos están
 /
 bien y tu
@@ -299,8 +299,8 @@ bien y tu
 yo estuve
 tú estuviste
 él estuvo
-ns estuvimos
-vs estuvisteis
+nosotros estuvimos
+vosotros estuvisteis
 ellos estuvieron
 /
 bien ayer
@@ -308,31 +308,57 @@ bien ayer
 yo estaré
 tú estarás
 él estará
-ns estaremos
-vs estaréis
+nosotros estaremos
+vosotros estaréis
 ellos estarán
 /
 bien mañana
+======
+
+que
+donde
+cuando
+/
+quero
+puedo
+necesito
+acabo de
+queres
+puedes
+/
+hablar
+comprar
+comer
+hacer
+ver
+venir
+pedir
+/
+algo
+conmigo
+contigo
+paella
+
 ================
 yo soy
 tú eres
 él es
-ns somos
-vs sois
+nosotros somos
+vosotros sois
 ellos son
 
 yo fui
 tú fuiste
 él fue
-ns fuimos
-vs fuisteis
+nosotros fuimos
+vosotros fuisteis
 ellos fueron
 
 yo seré
 tú serás
 él será
-ns seremos
-vs seréis
+nosotros seremos
+vosotros seréis
 ellos serán
 /
 de Chicago
@@ -341,22 +367,22 @@ de Chicago
 yo hablo
 tú hablas
 él habla
-ns hablamos
-vs habláis
+nosotros hablamos
+vosotros habláis
 ellos hablan
 
 yo hablé
 tú hablaste
 él habló
-ns hablamos
-vs hablasteis
+nosotros hablamos
+vosotros hablasteis
 ellos hablaron
 
 yo hablaré
 tú hablarás
 él hablará
-ns hablaremos
-vs hablaréis
+nosotros hablaremos
+vosotros hablaréis
 ellos hablarán
 /
 lengua española
@@ -364,22 +390,22 @@ lengua española
 yo pido
 tú pides
 él pide
-ns pedimos
-vs pedís
+nosotros pedimos
+vosotros pedís
 ellos piden
 
 yo pedí
 tú pediste
 él pidió
-ns pedimos
-vs pedisteis
+nosotros pedimos
+vosotros pedisteis
 ellos pidieron
 
 yo pediré
 tú pedirás
 él pedirá
-ns pediremos
-vs pediréis
+nosotros pediremos
+vosotros pediréis
 ellos pedirán
 
 ===============
@@ -387,22 +413,22 @@ ellos pedirán
 yo puedo
 tú puedes
 él puede
-ns podemos
-vs podéis
+nosotros podemos
+vosotros podéis
 ellos pueden
 
 yo pude
 tú pudiste
 él pudo
-ns pudimos
-vs pudisteis
+nosotros pudimos
+vosotros pudisteis
 ellos pudieron
 
 yo podré
 tú podrás
 él podrá
-ns podremos
-vs podréis
+nosotros podremos
+vosotros podréis
 ellos podrán
 
 =============
