@@ -24,6 +24,11 @@ function listVoices(lang)
         // if(voice.default) {
         //   option.textContent += ' -- DEFAULT';
         // }
+		if (voice.lang.indexOf('US')>=0)
+		{
+			option.setAttribute ("selected", "selected");
+		}
+		
         option.setAttribute('data-name', voice.name);
         voiceSelect.appendChild(option);
     }
