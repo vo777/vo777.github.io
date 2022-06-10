@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>All examples</title>
+  <title>Lesson</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="../langscripts/styles.css">
 
@@ -10,8 +10,12 @@
 
 <body>
   <a href="./index.html">Back</a> to main page.<br>
-  <h3>All examples</h3>
-  <h4>from all lessons</h4>
+
+  <h3>Lesson 9</h3>
+  <h4></h4>
+
+  <br>
+  <br>
 
   <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
   <button onclick="say(text1.value, document.getElementById('brk1').checked);">Say</button>
@@ -22,46 +26,24 @@
   <button onclick="text1.value = randomSentence(parsedData);say(text1.value, document.getElementById('brk1').checked);">Generate and say</button>
   <br>
   <br>
-  
 
   <table id="table1"></table>
 
   <script src="../langscripts/speaker.js"></script>
   <script src="../langscripts/example_gen.js"></script>
-
-  <script src="all_examples.js"></script>
-  <script src="data002.js"></script>
-  <script src="data003.js"></script>
-  <script src="data004.js"></script>
-  <script src="data005.js"></script>
-  <script src="data006.js"></script>
-  <script src="data007.js"></script>
-  <script src="data008.js"></script>
   <script src="data009.js"></script>
-  <script src="from_book.js"></script>
-  <script src="call_example.js"></script>
 
   <script>
     const parsedData = [];
     const table1 = document.getElementById('table1');
     const text1 = document.getElementById('text1');
 
-    parseInput(all_examples, parsedData);
-    parseInput(data002, parsedData);
-    parseInput(data003, parsedData);
-    parseInput(data004, parsedData);
-    parseInput(data005, parsedData);
-    parseInput(data006, parsedData);
-    parseInput(data007, parsedData);
-    parseInput(data008, parsedData);
     parseInput(data009, parsedData);
-    parseInput(data_from_book, parsedData);
-    parseInput(data_call_example, parsedData);
 
     makeTable(parsedData, table1);
 
 	listVoices('en');
-	
+
   </script>
 
 </body>
