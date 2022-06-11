@@ -1,134 +1,104 @@
-const data008 = `
-in
+const data011 = `
+What will you be doing tomorrow at 1pm?
+What will you do tomorrow?
+Why didn't you come yesterday?
+Can you hear me?
+Are you ok?
+==
+I have
 /
-the room
-the house
-Moscow
+loved
+asked
+called
+opened
+seen
+been
 ==
-to
+I have seen this film
+Yesterday he told me that he had seen this film
+==
+I will be
+He will be
+I am
+He is
+I was
+He was
 /
-you
-Moscow
+here
+there
+tired
+afraid
+angry
+hungry
+happy
 ==
-from
+I am afraid I don't have time today
+==
+It
 /
-you
-Moscow
-==
-far from
+will be
+is
+was
 /
-you
-Moscow
-==
-at
+cold
+warm
+hot
+sunny
+dark
+raining
+windy
+stuffy
 /
-school
-home
+.
+here
 ==
-over
+we wanted to ask .. to tell us about her trip
+tell what you did
+I was in Argentina, it was very hot and stuffy
+I was there for only two days, one of them - in the airport
+I met new friends
+It was very fun and interesting
+Did you speak English with your friends?
+Their native language is Spanish
+I tried to use new words that I learned
+Will you go back to Argentina?
+I am tired, but I have many new impressions
+It made me stronger
+I was there for one night
+I stayed there one night
+Of course
+People there always smile
+I din't have time to dance with them
+Next time I go there, I will do it
+==
+I am not 
 /
-the ground
-the house
+afraid
+scared
 ==
-between
+are you 
 /
-you and me
-us
-==
-with
-without
+hungry
+angry
+afraid
+tired
+happy
 /
-you
-me
+?
 ==
-under ground
-on the table
-I do it for you
-tell me about it
-about 3 minutes
-think about it
-I think about you
-in the middle of
-tea without sugar
-==
-go
-look
-/
-up
-down
-back
-away
-in
-out
-==
-look for
-==
-come
-/
-back
-in
-==
-take
-/
-up
-down
-away
-out
-==
-I watch you
-I will go with you to them
-I made this shirt for me
-I don't want to speak with him about it
-What you tell me will be between us
-be yourself
-she is very far from me
-her mind sometimes is very far from my mind
-he wanted to speak with me about it, but I refused
-I hope you will do it for me
-think about it!
-
-
-
-==
-==
-how many people are in the room?
-where did you buy your shirt?
-I bought my shirt in a market in South India
-when did you buy it?
-three years ago
-do you like this style?
-yes, it was a special order
-I paid twenty dollars
-he measured me, and the shirt was ready the next day
-why are wearing it today?
-it's my whim
-why do you wear this shirt?
-do you have a t-shirt under it?
-I'm embarassed
-I liked the multocolor pattern
-he said: "come tomorrow"
-he told me to come back the next day
-do they make dresses?
-they make dresses for European women
-to wear
-what do Indiam women wear?
-what material do Indiam women wear?
-why don't you buy real silk?
-woman - women
-man - men
-human - people - peoples
-mankind, humanity
-come in, enter
-society
-
-
-
-
-
-==
-
-
+why are you afraid?
+I am not afraid
+I was afraid before, but now I am not
+I am happy because I am not afraid
+I am happy because I am strong and free and not afraid
+I'm afraid by the evening I will be hungry
+Before breakfast, I was hungry
+After breakfast, I am afraid of nothing
+Are you afraid of something?
+I'm afraid of nothing
+I am tired of everything
+What time is it?
+It is 1pm
 
 `;
-
 
