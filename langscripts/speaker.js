@@ -51,7 +51,7 @@ function say(x, brks)
   console.log(txt);
   const utterThis = new SpeechSynthesisUtterance(txt);
   const voiceSelect = document.getElementById('voice_select');
-  const selectedOption = voiceSelect.selectedOptions[0] || voiceSelect.options[0];
+  const selectedOption = voiceSelect&&(voiceSelect.selectedOptions[0] || voiceSelect.options[0]) || null;
 
   if (selectedOption)
   {
@@ -63,8 +63,8 @@ function say(x, brks)
         break;
       }
     }
+	utterThis.lang = utterThis.voice.lang; // required on Android
   }
-  utterThis.lang = utterThis.voice.lang; // required on Android
   speechSynthesis.speak(utterThis);
 }
 
