@@ -363,6 +363,18 @@ ellos serán
 /
 de Chicago
 ===============
+quiero
+me pones
+me das
+/
+un aua con gas
+otra cerveza
+el cambio
+tu numero de telefono
+una copa de vino
+un boligrafo
+
+=============
 
 yo hablo
 tú hablas
