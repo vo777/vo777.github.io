@@ -105,7 +105,7 @@ function newQuestion()
 {
 	shutUp();
 
-	const CookieName = 'spanish_set';
+	const CookieName = 'german_set';
 	
 	if (! data.wset)
 	{
