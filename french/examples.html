@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>French examples</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../langscripts/styles.css">
+
+</head>
+
+<body>
+  <a href="./index.html">Back</a> to main page.<br>
+  <h3>Examples</h3>
+  <h4></h4>
+
+  <button onclick="text1.value = randomSentence(parsedData);">Generate</button>
+  <button onclick="say(text1.value, document.getElementById('brk1').checked);">Say</button>
+  <input type="checkbox" id="brk1">Breaks between words</input>
+  <br>
+  <input type="text" id="text1" size=100 />
+  <br>
+  <button onclick="text1.value = randomSentence(parsedData);say(text1.value, document.getElementById('brk1').checked);">Generate and say</button>
+  <br>
+  <br>
+  
+
+  <table id="table1"></table>
+
+  <script src="../langscripts/speaker.js"></script>
+  <script src="../langscripts/example_gen.js"></script>
+
+  <script src="examples.js"></script>
+
+  <script>
+    const parsedData = [];
+    const table1 = document.getElementById('table1');
+    const text1 = document.getElementById('text1');
+
+    parseInput(examples, parsedData);
+
+    makeTable(parsedData, table1);
+
+	listVoices('fr');
+	
+  </script>
+
+</body>
+
+</html>
