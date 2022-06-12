@@ -1,134 +1,138 @@
-const data008 = `
-in
+const data013 = `
+
+where did you go yesterday?
+where will you go tomorrow?
+where did I see you?
+she does not want to talk to me about it
+when will we talk about it?
+where do they invite us?
+where will they invite us to go?
+how many times did you go to Argentina?
+how many times were you in Argentina?
+how many times have you been in Argentina?
+will you work tomorrow?
+tomorrow at 3pm will you be working?
+he came to speak
+I want you to know English
+I want you to go ...
+I want you to be happy
+I want him to speak to me
+I want you to do something
+
+==
+Let him
+Let us
+Let's
+Let me
 /
-the room
-the house
-Moscow
-==
-to
-/
-you
-Moscow
-==
-from
-/
-you
-Moscow
-==
-far from
-/
-you
-Moscow
-==
-at
-/
-school
-home
-==
-over
-/
-the ground
-the house
-==
-between
-/
-you and me
-us
-==
-with
-without
-/
-you
-me
-==
-under ground
-on the table
-I do it for you
-tell me about it
-about 3 minutes
-think about it
-I think about you
-in the middle of
-tea without sugar
-==
 go
-look
+do it
+speak to her
+speak about it
+talk about it
+tell you everything
+==
+Don't speak about it with him
+Where did whe go?
+She went to dance
+Where is she going (now)?
+Let her tell me everything
+==
+Let's discuss
+Let's speak about
 /
-up
-down
-back
-away
-in
-out
-==
-look for
-==
-come
+our
 /
-back
-in
+work
+cooperation
 ==
-take
+Let him help me
+Don't go there today
+==
+Can I
 /
-up
-down
-away
-out
+go
+have a cup of tea
+talk to you
+/
+?
 ==
-I watch you
-I will go with you to them
-I made this shirt for me
-I don't want to speak with him about it
-What you tell me will be between us
-be yourself
-she is very far from me
-her mind sometimes is very far from my mind
-he wanted to speak with me about it, but I refused
-I hope you will do it for me
-think about it!
-
-
-
+You can
+One can
+One cannot
+One can't
+/
+do it
+take a glass of water
 ==
+it's
+/
+possible
+impossible
 ==
-how many people are in the room?
-where did you buy your shirt?
-I bought my shirt in a market in South India
-when did you buy it?
-three years ago
-do you like this style?
-yes, it was a special order
-I paid twenty dollars
-he measured me, and the shirt was ready the next day
-why are wearing it today?
-it's my whim
-why do you wear this shirt?
-do you have a t-shirt under it?
-I'm embarassed
-I liked the multocolor pattern
-he said: "come tomorrow"
-he told me to come back the next day
-do they make dresses?
-they make dresses for European women
-to wear
-what do Indiam women wear?
-what material do Indiam women wear?
-why don't you buy real silk?
-woman - women
-man - men
-human - people - peoples
-mankind, humanity
-come in, enter
-society
-
-
-
-
-
+should I
+/
+go?
+do it?
+stay or go?
 ==
-
-
+One should
+/
+always remember...
+==
+I think you should
+/
+do it
+go there
+talk to him
+==
+can I call you tonight?
+==
+I don't know if I should
+/
+call you
+go
+==
+One can't smoke here
+we shouldn't think about it
+==
+you
+one
+/
+shouldn't talk like that
+==
+I don't know if I 
+/
+should
+can
+/
+talk about it with him
+==
+can
+should
+/
+I help you?
+==
+I don't know if I should help him
+we can't do it now
+==
+let's
+don't
+.
+/
+go
+do it
+dance with him
+/!
+==
+don't do it
+.
+/
+or else!
+==
+are you ok?
+if you help me, I will help you
+if you help me, you will be my friend
 
 `;
-
 
