@@ -124,6 +124,8 @@ I will try to
 call him
 /
 when I have time
+if I remember
+if I don't forget
 ==
 did you
 did you try to
@@ -188,6 +190,42 @@ while
 /
 I could
 ====
+if I call him
+if I don't call him
+/
+he will 
+he may
+/
+get angry
+==
+I don't know if I
+/
+can
+should
+will
+/
+call him
+==
+I don't remember if I
+I forgot if I
+/
+called
+have called
+/
+him
+===
+please remind me to
+I just remembered I should
+I know I should
+I know I can
+/
+call him
+/
+again
+.
+===
+
+
 
 `;
 
