@@ -43,6 +43,7 @@ function listVoices(lang)
 
 function say(x, brks)
 {
+  x = x.replaceAll("_", "'");
   let txt = x;
   if (brks)
   {
@@ -70,6 +71,7 @@ function say(x, brks)
 
 function sayIn(lang, x)
 {
+  x = x.replaceAll("_", "'");
   const utterThis = new SpeechSynthesisUtterance(x);
 
   for (let i=0; i<voices.length; ++i)
