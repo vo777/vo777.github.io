@@ -41,13 +41,43 @@ function listVoices(lang)
   }
 }
 
+// = s.replaceAll("_", "'")
+function hack001(s)
+{
+	let res = s;
+	for (let i=0; i<20; ++i)
+	{
+		res = res.replace("_", "'");
+	}
+	return res;
+}
+
+// = s.replaceAll(' ', ', ');
+function hack002(s)
+{
+	let res = s;
+	for (let i=0; i<20; ++i)
+	{
+		res = res.replace(" ", "_");
+	}
+	
+	for (let i=0; i<20; ++i)
+	{
+		res = res.replace("_", ", ");
+	}
+	
+	return res;
+}
+
 function say(x, brks)
 {
-  x = x.replaceAll("_", "'");
+  //x = x.replaceAll("_", "'");
+  x = hack001(x);
   let txt = x;
   if (brks)
   {
-    txt = txt.replaceAll(' ', ', ');
+    //txt = txt.replaceAll(' ', ', ');
+	txt = hack002(txt);
   }
   console.log(txt);
   const utterThis = new SpeechSynthesisUtterance(txt);
