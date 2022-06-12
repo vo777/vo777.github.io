@@ -46,7 +46,7 @@ function makeTable(parsed_data, table) {
             let acc = '';
             for (let j = 0; j < data_row[i].length; ++j) {
                 const a = data_row[i][j];
-                const b = a.replaceAll("'","_");				
+                const b = a.replaceAll("\'","_");				
                 acc += `<span onclick='say("${b}")'>${a}</span>`;
                 if (j != data_row[i].length - 1) { acc += '<br>'; }
             }

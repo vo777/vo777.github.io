@@ -71,7 +71,7 @@ function say(x, brks)
 
 function sayIn(lang, x)
 {
-  x = x.replaceAll("_", "'");
+  x = x.replaceAll("_", "\'");
   const utterThis = new SpeechSynthesisUtterance(x);
 
   for (let i=0; i<voices.length; ++i)
