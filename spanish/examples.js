@@ -367,7 +367,7 @@ quiero
 me pones
 me das
 /
-un aua con gas
+un agua con gas
 otra cerveza
 el cambio
 tu numero de telefono
