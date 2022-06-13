@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Dictionary</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../langscripts/styles.css">
+</head>
+
+<body>
+<a href="./index.html">Back</a> to main page.<br>
+<input type="text" id="text1"/>
+<button onclick="hru()">Say</button>
+<h3>German-Eng dictionary</h3>
+<h4>Sorted by frequency</h4>
+
+<table id="table1"></table>
+
+<script src="../langscripts/speaker.js"></script>
+<script src="../german.js"></script>
+
+<script>
+const table1 = document.getElementById("table1");
+const text1 = document.getElementById("text1");
+
+function hru()
+{
+  say(text1.value);
+}
+
+init();
+
+function init()
+{
+  for (let i=0; i<german.length; ++i)
+  {
+    const line = german[i];
+    if (line.length == 2)
+    {
+      const row = table1.insertRow(-1);
+      const c0 = row.insertCell(0);
+      const c1 = row.insertCell(1);
+      const c2 = row.insertCell(2);
+      c0.innerHTML = `<span onclick='say31("${line[0]}","${line[1]}")'>${i+1}</span>`;
+      c1.innerHTML = `<span onclick='say31("${line[0]}","${line[1]}")'>${line[0]}</span>`;
+      c2.innerHTML = `<span onclick='say31("${line[0]}","${line[1]}")'>${line[1]}</span>`;
+    }
+  }
+
+}
+
+function say31(en, ru)
+{
+  say(en);
+  say(en);
+  say(en);
+  sayIn('en', ru)
+}
+
+	listVoices('de');
+
+</script>
+</body>
+</html>
