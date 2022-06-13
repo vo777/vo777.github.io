@@ -47,7 +47,7 @@ function makeTable(parsed_data, table) {
             for (let j = 0; j < data_row[i].length; ++j) {
                 const a = data_row[i][j];
                 const b = a.replace("\'","_").replace("\'","_");				
-                acc += `<span onclick='say("${b}")'>${a}</span>`;
+                acc += `<span onclick='sayBrk("${b}")'>${a}</span>`;
                 if (j != data_row[i].length - 1) { acc += '<br>'; }
             }
             cell.innerHTML = acc;

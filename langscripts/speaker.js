@@ -116,3 +116,8 @@ function sayIn(lang, x)
   speechSynthesis.speak(utterThis);
 }
 
+function sayBrk(txt)
+{
+	//console.log('sayBrk ' + txt);
+	say(txt, document.getElementById('brk1').checked);
+}
