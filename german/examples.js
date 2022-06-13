@@ -15,7 +15,7 @@ Schönes Wetter heute, nicht wahr?
 Mein Name ist _
 Ich bin Amerikaner, Kanadier, Engländer
 Ich bin Amerikanerin, Kanadierin, Engländerin
-I'm American ( Canadian ( English
+
 Woher kommen Sie?
 Freut mich
 Es tut mir leid, aber ich verstehe nicht
