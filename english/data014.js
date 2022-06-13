@@ -1,74 +1,104 @@
 const data014 = `
-how is your museum called?
-what is your daughter's name?
-yesterday, I got a call
-give me a call
+I called him, but he didn't call back
+I got my blue eyes from my mother
 I just called to say I love you
+=
+I will call
+/
+back later
+you back
+=
 call back
-call me back
-I will call you back
 call back later, please
-can I speak to Alex?
-I will call back later
-can I take a message?
-can I leave a message?
+call me back
+call me, and I don't answer, text me or email me
+==
+can I
+/
+leave a message?
+speak to Alex?
+take a message?
+=
+did
+/
+Alex call me?
+he leave a message?
+somebody call me?
+they see it?
+==
+every day I get a call from...
+give me a call
+=
+he didn't 
+/
+call me back
+leave a message
+=
+he left a message
+how do you do it?
+how is your museum called?
+if he goes...
+if somebody calls me, please take a message
+if you go...
 please ask him to call me back
 text me
-when should I call you?
-you can call me any time
-he didn't call me back
-I called him, but he didn't call back
-did Alex call me?
-did he leave a message?
-he left a message
-he didn't leave a message
-did somebody call me?
-if somebody calls me, please take a message
-call me, and I don't answer, text me or email me
-if you go...
-when you go...
-if he goes...
-when he goes...
-if you go, I will go with you
-when you go, I will go with you
-when he goes, I will go with him
-yesterday, I got a call from Alex, and he invited me to go to a movie
-every day I get a call from...
-I got my blue eyes from my mother
+what is your daughter's name?
 ==
-who is the sender
-who sent it?
-who sent this letter?
-who did you send it to?
-who saw you?
-who did you see?
-who did this?
-what did you do?
-what did you hear?
-who heard about it?
-who do you love?
-who loves you?
-who wants to drink?
-what did you see?
-who saw this?
-did they see it?
-who understands you?
-who do you understand?
-who was here?
-who did you see here?
-who sent you here?
-who did you send there?
-who called you?
-who did you call?
-who usually calls you?
-who do you call often?
-who do you do it for?
-what do you do it for?
-how do you do it?
+when 
+if
+/
+he goes, I will go with him
+you go, I will go with you
+==
+he goes...
+should I call you?
+you go...
+==
+yesterday, I got a call
+yesterday, I got a call from Alex, and he invited me to go to a movie
+you can call me any time
 
-=
-ask me another
-
+==
+who did you 
+/
+call?
+see here?
+see?
+send it to?
+send there?
+==
+who do you 
+/
+call often?
+do it for?
+love?
+understand?
+==
+who 
+/
+called you?
+did this?
+heard about it?
+is the sender
+loves you?
+saw this?
+saw you?
+sent it?
+sent this letter?
+sent you here?
+understands you?
+usually calls you?
+wants to drink?
+was here?
+==
+==
+what did you 
+/
+do?
+hear?
+see?
+it for?
+==
 
 `;
 
