@@ -1,134 +1,74 @@
-const data008 = `
-in
-/
-the room
-the house
-Moscow
+const data014 = `
+how is your museum called?
+what is your daughter's name?
+yesterday, I got a call
+give me a call
+I just called to say I love you
+call back
+call me back
+I will call you back
+call back later, please
+can I speak to Alex?
+I will call back later
+can I take a message?
+can I leave a message?
+please ask him to call me back
+text me
+when should I call you?
+you can call me any time
+he didn't call me back
+I called him, but he didn't call back
+did Alex call me?
+did he leave a message?
+he left a message
+he didn't leave a message
+did somebody call me?
+if somebody calls me, please take a message
+call me, and I don't answer, text me or email me
+if you go...
+when you go...
+if he goes...
+when he goes...
+if you go, I will go with you
+when you go, I will go with you
+when he goes, I will go with him
+yesterday, I got a call from Alex, and he invited me to go to a movie
+every day I get a call from...
+I got my blue eyes from my mother
 ==
-to
-/
-you
-Moscow
-==
-from
-/
-you
-Moscow
-==
-far from
-/
-you
-Moscow
-==
-at
-/
-school
-home
-==
-over
-/
-the ground
-the house
-==
-between
-/
-you and me
-us
-==
-with
-without
-/
-you
-me
-==
-under ground
-on the table
-I do it for you
-tell me about it
-about 3 minutes
-think about it
-I think about you
-in the middle of
-tea without sugar
-==
-go
-look
-/
-up
-down
-back
-away
-in
-out
-==
-look for
-==
-come
-/
-back
-in
-==
-take
-/
-up
-down
-away
-out
-==
-I watch you
-I will go with you to them
-I made this shirt for me
-I don't want to speak with him about it
-What you tell me will be between us
-be yourself
-she is very far from me
-her mind sometimes is very far from my mind
-he wanted to speak with me about it, but I refused
-I hope you will do it for me
-think about it!
+who is the sender
+who sent it?
+who sent this letter?
+who did you send it to?
+who saw you?
+who did you see?
+who did this?
+what did you do?
+what did you hear?
+who heard about it?
+who do you love?
+who loves you?
+who wants to drink?
+what did you see?
+who saw this?
+did they see it?
+who understands you?
+who do you understand?
+who was here?
+who did you see here?
+who sent you here?
+who did you send there?
+who called you?
+who did you call?
+who usually calls you?
+who do you call often?
+who do you do it for?
+what do you do it for?
+how do you do it?
 
-
-
-==
-==
-how many people are in the room?
-where did you buy your shirt?
-I bought my shirt in a market in South India
-when did you buy it?
-three years ago
-do you like this style?
-yes, it was a special order
-I paid twenty dollars
-he measured me, and the shirt was ready the next day
-why are wearing it today?
-it's my whim
-why do you wear this shirt?
-do you have a t-shirt under it?
-I'm embarassed
-I liked the multocolor pattern
-he said: "come tomorrow"
-he told me to come back the next day
-do they make dresses?
-they make dresses for European women
-to wear
-what do Indiam women wear?
-what material do Indiam women wear?
-why don't you buy real silk?
-woman - women
-man - men
-human - people - peoples
-mankind, humanity
-come in, enter
-society
-
-
-
-
-
-==
-
+=
+ask me another
 
 
 `;
-
 

@@ -126,8 +126,9 @@ call him
 when I have time
 if I remember
 if I don't forget
-if I have nothing else to do
+if I have absolutely nothing else to do
 if I remember his name
+if he asks me nicely
 ==
 did you
 did you try to
