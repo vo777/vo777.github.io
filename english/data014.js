@@ -11,7 +11,7 @@ you back
 call back
 call back later, please
 call me back
-call me, and I don't answer, text me or email me
+call me, and if I don't answer, text me or email me
 ==
 can I
 /
