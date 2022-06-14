@@ -278,6 +278,106 @@ Ich werde ein Auto haben
 Ich werde kein Auto haben
 ==
 
+antworten
+arbeiten
+beginnen
+bekommen
+bestehen
+brauchen
+bringen
+entsprechen
+entstehen
+entwickeln
+erhalten
+erkennen
+erreichen
+erzählen
+fahren
+fallen
+folgen
+fragen
+führen
+gehören
+gelten
+halten
+kennen
+laufen,
+leben
+legen
+lernen
+lesen
+meinen
+nennen
+reden
+schaffen
+scheinen
+schreiben
+setzen
+sitzen
+spielen
+sprechen
+stellen
+suchen
+tragen
+treffen
+trinken
+verlieren
+verstehen
+versuchen
+wohnen
+zeigen
+ziehen
+==
+antworten (reply
+arbeiten (work
+beginnen (start
+bekommen (to get
+bestehen (exist
+brauchen (to need
+bringen (bring
+entsprechen (correspond to
+entstehen (develop
+entwickeln (develop
+erhalten (receive
+erkennen (recognize
+erreichen (reach
+erzählen (tell
+fahren (drive
+fallen (fall
+folgen (follow
+fragen (ask
+führen (to lead
+gehören (belong
+gelten (are valid
+halten (keep
+kennen (know
+laufen (to run
+leben (Life
+legen (lay
+lernen (to learn 
+lesen (read
+meinen (think
+nennen (to name
+reden (talk
+schaffen (create
+scheinen (seem to be
+schreiben (write
+setzen (put
+sitzen (sit
+spielen (to play 
+sprechen (speak
+stellen (place
+suchen (Looking for
+tragen (wear
+treffen (meeting
+trinken (drink
+verlieren (to lose
+verstehen (to understand
+versuchen (to attempt
+wohnen (reside
+zeigen (demonstrate
+ziehen (draw 
+===
 
 
 `
