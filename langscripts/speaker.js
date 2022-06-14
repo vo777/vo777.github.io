@@ -1,10 +1,10 @@
 let voices = [];
 
-function listVoices(lang) 
-{
+const CookieName = "speaker_voice_name";
+
+function listVoices(lang) {
   voices = window.speechSynthesis.getVoices();
-  if (voices.length > 0)
-  {
+  if (voices.length > 0) {
     //console.log(voices);
     const br = document.createElement("br");
     document.body.appendChild(br);
@@ -13,101 +13,105 @@ function listVoices(lang)
     voiceSelect.id = "voice_select";
     document.body.appendChild(voiceSelect);
 
-    for (let i = 0; i < voices.length ; ++i) 
-    {
+    let foundUS = false;
+    let foundPrevVoice = false;
+    const prevVoice = localStorage.getItem(CookieName);
+
+    for (let i = 0; i < voices.length; ++i) {
       const voice = voices[i];
-      if (lang.length == 0 || voice.lang.startsWith(lang))
-      {
+      if (lang.length == 0 || voice.lang.startsWith(lang)) {
         var option = document.createElement('option');
-        option.textContent = voice.name + ' (' + voice.lang + ')';
+        const txt = voice.name + ' (' + voice.lang + ')';
+        option.textContent = txt;
 
         // if(voice.default) {
         //   option.textContent += ' -- DEFAULT';
         // }
-		if (voice.lang.indexOf('US')>=0)
-		{
-			option.setAttribute ("selected", "selected");
-		}
-		
+
+
+        if (txt === prevVoice) {
+          option.setAttribute("selected", "selected");
+          foundPrevVoice = true;
+        }
+        else if (!foundPrevVoice) {
+          if (voice.lang.indexOf('US') >= 0) {
+            option.setAttribute("selected", "selected");
+          }
+        }
+
         option.setAttribute('data-name', voice.name);
         voiceSelect.appendChild(option);
+      }
     }
-  }
+
+    voiceSelect.addEventListener('change', onVoiceSelected);
 
   }
-  else
-  {
+  else {
     setTimeout(listVoices, 500, lang);
   }
 }
 
+function onVoiceSelected(event) {
+  console.log(event.target.value);
+  localStorage.setItem(CookieName, event.target.value);
+  sayBrk('one two three four five');
+}
+
 // = s.replaceAll("_", "'")
-function hack001(s)
-{
-	let res = s;
-	for (let i=0; i<20; ++i)
-	{
-		res = res.replace("_", "'");
-	}
-	return res;
+function hack001(s) {
+  let res = s;
+  for (let i = 0; i < 20; ++i) {
+    res = res.replace("_", "'");
+  }
+  return res;
 }
 
 // = s.replaceAll(' ', ', ');
-function hack002(s)
-{
-	let res = s;
-	for (let i=0; i<20; ++i)
-	{
-		res = res.replace(" ", "_");
-	}
-	
-	for (let i=0; i<20; ++i)
-	{
-		res = res.replace("_", ", ");
-	}
-	
-	return res;
+function hack002(s) {
+  let res = s;
+  for (let i = 0; i < 20; ++i) {
+    res = res.replace(" ", "_");
+  }
+
+  for (let i = 0; i < 20; ++i) {
+    res = res.replace("_", ", ");
+  }
+
+  return res;
 }
 
-function say(x, brks)
-{
+function say(x, brks) {
   //x = x.replaceAll("_", "'");
   x = hack001(x);
   let txt = x;
-  if (brks)
-  {
+  if (brks) {
     //txt = txt.replaceAll(' ', ', ');
-	txt = hack002(txt);
+    txt = hack002(txt);
   }
   console.log(txt);
   const utterThis = new SpeechSynthesisUtterance(txt);
   const voiceSelect = document.getElementById('voice_select');
-  const selectedOption = voiceSelect&&(voiceSelect.selectedOptions[0] || voiceSelect.options[0]) || null;
+  const selectedOption = voiceSelect && (voiceSelect.selectedOptions[0] || voiceSelect.options[0]) || null;
 
-  if (selectedOption)
-  {
-    for (let i=0; i<voices.length; ++i)
-    {
-      if (voices[i].name === selectedOption.getAttribute('data-name'))
-      {
+  if (selectedOption) {
+    for (let i = 0; i < voices.length; ++i) {
+      if (voices[i].name === selectedOption.getAttribute('data-name')) {
         utterThis.voice = voices[i];
         break;
       }
     }
-	utterThis.lang = utterThis.voice.lang; // required on Android
+    utterThis.lang = utterThis.voice.lang; // required on Android
   }
   speechSynthesis.speak(utterThis);
 }
 
-function sayIn(lang, x)
-{
+function sayIn(lang, x) {
   x = x.replaceAll("_", "\'");
   const utterThis = new SpeechSynthesisUtterance(x);
 
-  for (let i=0; i<voices.length; ++i)
-  {
-    if (voices[i].lang.startsWith(lang))
-    {
+  for (let i = 0; i < voices.length; ++i) {
+    if (voices[i].lang.startsWith(lang)) {
       utterThis.voice = voices[i];
       break;
     }
@@ -116,8 +120,7 @@ function sayIn(lang, x)
   speechSynthesis.speak(utterThis);
 }
 
-function sayBrk(txt)
-{
-	//console.log('sayBrk ' + txt);
-	say(txt, document.getElementById('brk1').checked);
+function sayBrk(txt) {
+  //console.log('sayBrk ' + txt);
+  say(txt, document.getElementById('brk1').checked);
 }
