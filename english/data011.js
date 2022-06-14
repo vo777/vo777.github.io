@@ -87,6 +87,7 @@ happy
 ?
 ==
 why are you afraid?
+what are you afraid of?
 I am not afraid
 I was afraid before, but now I am not
 I am happy because I am not afraid
