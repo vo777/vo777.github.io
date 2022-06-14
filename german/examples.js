@@ -141,7 +141,7 @@ Ich suche ein nettes Café in der Nähe
 Wissen Sie etwas über _____?
 Gibt es hier in der Nähe etwas Interessantes zu sehen?
 Trotzdem danke
-
+==
 
 Gestern bin ich um 19 Uhr nach Hause gekommen
 Gestern Abend kam ich um 19 Uhr nach Hause
@@ -163,17 +163,21 @@ Morgen früh komme ich um 19 Uhr zum Parken
 In 2 Tagen komme ich um 19 Uhr zum Parken
 In 2 Wochen komme ich um 19 Uhr zum Parken
 
+=
+
+Ich war ein Student
+Ich war kein Student
 Ich war vor einem Jahr Student
 Ich war vor zwei Jahren Student
 Ich war vor drei Jahren Student
+Ich war kein Student
 Ich bin Student
+Ich bin kein Student
 Ich werde Student sein
 Ich werde nächstes Jahr Student sein
 Ich werde in einem Jahr Student sein
 Ich werde in zwei Jahren Student sein
 Ich werde in drei Jahren Student sein
-Ich war kein Student
-Ich bin kein Student
 Ich werde kein Student sein
 
 Ich bin gestern geschwommen
@@ -190,6 +194,80 @@ Ich habe gestern geschrieben
 Ich habe gestern nicht geschrieben
 Ich schreibe nicht jeden Tag
 Ich werde morgen nicht schreiben
+
+=
+Ich
+/
+bin
+habe
+/
+.
+es
+/
+gestern
+/
+.
+nicht
+/
+geschwommen
+geschrieben
+gemacht
+geschafft
+
+=
+Ich 
+/
+schreibe
+schwimme
+gehe
+rede 
+lese
+/
+.
+nicht 
+/
+jeden Tag
+==
+Ich 
+/
+werde
+/
+morgen
+/
+.
+nicht
+/
+schreiben
+schwimmen
+kommen
+==
+Ich 
+/
+war 
+bin/
+vor einem Jahr
+vor zwei Jahren
+vor drei Jahren
+/
+.
+ein
+kein
+/Student
+==
+Ich werde 
+/
+nächstes Jahr
+in einem Jahr
+in zwei Jahren
+in drei Jahren
+/
+.
+kein
+/
+Student sein
+==
+ich komme etwas später
+=
 
 
 `
