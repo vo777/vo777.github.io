@@ -268,6 +268,16 @@ Student sein
 ==
 ich komme etwas später
 =
+Ich hatte ein Auto
+Ich hatte kein Auto
+
+ich habe ein Auto
+Ich habe kein Auto
+
+Ich werde ein Auto haben
+Ich werde kein Auto haben
+==
+
 
 
 `
