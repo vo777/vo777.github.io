@@ -13,6 +13,18 @@ since 10 till 11am
 until dark
 for 2 hours
 ==
+I swam
+/
+two days
+three months
+/
+ago
+==
+I will swim in
+/
+two days
+three months
+==
 I have been swimming
 /
 since 10am
