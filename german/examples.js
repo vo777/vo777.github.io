@@ -142,5 +142,55 @@ Wissen Sie etwas über _____?
 Gibt es hier in der Nähe etwas Interessantes zu sehen?
 Trotzdem danke
 
+
+Gestern bin ich um 19 Uhr nach Hause gekommen
+Gestern Abend kam ich um 19 Uhr nach Hause
+Vor zwei Tagen kam ich um 19 Uhr nach Hause
+Heute bin ich um 19 Uhr nach Hause gekommen
+
+Gestern kam er um 19 Uhr nach Hause
+Gestern Abend kam er um 19 Uhr nach Hause
+Vor zwei Tagen kam er um 19 Uhr nach Hause
+Heute kam er um 19 Uhr nach Hause
+
+Gestern bin ich um 19 Uhr zur Arbeit gekommen
+Gestern kam ich um 19 Uhr zum Parken
+
+Heute bin ich um 19 Uhr zum Parken gekommen
+
+Morgen komme ich um 19 Uhr zum Parken
+Morgen früh komme ich um 19 Uhr zum Parken
+In 2 Tagen komme ich um 19 Uhr zum Parken
+In 2 Wochen komme ich um 19 Uhr zum Parken
+
+Ich war vor einem Jahr Student
+Ich war vor zwei Jahren Student
+Ich war vor drei Jahren Student
+Ich bin Student
+Ich werde Student sein
+Ich werde nächstes Jahr Student sein
+Ich werde in einem Jahr Student sein
+Ich werde in zwei Jahren Student sein
+Ich werde in drei Jahren Student sein
+Ich war kein Student
+Ich bin kein Student
+Ich werde kein Student sein
+
+Ich bin gestern geschwommen
+Ich bin gestern nicht geschwommen
+Ich schwimme jeden Tag
+Ich schwimme nicht jeden Tag
+Ich werde nicht jeden Tag schwimmen
+Ich werde morgen schwimmen
+Ich werde morgen nicht schwimmen
+
+Ich habe es gestern geschrieben
+Das habe ich gestern geschrieben
+Ich habe gestern geschrieben
+Ich habe gestern nicht geschrieben
+Ich schreibe nicht jeden Tag
+Ich werde morgen nicht schreiben
+
+
 `
 ;
