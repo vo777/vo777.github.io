@@ -378,6 +378,126 @@ wohnen (reside
 zeigen (demonstrate
 ziehen (draw 
 ===
+wie	(how
+wo	(where
+was	(what
+==
+ich	I
+du	(you [singular informal]
+er	(he
+es	(it
+sie	(she, her; they, them
+wir	(we
+ihr	(you [plural informal]
+Sie	(you [singular & plural formal; always capitalized]
+==
+mich	(myself
+dich	(yourself
+sich	(oneself, himself, herself, itself, yourself [plural informal], themselves
+==
+dein	(your [singular informal]
+sein	(his 
+ihr 	(hers, their; your [singular & plural formal] [when capitalized]
+unser	(our
+euer	(your [plural informal]
+==
+dieser, diese, dieses 	(this, these, that, those
+mehr	(more
+man	(you, one; we; somebody
+==
+Er trägt keinen Mantel. (He’s not wearing a coat.)
+Ich habe keine Ahnung. (I have no idea.)
+nichts	nothing; not anything
+für nichts (for nothing)
+nichts als (nothing but)
+==
+lang	long
+neu	new
+alt	old
+viel	a lot, much, many
+groß	big, large, tall
+klein	small
+ganz	whole, complete, entire
+andere (other
+==
+geben	to give
+sagen	to say
+kommen	to come
+wollen	to want
+lassen	to allow, to let
+wissen	to know [a fact]
+gehen	to go
+haben	to have
+sehen	to see
+machen	to make
+sein	to be
+werden	to become  The present tense of werden is also used to form the future tense of other verbs
+==
+ja	yes, really, certainly
+nein	no
+nicht	not
+auch	also, too
+so	so, this way, thus
+etwa	about, approximately
+vielleicht	perhaps, maybe, by chance
+kaum	hardly
+doch	anyway, all the same; after all
+nur	only
+==
+hier	here
+oben	up there, above
+unten	Down there
+da	there
+==
+dann	then
+wieder	again
+noch	still, yet
+schon	already
+schön (beautiful)
+jetzt	now; nowadays
+immer	always
+==
+was immer (whatever)
+wann immer (whenever)
+wo immer (wherever)
+wie immer (however)
+wer immer (whoever)
+==
+mit	with
+zu	to, towards, at, in, into, on for
+in,im	in, at, within [im = “in the”]
+unter	under
+auf	on, in, at
+für	for
+von	from, of
+an	at, on
+bei	by, with, at
+aus	out, out of, from
+nach	after, toward
+durch	through
+über	above, over, about
+vor	in front of; ahead of; outside; against; before, ago
+um	around, at
+zwischen	between
+===
+und	and
+als	when, as
+dass 	that 
+aber	but
+oder	or
+wenn	when, if
+denn	because [more polite]
+weil	because
+bis	until
+Bis später (Until later)
+Bis bald (See you soon; literally “until soon”)
+Bis zum nächsten Mal (Until the next time)
+sobald	as soon as
+während	while
+mal	times
+zwei mal vier ist acht (two times four is eight)
+==
+
 
 
 `
