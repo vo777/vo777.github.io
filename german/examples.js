@@ -465,7 +465,7 @@ wer immer (whoever)
 ==
 mit	with
 zu	to, towards, at, in, into, on for
-in,im	in, at, within [im = “in the”]
+in,im	in, at, within [im "in the"]
 unter	under
 auf	on, in, at
 für	for
