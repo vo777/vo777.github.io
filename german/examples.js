@@ -1562,6 +1562,73 @@ Zorn	anger
 Anspruch	claim
 Kontinent	continent
 ==
+hatten Sie ein Auto?
+hattest du ein auto?
+hast du ein Auto?
+wirst du ein Auto haben?
+
+Warst du Student?
+bist du ein Student?
+wirst du studieren?
+Werden Sie Student?
+
+bist du geschwommen?
+schwimmst du?
+schwimmst du schon mal?
+wirst du schwimmen?
+
+Ich bin nicht geschwommen
+Ich schwimme nicht
+Ich werde nicht schwimmen
+
+du schwammst
+du bist nicht geschwommen
+
+du schwimmst
+du schwimmst nicht
+
+Du wirst schwimmen
+Du wirst nicht schwimmen
+
+Sie schwammen
+Sie schwimmen
+sie werden schwimmen
+
+Du hattest ein Auto
+du hattest kein Auto
+
+du hast ein Auto
+Sie haben kein Auto
+
+Du wirst ein Auto haben
+Sie werden kein Auto haben
+
+==
+
+Ich habe in Florida gelebt
+Ich habe nicht in Florida gelebt
+
+Ich lebe in Florida
+Ich lebe nicht in Florida
+
+Ich werde in Florida leben
+Ich werde nicht in Florida leben
+
+Hast du in Florida gelebt?
+Lebst du in Florida?
+Wirst du in Florida leben?
+
+Sind Sie nach Florida gezogen?
+Ziehst du nach Florida?
+
+Ich bin nach Florida gezogen
+Ich werde nach Florida ziehen
+
+==
+
+
 
 `
 ;
+
+
