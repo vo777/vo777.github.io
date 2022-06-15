@@ -7,6 +7,18 @@ function randomSentence(parsed_data) {
         acc += data_row[i][Math.floor(data_row[i].length * Math.random())] + ' ';
     }
 
+	// replaceAll does not work on iphone
+	for (let i=0; i<20; ++i)
+	{
+		acc = acc
+		.replace(',', ', ')
+		.replace('.', ' ')
+		.replace('\t', ' ')
+		.replace('(', ' (')
+		.replace('   ', ' ')
+		.replace('  ', ' ');
+	}
+
     return acc;
 }
 
