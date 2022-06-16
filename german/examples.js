@@ -1,5 +1,640 @@
 // German examples:
 const examples = `
+
+ich mache, du machst, er macht, sie macht, es macht, wir machen, ihr macht, sie machen, Sie machen
+
+==
+ich mache
+du machst
+er macht
+sie macht
+wir machen
+ihr macht
+sie machen
+Sie machen
+=
+ich sage
+du sagst
+er sagt
+sie sagt
+es sagt
+wir
+sagen
+ihr sagt
+sie sagen
+Sie sagen
+/
+.
+nicht
+=
+ich frage
+du fragst
+er fragt
+sie fragt
+es fragt
+wir fragen
+iht fragen
+sie fragen
+Sie fragen
+/
+.
+nicht
+=
+ich liebe
+du liebst
+er liebt
+sie liebt
+es liebt
+wir lieben
+ihr liebt
+sie lieben
+Sie lieben
+/
+.
+nicht
+=
+ich lache
+du lachst
+er lacht
+sie lacht
+es lacht
+wir lachen
+ihr lacht
+sie lachen
+Sie lachen
+/
+.
+nicht
+=
+ich wohne
+du wohnst
+er wohnt
+sie wohnt
+es wohnt
+wir wohnen
+ihr wohnt
+sie wohnen
+Sie wohnen
+/
+.
+nicht
+=
+ich singe
+du singst
+er singt
+sie singt
+es singt
+wir singen
+ihr singt
+sie singen
+Sie singen
+/
+.
+nicht
+=
+ich tanze
+du tanzt
+er tanzt
+sie tanzt
+es natzt
+wir tanzen
+ihr tanzt
+sie tanzen
+Sie tanzen
+/
+.
+nicht
+=
+ich spiele
+du spielst
+er spielt
+sie spielt
+es spielt
+wir spielen
+ihr spielt
+sie spielen
+Sie spielen
+/
+.
+nicht
+=
+ich mache
+du machst
+er macht
+sie macht
+es macht
+wir machen
+ihr macht
+Sie macht
+/
+.
+nicht
+==
+ich arbeite 
+du arbeitest
+er arbeitet
+sie arbeitet
+es arbeitet
+wir arbeiten
+ihr arbeitet
+sie arbeiten
+Sie arbeiten
+/
+.
+nicht
+==
+ich antworte
+du antwortest
+er antwortet
+sie antwortet
+es antwortet
+wir antworten
+iht antwortet
+sie antworten
+Sie antworten
+/
+.
+nicht
+==
+ich höre
+du hörst
+er hört
+sie hört
+es hört
+wir hören
+ihr hört
+sie hören
+Sie hören
+==
+mache ich?
+machst du?
+macht er?
+macht sie?
+macht es?
+machen wir?
+macht ihr?
+machen sie?
+machen Sie?
+==
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+sie Haben
+/
+.
+gemacht
+getanzt
+gespielt
+gesagt
+gefragt
+geliebt
+gearbitet
+gehört
+geantwortet
+==
+habe ich
+hast du
+hat er
+hat sie
+hat es
+haben wir
+habt ihr
+haben sie
+haben Sie
+/
+-
+gemacht
+getanzt
+gespielt
+gesagt
+gefragt
+geliebt
+gearbitet
+gehört
+geantwortet
+/
+?
+==
+was?
+was hast du gesagt?
+was hat er gefragt?
+was singst du?
+was singst du morgen?
+was hat sie gentwortet?
+was hast du gehört?
+==
+wer?
+wer hat gesagt?
+=
+wo?
+wo wohnst du?
+wo arbeitest du?
+wo hast du gearbeitet?
+wo hast du gewohnt?
+=
+wann?
+wann arbeitest du?
+wann hast du gearbeitet?
+=
+gestern, heute, morgen, jetzt
+=
+warum?
+warun arbeitest du nicht?
+=
+wie?
+wie tanzt sie?
+=
+ich liebe dich
+du liebst mich
+liebst du mich?
+du liebst mich nicht
+er liebt sie, sie liebt ihn nicht
+wir lieben euch, ihr liebt uns
+=
+ich - mich
+du - dich
+er - ihn
+sie - sie
+es - es
+wir - uns
+ihr - euch
+sie - sie
+Sie - Sie
+=
+wen?
+wen liebst du?
+wen liebt sie?
+wen fragt er?
+warum fragst du?
+ich frage sie
+was fragen Sie?
+=
+mache ich?
+machst du?
+macht er?
+macht sie?
+macht es?
+machen wir?
+macht ihr?
+machen sie?
+machen Sie?
+=
+habe ich?
+hast du?
+hat er?
+hat sie?
+hat es?
+haben wir?
+habt ihr?
+haben sie?
+haben Sie?
+=
+ich liebe
+du liebst
+er liebt
+sie liebt
+es liebt
+wir lieben
+ihr liebt
+sie lieben
+Sie lieben
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+/
+geliebt
+=
+ich frage
+du fragst
+er fragt
+sie fragt
+es fragt
+wir fragen
+ihr fragt
+sie fragen
+Sie fragen
+=
+ich habe 
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ir habt
+sie haben
+Sie haben
+/
+gefragt
+=
+ich zeige
+du zeigst
+er zeigt
+sie zeigt
+es zeigt
+wir zeigen
+ihr zeigt
+sie zeigen
+Sie zeigen
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+/
+gezeigt
+gesucht
+==
+ich suche
+du suchst
+er sucht
+sie sucht
+es sucht
+wir suchen
+ihr suchen
+sie suchen
+Sie suchen
+=
+wen suchst du?
+ich suche dich
+ich habe dich gestern gesucht
+warun lachst du?
+=
+ich lache
+du lachst
+er lacht
+sie lacht
+es lacht
+wir lachen
+ihr lachen
+sie lachen
+Sie lachen
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+/
+gelacht
+gespielt
+==
+ich spiele
+du spielst
+er spielt
+sie spielt
+es spielt
+wir spielen
+ihr spielt
+sie spielen
+Sie spielen
+=
+ich arbeite
+du arbeitest
+er arbeitet
+sie arbeitet
+es arbeitet
+wir arbeiten
+ihr arbeitet
+soe arbeiten
+Sie arbeiten
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+/
+gearbeitet
+==
+ich sage
+du sagst
+er sagt
+sie sagt
+es sagt
+wir sagen
+ihr sagt
+sie sagen
+Sie sagen
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+/
+gesagt
+==
+Sagen Sie mir bitte...
+=
+Wie geht's?  (how are you?)
+Wie geht es dir?
+Wie geht es Ihnen?
+Nicht schlecht
+sehr gut
+schlecht
+=
+ich, mich, mir
+du, dich, dir
+er, ihn, ihm
+sie, sie, ihr
+es, es, ihn
+wir, uns, uns
+ihr, euch, euch
+sie, sie, ihnen
+Sie, Sie, Ihnen
+==
+was hast du ihr gesagt?
+ich habe ihr alles gesagt
+du fragst mich, ich antworte dir
+ich sage euch alles
+=
+gehen, kommen
+=
+ich gehe
+du gehst
+er geht
+sie geht
+es geht
+wir gehen
+ihr geht
+sie gehen
+Sie gehen
+=
+ich bin
+du bist
+er ist
+sie ist
+es ist
+wir sind
+ihr seid
+sie sind
+Sie sind
+/
+gegangen
+
+=
+bist du gegangen?
+=
+ich komme
+du kommst
+er kommt
+sie kommt
+es kommt
+wir kommen
+ihr kommt
+sie kommen
+Sie kommen
+=
+ich bin
+du bist
+er ist
+sie ist
+es ist
+wir sind
+ihr seid
+sie sind
+Sie sind
+/
+gekommen
+=
+das madchen
+=
+wo? wohin? woher?
+wohin gehst du?
+woher kommst du?
+und
+er und sie
+oder
+aber
+sondern
+nicht du, sondern sie
+ja, nein
+ja oder nein?
+=
+er fragt mich aber ich antworte nicht
+=
+sehen
+sag mir schnell, ja oder nein?
+=
+wo bist du?
+wer st er?
+wo sind wir?
+er ist Russe
+wo arbeiten Sie?
+was sind Sie?
+was machen Sie?
+=
+heissen, ich heisse (to be called)
+wie heisst du?
+wie heissen Sie?
+ich heisse ...
+Sehr angenehm!
+gehen, kommen
+also
+na ja
+=
+ich wohne in Moskau
+Also, bitte, wie heissen Sie?
+Wo wohnen Sie?
+Wo arbeiten Sie?
+Was sind Sie?
+Sagen Sie mir bitte...
+Danke, ich heisse Julia, ich wohne in Moskau...
+=
+der Schauspieler
+die Schauspielerin
+ich bin Schauspieler
+ich heisse auch Julia, ich wohne auch in Moskau, ich bin auch Schauspielerin
+der Komponist
+der Sanger
+dorf
+ich wohme in Dorf, das heisst Abc..
+der Schriftsteller
+Julia and Alisa sind Schauspielerinnen
+Alex ist Musiker
+ich arbeite im Theater
+=
+eins, zwei, drei, vier, funf, sechs
+sieben, acht, neun, elf, zwolf
+= 
+ein Freund
+eine Ferundin
+ich habe einen Freund
+ich habe eine Freundin
+ich suche einen Freund
+Alex, hast du einen Bruder?
+Ja, ich habe einen Bruder. Er heisst Timofey.
+Hast du eine Schwester? - Ja, ich habe zwei Schwestern.
+Und hast du einen Bruder?
+Auch ich habe einen Bruder
+Also du hast zwei Schwestern und einen Bruder?
+Deine Eltern haben vier Kinder
+Alexandra und zwei Schwestern und ein Bruder sind vier, vier Kinder
+Vaterland, Muttersprache
+Vater, Mutter, Bruder, Schwester, Sohn, Tochter, Eltern, Kinder
+Ein Vater und eine Mutter sind Eltern, ein Sohn und eine Tochter sind Kinder
+wen haben Sie in Ihre Familie?
+haben Sie eine Familie? Eltern? Oder eine Frau? Oder Kinder?
+ich habe einen Hund
+genug
+Bitte Alisa, wen haben Sie, eine Familie oder einen Hund oder eine Katze?
+ich habe einen Hund, sie heisst Dushka
+sind sie klein oder gros?
+Ich habe Vater und Mutter, ich habe zwei Sohne
+Kater
+das ist fantastisch
+alles, etwas, nichts
+alles oder nichts
+er hat mir etwas gasagt
+alle, jemand, niemand
+jemand ist gekommen
+niemand ist gekommen
+immer, manchmal, nie
+alles, etwas, nichts, alle, jemand, niemand, immerm manchmal, nie
+er ist niw gekommen
+er ist nie gekommen, aber sie ist manchmal gekommen
+mach, aus, in
+ich bin aus Moskau gekommen
+er ist nach Berlin gegangen
+der Ausgang, der Eingang
+=
+fahren (gefahren)
+fliegen (geflogen)
+Er ist aus Deutchland, aus Berlin geflogen
+
+
+
+
+==
 Noch keine Beispiele
 Hallo
 Hallo, wie geht’s?
