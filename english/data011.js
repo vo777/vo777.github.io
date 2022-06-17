@@ -12,7 +12,8 @@ asked
 called
 opened
 seen
-been
+been in Moscow
+been a student
 ==
 I have seen this film
 Yesterday he told me that he had seen this film
