@@ -2617,6 +2617,135 @@ Ihr lernt Deutsch.
 Wir sprechen Englisch. 
 Du schreibst einen Brief. 
 ==
+fur mich
+ich mache es fur dich
+ich habe das fur dich gemacht
+komm zu mir
+ich gehe zu dir
+uber
+ich tanze mit dir
+ich gehe mit ihm
+ohne
+gehen Sie ohne mich
+mit Zucker oder ohne Zucker
+von
+das ist ein Buch von Alexander
+glauben
+ich glaube dir
+ich kenne dich
+ich kenne dich nicht
+ich kenne Sie nicht
+wer sind Sie?
+wer bist du?
+ich sage dir
+ich habe dir gesagt
+ich sage dir alles uber ihn
+er hat mir alles uber dich gesagt
+mein - meinen
+ich frage meinen Freund
+ich frage meine Freundin
+ich frage meine Freundin uber dich, sie sagt mir alles
+ich liebe meine Eltern
+ich glaube meinen Freund
+ich gehe mit meinen Freund
+ich habe meiner Schwester uber dich gesagt
+wollen
+ich will nicht tanzen
+willst du mit mir tanzen?
+nein, ich will ohne dich tanzen
+=
+ich will
+du willst
+er will
+sie will
+es will
+wir wollen
+ihr wollt
+sie wollen
+Sie wollen
+=
+ich wollte
+du wolltest
+er wollte
+sie wollte
+es wollte
+ihr wolltet
+sie wollten
+Sie wollten
+=
+was wollen Sie trinken?
+was wollen Sie mir sagen?
+ich will Ihnen nichts sagen
+ich will nicht antworten
+was willst du fragen?
+er wollte nicht mir glauben
+er will nicht mit mir gehen
+warum willst du nicht singen?
+ich will nicht trinken
+was wolltest du fragen?
+ich will nichts sagen
+ich will nicht antworten
+fur wen arbeitest du?
+mit wem arbeiten Sie?
+ich mag ...
+==
+ich mag
+du magst
+er mag
+sie mag
+es mag
+wir mögen
+ihr mögt
+sie mögen
+Sie mögen
+=
+welcher?
+welche?
+welchen?
+magst du tanzen oder singen?
+welche Musik magst du?
+ich mag die klassiche Musik
+elchen Shauspieler magst du?
+welchen Schriftsteller mögen Sie?
+mögen Sie Kino oder Theater?
+beide
+mögen Sie Musik oder Literatur oder Kino oder Theater?
+Ich mag Musik und Kino
+welchen Komponisten mögen Sie?
+morgens, machmittags, abends, nachts
+was mögen Sie abends machen?
+ich mag abends schlafen
+eine Rolle spielen
+ich mag abends im Theater nicht nur gehen, sondern auch eine Rolle spielen
+mögen Sie reisen?
+ich mag reisen
+eine Reise
+ich mag eine Reise nach Berlin und Dresden machen
+der Winter ist gekommen
+im WInter, im Fruhling, im Sommer, im Herbst
+=
+ich will
+du willst
+er will
+sie will
+es will
+wir wollen
+ihr wollt
+sie wollen
+Sie wollen
+=
+ich mag
+du magst
+er mag
+sie mag
+es mag
+wir mögen
+ihr mögt
+sie mögen
+Sie mögen
+=
+magst du mich?
+=
 
 
 `
