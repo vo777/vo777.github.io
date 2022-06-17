@@ -1,16 +1,16 @@
 // German examples:
 const examples = `
-ich, mich, mir
-du, dich, dir
-er, ihn, ihm
-sie, sie, ihr
-es, es, ihn
-wir, uns, uns
-ihr, euch, euch
-sie, sie, ihnen
-Sie, Sie, Ihnen
+ich, mich, mir, mein
+du, dich, dir, dein
+er, ihn, ihm, sein
+sie, sie, ihr, ihr
+es, es, ihn, sein
+wir, uns, uns, unser
+ihr, euch, euch, euer
+sie, sie, ihnen, ihr
+Sie, Sie, Ihnen, Ihr
 ==
-wie	(how), wo (where), was (what), wer(who), wohin (wohin gehst du?) woher (woher kommst du?)
+wie	(how), wo (where), was (what), wer(who), wohin (to)(wohin gehst du?) woher (from)(woher kommst du?)
 =
 sein: ich bin, du bist, er ist, sie ist, es ist, wir sind, ihr seid, sie sind, Sie sind
 =
@@ -2152,7 +2152,149 @@ Sie
 -
 nicht
 =
+Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember
+Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag(Sonnabend), Sonntag
+Frühling, Sommer, Herbst, Winter
 
+Wir sehen uns am ersten zehnten zweitausendneunzehn
+
+Die Sekunde, Die Minute, Die Stunde, Der Tag, Die Woche	          week
+Der Monat, Das Quartal, Das Halbjahr, Das Semester	          semester
+Das Jahr, Das Jahrzehnt, Das Jahrhundert
+
+Der Morgen, Der Vormittag, Der Mittag
+Der Nachmittag, Der Abend, Die Nacht
+
+=
+Wann ist dein Geburtstag? Mein Geburtstag ist am 03.10.1993.
+Wann wollen wir uns treffen?
+Lass uns am ersten April treffen. Das ist in zwei Wochen.
+Welchen Tag haben wir heute? Wir haben heute den vierten März.
+Wann ist Einstein gestorben? Einstein ist am 18. April 1955 gestorben.
+der erste Mai zweitausendneunzehn
+am fünften Oktober zweitausendelf
+der erste zweite zweitausendneun
+neunzehnhundertfünfundneunzig
+sechzehnhundertsiebzehn
+achtzehnhundertdreizehn
+zweitausendzehn
+==
+denken (gedacht)
+ich denke
+du denkst
+er denkt
+sie denkt
+es denkt
+wir denken
+ihr denkt
+sie denken
+Sie denken
+=
+ich habe gedacht
+du hast gedacht
+er hat gedacht
+sie hat gedacht
+es hat gedacht
+wir haben gedacht
+ihr habt gedacht
+sie haben gedacht
+Sie haben gedacht
+=
+singen (gesungen)
+ich singe
+du singst
+er singt
+sie singt
+es singt
+wir singen
+ihr singt
+sie singen
+Sie singen
+=
+ich habe gesungen
+du hast gesungen
+er hat gesungen
+sie hat gesungen
+es hat gesungen
+wir haben gesungen
+ihr habt gesungen
+sie haben gesungen
+Sie haben gesungen
+=
+bringen (gebracht)
+=
+hennen (gekannt)
+=
+schreiben (geschrieben)
+=
+ich schreibe ein Buch
+ich habe ein Buch geschrieben
+=
+trinken (getrunken)
+ich trinke
+du trinkst
+er trinkt
+sie trinkt
+es trinkt
+wir trinken
+ihr trinkt
+sie trinken
+Sie trinken
+=
+treffen (getroffen) (meet)
+ich treffe ihn
+ich habe ihn getroffen
+wen hast du getroffen?
+ich habe ihn nicht getroffen
+=
+bleiben (geblieben)(stay, remain)
+ich bin geblieben
+du bist geblieben
+er ist geblieben
+sie ist geblieben
+es ist geblieben
+wir sind geblieben
+ihr seid geblieben
+sie sind geblieben
+Sie sind geblieben
+=
+elf, zwolf, dreizehn, vierzehn, funfzehn, sechzehn, siebzehn, achtzehn, neunzehn
+zwanzig, dreißig, vierzig, funfzig, sechzig
+siebzig, achtzig, neunzig
+hundert, tausend
+
+einundzwanzig, funfundfunfzig
+
+erste, zweite, dritte, vierte, funfte
+sechste, siebente, achte, neunte, zehnte
+
+einundzwanzigste
+
+hundertste
+=
+
+ich bin am
+/
+vierten April
+funften September
+einundzwanzigsten Februar
+/
+geboren
+=
+geburtstag
+geburt
+glucklich
+die Woche
+=
+gesundheit!
+=
+denken - gedacht
+finden - gefunden
+kennen - gekannt
+schreiben - geschrieben
+singen - gesungen
+trinken - getrunken
+bringen - gebracht
 
 `
 ;
