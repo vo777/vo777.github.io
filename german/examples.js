@@ -1,9 +1,20 @@
 // German examples:
 const examples = `
-
-ich mache, du machst, er macht, sie macht, es macht, wir machen, ihr macht, sie machen, Sie machen
-
+wie	(how), wo (where), was (what), wer(who), wohin (wohin gehst du?) woher (woher kommst du?)
+=
+sein: ich bin, du bist, er ist, sie ist, es ist, wir sind, ihr seid, sie sind, Sie sind
+=
+haben: ich habe, du hast, er hat, sie hat, es hat, wir haben, ihr habt, sie haben, Sie Haben
+=
+gehen: ich gehe, du gehst, er geht, sie geht, es geht, wir gehen, ihr geht, sie gehen, Sie gehen
+=
+kommen: ich komme, du kommst, er kommt, sie kommt, es kommt, wir kommen, ihr kommt, sie kommen, Sie kommen
+=
+machen: ich mache, du machst, er macht, sie macht, es macht, wir machen, ihr macht, sie machen, Sie machen
 ==
+gemacht, getanzt, gespielt, gesagt, gefragt, geliebt
+gearbitet, gehört, geantwortet
+=
 ich mache
 du machst
 er macht
@@ -18,8 +29,7 @@ du sagst
 er sagt
 sie sagt
 es sagt
-wir
-sagen
+wir sagen
 ihr sagt
 sie sagen
 Sie sagen
@@ -33,7 +43,7 @@ er fragt
 sie fragt
 es fragt
 wir fragen
-iht fragen
+ihr fragen
 sie fragen
 Sie fragen
 /
@@ -96,11 +106,24 @@ ich tanze
 du tanzt
 er tanzt
 sie tanzt
-es natzt
+es tanzt
 wir tanzen
 ihr tanzt
 sie tanzen
 Sie tanzen
+/
+.
+nicht
+=
+ich	schwimme
+du	schwimmst
+er	schwimmt
+sie	schwimmt
+es	schwimmt
+wir	schwimmen
+ihr	schwimmt
+sie	schwimmen
+Sie	schwimmen
 /
 .
 nicht
@@ -244,7 +267,7 @@ wann hast du gearbeitet?
 gestern, heute, morgen, jetzt
 =
 warum?
-warun arbeitest du nicht?
+warum arbeitest du nicht?
 =
 wie?
 wie tanzt sie?
@@ -546,7 +569,7 @@ sehen
 sag mir schnell, ja oder nein?
 =
 wo bist du?
-wer st er?
+wer ist er?
 wo sind wir?
 er ist Russe
 wo arbeiten Sie?
@@ -620,7 +643,7 @@ jemand ist gekommen
 niemand ist gekommen
 immer, manchmal, nie
 alles, etwas, nichts, alle, jemand, niemand, immerm manchmal, nie
-er ist niw gekommen
+er ist nie gekommen
 er ist nie gekommen, aber sie ist manchmal gekommen
 mach, aus, in
 ich bin aus Moskau gekommen
@@ -1016,15 +1039,6 @@ ziehen (draw
 wie	(how
 wo	(where
 was	(what
-==
-ich	I
-du	(you [singular informal]
-er	(he
-es	(it
-sie	(she, her; they, them
-wir	(we
-ihr	(you [plural informal]
-Sie	(you [singular & plural formal; always capitalized]
 ==
 mich	(myself
 dich	(yourself
