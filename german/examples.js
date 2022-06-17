@@ -1,5 +1,15 @@
 // German examples:
 const examples = `
+ich, mich, mir
+du, dich, dir
+er, ihn, ihm
+sie, sie, ihr
+es, es, ihn
+wir, uns, uns
+ihr, euch, euch
+sie, sie, ihnen
+Sie, Sie, Ihnen
+==
 wie	(how), wo (where), was (what), wer(who), wohin (wohin gehst du?) woher (woher kommst du?)
 =
 sein: ich bin, du bist, er ist, sie ist, es ist, wir sind, ihr seid, sie sind, Sie sind
@@ -23,6 +33,11 @@ wir machen
 ihr macht
 sie machen
 Sie machen
+/
+-
+nicht
+/
+es
 =
 ich sage
 du sagst
@@ -279,16 +294,6 @@ du liebst mich nicht
 er liebt sie, sie liebt ihn nicht
 wir lieben euch, ihr liebt uns
 =
-ich - mich
-du - dich
-er - ihn
-sie - sie
-es - es
-wir - uns
-ihr - euch
-sie - sie
-Sie - Sie
-=
 wen?
 wen liebst du?
 wen liebt sie?
@@ -485,16 +490,6 @@ Nicht schlecht
 sehr gut
 schlecht
 =
-ich, mich, mir
-du, dich, dir
-er, ihn, ihm
-sie, sie, ihr
-es, es, ihn
-wir, uns, uns
-ihr, euch, euch
-sie, sie, ihnen
-Sie, Sie, Ihnen
-==
 was hast du ihr gesagt?
 ich habe ihr alles gesagt
 du fragst mich, ich antworte dir
@@ -800,141 +795,7 @@ Wissen Sie etwas über _____?
 Gibt es hier in der Nähe etwas Interessantes zu sehen?
 Trotzdem danke
 ==
-
-Gestern bin ich um 19 Uhr nach Hause gekommen
-Gestern Abend kam ich um 19 Uhr nach Hause
-Vor zwei Tagen kam ich um 19 Uhr nach Hause
-Heute bin ich um 19 Uhr nach Hause gekommen
-
-Gestern kam er um 19 Uhr nach Hause
-Gestern Abend kam er um 19 Uhr nach Hause
-Vor zwei Tagen kam er um 19 Uhr nach Hause
-Heute kam er um 19 Uhr nach Hause
-
-Gestern bin ich um 19 Uhr zur Arbeit gekommen
-Gestern kam ich um 19 Uhr zum Parken
-
-Heute bin ich um 19 Uhr zum Parken gekommen
-
-Morgen komme ich um 19 Uhr zum Parken
-Morgen früh komme ich um 19 Uhr zum Parken
-In 2 Tagen komme ich um 19 Uhr zum Parken
-In 2 Wochen komme ich um 19 Uhr zum Parken
-
-=
-
-Ich war ein Student
-Ich war kein Student
-Ich war vor einem Jahr Student
-Ich war vor zwei Jahren Student
-Ich war vor drei Jahren Student
-Ich war kein Student
-Ich bin Student
-Ich bin kein Student
-Ich werde Student sein
-Ich werde nächstes Jahr Student sein
-Ich werde in einem Jahr Student sein
-Ich werde in zwei Jahren Student sein
-Ich werde in drei Jahren Student sein
-Ich werde kein Student sein
-
-Ich bin gestern geschwommen
-Ich bin gestern nicht geschwommen
-Ich schwimme jeden Tag
-Ich schwimme nicht jeden Tag
-Ich werde nicht jeden Tag schwimmen
-Ich werde morgen schwimmen
-Ich werde morgen nicht schwimmen
-
-Ich habe es gestern geschrieben
-Das habe ich gestern geschrieben
-Ich habe gestern geschrieben
-Ich habe gestern nicht geschrieben
-Ich schreibe nicht jeden Tag
-Ich werde morgen nicht schreiben
-
-=
-Ich
-/
-bin
-habe
-/
-.
-es
-/
-gestern
-/
-.
-nicht
-/
-geschwommen
-geschrieben
-gemacht
-geschafft
-
-=
-Ich 
-/
-schreibe
-schwimme
-gehe
-rede 
-lese
-/
-.
-nicht 
-/
-jeden Tag
-==
-Ich 
-/
-werde
-/
-morgen
-/
-.
-nicht
-/
-schreiben
-schwimmen
-kommen
-==
-Ich 
-/
-war 
-bin/
-vor einem Jahr
-vor zwei Jahren
-vor drei Jahren
-/
-.
-ein
-kein
-/Student
-==
-Ich werde 
-/
-nächstes Jahr
-in einem Jahr
-in zwei Jahren
-in drei Jahren
-/
-.
-kein
-/
-Student sein
-==
 ich komme etwas später
-=
-Ich hatte ein Auto
-Ich hatte kein Auto
-
-ich habe ein Auto
-Ich habe kein Auto
-
-Ich werde ein Auto haben
-Ich werde kein Auto haben
-==
 
 antworten
 arbeiten
@@ -1042,14 +903,12 @@ was	(what
 ==
 mich	(myself
 dich	(yourself
-sich	(oneself, himself, herself, itself, yourself [plural informal], themselves
-==
+sich	(oneself, himself, herself, itself...
 dein	(your [singular informal]
 sein	(his 
-ihr 	(hers, their; your [singular & plural formal] [when capitalized]
+ihr 	(hers, their; your
 unser	(our
 euer	(your [plural informal]
-==
 dieser, diese, dieses 	(this, these, that, those
 mehr	(more
 man	(you, one; we; somebody
@@ -1080,7 +939,7 @@ haben	to have
 sehen	to see
 machen	to make
 sein	to be
-werden	to become  The present tense of werden is also used to form the future tense of other verbs
+werden	to become
 ==
 ja	yes, really, certainly
 nein	no
@@ -2211,70 +2070,88 @@ Zorn	anger
 Anspruch	claim
 Kontinent	continent
 ==
-hatten Sie ein Auto?
-hattest du ein auto?
-hast du ein Auto?
-wirst du ein Auto haben?
+Geben Sie
+/
+mir
+dir
+ihm
+ihr
+ihn
+uns
+euch
+ihnen
+Ihnen
+/
+... bitte.
+=
+ich sage
+du sagst
+er sagt
+sie sagt
+es sagt
+wir sagen
+ihr sagt
+sie sagen
+Sie sagen
 
-Warst du Student?
-bist du ein Student?
-wirst du studieren?
-Werden Sie Student?
-
-bist du geschwommen?
-schwimmst du?
-schwimmst du schon mal?
-wirst du schwimmen?
-
-Ich bin nicht geschwommen
-Ich schwimme nicht
-Ich werde nicht schwimmen
-
-du schwammst
-du bist nicht geschwommen
-
-du schwimmst
-du schwimmst nicht
-
-Du wirst schwimmen
-Du wirst nicht schwimmen
-
-Sie schwammen
-Sie schwimmen
-sie werden schwimmen
-
-Du hattest ein Auto
-du hattest kein Auto
-
-du hast ein Auto
-Sie haben kein Auto
-
-Du wirst ein Auto haben
-Sie werden kein Auto haben
-
+ich antworte
+du antwortest
+er antwortet
+sie antwortet
+es antwortet
+wir antworten
+iht antwortet
+sie antworten
+Sie antworten
+/
+mir
+dir
+ihm
+ihr
+ihn
+uns
+euch
+ihnen
+Ihnen
+/
+-
+nicht
 ==
+ich frage
+du fragst
+er fragt
+sie fragt
+es fragt
+wir fragen
+ihr fragen
+sie fragen
+Sie fragen
 
-Ich habe in Florida gelebt
-Ich habe nicht in Florida gelebt
-
-Ich lebe in Florida
-Ich lebe nicht in Florida
-
-Ich werde in Florida leben
-Ich werde nicht in Florida leben
-
-Hast du in Florida gelebt?
-Lebst du in Florida?
-Wirst du in Florida leben?
-
-Sind Sie nach Florida gezogen?
-Ziehst du nach Florida?
-
-Ich bin nach Florida gezogen
-Ich werde nach Florida ziehen
-
-==
-
+ich liebe
+du liebst
+er liebt
+sie liebt
+es liebt
+wir lieben
+ihr liebt
+sie lieben
+Sie lieben
+liebst du
+lieben Sie
+/
+mich
+dich
+ihn
+sie
+es
+uns
+euch
+sie
+Sie
+/
+-
+nicht
+=
 
 
 `
