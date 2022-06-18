@@ -901,18 +901,6 @@ wie (how
 wo (where
 was (what
 ==
-mich (myself
-dich (yourself
-sich (oneself, himself, herself, itself...
-dein (your [singular informal]
-sein (his 
-ihr  (hers, their; your
-unser (our
-euer (your [plural informal]
-dieser, diese, dieses  (this, these, that, those
-mehr (more
-man (you, one; we; somebody
-==
 Er trägt keinen Mantel. (He’s not wearing a coat.)
 Ich habe keine Ahnung. (I have no idea.)
 nichts nothing; not anything
@@ -2223,7 +2211,7 @@ Sie haben gesungen
 =
 bringen (gebracht)
 =
-hennen (gekannt)
+kennen (gekannt)
 =
 schreiben (geschrieben)
 =
@@ -2398,12 +2386,13 @@ In zwei Wochen fliege ich nach Deutschland
 Hallo, Ich heisse Larissa                                                   Hello, I’m called Larissa
 Wie heisst du?
 wie heissen Sie?                                  
-Ich komme aus England                                                  I come from England
-Ich wohne in Deutschland                                              I live in Germany
+Ich komme aus England                                              
+Ich wohne in Deutschland                                          
 Wo wohnst du?
 wo wohnen Sie?                                
-Ich bin 23 Jahre alt                                                           I am 23 years old
-Wie alt bist du?                                                                 How old are you?
+Ich bin 23 Jahre alt                                                        
+Wie alt bist du?                                                               
+ 
 ==
 Ich habe einen Termin mit...
 Ich brauche hilfe
@@ -2705,7 +2694,7 @@ welchen?
 magst du tanzen oder singen?
 welche Musik magst du?
 ich mag die klassiche Musik
-elchen Shauspieler magst du?
+welchen Shauspieler magst du?
 welchen Schriftsteller mögen Sie?
 mögen Sie Kino oder Theater?
 beide
@@ -2745,7 +2734,364 @@ sie mögen
 Sie mögen
 =
 magst du mich?
+weisst du eins habe lernen mussen
+ich habe dich verstanden
+ich habe alles verstanden
+ich habe nichts verstanden
+bekommen
+ich habe bekommen
+studieren
+ich habe studiert
+reservieren
 =
+ich reserviere
+du reservierst
+er reserviert
+sie reserviert
+wir reservieren
+ihr reserviert
+sie reservieren
+Sie reservieren
+=
+ich have reserviert
+du hast reserviert
+er hat reserviert
+sie hat reserviert
+wir haben reserviert
+ihr habt reserviert
+sie haben reserviert
+Sie haben reserviert
+=
+bearbeiten
+beschrieben
+erkennen
+gehoren
+=
+ich erkenne
+du erkennst
+er erkennt
+sie erkennt
+wir erkennen
+ich erkennt
+sie erkennen
+Sie erkennen
+=
+ich habe erkannt
+du hast erkannt
+er hat erkannt
+sie hat erkannt
+wir haben erkannt
+ihr habt erkannt
+sie haben erkannt
+Sie haben erkannt
+=
+ich habe ihn erkannt
+ich habe sie erkannt
+=
+beschreiben (beschrieben)
+=
+ich beschreibe
+du beschreibst
+er beschreibt
+sie beschreibt
+wir beschreiben
+ihr beschreibt
+sie beschreiben
+Sie beschreiben
+=
+ich habe beschrieben
+du hast beschrieben
+er hat beschrieben
+sie hat beschrieben
+wir haben beschrieben
+ihr habt beschrieben
+sie haben beschrieben
+Sie haben beschrieben
+=
+klar
+erklaren (erklart)
+=
+ich erklare
+du erklarst
+er erklart
+wir erklaren
+ihr erklart
+sie erklaren
+Sie erklaren
+=
+ich habe erklart
+du hast erklart
+er hat erklart
+sie hat erklart
+wir haben erklart
+ihr habt erklart
+sie haben erklart
+Sie haben erklart
+=
+ich erklare dir alles
+sie hat mir alles erklart
+sie haben uns erklart
+diskutieren
+=
+ich diskutiere
+du diskutierst
+er diskutiert
+sie diskutiert
+wir diskutieren
+ihr diskutiert
+sie diskutieren
+Sie diskutieren
+=
+ich habe diskutiert
+du hast diskutiert
+er hat diskutiert
+sie hat diskutiert
+wir haben diskutiert
+ihr habt diskutiert
+sie haben diskutiert
+Sie haben diskutiert
+=
+wiederholen
+=
+ich wiederhole
+du wederholst
+er wiederholt
+sie widerholt
+wir wiederholen
+ihr wiederholt
+sie widerholen
+Sie wiederholen
+=
+ich habe wiederholt
+du hast wiederholt
+er hat wiederholt
+sie hat wiederholt
+wir haben wiederholt
+ihr habt wiederholt
+sie haben wiederholt
+Sie haben wiederholt
+=
+gratulieren
+danken
+=
+ich gratuliere
+du gratulierst
+er gratuliert
+sie gratuliert
+wir gratulieren
+ihr gratuliert
+sie gratulieren
+Sie gratulieren
+=
+ich habe gratuliert
+du hast gratuliert
+er hat gratuliert
+sie hat gratuliert
+wir haben gratuliert
+ihr habt gratuliert
+sie haben gratuliert
+Sie haben gratuliert
+=
+ich danke
+du dankst
+er dankt
+sie dankt
+wir danken
+ihr dankt
+sie danken
+Sie danken
+=
+ich habe gedankt
+du hast gedankt
+er hat gedankt
+sie hat gedankt
+wir haben gedankt
+ihr habt gedankt
+sie haben gedankt
+Sie haben gedankt
+=
+wissen
+ich weiss
+du weisst
+er weiss
+sie weiss
+wir wissen
+ihr wisst
+sie wissen
+Sie wissen
+=
+dass
+=
+ich fahre morgen nach Berlin
+morgen fahre ich nach Berlin
+=
+ich weiss dass du nach Berlin fliegst
+ich wess dass du alles weisst
+ich kenne ihn nicht
+ich fahre nach Berlin
+=
+weisst du dass ich morgen nach Berlin fahre?
+weisst du dass ich nach Berlin fahre?
+weisst du dass er heute kommt?
+ich denke dass wir es morgen machen
+weisst du wer er ist?
+ich weiss nicht wo sie sind
+heute schreibe ich ein Buch
+heute habe ich ein Buch geschrieben
+abends gehe ich tanzen
+in Sommer fahre ich nach Rom
+in Mai habe ich meinen Geburtstag
+nach Rom, nach Moskau, nach Deutschland
+ich bin in Russland, ich wohne in Moskau, ich bleibe in Berlin
+aus Berlin gekommen
+gegen
+mach, komm
+machen Sie bitte
+kommen Sie bitte zu mir
+sagen Sie mir bitte
+=
+reservieren - reserviert
+verstehen - verstanden
+verhaufen - verkauft
+bekommen - bekommen
+verlieren - verloren
+=
+studieren
+ich studiere
+ich habe studiert
+ich kenne dich
+ich kenne diese Stadt
+ich weiss
+ich weiss dass ...
+=
+ich weiss dass du heute kommst
+ich fahre nach Berlin
+morgen fahre ich nach Berlin
+=
+das ist so romantisch!
+wie romantisch!
+=
+geben (gegeben)
+ich habe gegeben
+=
+ich gebe
+du gibst
+er gibt
+wir geben
+ihr gebt
+sie geben
+Sie geben
+=
+gib mir
+geben Sie mir bitte
+=
+nehmen (genommen)
+=
+ich nehme
+du nimmst
+er nimmt
+wir nehmen
+ihr nehmt
+sie nehmen
+Sie nehmen
+=
+nimm, nehmen Sie bitte
+essen (gegessen)
+hast du heute gegessen?
+=
+ich esse
+du isst
+er isst
+wir essen
+ihr esst
+sie essen
+Sie essen
+=
+iss
+essen Sie bitte
+=
+ich habe gegessen
+du hast gegessen
+er hat gegessen
+sie hat gegessen
+wir haben gegessen
+ihr habt gegessen
+sie haben gegessen
+Sie haben gegessen
+=
+sehen (gesegen)
+=
+ich sehe
+du siehst
+er sieht
+wir sehen
+ihr seht
+sie sehen
+Sie sehen
+=
+sie
+sehen Sie
+=
+sprechen (gesprochen)
+=
+ich spreche
+du sprichst
+er spricht
+wir sprechen
+ihr sprecht
+sie sprechen
+Sie sprechen
+=
+sprich
+sprechen Sie
+=
+sprechen Sie Deutch?
+ich spreche Deutch
+=
+ich habe mit ihm gesprochen
+ich habe ihm gesehen
+wo habe ich dich gesehen?
+wann sehe ich dich?
+was hast du heute gegessen und getrunken?
+er hat mir sein Buch gegeben
+ich will mir dir uber ihn sprachen
+ich mag koffee ohne zucker trinken
+was willst du trinken?
+was willst du essen?
+=
+man sagt dass ...
+manchmal trinkt man Koffee ohne zucker
+man ist was man isst
+ich habe einen Freund
+ich kenne den Mann
+ich gebe etwas dem Mann
+heute habe ich meinen Bruder gesehen
+ich spreche mit meinem Freund
+er hat mir uber seinem Bruder erzahlt
+=
+ich habe keinen Bruder
+kaufen
+der Kaufmann
+verkaufen (verkauft)
+ein mal ist kein mal
+schenken
+das Geschenk
+ich will ein Auto kaufen
+was schenkst du mir zum Geburtstag?
+das Haus
+schenk mir bitte ein kleines Haus zum Geburtstag
+ich habe ein Haus gekauft
+eine Wohnung
+ich habe eine gute Wohnung
+Ich will nicht sie verkaufen
+er hat keine Wohnung
+meine Wohnung ist gut
+ich liebe meine Wohnung
+ich suche eine Wohnung
+wilche Wohnung suchst du?
+er hat einer Freundin eine Wohnung geschenkt
+ich kenne das Madchen, das Madschen ist schon
+
 
 
 `
