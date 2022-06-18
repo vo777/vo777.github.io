@@ -3091,6 +3091,76 @@ ich suche eine Wohnung
 wilche Wohnung suchst du?
 er hat einer Freundin eine Wohnung geschenkt
 ich kenne das Madchen, das Madschen ist schon
+=
+lernen (gelernt)
+ich lerne Deutch
+=
+ich lerne
+du lernst
+er lernt
+wir lernen
+ihr lernt
+sie lernen
+Sie lernen
+=
+lerne ich?
+lernst du?
+ich lerne nicht
+du lernst nicht
+=
+trinken - getrunken
+was hast du getrunken?
+=
+gehen - gegangen
+kommen - gekommen
+fahren - gefahren
+bleiben - geblieben
+fliegen - geflogen
+=
+ich bin gekommen
+=
+geben
+ich gebe
+du gibst
+er gibt
+=
+ich bin Russe
+=
+er ist 
+/
+Schauspieler
+Schriftsteller
+=
+Trinkst du Tee oder Kaffee?
+ich habe einen Freund
+ich verkaufe einem Freund mein Buch
+der Freund mag mein Buch
+ich mag den Freund
+ich sehe meinen Freund
+ich antworte meinem Freund
+ich sehe eine Freundin
+ich habe eine Freundin gesehen
+eine Freundin mag Musik und mag tanzen
+ich glaube der Freundin
+wenn jemand manchmal bei uns
+ich sehe ein Kind
+wo ist das Kind?
+ich kenne das Kind
+ich sehe meine Freunde
+meine Kinder sind gekommen
+ich liebe meine Kinder
+ich sage meinen Kindern
+ich gehe zu meinem Freund
+ich gehe mit meiner Freundin zu meinen Eltern
+ich mache das fur meine Freunde
+ich schreibe ein Buch uber meinen Freund
+fur wen singst du?
+ich singe fur meine Freunde
+was schenkst du einen Kindern?
+die Weihnachten
+was schenkst du deinen Kindern zu Weihnachten?
+ich sage meiner Freundin alles
+das ist die Frau von meinem Freund
 
 
 
