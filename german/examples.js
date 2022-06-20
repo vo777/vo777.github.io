@@ -3161,6 +3161,609 @@ die Weihnachten
 was schenkst du deinen Kindern zu Weihnachten?
 ich sage meiner Freundin alles
 das ist die Frau von meinem Freund
+=	
+ich werde spielen
+Ich werde Basketball spielen.
+du wirst spielen	
+Wirst du Schach spielen?
+er wird spielen
+Er wird mit mir spielen.
+sie wird spielen
+Sie wird Karten spielen.
+es wird spielen
+Es wird keine Rolle spielen.	
+wir werden spielen	
+Wir werden Basketball spielen.
+ihr werdet spielen	
+Werdet ihr Monopoly spielen?
+sie werden spielen	
+Sie werden Golf spielen.
+Sie werden spielen	
+Werden Sie heute spielen?
+Wir werden die ganze Nacht gespielt haben.
+ich werde gespielt haben	
+Ich werde Gitarre gespielt haben.
+du wirst gespielt haben	
+Wirst du Schach gespielt haben?
+er wird gespielt haben	
+Er wird mit mir gespielt haben.
+sie wird gespielt haben	
+Sie wird Karten gespielt haben.
+es wird gespielt haben
+Es wird keine Rolle gespielt haben.
+wir werden gespielt haben	
+Wir werden Basketball gespielt haben.
+ihr werdet gespielt haben
+Werdet ihr Monopoly gespielt haben?
+sie werden gespielt haben	
+Sie werden Golf gespielt haben.
+Sie werden gespielt haben	
+Werden Sie gespielt haben?
+=
+ich lerne
+du lernst
+er lernt
+wir lernen
+ihr lernt
+sie lernen
+=
+ich habe
+du hast
+er hat
+wir haben
+ihr habt
+sie haben
+/
+gelernt
+=
+ich lernte
+du lerntest
+er lernte
+wir lernten
+ihr lerntet
+sie lernten
+=
+ich hatte
+du hattest
+er hatte
+wir hatten
+ihr hattet
+sie hatten
+/
+gelernt
+=
+ich werde
+du wirst
+er wird
+wir werden
+ihr werdet
+sie werden
+/
+lernen
+=
+ich werde
+du wirst
+er wird
+wir werden
+ihr werdet
+sie werden
+/
+gelernt haben
+=
+ich sehe
+du siehst
+er sieht
+wir sehen
+ihr seht
+sie sehen
+=
+ich habe
+du hast
+er hat
+wir haben
+ihr habt
+sie haben
+/
+gesehen
+=
+ich sah
+du sahst
+er sah
+wir sahen
+ihr saht
+sie sahen
+=
+ich hatte
+du hattest
+er hatte
+wir hatten
+ihr hattet
+sie hatten
+/
+gesehen
+=
+ich werde
+du wirst
+er wird
+wir werden
+ihr werdet
+sie werden
+/
+sehen
+=
+ich werde
+du wirst
+er wird
+wir werden
+ihr werdet
+sie werden
+/
+gesehen haben
+=
+ich	
+/
+muss
+kann
+darf
+soll
+will
+mag
+möchte
+=
+du
+/
+musst
+kannst
+darfst
+sollst
+willst
+magst
+möchtest
+=
+er
+sie
+es
+man
+/
+muss
+kann
+darf
+soll
+will
+mag
+möchte
+=
+wir
+/
+müssen
+können
+dürfen
+sollen
+wollen
+mögen
+möchten
+=
+ihr
+/
+müsst
+könnt
+dürft
+sollt
+wollt
+mögt
+möchtet
+=
+sie
+Sie
+/
+müssen
+können
+dürfen
+sollen
+wollen
+mögen
+möchten
+=
+ich
+/
+musste
+konnte
+durfte
+sollte
+wollte
+mochte
+wollte
+=
+du
+/
+musstest
+konntest
+durftest
+solltest
+wolltest
+mochtest
+wolltest
+=
+er
+sie
+es
+man
+/
+musste
+konnte
+durfte
+sollte
+wollte
+mochte
+wollte
+=
+wir
+/
+mussten
+konnten
+durften
+sollten
+wollten
+mochten
+wollten
+=
+ihr
+/
+musstet
+konntet
+durftet
+solltet
+wolltet
+mochtet
+wolltet
+=
+sie
+Sie
+/
+mussten
+konnten
+durften
+sollten
+wollten
+mochten
+wollten
+=
+gemusst, gekonnt, gedurft, gesollt, gewollt, gemocht, gewollt
+müsste, könnte, dürfte, sollte, wollte, möchte
+=
+ich bin
+du bist
+er, sie, es ist
+wir sind
+ihr seid
+sie sind
+=
+ich war
+du warst
+er, sie, es war
+wir waren
+ihr wart
+sie waren
+=
+ich habe
+du hast
+er, sie, es hat
+wir haben
+ihr habt
+sie haben
+=
+ich hatte
+du hattest
+er, sie, es hatte
+wir hatten
+ihr hattet
+sie hatten
+=
+Er hat den Tisch gedeckt.
+Max hat geschlafen.
+Ich habe mich verlaufen.
+Wir haben uns in Berlin kennengelernt.
+Was hat er gewollt?
+Es hat geregnet.
+Ich habe fünf Kilogramm zugenommen.
+=
+Er ist gelaufen.
+Ich bin eingeschlafen.
+Wir sind zu Hause geblieben.
+=
+was haben Sie gestern abend gemacht?
+ich habe einen Film gesehen
+ich habe in einem Stuck gespielt
+ich habe eine Rolle gespielt
+ich bin in Kaluga gereist
+helfen (geholfen)
+=
+ich helfe
+du hilfst
+er hilft
+wir helfen
+ihr helft
+sie helfen
+Sie helfen
+=
+ich habe einem Freund geholfen
+gestern habe ich deutch mit meinem Hund studiert
+ihr Hund lernt auch deutch?
+ich habe ein Buch mit meinen Kindern gelesen
+haben Sie ein Buch von Alexander gelesen?
+fruh, spat
+zu fruh
+es ist zu fruh fur ihre Kinder die Bucher von Alexander zu lesen
+ich habe meine Frau im Flughafen getroffen und dann habe ich Deutch gelernt
+gestern have ich eine neue Kollektion von der Desigerin ... gelsen
+und dann nin ich nach Hause gekommen und dann habe ich mit menen Kindern bis nachts gespielt
+zu Hause, nach Hause
+ich bin zu Hause
+ich gehe nach Hause
+auch habe ich gestern zwanzig Lieder von Marlen Dietrich hegort
+gestern habe icj Deutch wiederholt und an meine Freunde gedacht
+=
+ich war
+du warst
+er war
+wir waren
+ihr wart
+sie waren
+Sie waren
+=
+ich war nicht in Berlin
+warum warst du nicht in Berlin?
+alles in der Zukunft
+ich habe es vor
+=
+ich mochte
+du mochtest
+er mochtest
+wir mochten
+ihr mochten
+sie mochten
+Sie mochten
+=
+Geben SIe mir bitte
+was michten Sie?
+was willst du von mir?
+durfen (may)
+=
+ich darf
+du darfst
+er darf
+wir durfen
+ihr durft
+sie durfen
+Sie durfen
+=
+du darfst nicht gehen, du bliebst hier
+man darf
+hier, dort
+darf man hier tanzen?
+darf man hier singen?
+konnen
+ich kann zu dir heute kommen
+kannst du zu mir kommen?
+=
+ich kann
+du kannst
+er kann
+wir konnen
+ihr konnt
+sie konnen
+Sie konnen
+=
+mussen
+ich muss gehen
+=
+ich muss
+du musst
+er muss
+wir mussen
+ihr musst
+sie mussen
+Sie mussen
+=
+was wollen sie heute abend machen?
+ich muss in einem Musical spielen
+welche Role haben Sie?
+ich spiele die Rolle von ...
+ich muss arbeiten
+ich habe eine Role im Stuck von Tchechow
+das Stuck
+meine Freunde und ich mussen in einem Konzert singen
+ich muss ein Buch schreiben und das Buch Sascha schenken
+besuchen
+ich mochte die Ausstellung im Museum besuchen
+ich muss mein Auto washen und meinem Kater zu Essen geben
+heute abend mochte ich mit meinem Kindern spazierengehen und spielen
+aber muss ich ein Lied mit meinen Freunden Artyom und Pavel singen
+spacierengehen
+heute ist der Geburtstag von meinem Sohn
+ich gratuliere ihm!
+viel, wie viel, wie viele
+wie spat ist es?
+es ist zwei Uhr
+es ist halb sechs
+die Stunde
+brauchen
+ich brauche deine Hilfe
+die Hilfe
+viel, mehr
+ich brauche mehr Zeit
+wenig, weniger
+ich habe keine Zeit
+ich habe keine Probleme
+=
+gut, schlecht
+gross, klein
+warm, kalt
+=
+er ist ein guter Mann
+ich kenne einen guten Mann
+ich helfe einem guten Mann
+sie ist eine schone Frau
+ich sehe eine schone Frau
+ich schenke einer schonen Frau ein Buch von Alexander
+ich gehe ins Kino mit einer schonen Frau
+ich trinke Bier mit einem guten Freund
+heute ist ein warmer Tag
+ich habe eine grosse Wohnung
+ich spreche Deutch ein wenig
+interessant, langweilig
+ich habe einen langweiling Film gesehen
+es ist ein gutes Kind
+ich kenne ein gutes Kind
+ich helfe einem guten Kind
+ich habe ein interessantes Buch geschrieben
+=
+schnell, langsam
+=
+ich spreche langsam, du sprichst schnell
+ich mag interessante Bucher
+gute Bucher interessieren mich
+er ist mit interessanten Bucher gekommen
+das Buch ist interessant
+=
+mein Auto ist schnell
+=
+interessant
+interessantes als
+schnell
+schneller als
+=
+mein Auto ist schneller als dein Auto
+das ist einfach, ich habe kein Auto
+ich habe das beste Auto
+mein Auto ist das beste
+=
+gross, grosser. warm, warmer
+alt, jung, neu
+=
+mein Mutter ist junger als mein Vater
+das ist das interessanteste Buch, das ich gelesen habe
+das ist der Mann den ich kenne
+=
+die Entschuldigung, die Schuld, entschuldigen
+=
+die Bruderschaft, die Freundschaft
+frei, die Freiheit
+gesund, die Gesundheit
+prost!
+=
+moglich, unmoglich, die Moglichkeit
+ich habe eine Moglichkeit dir zu helfen
+=
+gestern habe ich meinen Sohn zum Geburtstag gratuliert
+wie alt ist ihr Sohn?
+wir gratulieren ihn auch
+gestern abends habe ich ein Lied im Konzert gesungen und mich mit meinen Freunden getroffen
+wo haben Sie gegessen, zu Hause oder im Restauran?
+ich habe im Retaurant gegessen
+was haben Sie gegessen?
+ich habe Fisch gegessen
+der Fisch
+haben Sie auch Fisch gegessen?
+ich habe nichts gegessen
+ich habe nur Kaffee mit Milch getrunken
+abends essen Sie nicht?
+gewohnlich
+gewohnlich esse ich etwas
+haben Sie ein Stuck gesehen oder gespielt?
+ich habe einen Film gesehen
+was dar ein guter Film?
+das war ein guter Film
+weil
+darum
+essen Sie abends?
+ich esse immer, sogar nachts
+gestern habe ich zu Hause gegessen
+haben Sie etwas gekocht?
+kochen
+haben SIe etwas gekocht oder gekauft?
+kocht sie gut?
+sie kocht gut
+was haben Sie heute morgen gemacht?
+ich habe mit meinem Hund spazieren gegangen
+gehen Sie fruh spazieren?
+wir sind um acht Uhr spazieren gegangenn weil ich musste Deutch lernen
+komisch
+ich habe mich mit meinen Freunden getroffen
+wir mussen ein Geschenk kaufen
+fur wen?
+hat er Geburtstag?
+was essen Sie morgens?
+der Quark, die Blaubeere. dir Milch
+haben Sie auch etwas Getrunken?
+=
+der Geschmack
+schmeckt gut
+schmecken
+lieblings
+das Gericht
+Lieblingsgericht
+=
+schlafen (geschaffen)
+ich schlafe
+du schlafst
+er schlaft
+wir schlaft
+ihr schlaft
+sie schlafen
+Sie schlafen
+=
+hast du gut geschlafen?
+danke, ich habe gut geschlafen
+=
+fahren (gefahren)
+ich fahre
+du fahrst
+er fahrt
+wir fahren
+ihr fahrt
+sie fahren
+Sie fahren
+=
+ich bin gefahren
+ich habe mein Auto gefahren
+=
+mit dem Zug, Auto, Bus fahren
+=
+ich gehe ins Kino
+ich bin im Restaurant
+=
+oft, selten
+wie oft gehen Sie ins Kino?
+ich gehe ins Kino manchmal, einmal pro Monat
+einmal, zweimal, dreimal
+noch, schon
+moch einmal
+gehen Sie oft ins Restaurant?
+ich gehe ins Restaurant einmal pro Woche
+jeder
+jened Tag
+Kochen Sie manchamal zu Hause?
+ich Koche jeden Tag
+Kochen Sie Fisch oder Fleisch?
+ich mag Fisch kochen
+ich habe lieber
+mogen Sie Kauffee oder Tee?
+ich mag grunen Tee
+grun, schwartz
+trinken Sie Kaufee mit Zucker oder ohne Zucker?
+ich trinke Kaufee mit Milch und ohne Zucker
+mogen Sie Kino oder Teater?
+beide
+mogen Sie Bucher lesen oder schreiben?
+beide, aber ich mag die Audiobucher horen
+das muss eine Uberraschung sein
+ich muss neue Lieder fur eine neue Vorstellung lernen
+ich lerne neue Lieder auch
+zeit ist Geld
+=
+gern, lieber
+=
 
 
 
