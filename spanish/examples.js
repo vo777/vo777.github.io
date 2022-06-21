@@ -2968,6 +2968,128 @@ Tenemos que ver la realidad.
 Me gustaría ver pronto esta propuesta.
 Vamos a ver qué podemos hacer.
 Queremos ver, por fin, resultados.
+=
+hola
+buenos dias
+buenas tardes
+buenas noches
+adios
+hasta la vista
+gracias
+por favor
+de nada
+como te llamas?
+me llamo ...
+mucho gusto
+encantado
+=
+tomar
+yo tomo
+tu tomas
+usted toma
+el toma
+ella toma
+nosotros tomamos
+vosotros tomais
+vosotras tomais
+ellos toman
+ellas toman
+Ustedes toman
+=
+hablar
+yo hablo
+tu hablas
+el habla
+ella habla
+Usted habla
+Nosotros hablamos
+Nosotras hablamos
+vosotros hablais
+vosotras hablais
+ellos hablan
+ellas hablan
+Ustedes hablan
+=
+trabajar
+yo trabajo
+to trabajas
+el trabaja
+ella trabaja
+Usted trabaja
+nosotros trabajamos
+vosotros trabajais
+ellos trabajan
+=
+descansar
+yo descanso
+to descansas
+el descansa
+ella descansa
+Usted descansa
+nosotros descansamos
+vosotros descansais
+ellos descansan
+=
+cantar
+yo canto
+tu cantas
+el canta
+ella canta
+Usted canta
+nosotros cantamos
+vosotros cantamis
+ellos cantan
+=
+yo bailo
+tu bailas
+el baila
+ella baila
+Usted baila
+nosotros bailamos
+vosotros bailais
+ellos bailan
+=
+ayudar
+yo ayudo
+tu ayudas
+el ayuda
+ella ayuda
+Usted ayuda
+nosotros ayudamos
+vosotros ayudais
+ellos ayudan
+=
+llamar
+yo llamo
+tu llamas
+el llama
+ella llama
+Usted llama
+nosotros llamamos
+vosotros llamais
+ellos llaman
+=
+estudiar
+yo estudio
+tu estudias
+el estudia
+ella estudia
+Usted estudia
+nosotros estudiamos
+vosotros estudiamos
+ellos estudian
+=
+yo no tomo
+tu no tomas
+el no toma
+ella no toma
+Usted no toma
+nosotros no tomamos
+vosotros no tomais
+ellos no toman
+=
+
+
 
 `
 ;
