@@ -3764,6 +3764,230 @@ zeit ist Geld
 =
 gern, lieber
 =
+haben sie keine Uberraschung heute fur mich?
+wir haben eine kleine Uberraschung
+das sing deutche Sprichworter
+morgenstunde hat Gold im Munde
+in der Kurze liegt die Wurze
+bei nacht sind alle Katzen grau
+der zu letzt lacht, lacht am besten
+liebe macht blind
+was man sicht im Kopf hat, hat man in der Beinen
+man empfangt den Mann nach dem Gewand und entasst mach dem Verstand
+alles fur die Katze
+=
+die Farbe
+die Blume
+weiss, rot, schwarz, grun, blau
+himmerblau, gelb, grau, braun, rosa, lila, dunkel, hell
+welche Farbe mogen Sie? - ich mag schwarz
+das kann ich sehen
+haben Sie gestern abend gearbeitet oder ins Restaurant gegangen?
+ich habe im Teater gerbeitet
+danach bin ich mit meinen Freunden ins Restaurant gegangen
+mein Freund hat das Restaurant
+das ist ein Restaurant von Ihrem Freund
+das ist ein Cafe
+was haben SIe da gegessen?
+wir haben ein Eis gegessen und Weisswein getrunken
+ein wenig
+haben Sie gestern Bier getrunken?
+war das dunkel?
+ich habe meinem Freund getroffen
+er wohnt in Italien
+er ist nach Moskau gekommen
+darum
+er ist aus Italien gekommen und darum haben wir ein kleines Bier getrunken
+warum dar das ein kleines Bier?
+abends habe ich Deutch studiert
+italien, italienisch
+gestern habe ich nicht gedacht, nicht gesungen, nicht getanzt
+ich habe geschlafen und das ist alles
+darun habe ich gute Stimmung heute
+=
+ich fuhle mich
+du fuhlst dich
+er fuhlt sich
+wir fuhlen uns
+ihr fuhlt euch
+sie fuhlen sich
+Sie fuhlen sich
+=
+wie fuhlst du dich?
+gesund, krank, verruckt
+=
+heute habe ich zu wenig geschlaffen
+washen, sich waschen
+lieben, sich lieben
+verliebt sein
+wann treffen wir uns?
+haben Sie gestern Ihre Freunde getroffen?
+ich habe gestern meine Freundin getroffen
+wir haben Rotwein getrunken
+gestern habe ich meinen Freund getroffen und wir haben dunkles Bier getrunken
+wo haben Sie Bier getrunken?
+in Deutch Restaurant
+die Kneipe, die Bierstube, die Gaststatte
+danach habe ich Deutch gelernt
+wie viele Stunden haben Sie geschlaffen?
+genug
+das ist nicht genug fur mich
+we viele Stunden sind genug fur Ihnen?
+ich brauche sieben Stunden
+=
+arm, reich
+warten auf
+warte auf mich
+fotografieren
+man hat mich fotografiert
+=
+ist Ihre Freundin eine Designerin?
+ich habe meinen Freund besucht
+mein Freund ist Designer
+wer noch hat etwas interessantes?
+=
+bestellen
+die Bestellung
+rechnen
+die Rechnung
+zum Beispiel
+Sie kommen ins Cafe, der Kellner kommt und fragt, was Sie wollen
+was mochten Sie essen und Trinken?
+Er gibt euch das Menu
+die Speisekarte
+wahlen, die Wahl
+=
+er bringt Ihnes, was Sie bestellt haben, Sie essen, Sie trinken und danach kommt der Kellner mit der Rechnung
+=
+zahlen
+schwerig, einfach
+das Trinkgeld
+zufrieden
+=
+ich bin nicht zufrieden
+vielleicht
+Mal sehen!
+geschehen
+was ist geschehen?
+=
+die Ordnung
+ist alles in Ordnung?
+aufstehen
+ich habe aufstanden
+=
+ich stehe auf
+du stehst auf
+er steht auf
+wir stehen auf
+ihr steht auf
+sie stehen auf
+Sie stehen auf
+=
+hereinkommen
+ich komme herein
+komm herein
+kommen Sie bitte herein
+anrufen
+ich rufe dich an
+telefonieren
+ich rufe dich morgen an
+wann stehst du auf?
+ich stehe um halb acht auf
+=
+herauskommen
+aufstehen
+ich komme herein, ich gehe aus
+der Ausgang, der Eingang
+reinkommen
+ich sehe keinen Ausgang aus dieser Situazion
+arbeiten Sie oder gehen Sie nach Hause?
+ich habe eine Probe im Teater
+welhe Rolle spielen Sie in diesem Stuck?
+ich spiele allein ein Madchen
+das ist sehr interessant
+durfen wir kommen und sehen?
+das Vergnugen, mit Vergnugen
+ruf mich
+ich rufe dich naturlich
+liebst du das Theater, wie ich das liebe?
+ich mag Theater
+ich komme ins Theater zwei - oder dreimal pro Jahr
+kalt, warm
+mir ist kalt
+mir ist warm
+es ist kalt
+es ist warm
+heute ist es kalt
+gestern war es warm
+ist es heute kalt oder warm?
+ich mag, wenn es warm ist
+Sie mogen es naturlich. Aber heute ist es kalt oder warm?
+jetzt ist mir warm
+obwohl
+es schneit
+es regnet
+draussen
+draussen schneit es, aber im Zimmer schneit es nicht
+das Zimmer
+O mein Gott!
+Gott sei dank!
+mogen Sie Winter oder Summer?
+ich mag den Winter, weil im Winter habe ich meinen Geburtstag
+vergessen
+stimmen, das Stimmt
+=
+ich vergesse
+du vergisst
+er vergisst
+wir vergessen
+ihr vergesst
+sie vergessen
+Sie vergessen
+=
+vergiss nicht
+haben Sie vergessen, wann Iwan sein Geburtstag hat?
+wann hast du deinen Geburtstag?
+=
+fragen Sie bitte Alexander, wann er Ihnen sein Buch schenkt
+wann schenkst du mit dein Buch?
+ich schenke dir mein Buch morgen
+ich glaube nicht
+er sagt das jeden Tag
+ich glaube dir
+ich glaube dir nicht
+warum glaubst du mir nicht?
+wollen Sie etwas von unseren Freunden fragen?
+darf ich zu deinem Konzert kommen?
+du darfst zu meinem Konzert kommen, wenn du die Karte kaufst
+alles ist moglich
+nichts personliches, nur das Geschaft
+komm in unseren Theater, dort gibt es nicht nur Geschaft, dort gibt es auch Kunst
+dr Vogel, die Vogel
+umsonst
+es gibt
+es gibt ein Wort
+in Moskau gibt es viele Leute
+es gibt ein Tisch im Zimmer
+gibt es ein Tisch im Zimmer?
+die Stadt, die Stadte
+die Stadt, die Stadte, ein Buch, die Buche, ein Mann, Manner, ein Land, Lander
+ich habe viele Landern besucht
+ich habe viele Bucher geschrieben
+und ich schreibe noch viele
+noch mehr
+der Mensch, die Leute
+er ist ein schoner Mann
+ich habe diese Stadte besucht
+was nachen Sie heute?
+naturlich lernen Sie Deiutch, aber was noch?
+der Klub
+=
+ich stehe auf
+du stehst auf
+wir stehen auf
+ich habe aufgestanden
+=
+Moglichkeit, Moglichkeiten
 
 
 
