@@ -3988,8 +3988,191 @@ wir stehen auf
 ich habe aufgestanden
 =
 Moglichkeit, Moglichkeiten
-
-
+=
+wollen Sie vielleicht etwas fragen oder sagen oder erzahlen?
+wir nehmen abschield
+der Abschield
+lustig, traurig
+das Leben
+leben
+=
+ich sterbe
+du stirbst
+er stirbt
+wir sterben
+ihr sterbt
+sie sterben
+Sie sterben
+=
+warum bist du traurig?
+ich bin nicht traurig ich bin lustig
+ich will mein Buch heute schenken
+das ist nicht so einfach
+das ist endlich ein Geschaft!
+das Gefuhl
+es gibt ein Autogramm
+das Autogramm
+ich bin zufrieden
+gratis
+kosten
+wie viel kostet das Buch?
+was kostet das Buch?
+so
+warum bist du so traurig?
+ich habe gestern ein Buch gelesen
+das ist mein Lieblingsbuch
+haben Sie gestern auch gelesen oder geschlafen?
+wieder
+die ganze Nacht
+=
+ich musste
+du musstest
+er musste
+wir mussten
+ich musstet
+sie mussten
+Sie mussten
+=
+sagen uns was Sie interessant finden
+gestern wollte ich nach ROm oder Paris fliegen
+aber ich habe nach Hause gefahren und Deutch studiert
+aber heute will ich nach Berlin fahren, darum will ich eine Karte kaufen
+buchen
+was wollen Sie in Berlin tun?
+ich will auf der Strasse Unter-den-Linden spacieren gehen
+ich will mit dem Fahrrad in der Nuseuminsel fahren
+das ist eine interessante idea
+vielleicht ist es schon kalt
+die schonste Stadte sind im Suddeutschland
+fahren wir im Fruhling!
+Suden, Westen, Osten, Norden
+rechts, links, geradeaus, zuruck
+zuruckkommen, zuruckgehen
+wie komme ich ...
+wo finde ich ...
+wo ist ...
+gestern habe ich in meinem Auto gewohnt, weil in unserer schonen Stadt haben wir viele Staus
+der Verkehr, der Stau
+ich muss nicht schlafen wenn ich fahre
+fur vier Stunden bin ich in meinem Auto geblieben
+darum fahre ich in der U-bahn
+das ist unbequem aber schnell
+die Eisenbahn, der Bahnhof
+lasst uns gehen!
+zusammen
+setzen Sie sich, bitte
+stehen Sie bitte auf!
+um Gottes willen
+ubersetzen
+hat jemand Ihre Bucher schon Ubersetzt?
+ein englischer Ubersetzer hat schon ein von meinen Bucher Ubersetzt
+fremd
+ich will viele fremde schprachen lernen
+das ist eine gute Moglichkeit um viele verschiedene Menschen kennen zu lernen
+verschieden
+ich spreche drei fremde Schprachen
+das Ausland
+die Richtung
+=
+ich mache
+du machst
+er macht
+sie macht
+es macht
+wir machen
+ihr macht
+sie machen
+Sie machen
+=
+ich habe
+du hast
+er hat
+sie hat
+es hat
+wir haben
+ihr habt
+sie haben
+Sie haben
+=
+ich bringe
+du bringst
+er bringt
+sie bringt
+es bringt
+wir bringen
+ihr bringt
+sie bringen
+Sie bringen
+=
+ich habe gebracht
+du hast gebracht
+er hat gebracht
+sie hat gebracht
+es hat gebracht
+wir haben gebracht
+ihr habt gebracht
+sie haben gebracht
+Sie haben gebracht
+=
+ich bin gegangen
+du bist gegangen
+er ist gegangen
+sie ist gegangen
+es ist gegangen
+wir sind gegangen
+ihr seid gegangen
+sie sind gegangen
+Sie sind gegangen
+=
+reservieren - reserviert
+verstehen - verstanden
+verkaufen - verkauft
+bekommen - bekommen
+verlieren - verloren
+=
+ich stehe auf
+du stehst auf
+er steht auf
+wir stehen auf
+ihr steht auf
+sie stehen auf
+Sie stehen auf
+=
+ich muss
+du musst
+er muss
+wir mussen
+ihr mussen
+sie mussen
+Sie mussen
+=
+ich musste
+du musstest
+er musste
+wir musstet
+ihr musstet
+sie mussten
+Sie mussten
+=
+sprechen wir ein bisschen Deutch
+ich bin in Moskau geboren und gewachsen
+ich bin das einzige Kind
+den Winter mag ich nicht, obwohl ich im Winter geboren bin
+ich mochte weniger hasten und mehr reisen und lesen
+wie viele Bucher haben Sie schon geschrieben?
+ich habe vier Bucher geschrieben
+ich bin glucklich hier mit euch zu sein
+sich befinden
+ich befinde mich hier
+zu Ende sein
+ich kann ihnen helfen
+ich habe gedacht dass die Deutche Sprache sehr schwierig ist
+ich will nach Berlin fahren
+ich singe zu viele Lieder
+ist das moglich zu vuele Lieder zu singen?
+ich will nicht vergessen, was ich gelernt habe
+die Geschwister
+=
 
 `
 ;
