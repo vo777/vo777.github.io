@@ -3638,7 +3638,7 @@ das ist einfach, ich habe kein Auto
 ich habe das beste Auto
 mein Auto ist das beste
 =
-gross, grosser. warm, warmer
+gross, grosser, warm, warmer
 alt, jung, neu
 =
 mein Mutter ist junger als mein Vater
@@ -3962,7 +3962,7 @@ du darfst zu meinem Konzert kommen, wenn du die Karte kaufst
 alles ist moglich
 nichts personliches, nur das Geschaft
 komm in unseren Theater, dort gibt es nicht nur Geschaft, dort gibt es auch Kunst
-dr Vogel, die Vogel
+der Vogel, die Vogel
 umsonst
 es gibt
 es gibt ein Wort
