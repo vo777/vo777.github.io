@@ -3215,6 +3215,164 @@ vosotros estais
 ellos estan
 =
 
+Hola – Hello
+Buenas – Hi (informal)
+Buenos días – Good morning
+Buen día – Good morning (less common, used in Argentina)
+Buenas tardes – Good afternoon
+Buenas noches – Good evening
+Bienvenido – Welcome
+Que gusto de verlo – What a pleasure to see you
+
+¡Buenos días! – Good morning!
+¡Bienvenido! – Welcome!
+¡Que gusto de verlo! – What a pleasure to see you!
+
+Adiós – Goodbye
+Chao – Goodbye
+Hasta luego – See you later
+Hasta pronto – See you soon
+Hasta la vista – See you next time
+Hasta mañana – See you tomorrow
+Nos vemos – See ya
+Buenas noches – Good night
+Que tengas un buen día – Have a good day
+Que te vaya bien – Have a good day
+Cuídate – Take care (informal)
+Cuídese – Take care (formal)
+
+¿Qué tal? – How are you?
+¿Cómo estás? – How are you?
+¿Cómo está usted? – How are you? (usted is more formal than tú)
+¿Cómo te va? – How are you?
+¿Cómo te ha ido? – How have you been?
+¿Qué pasa? – What’s up?
+¿Qué cuentas? – What’s up?
+Estoy bien, ¿y tú? – I am fine, and you?
+Bien, ¿y usted? – Good, and you? (usted is more formal than tú)
+
+Estoy estupendo – I am great.
+Estoy muy bien – I am very well.
+Estoy así así – I am okay.
+Estoy más o menos. – I am so-so.
+Estoy regular – I am regular.
+Estoy mal – I feel unwell.
+Estoy fatal – I am terrible.
+Estoy un poco cansado – I am a little tired.
+Estoy exhausto – I am exhausted.
+Estoy enfermo – I am sick.
+
+¿Cuál es tu nombre? – What is your name? (informal)
+¿Cuál es su nombre? – What is your name? (formal) 
+¿Cómo te llamas? – What is your name? (informal) 
+¿Cómo se llama? – What is your name? (formal) 
+Me llamo… – My name is… 
+Mi nombre es… – My name is…
+
+Gracias – Thank you
+Muchas gracias – Thank you very much 
+De nada – You’re welcome 
+Perdón – I am sorry 
+Lo siento – I am sorry 
+Disculpe – Sorry 
+Mil disculpas – A thousand sorry’s 
+Por favor – Please 
+Con permiso – Excuse me 
+Perdone, Perdona – Excuse me 
+Señor (Sr.) – Mr. 
+Señora (Sra.) – Mrs. 
+Señorita (Srta.) – Miss
+
+¿De dónde eres? – Where are you from? (informal)
+¿De dónde es? – Where are you from? (formal)
+¿De dónde son? – Where are you from? (plural)
+¿Dónde vives? – Where do you live?
+Yo soy de… – I am from…
+Somos de… – We are from…
+
+¿Qué…? – What…?
+¿Cómo…? – How…?
+¿Cuándo…? – When…?
+¿Cuánto…? – How much…?
+¿Dónde…? – Where…?
+¿Quién…? – Who…?
+¿Por qué…? – Why…?
+¿Cuál? – Which…?
+
+¿Qué hora tienes? – What time is it?
+¿Qué edad tienes? – How old are you?
+¿Cuántos años tienes? – How old are you?
+¿Cuándo es tu cumpleaños? – When is your birthday?
+¿Cuánto cuesta eso? – How much is that?
+¿Quién eres? – Who are you?
+¿Qué es esto? – What is this?
+¿Cuál es la fecha de hoy? – What is the date today?
+¿Entiende? – Do you understand?
+¿Comprende? – Do you understand?
+¿Por qué te gusta? – Why do you like it?
+¿Hablas inglés? – Do you speak English?
+¿Dónde está el baño? – Where is the bathroom?
+Necesito ayuda – I need help
+
+Sí – Yes
+Claro – Of course
+Siempre – Always
+A veces – Sometimes
+Tal vez – Maybe
+No – No
+Nunca – Never
+
+Buena suerte – Good luck
+Buen viaje – Have a good trip
+Buen provecho – Enjoy your meal
+Diviértete – Have fun
+Salud – Cheers - Bless you (when someone sneezes)
+Muy bien – Well done
+
+Felicitaciones – Congratulations
+Feliz Cumpleaños – Happy Birthday
+Feliz Navidad – Merry Christmas
+Feliz Año Nuevo – Happy New Year
+Siento interrumpir – I am sorry to interrupt
+No se preocupe – Don’t worry
+Te amo – I love you
+Con mucho amor – With much love
+
+=
+hablé, hablo, voy a hablar, hablaría
+estaba hablando, estoy hablando, voy a estar hablando, estaría hablando
+había hablado, he hablado habré hablado, habría hablado
+=
+estaba, estoy, voy a estar, estaría
+tenía, tengo, voy a tener, tendría
+fui, voy, voy a ir, iría
+hice, hago, voy a hacer, haría
+me gustó, me gusta, me va a gustar, me gustaría
+quería, quiero, voy a querer, querría
+necesité, necesito, voy a necesitar, necesitaría
+tenía que, tengo que, voy a tener que, tendría que
+podía, puedo, voy a poder, podría
+traté de, trato de, voy a tratar de, trataría de
+=
+antes, ahora, después
+ayer, hoy, mañana
+anoche, esta noche, mañana en la noche
+la semana pasada, esta semana, la semana que viene
+el fin de semana pasada, este fin de semana, el fin de semana que viene
+el mes pasado, este mes, el mes que viene
+el año pasado, este año, el año que viene
+la última vez, esta vez, la próxima vez
+=
+todos, toda parte, todo
+alguien, alguna parte, algo
+nadie, ninguna parte, nada
+=
+siempre, a veces, nunca
+todos, alguien, nadie
+toda parte, alguna parte, ninguna parte
+todo, algo, nada
+=
+
 
 
 `
