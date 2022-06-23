@@ -1,13 +1,71 @@
 
-
 function init()
 {
 	console.log('init()');
+	parse_top100();
+	parse_irregulars();
+	
+	console.log(data);
+}
+
+function parse_top100()
+{
+	const rows = top100.split('\n');
+	for (let row of rows)
+	{
+		row = row.trim();
+		if (!row.length) { console.log('skip:', row); continue; }
+		const a = row.split('.');
+		if (a.length != 2) { console.log('skip:', row); continue; }
+		let b = a[1].trim();
+		if (b.endsWith(')')) { b = b.slice(0, -1); }
+		const c = b.split('(');
+		if (c.length != 2) { console.log('skip:', row); continue; }
+		data.dict[c[0].trim()] = c[1].trim();
+	}
+}
+
+function parse_irregulars()
+{
+	let k = 0;
+	const rows = irregulars.toLowerCase().split('\n');
+	
+	while (k < rows.length)
+	{
+		const a = rows[k].split('.');
+		
+		if (a.length == 2)
+		{
+			const b = a[1].trim().split('-');
+			if (b.length == 2)
+			{
+				b[1] = b[1].trim();
+				if (b[1].startsWith('to '))
+				{
+					b[1] = b[1].slice(3);
+				}
+				data.dict[b[0].trim()] = b[1].trim();
+			}
+			else
+			{
+				console.log('err:', b);
+			}
+			
+			++k;
+		}
+		else
+		{
+			++k;
+		}
+	}
+	
 }
 
 function conjugate()
 {
 	console.log('conjugate()');
+	const txt = text1.value;
+	res_div.innerHTML = txt; // TODO =========================================
 }
 
 
@@ -19,7 +77,7 @@ const top100 = `
 4. hacer (do, make)
 5. poder (can, be able to)
 6. decir (say)
-7. haber (have [aux. verb], there is/are)
+7. haber (have [aux verb], there is/are)
 8. ir (go)
 9. dar (give)
 10. ver (see)
@@ -117,7 +175,7 @@ const top100 = `
 
 
 const irregulars = `
-1. Ser – to be
+1. Ser - to be
 Pronoun 	Present Tense	Past Tense
 yo 	soy	fui
 tú	eres	fuiste
@@ -125,7 +183,7 @@ tú	eres	fuiste
 nosotros	somos	fuimos
 ustedes	son	fueron
 ellos/ellas	son	fueron
-2. Estar – to be
+2. Estar - to be
 Pronoun 	Present Tense	Past Tense
 yo 	estoy	estuve
 tú	estás	estuviste
@@ -133,7 +191,7 @@ tú	estás	estuviste
 nosotros	estamos	estuvimos
 ustedes	están	estuvieron
 ellos/ellas	están	estuvieron
-3. Tener – to have (possession)
+3. Tener - to have (possession)
 Pronoun 	Present Tense	Past Tense
 yo 	tengo	tuve
 tú	tienes	tuviste
@@ -141,7 +199,7 @@ tú	tienes	tuviste
 nosotros	tenemos	tuvimos
 ustedes	tienen	tuvieron
 ellos/ellas	tienen	tuvieron
-4. Haber – to have (to do something, auxiliary verb)
+4. Haber - to have (to do something, auxiliary verb)
 Pronoun 	Present Tense	Past Tense
 yo 	he	hube
 tú	has	hubiste
@@ -149,7 +207,7 @@ tú	has	hubiste
 nosotros	hemos	hubimos
 ustedes	han	hubieron
 ellos/ellas	han	hubieron
-5. Hacer – to do, make
+5. Hacer - to do, make
 Pronoun 	Present Tense	Past Tense
 yo 	hago	hice
 tú	haces	hiciste
@@ -157,7 +215,7 @@ tú	haces	hiciste
 nosotros	hacemos	hicimos
 ustedes	hacen	hicieron
 ellos/ellas	hacen	hicieron
-6. Ir – to go
+6. Ir - to go
 Pronoun 	Present Tense	Past Tense
 yo 	voy	fui
 tú	vas	fuiste
@@ -165,7 +223,7 @@ tú	vas	fuiste
 nosotros	vamos	fuimos
 ustedes	van	fueron
 ellos/ellas	van	fueron
-7. Ver – to see
+7. Ver - to see
 Pronoun 	Present Tense	Past Tense
 yo 	veo	vi
 tú	ves	viste
@@ -173,7 +231,7 @@ tú	ves	viste
 nosotros	vemos	vimos
 ustedes	ven	vieron
 ellos/ellas	ven	vieron
-8. Decir – to say
+8. Decir - to say
 Pronoun 	Present Tense	Past Tense
 yo 	digo	dije
 tú	dices	dijiste
@@ -181,7 +239,7 @@ tú	dices	dijiste
 nosotros	decimos	dijimos
 ustedes	dicen	dijeron
 ellos/ellas	dicen	dijeron
-9. Poder – to be able, can
+9. Poder - to be able, can
 Pronoun 	Present Tense	Past Tense
 yo 	puedo	pude
 tú	puedes	pudiste
@@ -189,7 +247,7 @@ tú	puedes	pudiste
 nosotros	podemos	pudimos
 ustedes	pueden	pudieron
 ellos/ellas	pueden	pudieron
-10. Dar – to give
+10. Dar - to give
 Pronoun 	Present Tense	Past Tense
 yo 	doy	di
 tú	das	diste
@@ -197,7 +255,7 @@ tú	das	diste
 nosotros	damos	diimos
 ustedes	dan	dieron
 ellos/ellas	dan	dieron
-11. Conocer – to know
+11. Conocer - to know
 Pronoun 	Present Tense	Past Tense
 yo 	conozco	conocí
 tú	conoces	conociste
@@ -205,7 +263,7 @@ tú	conoces	conociste
 nosotros	conocemos	conocimos
 ustedes	conocen	conocieron
 ellos/ellas	conocen	conocieron
-12. Saber – to know
+12. Saber - to know
 Pronoun 	Present Tense	Past Tense
 yo 	sé	supe
 tú	sabes	supiste
@@ -213,7 +271,7 @@ tú	sabes	supiste
 nosotros	sabemos	supimos
 ustedes	saben	supieron
 ellos/ellas	saben	supieron
-13. Poner – to put
+13. Poner - to put
 Pronoun 	Present Tense	Past Tense
 yo 	pongo	puse
 tú	pones	pusiste
@@ -221,7 +279,7 @@ tú	pones	pusiste
 nosotros	ponemos	pusimos
 ustedes	ponen	pusieron
 ellos/ellas	ponen	pusieron
-14. Salir – to exit
+14. Salir - to exit
 Pronoun 	Present Tense	Past Tense
 yo 	salgo	salí
 tú	sales	saliste
@@ -229,7 +287,7 @@ tú	sales	saliste
 nosotros	salimos	salimos
 ustedes	salen	salieron
 ellos/ellas	salen	salieron
-15. Traer – to bring
+15. Traer - to bring
 Pronoun 	Present Tense	Past Tense
 yo 	traigo	traje
 tú	traes	trajiste
@@ -237,7 +295,7 @@ tú	traes	trajiste
 nosotros	traemos	trajimos
 ustedes	traen	trajeron
 ellos/ellas	traen	trajeron
-16. Venir – to come
+16. Venir - to come
 Pronoun 	Present Tense	Past Tense
 yo 	vengo	vine
 tú	vienes	viniste
@@ -245,7 +303,7 @@ tú	vienes	viniste
 nosotros	venimos	vinimos
 ustedes	vienen	vinieron
 ellos/ellas	vienen	vinieron
-17. Oír – to hear
+17. Oír - to hear
 Pronoun 	Present Tense	Past Tense
 yo 	oigo	oí
 tú	oyes	oíste
@@ -253,7 +311,7 @@ tú	oyes	oíste
 nosotros	oímos	oímos
 ustedes	oyen	oyeron
 ellos/ellas	oyen	oyeron
-18. Caer – to fall
+18. Caer - to fall
 Pronoun 	Present Tense	Past Tense
 yo 	caigo	caí
 tú	caes	caíste
@@ -261,7 +319,7 @@ tú	caes	caíste
 nosotros	caemos	caímos
 ustedes	caen	cayeron
 ellos/ellas	caen	cayeron
-19. Caber – to fit
+19. Caber - to fit
 Pronoun 	Present Tense	Past Tense
 yo 	quepo	cupe
 tú	cabes	cupiste
@@ -269,7 +327,7 @@ tú	cabes	cupiste
 nosotros	cabemos	cupimos
 ustedes	caben	cupieron
 ellos/ellas	caben	cupieron
-20. Jugar – to play
+20. Jugar - to play
 Pronoun 	Present Tense	Past Tense
 yo 	juego	jugué
 tú	juegas	jugaste
@@ -277,7 +335,7 @@ tú	juegas	jugaste
 nosotros	jugamos	jugamos
 ustedes	juegan	jugaron
 ellos/ellas	juegan	jugaron
-21. Cerrar – to close
+21. Cerrar - to close
 Pronoun 	Present Tense	Past Tense
 yo 	cierro	cerré
 tú	cierras	cerraste
@@ -285,7 +343,7 @@ tú	cierras	cerraste
 nosotros	cerramos	cerramos
 ustedes	cierran	cerraron
 ellos/ellas	cierran	cerraron
-22. Comenzar – to begin
+22. Comenzar - to begin
 Pronoun 	Present Tense	Past Tense
 yo 	comienzo	comencé
 tú	comienzas	comenzaste
@@ -293,7 +351,7 @@ tú	comienzas	comenzaste
 nosotros	comenzamos	comenzamos
 ustedes	comienzan	comenzaron
 ellos/ellas	comienzan	comenzaron
-23. Empezar – to begin
+23. Empezar - to begin
 Pronoun 	Present Tense	Past Tense
 yo 	empiezo	empecé
 tú	empiezas	empezaste
@@ -301,7 +359,7 @@ tú	empiezas	empezaste
 nosotros	empezamos	empezamos
 ustedes	empiezan	empezaron
 ellos/ellas	empiezan	empezaron
-24. Entender – to understand
+24. Entender - to understand
 Pronoun 	Present Tense	Past Tense
 yo 	entiendo	entendí
 tú	entiendes	entendiste
@@ -309,7 +367,7 @@ tú	entiendes	entendiste
 nosotros	entendemos	entendimos
 ustedes	entienden	entendieron
 ellos/ellas	entienden	entendieron
-25. Mentir – to lie
+25. Mentir - to lie
 Pronoun 	Present Tense	Past Tense
 yo 	miento	mentí
 tú	mientes	mentiste
@@ -317,7 +375,7 @@ tú	mientes	mentiste
 nosotros	mentimos	mentimos
 ustedes	mienten	mintieron
 ellos/ellas	mienten	mintieron
-26. Negar – to deny
+26. Negar - to deny
 Pronoun 	Present Tense	Past Tense
 yo 	niego	negué
 tú	niegas	negaste
@@ -325,7 +383,7 @@ tú	niegas	negaste
 nosotros	negamos	negamos
 ustedes	niegan	negaron
 ellos/ellas	niegan	negaron
-27. Pensar – to think
+27. Pensar - to think
 Pronoun 	Present Tense	Past Tense
 yo 	pienso	pensé
 tú	piensas	pensaste
@@ -333,7 +391,7 @@ tú	piensas	pensaste
 nosotros	pensamos	pensamos
 ustedes	piensan	pensaron
 ellos/ellas	piensan	pensaron
-28. Perder – to lose
+28. Perder - to lose
 Pronoun 	Present Tense	Past Tense
 yo 	pierdo	perdí
 tú	pierdes	perdiste
@@ -341,7 +399,7 @@ tú	pierdes	perdiste
 nosotros	perdemos	perdimos
 ustedes	pierden	perdieron
 ellos/ellas	pierden	perdieron
-29. Recomendar – to recommend
+29. Recomendar - to recommend
 Pronoun 	Present Tense	Past Tense
 yo 	recomiendo	recomendé
 tú	recomiendas	recomendaste
@@ -349,7 +407,7 @@ tú	recomiendas	recomendaste
 nosotros	recomendamos	recomendamos
 ustedes	recomiendan	recomendaron
 ellos/ellas	recomiendan	recomendaron
-30. Sentir – to feel
+30. Sentir - to feel
 Pronoun 	Present Tense	Past Tense
 yo 	siento	sentí
 tú	sientes	sentiste
@@ -357,7 +415,7 @@ tú	sientes	sentiste
 nosotros	sentimos	sentimos
 ustedes	sienten	sintieron
 ellos/ellas	sienten	sintieron
-31. Colgar – to hang
+31. Colgar - to hang
 Pronoun 	Present Tense	Past Tense
 yo 	cuelgo	colgué
 tú	cuelgas	colgaste
@@ -365,7 +423,7 @@ tú	cuelgas	colgaste
 nosotros	colgamos	colgamos
 ustedes	cuelgan	colgaron
 ellos/ellas	cuelgan	colgaron
-32. Contar – to count, to tell
+32. Contar - to count, to tell
 Pronoun 	Present Tense	Past Tense
 yo 	cuento	conté
 tú	cuentas	contaste
@@ -373,7 +431,7 @@ tú	cuentas	contaste
 nosotros	contamos	contamos
 ustedes	cuentan	contaron
 ellos/ellas	cuentan	contaron
-33. Costar – to cost
+33. Costar - to cost
 Pronoun 	Present Tense	Past Tense
 yo 	cuesto	costé
 tú	cuestas	costaste
@@ -381,7 +439,7 @@ tú	cuestas	costaste
 nosotros	costamos	costamos
 ustedes	cuestan	costaron
 ellos/ellas	cuestan	costaron
-34. Doler – to hurt
+34. Doler - to hurt
 Pronoun 	Present Tense	Past Tense
 yo 	duelo	dolí
 tú	dueles	doliste
@@ -389,7 +447,7 @@ tú	dueles	doliste
 nosotros	dolemos	dolimos
 ustedes	duelen	dolieron
 ellos/ellas	duelen	dolieron
-35. Encontrar – to find
+35. Encontrar - to find
 Pronoun 	Present Tense	Past Tense
 yo 	encuentro	encontré
 tú	encuentras	encontraste
@@ -397,7 +455,7 @@ tú	encuentras	encontraste
 nosotros	encontramos	encontramos
 ustedes	encuentran	encontraron
 ellos/ellas	encuentran	encontraron
-36. Morder – to bite
+36. Morder - to bite
 Pronoun 	Present Tense	Past Tense
 yo 	muerdo	modrí
 tú	muerdes	mordiste
@@ -405,7 +463,7 @@ tú	muerdes	mordiste
 nosotros	mordemos	mordimos
 ustedes	muerden	mordieron
 ellos/ellas	muerden	mordieron
-37. Morir – to die
+37. Morir - to die
 Pronoun 	Present Tense	Past Tense
 yo 	muero	morí
 tú	mueres	moriste
@@ -413,7 +471,7 @@ tú	mueres	moriste
 nosotros	morimos	morimos
 ustedes	mueren	murieron
 ellos/ellas	mueren	murieron
-38. Oler – to smell
+38. Oler - to smell
 Pronoun 	Present Tense	Past Tense
 yo 	huelo	olí
 tú	hueles	oliste
@@ -421,7 +479,7 @@ tú	hueles	oliste
 nosotros	olemos	olimos
 ustedes	huelen	olieron
 ellos/ellas	huelen	olieron
-39. Recordar – to remember
+39. Recordar - to remember
 Pronoun 	Present Tense	Past Tense
 yo 	recuerdo	recordé
 tú	recuerdas	recordaste
@@ -429,7 +487,7 @@ tú	recuerdas	recordaste
 nosotros	recordamos	recordamos
 ustedes	recuerdan	recordaron
 ellos/ellas	recuerdan	recordaron
-40. Volver – to return (from somewhere) 
+40. Volver - to return (from somewhere) 
 Pronoun 	Present Tense	Past Tense
 yo 	vuelvo	volví
 tú	vuelves	volviste
@@ -437,7 +495,7 @@ tú	vuelves	volviste
 nosotros	volvemos	volvimos
 ustedes	vuelven	volvieron
 ellos/ellas	vuelven	volvieron
-41. Competir – to compete
+41. Competir - to compete
 Pronoun 	Present Tense	Past Tense
 yo 	compito	competí
 tú	compites	competiste
@@ -445,7 +503,7 @@ tú	compites	competiste
 nosotros	competimos	competimos
 ustedes	compiten	compitieron
 ellos/ellas	compiten	compitieron
-42. Conseguir – to get, obtain
+42. Conseguir - to get, obtain
 Pronoun 	Present Tense	Past Tense
 yo 	consigo	conseguí
 tú	consigues	conseguiste
@@ -453,7 +511,7 @@ tú	consigues	conseguiste
 nosotros	conseguimos	conseguimos
 ustedes	consiguen	consiguieron
 ellos/ellas	consiguen	consiguieron
-43. Corregir – to correct
+43. Corregir - to correct
 Pronoun 	Present Tense	Past Tense
 yo 	corrijo	corregí
 tú	corriges	corregiste
@@ -461,7 +519,7 @@ tú	corriges	corregiste
 nosotros	corregimos	corregimos
 ustedes	corrijen	corrigieron
 ellos/ellas	corrijen	corrigieron
-44. Despedir – to say goodbye, dismiss, fire
+44. Despedir - to say goodbye, dismiss, fire
 Pronoun 	Present Tense	Past Tense
 yo 	despido	despedí
 tú	despides	despediste
@@ -469,7 +527,7 @@ tú	despides	despediste
 nosotros	despedimos	despedimos
 ustedes	despiden	despidieron
 ellos/ellas	despiden	despidieron
-45. Elegir – to choose
+45. Elegir - to choose
 Pronoun 	Present Tense	Past Tense
 yo 	elijo	elegí
 tú	eliges	elegiste
@@ -477,7 +535,7 @@ tú	eliges	elegiste
 nosotros	elegimos	elegimos
 ustedes	eligen	eligieron
 ellos/ellas	eligen	eligieron
-46. Medir – to measure
+46. Medir - to measure
 Pronoun 	Present Tense	Past Tense
 yo 	mido	medí
 tú	mides	mediste
@@ -485,7 +543,7 @@ tú	mides	mediste
 nosotros	medimos	medimos
 ustedes	miden	midieron
 ellos/ellas	miden	midieron
-47. Pedir – to ask for
+47. Pedir - to ask for
 Pronoun 	Present Tense	Past Tense
 yo 	pido	pedí
 tú	pides	pediste
@@ -493,7 +551,7 @@ tú	pides	pediste
 nosotros	pedimos	pedimos
 ustedes	piden	pidieron
 ellos/ellas	piden	pidieron
-48. Repetir – to repeat
+48. Repetir - to repeat
 Pronoun 	Present Tense	Past Tense
 yo 	repito	repetí
 tú	repite	repetiste
@@ -501,7 +559,7 @@ tú	repite	repetiste
 nosotros	repetimos	repetimos
 ustedes	repiten	repitieron
 ellos/ellas	repiten	repitieron
-49. Seguir – to follow
+49. Seguir - to follow
 Pronoun 	Present Tense	Past Tense
 yo 	sigo	seguí
 tú	sigues	seguiste
@@ -509,7 +567,7 @@ tú	sigues	seguiste
 nosotros	seguimos	seguimos
 ustedes	siguen	siguieron
 ellos/ellas	siguen	siguieron
-50. Servir – to serve
+50. Servir - to serve
 Pronoun 	Present Tense	Past Tense
 yo 	sirvo	serví
 tú	sirves	serviste
