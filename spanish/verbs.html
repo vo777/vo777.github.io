@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Spanish verbs</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../langscripts/styles.css">
+
+</head>
+
+<body>
+  <a href="./index.html">Back</a> to main page.<br>
+  <h3>Spanish verbs</h3>
+  <h4>*** work in progress ***</h4>
+  Verb: <input type="text" id="text1" value="hablar" size=100 />
+  <br>
+  <button onclick="">Random and say</button>
+  <button onclick="">Say</button>
+  <br>
+  <br>
+  
+  <div id="res_div">---</div>
+  <br>
+  <table id="table1"></table>
+
+  <script src="../langscripts/speaker.js"></script>
+  <script src="verbs.js"></script>
+
+  <script>
+  
+    const parsedData = {};
+    const table1 = document.getElementById('table1');
+    const text1 = document.getElementById('text1');
+
+	init();
+	conjugate();
+
+	listVoices('es');
+	
+  </script>
+
+</body>
+
+</html>
