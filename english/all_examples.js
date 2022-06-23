@@ -147,5 +147,46 @@ I've never seen
 /
 France
 Paris
+=
+
+They seem very well.
+You seem very well.
+You look very well.
+You seem not well.
+Today you seem well.
+I hope you will get well.
+They seem better today than yesterday.
+
+Do they seem well?
+Did they seem well?
+Will they seem well?
+
+Do they seem well this time?
+Do they seem well today?
+==
+
+They remember you.
+You reember them.
+They don't remember you.
+Do they remember you?
+Do they remember us?
+
+=
+
+I want to drink water.
+I want a cake.
+Do you want water?
+Do you want to drink water?
+Do they want water?
+Do they want to drink water?
+Does he want water?
+Does he want to drink water?
+Do they want water now?
+Do they want to drink water now?
+=
+
+
+
+
 `
 ;
