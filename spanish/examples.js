@@ -3088,6 +3088,132 @@ nosotros no tomamos
 vosotros no tomais
 ellos no toman
 =
+amigo, amigos
+=
+yo pregunto
+tu preguntas
+el pregunta
+ella pregunta
+Usted pregunta
+nosotros preguntamos
+vosotros preguntais
+ellos, ellas preguntan
+=
+yo no contesto
+tu no contestas
+el, ella no contesta
+Usted no contesta
+nosotros no contestamos
+vosotros no contestais
+ellos no contestan
+=
+yo como
+tu comes
+el, ella come
+Usted come
+nosotros comemos
+vosotros comeis
+ellos comen
+=
+yo bebo
+tu bebes
+el, ella bebe
+Usted bebe
+nosotros bebemos
+vosotros bebeis
+ellos beben
+=
+yo vivo
+tu vives
+el,ella vive
+Usted vive
+nosotros vivimos
+vosotros vivis
+ellos viven
+=
+yo soy
+ty eres
+el, ella es
+esto es
+Usted es
+nosotros somos
+vosotros sois
+ellos son
+=
+que?
+que te comes?
+=
+quien?
+quien habla?
+=
+donde?
+donde vives?
+=
+cuando tu descansas?
+=
+por que?
+por que no trabajas?
+=
+como?
+como te llamas?
+=
+cuanto?
+cuantos amigos?
+cuantas amigas?
+=
+cuanto cuesta?
+cuanto es esto?
+=
+quien?
+que?
+donde?
+a donde?
+de donde?
+cuando?
+por que?
+como?
+cuanto?
+=
+como te llamas?
+donde vives?
+donde trabajas?
+quien eres?
+que eres?
+=
+actor - actriz
+teatro - cine
+cantante
+bien, muy bien, mal, asi-asi
+muy interesante
+esto es muy interesante
+gustar
+me gusta
+te gusta
+ella me gusta
+me gusta cantar
+me gusta bailar
+no me gusta
+tu me gustas
+yo te gusto
+interesar
+no me interesa a quien tu gustas
+tu me interesas
+como te gusta descansar?
+me gusta viajar en Europa
+=
+que tal?
+yo estoy
+yo estoy en Moscu
+tu estas
+como estas?
+como esta Usted?
+yo estoy bien
+el, ella, Usted esta
+donde esta?
+nosotros estamos
+vosotros estais
+ellos estan
+=
 
 
 
