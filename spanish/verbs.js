@@ -122,17 +122,18 @@ function conjugate()
 	if (word in data.dict)
 	{
 		acc += word + ' --> ' + data.dict[word] + '<br>';
-		for (let i=0; i<6; ++i)
-		{
-			const line = pronouns[i] + ' ' + past(word, i) + ', ' + pronouns[i] + ' ' + present(word, i) +', ' + pronouns[i] + ' ' + future(word,i);
-			acc += `<span onclick='sayBrk("${line}")'>${line}</span><br>`
-			textToSay.push(line);
-		}		
 	}
 	else
 	{
 		acc += word + '<br>';
 	}
+	
+	for (let i=0; i<6; ++i)
+	{
+		const line = pronouns[i] + ' ' + past(word, i) + ', ' + pronouns[i] + ' ' + present(word, i) +', ' + pronouns[i] + ' ' + future(word,i);
+		acc += `<span onclick='sayBrk("${line}")'>${line}</span><br>`
+			textToSay.push(line);
+	}		
 	
 	res_div.innerHTML = acc;
 }
