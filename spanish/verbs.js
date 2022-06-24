@@ -23,11 +23,11 @@ function make_table()
 	for (let word of Object.keys(data.dict)) 
 	{
 		const eng = 'to ' + data.dict[word];
-		//console.log(word + " -> " + eng);
+		//console.log(word + " : " + eng);
 		{
 			const row = table1.insertRow(-1);
 			const cell = row.insertCell(0);
-			cell.innerHTML = word + " -> " + eng;
+			cell.innerHTML = word + " : " + eng;
 		}
 		{
 			const row = table1.insertRow(-1);
@@ -121,7 +121,7 @@ function conjugate()
 	
 	if (word in data.dict)
 	{
-		acc += word + ' --> ' + data.dict[word] + '<br>';
+		acc += word + ' : ' + data.dict[word] + '<br>';
 	}
 	else
 	{
@@ -223,7 +223,7 @@ const pronouns = [
 'tu',
 'el, ella, Usted',
 'nosotros',
-'vosotros',
+'ustedes',
 'ellos, ellas'
 ];
 
