@@ -39,6 +39,13 @@ function make_table()
 				
 				//acc += text_to_show + '<br>';
 				acc += `<span onclick='sayBrk("${text_to_show}")'>${text_to_show}</span><br>`;
+				
+				if (i==2)
+				{
+					const text_to_show = 'Usted ' + past(word, i) + ', Usted ' + ' ' + present(word, i) +', Usted ' + ' ' + future(word,i);
+				
+					acc += `<span onclick='sayBrk("${text_to_show}")'>${text_to_show}</span><br>`;
+				}
 			}
 			cell.innerHTML = acc;
 		}
@@ -133,6 +140,12 @@ function conjugate()
 		const line = pronouns[i] + ' ' + past(word, i) + ', ' + pronouns[i] + ' ' + present(word, i) +', ' + pronouns[i] + ' ' + future(word,i);
 		acc += `<span onclick='sayBrk("${line}")'>${line}</span><br>`
 			textToSay.push(line);
+			
+		if (i==2)
+		{
+			const line = 'Usted ' + past(word, i) + ', Usted ' +  present(word, i) + ', Usted ' + future(word,i);
+			acc += `<span onclick='sayBrk("${line}")'>${line}</span><br>`
+			textToSay.push(line);		}
 	}		
 	
 	res_div.innerHTML = acc;
@@ -199,7 +212,7 @@ function future(verb, n)
 	const res = voya[n] + ' ' + verb;
 	return res;
 }
-
+/*
 const ar0 = ['e', 'aste', 'o', 'amos', 'asteis', 'aron'];
 const ar1 = ['o', 'as', 'a', 'amos', 'ais', 'an'];
 
@@ -208,6 +221,15 @@ const er1 = ['o', 'es', 'e', 'emos', 'eis', 'en'];
 
 const ir0 = er0;
 const ir1 = ['o', 'es', 'e', 'imos', 'is', 'en'];
+*/
+const ar0 = ['e', 'aste', 'o', 'amos', 'aron', 'aron'];
+const ar1 = ['o', 'as', 'a', 'amos', 'an', 'an'];
+
+const er0 = ['i', 'iste', 'io', 'imos', 'ieron', 'ieron'];
+const er1 = ['o', 'es', 'e', 'emos', 'en', 'en'];
+
+const ir0 = er0;
+const ir1 = ['o', 'es', 'e', 'imos', 'en', 'en'];
 
 const voya = [
 'voy a',
@@ -221,10 +243,10 @@ const voya = [
 const pronouns = [
 'yo',
 'tu',
-'el, ella, Usted',
+'el',
 'nosotros',
 'ustedes',
-'ellos, ellas'
+'ellos'
 ];
 
 const top100 = `

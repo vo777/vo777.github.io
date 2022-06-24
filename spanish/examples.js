@@ -3372,10 +3372,12 @@ toda parte, alguna parte, ninguna parte
 todo, algo, nada
 =
 
+
 =
 yo fui, yo soy, yo voy a ser
 tu fuiste, tu eres, tu vas a ser
 el fue, el es, el va a ser
+Usted fue, Usted es, Usted va a ser
 nosotros fuimos, nosotros somos, nosotros vamos a ser
 ustedes fueron, ustedes son, ustedes van a ser
 ellos fueron, ellos son, ellos van a ser
@@ -3383,6 +3385,7 @@ ellos fueron, ellos son, ellos van a ser
 yo estuve, yo estoy, yo voy a estar
 tu estuviste, tu estás, tu vas a estar
 el estuvo, el está, el va a estar
+Usted estuvo, Usted está, Usted va a estar
 nosotros estuvimos, nosotros estamos, nosotros vamos a estar
 ustedes estuvieron, ustedes están, ustedes van a estar
 ellos estuvieron, ellos están, ellos van a estar
@@ -3390,6 +3393,7 @@ ellos estuvieron, ellos están, ellos van a estar
 yo tuve, yo tengo, yo voy a tener
 tu tuviste, tu tienes, tu vas a tener
 el tuvo, el tiene, el va a tener
+Usted tuvo, Usted tiene, Usted va a tener
 nosotros tuvimos, nosotros tenemos, nosotros vamos a tener
 ustedes tuvieron, ustedes tienen, ustedes van a tener
 ellos tuvieron, ellos tienen, ellos van a tener
@@ -3397,6 +3401,7 @@ ellos tuvieron, ellos tienen, ellos van a tener
 yo hice, yo hago, yo voy a hacer
 tu hiciste, tu haces, tu vas a hacer
 el hizo, el hace, el va a hacer
+Usted hizo, Usted hace, Usted va a hacer
 nosotros hicimos, nosotros hacemos, nosotros vamos a hacer
 ustedes hicieron, ustedes hacen, ustedes van a hacer
 ellos hicieron, ellos hacen, ellos van a hacer
@@ -3404,6 +3409,7 @@ ellos hicieron, ellos hacen, ellos van a hacer
 yo pude, yo puedo, yo voy a poder
 tu pudiste, tu puedes, tu vas a poder
 el pudo, el puede, el va a poder
+Usted pudo, Usted puede, Usted va a poder
 nosotros pudimos, nosotros podemos, nosotros vamos a poder
 ustedes pudieron, ustedes pueden, ustedes van a poder
 ellos pudieron, ellos pueden, ellos van a poder
@@ -3411,6 +3417,7 @@ ellos pudieron, ellos pueden, ellos van a poder
 yo dije, yo digo, yo voy a decir
 tu dijiste, tu dices, tu vas a decir
 el dijo, el dice, el va a decir
+Usted dijo, Usted dice, Usted va a decir
 nosotros dijimos, nosotros decimos, nosotros vamos a decir
 ustedes dijeron, ustedes dicen, ustedes van a decir
 ellos dijeron, ellos dicen, ellos van a decir
@@ -3418,6 +3425,7 @@ ellos dijeron, ellos dicen, ellos van a decir
 yo hube, yo he, yo voy a haber
 tu hubiste, tu has, tu vas a haber
 el hubo, el ha, el va a haber
+Usted hubo, Usted ha, Usted va a haber
 nosotros hubimos, nosotros hemos, nosotros vamos a haber
 ustedes hubieron, ustedes han, ustedes van a haber
 ellos hubieron, ellos han, ellos van a haber
@@ -3425,6 +3433,7 @@ ellos hubieron, ellos han, ellos van a haber
 yo fui, yo voy, yo voy a ir
 tu fuiste, tu vas, tu vas a ir
 el fue, el va, el va a ir
+Usted fue, Usted va, Usted va a ir
 nosotros fuimos, nosotros vamos, nosotros vamos a ir
 ustedes fueron, ustedes van, ustedes van a ir
 ellos fueron, ellos van, ellos van a ir
@@ -3432,6 +3441,7 @@ ellos fueron, ellos van, ellos van a ir
 yo di, yo doy, yo voy a dar
 tu diste, tu das, tu vas a dar
 el dio, el da, el va a dar
+Usted dio, Usted da, Usted va a dar
 nosotros diimos, nosotros damos, nosotros vamos a dar
 ustedes dieron, ustedes dan, ustedes van a dar
 ellos dieron, ellos dan, ellos van a dar
@@ -3439,6 +3449,7 @@ ellos dieron, ellos dan, ellos van a dar
 yo vi, yo veo, yo voy a ver
 tu viste, tu ves, tu vas a ver
 el vio, el ve, el va a ver
+Usted vio, Usted ve, Usted va a ver
 nosotros vimos, nosotros vemos, nosotros vamos a ver
 ustedes vieron, ustedes ven, ustedes van a ver
 ellos vieron, ellos ven, ellos van a ver
@@ -3446,6 +3457,7 @@ ellos vieron, ellos ven, ellos van a ver
 yo supe, yo sé, yo voy a saber
 tu supiste, tu sabes, tu vas a saber
 el supo, el sabe, el va a saber
+Usted supo, Usted sabe, Usted va a saber
 nosotros supimos, nosotros sabemos, nosotros vamos a saber
 ustedes supieron, ustedes saben, ustedes van a saber
 ellos supieron, ellos saben, ellos van a saber
@@ -3453,48 +3465,55 @@ ellos supieron, ellos saben, ellos van a saber
 yo pase, yo paso, yo voy a pasar
 tu pasaste, tu pasas, tu vas a pasar
 el paso, el pasa, el va a pasar
+Usted paso, Usted pasa, Usted va a pasar
 nosotros pasamos, nosotros pasamos, nosotros vamos a pasar
-ustedes pasasteis, ustedes pasais, ustedes van a pasar
+ustedes pasaron, ustedes pasan, ustedes van a pasar
 ellos pasaron, ellos pasan, ellos van a pasar
 =
 yo debi, yo debo, yo voy a deber
 tu debiste, tu debes, tu vas a deber
 el debio, el debe, el va a deber
+Usted debio, Usted debe, Usted va a deber
 nosotros debimos, nosotros debemos, nosotros vamos a deber
-ustedes debisteis, ustedes debeis, ustedes van a deber
+ustedes debieron, ustedes deben, ustedes van a deber
 ellos debieron, ellos deben, ellos van a deber
 =
 yo queri, yo quero, yo voy a querer
 tu queriste, tu queres, tu vas a querer
 el querio, el quere, el va a querer
+Usted querio, Usted quere, Usted va a querer
 nosotros querimos, nosotros queremos, nosotros vamos a querer
-ustedes queristeis, ustedes quereis, ustedes van a querer
+ustedes querieron, ustedes queren, ustedes van a querer
 ellos querieron, ellos queren, ellos van a querer
 =
 yo llege, yo llego, yo voy a llegar
 tu llegaste, tu llegas, tu vas a llegar
 el llego, el llega, el va a llegar
+Usted llego, Usted llega, Usted va a llegar
 nosotros llegamos, nosotros llegamos, nosotros vamos a llegar
-ustedes llegasteis, ustedes llegais, ustedes van a llegar
+ustedes llegaron, ustedes llegan, ustedes van a llegar
 ellos llegaron, ellos llegan, ellos van a llegar
 =
 yo deje, yo dejo, yo voy a dejar
 tu dejaste, tu dejas, tu vas a dejar
 el dejo, el deja, el va a dejar
+Usted dejo, Usted deja, Usted va a dejar
 nosotros dejamos, nosotros dejamos, nosotros vamos a dejar
-ustedes dejasteis, ustedes dejais, ustedes van a dejar
+ustedes dejaron, ustedes dejan, ustedes van a dejar
 ellos dejaron, ellos dejan, ellos van a dejar
 =
 yo lleve, yo llevo, yo voy a llevar
 tu llevaste, tu llevas, tu vas a llevar
 el llevo, el lleva, el va a llevar
+Usted llevo, Usted lleva, Usted va a llevar
 nosotros llevamos, nosotros llevamos, nosotros vamos a llevar
-ustedes llevasteis, ustedes llevais, ustedes van a llevar
+ustedes llevaron, ustedes llevan, ustedes van a llevar
 ellos llevaron, ellos llevan, ellos van a llevar
 =
 yo encontré, yo encuentro, yo voy a encontrar
 tu encontraste, tu encuentras, tu vas a encontrar
 el encontró, el encuentra, el va a encontrar
+Usted encontró, Usted encuentra, Usted va a encontrar
 nosotros encontramos, nosotros encontramos, nosotros vamos a encontrar
 ustedes encontraron, ustedes encuentran, ustedes van a encontrar
 ellos encontraron, ellos encuentran, ellos van a encontrar
@@ -3502,6 +3521,7 @@ ellos encontraron, ellos encuentran, ellos van a encontrar
 yo seguí, yo sigo, yo voy a seguir
 tu seguiste, tu sigues, tu vas a seguir
 el siguió, el sigue, el va a seguir
+Usted siguió, Usted sigue, Usted va a seguir
 nosotros seguimos, nosotros seguimos, nosotros vamos a seguir
 ustedes siguieron, ustedes siguen, ustedes van a seguir
 ellos siguieron, ellos siguen, ellos van a seguir
@@ -3509,6 +3529,7 @@ ellos siguieron, ellos siguen, ellos van a seguir
 yo puse, yo pongo, yo voy a poner
 tu pusiste, tu pones, tu vas a poner
 el puso, el pone, el va a poner
+Usted puso, Usted pone, Usted va a poner
 nosotros pusimos, nosotros ponemos, nosotros vamos a poner
 ustedes pusieron, ustedes ponen, ustedes van a poner
 ellos pusieron, ellos ponen, ellos van a poner
@@ -3516,27 +3537,31 @@ ellos pusieron, ellos ponen, ellos van a poner
 yo quede, yo quedo, yo voy a quedarse
 tu quedaste, tu quedas, tu vas a quedarse
 el quedo, el queda, el va a quedarse
+Usted quedo, Usted queda, Usted va a quedarse
 nosotros quedamos, nosotros quedamos, nosotros vamos a quedarse
-ustedes quedasteis, ustedes quedais, ustedes van a quedarse
+ustedes quedaron, ustedes quedan, ustedes van a quedarse
 ellos quedaron, ellos quedan, ellos van a quedarse
 =
 yo pareci, yo pareco, yo voy a parecer
 tu pareciste, tu pareces, tu vas a parecer
 el parecio, el parece, el va a parecer
+Usted parecio, Usted parece, Usted va a parecer
 nosotros parecimos, nosotros parecemos, nosotros vamos a parecer
-ustedes parecisteis, ustedes pareceis, ustedes van a parecer
+ustedes parecieron, ustedes parecen, ustedes van a parecer
 ellos parecieron, ellos parecen, ellos van a parecer
 =
 yo hable, yo hablo, yo voy a hablar
 tu hablaste, tu hablas, tu vas a hablar
 el hablo, el habla, el va a hablar
+Usted hablo, Usted habla, Usted va a hablar
 nosotros hablamos, nosotros hablamos, nosotros vamos a hablar
-ustedes hablasteis, ustedes hablais, ustedes van a hablar
+ustedes hablaron, ustedes hablan, ustedes van a hablar
 ellos hablaron, ellos hablan, ellos van a hablar
 =
 yo pensé, yo pienso, yo voy a pensar
 tu pensaste, tu piensas, tu vas a pensar
 el pensó, el piensa, el va a pensar
+Usted pensó, Usted piensa, Usted va a pensar
 nosotros pensamos, nosotros pensamos, nosotros vamos a pensar
 ustedes pensaron, ustedes piensan, ustedes van a pensar
 ellos pensaron, ellos piensan, ellos van a pensar
@@ -3544,6 +3569,7 @@ ellos pensaron, ellos piensan, ellos van a pensar
 yo volví, yo vuelvo, yo voy a volver
 tu volviste, tu vuelves, tu vas a volver
 el volvió, el vuelve, el va a volver
+Usted volvió, Usted vuelve, Usted va a volver
 nosotros volvimos, nosotros volvemos, nosotros vamos a volver
 ustedes volvieron, ustedes vuelven, ustedes van a volver
 ellos volvieron, ellos vuelven, ellos van a volver
@@ -3551,6 +3577,7 @@ ellos volvieron, ellos vuelven, ellos van a volver
 yo conocí, yo conozco, yo voy a conocer
 tu conociste, tu conoces, tu vas a conocer
 el conoció, el conoce, el va a conocer
+Usted conoció, Usted conoce, Usted va a conocer
 nosotros conocimos, nosotros conocemos, nosotros vamos a conocer
 ustedes conocieron, ustedes conocen, ustedes van a conocer
 ellos conocieron, ellos conocen, ellos van a conocer
@@ -3558,6 +3585,7 @@ ellos conocieron, ellos conocen, ellos van a conocer
 yo salí, yo salgo, yo voy a salir
 tu saliste, tu sales, tu vas a salir
 el salió, el sale, el va a salir
+Usted salió, Usted sale, Usted va a salir
 nosotros salimos, nosotros salimos, nosotros vamos a salir
 ustedes salieron, ustedes salen, ustedes van a salir
 ellos salieron, ellos salen, ellos van a salir
@@ -3565,27 +3593,31 @@ ellos salieron, ellos salen, ellos van a salir
 yo realize, yo realizo, yo voy a realizar
 tu realizaste, tu realizas, tu vas a realizar
 el realizo, el realiza, el va a realizar
+Usted realizo, Usted realiza, Usted va a realizar
 nosotros realizamos, nosotros realizamos, nosotros vamos a realizar
-ustedes realizasteis, ustedes realizais, ustedes van a realizar
+ustedes realizaron, ustedes realizan, ustedes van a realizar
 ellos realizaron, ellos realizan, ellos van a realizar
 =
 yo tome, yo tomo, yo voy a tomar
 tu tomaste, tu tomas, tu vas a tomar
 el tomo, el toma, el va a tomar
+Usted tomo, Usted toma, Usted va a tomar
 nosotros tomamos, nosotros tomamos, nosotros vamos a tomar
-ustedes tomasteis, ustedes tomais, ustedes van a tomar
+ustedes tomaron, ustedes toman, ustedes van a tomar
 ellos tomaron, ellos toman, ellos van a tomar
 =
 yo trate, yo trato, yo voy a tratar
 tu trataste, tu tratas, tu vas a tratar
 el trato, el trata, el va a tratar
+Usted trato, Usted trata, Usted va a tratar
 nosotros tratamos, nosotros tratamos, nosotros vamos a tratar
-ustedes tratasteis, ustedes tratais, ustedes van a tratar
+ustedes trataron, ustedes tratan, ustedes van a tratar
 ellos trataron, ellos tratan, ellos van a tratar
 =
 yo conté, yo cuento, yo voy a contar
 tu contaste, tu cuentas, tu vas a contar
 el contó, el cuenta, el va a contar
+Usted contó, Usted cuenta, Usted va a contar
 nosotros contamos, nosotros contamos, nosotros vamos a contar
 ustedes contaron, ustedes cuentan, ustedes van a contar
 ellos contaron, ellos cuentan, ellos van a contar
@@ -3593,13 +3625,15 @@ ellos contaron, ellos cuentan, ellos van a contar
 yo llame, yo llamo, yo voy a llamarse
 tu llamaste, tu llamas, tu vas a llamarse
 el llamo, el llama, el va a llamarse
+Usted llamo, Usted llama, Usted va a llamarse
 nosotros llamamos, nosotros llamamos, nosotros vamos a llamarse
-ustedes llamasteis, ustedes llamais, ustedes van a llamarse
+ustedes llamaron, ustedes llaman, ustedes van a llamarse
 ellos llamaron, ellos llaman, ellos van a llamarse
 =
 yo vine, yo vengo, yo voy a venir
 tu viniste, tu vienes, tu vas a venir
 el vino, el viene, el va a venir
+Usted vino, Usted viene, Usted va a venir
 nosotros vinimos, nosotros venimos, nosotros vamos a venir
 ustedes vinieron, ustedes vienen, ustedes van a venir
 ellos vinieron, ellos vienen, ellos van a venir
@@ -3607,34 +3641,39 @@ ellos vinieron, ellos vienen, ellos van a venir
 yo mire, yo miro, yo voy a mirar
 tu miraste, tu miras, tu vas a mirar
 el miro, el mira, el va a mirar
+Usted miro, Usted mira, Usted va a mirar
 nosotros miramos, nosotros miramos, nosotros vamos a mirar
-ustedes mirasteis, ustedes mirais, ustedes van a mirar
+ustedes miraron, ustedes miran, ustedes van a mirar
 ellos miraron, ellos miran, ellos van a mirar
 =
 yo presente, yo presento, yo voy a presentar
 tu presentaste, tu presentas, tu vas a presentar
 el presento, el presenta, el va a presentar
+Usted presento, Usted presenta, Usted va a presentar
 nosotros presentamos, nosotros presentamos, nosotros vamos a presentar
-ustedes presentasteis, ustedes presentais, ustedes van a presentar
+ustedes presentaron, ustedes presentan, ustedes van a presentar
 ellos presentaron, ellos presentan, ellos van a presentar
 =
 yo permiti, yo permito, yo voy a permitir
 tu permitiste, tu permites, tu vas a permitir
 el permitio, el permite, el va a permitir
+Usted permitio, Usted permite, Usted va a permitir
 nosotros permitimos, nosotros permitimos, nosotros vamos a permitir
-ustedes permitisteis, ustedes permitis, ustedes van a permitir
+ustedes permitieron, ustedes permiten, ustedes van a permitir
 ellos permitieron, ellos permiten, ellos van a permitir
 =
 yo espere, yo espero, yo voy a esperar
 tu esperaste, tu esperas, tu vas a esperar
 el espero, el espera, el va a esperar
+Usted espero, Usted espera, Usted va a esperar
 nosotros esperamos, nosotros esperamos, nosotros vamos a esperar
-ustedes esperasteis, ustedes esperais, ustedes van a esperar
+ustedes esperaron, ustedes esperan, ustedes van a esperar
 ellos esperaron, ellos esperan, ellos van a esperar
 =
 yo sentí, yo siento, yo voy a sentir
 tu sentiste, tu sientes, tu vas a sentir
 el sintió, el siente, el va a sentir
+Usted sintió, Usted siente, Usted va a sentir
 nosotros sentimos, nosotros sentimos, nosotros vamos a sentir
 ustedes sintieron, ustedes sienten, ustedes van a sentir
 ellos sintieron, ellos sienten, ellos van a sentir
@@ -3642,34 +3681,39 @@ ellos sintieron, ellos sienten, ellos van a sentir
 yo vivi, yo vivo, yo voy a vivir
 tu viviste, tu vives, tu vas a vivir
 el vivio, el vive, el va a vivir
+Usted vivio, Usted vive, Usted va a vivir
 nosotros vivimos, nosotros vivimos, nosotros vamos a vivir
-ustedes vivisteis, ustedes vivis, ustedes van a vivir
+ustedes vivieron, ustedes viven, ustedes van a vivir
 ellos vivieron, ellos viven, ellos van a vivir
 =
 yo busce, yo busco, yo voy a buscar
 tu buscaste, tu buscas, tu vas a buscar
 el busco, el busca, el va a buscar
+Usted busco, Usted busca, Usted va a buscar
 nosotros buscamos, nosotros buscamos, nosotros vamos a buscar
-ustedes buscasteis, ustedes buscais, ustedes van a buscar
+ustedes buscaron, ustedes buscan, ustedes van a buscar
 ellos buscaron, ellos buscan, ellos van a buscar
 =
 yo crei, yo creo, yo voy a creer
 tu creiste, tu crees, tu vas a creer
 el creio, el cree, el va a creer
+Usted creio, Usted cree, Usted va a creer
 nosotros creimos, nosotros creemos, nosotros vamos a creer
-ustedes creisteis, ustedes creeis, ustedes van a creer
+ustedes creieron, ustedes creen, ustedes van a creer
 ellos creieron, ellos creen, ellos van a creer
 =
 yo cree, yo creo, yo voy a crear
 tu creaste, tu creas, tu vas a crear
 el creo, el crea, el va a crear
+Usted creo, Usted crea, Usted va a crear
 nosotros creamos, nosotros creamos, nosotros vamos a crear
-ustedes creasteis, ustedes creais, ustedes van a crear
+ustedes crearon, ustedes crean, ustedes van a crear
 ellos crearon, ellos crean, ellos van a crear
 =
 yo perdí, yo pierdo, yo voy a perder
 tu perdiste, tu pierdes, tu vas a perder
 el perdió, el pierde, el va a perder
+Usted perdió, Usted pierde, Usted va a perder
 nosotros perdimos, nosotros perdemos, nosotros vamos a perder
 ustedes perdieron, ustedes pierden, ustedes van a perder
 ellos perdieron, ellos pierden, ellos van a perder
@@ -3677,62 +3721,71 @@ ellos perdieron, ellos pierden, ellos van a perder
 yo existi, yo existo, yo voy a existir
 tu exististe, tu existes, tu vas a existir
 el existio, el existe, el va a existir
+Usted existio, Usted existe, Usted va a existir
 nosotros existimos, nosotros existimos, nosotros vamos a existir
-ustedes exististeis, ustedes existis, ustedes van a existir
+ustedes existieron, ustedes existen, ustedes van a existir
 ellos existieron, ellos existen, ellos van a existir
 =
 yo considere, yo considero, yo voy a considerar
 tu consideraste, tu consideras, tu vas a considerar
 el considero, el considera, el va a considerar
+Usted considero, Usted considera, Usted va a considerar
 nosotros consideramos, nosotros consideramos, nosotros vamos a considerar
-ustedes considerasteis, ustedes considerais, ustedes van a considerar
+ustedes consideraron, ustedes consideran, ustedes van a considerar
 ellos consideraron, ellos consideran, ellos van a considerar
 =
 yo abri, yo abro, yo voy a abrir
 tu abriste, tu abres, tu vas a abrir
 el abrio, el abre, el va a abrir
+Usted abrio, Usted abre, Usted va a abrir
 nosotros abrimos, nosotros abrimos, nosotros vamos a abrir
-ustedes abristeis, ustedes abris, ustedes van a abrir
+ustedes abrieron, ustedes abren, ustedes van a abrir
 ellos abrieron, ellos abren, ellos van a abrir
 =
 yo trabaje, yo trabajo, yo voy a trabajar
 tu trabajaste, tu trabajas, tu vas a trabajar
 el trabajo, el trabaja, el va a trabajar
+Usted trabajo, Usted trabaja, Usted va a trabajar
 nosotros trabajamos, nosotros trabajamos, nosotros vamos a trabajar
-ustedes trabajasteis, ustedes trabajais, ustedes van a trabajar
+ustedes trabajaron, ustedes trabajan, ustedes van a trabajar
 ellos trabajaron, ellos trabajan, ellos van a trabajar
 =
 yo recibi, yo recibo, yo voy a recibir
 tu recibiste, tu recibes, tu vas a recibir
 el recibio, el recibe, el va a recibir
+Usted recibio, Usted recibe, Usted va a recibir
 nosotros recibimos, nosotros recibimos, nosotros vamos a recibir
-ustedes recibisteis, ustedes recibis, ustedes van a recibir
+ustedes recibieron, ustedes reciben, ustedes van a recibir
 ellos recibieron, ellos reciben, ellos van a recibir
 =
 yo manteni, yo manteno, yo voy a mantener
 tu manteniste, tu mantenes, tu vas a mantener
 el mantenio, el mantene, el va a mantener
+Usted mantenio, Usted mantene, Usted va a mantener
 nosotros mantenimos, nosotros mantenemos, nosotros vamos a mantener
-ustedes mantenisteis, ustedes manteneis, ustedes van a mantener
+ustedes mantenieron, ustedes mantenen, ustedes van a mantener
 ellos mantenieron, ellos mantenen, ellos van a mantener
 =
 yo explice, yo explico, yo voy a explicar
 tu explicaste, tu explicas, tu vas a explicar
 el explico, el explica, el va a explicar
+Usted explico, Usted explica, Usted va a explicar
 nosotros explicamos, nosotros explicamos, nosotros vamos a explicar
-ustedes explicasteis, ustedes explicais, ustedes van a explicar
+ustedes explicaron, ustedes explican, ustedes van a explicar
 ellos explicaron, ellos explican, ellos van a explicar
 =
 yo logre, yo logro, yo voy a lograr
 tu lograste, tu logras, tu vas a lograr
 el logro, el logra, el va a lograr
+Usted logro, Usted logra, Usted va a lograr
 nosotros logramos, nosotros logramos, nosotros vamos a lograr
-ustedes lograsteis, ustedes lograis, ustedes van a lograr
+ustedes lograron, ustedes logran, ustedes van a lograr
 ellos lograron, ellos logran, ellos van a lograr
 =
 yo empecé, yo empiezo, yo voy a empezar
 tu empezaste, tu empiezas, tu vas a empezar
 el empezó, el empieza, el va a empezar
+Usted empezó, Usted empieza, Usted va a empezar
 nosotros empezamos, nosotros empezamos, nosotros vamos a empezar
 ustedes empezaron, ustedes empiezan, ustedes van a empezar
 ellos empezaron, ellos empiezan, ellos van a empezar
@@ -3740,6 +3793,7 @@ ellos empezaron, ellos empiezan, ellos van a empezar
 yo recordé, yo recuerdo, yo voy a recordar
 tu recordaste, tu recuerdas, tu vas a recordar
 el recordó, el recuerda, el va a recordar
+Usted recordó, Usted recuerda, Usted va a recordar
 nosotros recordamos, nosotros recordamos, nosotros vamos a recordar
 ustedes recordaron, ustedes recuerdan, ustedes van a recordar
 ellos recordaron, ellos recuerdan, ellos van a recordar
@@ -3747,6 +3801,7 @@ ellos recordaron, ellos recuerdan, ellos van a recordar
 yo comencé, yo comienzo, yo voy a comenzar
 tu comenzaste, tu comienzas, tu vas a comenzar
 el comenzó, el comienza, el va a comenzar
+Usted comenzó, Usted comienza, Usted va a comenzar
 nosotros comenzamos, nosotros comenzamos, nosotros vamos a comenzar
 ustedes comenzaron, ustedes comienzan, ustedes van a comenzar
 ellos comenzaron, ellos comienzan, ellos van a comenzar
@@ -3754,6 +3809,7 @@ ellos comenzaron, ellos comienzan, ellos van a comenzar
 yo pedí, yo pido, yo voy a pedir
 tu pediste, tu pides, tu vas a pedir
 el pidió, el pide, el va a pedir
+Usted pidió, Usted pide, Usted va a pedir
 nosotros pedimos, nosotros pedimos, nosotros vamos a pedir
 ustedes pidieron, ustedes piden, ustedes van a pedir
 ellos pidieron, ellos piden, ellos van a pedir
@@ -3761,62 +3817,71 @@ ellos pidieron, ellos piden, ellos van a pedir
 yo pregunte, yo pregunto, yo voy a preguntar
 tu preguntaste, tu preguntas, tu vas a preguntar
 el pregunto, el pregunta, el va a preguntar
+Usted pregunto, Usted pregunta, Usted va a preguntar
 nosotros preguntamos, nosotros preguntamos, nosotros vamos a preguntar
-ustedes preguntasteis, ustedes preguntais, ustedes van a preguntar
+ustedes preguntaron, ustedes preguntan, ustedes van a preguntar
 ellos preguntaron, ellos preguntan, ellos van a preguntar
 =
 yo produci, yo produco, yo voy a producir
 tu produciste, tu produces, tu vas a producir
 el producio, el produce, el va a producir
+Usted producio, Usted produce, Usted va a producir
 nosotros producimos, nosotros producimos, nosotros vamos a producir
-ustedes producisteis, ustedes producis, ustedes van a producir
+ustedes producieron, ustedes producen, ustedes van a producir
 ellos producieron, ellos producen, ellos van a producir
 =
 yo converti, yo converto, yo voy a convertir
 tu convertiste, tu convertes, tu vas a convertir
 el convertio, el converte, el va a convertir
+Usted convertio, Usted converte, Usted va a convertir
 nosotros convertimos, nosotros convertimos, nosotros vamos a convertir
-ustedes convertisteis, ustedes convertis, ustedes van a convertir
+ustedes convertieron, ustedes converten, ustedes van a convertir
 ellos convertieron, ellos converten, ellos van a convertir
 =
 yo entre, yo entro, yo voy a entrar
 tu entraste, tu entras, tu vas a entrar
 el entro, el entra, el va a entrar
+Usted entro, Usted entra, Usted va a entrar
 nosotros entramos, nosotros entramos, nosotros vamos a entrar
-ustedes entrasteis, ustedes entrais, ustedes van a entrar
+ustedes entraron, ustedes entran, ustedes van a entrar
 ellos entraron, ellos entran, ellos van a entrar
 =
 yo mostre, yo mostro, yo voy a mostrar
 tu mostraste, tu mostras, tu vas a mostrar
 el mostro, el mostra, el va a mostrar
+Usted mostro, Usted mostra, Usted va a mostrar
 nosotros mostramos, nosotros mostramos, nosotros vamos a mostrar
-ustedes mostrasteis, ustedes mostrais, ustedes van a mostrar
+ustedes mostraron, ustedes mostran, ustedes van a mostrar
 ellos mostraron, ellos mostran, ellos van a mostrar
 =
 yo señale, yo señalo, yo voy a señalar
 tu señalaste, tu señalas, tu vas a señalar
 el señalo, el señala, el va a señalar
+Usted señalo, Usted señala, Usted va a señalar
 nosotros señalamos, nosotros señalamos, nosotros vamos a señalar
-ustedes señalasteis, ustedes señalais, ustedes van a señalar
+ustedes señalaron, ustedes señalan, ustedes van a señalar
 ellos señalaron, ellos señalan, ellos van a señalar
 =
 yo escribi, yo escribo, yo voy a escribir
 tu escribiste, tu escribes, tu vas a escribir
 el escribio, el escribe, el va a escribir
+Usted escribio, Usted escribe, Usted va a escribir
 nosotros escribimos, nosotros escribimos, nosotros vamos a escribir
-ustedes escribisteis, ustedes escribis, ustedes van a escribir
+ustedes escribieron, ustedes escriben, ustedes van a escribir
 ellos escribieron, ellos escriben, ellos van a escribir
 =
 yo utilize, yo utilizo, yo voy a utilizar
 tu utilizaste, tu utilizas, tu vas a utilizar
 el utilizo, el utiliza, el va a utilizar
+Usted utilizo, Usted utiliza, Usted va a utilizar
 nosotros utilizamos, nosotros utilizamos, nosotros vamos a utilizar
-ustedes utilizasteis, ustedes utilizais, ustedes van a utilizar
+ustedes utilizaron, ustedes utilizan, ustedes van a utilizar
 ellos utilizaron, ellos utilizan, ellos van a utilizar
 =
 yo entendí, yo entiendo, yo voy a entender
 tu entendiste, tu entiendes, tu vas a entender
 el entendió, el entiende, el va a entender
+Usted entendió, Usted entiende, Usted va a entender
 nosotros entendimos, nosotros entendemos, nosotros vamos a entender
 ustedes entendieron, ustedes entienden, ustedes van a entender
 ellos entendieron, ellos entienden, ellos van a entender
@@ -3824,27 +3889,31 @@ ellos entendieron, ellos entienden, ellos van a entender
 yo termine, yo termino, yo voy a terminar
 tu terminaste, tu terminas, tu vas a terminar
 el termino, el termina, el va a terminar
+Usted termino, Usted termina, Usted va a terminar
 nosotros terminamos, nosotros terminamos, nosotros vamos a terminar
-ustedes terminasteis, ustedes terminais, ustedes van a terminar
+ustedes terminaron, ustedes terminan, ustedes van a terminar
 ellos terminaron, ellos terminan, ellos van a terminar
 =
 yo gane, yo gano, yo voy a ganar
 tu ganaste, tu ganas, tu vas a ganar
 el gano, el gana, el va a ganar
+Usted gano, Usted gana, Usted va a ganar
 nosotros ganamos, nosotros ganamos, nosotros vamos a ganar
-ustedes ganasteis, ustedes ganais, ustedes van a ganar
+ustedes ganaron, ustedes ganan, ustedes van a ganar
 ellos ganaron, ellos ganan, ellos van a ganar
 =
 yo inclui, yo incluo, yo voy a incluir
 tu incluiste, tu inclues, tu vas a incluir
 el incluio, el inclue, el va a incluir
+Usted incluio, Usted inclue, Usted va a incluir
 nosotros incluimos, nosotros incluimos, nosotros vamos a incluir
-ustedes incluisteis, ustedes incluis, ustedes van a incluir
+ustedes incluieron, ustedes incluen, ustedes van a incluir
 ellos incluieron, ellos incluen, ellos van a incluir
 =
 yo morí, yo muero, yo voy a morir
 tu moriste, tu mueres, tu vas a morir
 el murió, el muere, el va a morir
+Usted murió, Usted muere, Usted va a morir
 nosotros morimos, nosotros morimos, nosotros vamos a morir
 ustedes murieron, ustedes mueren, ustedes van a morir
 ellos murieron, ellos mueren, ellos van a morir
@@ -3852,27 +3921,31 @@ ellos murieron, ellos mueren, ellos van a morir
 yo asegure, yo aseguro, yo voy a asegurar
 tu aseguraste, tu aseguras, tu vas a asegurar
 el aseguro, el asegura, el va a asegurar
+Usted aseguro, Usted asegura, Usted va a asegurar
 nosotros aseguramos, nosotros aseguramos, nosotros vamos a asegurar
-ustedes asegurasteis, ustedes asegurais, ustedes van a asegurar
+ustedes aseguraron, ustedes aseguran, ustedes van a asegurar
 ellos aseguraron, ellos aseguran, ellos van a asegurar
 =
 yo ocurri, yo ocurro, yo voy a ocurrir
 tu ocurriste, tu ocurres, tu vas a ocurrir
 el ocurrio, el ocurre, el va a ocurrir
+Usted ocurrio, Usted ocurre, Usted va a ocurrir
 nosotros ocurrimos, nosotros ocurrimos, nosotros vamos a ocurrir
-ustedes ocurristeis, ustedes ocurris, ustedes van a ocurrir
+ustedes ocurrieron, ustedes ocurren, ustedes van a ocurrir
 ellos ocurrieron, ellos ocurren, ellos van a ocurrir
 =
 yo ofreci, yo ofreco, yo voy a ofrecer
 tu ofreciste, tu ofreces, tu vas a ofrecer
 el ofrecio, el ofrece, el va a ofrecer
+Usted ofrecio, Usted ofrece, Usted va a ofrecer
 nosotros ofrecimos, nosotros ofrecemos, nosotros vamos a ofrecer
-ustedes ofrecisteis, ustedes ofreceis, ustedes van a ofrecer
+ustedes ofrecieron, ustedes ofrecen, ustedes van a ofrecer
 ellos ofrecieron, ellos ofrecen, ellos van a ofrecer
 =
 yo jugué, yo juego, yo voy a jugar
 tu jugaste, tu juegas, tu vas a jugar
 el jugó, el juega, el va a jugar
+Usted jugó, Usted juega, Usted va a jugar
 nosotros jugamos, nosotros jugamos, nosotros vamos a jugar
 ustedes jugaron, ustedes juegan, ustedes van a jugar
 ellos jugaron, ellos juegan, ellos van a jugar
@@ -3880,62 +3953,71 @@ ellos jugaron, ellos juegan, ellos van a jugar
 yo guste, yo gusto, yo voy a gustar
 tu gustaste, tu gustas, tu vas a gustar
 el gusto, el gusta, el va a gustar
+Usted gusto, Usted gusta, Usted va a gustar
 nosotros gustamos, nosotros gustamos, nosotros vamos a gustar
-ustedes gustasteis, ustedes gustais, ustedes van a gustar
+ustedes gustaron, ustedes gustan, ustedes van a gustar
 ellos gustaron, ellos gustan, ellos van a gustar
 =
 yo escuche, yo escucho, yo voy a escuchar
 tu escuchaste, tu escuchas, tu vas a escuchar
 el escucho, el escucha, el va a escuchar
+Usted escucho, Usted escucha, Usted va a escuchar
 nosotros escuchamos, nosotros escuchamos, nosotros vamos a escuchar
-ustedes escuchasteis, ustedes escuchais, ustedes van a escuchar
+ustedes escucharon, ustedes escuchan, ustedes van a escuchar
 ellos escucharon, ellos escuchan, ellos van a escuchar
 =
 yo sente, yo sento, yo voy a sentar
 tu sentaste, tu sentas, tu vas a sentar
 el sento, el senta, el va a sentar
+Usted sento, Usted senta, Usted va a sentar
 nosotros sentamos, nosotros sentamos, nosotros vamos a sentar
-ustedes sentasteis, ustedes sentais, ustedes van a sentar
+ustedes sentaron, ustedes sentan, ustedes van a sentar
 ellos sentaron, ellos sentan, ellos van a sentar
 =
 yo cambie, yo cambio, yo voy a cambiar
 tu cambiaste, tu cambias, tu vas a cambiar
 el cambio, el cambia, el va a cambiar
+Usted cambio, Usted cambia, Usted va a cambiar
 nosotros cambiamos, nosotros cambiamos, nosotros vamos a cambiar
-ustedes cambiasteis, ustedes cambiais, ustedes van a cambiar
+ustedes cambiaron, ustedes cambian, ustedes van a cambiar
 ellos cambiaron, ellos cambian, ellos van a cambiar
 =
 yo apareci, yo apareco, yo voy a aparecer
 tu apareciste, tu apareces, tu vas a aparecer
 el aparecio, el aparece, el va a aparecer
+Usted aparecio, Usted aparece, Usted va a aparecer
 nosotros aparecimos, nosotros aparecemos, nosotros vamos a aparecer
-ustedes aparecisteis, ustedes apareceis, ustedes van a aparecer
+ustedes aparecieron, ustedes aparecen, ustedes van a aparecer
 ellos aparecieron, ellos aparecen, ellos van a aparecer
 =
 yo acabe, yo acabo, yo voy a acabar
 tu acabaste, tu acabas, tu vas a acabar
 el acabo, el acaba, el va a acabar
+Usted acabo, Usted acaba, Usted va a acabar
 nosotros acabamos, nosotros acabamos, nosotros vamos a acabar
-ustedes acabasteis, ustedes acabais, ustedes van a acabar
+ustedes acabaron, ustedes acaban, ustedes van a acabar
 ellos acabaron, ellos acaban, ellos van a acabar
 =
 yo decidi, yo decido, yo voy a decidir
 tu decidiste, tu decides, tu vas a decidir
 el decidio, el decide, el va a decidir
+Usted decidio, Usted decide, Usted va a decidir
 nosotros decidimos, nosotros decidimos, nosotros vamos a decidir
-ustedes decidisteis, ustedes decidis, ustedes van a decidir
+ustedes decidieron, ustedes deciden, ustedes van a decidir
 ellos decidieron, ellos deciden, ellos van a decidir
 =
 yo resulte, yo resulto, yo voy a resultar
 tu resultaste, tu resultas, tu vas a resultar
 el resulto, el resulta, el va a resultar
+Usted resulto, Usted resulta, Usted va a resultar
 nosotros resultamos, nosotros resultamos, nosotros vamos a resultar
-ustedes resultasteis, ustedes resultais, ustedes van a resultar
+ustedes resultaron, ustedes resultan, ustedes van a resultar
 ellos resultaron, ellos resultan, ellos van a resultar
 =
 yo caí, yo caigo, yo voy a caer
 tu caíste, tu caes, tu vas a caer
 el cayó, el cae, el va a caer
+Usted cayó, Usted cae, Usted va a caer
 nosotros caímos, nosotros caemos, nosotros vamos a caer
 ustedes cayeron, ustedes caen, ustedes van a caer
 ellos cayeron, ellos caen, ellos van a caer
@@ -3943,34 +4025,39 @@ ellos cayeron, ellos caen, ellos van a caer
 yo desarrolle, yo desarrollo, yo voy a desarrollar
 tu desarrollaste, tu desarrollas, tu vas a desarrollar
 el desarrollo, el desarrolla, el va a desarrollar
+Usted desarrollo, Usted desarrolla, Usted va a desarrollar
 nosotros desarrollamos, nosotros desarrollamos, nosotros vamos a desarrollar
-ustedes desarrollasteis, ustedes desarrollais, ustedes van a desarrollar
+ustedes desarrollaron, ustedes desarrollan, ustedes van a desarrollar
 ellos desarrollaron, ellos desarrollan, ellos van a desarrollar
 =
 yo necesite, yo necesito, yo voy a necesitar
 tu necesitaste, tu necesitas, tu vas a necesitar
 el necesito, el necesita, el va a necesitar
+Usted necesito, Usted necesita, Usted va a necesitar
 nosotros necesitamos, nosotros necesitamos, nosotros vamos a necesitar
-ustedes necesitasteis, ustedes necesitais, ustedes van a necesitar
+ustedes necesitaron, ustedes necesitan, ustedes van a necesitar
 ellos necesitaron, ellos necesitan, ellos van a necesitar
 =
 yo sace, yo saco, yo voy a sacar
 tu sacaste, tu sacas, tu vas a sacar
 el saco, el saca, el va a sacar
+Usted saco, Usted saca, Usted va a sacar
 nosotros sacamos, nosotros sacamos, nosotros vamos a sacar
-ustedes sacasteis, ustedes sacais, ustedes van a sacar
+ustedes sacaron, ustedes sacan, ustedes van a sacar
 ellos sacaron, ellos sacan, ellos van a sacar
 =
 yo estableci, yo estableco, yo voy a establecer
 tu estableciste, tu estableces, tu vas a establecer
 el establecio, el establece, el va a establecer
+Usted establecio, Usted establece, Usted va a establecer
 nosotros establecimos, nosotros establecemos, nosotros vamos a establecer
-ustedes establecisteis, ustedes estableceis, ustedes van a establecer
+ustedes establecieron, ustedes establecen, ustedes van a establecer
 ellos establecieron, ellos establecen, ellos van a establecer
 =
 yo conseguí, yo consigo, yo voy a conseguir
 tu conseguiste, tu consigues, tu vas a conseguir
 el consiguió, el consigue, el va a conseguir
+Usted consiguió, Usted consigue, Usted va a conseguir
 nosotros conseguimos, nosotros conseguimos, nosotros vamos a conseguir
 ustedes consiguieron, ustedes consiguen, ustedes van a conseguir
 ellos consiguieron, ellos consiguen, ellos van a conseguir
@@ -3978,34 +4065,39 @@ ellos consiguieron, ellos consiguen, ellos van a conseguir
 yo indice, yo indico, yo voy a indicar
 tu indicaste, tu indicas, tu vas a indicar
 el indico, el indica, el va a indicar
+Usted indico, Usted indica, Usted va a indicar
 nosotros indicamos, nosotros indicamos, nosotros vamos a indicar
-ustedes indicasteis, ustedes indicais, ustedes van a indicar
+ustedes indicaron, ustedes indican, ustedes van a indicar
 ellos indicaron, ellos indican, ellos van a indicar
 =
 yo forme, yo formo, yo voy a formar
 tu formaste, tu formas, tu vas a formar
 el formo, el forma, el va a formar
+Usted formo, Usted forma, Usted va a formar
 nosotros formamos, nosotros formamos, nosotros vamos a formar
-ustedes formasteis, ustedes formais, ustedes van a formar
+ustedes formaron, ustedes forman, ustedes van a formar
 ellos formaron, ellos forman, ellos van a formar
 =
 yo reconoci, yo reconoco, yo voy a reconocer
 tu reconociste, tu reconoces, tu vas a reconocer
 el reconocio, el reconoce, el va a reconocer
+Usted reconocio, Usted reconoce, Usted va a reconocer
 nosotros reconocimos, nosotros reconocemos, nosotros vamos a reconocer
-ustedes reconocisteis, ustedes reconoceis, ustedes van a reconocer
+ustedes reconocieron, ustedes reconocen, ustedes van a reconocer
 ellos reconocieron, ellos reconocen, ellos van a reconocer
 =
 yo dirigi, yo dirigo, yo voy a dirigir
 tu dirigiste, tu diriges, tu vas a dirigir
 el dirigio, el dirige, el va a dirigir
+Usted dirigio, Usted dirige, Usted va a dirigir
 nosotros dirigimos, nosotros dirigimos, nosotros vamos a dirigir
-ustedes dirigisteis, ustedes dirigis, ustedes van a dirigir
+ustedes dirigieron, ustedes dirigen, ustedes van a dirigir
 ellos dirigieron, ellos dirigen, ellos van a dirigir
 =
 yo serví, yo sirvo, yo voy a servir
 tu serviste, tu sirves, tu vas a servir
 el sirvió, el sirve, el va a servir
+Usted sirvió, Usted sirve, Usted va a servir
 nosotros servimos, nosotros servimos, nosotros vamos a servir
 ustedes sirvieron, ustedes sirven, ustedes van a servir
 ellos sirvieron, ellos sirven, ellos van a servir
@@ -4013,97 +4105,111 @@ ellos sirvieron, ellos sirven, ellos van a servir
 yo alcanze, yo alcanzo, yo voy a alcanzar
 tu alcanzaste, tu alcanzas, tu vas a alcanzar
 el alcanzo, el alcanza, el va a alcanzar
+Usted alcanzo, Usted alcanza, Usted va a alcanzar
 nosotros alcanzamos, nosotros alcanzamos, nosotros vamos a alcanzar
-ustedes alcanzasteis, ustedes alcanzais, ustedes van a alcanzar
+ustedes alcanzaron, ustedes alcanzan, ustedes van a alcanzar
 ellos alcanzaron, ellos alcanzan, ellos van a alcanzar
 =
 yo intente, yo intento, yo voy a intentar
 tu intentaste, tu intentas, tu vas a intentar
 el intento, el intenta, el va a intentar
+Usted intento, Usted intenta, Usted va a intentar
 nosotros intentamos, nosotros intentamos, nosotros vamos a intentar
-ustedes intentasteis, ustedes intentais, ustedes van a intentar
+ustedes intentaron, ustedes intentan, ustedes van a intentar
 ellos intentaron, ellos intentan, ellos van a intentar
 =
 yo cumpli, yo cumplo, yo voy a cumplir
 tu cumpliste, tu cumples, tu vas a cumplir
 el cumplio, el cumple, el va a cumplir
+Usted cumplio, Usted cumple, Usted va a cumplir
 nosotros cumplimos, nosotros cumplimos, nosotros vamos a cumplir
-ustedes cumplisteis, ustedes cumplis, ustedes van a cumplir
+ustedes cumplieron, ustedes cumplen, ustedes van a cumplir
 ellos cumplieron, ellos cumplen, ellos van a cumplir
 =
 yo lei, yo leo, yo voy a leer
 tu leiste, tu lees, tu vas a leer
 el leio, el lee, el va a leer
+Usted leio, Usted lee, Usted va a leer
 nosotros leimos, nosotros leemos, nosotros vamos a leer
-ustedes leisteis, ustedes leeis, ustedes van a leer
+ustedes leieron, ustedes leen, ustedes van a leer
 ellos leieron, ellos leen, ellos van a leer
 =
 yo obteni, yo obteno, yo voy a obtener
 tu obteniste, tu obtenes, tu vas a obtener
 el obtenio, el obtene, el va a obtener
+Usted obtenio, Usted obtene, Usted va a obtener
 nosotros obtenimos, nosotros obtenemos, nosotros vamos a obtener
-ustedes obtenisteis, ustedes obteneis, ustedes van a obtener
+ustedes obtenieron, ustedes obtenen, ustedes van a obtener
 ellos obtenieron, ellos obtenen, ellos van a obtener
 =
 yo ayude, yo ayudo, yo voy a ayudar
 tu ayudaste, tu ayudas, tu vas a ayudar
 el ayudo, el ayuda, el va a ayudar
+Usted ayudo, Usted ayuda, Usted va a ayudar
 nosotros ayudamos, nosotros ayudamos, nosotros vamos a ayudar
-ustedes ayudasteis, ustedes ayudais, ustedes van a ayudar
+ustedes ayudaron, ustedes ayudan, ustedes van a ayudar
 ellos ayudaron, ellos ayudan, ellos van a ayudar
 =
 yo use, yo uso, yo voy a usar
 tu usaste, tu usas, tu vas a usar
 el uso, el usa, el va a usar
+Usted uso, Usted usa, Usted va a usar
 nosotros usamos, nosotros usamos, nosotros vamos a usar
-ustedes usasteis, ustedes usais, ustedes van a usar
+ustedes usaron, ustedes usan, ustedes van a usar
 ellos usaron, ellos usan, ellos van a usar
 =
 yo observe, yo observo, yo voy a observar
 tu observaste, tu observas, tu vas a observar
 el observo, el observa, el va a observar
+Usted observo, Usted observa, Usted va a observar
 nosotros observamos, nosotros observamos, nosotros vamos a observar
-ustedes observasteis, ustedes observais, ustedes van a observar
+ustedes observaron, ustedes observan, ustedes van a observar
 ellos observaron, ellos observan, ellos van a observar
 =
 yo respondi, yo respondo, yo voy a responder
 tu respondiste, tu respondes, tu vas a responder
 el respondio, el responde, el va a responder
+Usted respondio, Usted responde, Usted va a responder
 nosotros respondimos, nosotros respondemos, nosotros vamos a responder
-ustedes respondisteis, ustedes respondeis, ustedes van a responder
+ustedes respondieron, ustedes responden, ustedes van a responder
 ellos respondieron, ellos responden, ellos van a responder
 =
 yo comi, yo como, yo voy a comer
 tu comiste, tu comes, tu vas a comer
 el comio, el come, el va a comer
+Usted comio, Usted come, Usted va a comer
 nosotros comimos, nosotros comemos, nosotros vamos a comer
-ustedes comisteis, ustedes comeis, ustedes van a comer
+ustedes comieron, ustedes comen, ustedes van a comer
 ellos comieron, ellos comen, ellos van a comer
 =
 yo bebi, yo bebo, yo voy a beber
 tu bebiste, tu bebes, tu vas a beber
 el bebio, el bebe, el va a beber
+Usted bebio, Usted bebe, Usted va a beber
 nosotros bebimos, nosotros bebemos, nosotros vamos a beber
-ustedes bebisteis, ustedes bebeis, ustedes van a beber
+ustedes bebieron, ustedes beben, ustedes van a beber
 ellos bebieron, ellos beben, ellos van a beber
 =
 yo baile, yo bailo, yo voy a bailar
 tu bailaste, tu bailas, tu vas a bailar
 el bailo, el baila, el va a bailar
+Usted bailo, Usted baila, Usted va a bailar
 nosotros bailamos, nosotros bailamos, nosotros vamos a bailar
-ustedes bailasteis, ustedes bailais, ustedes van a bailar
+ustedes bailaron, ustedes bailan, ustedes van a bailar
 ellos bailaron, ellos bailan, ellos van a bailar
 =
 yo descanse, yo descanso, yo voy a descansar
 tu descansaste, tu descansas, tu vas a descansar
 el descanso, el descansa, el va a descansar
+Usted descanso, Usted descansa, Usted va a descansar
 nosotros descansamos, nosotros descansamos, nosotros vamos a descansar
-ustedes descansasteis, ustedes descansais, ustedes van a descansar
+ustedes descansaron, ustedes descansan, ustedes van a descansar
 ellos descansaron, ellos descansan, ellos van a descansar
 =
 yo traje, yo traigo, yo voy a traer
 tu trajiste, tu traes, tu vas a traer
 el trajo, el trae, el va a traer
+Usted trajo, Usted trae, Usted va a traer
 nosotros trajimos, nosotros traemos, nosotros vamos a traer
 ustedes trajeron, ustedes traen, ustedes van a traer
 ellos trajeron, ellos traen, ellos van a traer
@@ -4111,6 +4217,7 @@ ellos trajeron, ellos traen, ellos van a traer
 yo oí, yo oigo, yo voy a oír
 tu oíste, tu oyes, tu vas a oír
 el oyó, el oye, el va a oír
+Usted oyó, Usted oye, Usted va a oír
 nosotros oímos, nosotros oímos, nosotros vamos a oír
 ustedes oyeron, ustedes oyen, ustedes van a oír
 ellos oyeron, ellos oyen, ellos van a oír
@@ -4118,6 +4225,7 @@ ellos oyeron, ellos oyen, ellos van a oír
 yo cupe, yo quepo, yo voy a caber
 tu cupiste, tu cabes, tu vas a caber
 el cupo, el cabe, el va a caber
+Usted cupo, Usted cabe, Usted va a caber
 nosotros cupimos, nosotros cabemos, nosotros vamos a caber
 ustedes cupieron, ustedes caben, ustedes van a caber
 ellos cupieron, ellos caben, ellos van a caber
@@ -4125,6 +4233,7 @@ ellos cupieron, ellos caben, ellos van a caber
 yo cerré, yo cierro, yo voy a cerrar
 tu cerraste, tu cierras, tu vas a cerrar
 el cerró, el cierra, el va a cerrar
+Usted cerró, Usted cierra, Usted va a cerrar
 nosotros cerramos, nosotros cerramos, nosotros vamos a cerrar
 ustedes cerraron, ustedes cierran, ustedes van a cerrar
 ellos cerraron, ellos cierran, ellos van a cerrar
@@ -4132,6 +4241,7 @@ ellos cerraron, ellos cierran, ellos van a cerrar
 yo mentí, yo miento, yo voy a mentir
 tu mentiste, tu mientes, tu vas a mentir
 el mintió, el miente, el va a mentir
+Usted mintió, Usted miente, Usted va a mentir
 nosotros mentimos, nosotros mentimos, nosotros vamos a mentir
 ustedes mintieron, ustedes mienten, ustedes van a mentir
 ellos mintieron, ellos mienten, ellos van a mentir
@@ -4139,6 +4249,7 @@ ellos mintieron, ellos mienten, ellos van a mentir
 yo negué, yo niego, yo voy a negar
 tu negaste, tu niegas, tu vas a negar
 el negó, el niega, el va a negar
+Usted negó, Usted niega, Usted va a negar
 nosotros negamos, nosotros negamos, nosotros vamos a negar
 ustedes negaron, ustedes niegan, ustedes van a negar
 ellos negaron, ellos niegan, ellos van a negar
@@ -4146,6 +4257,7 @@ ellos negaron, ellos niegan, ellos van a negar
 yo recomendé, yo recomiendo, yo voy a recomendar
 tu recomendaste, tu recomiendas, tu vas a recomendar
 el recomendó, el recomienda, el va a recomendar
+Usted recomendó, Usted recomienda, Usted va a recomendar
 nosotros recomendamos, nosotros recomendamos, nosotros vamos a recomendar
 ustedes recomendaron, ustedes recomiendan, ustedes van a recomendar
 ellos recomendaron, ellos recomiendan, ellos van a recomendar
@@ -4153,6 +4265,7 @@ ellos recomendaron, ellos recomiendan, ellos van a recomendar
 yo colgué, yo cuelgo, yo voy a colgar
 tu colgaste, tu cuelgas, tu vas a colgar
 el colgó, el cuelga, el va a colgar
+Usted colgó, Usted cuelga, Usted va a colgar
 nosotros colgamos, nosotros colgamos, nosotros vamos a colgar
 ustedes colgaron, ustedes cuelgan, ustedes van a colgar
 ellos colgaron, ellos cuelgan, ellos van a colgar
@@ -4160,6 +4273,7 @@ ellos colgaron, ellos cuelgan, ellos van a colgar
 yo costé, yo cuesto, yo voy a costar
 tu costaste, tu cuestas, tu vas a costar
 el costó, el cuesta, el va a costar
+Usted costó, Usted cuesta, Usted va a costar
 nosotros costamos, nosotros costamos, nosotros vamos a costar
 ustedes costaron, ustedes cuestan, ustedes van a costar
 ellos costaron, ellos cuestan, ellos van a costar
@@ -4167,6 +4281,7 @@ ellos costaron, ellos cuestan, ellos van a costar
 yo dolí, yo duelo, yo voy a doler
 tu doliste, tu dueles, tu vas a doler
 el dolió, el duele, el va a doler
+Usted dolió, Usted duele, Usted va a doler
 nosotros dolimos, nosotros dolemos, nosotros vamos a doler
 ustedes dolieron, ustedes duelen, ustedes van a doler
 ellos dolieron, ellos duelen, ellos van a doler
@@ -4174,6 +4289,7 @@ ellos dolieron, ellos duelen, ellos van a doler
 yo modrí, yo muerdo, yo voy a morder
 tu mordiste, tu muerdes, tu vas a morder
 el mordió, el muerde, el va a morder
+Usted mordió, Usted muerde, Usted va a morder
 nosotros mordimos, nosotros mordemos, nosotros vamos a morder
 ustedes mordieron, ustedes muerden, ustedes van a morder
 ellos mordieron, ellos muerden, ellos van a morder
@@ -4181,6 +4297,7 @@ ellos mordieron, ellos muerden, ellos van a morder
 yo olí, yo huelo, yo voy a oler
 tu oliste, tu hueles, tu vas a oler
 el olió, el huele, el va a oler
+Usted olió, Usted huele, Usted va a oler
 nosotros olimos, nosotros olemos, nosotros vamos a oler
 ustedes olieron, ustedes huelen, ustedes van a oler
 ellos olieron, ellos huelen, ellos van a oler
@@ -4188,6 +4305,7 @@ ellos olieron, ellos huelen, ellos van a oler
 yo competí, yo compito, yo voy a competir
 tu competiste, tu compites, tu vas a competir
 el compitió, el compite, el va a competir
+Usted compitió, Usted compite, Usted va a competir
 nosotros competimos, nosotros competimos, nosotros vamos a competir
 ustedes compitieron, ustedes compiten, ustedes van a competir
 ellos compitieron, ellos compiten, ellos van a competir
@@ -4195,6 +4313,7 @@ ellos compitieron, ellos compiten, ellos van a competir
 yo corregí, yo corrijo, yo voy a corregir
 tu corregiste, tu corriges, tu vas a corregir
 el corrigió, el corrige, el va a corregir
+Usted corrigió, Usted corrige, Usted va a corregir
 nosotros corregimos, nosotros corregimos, nosotros vamos a corregir
 ustedes corrigieron, ustedes corrijen, ustedes van a corregir
 ellos corrigieron, ellos corrijen, ellos van a corregir
@@ -4202,6 +4321,7 @@ ellos corrigieron, ellos corrijen, ellos van a corregir
 yo despedí, yo despido, yo voy a despedir
 tu despediste, tu despides, tu vas a despedir
 el despidió, el despide, el va a despedir
+Usted despidió, Usted despide, Usted va a despedir
 nosotros despedimos, nosotros despedimos, nosotros vamos a despedir
 ustedes despidieron, ustedes despiden, ustedes van a despedir
 ellos despidieron, ellos despiden, ellos van a despedir
@@ -4209,6 +4329,7 @@ ellos despidieron, ellos despiden, ellos van a despedir
 yo elegí, yo elijo, yo voy a elegir
 tu elegiste, tu eliges, tu vas a elegir
 el eligió, el elige, el va a elegir
+Usted eligió, Usted elige, Usted va a elegir
 nosotros elegimos, nosotros elegimos, nosotros vamos a elegir
 ustedes eligieron, ustedes eligen, ustedes van a elegir
 ellos eligieron, ellos eligen, ellos van a elegir
@@ -4216,6 +4337,7 @@ ellos eligieron, ellos eligen, ellos van a elegir
 yo medí, yo mido, yo voy a medir
 tu mediste, tu mides, tu vas a medir
 el midió, el mide, el va a medir
+Usted midió, Usted mide, Usted va a medir
 nosotros medimos, nosotros medimos, nosotros vamos a medir
 ustedes midieron, ustedes miden, ustedes van a medir
 ellos midieron, ellos miden, ellos van a medir
@@ -4223,6 +4345,7 @@ ellos midieron, ellos miden, ellos van a medir
 yo repetí, yo repito, yo voy a repetir
 tu repetiste, tu repite, tu vas a repetir
 el repitió, el repite, el va a repetir
+Usted repitió, Usted repite, Usted va a repetir
 nosotros repetimos, nosotros repetimos, nosotros vamos a repetir
 ustedes repitieron, ustedes repiten, ustedes van a repetir
 ellos repitieron, ellos repiten, ellos van a repetir
