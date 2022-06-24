@@ -4,8 +4,45 @@ function init()
 	console.log('init()');
 	parse_top100();
 	parse_irregulars();
+	make_table();
+	prep_list_of_verbs();
 	
 	console.log(data);
+}
+
+function prep_list_of_verbs()
+{
+	for (let word of Object.keys(data.dict)) 
+	{
+		data.all_verbs.push(word);
+	}
+}
+
+function make_table()
+{
+	for (let word of Object.keys(data.dict)) 
+	{
+		const eng = 'to ' + data.dict[word];
+		//console.log(word + " -> " + eng);
+		{
+			const row = table1.insertRow(-1);
+			const cell = row.insertCell(0);
+			cell.innerHTML = word + " -> " + eng;
+		}
+		{
+			const row = table1.insertRow(-1);
+			const cell = row.insertCell(0);
+			let acc = '';
+			for (let i=0; i<6; ++i)
+			{
+				const text_to_show = pronouns[i] + ' ' + past(word, i) + ', ' + pronouns[i] + ' ' + present(word, i) +', ' + pronouns[i] + ' ' + future(word,i);
+				
+				//acc += text_to_show + '<br>';
+				acc += `<span onclick='sayBrk("${text_to_show}")'>${text_to_show}</span><br>`;
+			}
+			cell.innerHTML = acc;
+		}
+	}
 }
 
 function parse_top100()
@@ -44,7 +81,22 @@ function parse_irregulars()
 				{
 					b[1] = b[1].slice(3);
 				}
-				data.dict[b[0].trim()] = b[1].trim();
+				const word = b[0].trim();
+				data.dict[word] = b[1].trim();
+				
+				for (let i=2; i<8; ++i)
+				{
+					const tmp = rows[k+i].split('\t');
+					
+					if (tmp.length != 3)
+					{
+						console.log('err:', tmp);
+						continue;
+					}
+					data.conj[word+'.0'+(i-2)] = tmp[2];
+					data.conj[word+'.1'+(i-2)] = tmp[1];
+					data.conj[word+'.2'+(i-2)] = voya[i-2] + ' ' + word;
+				}
 			}
 			else
 			{
@@ -58,17 +110,121 @@ function parse_irregulars()
 			++k;
 		}
 	}
-	
 }
 
 function conjugate()
 {
 	console.log('conjugate()');
-	const txt = text1.value;
-	res_div.innerHTML = txt; // TODO =========================================
+	textToSay.length = 0;
+	const word = text1.value.toLowerCase();
+	let acc = '';
+	
+	if (word in data.dict)
+	{
+		acc += word + ' --> ' + data.dict[word] + '<br>';
+		for (let i=0; i<6; ++i)
+		{
+			const line = pronouns[i] + ' ' + past(word, i) + ', ' + pronouns[i] + ' ' + present(word, i) +', ' + pronouns[i] + ' ' + future(word,i);
+			acc += `<span onclick='sayBrk("${line}")'>${line}</span><br>`
+			textToSay.push(line);
+		}		
+	}
+	else
+	{
+		acc += word + '<br>';
+	}
+	
+	res_div.innerHTML = acc;
 }
 
+// nm
+// n = 0=past, 1=present, 2=future
+// m = pronoun# from the list
 
+function past(verb, n)
+{
+	const tmp = data.conj[verb+'.0'+n];
+	if (tmp) { return tmp; }
+	
+	if (verb === 'llamarse') { verb = 'llamar'; }
+	if (verb === 'quedarse') { verb = 'quedar'; }
+	
+	const stem = verb.slice(0, -2);
+	if (verb.endsWith('ar'))
+	{
+		return stem + ar0[n];
+	}
+	if (verb.endsWith('er'))
+	{
+		return stem + er0[n];
+	}
+	if (verb.endsWith('ir'))
+	{
+		return stem + ir0[n];
+	}
+	console.log("can't conj", verb);
+	return '---';
+}
+
+function present(verb, n)
+{
+	const tmp = data.conj[verb+'.1'+n];
+	if (tmp) { return tmp; }
+	
+	if (verb === 'llamarse') { verb = 'llamar'; }
+	if (verb === 'quedarse') { verb = 'quedar'; }
+	
+	const stem = verb.slice(0, -2);
+	if (verb.endsWith('ar'))
+	{
+		return stem + ar1[n];
+	}
+	if (verb.endsWith('er'))
+	{
+		return stem + er1[n];
+	}
+	if (verb.endsWith('ir'))
+	{
+		return stem + ir1[n];
+	}
+	console.log("can't conj", verb);
+	return '---';
+}
+
+function future(verb, n)
+{
+	const tmp = data.conj[verb+'.2'+n];
+	if (tmp) { return tmp; }
+	const res = voya[n] + ' ' + verb;
+	return res;
+}
+
+const ar0 = ['e', 'aste', 'o', 'amos', 'asteis', 'aron'];
+const ar1 = ['o', 'as', 'a', 'amos', 'ais', 'an'];
+
+const er0 = ['i', 'iste', 'io', 'imos', 'isteis', 'ieron'];
+const er1 = ['o', 'es', 'e', 'emos', 'eis', 'en'];
+
+const ir0 = er0;
+const ir1 = ['o', 'es', 'e', 'imos', 'is', 'en'];
+
+const voya = [
+'voy a',
+'vas a',
+'va a',
+'vamos a',
+'van a',
+'van a'
+];
+
+const pronouns = [
+'yo',
+'tu',
+'el, ella, Usted',
+'nosotros',
+'vosotros',
+'ellos, ellas'
+];
 
 const top100 = `
 1. ser (be)
@@ -171,6 +327,10 @@ const top100 = `
 98. usar (use)
 99. observar (observe)
 100. responder (answer)
+101. comer (eat)
+102. beber (drink)
+103. bailar (dance)
+104. descansar (relax)
 `;
 
 
