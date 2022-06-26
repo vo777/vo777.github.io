@@ -4351,6 +4351,183 @@ ustedes repitieron, ustedes repiten, ustedes van a repetir
 ellos repitieron, ellos repiten, ellos van a repetir
 =
 
+====================================================
+
+yo descanse, yo trabaje, yo viaje
+el pregunto, yo conteste
+el tomo, ella tomo, Usted tomo
+nosotros tomamos, vosotros tomasteis, ellos tomaron
+yo olvide, tu olvidaste, el olvido
+ella olvido, Usted olvido
+nosotros olvidamos, vosotros olvidasteis, ellos olvidaron
+yo trabaje, tu trabajaste, el trabajo
+ella trabajo, Usted trabajo
+nosotros trabajamos, vosotros trabajasteis, ellos trabajaron
+yo descanse, tu descansaste, el descanso
+ella descanso, Usted descanso
+nosotros descansamos, vosotros descansasteis, ellos dascansaron
+yo comi
+tu comiste
+el comio, ella comio, Usted comio
+nosotros comimos, vosotros comisteis, ellos comieron
+tu comiste mucho?
+si, yo comi mucho
+=
+yo vivi
+tu viviste
+el vivio
+ella vivio
+Usted vivio
+nosotros vivimon
+vosotros vivisteis
+ellos vivieron
+=
+yo tome
+tu tomaste
+el tomo
+ella tomo
+Usted tomo
+nosotros tomamos
+vosotros tomasteis
+ellos tomaron
+=
+yo comi
+tu comiste
+el comio
+ella comio
+Usted comio
+nosotros comimos
+vosotros comisteis
+ellos comieron
+=
+yo no tome
+yo no comi
+=
+yo cante
+tu cantaste
+el canto
+ella canto
+Usted canto
+nosotros cantamos
+vosotros cantasteis
+ellos cantaron
+=
+yo baile
+tu bailaste
+el vailo
+ella bailo
+Usted bailo
+nosotros bailamos
+vosotros bailasteis
+ellos bailaron
+=
+yo escribi
+tu escribiste
+el escribio
+ella escribio
+Usted escribio
+nosotros escribimos
+vosotros escribisteis
+ellos escribieron
+=
+yo ame
+tu amaste
+el amo
+ella amo
+Usted amo
+nosotros amamos
+vosotros amasteis
+ellos amaron
+=
+comprar, comprender
+=
+yo soy
+tu eres
+el, Usted es
+nosotros somos
+vosotros sois
+ellos son
+=
+yo voy
+tu vas
+el va
+Usted va
+nosotros vamos
+vosotros vais
+ellos van
+=
+donde?
+a donde? de donde?
+a donde tu vas?
+de donde tu eres?
+=
+yo fui a Espana
+=
+yo fui
+tu fuiste
+el fue
+ella fue
+Usted fue
+nosotros fuimos
+vosotros fuisteis
+ellos fueron
+=
+yo voy a bailar
+nosotros vamos a comer
+yo voy a descansar
+nosotros vamos a cantar
+yo quero ir
+=
+me gusta ir al teatro
+me va a gustar
+ella me gusto
+tu me gustaste
+=
+que tu tienes?
+=
+yo tengo
+tu yienes
+el tiene
+Usted tiene
+nosotros tenemos
+vosotros teneis
+ellos tienen
+=
+yo tengo muchos amigos
+yo no tengo tiempo
+=
+yo tuve
+tu tuviste
+el tuvo
+Usted tuvo
+nosotros tuvimos
+vosotros tuvisteis
+ellos tuvieron
+=
+familia, padre, madre
+hijo, hija, hijos
+hermano, hermana, hermanos
+marido, mujer, hombre
+=
+acabo de
+/
+perder
+encontrar
+pedir
+/
+mi pasaporte
+=
+
+
+
+
+
+
+
+
+
+
+
 
 
 `
