@@ -48,7 +48,17 @@
 	say(text1.value, document.getElementById('brk1').checked);
 	if (document.getElementById('rpt1').checked)
 	{
-		setTimeout(gs, 5000);
+		setTimeout(gs1, 5000);
+	}
+  }
+
+  function gs1()
+  {
+	if (document.getElementById('rpt1').checked)
+	{
+		text1.value = randomSentence(parsedData);
+		say(text1.value, document.getElementById('brk1').checked);
+		setTimeout(gs1, 5000);
 	}
   }
   
