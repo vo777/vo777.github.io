@@ -2009,6 +2009,238 @@ Bene, grazie. E lei? ...
 Vorrei una birra. : I'd like a beer. ...
 Mi dispiace. : I'm sorry.
 =
+parlare
+io parlo
+tu parli
+lui parla
+lei parla
+Lei parla
+noi parliamo
+voi parlate
+loro parlano
+io non parlo
+tu non parli
+lui non parla
+lei non parla
+Lei non parla
+noi non parliamo
+voi non parlate
+loro non parlano
+=
+mangiare
+io mangio
+tu mangi
+lui mangia
+lei mangia
+Lei mangia
+noi mangiamo
+voi mangiate
+loro mangiamo
+io non mangio
+tu non mangi
+lui non mangia
+lei non mangia
+Lei non mangia
+noi non mangiamo
+voi non mangiate
+loro non mangiamo
+=
+guardare
+io guardo
+tu guardi
+lui gurda
+lei guarda
+Lei guarda
+noi guardiamo
+voi guardate
+loro guardano
+io non guardo
+tu non guardi
+lui non gurda
+lei non guarda
+Lei non guarda
+noi non guardiamo
+voi non guardate
+loro non guardano
+=
+giocare
+io gioco
+tu giochi
+lui gioca
+lei gioca
+Lei gioca
+noi giochiamo
+voi giocate
+loro giocano
+io non gioco
+tu non giochi
+lui non gioca
+lei non gioca
+Lei non gioca
+noi non giochiamo
+voi non giocate
+loro non giocano
+=
+lavorare
+io lavoro
+tu lavori
+lui lavora
+lei lavora
+Lei lavora
+noi lavoriamo
+voi lavorate
+loro lavorano
+io non lavoro
+tu non lavori
+lui non lavora
+lei non lavora
+Lei non lavora
+noi non lavoriamo
+voi non lavorate
+loro non lavorano
+=
+amare
+io amo
+tu ami
+lui ama
+lei ama
+Lei ama
+noi amiamo
+voi amate
+loro amano
+io non amo
+tu non ami
+lui non ama
+lei non ama
+Lei non ama
+noi non amiamo
+voi non amate
+loro non amano
+=
+ascoltare
+io ascolto
+tu ascolti
+lui ascolta
+lei ascolta
+Lei ascolta
+noi ascoltiamo
+voi ascoltate
+loro ascoltano
+io non ascolto
+tu non ascolti
+lui non ascolta
+lei non ascolta
+Lei non ascolta
+noi non ascoltiamo
+voi non ascoltate
+loro non ascoltano
+=
+imparare
+io imparo
+tu impairi
+lui impara
+lei impara
+Lei impara
+noi impariamo
+voi imparate
+loro imparano
+io non imparo
+tu non impairi
+lui non impara
+lei non impara
+Lei non impara
+noi non impariamo
+voi non imparate
+loro non imparano
+=
+abitare
+io abito
+tu abiti
+lui abita
+lei abita
+Lei abita
+noi abitiamo
+voi abitate
+loro abitano
+io non abito
+tu non abiti
+lui non abita
+lei non abita
+Lei non abita
+noi non abitiamo
+voi non abitate
+loro non abitano
+=
+avere
+io ho
+tu hai
+lui ha
+lei ha
+Lei ha
+noi abbiamo
+voi avete
+loro hanno
+io non ho
+tu non hai
+lui non ha
+lei non ha
+Lei non ha
+noi non abbiamo
+voi non avete
+loro non hanno
+
+=
+io ho
+tu hai
+lui ha
+lei ha
+Lei ha
+noi abbiamo
+voi avete
+loro hanno
+io non ho
+tu non hai
+lui non ha
+lei non ha
+Lei non ha
+noi non abbiamo
+voi non avete
+loro non hanno
+/
+parlato
+guardato
+ascoltato
+mangiato
+amato
+giocato
+imparato
+lavorato
+abitato
+=
+chi?
+che cosa?
+che cosa tu mangi?
+che cosa tu hai mangiato?
+=
+dove?
+dove tu abiti?
+dove tu lavori?
+dove lei lavora?
+=
+quando?
+quando tu lavori?
+chi non lavora, non mangia
+=
+perche?
+perche tu non ascolti?
+perche lui non lavora?
+=
+come?
+come lui lavora?
+=
+quanto?
+=
+
 
 
 
