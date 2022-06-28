@@ -105,7 +105,7 @@ function newQuestion()
 {
 	shutUp();
 
-	const CookieName = 'italian_set';
+	const CookieName = 'ital_rus_set';
 	
 	if (! data.wset)
 	{
