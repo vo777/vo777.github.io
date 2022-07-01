@@ -4517,16 +4517,1362 @@ pedir
 /
 mi pasaporte
 =
-
-
-
-
-
-
-
-
-
-
+uno, dos, tres, cuatro, cinco
+seis, siete, ocho, nueve, diez
+=
+un amigo, una amiga
+un hermano, una hermana
+un hijo, una hija
+el amigo, la amiga, los amigos
+uno, unas, una, unas
+el, los, la, las
+=
+yo tengo un amigo
+me llamo, te llamas
+el se llama
+ella se llama
+Usted se llama
+=
+yo tengo un amigo. Se llama Alejandro.
+mi amigo, mis amigos
+yu padre, tu madre
+tus hermanos, tus hermanas
+su padre
+=
+su padre
+nuestro padre
+nuestros padres
+nuestras padres
+vuestro amigo
+vuestros amigos
+vuestra amiga
+vuestras amigas
+su amiga
+sus amigas
+=
+yo, mi, mis
+tu, tu, tus
+el, ella, su, sus
+nosotros, nuestros
+vosotros, vuestros
+ellos, ellas, su, sus, uds
+=
+senores y senoras, quien va a hablar de su familia?
+=
+grande, pequeno, pequena
+gato, gata, perro
+=
+muy bien, gracias!
+muy interesante
+una historia muy interesante...
+=
+bastante, ahora, tambien
+=
+hermano, hermanito, hermana, hermanita
+hijo, hijito, hija, hijita
+chico, chiquito, chiquitito
+=
+once, doce
+=
+juntos, todos juntos
+vivimos todos juntos
+=
+que hora es?
+es la una de la tarde
+son las dos y media
+mediodia
+medianoche
+quarto
+la una y quarto
+=
+saber
+yo se
+tu sabes
+el sabe
+Usted sabe
+nosotros sabemos
+vosotros sabeis
+ellos saben
+=
+yo no se nada
+=
+yo supe
+tu supiste
+el supo
+Usted supo
+nosotros supimos
+vosotros supisteis
+ellos supieron
+=
+como pasaron el sabado y domingo?
+=
+ayer, hoy, manana
+yo trabaje ayer
+yo fui al teatro ayer
+hoy nosotros estudiamos
+manana vamos a estudiar
+hora, ahora
+luego
+hasta luego!
+la semana
+=
+lunes
+martes
+miercoles
+jueves
+viernes
+sabado
+domingo
+=
+el sabado yo voy a visitar a mis amigos
+el lunes yo fui al cine
+al teatro, al cine
+del teatro, del cine
+=
+el mes
+enero
+febrero
+marzo
+abril
+mayo
+junio
+julio
+agosto
+septiembre
+octubre
+noviembre
+diciembre
+=
+ayer, hoy, manana, ahora, luego
+en enero, en febrero, en mayo
+=
+primavera, verano, otono, invierno
+dias de la semana
+=
+trece, catorce, quince
+dieciseis, diecisiete
+dieciocho, diecinueve, viente
+vientiuno, vientidos, vientitres
+treinta, cuarenta, cincuenta, sesenta
+ochenta, noventa, ciento
+doscientos, trescientos, cuatrocientos, quinientos
+siglo
+treinta y cinco
+primero
+el primero de mayo
+el dos de mayo
+el doce de augosto
+cumpleanos
+despues
+=
+cuando es tu cumpleanos
+aniversario
+=
+informacion, produccion, meditacion
+=
+querer
+yo quero
+tu quieres
+el quiere
+Usted quiere
+nosotros queremos
+vosotros quereis
+ellos quieren
+=
+yo quise
+tu quisiste
+el quiso
+Usted quiso
+nosotros quisimos
+vosotros quisisteis
+ellos quisieron
+=
+que tu haces?
+que tu haces ahora?
+el no hace nada
+yo hago todo
+por que el no hace nada?
+porque no quiere
+quien no trabaja, no come
+=
+yo hago
+tu haces
+el hace
+Usted hace
+nosotros hacemos
+vosotros haveis
+ellos hacen
+=
+yo hice
+tu hiciste
+el hizo
+Usted hizo
+nosotros hicimos
+vosotros hicisteis
+ellos hicieron
+=
+ayer yo trabaje en el teatro
+interpretar un papel
+obra de teatro
+ir al teatro
+interprete un papel en una obra de teatro
+que teatro?
+como se llama el teatro?
+=
+calle
+dia, tarde, noche
+=
+vamos a hablar ahora
+=
+ser, tener, hacer, saber, querer
+que hicisteis ayer?
+por la tarde
+por la niche
+por el dia
+=
+que hiciste ayer despues de nuestra leccion?
+a casa, en casa, de casa
+esto fue todo
+por favor, que paso?
+=
+hecho en Espana
+=
+tener miedo
+ella tuvo miedo de leon
+=
+tratar
+exito
+que historia!
+=
+discupe!, culpa, disculpar
+tocar
+tocar el piano
+tocar la guitarra
+fin de semana
+pasar
+pasar el tiempo
+que paso?
+que pasa?
+pasar el tiempo juntos
+=
+acompanar
+desayunar
+desayuno
+hacer el desayuno
+en un cafe
+en un restaurante
+en una cafeteria
+a que hora?
+a las dos
+descansasteis muy bien!
+=
+con unos amigos
+con los amigos
+con mis amigos
+=
+con los amigos nosotros descansamos ayer
+cuantos amigos fueron?
+muchos?
+mucho, poco
+muy bien, muy interesante
+muchos amigos, pocos amigos
+muchas amigas, pocas amigas
+muy amado
+=
+la tienda
+la supermercado
+=
+venir
+yo vengo
+=
+yo vine
+tu viniste
+el vino
+Usted vino
+nosotros vinimos
+vosotros vinisteis
+ellos vinieron
+=
+cuando vino el marido nosotros comimos juntos
+=
+yo, me
+tu, te
+el, le
+ella, la
+nosotros, nos
+vosotros, os
+ellos, ellas, los, las
+=
+ver
+yo te veo
+yo la veo
+tu ves
+tu me ves?
+yo no te veo
+el ve
+nosotros vemos
+nosotros os vemos
+vosotros veis
+ellos ven
+=
+yo vi
+yo te vi
+yo no te vi
+tu viste
+tu me viste?
+tu la viste?
+tu la viste hoy?
+hoy no la vi, la vi ayer
+el vio
+el no me vio
+ellame vio
+nosotros vimos
+vosotros visteis
+ellos vieron
+nosotros te vimos
+tu no nos viste
+nosotros te vimos, pero tu no nos viste
+=
+conocer
+yo conozco
+tu conoces
+el conoce
+Usted conoce
+nosotros conocemos
+vosotros conoceis
+ellos conocen
+=
+yo conoci
+tu conociste
+el conocio
+Usted conocio
+nosotros conocimos
+vosotros conosisteis
+ellos conocieron
+=
+mucho gusto en conocerte!
+yo te conozco
+yo no le conozco
+el te conoce?
+=
+yo le conoci ayer
+cuando tu le conociste?
+yo conozco esta cancion
+saber, conocer
+yo le conozco
+tu sabes como ir a ...?
+el conocio
+nosotros conocimos
+vosotros conosisteis
+ellos conocieron
+quando tiempo le conoces?
+=
+yo veo
+tu ves
+el ve
+nosotros vemos
+vosotros veis
+ellos ven
+yo vi
+tu viste
+el vio
+nosotros vimos
+vosotros visteis
+ellos vieron
+=
+ser amigos
+nosotros somos amigos
+=
+fui
+estuve
+tuve
+/
+con un amigo
+un problema
+a Madrid
+en Madrid
+com mi hermano
+una idea
+/
+ayer
+=
+voy
+estoy
+tengo
+/
+con un amigo
+un problema
+a Madrid
+en Madrid
+/
+ayer
+=
+voy a ir
+voy a estar
+voy a tener
+/
+con un amigo
+un problema
+a Madrid
+en Madrid
+/
+manana
+=
+el amor
+la vida
+el corazon
+el alma
+de el, del
+a el, al
+la cancion
+los ajos
+un ojo
+triste
+tristeza
+feliz
+=
+feliz cumpleanos!
+feliz ano nuevo!
+tu y yo
+me gista
+te gusta
+le gusta
+nos gusta
+os gusta
+les gusta
+=
+yo, me
+tu, te
+el, le
+ella, le
+nosotros, nos
+vosotros, os
+ellos, ellas, los
+=
+el amigo de mi hermano
+el hermano de mi amigo
+con, sin
+con mi familia
+aqua con gas
+aqua sin gas
+=
+te con azucar
+te sin azucar
+para mi
+para comer
+para hablar
+por la ciudad
+por la calle
+=
+yo, para mi
+tu, para ti
+el, para el
+ella, para ella
+nosotros, para nosotros
+nosotras, para nosotras
+vosotros, para vosotros
+vosotras, para vosotras
+ellos, para ellos
+ellas, para ellas
+=
+conmigo, contigo
+yo veo la casa
+yo la veo
+yo lo se
+yo lo hago para ti
+=
+yo, me, mi
+tu, te, ti
+el, le, el
+elle, la, ella
+nosotros, os, nosotros
+nosotras, os, nosotras
+vosotros, os, vosotros
+vosotras, os, vosotras
+ellos, los, ellos
+ellas, las, ellas
+=
+hablamos de esto
+le gusta la musica
+me gusta esto
+no me gusta hablar de esto
+=
+gustar
+me gusto
+me gusta, te gusta, le gusta
+no me gusta
+no vamos a hablar de esto
+nosotros no vamos a hablar de esto
+to no voy a ellos sin ti
+=
+me gusta cantar esta cancion
+esto es mi amigo
+esta, este, esto
+yo voy contigo
+me gusta trabajar contigo
+yo me gusto
+me gusta interpretar este papel
+me gustas tu
+yo gusto
+tu gustas
+ella gusta
+=
+ellos hablan con nosotros
+que tu hiciste ayer por la noche?
+yo fui a casa
+que tu hiciste en casa?
+yo no hice nada. yo descanse
+como descansaste?
+=
+leer
+yo tuve un dia muy largo
+=
+largo, corto
+probar, la prueba, las pruebas
+la piscina
+nadar
+mi, mis
+=
+yo lei
+tu leiste
+el leyo
+nosotros leimos
+vosotros leisteis
+ellos leyeron
+=
+yo lei este libro para mi trabajo
+para que trabajo?
+que tu vas a hacer con este libro?
+tu vas a interpretar un papel?
+yo voy a escribir una pieza para el teatro
+=
+banar, lavar, lavarse
+yo lavo las manos
+yo bano a mi hijita
+=
+la gente
+loco
+la gente esta muy loca
+la vida loca
+=
+me llamo, me lavo
+te llamas, te lavas
+yo me lavo
+tu te lavas
+el se lava
+ella se lava
+yo lavo
+yo me lavo
+que hace el por la manana?
+el se lava
+se lava
+nosotros nos lavamos
+vosotros os lavais
+ellos se lavan
+=
+casa de campo
+por eso
+para descansar
+jugar
+yo jugue con mi hijo
+dormir
+yo dormi
+ensenar
+comprar
+mesa
+=
+levantar
+levantarse
+yo me levanto
+tu te levamtas
+el se levanta
+ella se levanta
+Usted se levanta
+nosotros nos levantamos
+vosotros os levantais
+ellos se levantan
+yo me levanto a las 8.
+=
+yo, mi, para mi
+tu, ti, para ti
+=
+como estais?
+buenos dias, amigos!
+que tal?
+como estais hoy?
+todo esta bien?
+la salud?
+la familia?
+entonces
+comensamos!
+=
+dar
+yo doy
+tu das
+el da
+ella da
+Usted da
+nosotros damos
+vosotros dais
+ellos dan
+=
+yo di
+tu diste
+el dio
+ella dio
+Usted dio
+nosotros dimos
+vosotros disteis
+ellos dieron
+=
+yo le di un libro
+dame! deme!
+=
+decir
+yo te digo
+tu dices
+que tu dices?
+de que tu dices?
+yo no comprendo
+el dice
+ella dice
+nosotros decimos
+vosotros decis
+ellos dicen
+ellos me dicen todo
+dime!
+digame, por favor!
+=
+yo dije
+tu dijiste
+el dijo
+ella dijo
+que te dijo?
+nosotros dijimos
+vosotros dijisteis
+ellos dijeron
+=
+yo doy
+tu das
+el da
+Usted da
+nosotros damos
+vosotros dais
+ellos dan
+=
+yo di
+tu diste
+el dio
+Usted dio
+nosotros dimos
+vosotros disteis
+ellos dieron
+=
+deme! digame, por favor!
+la verdad
+dome toda la verdad!
+el no me dijo nada
+el me prometio todo pero no me dio nada
+=
+yo digo
+tu dices
+el dice
+Usted dice
+nosotros decimos
+vosotros decis
+ellos dicen
+=
+prometer
+el dinero
+mucho dinero, poco dinero
+hay que
+hay que trabajar
+hay que comer
+hay que saber
+=
+yo tengo que hablar contigo
+hoy yo tengo que trabajar
+tu tienes que descansar
+=
+tengo que
+/
+ir
+trabajar
+descansar
+comer
+=
+necesitar
+yo necesito tu ayuda
+que tu necesitas?
+yo necesito
+tu necesitas
+el necesita
+Usted necesita
+nosotros necesitanmos
+vosotros necesitais
+ellos necesitan
+yo necesito dinero
+yo necesito dinero para comprar un auto nuevo
+coche, carro, auto
+hay que pensar
+yo tengo que pensar
+hay que comprar
+no piensas que ella tiene razon?
+=
+tener miedo
+yo tengo miedo
+yo no tengo miedo
+Usted tiene razon
+ella tiene razon
+el no tiene razon
+yo tengo hambre
+yo tuve hambre
+=
+tener que
+=
+yo tengo que
+/
+pensar
+trabajar
+hablar
+ir
+=
+hay que trabajar mucho
+=
+ganar
+para ganar mucho hay que trabajar mucho
+esto depende
+que es "normal" para ti?
+el dinero
+=
+deber
+tu debes trabajar!
+cuanto le debo?
+cuanto tu debes?
+cuanto el debe?
+cuanto debemos?
+=
+comprar, vender, pagar
+cuanto tu pagaste?
+donde tu compraste tu aartamento?
+donde lo compraste?
+yo compre un libro. donde lo compraste?
+=
+poder
+el poder
+yo puedo
+yo no puedo
+tu puedes
+el puede
+ella puede
+nosotros podemos
+vosotros podeis
+ellos pueden
+=
+yo pude
+tu pudiste
+tu pudiste ayudarme
+ayudarme
+yo puedo ayudarte
+el pudo
+ella pudo
+nosotros pudimos
+vosotros pudisteis
+ellos pudieron
+=
+puede ser
+se puede
+no se puede
+no se puede fumar
+se puede?
+aqui, alli
+aqui no se puede fumar
+=
+hay
+en esta aula hay nueve personas
+en mi apartamento hay una mesa nueva
+hay un problema
+no hay
+no hay problema
+=
+yo puedo
+tu puedes
+el puede
+ella puede
+Usted puede
+nosotros podemos
+vosotros podeis
+ellos pueden
+=
+yo pude
+tu pudiste
+el pudo
+ella pudo
+Usted pudo
+nosotros pudimos
+vosotros pudisteis
+ellos pudieron
+=
+aqui hay nueve personas
+alli hay problemas, aqui no
+=
+habia
+habia mucho gente
+no habia nada
+aqui no se puede ni bailar ni comer
+una vez mas
+=
+yo llamo
+yo me llamo
+se vende
+aqui se vende ...
+aqui se habla ruso
+esto se come
+esto se come con pan
+hace
+se hace
+esto se hace asi
+=
+alto
+mas
+mas alto que ...
+el es mas alto que tu
+el mas alto
+la mas alta de todas
+bien, bueno, buena
+mal, malo, mala
+mejor
+tu cantas mejor que el.
+peor
+mucho, mas
+poco, menos
+mas o menos
+esto me gusta mas o menos
+asi-asi
+muy, bastante, demasiado
+muy alto, muy alta
+basta!
+mas alto que...
+el mas alto, la mas alta
+muy alto, bastante alto, demasiado alto
+bien, bueno, mejor
+mal, malo, peor
+mucho, mas, poco, menos
+mayor, menor
+mas pequeno
+menos grande
+=
+alto, bajo
+grande, pequeno
+bueno, malo
+largo, corto
+=
+que papeles te gustan?
+amado, querido, preferido
+esto es mi papel preferido
+tu tienes mucho tiempo libre?
+=
+pobrecito, pobrecita
+rico, pobre
+=
+tambien, mas, tampoco
+no me gusta este teatro
+no me gusta tampoco
+a mi tampoco
+senor en la camiseta amarilla...
+como paso el concierto? muchos aplausos?
+=
+pasear
+me gusta pasear.
+yo quero pasear por la costa del mar
+=
+bello, bonito, hermoso, lindo, guapo
+bella, bonita, hermosa, linda, guapa
+que bello!
+que guapo!
+que lindo!
+que bueno!
+que bonita eres!
+=
+la voz
+en voz alta
+a casa
+en el campo
+=
+nosotros vamos a hablar espanol mas
+=
+todo, algo, nada
+yo se todo
+dame algo
+el sabe algo
+yo no quiero nada
+todos
+todos lo conocen
+todos juntos
+alguien
+tu conoces a alguien quien puede ayudarnos?
+ayudarme, ayudarte
+alguien puede ayudarte?
+como puedo ayudarte?
+nadie
+nadie lo conoce
+aqui yo no conozco a nadie
+=
+todos, alguien, nadie
+todo, algo, nada
+siempre, a veces, una vez, jamas, nunca
+en todas partes, en alguna parte, en ninguna parte
+alguno, ninguno
+=
+la parte
+=
+nadie me conoce
+yo no se nada
+=
+en todos los cines
+el pais, la patria
+la ciudad, las ciudades
+el mundo
+todo el mundo
+todos los paises del mundo
+todas las ciudades de Espana
+yo quiero visitar todas las ciudades de Espana
+hay que comer en alguna parte
+hay que comer en algun restaurante
+todos los paises de Europa
+=
+preguntar, la pregunta
+yo tengo una pregunta para ti
+yo quero saber
+=
+ver, mirar
+escuchar, oir
+=
+me gusta escuchar la musica
+=
+yo oi
+tu oiste
+el oyo
+ella oyo
+Usted oyo
+nosotros oimos
+vosotros oisteis
+ellos oyeron
+=
+yo oigo
+tu oyes
+el oye
+ella oye
+Usted oye
+nosotros oimos
+vosotros ois
+ellos oyen
+=
+oye! mira!
+=
+venir
+ven!
+ven aca!
+venga!
+escucha
+yo te escucho
+escuchame!
+=
+hacer
+haz!
+haga!
+haga el favor
+te gusta estudiar?
+si, me gusta estudiar
+=
+hace tres dias
+dentro de tres dias
+tu te equivocas
+=
+cansado
+yo estoy cansado
+tu estas cansado
+el esta cansado
+=
+cada dia
+cada ano
+cada persona
+=
+carne con sangre
+regalar
+el regalo
+ninguno
+ninguna
+la misma, el mismo
+lo mismo, es lo mismo
+=
+claro
+claro que si
+claro que no
+un dia claro
+como no
+=
+estar de acuerdo
+yo estoy de acuerdo
+tu estas de acuerdo
+el esta de acuerdo
+nosotros estamos de acuerdo
+=
+tener ... anos
+tener hambre
+estar cansado
+estar de acuerdo
+estoy de acuerdo contigo
+estoy cansado pero yo voy a descansar
+=
+las flores
+el color
+blanco, blanca, casa blanca
+rojo, roja, rojos, rojas
+el vino blanco, el vino tinto
+amarillo, amarilla, azul, negro
+los ojos negros
+verde, gris, marron, rosado, violeta
+naranja, anaranjado, color castano
+los ojos, el pelo, la estatura, alto, bajo, mediana
+cielo, celeste
+rubio, moreno
+largo, corto
+los ojos son marrones
+pelo rizado
+=
+escribir, describir
+claro, oscuro
+=
+una descripcion muy poetica
+se puede discutir
+=
+entre
+entre rojo y castano
+entre nosotros
+las piernas, los pies
+los brazos, las manos
+=
+calmo
+calmar, tranquilizar
+una voz que tranquiliza
+la sonrisa
+hermosa
+su pelo no es largo ni corto
+los dedos
+los deditos
+los dedos largos para tocar el piano
+=
+en general
+la verdad
+dime la verdad
+como es necesario
+me va muy bien
+ya, todavia, todavia no
+=
+en que estacion del ano estamos?
+estamos en primavera
+=
+una buena descripcion
+enrojecer
+vergüenza
+tener vergüenza
+que vergüenza!
+enrojeci, enrojecio
+=
+la ropa
+la camisa
+la camiseta
+los pantalones
+los zapatos
+la falda
+las botas
+el vestido
+la chaqueta
+la chaqueta de trabajo
+el abrigo
+llevar
+comprar
+vender
+donde se vende...?
+=
+como se dice en Español?
+=
+como se dice en Español?
+=
+escoger
+donde compraste tu camisa?
+es una buena tienda? asi-asi
+para los jovenes es bueno
+me gusta mucho el color verde
+viejo, joven
+jovencito, novecito
+esto es un hombre viejo
+esto hombre es viejo
+=
+me va, te va, le va
+le va muy bien
+me gustan mas los pantalones
+=
+comprar, vender, escoger, llevar, quitarse
+=
+esperar
+espero que ya sabemos mucho
+esperanza
+yo te espero
+yo espero que
+=
+yo me quito
+yo me quite
+yo me quito la chaqueta
+yo me quite los zapatos
+=
+yo me quito
+tu te quitas
+el se quita
+nosotros nos quitamos
+vosotros os quitais
+ellos se quitan
+=
+vestir, poner, ponerse, quitarse
+yo me pongo el abrigo
+yo me quito el abrigo
+yo me quito el sombrero
+=
+poner
+yo pongo
+tu pones
+el pone
+nosotros ponemos
+vosotros poneis
+ellos ponen
+=
+yo puse
+tu pusiste
+el puso
+nosotros pusimos
+vosotros pusisteis
+ellos pusieron
+=
+yo me pongo
+tu te pones
+el se pone
+nosotros nos ponemos
+vosotros os poneis
+ellos se ponen
+=
+yo me puse
+tu te pusiste
+el se puso
+nosotros nos pusimos
+vosotros os pusisteis
+ellos se pusieron
+=
+me, te, se, nos, os, se
+=
+yo me quito
+tu te quitas
+el se quita
+nosotros nos quitamos
+vosotros os quitais
+ellos se quitan
+=
+yo me quite
+tu te quitaste
+el se quito
+nosotros nos quitamos
+vosotros os quitasteis
+ellos se quitaron
+=
+yo voy
+tu vas
+el va
+nosotros vamos
+vosotros vais
+ellos van
+=
+yo fui
+tu fuiste
+el fue
+nosotros fuimos
+vosotros fisteis
+ellos fueron
+=
+yo tengo
+tu tienes
+el tiene
+nosotros tenemos
+vosotros teneis
+ellos tienen
+=
+yo tuve
+tu tuviste
+el tuvo
+nosotros tuvimos
+vosotros tuvisteis
+ellos tuvieron
+=
+yo soy
+tu eres
+el es
+nosotros somos
+vosotros sois
+ellos son
+=
+yo fui
+tu fuiste
+el fue
+nosotros fuimos
+vosotros fuisteis
+ellos fueron
+=
+yo estoy
+tu estas
+el esta
+nosotros estamos
+vosotros estais
+ellos estan
+=
+yo estuve
+tu estuviste
+el estuvo
+nosotros estuvimos
+vosotros estuvisteis
+ellos estuvieron
+=
+proponer
+yo propongo
+amigos, yo propongo, vamos a bailar
+si, como no!
+que tu propones?
+yo les propongo a bailar
+yo les propuse a bailar
+=
+deponer
+exponer
+exposition
+conocer
+reconocer
+yo no te reconozco
+el no me reconocio
+quien eres? yo no te reconozco
+yo reconozco
+tu reconoces
+el reconoce
+yo te reconoci
+yo te conozco
+yo te reconozco
+=
+yo reconozco tus derechos
+derecho
+los derechos humanos
+izquierdo
+=
+Pon!
+Ponga!
+Pongalo aqui
+Ponga esto aqui
+Ponte!
+Pontelo!
+coge tu sombrero, y pontelo
+ponte el abrigo, porque hoy hace frio
+=
+yo voy a...
+yo voy a ponerme...
+manana yo voy a ponerme...
+tu vas a ponerte
+el va a ponerse
+=
+peligro
+peligroso
+es peligroso
+yo soy un hombre en negro
+Y de que color? de color negro.
+vestido muy largo
+=
+que cocina te gusta
+mariscos
+sopa de mariscos
+te gusta comer en casa o en restaurante?
+depender de...
+esto depender de
+tu sabes cocinar?
+cocina, cocinar
+saber, yo se
+yo se cocinar, me gusta cocinar
+que te gusta mas, carne o pescado?
+me gusta mas pescado y los mariscos
+carne, vale!
+cafe o te?
+azucar
+yo quiero comer
+tener hambre
+si nosotros tenemos hambre, nosotros cocinamos algo o vamos al restaurante
+cuando nosotros venimos al restaurante, nosotros llamamos al camarero
+el nos da la carta
+nosotros miramos y escogemos la comida
+la comida que nos gusta
+el camarero nos lleva...
+si nos gusta la comida...
+si nos gusta el servicio...
+todo esta bueno. el camarero nos dala cuenta
+la cuenta, por favor
+=
+dejar
+la propina
+dejar la propina
+lo que
+ordenar
+la cerveza
+por ejemplo
+ensalada
+pagar
+cafe, cafecito, te, tecito
+comer, comida, beber, bebida
+=
+entonces
+pues
+si, claro
+ella es professional, ella sabe
+preferir, preferido
+querido, amado
+queridos amigos!
+catarina, que cocina le gusta?
+tu visitas Japon a menudo?
+yo visite Japon trece veces
+a menudo, raramente, raro
+me gusta la pasta
+en verdad, cocino poco
+ella es muy modesta
+tu comes solo en casa o en restaurante?
+a veces me gusta ir al restaurante
+porque los restaurantes cocinar mejor que yo
+para nosotros tu vas a cocinar la pasta?
+que platos tu sabes cocinar?
+=
+puede ser
+quizas
+preferir
+yo prefiero
+=
+dificil
+facil
+mas facil
+mas dificil
+=
+a menudo
+de costumbre
+de costumbre, yo bebo el te con la hierba
+esto es bueno para la salud
+salud, sano
+=
+desayunar, almorzar, cenar
+desayuno, almuerzo, cena
+yo quisiera una cervecita
+buen provecho!
+a tu salud!
+a nuestra salud!
+a vuestra salud!
 
 
 
