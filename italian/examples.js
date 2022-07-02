@@ -2240,6 +2240,77 @@ come lui lavora?
 =
 quanto?
 =
+Mi piace essere qui.
+Voglio essere qui.
+Devo essere qui
+Posso essere qui.
+Cerco di essere qui.
+Ti piace stare qui?
+Vuoi essere qui?
+Devi essere qui?
+puoi essere qui
+Hai intenzione di essere qui?
+Mi piace essere uno studente.
+Voglio essere uno studente
+Devo essere uno studente
+Posso essere uno studente.
+Cerco di essere uno studente.
+Ti piace essere uno studente?
+Vuoi essere uno studente?
+Devi essere uno studente?
+Puoi essere uno studente?
+Stai cercando di essere uno studente?
+Mi piace avere una macchina.
+Voglio avere una macchina
+Devo avere una macchina.
+Posso avere una macchina.
+Cerco di avere una macchina.
+Ti piace avere una macchina?
+Vuoi avere una macchina?
+Devi avere una macchina?
+puoi avere una macchina?
+Stai cercando di avere una macchina?
+Mi piace andare in Florida.
+Voglio andare in Florida.
+Devo andare in Florida.
+Posso andare in Florida.
+Sto cercando di andare in Florida.
+Ti piace andare in Florida?
+Vuoi andare in Florida?
+Devi andare in Florida?
+Puoi andare in Florida?
+Stai cercando di andare in Florida?
+Mi piace fare i compiti.
+Voglio fare i compiti.
+Devo fare i compiti.
+Posso fare i compiti.
+Provo a fare i compiti.
+Ti piace fare i compiti?
+Vuoi fare i compiti?
+Devi fare i compiti?
+Puoi fare i compiti?
+Provi a fare i compiti?
+Mi piace guardare le notizie.
+Voglio vedere le notizie.
+Devo guardare il telegiornale.
+Posso guardare le notizie.
+Provo a guardare il telegiornale.
+Ti piace guardare le notizie?
+Vuoi vedere le novità?
+Devi guardare il telegiornale?
+Puoi guardare le notizie?
+Stai cercando di guardare le notizie?
+
+ero in florida
+sono in florida
+Sarò in Florida.
+Vengo dalla Florida.
+
+Ho vissuto in Florida.
+Vivo in Florida.
+Vivrò in Florida.
+=
+
 
 
 
