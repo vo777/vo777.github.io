@@ -5948,6 +5948,32 @@ Viviré en Florida.
 
 ===
 
+necesito llamarte
+Necesito llamarlo.
+Necesito llamarla.
+Necesito llamarlos.
+
+Quiero llamarte.
+quiero llamarlo
+quiero llamarla
+quiero llamarlos
+
+Te llamaré.
+Lo llamaré.
+Yo la llamaré.
+Voy a llamarlos.
+==
+¿Cuál es su número?
+¿Cuál es su nombre?
+¿Cuál es sus nombres?
+=
+lo olvidé
+la olvidé
+=
+Yo lo llamé.
+La llamé.
+=
+
 
 
 `
