@@ -5873,6 +5873,80 @@ buen provecho!
 a tu salud!
 a nuestra salud!
 a vuestra salud!
+=
+
+
+Me gusta estar aquí.
+Yo quiero estar aquí.
+tengo que estar aquí
+Puedo estar aquí.
+Trato de estar aquí.
+¿Te gusta estar aquí?
+¿Quieres estar aquí?
+¿Tienes que estar aquí?
+¿Puedes estar aquí?
+¿Intentas estar aquí?
+Me gusta ser estudiante.
+quiero ser estudiante
+tengo que ser estudiante
+Puedo ser estudiante.
+Trato de ser un estudiante.
+¿Te gusta ser estudiante?
+¿Quieres ser estudiante?
+¿Tienes que ser estudiante?
+¿Puedes ser estudiante?
+¿Intentas ser un estudiante?
+Me gusta tener un coche.
+quiero tener un carro
+Tengo que tener un coche.
+Puedo tener un coche.
+Intento tener un coche.
+¿Te gusta tener un coche?
+¿Quieres tener un coche?
+¿Tienes que tener un coche?
+¿Puedes tener un coche?
+¿Intentas tener un coche?
+Me gusta ir a Florida.
+Quiero ir a Florida.
+Tengo que ir a Florida.
+Puedo ir a Florida.
+Intento ir a Florida.
+¿Te gusta ir a Florida?
+¿Quieres ir a Florida?
+¿Tienes que ir a Florida?
+¿Puedes ir a Florida?
+¿Intentas ir a Florida?
+Me gusta hacer la tarea.
+Quiero hacer la tarea.
+Tengo que hacer la tarea.
+Puedo hacer la tarea.
+Trato de hacer la tarea.
+¿Te gusta hacer la tarea?
+¿Quieres hacer la tarea?
+¿Tienes que hacer la tarea?
+¿Puedes hacer la tarea?
+¿Tratas de hacer la tarea?
+Me gusta ver las noticias.
+Quiero ver las noticias.
+Tengo que ver las noticias.
+Puedo ver las noticias.
+Intento ver las noticias.
+¿Te gusta ver las noticias?
+¿Quieres ver las noticias?
+¿Tienes que ver las noticias?
+¿Puedes ver las noticias?
+¿Tratas de ver las noticias?
+
+yo estaba en florida
+estoy en florida
+Estaré en Florida.
+Soy de Florida.
+
+Viví en Florida.
+Vivo en Florida.
+Viviré en Florida.
+
+===
 
 
 
