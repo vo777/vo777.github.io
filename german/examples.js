@@ -4173,6 +4173,77 @@ ist das moglich zu vuele Lieder zu singen?
 ich will nicht vergessen, was ich gelernt habe
 die Geschwister
 =
+Ich bin gerne hier.
+Ich will hier sein.
+Ich muss hier sein
+Ich kann hier sein.
+Ich versuche, hier zu sein.
+Bist du gerne hier?
+Willst du hier sein?
+Musst du hier sein?
+kannst du hier sein
+Haben Sie vor, hier zu sein?
+Ich bin gerne Student.
+Ich möchte Studentin werden
+Ich muss Student sein
+Ich kann Student sein.
+Ich versuche, Student zu sein.
+Bist du gerne Student?
+Willst du Student werden?
+Muss man Student sein?
+Kannst du Student sein?
+Versuchen Sie, Student zu sein?
+Ich habe gerne ein Auto.
+Ich möchte ein Auto haben
+Ich muss ein Auto haben.
+Ich kann ein Auto haben.
+Ich versuche, ein Auto zu haben.
+Haben Sie gerne ein Auto?
+Willst du ein Auto haben?
+Muss man ein Auto haben?
+Kannst du ein Auto haben?
+Versuchen Sie, ein Auto zu haben?
+Ich fahre gerne nach Florida.
+Ich möchte nach Florida gehen.
+Ich muss nach Florida.
+Ich kann nach Florida gehen.
+Ich versuche, nach Florida zu gehen.
+Fährst du gerne nach Florida?
+Willst du nach Florida?
+Musst du nach Florida?
+Kannst du nach Florida gehen?
+Versuchen Sie, nach Florida zu gehen?
+Ich mache gerne Hausaufgaben.
+Ich will die Hausaufgaben machen.
+Ich habe Hausaufgaben zu erledigen.
+Ich kann die Hausaufgaben machen.
+Ich versuche Hausaufgaben zu machen.
+Machst du gerne Hausaufgaben?
+Willst du Hausaufgaben machen?
+Du musst die Hausaufgaben machen?
+Kannst du die Hausaufgaben machen?
+Versuchen Sie Hausaufgaben zu machen?
+Ich schaue gerne Nachrichten.
+Ich möchte die Nachrichten sehen.
+Ich muss die Nachrichten sehen.
+Ich kann die Nachrichten sehen.
+Ich versuche, die Nachrichten zu sehen.
+Siehst du gerne Nachrichten?
+Möchten Sie die Nachrichten sehen?
+Musst du die Nachrichten gucken?
+Kannst du die Nachrichten sehen?
+Versuchen Sie, die Nachrichten zu sehen?
+
+Ich war in Florida
+Ich bin in Florida
+Ich werde in Florida sein.
+Ich komme aus Florida.
+
+Ich habe in Florida gelebt.
+Ich lebe in Florida.
+Ich werde in Florida leben.
+=
+
 
 `
 ;
