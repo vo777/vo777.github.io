@@ -20,8 +20,9 @@ const data =
 
 const timePerQuestion = 70; // 10 = 1 second
 
-const minQ = 1000; // ~ 5 * [a typical daily run]
-const maxQ = 10000; // limited by cookie size
+const minU = 1000; // ~ 5 * [a typical daily run]
+const maxU = 1010; // slightly larger than min
+const maxQ = 10000; // limited by localStorage size
 
 
 function startup()
@@ -212,8 +213,8 @@ function newQuestion()
 		// cookie not found
 		data.wset = [];
 	}
-//	while (data.wset.length < minQ)
-	while (new Set(data.wset).size < minQ)
+
+	while (new Set(data.wset).size < minU)
 	{
 		data.wset.push(Math.floor(Math.random()*N));
 	}
@@ -330,7 +331,10 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
-			data.wset.push(data.answerIndices[x]);
+			const wUnique = new Set(data.wset).size;
+			if (wUnique < maxU) {
+				data.wset.push(data.answerIndices[x]);
+			}
 		}
 
 		data.errSet.add(data.currentIndex);
