@@ -329,8 +329,6 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
 			const wUnique = new Set(data.wset).size;
 			if (wUnique < maxU) {
 				data.wset.push(data.answerIndices[x]);
