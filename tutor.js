@@ -272,6 +272,8 @@ function showDebug()
 	const wCurrent 
 		= data.wset.filter((v) => (v === data.currentIndex)).length;
 	
+	let clipbrb = '';
+
 	data.debugInfo = ''
 	+ 'w:'+data.wset.length+' '+wUnique+' '+wCurrent
 	+ '<br>' + data.questionCount + ', '
@@ -286,9 +288,14 @@ function showDebug()
 	for (let e of errArray)
 	{
 		data.debugInfo += '<br>' + data.dict[e][0] + ' - ' + data.dict[e][1];
+		clipbrb += data.dict[e][0] + ' - ' + data.dict[e][1] + '\n';
 	}
 	
-	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
+	if (data.debugInfoFlag) 
+		{ 
+			data.summary.innerHTML = data.debugInfo;
+			navigator.clipboard.writeText(clipbrb);
+		}
 	else{ data.summary.innerHTML = ''; }	
 }
 
