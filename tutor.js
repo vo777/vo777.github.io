@@ -343,6 +343,7 @@ function onAnswer(x)
 		}
 
 		data.errSet.add(data.currentIndex);
+		data.errSet.add(data.answerIndices[x]);
 		
 	}
 	showDebug();
