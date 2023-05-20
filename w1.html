@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RndWrd</title>
+    <style type="text/css"> 
+	body 
+	{
+	padding: 0; 
+	margin: 0;
+		 /* overflow-y: hidden;   Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+		background-color : #000000;
+		color: #FFFFFF;
+	} 
+
+	p 
+	{
+	   text-align: center;
+	   font-size:  250%;
+	   font-family: "Arial";
+	   font-weight: bold;
+	}
+
+	</style>
+
+  </head>
+  <body onload="startup()">
+    <!-- disable scrollbars: -->
+
+	
+	<p id='wrd'>wrd</p>
+	
+	<script>
+	
+	const wrd = document.getElementById('wrd');
+	
+	function startup()
+	{
+		const split = data.split('\n');
+		const N = split.length;
+		
+		let msg = '---';
+		
+		do 
+		{
+			const i = Math.floor(Math.random()*N);
+			msg = split[i].trim();
+		} while (msg.length == 0 || '#' == msg[0]);
+		
+		wrd.innerHTML = msg;
+	}
+	
+	
+	
+const data = `
+Kartoffel (potato)
+Tomate (tomato)
+Gurke (cucumber)
+Karotte (carrot)
+Paprika (bell pepper)
+Zwiebel (onion)
+Knoblauch (garlic)
+Brokkoli (broccoli)
+Blumenkohl (cauliflower)
+Spinat (spinach)
+Spargel (asparagus)
+Aubergine (eggplant)
+Kürbis (pumpkin/squash)
+Zucchini (zucchini/courgette)
+Sellerie (celery)
+Rote Beete (beetroot)
+Mais (corn)
+Erbsen (peas)
+Bohnen (beans)
+Salat (lettuce)
+Birne (pear)
+Pfirsich (peach)
+Zitrone (lemon)
+Limette (lime)
+Erdbeere (strawberry)
+Himbeere (raspberry)
+Blaubeere (blueberry)
+Brombeere (blackberry)
+Kirsche (cherry)
+Traube (grape)
+Melone (melon)
+Pflaume (plum)
+Feige (fig)
+
+Wohnzimmer (living room)
+Schlafzimmer (bedroom)
+Badezimmer (bathroom)
+Küche (kitchen)
+Esszimmer (dining room)
+Flur (hallway)
+Treppenhaus (staircase)
+Keller (basement/cellar)
+Dachboden (attic/loft)
+Balkon (balcony)
+Terrasse (terrace/patio)
+Garten (garden)
+Garage (garage)
+Arbeitszimmer (study/home office)
+Gästezimmer (guest room)
+Spielzimmer (playroom)
+Waschküche (laundry room)
+Abstellraum (storage room)
+Heizungsraum (boiler room)
+
+ich esse (I eat)
+du isst (you eat)
+er/sie/es isst (he/she/it eats)
+wir essen (we eat)
+ihr esst (you all eat)
+sie essen (they eat)
+
+können (can, to be able to)
+müssen (must, to have to)
+sollen (should, ought to)
+wollen (want, to intend to)
+lassen (to let, to allow)
+dürfen (may, to be allowed to)
+mögen (like, to be fond of)
+
+Ich kann Deutsch sprechen. (I can speak German.)
+Darf ich das Fenster öffnen? (May I open the window?)
+Du musst mehr lernen. (You have to study more.)
+Wir sollen pünktlich sein. (We should be on time.)
+Ich will das Buch lesen. (I want to read the book.)
+Er mag Kaffee trinken. (He likes to drink coffee.)
+
+groß (big)
+klein (small)
+lang (long)
+kurz (short)
+breit (wide)
+schmal (narrow)
+hoch (high/tall)
+niedrig (low)
+schwer (heavy)
+leicht (light)
+schnell (fast/quick)
+langsam (slow)
+heiß (hot)
+kalt (cold)
+warm (warm)
+kühl (cool)
+trocken (dry)
+nass (wet)
+teuer (expensive)
+billig (cheap)
+gut (good)
+schlecht (bad)
+schön (beautiful/nice)
+hässlich (ugly)
+sauber (clean)
+schmutzig (dirty)
+neu (new)
+alt (old)
+frisch (fresh)
+faul (lazy)
+
+
+    arbeiten (to work)
+    essen (to eat)
+    trinken (to drink)
+    gehen (to go)
+    kommen (to come)
+    sein (to be)
+    haben (to have)
+    machen (to make, to do)
+    lesen (to read)
+    schreiben (to write)
+    sprechen (to speak)
+    verstehen (to understand)
+    helfen (to help)
+    lernen (to learn)
+    spielen (to play)
+    sehen (to see)
+    hören (to hear)
+    sagen (to say)
+    denken (to think)
+    wollen (to want)
+    können (to be able to, can)
+    müssen (to have to, must)
+    dürfen (to be allowed to, may)
+    lassen (to let, to allow)
+
+
+Flauschig - Fluffy
+Hügel - Hill
+Glitzer - Glitter
+Quelle - Source
+Gemälde - Painting
+Ausblick - View
+Löwenzahn - Dandelion
+Schnäppchen - Bargain
+Schmacht - Longing
+Entzückend - Enchanting
+Habseligkeiten - Belongings
+Marmelade - Jam
+Tusch - Fanfare
+Bändiger - Tamer
+Meerschweinchen - Guinea Pig
+Eichhörnchen - Squirrel
+Pusteblume - Dandelion Clock
+Verzauberung - Enchantment
+Fernweh - Wanderlust
+Zimperlich - Picky
+
+Immer - manchmal - nie
+Alles - etwas - nichts
+Jeder - jemand - niemand
+Überall - irgendwo - nirgendwo
+
+#
+
+#Generic category words in German with English translation, like food, drink, clothes, place to live, means of transportation etc
+
+Food - Essen
+Drink - Getränk
+Clothes - Kleidung
+Place to live - Wohnort
+Means of transportation - Transportmittel
+Furniture - Möbel
+Electronics - Elektronik
+Sports - Sport
+Animals - Tiere
+Plants - Pflanzen
+Colors - Farben
+Jobs - Berufe
+Hobbies - Hobbys
+Music - Musik
+Art - Kunst
+Books - Bücher
+Technology - Technologie
+Education - Bildung
+Health - Gesundheit
+Nature - Natur
+
+#Generic category words in Spanish with English translation, like food, drink, clothes, place to live, means of transportation etc
+
+Food - Comida
+Drink - Bebida
+Clothes - Ropa
+Place to live - Lugar para vivir
+Means of transportation - Medios de transporte
+Furniture - Muebles
+Electronics - Electrónica
+Sports - Deportes
+Animals - Animales
+Plants - Plantas
+Colors - Colores
+Jobs - Trabajos
+Hobbies - Pasatiempos
+Music - Música
+Art - Arte
+Books - Libros
+Technology - Tecnología
+Education - Educación
+Health - Salud
+Nature - Naturaleza
+
+#Generic category words in French with English translation, like food, drink, clothes, place to live, means of transportation etc
+
+Food - Nourriture
+Drink - Boisson
+Clothes - Vêtements
+Place to live - Lieu de résidence
+Means of transportation - Moyen de transport
+Furniture - Mobilier
+Electronics - Électronique
+Sports - Sports
+Animals - Animaux
+Plants - Plantes
+Colors - Couleurs
+Jobs - Emplois
+Hobbies - Loisirs
+Music - Musique
+Art - Art
+Books - Livres
+Technology - Technologie
+Education - Éducation
+Health - Santé
+Nature - Nature
+
+#Generic category words in Italian with English translation, like food, drink, clothes, place to live, means of transportation etc
+
+Food - Cibo
+Drink - Bevanda
+Clothes - Vestiti
+Place to live - Luogo di residenza
+Means of transportation - Mezzi di trasporto
+Furniture - Mobili
+Electronics - Elettronica
+Sports - Sport
+Animals - Animali
+Plants - Piante
+Colors - Colori
+Jobs - Lavori
+Hobbies - Hobby
+Music - Musica
+Art - Arte
+Books - Libri
+Technology - Tecnologia
+Education - Educazione
+Health - Salute
+Nature - Natura
+
+
+#Generic category words in Portuguese with English translation, like food, drink, clothes, place to live, means of transportation etc
+
+Food - Comida
+Drink - Bebida
+Clothes - Roupas
+Place to live - Local para morar
+Means of transportation - Meios de transporte
+Furniture - Móveis
+Electronics - Eletrônicos
+Sports - Esportes
+Animals - Animais
+Plants - Plantas
+Colors - Cores
+Jobs - Empregos
+Hobbies - Hobbies
+Music - Música
+Art - Arte
+Books - Livros
+Technology - Tecnologia
+Education - Educação
+Health - Saúde
+Nature - Natureza
+
+# 20 random circumstances of time,  e.g. yesterday,  today at 5, etc... in German with English translation
+
+gestern - yesterday
+heute - today
+morgen - tomorrow
+vor einer Stunde - an hour ago
+später - later
+am Wochenende - on the weekend
+nächste Woche - next week
+letzter Monat - last month
+in zwei Tagen - in two days
+diesen Abend - this evening
+in der Vergangenheit - in the past
+in der Zukunft - in the future
+vor Kurzem - recently
+am Vormittag - in the morning
+heute Abend - tonight
+vor langer Zeit - a long time ago
+nächstes Jahr - next year
+in wenigen Minuten - in a few minutes
+diesen Sommer - this summer
+in der Nacht - at night
+
+# 20 random circumstances of time,  e.g. yesterday,  today at 5, etc... in Spanish with English translation
+
+ayer - yesterday
+hoy - today
+mañana - tomorrow
+hace una hora - an hour ago
+más tarde - later
+durante el fin de semana - during the weekend
+la próxima semana - next week
+el mes pasado - last month
+en dos días - in two days
+esta noche - tonight
+en el pasado - in the past
+en el futuro - in the future
+recientemente - recently
+por la mañana - in the morning
+esta tarde - this afternoon
+hace mucho tiempo - a long time ago
+el próximo año - next year
+en pocos minutos - in a few minutes
+este verano - this summer
+por la noche - at night
+
+
+# 20 random circumstances of time,  e.g. yesterday,  today at 5, etc... in French with English translation
+
+hier - yesterday
+aujourd'hui - today
+demain - tomorrow
+il y a une heure - an hour ago
+plus tard - later
+ce week-end - this weekend
+la semaine prochaine - next week
+le mois dernier - last month
+dans deux jours - in two days
+ce soir - tonight
+dans le passé - in the past
+dans le futur - in the future
+récemment - recently
+le matin - in the morning
+cet après-midi - this afternoon
+il y a longtemps - a long time ago
+l'année prochaine - next year
+dans quelques minutes - in a few minutes
+cet été - this summer
+la nuit - at night
+
+# 20 random circumstances of time,  e.g. yesterday,  today at 5, etc... in Italian with English translation
+
+ieri - yesterday
+oggi - today
+domani - tomorrow
+un'ora fa - an hour ago
+più tardi - later
+nel fine settimana - during the weekend
+la settimana prossima - next week
+il mese scorso - last month
+tra due giorni - in two days
+stasera - tonight
+in passato - in the past
+in futuro - in the future
+di recente - recently
+al mattino - in the morning
+questo pomeriggio - this afternoon
+tanto tempo fa - a long time ago
+l'anno prossimo - next year
+tra pochi minuti - in a few minutes
+quest'estate - this summer
+di notte - at night
+
+# 20 random circumstances of time,  e.g. yesterday,  today at 5, etc... in Portuguese with English translation
+
+ontem - yesterday
+hoje - today
+amanhã - tomorrow
+há uma hora - an hour ago
+mais tarde - later
+durante o fim de semana - during the weekend
+na próxima semana - next week
+no mês passado - last month
+em dois dias - in two days
+esta noite - tonight
+no passado - in the past
+no futuro - in the future
+recentemente - recently
+de manhã - in the morning
+esta tarde - this afternoon
+há muito tempo - a long time ago
+no próximo ano - next year
+em poucos minutos - in a few minutes
+este verão - this summer
+à noite - at night
+
+# 20 random circumstances of place,  e.g. in the house, at work etc... in German with English translation
+
+Im Haus - In the house
+Im Büro - At the office
+In der Schule - At school
+Im Krankenhaus - At the hospital
+Im Restaurant - At the restaurant
+Im Park - In the park
+In der Bibliothek - In the library
+Im Supermarkt - At the supermarket
+Im Fitnessstudio - At the gym
+In der Kirche - In the church
+Am Strand - At the beach
+In der U-Bahn - In the subway
+Im Kino - At the cinema
+Im Flugzeug - On the airplane
+Im Museum - In the museum
+Im Schwimmbad - At the swimming pool
+Auf der Baustelle - At the construction site
+Im Hotel - At the hotel
+Im Zoo - At the zoo
+In der Bar - At the bar
+
+# 20 random circumstances of place,  e.g. in the house, at work etc... in Spanish with English translation
+
+En casa - At home
+En el trabajo - At work
+En la escuela - At school
+En el hospital - At the hospital
+En el restaurante - At the restaurant
+En el parque - In the park
+En la biblioteca - In the library
+En el supermercado - At the supermarket
+En el gimnasio - At the gym
+En la iglesia - In the church
+En la playa - At the beach
+En el metro - In the subway
+En el cine - At the cinema
+En el avión - On the airplane
+En el museo - In the museum
+En la piscina - At the swimming pool
+En la obra - At the construction site
+En el hotel - At the hotel
+En el zoológico - At the zoo
+En el bar - At the bar
+
+# 20 random circumstances of place,  e.g. in the house, at work etc... in French with English translation
+
+À la maison - At home
+Au travail - At work
+À l'école - At school
+À l'hôpital - At the hospital
+Au restaurant - At the restaurant
+Au parc - At the park
+À la bibliothèque - At the library
+Au supermarché - At the supermarket
+À la salle de sport - At the gym
+À l'église - At the church
+À la plage - At the beach
+Dans le métro - In the subway
+Au cinéma - At the cinema
+Dans l'avion - On the airplane
+Au musée - At the museum
+À la piscine - At the swimming pool
+Sur le chantier - At the construction site
+À l'hôtel - At the hotel
+Au zoo - At the zoo
+Au bar - At the bar
+
+# 20 random circumstances of place,  e.g. in the house, at work etc... in Italian with English translation
+
+In casa - At home
+Al lavoro - At work
+A scuola - At school
+All'ospedale - At the hospital
+Al ristorante - At the restaurant
+Al parco - At the park
+In biblioteca - In the library
+Al supermercato - At the supermarket
+In palestra - At the gym
+In chiesa - In the church
+In spiaggia - At the beach
+In metropolitana - In the subway
+Al cinema - At the cinema
+In aereo - On the airplane
+Al museo - At the museum
+In piscina - At the swimming pool
+Sul cantiere - At the construction site
+All'hotel - At the hotel
+Allo zoo - At the zoo
+Al bar - At the bar
+
+# 20 random circumstances of place,  e.g. in the house, at work etc... in Portuguese with English translation
+
+Em casa - At home
+No trabalho - At work
+Na escola - At school
+No hospital - At the hospital
+No restaurante - At the restaurant
+No parque - At the park
+Na biblioteca - In the library
+No supermercado - At the supermarket
+Na academia - At the gym
+Na igreja - At the church
+Na praia - At the beach
+No metrô - In the subway
+No cinema - At the cinema
+No avião - On the airplane
+No museu - At the museum
+Na piscina - At the swimming pool
+Na obra - At the construction site
+No hotel - At the hotel
+No zoológico - At the zoo
+No bar - At the bar
+
+# 20 random frequencies, e.g. daily, rarely, often... in German with English translation
+
+Täglich - Daily
+Selten - Rarely
+Häufig - Frequently
+Gelegentlich - Occasionally
+Regelmäßig - Regularly
+Manchmal - Sometimes
+Immer - Always
+Ab und zu - Once in a while
+Jährlich - Yearly
+Wöchentlich - Weekly
+Mehrmals pro Woche - Multiple times per week
+Monatlich - Monthly
+Kaum - Hardly
+Alle paar Tage - Every few days
+Stündlich - Hourly
+Nie - Never
+Oft - Often
+Einmal im Jahr - Once a year
+Mehrmals täglich - Several times a day
+Sporadisch - Sporadically
+
+# 20 random frequencies, e.g. daily, rarely, often... in Spanish with English translation
+
+Diariamente - Daily
+Raramente - Rarely
+Frecuentemente - Frequently
+Ocasionalmente - Occasionally
+Regularmente - Regularly
+A veces - Sometimes
+Siempre - Always
+De vez en cuando - Once in a while
+Anualmente - Yearly
+Semanalmente - Weekly
+Varias veces por semana - Several times per week
+Mensualmente - Monthly
+Casi nunca - Hardly ever
+Cada pocos días - Every few days
+Por hora - Hourly
+Nunca - Never
+A menudo - Often
+Una vez al año - Once a year
+Varias veces al día - Several times a day
+Esporádicamente - Sporadically
+
+# 20 random frequencies, e.g. daily, rarely, often... in French with English translation
+
+Quotidiennement - Daily
+Rarement - Rarely
+Fréquemment - Frequently
+Occasionnellement - Occasionally
+Régulièrement - Regularly
+Parfois - Sometimes
+Toujours - Always
+De temps en temps - From time to time
+Annuellement - Yearly
+Hebdomadairement - Weekly
+Plusieurs fois par semaine - Multiple times per week
+Mensuellement - Monthly
+Presque jamais - Hardly ever
+Tous les quelques jours - Every few days
+À chaque heure - Hourly
+Jamais - Never
+Souvent - Often
+Une fois par an - Once a year
+Plusieurs fois par jour - Several times a day
+De manière sporadique - Sporadically
+
+# 20 random frequencies, e.g. daily, rarely, often... in Italian with English translation
+
+Giornalmente - Daily
+Raramente - Rarely
+Spesso - Often
+Occasionalmente - Occasionally
+Regolarmente - Regularly
+A volte - Sometimes
+Sempre - Always
+Ogni tanto - Once in a while
+Annualmente - Yearly
+Settimanalmente - Weekly
+Più volte alla settimana - Multiple times per week
+Mensilmente - Monthly
+Quasi mai - Hardly ever
+Ogni pochi giorni - Every few days
+Ogni ora - Hourly
+Mai - Never
+Molto spesso - Very often
+Una volta all'anno - Once a year
+Diverse volte al giorno - Several times a day
+Sporadicamente - Sporadically
+
+# 20 random frequencies, e.g. daily, rarely, often... in Portuguese with English translation
+
+Diariamente - Daily
+Raramente - Rarely
+Frequentemente - Frequently
+Ocasionalmente - Occasionally
+Regularmente - Regularly
+Às vezes - Sometimes
+Sempre - Always
+De vez em quando - Once in a while
+Anualmente - Yearly
+Semanalmente - Weekly
+Várias vezes por semana - Several times per week
+Mensalmente - Monthly
+Quase nunca - Hardly ever
+A cada poucos dias - Every few days
+Por hora - Hourly
+Nunca - Never
+Com frequência - Often
+Uma vez por ano - Once a year
+Várias vezes por dia - Several times a day
+Esporadicamente - Sporadically
+
+# clothes items in German with English translation
+
+T-Shirt - T-Shirt
+Hemd - Shirt
+Bluse - Blouse
+Pullover - Sweater
+Jacke - Jacket
+Mantel - Coat
+Hose - Pants
+Jeans - Jeans
+Rock - Skirt
+Kleid - Dress
+Anzug - Suit
+Krawatte - Tie
+Socken - Socks
+Schuhe - Shoes
+Stiefel - Boots
+Handschuhe - Gloves
+Mütze - Hat
+Schal - Scarf
+Unterwäsche - Underwear
+Badeanzug - Swimsuit
+
+# clothes items in Spanish with English translation
+
+Camiseta - T-shirt
+Camisa - Shirt
+Blusa - Blouse
+Suéter - Sweater
+Chaqueta - Jacket
+Abrigo - Coat
+Pantalones - Pants
+Vaqueros - Jeans
+Falda - Skirt
+Vestido - Dress
+Traje - Suit
+Corbata - Tie
+Calcetines - Socks
+Zapatos - Shoes
+Botas - Boots
+Guantes - Gloves
+Sombrero - Hat
+Bufanda - Scarf
+Ropa interior - Underwear
+Traje de baño - Swimsuit
+
+# clothes items in French with English translation
+
+T-shirt - T-shirt
+Chemise - Shirt
+Blouse - Blouse
+Pull - Sweater
+Veste - Jacket
+Manteau - Coat
+Pantalon - Pants/Trousers
+Jeans - Jeans
+Jupe - Skirt
+Robe - Dress
+Costume - Suit
+Cravate - Tie
+Chaussettes - Socks
+Chaussures - Shoes
+Bottes - Boots
+Gants - Gloves
+Chapeau - Hat
+Écharpe - Scarf
+Sous-vêtements - Underwear
+Maillot de bain - Swimsuit
+
+# clothes items in Italian with English translation
+
+Maglietta - T-shirt
+Camicia - Shirt
+Blusa - Blouse
+Maglione - Sweater
+Giacca - Jacket
+Cappotto - Coat
+Pantaloni - Pants/Trousers
+Jeans - Jeans
+Gonna - Skirt
+Vestito - Dress
+Abito - Suit
+Cravatta - Tie
+Calzini - Socks
+Scarpe - Shoes
+Stivali - Boots
+Guanti - Gloves
+Cappello - Hat
+Sciarpa - Scarf
+Biancheria intima - Underwear
+Costume da bagno - Swimsuit
+
+# clothes items in Portuguese with English translation
+
+Camiseta - T-shirt
+Camisa - Shirt
+Blusa - Blouse
+Suéter - Sweater
+Jaqueta - Jacket
+Casaco - Coat
+Calças - Pants/Trousers
+Jeans - Jeans
+Saia - Skirt
+Vestido - Dress
+Terno - Suit
+Gravata - Tie
+Meias - Socks
+Sapatos - Shoes
+Botas - Boots
+Luvas - Gloves
+Chapéu - Hat
+Cachecol - Scarf
+Roupa íntima - Underwear
+Maiô - Swimsuit
+
+# furniture words In German with English translation
+
+Tisch - Table
+Stuhl - Chair
+Sofa - Sofa
+Bett - Bed
+Schrank - Cabinet
+Regal - Shelf
+Kommode - Dresser
+Couch - Couch
+Sessel - Armchair
+Hocker - Stool
+Schreibtisch - Desk
+Bücherregal - Bookshelf
+Esstisch - Dining table
+Nachttisch - Nightstand
+Kleiderschrank - Wardrobe
+Sideboard - Sideboard
+Vitrine - Display cabinet
+Spiegel - Mirror
+Garderobe - Coat rack
+TV-Schrank - TV stand
+
+# furniture words In Spanish with English translation
+
+Mesa - Table
+Silla - Chair
+Sofá - Sofa
+Cama - Bed
+Armario - Wardrobe
+Estantería - Bookshelf
+Cajonera - Chest of drawers
+Diván - Chaise longue
+Taburete - Stool
+Escritorio - Desk
+Mesita de noche - Nightstand
+Mueble de televisión - TV stand
+Aparador - Sideboard
+Espejo - Mirror
+Cómoda - Dresser
+Cuna - Crib
+Banqueta - Bench
+Perchero - Coat rack
+Cómoda - Dresser
+Vitrina - Display cabinet
+
+# furniture words In French with English translation
+
+Table - Table
+Chaise - Chair
+Canapé - Sofa
+Lit - Bed
+Armoire - Wardrobe
+Étagère - Shelf
+Commode - Dresser
+Fauteuil - Armchair
+Tabouret - Stool
+Bureau - Desk
+Table de chevet - Nightstand
+Meuble TV - TV stand
+Buffet - Sideboard
+Miroir - Mirror
+Berceau - Crib
+Banc - Bench
+Porte-manteau - Coat rack
+Coiffeuse - Vanity table
+Vitrine - Display cabinet
+Penderie - Clothes rack
+
+# furniture words In Italian with English translation
+
+Tavolo - Table
+Sedia - Chair
+Divano - Sofa
+Letto - Bed
+Armadio - Wardrobe
+Scaffale - Shelf
+Cassettiera - Chest of drawers
+Poltrona - Armchair
+Sgabello - Stool
+Scrivania - Desk
+Comodino - Nightstand
+Mobile TV - TV stand
+Vetrina - Display cabinet
+Specchio - Mirror
+Culla - Crib
+Panchina - Bench
+Attaccapanni - Coat rack
+Toeletta - Vanity table
+Libreria - Bookcase
+Appendiabiti - Clothes hanger
+
+# furniture words In Portuguese with English translation
+
+Mesa - Table
+Cadeira - Chair
+Sofá - Sofa
+Cama - Bed
+Guarda-roupa - Wardrobe
+Estante - Bookshelf
+Cômoda - Dresser
+Poltrona - Armchair
+Banqueta - Stool
+Escrivaninha - Desk
+Criado-mudo - Nightstand
+Rack - TV stand
+Bufê - Sideboard
+Espelho - Mirror
+Berço - Crib
+Banco - Bench
+Cabideiro - Coat rack
+Penteadeira - Vanity table
+Prateleira - Shelf
+Cabide - Clothes hanger
+
+# kitchen utencils in German with English translation
+
+Der Löffel - The spoon
+Die Gabel - The fork
+Das Messer - The knife
+Der Teller - The plate
+Die Schüssel - The bowl
+Der Topf - The pot
+Die Pfanne - The pan
+Das Sieb - The sieve
+Der Schneebesen - The whisk
+Der Pfannenwender - The spatula
+Der Kochlöffel - The cooking spoon
+Die Schneidematte - The cutting board
+Der Dosenöffner - The can opener
+Der Korkenzieher - The corkscrew
+Die Teekanne - The teapot
+Die Kaffeemaschine - The coffee machine
+Die Reibe - The grater
+Die Zange - The tongs
+Der Mixer - The blender
+Der Eierbecher - The egg cup
+
+# kitchen utencils in Spanish with English translation
+
+La cuchara - The spoon
+El tenedor - The fork
+El cuchillo - The knife
+El plato - The plate
+El bol - The bowl
+La olla - The pot
+La sartén - The pan
+El colador - The strainer
+El batidor - The whisk
+La espátula - The spatula
+La cuchara de cocina - The cooking spoon
+La tabla de cortar - The cutting board
+El abrelatas - The can opener
+El sacacorchos - The corkscrew
+La tetera - The teapot
+La cafetera - The coffee maker
+El rallador - The grater
+Las pinzas - The tongs
+La batidora - The blender
+La huevera - The egg cup
+
+# kitchen utencils in French with English translation
+
+La cuillère - The spoon
+La fourchette - The fork
+Le couteau - The knife
+L'assiette (f) - The plate
+Le bol - The bowl
+La casserole - The saucepan
+La poêle - The frying pan
+La passoire - The strainer
+Le fouet - The whisk
+La spatule - The spatula
+La louche - The ladle
+La planche à découper - The cutting board
+L'ouvre-boîte (m) - The can opener
+Le tire-bouchon - The corkscrew
+La théière - The teapot
+La cafetière - The coffee maker
+La râpe - The grater
+Les pinces (f) - The tongs
+Le mixeur - The blender
+Le coquetier - The egg cup
+
+# kitchen utencils in Italian with English translation
+
+Il cucchiaio - The spoon
+La forchetta - The fork
+Il coltello - The knife
+Il piatto - The plate
+La ciotola - The bowl
+La pentola - The pot
+La padella - The pan
+Il colino - The strainer
+La frusta - The whisk
+La spatola - The spatula
+Il mestolo - The ladle
+Il tagliere - The cutting board
+L'apriscatole (m) - The can opener
+Il cavatappi - The corkscrew
+La teiera - The teapot
+La macchina del caffè - The coffee machine
+La grattugia - The grater
+Le pinze - The tongs
+Il frullatore - The blender
+Il portauovo - The egg cup
+
+
+# kitchen utencils in Portuguese with English translation
+
+A colher - The spoon
+O garfo - The fork
+A faca - The knife
+O prato - The plate
+A tigela - The bowl
+A panela - The pot
+A frigideira - The frying pan
+O coador - The strainer
+O batedor - The whisk
+A espátula - The spatula
+A concha - The ladle
+A tábua de cortar - The cutting board
+O abridor de latas - The can opener
+O saca-rolhas - The corkscrew
+A bule - The teapot
+A cafeteira - The coffee maker
+O ralador - The grater
+As pinças - The tongs
+O liquidificador - The blender
+O porta-ovo - The egg cup
+
+# food words In German with English translation
+
+Der Apfel - The apple
+Die Banane - The banana
+Die Orange - The orange
+Die Erdbeere - The strawberry
+Die Traube - The grape
+Die Karotte - The carrot
+Die Kartoffel - The potato
+Die Zwiebel - The onion
+Der Knoblauch - The garlic
+Das Brot - The bread
+Die Butter - The butter
+Der Käse - The cheese
+Das Fleisch - The meat
+Der Fisch - The fish
+Die Hühnchen - The chicken
+Der Reis - The rice
+Die Nudeln - The pasta
+Die Tomate - The tomato
+Die Salat - The salad
+Das Ei - The egg
+
+# food words In Spanish with English translation
+
+La manzana - The apple
+El plátano - The banana
+La naranja - The orange
+La fresa - The strawberry
+La uva - The grape
+La zanahoria - The carrot
+La patata / La papa - The potato
+La cebolla - The onion
+El ajo - The garlic
+El pan - The bread
+La mantequilla - The butter
+El queso - The cheese
+La carne - The meat
+El pescado - The fish
+El pollo - The chicken
+El arroz - The rice
+Los fideos / La pasta - The pasta
+El tomate - The tomato
+La ensalada - The salad
+El huevo - The egg
+
+# food words In French with English translation
+
+La pomme - The apple
+La banane - The banana
+L'orange (f) - The orange
+La fraise - The strawberry
+Le raisin - The grape
+La carotte - The carrot
+La pomme de terre - The potato
+L'oignon (m) - The onion
+L'ail (m) - The garlic
+Le pain - The bread
+Le beurre - The butter
+Le fromage - The cheese
+La viande - The meat
+Le poisson - The fish
+Le poulet - The chicken
+Le riz - The rice
+Les pâtes (f) - The pasta
+La tomate - The tomato
+La salade - The salad
+L'œuf (m) - The egg
+
+# food words In Italian with English translation
+
+La mela - The apple
+La banana - The banana
+L'arancia (f) - The orange
+La fragola - The strawberry
+L'uva - The grape
+La carota - The carrot
+La patata - The potato
+La cipolla - The onion
+L'aglio (m) - The garlic
+Il pane - The bread
+Il burro - The butter
+Il formaggio - The cheese
+La carne - The meat
+Il pesce - The fish
+Il pollo - The chicken
+Il riso - The rice
+Le paste - The pasta
+Il pomodoro - The tomato
+L'insalata (f) - The salad
+L'uovo - The egg
+
+# food words In Portuguese with English translation
+
+A maçã - The apple
+A banana - The banana
+A laranja - The orange
+O morango - The strawberry
+A uva - The grape
+A cenoura - The carrot
+A batata - The potato
+A cebola - The onion
+O alho - The garlic
+O pão - The bread
+A manteiga - The butter
+O queijo - The cheese
+A carne - The meat
+O peixe - The fish
+O frango - The chicken
+O arroz - The rice
+A massa - The pasta
+O tomate - The tomato
+A salada - The salad
+O ovo - The egg
+
+# scientific words, like idea, hypothesis, formula in German with English translations
+
+Die Idee - The idea
+Die Hypothese - The hypothesis
+Die Theorie - The theory
+Das Experiment - The experiment
+Die Beobachtung - The observation
+Die Messung - The measurement
+Die Daten - The data
+Die Analyse - The analysis
+Die Ergebnisse - The results
+Die Schlussfolgerung - The conclusion
+Die Formel - The formula
+Der Beweis - The proof
+Die Variable - The variable
+Der Parameter - The parameter
+Die Gleichung - The equation
+Die Konstante - The constant
+Die Skala - The scale
+Die Einheit - The unit
+Die Abhängigkeit - The dependence
+Der Zusammenhang - The relationship
+
+# scientific words, like idea, hypothesis, formula in Spanish with English translations
+
+La idea - The idea
+La hipótesis - The hypothesis
+La teoría - The theory
+El experimento - The experiment
+La observación - The observation
+La medición - The measurement
+Los datos - The data
+El análisis - The analysis
+Los resultados - The results
+La conclusión - The conclusion
+La fórmula - The formula
+La prueba - The proof
+La variable - The variable
+El parámetro - The parameter
+La ecuación - The equation
+La constante - The constant
+La escala - The scale
+La unidad - The unit
+La dependencia - The dependence
+La relación - The relationship
+
+
+# scientific words, like idea, hypothesis, formula in French with English translations
+
+L'idée - The idea
+L'hypothèse - The hypothesis
+La théorie - The theory
+L'expérience - The experiment
+L'observation - The observation
+La mesure - The measurement
+Les données - The data
+L'analyse - The analysis
+Les résultats - The results
+La conclusion - The conclusion
+La formule - The formula
+La preuve - The proof
+La variable - The variable
+Le paramètre - The parameter
+L'équation - The equation
+La constante - The constant
+L'échelle - The scale
+L'unité - The unit
+La dépendance - The dependence
+La relation - The relationship
+
+# scientific words, like idea, hypothesis, formula in Italian with English translations
+
+L'idea - The idea
+L'ipotesi - The hypothesis
+La teoria - The theory
+L'esperimento - The experiment
+L'osservazione - The observation
+La misurazione - The measurement
+I dati - The data
+L'analisi - The analysis
+I risultati - The results
+La conclusione - The conclusion
+La formula - The formula
+La prova - The proof
+La variabile - The variable
+Il parametro - The parameter
+L'equazione - The equation
+La costante - The constant
+La scala - The scale
+L'unità - The unit
+La dipendenza - The dependence
+La relazione - The relationship
+
+# scientific words, like idea, hypothesis, formula in Portuguese with English translations
+
+A ideia - The idea
+A hipótese - The hypothesis
+A teoria - The theory
+O experimento - The experiment
+A observação - The observation
+A medição - The measurement
+Os dados - The data
+A análise - The analysis
+Os resultados - The results
+A conclusão - The conclusion
+A fórmula - The formula
+A prova - The proof
+A variável - The variable
+O parâmetro - The parameter
+A equação - The equation
+A constante - The constant
+A escala - The scale
+A unidade - The unit
+A dependência - The dependence
+A relação - The relationship
+
+# 20 common adjectives in German with English translation
+
+groß (big)
+klein (small)
+schön (beautiful)
+hässlich (ugly)
+gut (good)
+schlecht (bad)
+schnell (fast)
+langsam (slow)
+alt (old)
+jung (young)
+teuer (expensive)
+billig (cheap)
+einfach (simple)
+schwierig (difficult)
+lecker (delicious)
+frisch (fresh)
+warm (warm)
+kalt (cold)
+laut (loud)
+leise (quiet)
+
+# 20 common adjectives in Spanish with English translation
+
+grande (big)
+pequeño (small)
+hermoso (beautiful)
+feo (ugly)
+bueno (good)
+malo (bad)
+rápido (fast)
+lento (slow)
+viejo (old)
+joven (young)
+caro (expensive)
+barato (cheap)
+fácil (easy)
+difícil (difficult)
+delicioso (delicious)
+fresco (fresh)
+caliente (hot)
+frío (cold)
+ruidoso (loud)
+tranquilo (calm)
+
+# 20 common adjectives in French with English translation
+
+grand(e) (big)
+petit(e) (small)
+beau (beautiful)
+laid(e) (ugly)
+bon(ne) (good)
+mauvais(e) (bad)
+rapide (fast)
+lent(e) (slow)
+vieux/vieille (old)
+jeune (young)
+cher/chère (expensive)
+bon marché (cheap)
+facile (easy)
+difficile (difficult)
+délicieux/délicieuse (delicious)
+frais/fraîche (fresh)
+chaud(e) (hot)
+froid(e) (cold)
+bruyant(e) (noisy)
+calme (calm)
+
+# 20 common adjectives in Italian with English translation
+
+grande (big)
+piccolo (small)
+bello (beautiful)
+brutto (ugly)
+buono (good)
+cattivo (bad)
+veloce (fast)
+lento (slow)
+vecchio (old)
+giovane (young)
+costoso (expensive)
+economico (cheap)
+facile (easy)
+difficile (difficult)
+delizioso (delicious)
+fresco (fresh)
+caldo (hot)
+freddo (cold)
+rumoroso (noisy)
+tranquillo (calm)
+
+# 20 common adjectives in Portuguese with English translation
+
+grande (big)
+pequeno (small)
+bonito (beautiful)
+feio (ugly)
+bom (good)
+ruim (bad)
+rápido (fast)
+lento (slow)
+velho (old)
+jovem (young)
+caro (expensive)
+barato (cheap)
+fácil (easy)
+difícil (difficult)
+delicioso (delicious)
+fresco (fresh)
+quente (hot)
+frio (cold)
+barulhento (noisy)
+tranquilo (calm)
+
+# Here are 20 common adverbs in German with their English translations:
+
+oft - often
+immer - always
+schnell - quickly
+langsam - slowly
+gerne - gladly
+bald - soon
+vielleicht - maybe
+bereits - already
+sofort - immediately
+manchmal - sometimes
+gern - willingly
+selten - rarely
+gestern - yesterday
+heute - today
+morgen - tomorrow
+hier - here
+dort - there
+dort drüben - over there
+sehr - very
+echt - really
+
+# 20 common adverbs in Spanish with English translation
+
+siempre - always
+nunca - never
+también - also
+nunca más - never again
+a menudo - often
+rápidamente - quickly
+lentamente - slowly
+bien - well
+mal - badly
+tarde - late
+temprano - early
+ahora - now
+luego - later
+todavía - still
+ya - already
+aquí - here
+allí - there
+lejos - far
+cerca - near
+bastante - quite
+
+# 20 common adverbs in French with English translation
+
+souvent - often
+toujours - always
+rapidement - quickly
+lentement - slowly
+bien - well
+mal - badly
+beaucoup - a lot
+peu - a little
+déjà - already
+encore - still/yet
+ici - here
+là - there
+maintenant - now
+hier - yesterday
+demain - tomorrow
+vite - fast
+doucement - gently
+vraiment - truly/really
+parfois - sometimes
+tôt - early
+
+# 20 common adverbs in Italian with English translation
+
+sempre - always
+mai - never
+molto - very/much
+poco - little/few
+velocemente - quickly
+lentamente - slowly
+bene - well
+male - badly
+spesso - often
+subito - immediately
+ancora - still/yet
+qui - here
+là - there
+adesso - now
+prima - before/earlier
+dopo - after/later
+presto - soon/early
+tardi - late
+proprio - really/just
+già - already
+
+# 20 common adverbs in Portuguese with English translation
+
+sempre - always
+nunca - never
+também - also/too
+ainda - still/yet
+já - already
+muito - very/much
+pouco - little/few
+rapidamente - quickly
+lentamente - slowly
+bem - well
+mal - badly
+bastante - quite/a lot
+agora - now
+depois - after/later
+cedo - early
+tarde - late
+aqui - here
+lá - there
+bastante - enough
+certamente - certainly/surely
+
+# 50 common German verbs with English translations
+
+sein - to be
+haben - to have
+werden - to become
+machen - to do/make
+sagen - to say
+gehen - to go
+kommen - to come
+können - to be able to
+wollen - to want
+müssen - to have to/must
+sehen - to see
+geben - to give
+finden - to find
+nehmen - to take
+wissen - to know
+denken - to think
+tun - to do
+sprechen - to speak
+liegen - to lie (be situated)
+helfen - to help
+nehmen - to take
+stehen - to stand
+bleiben - to stay
+glauben - to believe
+setzen - to set/put
+bringen - to bring
+halten - to hold
+führen - to lead
+leben - to live
+arbeiten - to work
+verstehen - to understand
+meinen - to mean
+fragen - to ask
+sagen - to tell
+schreiben - to write
+spielen - to play
+lesen - to read
+lernen - to learn
+bekommen - to receive/get
+sehen - to see
+stehen - to stand
+fahren - to drive
+bekommen - to get
+sprechen - to speak
+suchen - to search
+denken - to think
+öffnen - to open
+schließen - to close
+treffen - to meet
+fühlen - to feel
+
+# 50 common Spanish verbs with English translations
+
+ser - to be
+estar - to be
+tener - to have
+hacer - to do/make
+decir - to say/tell
+ir - to go
+venir - to come
+poder - to be able to
+querer - to want
+deber - to have to/must/ought to
+ver - to see
+dar - to give
+encontrar - to find
+tomar - to take
+saber - to know
+pensar - to think
+sentir - to feel
+hablar - to speak
+llevar - to carry/wear/take
+ayudar - to help
+necesitar - to need
+gustar - to like
+poner - to put/place
+salir - to go out/leave
+entender - to understand
+conocer - to know/meet
+vivir - to live
+trabajar - to work
+estudiar - to study
+comer - to eat
+beber - to drink
+dormir - to sleep
+comprar - to buy
+vender - to sell
+aprender - to learn
+escribir - to write
+leer - to read
+escuchar - to listen
+mirar - to look/watch
+seguir - to follow/continue
+esperar - to wait/hope
+jugar - to play
+creer - to believe
+sentirse - to feel (emotionally)
+encontrar - to meet/find
+abrir - to open
+cerrar - to close
+pensar - to plan/think
+conocer - to be familiar with
+sentir - to regret
+
+# 50 common French verbs with English translations
+
+être - to be
+avoir - to have
+faire - to do/make
+dire - to say/tell
+aller - to go
+venir - to come
+pouvoir - to be able to
+vouloir - to want
+devoir - to have to/must
+voir - to see
+donner - to give
+trouver - to find
+prendre - to take
+savoir - to know
+penser - to think
+sentir - to feel
+parler - to speak
+aimer - to love/like
+comprendre - to understand
+apprendre - to learn
+travailler - to work
+manger - to eat
+boire - to drink
+dormir - to sleep
+sortir - to go out
+venir - to come
+partir - to leave
+arriver - to arrive
+vivre - to live
+étudier - to study
+regarder - to watch/look
+écouter - to listen
+lire - to read
+écrire - to write
+acheter - to buy
+vendre - to sell
+penser - to think
+connaître - to know/be familiar with
+montrer - to show
+jouer - to play
+croire - to believe
+attendre - to wait
+choisir - to choose
+sentir - to smell
+voir - to meet/see
+ouvrir - to open
+fermer - to close
+finir - to finish
+partir - to start/leave
+courir - to run
+
+# 50 common Italian verbs with English translations
+
+essere - to be
+avere - to have
+fare - to do/make
+dire - to say/tell
+andare - to go
+venire - to come
+potere - to be able to
+volere - to want
+dovere - to have to/must
+vedere - to see
+dare - to give
+trovare - to find
+prendere - to take
+sapere - to know
+pensare - to think
+sentire - to hear/feel
+parlare - to speak
+amare - to love
+capire - to understand
+studiare - to study
+lavorare - to work
+mangiare - to eat
+bere - to drink
+dormire - to sleep
+uscire - to go out
+venire - to come
+partire - to leave
+arrivare - to arrive
+vivere - to live
+imparare - to learn
+guardare - to look/watch
+ascoltare - to listen
+leggere - to read
+scrivere - to write
+comprare - to buy
+vendere - to sell
+pensare - to think
+conoscere - to know/be familiar with
+mostrare - to show
+giocare - to play
+credere - to believe
+aspettare - to wait
+scegliere - to choose
+sentire - to smell
+vedere - to meet/see
+aprire - to open
+chiudere - to close
+finire - to finish
+partire - to start/leave
+correre - to run
+
+# 50 common Portuguese verbs with English translations
+
+ser - to be
+estar - to be
+ter - to have
+fazer - to do/make
+dizer - to say/tell
+ir - to go
+vir - to come
+poder - to be able to
+querer - to want
+precisar - to need
+ver - to see
+dar - to give
+encontrar - to find
+pegar - to take
+saber - to know
+pensar - to think
+sentir - to feel
+falar - to speak
+amar - to love
+entender - to understand
+aprender - to learn
+trabalhar - to work
+comer - to eat
+beber - to drink
+dormir - to sleep
+sair - to go out/leave
+chegar - to arrive
+viver - to live
+estudar - to study
+ler - to read
+escrever - to write
+comprar - to buy
+vender - to sell
+acreditar - to believe
+conhecer - to know/meet
+ensinar - to teach
+ouvir - to hear
+assistir - to watch/attend
+contar - to tell/count
+jogar - to play
+ajudar - to help
+esperar - to wait/hope
+escolher - to choose
+sentir - to sense
+ver - to check/see
+abrir - to open
+fechar - to close
+terminar - to finish
+começar - to start
+correr - to run
+
+# 50 common German nouns with English translations
+
+Haus - house
+Auto - car
+Zeit - time
+Tag - day
+Jahr - year
+Freund - friend
+Familie - family
+Stadt - city
+Land - country
+Schule - school
+Buch - book
+Arbeit - work/job
+Geld - money
+Essen - food
+Wasser - water
+Hausaufgabe - homework
+Telefon - telephone
+Mutter - mother
+Vater - father
+Kind - child
+Frau - woman/wife
+Mann - man/husband
+Bruder - brother
+Schwester - sister
+Oma - grandma
+Opa - grandpa
+Baum - tree
+Blume - flower
+Tier - animal
+Himmel - sky
+Sonne - sun
+Mond - moon
+Straße - street
+Park - park
+Markt - market
+Film - movie
+Musik - music
+Zeitung - newspaper
+Problem - problem
+Frage - question
+Antwort - answer
+Farbe - color
+Schnee - snow
+Wetter - weather
+Kaffee - coffee
+Tee - tea
+Kuchen - cake
+Brot - bread
+Milch - milk
+Apfel - apple
+
+# 50 common Spanish nouns with English translations
+
+casa - house
+coche - car
+tiempo - time/weather
+día - day
+año - year
+amigo/amiga - friend
+familia - family
+ciudad - city
+país - country
+escuela - school
+libro - book
+trabajo - work/job
+dinero - money
+comida - food
+agua - water
+tarea - homework
+teléfono - telephone
+madre - mother
+padre - father
+niño/niña - child
+mujer/esposa - woman/wife
+hombre/esposo - man/husband
+hermano - brother
+hermana - sister
+abuela - grandmother
+abuelo - grandfather
+árbol - tree
+flor - flower
+animal - animal
+cielo - sky
+sol - sun
+luna - moon
+calle - street
+parque - park
+mercado - market
+película - movie
+música - music
+periódico - newspaper
+problema - problem
+pregunta - question
+respuesta - answer
+color - color
+nieve - snow
+clima - climate
+café - coffee
+té - tea
+pastel - cake
+pan - bread
+leche - milk
+manzana - apple
+
+# 50 common French nouns with English translations
+
+maison - house
+voiture - car
+temps - time/weather
+jour - day
+année - year
+ami/amie - friend
+famille - family
+ville - city
+pays - country
+école - school
+livre - book
+travail - work/job
+argent - money
+nourriture - food
+eau - water
+devoir - homework
+téléphone - telephone
+mère - mother
+père - father
+enfant - child
+femme/épouse - woman/wife
+homme/époux - man/husband
+frère - brother
+sœur - sister
+grand-mère - grandmother
+grand-père - grandfather
+arbre - tree
+fleur - flower
+animal - animal
+ciel - sky
+soleil - sun
+lune - moon
+rue - street
+parc - park
+marché - market
+film - movie
+musique - music
+journal - newspaper
+problème - problem
+question - question
+réponse - answer
+couleur - color
+neige - snow
+temps - weather
+café - coffee
+thé - tea
+gâteau - cake
+pain - bread
+lait - milk
+pomme - apple
+
+# 50 common Italian nouns with English translations
+
+casa - house
+auto - car
+tempo - time
+giorno - day
+anno - year
+amico/amica - friend
+famiglia - family
+città - city
+paese - country
+scuola - school
+libro - book
+lavoro - work/job
+soldi - money
+cibo - food
+acqua - water
+compito - homework
+telefono - telephone
+madre - mother
+padre - father
+bambino/bambina - child
+donna/moglie - woman/wife
+uomo/marito - man/husband
+fratello - brother
+sorella - sister
+nonna - grandmother
+nonno - grandfather
+albero - tree
+fiore - flower
+animale - animal
+cielo - sky
+sole - sun
+luna - moon
+strada - street
+parco - park
+mercato - market
+film - movie
+musica - music
+giornale - newspaper
+problema - problem
+domanda - question
+risposta - answer
+colore - color
+neve - snow
+tempo - weather
+caffè - coffee
+tè - tea
+torta - cake
+pane - bread
+latte - milk
+mela - apple
+
+# 50 common Portuguese nouns with English translations
+
+casa - house
+carro - car
+tempo - time/weather
+dia - day
+ano - year
+amigo/amiga - friend
+família - family
+cidade - city
+país - country
+escola - school
+livro - book
+trabalho - work/job
+dinheiro - money
+comida - food
+água - water
+tarefa - homework
+telefone - telephone
+mãe - mother
+pai - father
+criança - child
+mulher/esposa - woman/wife
+homem/marido - man/husband
+irmão - brother
+irmã - sister
+avó - grandmother
+avô - grandfather
+árvore - tree
+flor - flower
+animal - animal
+céu - sky
+sol - sun
+lua - moon
+rua - street
+parque - park
+mercado - market
+filme - movie
+música - music
+jornal - newspaper
+problema - problem
+pergunta - question
+resposta - answer
+cor - color
+neve - snow
+clima - climate
+café - coffee
+chá - tea
+bolo - cake
+pão - bread
+leite - milk
+maçã - apple
+
+# words like potato, tomato, carrot in German with English translations
+
+Kartoffel (Potato)
+Tomate (Tomato)
+Karotte (Carrot)
+Zwiebel (Onion)
+Knoblauch (Garlic)
+Gurke (Cucumber)
+Paprika (Bell Pepper)
+Spinat (Spinach)
+Brokkoli (Broccoli)
+Mais (Corn)
+Erbse (Pea)
+Sellerie (Celery)
+Spargel (Asparagus)
+Zucchini (Zucchini)
+Aubergine (Eggplant)
+
+# words like potato, tomato, carrot in Spanish with English translations
+
+Patata/Papa (Potato)
+Tomate (Tomato)
+Zanahoria (Carrot)
+Cebolla (Onion)
+Ajo (Garlic)
+Pepino (Cucumber)
+Pimiento (Bell Pepper)
+Espinaca (Spinach)
+Brócoli (Broccoli)
+Maíz (Corn)
+Guisante/Chícharo (Pea)
+Apio (Celery)
+Espárrago (Asparagus)
+Calabacín (Zucchini)
+Berenjena (Eggplant)
+
+# words like potato, tomato, carrot in French with English translations
+
+Pomme de terre (Potato)
+Tomate (Tomato)
+Carotte (Carrot)
+Oignon (Onion)
+Ail (Garlic)
+Concombre (Cucumber)
+Poivron (Bell Pepper)
+Épinard (Spinach)
+Brocoli (Broccoli)
+Maïs (Corn)
+Petit pois (Pea)
+Céleri (Celery)
+Asperge (Asparagus)
+Courgette (Zucchini)
+Aubergine (Eggplant)
+
+# words like potato, tomato, carrot in Italian with English translations
+
+Patata (Potato)
+Pomodoro (Tomato)
+Carota (Carrot)
+Cipolla (Onion)
+Aglio (Garlic)
+Cetriolo (Cucumber)
+Peperone (Bell Pepper)
+Spinaci (Spinach)
+Broccolo (Broccoli)
+Mais (Corn)
+Pisello (Pea)
+Sedano (Celery)
+Asparago (Asparagus)
+Zucchina (Zucchini)
+Melanzana (Eggplant)
+
+# words like potato, tomato, carrot in Portguese with English translations
+
+Batata (Potato)
+Tomate (Tomato)
+Cenoura (Carrot)
+Cebola (Onion)
+Alho (Garlic)
+Pepino (Cucumber)
+Pimentão (Bell Pepper)
+Espinafre (Spinach)
+Brócolis (Broccoli)
+Milho (Corn)
+Ervilha (Pea)
+Aipo (Celery)
+Aspargo (Asparagus)
+Abobrinha (Zucchini)
+Berinjela (Eggplant)
+
+#============================================================
+
+we had - avevamo
+many - tantas
+schickt - sends
+justement - exactly
+appy - contente
+pleasant - agréable
+cold - frio
+selected - choisi
+remember - rappelle
+they think - pensano
+now - al presente
+knife - messer
+should - faudrait
+to bring - apporter
+own - eigenen
+we had - avevamo
+terrible - terrível
+meet - rencontré
+pass - reichen
+survey - lève
+pensi - think
+several - vários
+ass - arsch
+tombée - fall
+fact that - facto
+to hide - esconder
+called - heißt
+debout - standing
+temer - to fear
+outside - draußen
+i got it - consegui
+reason - grund
+have to (present) - devo
+kapiert - got it
+ill - krank
+ma - but
+tôt - early
+voler - steal
+venuta - coming
+ferido - injured
+uccello - bird
+écoute - listen
+traurig - sad
+esqueça - forget
+hero - held
+good - buono
+soient - are
+verde - green
+your - ihre
+page - seite
+dopo - hour (future)
+comer - eat
+saúde - cheers
+pues - well
+può - can he
+several - vários
+cocksucker - enculé
+cortar - cut
+short - breve
+dopo - hour (future)
+pan - pá
+stay - quede
+morrer - die
+dies - stirbt
+in order to - damit
+due - debido
+enjoy - gozar
+pass - reichen
+wine - vin
+aies - hast
+meinen - mean
+ordnung - order
+absolutely - absolutamente
+looked for - cercato
+piacciono - like
+tornato - got back
+happens - sucede
+allowed - permis
+alors - so
+facto - fact that
+creare - create
+duele - it hurt
+droite - right
+nulle part - nowhere
+partout - everywhere
+alors - so
+you have - tienes
+sendo - being
+sound - suono
+unknown - ignore
+desert - deserto
+sera - evening
+bien - well
+thought - dachten
+find - achar
+chacun - each
+faux - false
+dopo - hour (future)
+donner - give
+procès - trial
+soient - are
+năo - no
+
+
+
+`;	
+	
+	</script>
+	
+	
+  </body>
+</html>
