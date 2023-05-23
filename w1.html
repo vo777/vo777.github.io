@@ -31,11 +31,16 @@
     <!-- disable scrollbars: -->
 
 	
-	<p id='wrd'>wrd</p>
+	<p id='wrd' onclick='clipb()'>wrd</p>
 	
 	<script>
 	
 	const wrd = document.getElementById('wrd');
+	
+	function clipb()
+	{
+		navigator.clipboard.writeText(wrd.innerHTML);
+	}
 	
 	function startup()
 	{
