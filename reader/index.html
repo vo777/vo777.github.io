@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Text reader with repeats</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../langscripts/styles.css">
+
+</head>
+
+<body>
+
+  <h3></h3>
+  <h4></h4>
+
+	<button onclick="start();">Start</button>
+	<button onclick="stop();">Stop</button>
+	<input type="checkbox" id="brk1">Breaks between words</input>
+	<input size=2 id="nreps" value="1">Repeats</input>
+	<br>
+	<br>
+	<br>
+	<span id="statusSpan">______</span>
+	<br>
+	<br>
+	<textarea id="textarea1" name="textarea1" rows="4" cols="50"></textarea>
+
+	<script src="../langscripts/speaker.js"></script>
+
+
+  <script>
+ 
+	const Pause = 2000;
+  
+	listVoices(''); // all
+
+    const textarea1 = document.getElementById('textarea1');
+    const statusSpan = document.getElementById('statusSpan');
+
+	let index1 = Infinity; 
+	let index2; 
+	let parsedText = [];
+	let running = false;
+
+	function start()
+	{
+		index1 = 0;
+		index2 = +document.getElementById('nreps').value;
+		
+		const isTextSelected = textarea1.selectionStart !== textarea1.selectionEnd;
+		//const selectedText = isTextSelected ? textarea.value.substring(textarea.selectionStart, textarea.selectionEnd) : '';
+		const textt = isTextSelected ? textarea1.value.substring(textarea1.selectionStart, textarea1.selectionEnd) : textarea1.value;
+		parsedText = textt.split(/[.\n]/).filter(Boolean);
+		console.log(parsedText);
+		running = true;
+		iter();
+	}
+
+	function iter()
+	{
+		if (running && index1<parsedText.length)
+		{
+			// start speaking
+			statusSpan.innerHTML = "" + index1 + " " + index2 + " " + parsedText[index1];			say(parsedText[index1],
+			document.getElementById('brk1').checked,
+			onEnd);
+			
+			// advance to the next element
+			--index2;
+			if (index2 <= 0)
+			{
+				index2 = +document.getElementById('nreps').value;
+				++index1;
+			}
+		}
+	}
+	
+	function stop()
+	{
+		running = false;
+	}
+
+	function onEnd()
+	{
+		//console.log('function onEnd');
+		if (running)
+		{
+			setTimeout(iter, Pause);
+		}
+	}
+
+
+
+  </script>
+
+</body>
+
+</html>
