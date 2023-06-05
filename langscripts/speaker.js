@@ -81,7 +81,7 @@ function hack002(s) {
   return res;
 }
 
-function say(x, brks) {
+function say(x, brks, onEnd) {
   //x = x.replaceAll("_", "'");
   x = hack001(x);
   let txt = x;
@@ -103,6 +103,15 @@ function say(x, brks) {
     }
     utterThis.lang = utterThis.voice.lang; // required on Android
   }
+  
+	utterThis.onend = onEnd || function (event) {
+		console.log("SpeechSynthesisUtterance.onend");
+	};
+
+	utterThis.onerror = function (event) {
+		console.error("SpeechSynthesisUtterance.onerror");
+	};
+
   speechSynthesis.speak(utterThis);
 }
 
