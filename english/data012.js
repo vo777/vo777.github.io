@@ -41,7 +41,7 @@ it is very strange
 I have a great idea...
 when is your birthday?
 my birthday is on the tenth of September
-sorry, I din't hear
+sorry, I didn't hear
 do you have same color, smaller size?
 they are of the same age
 we travel on the same flight

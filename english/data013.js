@@ -33,7 +33,7 @@ talk about it
 tell you everything
 ==
 Don't speak about it with him
-Where did whe go?
+Where did he go?
 She went to dance
 Where is she going (now)?
 Let her tell me everything

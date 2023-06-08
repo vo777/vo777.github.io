@@ -38,12 +38,12 @@ we have been together
 /
 for 5 years
 ==
-I have neve been in London
+I have never been in London
 when was the gallery founded?
 ==
 my first book was published 10 years ago
 the script was written last year
-this book was writtel
+this book was written
 this role was played
 this house was sold
 this car was bought

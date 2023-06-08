@@ -6,7 +6,7 @@ const data006 =     `
 ==
 I read the red book
 I slept in my room
-What dod you do when you have free time
+What do you do when you have free time
 I do what I like
 What will you do in the evening
 Once upon a time there lived ...

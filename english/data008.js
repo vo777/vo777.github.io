@@ -104,15 +104,15 @@ why are wearing it today?
 it's my whim
 why do you wear this shirt?
 do you have a t-shirt under it?
-I'm embarassed
+I'm embarrassed
 I liked the multocolor pattern
 he said: "come tomorrow"
 he told me to come back the next day
 do they make dresses?
 they make dresses for European women
 to wear
-what do Indiam women wear?
-what material do Indiam women wear?
+what do Indian women wear?
+what material do Indian women wear?
 why don't you buy real silk?
 woman - women
 man - men

@@ -20,7 +20,7 @@ I was not ready
 I answered the phone
 I felt something strange
 I made my own version
-I am happpy with this version
+I am happy with this version
 I am happy with this
 I am happy with it
 he is happy with himself

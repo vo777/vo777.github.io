@@ -1,6 +1,6 @@
 const data004 =     `
 Nice to meet you
-I apologise
+I apologize
 I regret
 I'm sorry
 Excuse me
@@ -26,7 +26,7 @@ to play a role
 freelancer
 genius
 you know what I mean
-I contunue to work with...
+I continue to work with...
 do you work in a company?
 who are your clients?
 `

@@ -69,7 +69,7 @@ I was there for one night
 I stayed there one night
 Of course
 People there always smile
-I din't have time to dance with them
+I didn't have time to dance with them
 Next time I go there, I will do it
 ==
 I am not 
