@@ -166,7 +166,7 @@ Do they seem well today?
 ==
 
 They remember you.
-You reember them.
+You remember them.
 They don't remember you.
 Do they remember you?
 Do they remember us?
