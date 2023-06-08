@@ -18,10 +18,11 @@ const data =
 	errSet : new Set(),
 };
 
-const timePerQuestion = 200; // 10 = 1 second
+const timePerQuestion = 150; // 10 = 1 second
 
-const minQ = 10;
-const maxQ = 10000; // limited by cookie size
+const minU = 100; // ~ 5 * [a typical daily run]
+const maxU = 110; // slightly larger than min
+const maxQ = 10000; // limited by localStorage size
 
 
 function startup()
@@ -139,7 +140,7 @@ function newQuestion()
 		data.wset = [];
 	}
 //	while (data.wset.length < minQ)
-	while (new Set(data.wset).size < minQ)
+	while (new Set(data.wset).size < minU)
 	{
 		data.wset.push(Math.floor(Math.random()*N));
 	}
@@ -193,6 +194,41 @@ function toggleDebug()
 	showDebug();
 }	
 
+
+function showDebug()
+{
+	const wUnique = new Set(data.wset).size;
+	const wCurrent 
+		= data.wset.filter((v) => (v === data.currentIndex)).length;
+	
+	let clipbrb = '';
+
+	data.debugInfo = ''
+	+ 'w:'+data.wset.length+' '+wUnique+' '+wCurrent
+	+ '<br>' + data.questionCount + ', '
+	+ data.ansCorrectly+'/'+data.answerCount
+	+ '('+(100*calcCorrectnessRatio()).toFixed(1)+'%)'
+	+ '<br>n:'+data.dict.length
+	+ '<br>ver:5.01'
+	+ ' ' + window.location.search
+	+ '<br>';
+
+	const errArray = [...data.errSet];
+	for (let e of errArray)
+	{
+		data.debugInfo += '<br>' + data.dict[e][0] + ' - ' + data.dict[e][1];
+		clipbrb += data.dict[e][0] + ' - ' + data.dict[e][1] + '\n';
+	}
+	
+	if (data.debugInfoFlag) 
+		{ 
+			data.summary.innerHTML = data.debugInfo;
+			navigator.clipboard.writeText(clipbrb);
+		}
+	else{ data.summary.innerHTML = ''; }	
+}
+
+/*   OLD
 function showDebug()
 {
 	const wUnique = new Set(data.wset).size;
@@ -218,6 +254,7 @@ function showDebug()
 	if (data.debugInfoFlag) { data.summary.innerHTML = data.debugInfo; }
 	else{ data.summary.innerHTML = ''; }	
 }
+*/
 
 function onAnswer(x)
 {
@@ -257,12 +294,14 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
-			data.wset.push(data.answerIndices[x]);
+			const wUnique = new Set(data.wset).size;
+			if (wUnique < maxU) {
+				data.wset.push(data.answerIndices[x]);
+			}
 		}
 
 		data.errSet.add(data.currentIndex);
+		data.errSet.add(data.answerIndices[x]);
 		
 	}
 	showDebug();
