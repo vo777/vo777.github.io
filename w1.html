@@ -61,6 +61,7 @@
 	
 	const CookieName = 'w1_html';
 	let wset = 0, current = -1;
+	let counter = 0;
 	
 	function remember()
 	{
@@ -99,6 +100,7 @@
 	
 	function refresh()
 	{
+		++counter;
 		while (wset.length < minQ)
 		{
 			let msg = '---';
@@ -128,7 +130,7 @@
 	{
 		const wUnique = new Set(wset).size;
 		const wCurrent = wset.filter((v) => (v === current)).length;
-		status.innerHTML = "" + N + " " + wset.length + '<br>' + wUnique + " " + wCurrent;
+		status.innerHTML = "" + N + " " + wset.length + '<br>' + wUnique + " " + wCurrent + "<br>" + counter ;
 	}
 
 	
