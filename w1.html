@@ -32,14 +32,7 @@
 	<p id='wrd' onclick='remember()'>wrd</p>
 	
 	<p id='refr' onclick='refresh()'>
-	-------<br>
-	-------<br>
-	-------<br>
-	-------<br>
-	-------<br>
-	-------<br>
-	-------<br>
-	-------<br>
+	--
 	</p>
 	
 	<p id='status' onclick='refresh()'>
@@ -57,6 +50,7 @@
 //	const Nremember = 5;
 	
 	const wrd = document.getElementById('wrd');
+	const refr = document.getElementById('refr');
 	const status = document.getElementById('status');
 	
 	const CookieName = 'w1_html';
@@ -122,8 +116,17 @@
 		current = wset.shift() % N;
 		
 		wrd.innerHTML = split[current].trim();
+		
+		const wCurrent = wset.filter((v) => (v === current)).length;
+		
+		refr.innerHTML = '';
+		for (let i=0; i<wCurrent+1; ++i)
+		{
+			refr.innerHTML += '-------<br>';
+		}
+		
 		localStorage.setItem(CookieName, JSON.stringify(wset));
-
+		
 		showStatus();
 	}
 
