@@ -68,7 +68,8 @@
 		navigator.clipboard.writeText(wrd.innerHTML);
 		if (wset.length < maxQ)
 		{
-			for (let i=0; i<Nremember; ++i)
+			const wCurrent = wset.filter((v) => (v === current)).length;
+			for (let i=0; i<Nremember - wCurrent; ++i)
 			{
 				wset.push(current);
 			}
