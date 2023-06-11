@@ -92,8 +92,8 @@
 		if (! wset)
 		{
 			const tmp = localStorage.getItem(CookieName);
-			if (tmp) { data.wset = JSON.parse(tmp); }
-			console.log("parsed wset:", data.wset);
+			if (tmp) { wset = JSON.parse(tmp); }
+			console.log("parsed wset:", wset);
 		}
 		
 		if (! wset)
