@@ -41,7 +41,7 @@
 	
 	<script>
 	
-	const minQ = 200;
+	const minQ = 500;
 	const maxQ = 10000; // limited by localStorage size
 	const Nremember = 15;
 
@@ -117,17 +117,11 @@
 		
 		wrd.innerHTML = split[current].trim();
 		
-		const wCurrent = wset.filter((v) => (v === current)).length;
-		
-		refr.innerHTML = '';
-		for (let i=0; i<wCurrent+1; ++i)
-		{
-			refr.innerHTML += '-------<br>';
-		}
-		
 		localStorage.setItem(CookieName, JSON.stringify(wset));
 		
 		showStatus();
+		
+		document.documentElement.scrollTop = 0;
 	}
 
 	function showStatus()
@@ -135,6 +129,13 @@
 		const wUnique = new Set(wset).size;
 		const wCurrent = wset.filter((v) => (v === current)).length;
 		status.innerHTML = "" + N + " " + wset.length + '<br>' + wUnique + " " + wCurrent + "<br>" + counter ;
+		
+		refr.innerHTML = '';
+		for (let i=0; i<wCurrent+1; ++i)
+		{
+			refr.innerHTML += '-------<br>';
+		}
+		
 	}
 
 	
