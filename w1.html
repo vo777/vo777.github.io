@@ -83,25 +83,22 @@
 	{
 		split = data.split('\n');
 		N = split.length;
-		refresh();
-	}
-	
-	function refresh()
-	{
-		
-		if (! wset)
-		{
-			const tmp = localStorage.getItem(CookieName);
-			if (tmp) { wset = JSON.parse(tmp); }
-			console.log("parsed wset:", wset);
-		}
-		
+
+		const tmp = localStorage.getItem(CookieName);
+		if (tmp) { wset = JSON.parse(tmp); }
+		console.log("parsed wset:", wset);
+
 		if (! wset)
 		{
 			// cookie not found
 			wset = [];
 		}
-		
+
+		refresh();
+	}
+	
+	function refresh()
+	{
 		while (wset.length < minQ)
 		{
 			let msg = '---';
@@ -118,7 +115,7 @@
 		
 		//console.log(wset);
 		
-		// in case the dictionary changed since the last run:
+		// %N - in case the dictionary changed since the last run:
 		current = wset.shift() % N;
 		
 		wrd.innerHTML = split[current].trim();
