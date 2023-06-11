@@ -46,7 +46,7 @@
 	const Nremember = 15;
 
 //	const minQ = 10;
-//	const maxQ = 20; // limited by localStorage size
+//	const maxQ = 20;
 //	const Nremember = 5;
 	
 	const wrd = document.getElementById('wrd');
@@ -109,8 +109,6 @@
 		}
 		
 		shuffle(wset);
-		
-		//console.log(wset);
 		
 		// %N - in case the dictionary changed since the last run:
 		current = wset.shift() % N;
