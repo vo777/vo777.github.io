@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RndWrd</title>
+    <style type="text/css"> 
+	body 
+	{
+	padding: 0; 
+	margin: 0;
+		 /* overflow-y: hidden;   Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+		background-color : #000000;
+		color: #FFFFFF;
+	} 
+
+	p 
+	{
+	   text-align: center;
+	   font-size:  250%;
+	   font-family: "Arial";
+	   font-weight: bold;
+	}
+
+	</style>
+	
+	<script src="w_data.js"></script>
+	
+  </head>
+  <body onload="startup()">
+	
+	<p id='wrd' onclick='remember()'>+++++</p>
+	
+	<p id='refr' onclick='onNext()'>
+	--
+	</p>
+	
+	<p id='status' onclick='onNext()'>
+	--
+	</p>
+	
+	<script>
+	
+	const Shingle = 3;
+		
+	const wrd = document.getElementById('wrd');
+	const refr = document.getElementById('refr');
+	const status = document.getElementById('status');
+	
+	const CookieName = 'w2_html';
+	
+	let wset = {};
+	let counter = 0;
+	
+	function remember()
+	{
+		updateScore(split[current], 2); // Up by two
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+	}
+
+	function onNext()
+	{
+		updateScore(split[current], -1); // Down by one
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+		refresh();
+	}
+
+	let split, N;
+	let current;
+
+	function startup()
+	{
+		split = parseData();
+		N = split.length;
+
+		const tmp = localStorage.getItem(CookieName);
+		if (tmp) { wset = JSON.parse(tmp); }
+		console.log("parsed wset:", wset);
+
+		if (! wset)
+		{
+			// cookie not found
+			wset = {};
+		}
+
+		refresh();
+	}
+	
+	function refresh()
+	{
+		++counter;
+		
+		if (Math.random() < 0.9)
+		{
+			sortByScores(split);
+			console.log('top20 choice');
+		}
+		else
+		{
+			shuffle(split);
+			console.log('random choice');
+		}
+	
+		current = Math.floor(20*Math.random());
+		wrd.innerHTML = split[current];
+		console.log('score: ' + calcScore(split[current]));
+		showStatus();
+		document.documentElement.scrollTop = 0;
+	}
+
+	function showStatus()
+	{
+		status.innerHTML = "" + N + "<br>" + counter ;
+		refr.innerHTML = '';
+		for (let i=0; i<10; ++i)
+		{
+			refr.innerHTML += '-------<br>';
+		}
+	}
+
+	function updateScore(str, delta)
+	{
+		const oldScore = calcScore(str);
+		//console.log(str + ' -> ' + delta);
+		const tmp = removeNonLetters(str).toLowerCase();
+		//console.log(tmp);
+		
+		for (let i=0; i<tmp.length-Shingle; ++i)
+		{
+			const tmp1 = tmp.substring(i, i+Shingle);
+			//console.log(tmp1);
+			
+			wset[tmp1] = wset[tmp1] ? wset[tmp1]+delta : delta;
+		}
+		
+		//console.log(wset);
+		const newScore = calcScore(str);
+		console.log('score: ' + oldScore + ' --> ' + newScore);
+	}
+	
+	
+	function calcScore(str)
+	{
+		//console.log(str);
+		const tmp = removeNonLetters(str).toLowerCase();
+		//console.log(tmp);
+		
+		let res = 0;
+		
+		for (let i=0; i<tmp.length-Shingle; ++i)
+		{
+			const tmp1 = tmp.substring(i, i+Shingle);
+			//console.log(tmp1);
+			
+			res += wset[tmp1] ? wset[tmp1] : 0;
+		}
+		
+		//console.log(res);
+		return res;
+	}
+
+	function sortByScores(arr)
+	{
+		arr.sort((a,b) => calcScore(b) - calcScore(a)); // sort DESC
+	}
+
+	</script>
+	
+  </body>
+</html>
+

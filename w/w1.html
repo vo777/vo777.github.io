@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RndWrd</title>
+    <style type="text/css"> 
+	body 
+	{
+	padding: 0; 
+	margin: 0;
+		 /* overflow-y: hidden;   Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+		background-color : #000000;
+		color: #FFFFFF;
+	} 
+
+	p 
+	{
+	   text-align: center;
+	   font-size:  250%;
+	   font-family: "Arial";
+	   font-weight: bold;
+	}
+
+	</style>
+	
+	<script src="w_data.js"></script>
+	
+  </head>
+  <body onload="startup()">
+	
+	<p id='wrd' onclick='remember()'>wrd</p>
+	
+	<p id='refr' onclick='refresh()'>
+	--
+	</p>
+	
+	<p id='status' onclick='refresh()'>
+	--
+	</p>
+	
+	<script>
+	
+	const minQ = 2000;
+	const maxQ = 10000; // limited by localStorage size
+	const Nremember = 15;
+
+//	const minQ = 10;
+//	const maxQ = 20;
+//	const Nremember = 5;
+	
+	const wrd = document.getElementById('wrd');
+	const refr = document.getElementById('refr');
+	const status = document.getElementById('status');
+	
+	const CookieName = 'w1_html';
+	let wset = 0, current = -1;
+	let counter = 0;
+	
+	function remember()
+	{
+		navigator.clipboard.writeText(wrd.innerHTML);
+		if (wset.length < maxQ)
+		{
+			const wCurrent = wset.filter((v) => (v === current)).length;
+			for (let i=0; i<Nremember - wCurrent; ++i)
+			{
+				wset.push(current);
+			}
+			localStorage.setItem(CookieName, JSON.stringify(wset));
+		}
+		showStatus();
+	}
+
+
+	let split, N;
+
+	function startup()
+	{
+		split = parseData();
+		N = split.length;
+
+		const tmp = localStorage.getItem(CookieName);
+		if (tmp) { wset = JSON.parse(tmp); }
+		console.log("parsed wset:", wset);
+
+		if (! wset)
+		{
+			// cookie not found
+			wset = [];
+		}
+
+		refresh();
+	}
+	
+	function refresh()
+	{
+		++counter;
+		while (wset.length < minQ)
+		{
+			let msg = '---';
+			let tmp = -1;
+			do 
+			{
+				tmp = Math.floor(Math.random()*N);
+				msg = split[tmp].trim();
+			} while (msg.length == 0 || '#' == msg[0]);
+			wset.push(tmp);
+		}
+		
+		shuffle(wset);
+		
+		// %N - in case the dictionary changed since the last run:
+		current = wset.shift() % N;
+		
+		wrd.innerHTML = split[current].trim();
+		
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		
+		showStatus();
+		
+		document.documentElement.scrollTop = 0;
+	}
+
+	function showStatus()
+	{
+		const wUnique = new Set(wset).size;
+		const wCurrent = wset.filter((v) => (v === current)).length;
+		status.innerHTML = "" + N + " " + wset.length + '<br>' + wUnique + " " + wCurrent + "<br>" + counter ;
+		
+		refr.innerHTML = '';
+		for (let i=0; i<wCurrent+1; ++i)
+		{
+			refr.innerHTML += '-------<br>';
+		}
+		
+	}
+
+
+	</script>
+	
+	
+  </body>
+</html>
 
