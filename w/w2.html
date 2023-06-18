@@ -44,7 +44,7 @@
 	<script>
 	
 	const Shingle = 3;
-		
+	
 	const wrd = document.getElementById('wrd');
 	const refr = document.getElementById('refr');
 	const status = document.getElementById('status');
@@ -56,7 +56,11 @@
 	
 	function remember()
 	{
-		updateScore(split[current], 2); // Up by two
+		do {
+			updateScore(split[current], 1);
+		} while (calcScore(split[current]) <= 0);
+		
+		updateScore(split[current], 1);
 		localStorage.setItem(CookieName, JSON.stringify(wset));
 		showStatus();
 	}
@@ -89,23 +93,20 @@
 
 		refresh();
 	}
-	
+
 	function refresh()
 	{
 		++counter;
 		
-		if (Math.random() < 0.9)
-		{
-			sortByScores(split);
-			console.log('top20 choice');
-		}
-		else
+		sortByScores(split);
+		current = Math.floor(20*Math.random());
+		
+		if (calcScore(split[current]) <= 0)
 		{
 			shuffle(split);
 			console.log('random choice');
 		}
-	
-		current = Math.floor(20*Math.random());
+		
 		wrd.innerHTML = split[current];
 		console.log('score: ' + calcScore(split[current]));
 		showStatus();
