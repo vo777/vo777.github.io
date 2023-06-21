@@ -167,7 +167,7 @@
 
 	function sortByScores(arr)
 	{
-		arr.sort((a,b) => calcScore(b) - calcScore(a)); // sort DESC
+		arr.sort((a,b) => calcScore(b)/b.length - calcScore(a)/a.length); // sort DESC
 	}
 
 	</script>
