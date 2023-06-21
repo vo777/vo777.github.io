@@ -136,6 +136,7 @@
 			//console.log(tmp1);
 			
 			wset[tmp1] = wset[tmp1] ? wset[tmp1]+delta : delta;
+			wset[tmp1] = Math.max(wset[tmp1], 0);
 		}
 		
 		//console.log(wset);
