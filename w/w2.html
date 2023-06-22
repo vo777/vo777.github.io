@@ -136,7 +136,8 @@
 			//console.log(tmp1);
 			
 			wset[tmp1] = wset[tmp1] ? wset[tmp1]+delta : delta;
-			wset[tmp1] = Math.max(wset[tmp1], 0);
+			
+			if (wset[tmp1] <= 0) { delete wset[tmp1]; }
 		}
 		
 		//console.log(wset);
@@ -151,7 +152,7 @@
 		const tmp = removeNonLetters(str).toLowerCase();
 		//console.log(tmp);
 		
-		let res = 0;
+		let res = Math.random(); // start with rnd()
 		
 		for (let i=0; i<tmp.length-Shingle; ++i)
 		{
