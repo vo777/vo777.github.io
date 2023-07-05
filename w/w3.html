@@ -103,7 +103,8 @@
 	</p>
 	-->
 	
-	<p id='status'>
+	<p><input id='wrd'type='text'></input></p>
+	<p id='status' onclick='up1()'>
 	--
 	</p>
 	
@@ -214,6 +215,17 @@
 		}
 		*/
 	}
+
+	function up1()
+	{
+		const wrd = document.getElementById('wrd');
+		const txt = wrd.value.trim();
+		updateScore(wset, txt, 1);
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+		refresh();
+	}
+
 
 	</script>
 	
