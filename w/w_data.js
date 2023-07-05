@@ -71,14 +71,16 @@ function parseData()
 	const res = [];
 	for (let x of tmp)
 	{
-		let y = x.trim();
-		if (y.length > 0 && y[0] != '#')
+		let y = x.trim().toLowerCase();
+		if (y.length > 1 && y[0] != '#')
 		{
 			res.push(y);
 		}		
 	}
 
-	return res;
+	const uniqueArray = res.filter((item, index) => res.indexOf(item) === index);
+
+	return uniqueArray;
 }
 
 
