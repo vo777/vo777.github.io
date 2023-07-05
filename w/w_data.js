@@ -1,10 +1,68 @@
 
-function shuffle(array) { array.sort(() => Math.random() - 0.5); }
+//function shuffle(array) { array.sort(() => Math.random() - 0.5); }
+// not used
 
 
 function removeNonLetters(str) {
   return str.replace(/[^a-zA-ZÀ-ÿÄ-ÖÜßá-úÁ-Úã-õÃ-Õâ-ûÂ-ÛçÇëËí-ïÍ-ÏñÑó-úÓ-ÚüÜ]/g, '');
 }
+
+
+	function updateScore(w, str, delta)
+	{
+		const oldScore = calcScore(w, str);
+		//console.log(str + ' -> ' + delta);
+		const tmp = removeNonLetters(str).toLowerCase();
+		//console.log(tmp);
+		
+		for (let i=0; i<tmp.length-Shingle; ++i)
+		{
+			const tmp1 = tmp.substring(i, i+Shingle);
+			//console.log(tmp1);
+			
+			w[tmp1] = w[tmp1] ? w[tmp1]+delta : delta;
+			
+			if (w[tmp1] <= 0) { delete w[tmp1]; }
+		}
+		
+		//console.log(w);
+		const newScore = calcScore(w, str);
+		console.log('score: ' + oldScore + ' --> ' + newScore);
+	}
+	
+	
+	function calcScore(w, str)
+	{
+		//console.log(str);
+		const tmp = removeNonLetters(str).toLowerCase();
+		//console.log(tmp);
+		
+		if (tmp.length < 3) return -1; // filter out junk
+		
+		let res = 0.1*Math.random(); // start with rnd() noise
+		
+		for (let i=0; i<tmp.length-Shingle; ++i)
+		{
+			const tmp1 = tmp.substring(i, i+Shingle);
+			//console.log(tmp1);
+			
+			res += w[tmp1] ? w[tmp1] : 0;
+		}
+		
+		//console.log(res);
+		return res;
+	}
+
+//	function sortByScores1(w, arr)
+//	{
+//		arr.sort((a,b) => calcScore(w, b)/b.length - calcScore(w, a)/a.length); // sort DESC
+//	}
+
+	function sortByScores(w, arr)
+	{
+		arr.sort((a,b) => calcScore(w, b)/Math.sqrt(b.length) - calcScore(w, a)/Math.sqrt(a.length)); // sort DESC
+	}
+
 
 function parseData()
 {

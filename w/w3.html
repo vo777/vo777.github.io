@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RndWrd</title>
+    <style type="text/css"> 
+	body 
+	{
+	padding: 0; 
+	margin: 0;
+		 /* overflow-y: hidden;   Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+		background-color : #000000;
+		color: #FFFFFF;
+	} 
+
+	p 
+	{
+	   text-align: center;
+	   font-size:  250%;
+	   font-family: "Arial";
+	   font-weight: bold;
+	}
+
+	</style>
+	
+	<script src="w_data.js"></script>
+	
+  </head>
+  <body onload="startup()">
+	
+	
+	<p id='wrd0' onclick='upd(0,1)'>+++++</p>
+	<p id='' onclick='upd(0,-1)'>----</p>
+	<p id='wrd1' onclick='upd(1,1)'>+++++</p>
+	<p id='' onclick='upd(1,-1)'>----</p>
+	<p id='wrd2' onclick='upd(2,1)'>+++++</p>
+	<p id='' onclick='upd(2,-1)'>----</p>
+	<p id='wrd3' onclick='upd(3,1)'>+++++</p>
+	<p id='' onclick='upd(3,-1)'>----</p>
+	<p id='wrd4' onclick='upd(4,1)'>+++++</p>
+	<p id='' onclick='upd(4,-1)'>----</p>
+	<p id='wrd5' onclick='upd(5,1)'>+++++</p>
+	<p id='' onclick='upd(5,-1)'>----</p>
+	<p id='wrd6' onclick='upd(6,1)'>+++++</p>
+	<p id='' onclick='upd(6,-1)'>----</p>
+	<p id='wrd7' onclick='upd(7,1)'>+++++</p>
+	<p id='' onclick='upd(7,-1)'>----</p>
+	<p id='wrd8' onclick='upd(8,1)'>+++++</p>
+	<p id='' onclick='upd(8,-1)'>----</p>
+	<p id='wrd9' onclick='upd(9,1)'>+++++</p>
+	<p id='' onclick='upd(9,-1)'>----</p>
+	
+	<p id='wrd10' onclick='upd(10,1)'>+++++</p>
+	<p id='' onclick='upd(10,-1)'>----</p>
+	<p id='wrd11' onclick='upd(11,1)'>+++++</p>
+	<p id='' onclick='upd(11,-1)'>----</p>
+	<p id='wrd12' onclick='upd(12,1)'>+++++</p>
+	<p id='' onclick='upd(12,-1)'>----</p>
+	<p id='wrd13' onclick='upd(13,1)'>+++++</p>
+	<p id='' onclick='upd(13,-1)'>----</p>
+	<p id='wrd14' onclick='upd(14,1)'>+++++</p>
+	<p id='' onclick='upd(14,-1)'>----</p>
+	<p id='wrd15' onclick='upd(15,1)'>+++++</p>
+	<p id='' onclick='upd(15,-1)'>----</p>
+	<p id='wrd16' onclick='upd(16,1)'>+++++</p>
+	<p id='' onclick='upd(16,-1)'>----</p>
+	<p id='wrd17' onclick='upd(17,1)'>+++++</p>
+	<p id='' onclick='upd(17,-1)'>----</p>
+	<p id='wrd18' onclick='upd(18,1)'>+++++</p>
+	<p id='' onclick='upd(18,-1)'>----</p>
+	<p id='wrd19' onclick='upd(19,1)'>+++++</p>
+	<p id='' onclick='upd(19,-1)'>----</p>
+	
+	<p id='wrd20' onclick='upd(20,1)'>+++++</p>
+	<p id='' onclick='upd(20,-1)'>----</p>
+	<p id='wrd21' onclick='upd(21,1)'>+++++</p>
+	<p id='' onclick='upd(21,-1)'>----</p>
+	<p id='wrd22' onclick='upd(22,1)'>+++++</p>
+	<p id='' onclick='upd(22,-1)'>----</p>
+	<p id='wrd23' onclick='upd(23,1)'>+++++</p>
+	<p id='' onclick='upd(23,-1)'>----</p>
+	<p id='wrd24' onclick='upd(24,1)'>+++++</p>
+	<p id='' onclick='upd(24,-1)'>----</p>
+	<p id='wrd25' onclick='upd(25,1)'>+++++</p>
+	<p id='' onclick='upd(25,-1)'>----</p>
+	<p id='wrd26' onclick='upd(26,1)'>+++++</p>
+	<p id='' onclick='upd(26,-1)'>----</p>
+	<p id='wrd27' onclick='upd(27,1)'>+++++</p>
+	<p id='' onclick='upd(27,-1)'>----</p>
+	<p id='wrd28' onclick='upd(28,1)'>+++++</p>
+	<p id='' onclick='upd(28,-1)'>----</p>
+	<p id='wrd29' onclick='upd(29,1)'>+++++</p>
+	<p id='' onclick='upd(29,-1)'>----</p>
+	
+	<!--
+	<p id='wrd' onclick='remember()'>+++++</p>
+	
+	<p id='refr' onclick='onNext()'>
+	--
+	</p>
+	-->
+	
+	<p id='status'>
+	--
+	</p>
+	
+	
+	<script>
+	
+	const Nwords = 30;
+	
+	const Shingle = 3;
+	
+	//const wrd = document.getElementById('wrd');
+	//const refr = document.getElementById('refr');
+	const status = document.getElementById('status');
+	
+	const CookieName = 'w3_html';
+	
+	let wset = {};
+	let counter = 0;
+	
+	/*
+	function remember()
+	{
+		do {
+			updateScore(wset, split[current], 1);
+		} while (calcScore(wset, split[current]) <= 0);
+		
+		updateScore(wset, split[current], 1);
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+	}
+
+	function onNext()
+	{
+		updateScore(wset, split[current], -1); // Down by one
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+		refresh();
+	}
+	
+	*/
+
+	let split, N;
+	//let current;
+
+	function startup()
+	{
+		split = parseData();
+		N = split.length;
+
+		const tmp = localStorage.getItem(CookieName);
+		if (tmp) { wset = JSON.parse(tmp); }
+		console.log("parsed wset:", wset);
+
+		if (! wset)
+		{
+			// cookie not found
+			wset = {};
+		}
+
+		refresh();
+	}
+
+	function refresh()
+	{
+		++counter;
+		
+		sortByScores(wset, split);
+		
+		// debug
+		//for (let i=0; i<20; ++i)
+		//{
+		//	console.log(split[i] + ': ' + calcScore(wset, split[i]) );
+		//}
+		
+		for (let i=0; i<Nwords; ++i)
+		{
+				const wrdi = document.getElementById('wrd'+i);
+				wrdi.innerHTML = split[i];
+		}
+		
+		
+		// old code
+		//current = Math.floor(20*Math.random());
+		//wrd.innerHTML = split[current];
+		//console.log('score: ' + calcScore(wset, split[current]));
+		
+		showStatus();
+		// don't need:
+		// document.documentElement.scrollTop = 0;
+	}
+	
+	function upd(k, delta)
+	{
+		updateScore(wset, split[k], delta);
+		localStorage.setItem(CookieName, JSON.stringify(wset));
+		showStatus();
+		refresh();
+	}
+
+	function showStatus()
+	{
+		status.innerHTML = "" + N + "<br>" + counter ;
+		/*
+		refr.innerHTML = '';
+		for (let i=0; i<10; ++i)
+		{
+			refr.innerHTML += '-------<br>';
+		}
+		*/
+	}
+
+	</script>
+	
+  </body>
+</html>
+

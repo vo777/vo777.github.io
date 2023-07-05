@@ -57,17 +57,17 @@
 	function remember()
 	{
 		do {
-			updateScore(split[current], 1);
-		} while (calcScore(split[current]) <= 0);
+			updateScore(wset, split[current], 1);
+		} while (calcScore(wset, split[current]) <= 0);
 		
-		updateScore(split[current], 1);
+		updateScore(wset, split[current], 1);
 		localStorage.setItem(CookieName, JSON.stringify(wset));
 		showStatus();
 	}
 
 	function onNext()
 	{
-		updateScore(split[current], -1); // Down by one
+		updateScore(wset, split[current], -1); // Down by one
 		localStorage.setItem(CookieName, JSON.stringify(wset));
 		showStatus();
 		refresh();
@@ -98,17 +98,19 @@
 	{
 		++counter;
 		
-		sortByScores(split);
-		current = Math.floor(20*Math.random());
+		sortByScores(wset, split);
 		
-		if (calcScore(split[current]) <= 0)
+		// debug
+		for (let i=0; i<20; ++i)
 		{
-			shuffle(split);
-			console.log('random choice');
+			console.log(split[i] + ': ' + calcScore(wset, split[i]) );
 		}
 		
+		
+		current = Math.floor(20*Math.random());
+		
 		wrd.innerHTML = split[current];
-		console.log('score: ' + calcScore(split[current]));
+		console.log('score: ' + calcScore(wset, split[current]));
 		showStatus();
 		document.documentElement.scrollTop = 0;
 	}
@@ -121,54 +123,6 @@
 		{
 			refr.innerHTML += '-------<br>';
 		}
-	}
-
-	function updateScore(str, delta)
-	{
-		const oldScore = calcScore(str);
-		//console.log(str + ' -> ' + delta);
-		const tmp = removeNonLetters(str).toLowerCase();
-		//console.log(tmp);
-		
-		for (let i=0; i<tmp.length-Shingle; ++i)
-		{
-			const tmp1 = tmp.substring(i, i+Shingle);
-			//console.log(tmp1);
-			
-			wset[tmp1] = wset[tmp1] ? wset[tmp1]+delta : delta;
-			
-			if (wset[tmp1] <= 0) { delete wset[tmp1]; }
-		}
-		
-		//console.log(wset);
-		const newScore = calcScore(str);
-		console.log('score: ' + oldScore + ' --> ' + newScore);
-	}
-	
-	
-	function calcScore(str)
-	{
-		//console.log(str);
-		const tmp = removeNonLetters(str).toLowerCase();
-		//console.log(tmp);
-		
-		let res = Math.random(); // start with rnd()
-		
-		for (let i=0; i<tmp.length-Shingle; ++i)
-		{
-			const tmp1 = tmp.substring(i, i+Shingle);
-			//console.log(tmp1);
-			
-			res += wset[tmp1] ? wset[tmp1] : 0;
-		}
-		
-		//console.log(res);
-		return res;
-	}
-
-	function sortByScores(arr)
-	{
-		arr.sort((a,b) => calcScore(b)/b.length - calcScore(a)/a.length); // sort DESC
 	}
 
 	</script>
