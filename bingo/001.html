@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo sim</title>
+</head>
+<body>
+Bingo simulator:<br>
+----------------<br>
+Tickets:<br>
+<input id='t1' size=50 value='1 2 3 4 5'></input><br>
+<input id='t2' size=50 value='1 2 3 4 6'></input><br>
+<input id='t3' size=50 value='6 7 8 9 10'></input><br>
+<button onclick='sim(1000)'>Sim 1000</button><br>
+Wins: <span id='ress'></span><br>
+<button onclick='clearRes()'>Clear results</button><br>
+
+<script>
+let res = [0, 0, 0];
+function showRes()
+{
+	document.getElementById('ress').innerHTML = res;
+}
+showRes();
+
+function clearRes()
+{
+	res = [0, 0, 0];
+	showRes();
+}
+
+function sim(K)
+{
+	const ticket1 = parseTicket('t1');
+	const ticket2 = parseTicket('t2');
+	const ticket3 = parseTicket('t3');
+	
+	const concatenatedArray = ticket1.concat(ticket2, ticket3);
+
+	const maxN = Math.max(...concatenatedArray);	
+	
+	for (let k=0; k<K; ++k)
+	{
+		
+		const set1 = new Set(ticket1);
+		const set2 = new Set(ticket2);
+		const set3 = new Set(ticket3);
+		
+		while(true)
+		{
+			
+			const b = 1+Math.floor(Math.random()*maxN);
+			
+			set1.delete(b);
+			if (!set1.size) { res[0]++; }
+
+			set2.delete(b);
+			if (!set2.size) { res[1]++; }
+
+			set3.delete(b);
+			if (!set3.size) { res[2]++; }
+			
+			if (!set1.size || !set2.size || !set3.size) { break; }
+		}
+	}
+	
+	
+	showRes();
+}
+
+function parseTicket(name)
+{
+	let arr = document.getElementById(name).value.trim().split(' ').map(x=>+x);
+	//console.log(arr);
+	return arr;
+}
+
+
+</script>
+ 
+
+</body>
+</html>
+
