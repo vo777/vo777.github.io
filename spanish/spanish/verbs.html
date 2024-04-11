@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Spanish verbs</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../langscripts/styles.css">
+</head>
+
+<body>
+  <a href="./index.html">Back</a> to main page.<br>
+  <h3>Spanish verbs</h3>
+  <h4></h4>
+  Verb: <input type="text" id="text1" value="hablar" oninput="conjugate();" size=100 />
+  <br>
+  <button onclick="rs();">Random and say</button>
+  <button onclick="sayArr(textToSay);">Say</button>
+  <button onclick="speechSynthesis.cancel();">Shut up</button>
+  <input type="checkbox" id="brk1">Breaks between words</input>
+  <br>
+  <br>
+  
+  <div id="res_div">---</div>
+  <br>
+  <hr>
+  <table id="table1"></table>
+
+  <script src="../langscripts/speaker.js"></script>
+  <script src="verbs.js"></script>
+
+  <script>
+
+    const data = {};
+	data.dict = {};
+	data.conj = {};
+	data.all_verbs = [];
+
+	const textToSay = [];
+		
+    const table1 = document.getElementById('table1');
+    const text1 = document.getElementById('text1');
+    const res_div = document.getElementById('res_div');
+
+	init();
+	conjugate();
+
+	listVoices('es');
+	
+	function rs()
+	{
+		const idx = Math.floor(Math.random()*data.all_verbs.length);
+		console.log(idx);
+		text1.value = data.all_verbs[idx];
+		conjugate();
+		sayArr(textToSay);
+	}
+	
+	function sayArr(arr)
+	{
+		for (let line of arr)
+		{
+			sayBrk(', ' + line + ', ');
+		}	
+	}
+	
+  </script>
+
+</body>
+
+</html>
+

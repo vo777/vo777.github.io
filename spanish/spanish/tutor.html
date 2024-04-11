@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+	<!--
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esp</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="../langscripts/speaker.js"></script>
+    <script src="../spanish.js"></script>
+    <script src="../tutor-common.js"></script>
+    <script src="tutor.js"></script>
+  </head>
+  <body onload="startup()">
+    <!-- disable scrollbars: -->
+    <style type="text/css"> 
+	body 
+	{ 
+		overflow: hidden; 
+		background-color : #000000;
+		color: #FFFFFF;
+	} </style>
+	
+	<style>
+	div 
+	{
+	   text-align: center;
+	   font-size:  170%;
+	   font-family: "Arial";
+	}
+	
+	.bigdiv
+	{
+		background-color : #FFFFFF;
+		padding: 1px 0px;
+	}
+	
+	.qqq
+	{
+	   font-weight: bold;
+	   background-color : #000000;
+	   margin: 1px 0px 1px 0px;
+	}
+
+	.aaa
+	{
+	   font-weight: normal;
+	   background-color : #000000;
+	   margin: 1px 0px 1px 0px;
+	}
+	</style>
+	<a href="./index.html">Back</a> to main page.<br>
+	
+	<div class='bigdiv'>
+	<div class='qqq' id='question' onclick='toggleDebug();'>qqqqqq</div>
+	<div class='aaa' id='answer0' onclick='onAnswer(0);'>aaa0000</div>
+	<div class='aaa' id='answer1' onclick='onAnswer(1);'>aaa0001</div>
+	<div class='aaa' id='answer2' onclick='onAnswer(2);'>aaa0002</div>
+	<div class='aaa' id='answer3' onclick='onAnswer(3);'>aaa0003</div>
+	</div>
+	
+	<p id='summary'>summary</p>
+	
+	<script>
+	listVoices('es');
+	</script>
+  </body>
+</html>
