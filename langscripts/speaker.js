@@ -1,6 +1,6 @@
 let voices = [];
 
-const CookieName = "speaker_voice_name";
+const VoiceCookieName = "speaker_voice_name";
 
 function listVoices(lang) {
   voices = window.speechSynthesis.getVoices();
@@ -15,7 +15,7 @@ function listVoices(lang) {
 
     let foundUS = false;
     let foundPrevVoice = false;
-    const prevVoice = localStorage.getItem(CookieName);
+    const prevVoice = localStorage.getItem(VoiceCookieName);
 
     for (let i = 0; i < voices.length; ++i) {
       const voice = voices[i];
@@ -54,7 +54,7 @@ function listVoices(lang) {
 
 function onVoiceSelected(event) {
   console.log(event.target.value);
-  localStorage.setItem(CookieName, event.target.value);
+  localStorage.setItem(VoiceCookieName, event.target.value);
   sayBrk('one two three four five');
 }
 
