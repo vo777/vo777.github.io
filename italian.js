@@ -509,7 +509,6 @@ const italian = [
 ["be", "well"],
 ["mezzo", "half"],
 ["andando", "going"],
-["fossi", "I"],
 ["vista", "view"],
 ["difficile", "hard"],
 ["stava", "he was"],

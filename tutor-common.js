@@ -1,7 +1,7 @@
 
 const timePerQuestion = 100; // 10 = 1 second
 
-const minU = 1000;  // unimportant
+const minQ = 1000;
 const maxU = 1010;
 const maxQ = 10000; // limited by localStorage size
 
@@ -112,8 +112,8 @@ function newQuestion()
 		// cookie not found
 		data.wset = [];
 	}
-//	while (data.wset.length < minQ)
-	while (new Set(data.wset).size < minU)
+	while (data.wset.length < minQ)
+//	while (new Set(data.wset).size < minU)
 	{
 		data.wset.push(Math.floor(Math.random()*N));
 	}
@@ -195,6 +195,7 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
+			data.wset.push(data.currentIndex);
 			data.wset.push(data.answerIndices[x]);
 		}
 
@@ -264,7 +265,7 @@ function showDebug()
 	data.debugInfo += '' + errArray.length;
 	for (let e of errArray)
 	{
-		data.debugInfo += '<br>' + data.dict[e][0] + ' - ' + data.dict[e][1];
+		//data.debugInfo += '<br>' + data.dict[e][0] + ' - ' + data.dict[e][1];
 		clipbrb += data.dict[e][0] + ' - ' + data.dict[e][1] + '\n';
 	}
 	
