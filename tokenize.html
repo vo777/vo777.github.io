@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+
+    <script src="arabic.js"></script>
+    <script src="czech.js"></script>
+    <script src="dutch.js"></script>
+    <script src="esperanto.js"></script>
+    <script src="french.js"></script>
+    <script src="german.js"></script>
+    <script src="greek.js"></script>
+    <script src="hebrew.js"></script>
+    <script src="hungarian.js"></script>
+    <script src="indonesian.js"></script>
+    <script src="interlingua.js"></script>
+    <script src="italian.js"></script>
+    <script src="lang0.js"></script>
+    <script src="latin.js"></script>
+    <script src="malay.js"></script>
+    <script src="purtuguese.js"></script>
+    <script src="polish.js"></script>
+    <script src="romanian.js"></script>
+    <script src="spanish.js"></script>
+    <script src="spanish_q.js"></script>
+    <script src="tagalog.js"></script>
+    <script src="turkish.js"></script>
+    <script src="vietnamese.js"></script>
+
+
+    <meta charset="utf-8">
+    <title>Text analysis</title>
+  </head>
+  <body>
+	<style>
+    #tokenized_text {
+        width: 50%;
+        font-size: 250%;
+        background-color: #88CCFF;
+    }
+	</style>
+
+	Paste text here:
+	<br>
+	<textarea id="input_text_area" rows="5" cols="80"></textarea>
+	<br>
+	<textarea id='output_text_area' rows="4" cols="30"></textarea>
+	<br>
+	<button type="button" onclick="process()">Process</button>
+	<button type="button" onclick="openTr()">send to google</button>
+	<button type="button" onclick="clearRes()">Clear</button>
+	<br>
+	<p id='tokenized_text'></p>
+
+<script>
+
+const input_text_area = document.getElementById("input_text_area");
+const output_text_area = document.getElementById("output_text_area");
+const tokenized_text = document.getElementById("tokenized_text");
+
+let dict = [];
+
+loadDict();
+
+function openTr()
+{
+	openGoogleTranslate(output_text_area.value);
+}
+
+function openGoogleTranslate(text) {
+  const url = `https://translate.google.com/?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+}
+
+function loadDict()
+{
+	dict = dict.concat(german);
+	dict = dict.concat(esperanto);
+	dict = dict.concat(french);
+	dict = dict.concat(italian);
+	dict = dict.concat(latin);
+	dict = dict.concat(portuguese);
+	dict = dict.concat(spanishQ);
+	dict = dict.concat(spanish);
+	dict = dict.concat(spanish001);
+	dict = dict.concat(dutch);
+	dict = dict.concat(vietnamese);
+	dict = dict.concat(interlingua);
+	dict = dict.concat(lang_0);
+	// normalize
+	for (let i=0; i<dict.length; ++i)
+	{
+		dict[i][0] = dict[i][0].toLowerCase().trim();
+	}
+}
+
+function process()
+{
+	createSpans();
+}
+
+function clearRes()
+{
+	removeSpans();
+	output_text_area.value = '';
+}
+
+
+function processString(inputString) {
+    let stringWithGrave = inputString.replace(/'/g, '`');
+    let tokens = stringWithGrave.split(/(\s+|\p{P}+)/u);
+    let resultTokens = tokens.map(token => token.replace(/`/g, "'"));
+    return resultTokens;
+}
+
+function createSpans() {
+    // Get the container element
+    const container = document.getElementById('tokenized_text');
+	const tokens = processString(input_text_area.value);
+
+	const tmpSet = new Set();
+
+    // Loop to create spans with numbers from 1 to 20
+    for (let t of tokens) {
+        // Create a span element
+        const span = document.createElement('span');
+        
+        // Set the class and text content
+        span.className = 'highlight';
+        span.textContent = t;
+		
+		const tmp = t.toLowerCase().trim();
+		tmpSet.clear();
+		
+		if (tmp.length>0)
+		{
+		for (let i=0; i<dict.length; ++i)
+			{
+				if (tmp === dict[i][0]) { tmpSet.add(dict[i][1]); }
+			}
+		}
+		
+		span.title = [...tmpSet].join(',');
+		if (tmpSet.size > 0) { span.style.backgroundColor = '#CCFFCC'; }
+        
+        // Add event listener to change background color on click
+        span.addEventListener('click', () => {
+            span.style.backgroundColor = 'yellow';
+			output_text_area.value += t + '\n';
+        });
+        
+        // Append the span to the container
+        container.appendChild(span);
+    }
+}
+
+// Function to remove all spans
+function removeSpans() {
+    const container = document.getElementById('tokenized_text');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
+
+</script>	
+	
+	
+  </body>
+</html>

@@ -1,9 +1,9 @@
 
 const timePerQuestion = 100; // 10 = 1 second
 
-const minQ = 1000;
-const maxU = 1010;
-const maxQ = 10000; // limited by localStorage size
+const minQ = 10000;
+//const maxU = 1010;
+const maxQ = 11000; // limited by localStorage size
 
 
 const data =
@@ -195,7 +195,6 @@ function onAnswer(x)
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
-			data.wset.push(data.currentIndex);
 			data.wset.push(data.answerIndices[x]);
 		}
 
@@ -272,7 +271,17 @@ function showDebug()
 	if (data.debugInfoFlag) 
 		{ 
 			data.summary.innerHTML = data.debugInfo;
-			navigator.clipboard.writeText(clipbrb);
+			//navigator.clipboard.writeText(clipbrb);
+			
+			navigator.clipboard
+				.writeText(clipbrb)
+				.then(() => {
+				//alert("successfully copied");
+				})
+				.catch(() => {
+				//alert("something went wrong");
+				});
+
 		}
 	else{ data.summary.innerHTML = ''; }	
 }

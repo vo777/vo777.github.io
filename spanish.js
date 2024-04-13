@@ -2187,7 +2187,36 @@ const spanish001 = [
 ["ver", "to watch/to see"],
 ["mirar", "to watch/to see"],
 ["observar", "to watch/to see"],
-["contemplar", "to watch/to see"]
+["contemplar", "to watch/to see"],
+
+ ['fuente', 'fountain'],
+ ['contenido', 'content'],
+ ['destacado', 'outstanding'],
+ ['conjunto', 'set'],
+ ['otorga', 'grants'],
+ ['obras', 'plays'],
+ ['fuentes', 'sources'],
+ ['titularidad', 'ownership'],
+ ['encargos', 'orders'],
+ ['Cabe', 'Fits'],
+ ['encorsetada', 'corseted'],
+ ['murallas', 'walls'],
+ ['crecimiento', 'growth'],
+ ['portada', 'front page'],
+ ['envergadura', 'wingspan'],
+ ['colas', 'queues'],
+ ['posee', 'has'],
+ ['alas', 'at'],
+ ['oruga', 'caterpillar'],
+ ['macaón', 'macaon'],
+ ['llamativa', 'striking'],
+ ['irrita', 'irritates'],
+ ['crisálida', 'chrysalis'],
+
+
+
+
+
 ];
 
 
