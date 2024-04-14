@@ -1,9 +1,30 @@
 
 const timePerQuestion = 100; // 10 = 1 second
 
-const minQ = 10000;
-//const maxU = 1010;
-const maxQ = 11000; // limited by localStorage size
+const minQ = 1001;
+const maxQ = 10000; // limited by localStorage size
+
+document.addEventListener('keydown', handleArrowKeys);
+
+function handleArrowKeys(event) {
+  const output = document.getElementById('output');
+  
+  switch(event.key) {
+    case 'ArrowLeft':
+      onAnswer(1);
+      break;
+    case 'ArrowRight':
+      onAnswer(2);
+      break;
+    case 'ArrowUp':
+      onAnswer(0);
+      break;
+    case 'ArrowDown':
+      onAnswer(3);
+      break;
+  }
+}
+
 
 
 const data =
@@ -228,11 +249,17 @@ function loadSynonyms(dest, src)
 }
 
 
+// not used
+//function calcCorrectnessRatio()
+//{
+//	const res = 1.0*data.ansCorrectly 
+//		/ (data.ansCorrectly + data.ansIncorrectly) || 0;
+//	return res;
+//}
 
-function calcCorrectnessRatio()
+function calcErrRatio()
 {
-	const res = 1.0*data.ansCorrectly 
-		/ (data.ansCorrectly + data.ansIncorrectly) || 0;
+	const res = 1.0* data.ansIncorrectly/data.questionCount || 0;
 	return res;
 }
 
@@ -251,10 +278,9 @@ function showDebug()
 	let clipbrb = '';
 
 	data.debugInfo = ''
-	+ 'w:'+data.wset.length+' '+wUnique+' '+wCurrent
-	+ ' ' + data.questionCount + ', '
-	+ data.ansCorrectly+'/'+data.answerCount
-	+ '('+Math.round(100*calcCorrectnessRatio())+'%)'
+	+ 'w:'+data.wset.length  //+ ' u:'+wUnique
+	+ ' q:' + data.questionCount + ' err:'+data.ansIncorrectly
+	+ '('+Math.round(100*calcErrRatio())+'%)'
 	+ '<br>n:'+data.dict.length
 	+ ' ver:5.01'
 	+ ' ' + window.location.search

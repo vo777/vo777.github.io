@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+	<h3>Empty page</h3>
+	<script>
+	const langs = ['french','german','italian','spanish','portuguese'];
+	const randomIndex = Math.floor(Math.random() * langs.length);
+  // Return the element at the random index
+	const lang = langs[randomIndex];
+
+	window.location.href = `./${lang}/tutor.html`;
+	</script>
+  </body>
+</html>
