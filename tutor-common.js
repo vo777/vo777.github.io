@@ -167,10 +167,13 @@ function newQuestion()
 	data.answerIndices 
 			= genRandomIncorrectAnswers(data.currentIndex, data.dict);
 	data.question.innerHTML = data.dict[data.currentIndex][0];
-	for (let i=0; i<4; ++i)
-	{
-		data.answers[i].innerHTML = data.dict[data.answerIndices[i]][1];
-	}
+
+
+	data.answers[0].innerHTML = data.dict[data.answerIndices[0]][1];
+	data.answers[1].innerHTML = '<< '+data.dict[data.answerIndices[1]][1] + ' <<';
+	data.answers[2].innerHTML = '>> '+data.dict[data.answerIndices[2]][1] + ' >>';
+	data.answers[3].innerHTML = data.dict[data.answerIndices[3]][1];
+
 	data.timeRemaining = timePerQuestion;
 	showDebug();
 }
@@ -187,7 +190,7 @@ function onAnswer(x)
 	
 	++data.answerCount;
 	
-	const answered = data.answers[x].innerHTML;
+	const answered = data.dict[data.answerIndices[x]][1];
 	const correctAnswer = data.dict[data.currentIndex][1];
 	
 	if (answered == correctAnswer)
