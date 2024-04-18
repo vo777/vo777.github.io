@@ -1,8 +1,8 @@
 
 const timePerQuestion = 100; // 10 = 1 second
 
-const minQ = 1001;
-const maxQ = 10000; // limited by localStorage size
+const minQ = 501;
+const maxQ = 1000;
 
 document.addEventListener('keydown', handleArrowKeys);
 
