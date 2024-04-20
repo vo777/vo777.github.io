@@ -281,7 +281,7 @@ function showDebug()
 	let clipbrb = '';
 
 	data.debugInfo = ''
-	+ 'w:'+data.wset.length  //+ ' u:'+wUnique
+	+ 'w:'+data.wset.length  + ' u:'+wUnique
 	+ ' q:' + data.questionCount + ' err:'+data.ansIncorrectly
 	+ '('+Math.round(100*calcErrRatio())+'%)'
 	+ '<br>n:'+data.dict.length
