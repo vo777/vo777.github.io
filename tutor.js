@@ -1,4 +1,4 @@
-const DictCookieName = 'workset';
+const DictCookieName = 'workset001';
 
 function startup()
 {
@@ -105,3 +105,26 @@ function startup()
 	startup1();
 
 }
+
+
+function loadSynonyms(dest, src)
+{
+	for (let line of src)
+	{
+		line = line.replaceAll('.', ',');
+		let ll = line.split(':');
+		//console.log('loadSynonyms ' + line);
+		if (ll.length != 2) { continue; }
+		//console.log(ll);
+		let value = ll[0].trim();
+		if (value.length == 0) { continue; }
+		for (let key of ll[1].split(','))
+		{
+			key = key.trim();
+			if (key.length == 0) { continue; }
+			dest.push([key, value]);
+			dest.push([value, key]);
+		}
+	}
+}
+

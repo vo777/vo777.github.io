@@ -1,8 +1,8 @@
 
 const timePerQuestion = 100; // 10 = 1 second
 
-const minQ = 501;
-const maxQ = 1000;
+//const minQ = 10;
+//const maxQ = 150;
 
 document.addEventListener('keydown', handleArrowKeys);
 
@@ -133,11 +133,18 @@ function newQuestion()
 		// cookie not found
 		data.wset = [];
 	}
-	while (data.wset.length < minQ)
-//	while (new Set(data.wset).size < minU)
+	
+	if (data.wset.length<1)
 	{
-		data.wset.push(Math.floor(Math.random()*N));
+		for (let i=0; i<N; ++i) {data.wset.push(i);}
 	}
+	
+//	while (data.wset.length < N) // minQ
+//	while (new Set(data.wset).size < minU)
+//	{
+//		data.wset.push(Math.floor(Math.random()*N));
+//	}
+//	}
 	
 	// document.cookie = DictCookieName 
 	// 	+ "="
@@ -212,18 +219,20 @@ function onAnswer(x)
 		data.answers[x].innerHTML = "-";
 		data.timeRemaining = timePerQuestion;
 		
-		if (data.wset.length < maxQ)
+		const N = data.dict.length;
+
+		if (data.wset.length < 2*N) // maxQ
 		{
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
 			data.wset.push(data.currentIndex);
-			data.wset.push(data.answerIndices[x]);
+			//data.wset.push(data.answerIndices[x]);
 		}
 
 		data.errSet.add(data.currentIndex);
-		data.errSet.add(data.answerIndices[x]);
+		//data.errSet.add(data.answerIndices[x]);
 		
 	}
 	showDebug();
