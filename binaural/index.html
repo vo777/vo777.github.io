@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
   }
   .app {
     width: 100%;
@@ -29,91 +29,78 @@
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 20px;
-    padding: 28px;
+    border-radius: 16px;
+    padding: 18px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   }
   h1 {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
+    color: #cbd5e1;
   }
-  .subtitle {
-    text-align: center;
-    color: #94a3b8;
-    font-size: 13px;
-    margin-bottom: 24px;
+  .channels {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
   }
   .channel {
-    margin-bottom: 18px;
+    flex: 1;
   }
   .channel label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    color: #cbd5e1;
-    margin-bottom: 8px;
-  }
-  .badge {
-    background: rgba(99, 102, 241, 0.2);
-    color: #a5b4fc;
-    padding: 2px 10px;
-    border-radius: 999px;
+    display: block;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    text-transform: uppercase;
   }
-  .badge.right { background: rgba(244, 114, 182, 0.2); color: #f9a8d4; }
+  .channel.left label { color: #a5b4fc; }
+  .channel.right label { color: #f9a8d4; }
   .input-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
   }
   input[type="number"] {
-    flex: 1;
+    width: 100%;
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 12px;
-    padding: 14px 16px;
+    border-radius: 10px;
+    padding: 10px 32px 10px 12px;
     color: #f1f5f9;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     outline: none;
     transition: border-color 0.15s;
     -webkit-appearance: none;
     -moz-appearance: textfield;
   }
-  input[type="number"]:focus {
-    border-color: #6366f1;
-  }
+  input[type="number"]:focus { border-color: #6366f1; }
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
   .unit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #64748b;
-    font-size: 14px;
-    width: 30px;
-  }
-  input[type="range"] {
-    width: 100%;
-    margin-top: 10px;
-    accent-color: #6366f1;
+    font-size: 12px;
+    pointer-events: none;
   }
   .buttons {
     display: flex;
-    gap: 12px;
-    margin-top: 24px;
+    gap: 8px;
   }
   button {
     flex: 1;
-    padding: 16px;
+    padding: 12px;
     border: none;
-    border-radius: 12px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.1s, opacity 0.15s;
@@ -121,18 +108,14 @@
   }
   button:active { transform: scale(0.97); }
   button:disabled { opacity: 0.4; cursor: not-allowed; }
-  #startBtn {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  }
-  #stopBtn {
-    background: linear-gradient(135deg, #ef4444, #f43f5e);
-  }
+  #startBtn { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+  #stopBtn { background: linear-gradient(135deg, #ef4444, #f43f5e); }
   .status {
     text-align: center;
-    margin-top: 18px;
-    font-size: 13px;
+    margin-top: 10px;
+    font-size: 11px;
     color: #64748b;
-    height: 18px;
+    height: 14px;
   }
   .status.playing { color: #4ade80; }
   .status.playing::before {
@@ -143,36 +126,27 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
-  .hint {
-    margin-top: 14px;
-    font-size: 11px;
-    color: #475569;
-    text-align: center;
-    line-height: 1.5;
-  }
 </style>
 </head>
 <body>
   <div class="app">
     <h1>Binaural Tones</h1>
-    <p class="subtitle">Two ears, two frequencies</p>
 
-    <div class="channel">
-      <label>Left Ear <span class="badge">L</span></label>
-      <div class="input-row">
-        <input type="number" id="leftFreq" value="220" min="20" max="20000" step="1">
-        <span class="unit">Hz</span>
+    <div class="channels">
+      <div class="channel left">
+        <label>Left</label>
+        <div class="input-row">
+          <input type="number" id="leftFreq" value="220" min="20" max="20000" step="1">
+          <span class="unit">Hz</span>
+        </div>
       </div>
-      <input type="range" id="leftSlider" value="220" min="20" max="2000" step="1">
-    </div>
-
-    <div class="channel">
-      <label>Right Ear <span class="badge right">R</span></label>
-      <div class="input-row">
-        <input type="number" id="rightFreq" value="224" min="20" max="20000" step="1">
-        <span class="unit">Hz</span>
+      <div class="channel right">
+        <label>Right</label>
+        <div class="input-row">
+          <input type="number" id="rightFreq" value="224" min="20" max="20000" step="1">
+          <span class="unit">Hz</span>
+        </div>
       </div>
-      <input type="range" id="rightSlider" value="224" min="20" max="2000" step="1">
     </div>
 
     <div class="buttons">
@@ -181,7 +155,6 @@
     </div>
 
     <div class="status" id="status">Stopped</div>
-    <p class="hint">Use headphones for proper stereo separation.</p>
   </div>
 
 <script>
@@ -192,8 +165,6 @@ let isPlaying = false;
 
 const leftFreq = document.getElementById('leftFreq');
 const rightFreq = document.getElementById('rightFreq');
-const leftSlider = document.getElementById('leftSlider');
-const rightSlider = document.getElementById('rightSlider');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const status = document.getElementById('status');
@@ -204,55 +175,27 @@ function clampFreq(v) {
   return Math.max(20, Math.min(20000, n));
 }
 
-function syncInputs(source, target, slider1, slider2) {
-  // Keep number input and slider in sync
-}
-
-// Sync number ↔ slider for left
 leftFreq.addEventListener('input', () => {
-  const v = clampFreq(leftFreq.value);
-  if (v <= 2000) leftSlider.value = v;
-  updateLeftFreq(v);
-});
-leftSlider.addEventListener('input', () => {
-  leftFreq.value = leftSlider.value;
-  updateLeftFreq(parseFloat(leftSlider.value));
-});
-
-rightFreq.addEventListener('input', () => {
-  const v = clampFreq(rightFreq.value);
-  if (v <= 2000) rightSlider.value = v;
-  updateRightFreq(v);
-});
-rightSlider.addEventListener('input', () => {
-  rightFreq.value = rightSlider.value;
-  updateRightFreq(parseFloat(rightSlider.value));
-});
-
-function updateLeftFreq(v) {
   if (leftOsc && audioCtx) {
-    leftOsc.frequency.setTargetAtTime(v, audioCtx.currentTime, 0.01);
+    leftOsc.frequency.setTargetAtTime(clampFreq(leftFreq.value), audioCtx.currentTime, 0.01);
   }
-}
-function updateRightFreq(v) {
+});
+rightFreq.addEventListener('input', () => {
   if (rightOsc && audioCtx) {
-    rightOsc.frequency.setTargetAtTime(v, audioCtx.currentTime, 0.01);
+    rightOsc.frequency.setTargetAtTime(clampFreq(rightFreq.value), audioCtx.currentTime, 0.01);
   }
-}
+});
 
 async function start() {
   if (isPlaying) return;
   if (!audioCtx) {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   }
-  if (audioCtx.state === 'suspended') {
-    await audioCtx.resume();
-  }
+  if (audioCtx.state === 'suspended') await audioCtx.resume();
 
   const lFreq = clampFreq(leftFreq.value);
   const rFreq = clampFreq(rightFreq.value);
 
-  // Stereo merger to route each oscillator to a single channel
   const merger = audioCtx.createChannelMerger(2);
 
   leftOsc = audioCtx.createOscillator();
@@ -260,19 +203,18 @@ async function start() {
   leftOsc.frequency.value = lFreq;
   leftGain = audioCtx.createGain();
   leftGain.gain.value = 0;
-  leftOsc.connect(leftGain).connect(merger, 0, 0); // channel 0 = left
+  leftOsc.connect(leftGain).connect(merger, 0, 0);
 
   rightOsc = audioCtx.createOscillator();
   rightOsc.type = 'sine';
   rightOsc.frequency.value = rFreq;
   rightGain = audioCtx.createGain();
   rightGain.gain.value = 0;
-  rightOsc.connect(rightGain).connect(merger, 0, 1); // channel 1 = right
+  rightOsc.connect(rightGain).connect(merger, 0, 1);
 
   merger.connect(audioCtx.destination);
 
   const now = audioCtx.currentTime;
-  // Smooth fade-in to avoid pops
   leftGain.gain.linearRampToValueAtTime(0.25, now + 0.05);
   rightGain.gain.linearRampToValueAtTime(0.25, now + 0.05);
 
@@ -289,18 +231,14 @@ async function start() {
 function stop() {
   if (!isPlaying || !audioCtx) return;
   const now = audioCtx.currentTime;
-
-  // Fade out to avoid pops, then stop
   leftGain.gain.cancelScheduledValues(now);
   rightGain.gain.cancelScheduledValues(now);
   leftGain.gain.setValueAtTime(leftGain.gain.value, now);
   rightGain.gain.setValueAtTime(rightGain.gain.value, now);
   leftGain.gain.linearRampToValueAtTime(0, now + 0.05);
   rightGain.gain.linearRampToValueAtTime(0, now + 0.05);
-
   leftOsc.stop(now + 0.06);
   rightOsc.stop(now + 0.06);
-
   leftOsc = rightOsc = leftGain = rightGain = null;
   isPlaying = false;
   startBtn.disabled = false;
@@ -312,7 +250,6 @@ function stop() {
 startBtn.addEventListener('click', start);
 stopBtn.addEventListener('click', stop);
 
-// Register service worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js').catch(() => {});
