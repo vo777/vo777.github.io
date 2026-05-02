@@ -110,6 +110,63 @@
   button:disabled { opacity: 0.4; cursor: not-allowed; }
   #startBtn { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
   #stopBtn { background: linear-gradient(135deg, #ef4444, #f43f5e); }
+  .sliders {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .slider-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    width: 56px;
+    flex-shrink: 0;
+  }
+  .slider-value {
+    font-size: 11px;
+    color: #cbd5e1;
+    font-variant-numeric: tabular-nums;
+    width: 38px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 999px;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
   .status {
     text-align: center;
     margin-top: 10px;
@@ -154,6 +211,19 @@
       <button id="stopBtn" disabled>Stop</button>
     </div>
 
+    <div class="sliders">
+      <div class="slider-row">
+        <span class="slider-label">Volume</span>
+        <input type="range" id="volume" min="0" max="100" value="75" step="1">
+        <span class="slider-value" id="volumeVal">75%</span>
+      </div>
+      <div class="slider-row">
+        <span class="slider-label">Balance</span>
+        <input type="range" id="balance" min="-100" max="100" value="0" step="1">
+        <span class="slider-value" id="balanceVal">C</span>
+      </div>
+    </div>
+
     <div class="status" id="status">Stopped</div>
   </div>
 
@@ -161,6 +231,7 @@
 let audioCtx = null;
 let leftOsc = null, rightOsc = null;
 let leftGain = null, rightGain = null;
+let masterGain = null;
 let isPlaying = false;
 
 const leftFreq = document.getElementById('leftFreq');
@@ -168,11 +239,43 @@ const rightFreq = document.getElementById('rightFreq');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const status = document.getElementById('status');
+const volumeSlider = document.getElementById('volume');
+const balanceSlider = document.getElementById('balance');
+const volumeVal = document.getElementById('volumeVal');
+const balanceVal = document.getElementById('balanceVal');
 
 function clampFreq(v) {
   const n = parseFloat(v);
   if (isNaN(n)) return 440;
   return Math.max(20, Math.min(20000, n));
+}
+
+// Equal-power pan: balance in [-1, 1] → {left, right} multipliers
+function panGains(balance) {
+  const angle = (balance + 1) * Math.PI / 4;  // 0 .. π/2
+  return { left: Math.cos(angle), right: Math.sin(angle) };
+}
+
+// Logarithmic volume taper: slider position → gain.
+// Maps 0 → silence, 100 → 0 dB, with each 10% step ≈ 4.5 dB so the
+// perceived loudness change feels even across the slider's range.
+function volumeToGain(percent) {
+  if (percent <= 0) return 0;
+  const minDB = -45;
+  const maxDB = 0;
+  const dB = minDB + (maxDB - minDB) * (percent / 100);
+  return Math.pow(10, dB / 20);
+}
+function currentVolume() { return volumeToGain(parseInt(volumeSlider.value, 10)); }
+function currentBalance() { return parseInt(balanceSlider.value, 10) / 100; }
+
+function applyMix() {
+  if (!audioCtx || !leftGain || !rightGain || !masterGain) return;
+  const t = audioCtx.currentTime;
+  const { left, right } = panGains(currentBalance());
+  leftGain.gain.setTargetAtTime(left, t, 0.01);
+  rightGain.gain.setTargetAtTime(right, t, 0.01);
+  masterGain.gain.setTargetAtTime(currentVolume(), t, 0.01);
 }
 
 leftFreq.addEventListener('input', () => {
@@ -186,6 +289,16 @@ rightFreq.addEventListener('input', () => {
   }
 });
 
+volumeSlider.addEventListener('input', () => {
+  volumeVal.textContent = volumeSlider.value + '%';
+  applyMix();
+});
+balanceSlider.addEventListener('input', () => {
+  const b = parseInt(balanceSlider.value, 10);
+  balanceVal.textContent = b === 0 ? 'C' : (b < 0 ? 'L' + Math.abs(b) : 'R' + b);
+  applyMix();
+});
+
 async function start() {
   if (isPlaying) return;
   if (!audioCtx) {
@@ -197,26 +310,29 @@ async function start() {
   const rFreq = clampFreq(rightFreq.value);
 
   const merger = audioCtx.createChannelMerger(2);
+  const { left: lPan, right: rPan } = panGains(currentBalance());
 
   leftOsc = audioCtx.createOscillator();
   leftOsc.type = 'sine';
   leftOsc.frequency.value = lFreq;
   leftGain = audioCtx.createGain();
-  leftGain.gain.value = 0;
+  leftGain.gain.value = lPan;
   leftOsc.connect(leftGain).connect(merger, 0, 0);
 
   rightOsc = audioCtx.createOscillator();
   rightOsc.type = 'sine';
   rightOsc.frequency.value = rFreq;
   rightGain = audioCtx.createGain();
-  rightGain.gain.value = 0;
+  rightGain.gain.value = rPan;
   rightOsc.connect(rightGain).connect(merger, 0, 1);
 
-  merger.connect(audioCtx.destination);
+  // Master gain handles overall volume + fade-in
+  masterGain = audioCtx.createGain();
+  masterGain.gain.value = 0;
+  merger.connect(masterGain).connect(audioCtx.destination);
 
   const now = audioCtx.currentTime;
-  leftGain.gain.linearRampToValueAtTime(0.25, now + 0.05);
-  rightGain.gain.linearRampToValueAtTime(0.25, now + 0.05);
+  masterGain.gain.linearRampToValueAtTime(currentVolume(), now + 0.05);
 
   leftOsc.start();
   rightOsc.start();
@@ -231,15 +347,12 @@ async function start() {
 function stop() {
   if (!isPlaying || !audioCtx) return;
   const now = audioCtx.currentTime;
-  leftGain.gain.cancelScheduledValues(now);
-  rightGain.gain.cancelScheduledValues(now);
-  leftGain.gain.setValueAtTime(leftGain.gain.value, now);
-  rightGain.gain.setValueAtTime(rightGain.gain.value, now);
-  leftGain.gain.linearRampToValueAtTime(0, now + 0.05);
-  rightGain.gain.linearRampToValueAtTime(0, now + 0.05);
+  masterGain.gain.cancelScheduledValues(now);
+  masterGain.gain.setValueAtTime(masterGain.gain.value, now);
+  masterGain.gain.linearRampToValueAtTime(0, now + 0.05);
   leftOsc.stop(now + 0.06);
   rightOsc.stop(now + 0.06);
-  leftOsc = rightOsc = leftGain = rightGain = null;
+  leftOsc = rightOsc = leftGain = rightGain = masterGain = null;
   isPlaying = false;
   startBtn.disabled = false;
   stopBtn.disabled = true;
