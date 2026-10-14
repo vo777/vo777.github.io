@@ -26,7 +26,8 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-
 .tick:last-child::after { transform: translateX(-100%); }
 .tick.center::after { color: #a7f3d0; font-weight: 800; }
 .reference { position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left)); pointer-events: none; text-shadow: 0 2px 5px #11152daa; }
-#referenceNote { display: block; font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; }
+#referenceNote { display: block; min-width: 0; min-height: 0; border: 0; border-radius: 0; padding: 0; background: transparent; color: inherit; font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; pointer-events: auto; touch-action: manipulation; text-shadow: inherit; }
+#referenceNote.locked::after { content: ' 🔒'; font-size: .35em; vertical-align: top; letter-spacing: 0; }
 #referenceHz { display: block; margin-top: 5px; font-size: clamp(20px, 4vw, 28px); font-variant-numeric: tabular-nums; }
 .controls { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: calc(12px + env(safe-area-inset-right)); display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 155px; }
 button { min-width: 60px; min-height: 44px; border: 1px solid #ffffff35; border-radius: 10px; padding: 8px 12px; font: 700 15px system-ui; cursor: pointer; }
@@ -51,20 +52,20 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
 <body>
 <main id="indicator" aria-label="Pitch and volume. Drag horizontally to change reference." tabindex="0">
   <div id="ticks" aria-hidden="true"></div><canvas id="trail" aria-hidden="true"></canvas>
-  <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
+  <div class="reference"><button id="referenceNote" type="button" aria-pressed="false" title="Tap to lock the reference">C3</button><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-<span id="version">Phone v9</span><div id="error" role="alert"></div>
+<span id="version">Phone v10</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 7;
+const PHONE_VERSION = 10;
 const DEFAULT_ANALYSIS_GAIN = 20; // Used until this device has a stored noise-floor estimate.
 const CALIBRATION_STORAGE_KEY = 'vocalTrainerMicCalibration.v1';
 const CALIBRATION_INTERVAL_MS = 1000, CALIBRATION_PERSIST_INTERVAL_MS = 60000;
 const QUIET_SAMPLE_LIMIT = 60, VOICE_MARGIN_DB = 8, CALIBRATION_TARGET_DB = -30;
 const MIN_ANALYSIS_GAIN_DB = -12, MAX_ANALYSIS_GAIN_DB = 36;
-const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
+const DISPLAY_SEMITONES = 7, SCALE_STOPS = [1,3,5,7];
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700, MAX_SUPPORTED_DB = -3, DISPLAY_BOTTOM_GAP = .10;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
 const $ = id => document.getElementById(id);
@@ -73,8 +74,9 @@ const paint = els.canvas.getContext('2d');
 let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
 let audioContext = null, stream = null, micSource = null, microphoneGain = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
 let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stableBoundary = false, lastInputAt = null, candidate = null, history = [];
-let referenceCandidate = null, drag = null;
-let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
+let referenceCandidate = null, referenceLocked = false, drag = null, pinch = null, scaleAnimation = 0;
+let displaySemitones = DISPLAY_SEMITONES, lastCrossCents = null, lastTap = null;
+let pointers = new Map(), points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
 let filteredRms = 0, lastHealthAt = -Infinity;
 let noiseFloorDb = null, analysisGain = DEFAULT_ANALYSIS_GAIN, analysisGainDb = 20 * Math.log10(DEFAULT_ANALYSIS_GAIN);
 let noiseSamples = [], lastCalibrationSampleAt = -Infinity, lastCalibrationPersistAt = -Infinity;
@@ -134,7 +136,8 @@ function calibrationLabel() {
 }
 function range() { return { min: Math.max(55, midiToHz(targetMidi-11)), max: Math.min(700, midiToHz(targetMidi+11)) }; }
 function resetPitch() { stableHz=0; stableAt=0; stableBoundary=false; lastInputAt=null; candidate=null; history=[]; }
-function clearTrail() { points=[]; lastPointAt=0; breakTrail=true; paint.clearRect(0,0,width,height); els.cross.hidden=true; }
+function clearTrail(hideCross=true) { points=[]; lastPointAt=0; breakTrail=true; paint.clearRect(0,0,width,height); if(hideCross) {els.cross.hidden=true;lastCrossCents=null;} }
+function xForCents(value) { const span=displaySemitones*100; return (clamp(value,-span,span)+span)/(2*span); }
 function updateBand() { if (!audioContext || !highpass) return; const band=range(); highpass.frequency.setTargetAtTime(band.min,audioContext.currentTime,.03); lowpass.frequency.setTargetAtTime(band.max,audioContext.currentTime,.03); }
 function setReference(midi) {
   midi=Math.max(33,Math.min(77,Math.round(midi)));
@@ -143,14 +146,28 @@ function setReference(midi) {
   return true;
 }
 function buildTicks() {
-  els.note.textContent=noteName(targetMidi); els.hz.textContent=midiToHz(targetMidi).toFixed(1)+' Hz'; els.ticks.replaceChildren();
+  els.note.textContent=noteName(targetMidi); els.note.setAttribute('aria-pressed',String(referenceLocked)); els.note.classList.toggle('locked',referenceLocked);
+  els.note.title=referenceLocked?'Tap to unlock the reference':'Tap to lock the reference';
+  els.hz.textContent=midiToHz(targetMidi).toFixed(1)+' Hz';
+  while(els.ticks.children.length<15) els.ticks.append(document.createElement('span'));
   for (let step=-DISPLAY_SEMITONES;step<=DISPLAY_SEMITONES;step++) {
-    const midi=targetMidi+step, natural=[0,2,4,5,7,9,11].includes(((midi%12)+12)%12), tick=document.createElement('span');
-    tick.className='tick'+(natural?' natural':'')+(step===0?' center':''); tick.style.left=((step+DISPLAY_SEMITONES)/(2*DISPLAY_SEMITONES)*100)+'%';
-    if (natural) tick.dataset.label=noteName(midi);
-    els.ticks.append(tick);
+    const midi=targetMidi+step, natural=[0,2,4,5,7,9,11].includes(((midi%12)+12)%12), tick=els.ticks.children[step+DISPLAY_SEMITONES];
+    tick.className='tick'+(natural?' natural':'')+(step===0?' center':''); tick.style.left=((step+displaySemitones)/(2*displaySemitones)*100)+'%'; tick.style.opacity=Math.abs(step)<=displaySemitones?1:0;
+    if (natural) tick.dataset.label=noteName(midi); else delete tick.dataset.label;
   }
 }
+function redrawTrail() {
+  paint.clearRect(0,0,width,height);
+  points.forEach((point,index)=>{point.x=xForCents(point.cents);strokePoint(point,points[index-1]);});
+  if(lastCrossCents!==null) els.cross.style.left=`clamp(11px, ${xForCents(lastCrossCents)*100}%, calc(100% - 11px))`;
+}
+function setDisplayScale(value) { displaySemitones=clamp(value,1,DISPLAY_SEMITONES);buildTicks();redrawTrail(); }
+function animateScaleTo(value) {
+  cancelAnimationFrame(scaleAnimation);const from=displaySemitones,start=performance.now(),duration=220;
+  const animate=now=>{const t=clamp((now-start)/duration,0,1),eased=1-(1-t)**3;setDisplayScale(from+(value-from)*eased);if(t<1)scaleAnimation=requestAnimationFrame(animate);else scaleAnimation=0;};
+  scaleAnimation=requestAnimationFrame(animate);
+}
+function toggleReferenceLock() { referenceLocked=!referenceLocked;referenceCandidate=null;buildTicks(); }
 function stabilize(pitch, now) {
   if (!pitch) { candidate=null; history=[]; return null; }
   if (lastInputAt===null || now-lastInputAt>120) { stableHz=0; stableAt=0; stableBoundary=false; candidate=null; history=[]; }
@@ -186,6 +203,7 @@ function detectPitch() {
   return {hz,boundary:selected===minLag || selected===maxLag || Math.abs(cents(hz,band.min))<=25 || Math.abs(cents(hz,band.max))<=25};
 }
 function recognizeReference(pitch, now) {
+  if (referenceLocked) { referenceCandidate=null; return false; }
   if (drag) { referenceCandidate=null; return false; }
   if (!pitch) { if (referenceCandidate && now-referenceCandidate.last>180) referenceCandidate=null; return false; }
   const midi=Math.round(hzToMidi(pitch.hz));
@@ -204,7 +222,7 @@ function strokePoint(point, previous) {
 function resize() {
   const rect=els.indicator.getBoundingClientRect();width=rect.width;height=rect.height;
   const ratio=Math.min(window.devicePixelRatio||1,2);els.canvas.width=Math.round(width*ratio);els.canvas.height=Math.round(height*ratio);paint.setTransform(ratio,0,0,ratio,0,0);
-  points.forEach((point,i)=>strokePoint(point,points[i-1]));
+  redrawTrail();
 }
 function updateMicrophoneStatus(now, rawRms=0, pitch=null) {
   if (now-lastHealthAt<100) return;
@@ -226,13 +244,13 @@ function processFrame(now) {
   updateMicrophoneStatus(now,rawRms,pitch);
   if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
   else if (pitch && volumeRms*analysisGain>=effectivePitchGate()) {
-    const error=cents(pitch.hz,midiToHz(targetMidi)),x=(Math.max(-DISPLAY_CENTS,Math.min(DISPLAY_CENTS,error))+DISPLAY_CENTS)/(2*DISPLAY_CENTS);
+    const error=cents(pitch.hz,midiToHz(targetMidi)),x=xForCents(error);
     const analysisDb=20*Math.log10(Math.max(volumeRms*analysisGain,1e-5)),minDb=Math.min(supportedMinDb(),MAX_SUPPORTED_DB-1),normalizedLevel=Math.max(0,Math.min(1,(analysisDb-minDb)/(MAX_SUPPORTED_DB-minDb))),y=(1-normalizedLevel)*(1-DISPLAY_BOTTOM_GAP);
-    els.cross.hidden=false;els.cross.style.left=`clamp(11px, ${x*100}%, calc(100% - 11px))`;els.cross.style.top=`clamp(11px, ${y*100}%, calc(100% - 11px))`;
+    els.cross.hidden=false;lastCrossCents=error;els.cross.style.left=`clamp(11px, ${x*100}%, calc(100% - 11px))`;els.cross.style.top=`clamp(11px, ${y*100}%, calc(100% - 11px))`;
     els.cross.style.color=Math.abs(error)<=15?'#a7f3d0':Math.abs(error)<=35?'#facc15':'#fb7185';
-    const isolated=pitch.boundary || Math.abs(error)>=DISPLAY_CENTS;
+    const isolated=pitch.boundary || Math.abs(error)>=displaySemitones*100;
     if (isolated) breakTrail=true;
-    if (now-lastPointAt>=70) {const point={x,y,isolated,breakBefore:breakTrail || now-lastPointAt>200};strokePoint(point,points.at(-1));points.push(point);lastPointAt=now;breakTrail=isolated;}
+    if (now-lastPointAt>=70) {const point={x,y,cents:error,isolated,breakBefore:breakTrail || now-lastPointAt>200};strokePoint(point,points.at(-1));points.push(point);lastPointAt=now;breakTrail=isolated;}
   } else {els.cross.hidden=true;breakTrail=true;}
   raf=requestAnimationFrame(frame);
 }
@@ -296,17 +314,40 @@ function stop() {
   micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
+els.note.addEventListener('click',toggleReferenceLock);
 els.indicator.addEventListener('pointerdown',event=>{
-  if(event.target.closest('button') || event.isPrimary===false || event.button!==0) return;
-  drag={id:event.pointerId,x:event.clientX,midi:targetMidi,width:Math.max(1,width)};els.indicator.setPointerCapture(event.pointerId);referenceCandidate=null;
+  if(event.target.closest('button') || (event.button!==undefined && event.button!==0)) return;
+  pointers.set(event.pointerId,{x:event.clientX,y:event.clientY,startX:event.clientX,startY:event.clientY,moved:false,pinched:false});
+  try {els.indicator.setPointerCapture(event.pointerId);} catch (_) {}
+  referenceCandidate=null;
+  if(pointers.size>=2) {
+    const pair=[...pointers.values()].slice(0,2),distance=Math.hypot(pair[0].x-pair[1].x,pair[0].y-pair[1].y);
+    pair.forEach(pointer=>pointer.pinched=true);drag=null;pinch={distance:Math.max(1,distance),scale:displaySemitones};cancelAnimationFrame(scaleAnimation);
+  } else {
+    drag={id:event.pointerId,x:event.clientX,midi:targetMidi,width:Math.max(1,width)};
+  }
 });
 els.indicator.addEventListener('pointermove',event=>{
-  if(!drag || drag.id!==event.pointerId) return;
-  const delta=event.clientX-drag.x;if(Math.abs(delta)<8) return;
-  setReference(drag.midi-delta/drag.width*(2*DISPLAY_SEMITONES));
+  const pointer=pointers.get(event.pointerId);if(!pointer)return;pointer.x=event.clientX;pointer.y=event.clientY;
+  if(pinch && pointers.size>=2) {
+    const pair=[...pointers.values()].slice(0,2),distance=Math.max(1,Math.hypot(pair[0].x-pair[1].x,pair[0].y-pair[1].y));
+    setDisplayScale(pinch.scale*pinch.distance/distance);return;
+  }
+  if(!drag || drag.id!==event.pointerId || pointer.pinched)return;
+  const delta=event.clientX-drag.x;if(Math.abs(delta)<8)return;pointer.moved=true;
+  setReference(drag.midi-delta/drag.width*(2*displaySemitones));
 });
-function endDrag(event) {if(drag?.id===event.pointerId) {drag=null;referenceCandidate=null;}}
-els.indicator.addEventListener('pointerup',endDrag);els.indicator.addEventListener('pointercancel',endDrag);els.indicator.addEventListener('lostpointercapture',endDrag);
+function endPointer(event) {
+  const pointer=pointers.get(event.pointerId);if(!pointer)return;
+  if(drag?.id===event.pointerId) drag=null;
+  pointers.delete(event.pointerId);referenceCandidate=null;
+  if(pinch && pointers.size<2) {pinch=null;const stop=SCALE_STOPS.reduce((best,scale)=>Math.abs(scale-displaySemitones)<Math.abs(best-displaySemitones)?scale:best,SCALE_STOPS[0]);animateScaleTo(stop);}
+  if(!pointer.moved && !pointer.pinched && !event.target.closest('button')) {
+    const now=performance.now(),close=lastTap && now-lastTap.time<350 && Math.hypot(event.clientX-lastTap.x,event.clientY-lastTap.y)<28;
+    if(close) {clearTrail(false);lastTap=null;} else lastTap={time:now,x:event.clientX,y:event.clientY};
+  }
+}
+els.indicator.addEventListener('pointerup',endPointer);els.indicator.addEventListener('pointercancel',endPointer);els.indicator.addEventListener('lostpointercapture',endPointer);
 els.indicator.addEventListener('keydown',event=>{if(event.target.closest('button')) return;if(event.key==='ArrowLeft' || event.key==='ArrowRight') {event.preventDefault();setReference(targetMidi+(event.key==='ArrowRight'?1:-1));}});
 els.start.addEventListener('click',start);els.stop.addEventListener('click',stop);
 window.addEventListener('pagehide',stop);new ResizeObserver(resize).observe(els.indicator);
