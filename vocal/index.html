@@ -26,9 +26,11 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-
 .tick:last-child::after { transform: translateX(-100%); }
 .tick.center::after { color: #a7f3d0; font-weight: 800; }
 .reference { position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left)); pointer-events: none; text-shadow: 0 2px 5px #11152daa; }
-#referenceNote { display: block; min-width: 0; min-height: 0; border: 0; border-radius: 0; padding: 0; background: transparent; color: inherit; font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; pointer-events: auto; touch-action: manipulation; text-shadow: inherit; }
+#referenceNote, #referenceHz, #referenceHint { display: block; min-width: 0; min-height: 0; border: 0; border-radius: 0; padding: 0; background: transparent; color: #eef2ff; pointer-events: auto; touch-action: manipulation; text-align: left; text-shadow: inherit; cursor: pointer; }
+#referenceNote { font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; }
 #referenceNote.locked::after { content: ' 🔒'; font-size: .35em; vertical-align: top; letter-spacing: 0; }
-#referenceHz { display: block; margin-top: 5px; font-size: clamp(20px, 4vw, 28px); font-variant-numeric: tabular-nums; }
+#referenceHz { margin-top: 5px; font: 400 clamp(20px, 4vw, 28px)/1.2 system-ui; font-variant-numeric: tabular-nums; }
+#referenceHint { margin-top: 5px; font: 400 12px/1.2 system-ui; white-space: nowrap; }
 .controls { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: calc(12px + env(safe-area-inset-right)); display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 155px; }
 button { min-width: 60px; min-height: 44px; border: 1px solid #ffffff35; border-radius: 10px; padding: 8px 12px; font: 700 15px system-ui; cursor: pointer; }
 #start { color: #11152d; background: #a7f3d0; }
@@ -46,20 +48,20 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
 #cross::before { height: 22px; width: 2px; }
 #cross::after { width: 22px; height: 2px; }
 [hidden] { display: none !important; }
-@media (orientation: landscape) { .reference { display: flex; align-items: baseline; gap: 12px; } #referenceHz { margin: 0; } }
+@media (orientation: landscape) { .reference { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; } #referenceHz { margin: 0; } #referenceHint { flex-basis: 100%; margin-top: -8px; } }
 </style>
 </head>
 <body>
 <main id="indicator" aria-label="Pitch and volume. Drag horizontally to change reference." tabindex="0">
   <div id="ticks" aria-hidden="true"></div><canvas id="trail" aria-hidden="true"></canvas>
-  <div class="reference"><button id="referenceNote" type="button" aria-pressed="false" title="Tap to lock the reference">C3</button><span id="referenceHz">130.8 Hz</span></div>
+  <div class="reference"><button id="referenceNote" type="button" aria-pressed="false" title="Click to lock scale">C3</button><button id="referenceHz" type="button" aria-pressed="false" title="Click to lock scale">130.8 Hz</button><button id="referenceHint" type="button" aria-pressed="false">Click to lock scale</button></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-<span id="version">Phone v10</span><div id="error" role="alert"></div>
+<span id="version">Phone v12</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 10;
+const PHONE_VERSION = 12;
 const DEFAULT_ANALYSIS_GAIN = 20; // Used until this device has a stored noise-floor estimate.
 const CALIBRATION_STORAGE_KEY = 'vocalTrainerMicCalibration.v1';
 const CALIBRATION_INTERVAL_MS = 1000, CALIBRATION_PERSIST_INTERVAL_MS = 60000;
@@ -69,7 +71,7 @@ const DISPLAY_SEMITONES = 7, SCALE_STOPS = [1,3,5,7];
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700, MAX_SUPPORTED_DB = -3, DISPLAY_BOTTOM_GAP = .10;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
 const $ = id => document.getElementById(id);
-const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
+const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), hint: $('referenceHint'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
 const paint = els.canvas.getContext('2d');
 let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
 let audioContext = null, stream = null, micSource = null, microphoneGain = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
@@ -147,8 +149,10 @@ function setReference(midi) {
 }
 function buildTicks() {
   els.note.textContent=noteName(targetMidi); els.note.setAttribute('aria-pressed',String(referenceLocked)); els.note.classList.toggle('locked',referenceLocked);
-  els.note.title=referenceLocked?'Tap to unlock the reference':'Tap to lock the reference';
   els.hz.textContent=midiToHz(targetMidi).toFixed(1)+' Hz';
+  const lockLabel=referenceLocked?'Click to unlock scale':'Click to lock scale';
+  for(const control of [els.note,els.hz,els.hint]) {control.setAttribute('aria-pressed',String(referenceLocked));control.title=lockLabel;}
+  els.hint.textContent=lockLabel;
   while(els.ticks.children.length<15) els.ticks.append(document.createElement('span'));
   for (let step=-DISPLAY_SEMITONES;step<=DISPLAY_SEMITONES;step++) {
     const midi=targetMidi+step, natural=[0,2,4,5,7,9,11].includes(((midi%12)+12)%12), tick=els.ticks.children[step+DISPLAY_SEMITONES];
@@ -281,7 +285,7 @@ async function start() {
     // Permission prompts/audio routing may have suspended the context since the initial gesture.
     await audioContext.resume();
     if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());if(newContext.state!=='closed') await newContext.close();return;}
-  volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;noiseSamples=[];lastCalibrationSampleAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;
+  volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;noiseSamples=[];lastCalibrationSampleAt=-Infinity;resetPitch();breakTrail=true;referenceCandidate=null;
     running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');await requestWakeLock();raf=requestAnimationFrame(frame);
     stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running && token===lifecycle) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
   } catch (error) {
@@ -314,7 +318,7 @@ function stop() {
   micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
-els.note.addEventListener('click',toggleReferenceLock);
+for(const control of [els.note,els.hz,els.hint]) control.addEventListener('click',toggleReferenceLock);
 els.indicator.addEventListener('pointerdown',event=>{
   if(event.target.closest('button') || (event.button!==undefined && event.button!==0)) return;
   pointers.set(event.pointerId,{x:event.clientX,y:event.clientY,startX:event.clientX,startY:event.clientY,moved:false,pinched:false});
