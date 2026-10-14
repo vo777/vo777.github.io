@@ -25,7 +25,7 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-
 .tick:first-child::after { transform: none; }
 .tick:last-child::after { transform: translateX(-100%); }
 .tick.center::after { color: #a7f3d0; font-weight: 800; }
-.tick.open-string::after { font-weight: 700; }
+.tick.open-string::after { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .reference { position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left)); pointer-events: none; text-shadow: 0 2px 5px #11152daa; }
 #referenceNote, #referenceHz, #referenceHint { display: block; min-width: 0; min-height: 0; border: 0; border-radius: 0; padding: 0; background: transparent; color: #eef2ff; pointer-events: auto; touch-action: manipulation; text-align: left; text-shadow: inherit; cursor: pointer; }
 #referenceNote { font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; }
@@ -58,11 +58,11 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><button id="referenceNote" type="button" aria-pressed="false" title="Click to lock scale">C3</button><button id="referenceHz" type="button" aria-pressed="false" title="Click to lock scale">130.8 Hz</button><button id="referenceHint" type="button" aria-pressed="false">Click to lock scale</button></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-<span id="version">Phone v13</span><div id="error" role="alert"></div>
+<span id="version">Phone v14</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 13;
+const PHONE_VERSION = 14;
 const DEFAULT_ANALYSIS_GAIN = 20; // Used until this device has a stored noise-floor estimate.
 const CALIBRATION_STORAGE_KEY = 'vocalTrainerMicCalibration.v1';
 const CALIBRATION_INTERVAL_MS = 1000, CALIBRATION_PERSIST_INTERVAL_MS = 60000;

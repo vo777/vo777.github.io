@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocal-trainer-phone-v13';
+const CACHE_NAME = 'vocal-trainer-phone-v14';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './sw.js'];
 
 self.addEventListener('install', event => {
