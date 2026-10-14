@@ -1,0 +1,20 @@
+{
+  "name": "Vocal Trainer",
+  "short_name": "Vocal Trainer",
+  "description": "Full-screen pitch and volume trainer",
+  "lang": "en-US",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#11152d",
+  "theme_color": "#11152d",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

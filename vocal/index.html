@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#11152d">
+<meta name="application-name" content="Vocal Trainer">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
 <title>Vocal Trainer Phone</title>
 <style>
 :root { font-family: system-ui, sans-serif; color: #eef2ff; background: #11152d; color-scheme: dark; }
 * { box-sizing: border-box; }
-html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; }
 #indicator { position: fixed; inset: 0; height: 100dvh; overflow: hidden; touch-action: none; user-select: none; background: linear-gradient(to top, #8d7832 0%, #7b843a 25%, #527845 50%, #697544 76%, #813e3b 100%); }
 #ticks, #trail { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .tick { position: absolute; top: 0; bottom: 0; width: 1px; }
@@ -48,11 +54,11 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-  <span id="version">Phone v5</span><div id="error" role="alert"></div>
+  <span id="version">Phone v6</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 5;
+const PHONE_VERSION = 6;
 const MIC_INPUT_GAIN = 20; // +26 dB for analysis/display; the diagnostic meter remains raw.
 const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700;
@@ -66,6 +72,7 @@ let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stable
 let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
 let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
 let filteredRms = 0, lastHealthAt = -Infinity;
+let wakeLock = null;
 const midiToHz = midi => 440 * 2 ** ((midi - 69) / 12);
 const hzToMidi = hz => 69 + 12 * Math.log2(hz / 440);
 const cents = (a,b) => 1200 * Math.log2(a / b);
@@ -185,7 +192,7 @@ function frame(now) {
 async function start() {
   if (starting) return;
   if (running) {
-    try {await audioContext.resume();lastHealthAt=-Infinity;} catch(error) {els.error.textContent=error.message;}
+    try {await audioContext.resume();await requestWakeLock();lastHealthAt=-Infinity;} catch(error) {els.error.textContent=error.message;}
     return;
   }
   starting=true;const token=++lifecycle;els.start.disabled=true;els.stop.disabled=false;els.error.textContent='';els.status.textContent='Starting…';
@@ -207,7 +214,7 @@ async function start() {
     await audioContext.resume();
     if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());if(newContext.state!=='closed') await newContext.close();return;}
     volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
-    running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');raf=requestAnimationFrame(frame);
+    running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');await requestWakeLock();raf=requestAnimationFrame(frame);
     stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running && token===lifecycle) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
   } catch (error) {
     newStream?.getTracks().forEach(t=>t.stop());if(newContext && newContext.state!=='closed') await newContext.close().catch(()=>{});
@@ -215,8 +222,27 @@ async function start() {
     stop();els.error.textContent=error.name==='NotAllowedError'?'Allow microphone access, then press Start.':error.message;
   }
 }
+async function requestWakeLock() {
+  if (!running || document.hidden || !('wakeLock' in navigator)) return;
+  if (wakeLock && !wakeLock.released) return;
+  try {
+    const lock = await navigator.wakeLock.request('screen');
+    wakeLock = lock;
+    lock.addEventListener('release', () => {
+      if (wakeLock === lock) wakeLock = null;
+      if (running && !document.hidden) setTimeout(() => requestWakeLock(), 0);
+    }, {once: true});
+  } catch (_) {
+    wakeLock = null;
+  }
+}
+function releaseWakeLock() {
+  const lock = wakeLock;
+  wakeLock = null;
+  lock?.release().catch(() => {});
+}
 function stop() {
-  ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
+  ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);releaseWakeLock();stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
   micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
@@ -235,6 +261,7 @@ els.indicator.addEventListener('keydown',event=>{if(event.target.closest('button
 els.start.addEventListener('click',start);els.stop.addEventListener('click',stop);
 window.addEventListener('pagehide',stop);new ResizeObserver(resize).observe(els.indicator);
 document.addEventListener('visibilitychange',()=>{if(document.hidden && (running||starting)) stop();});
+if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{});
 buildTicks();resize();
 </script>
 </body>
