@@ -54,14 +54,18 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-  <span id="version">Phone v6</span><div id="error" role="alert"></div>
+<span id="version">Phone v7</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 6;
-const MIC_INPUT_GAIN = 20; // +26 dB for analysis/display; the diagnostic meter remains raw.
+const PHONE_VERSION = 7;
+const DEFAULT_ANALYSIS_GAIN = 20; // Used until this device has a stored noise-floor estimate.
+const CALIBRATION_STORAGE_KEY = 'vocalTrainerMicCalibration.v1';
+const CALIBRATION_INTERVAL_MS = 1000, CALIBRATION_PERSIST_INTERVAL_MS = 60000;
+const QUIET_SAMPLE_LIMIT = 60, VOICE_MARGIN_DB = 8, CALIBRATION_TARGET_DB = -30;
+const MIN_ANALYSIS_GAIN_DB = -12, MAX_ANALYSIS_GAIN_DB = 36;
 const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
-const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700;
+const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700, MAX_SUPPORTED_DB = -3, DISPLAY_BOTTOM_GAP = .10;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
 const $ = id => document.getElementById(id);
 const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
@@ -72,12 +76,67 @@ let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stable
 let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
 let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
 let filteredRms = 0, lastHealthAt = -Infinity;
+let noiseFloorDb = null, analysisGain = DEFAULT_ANALYSIS_GAIN, analysisGainDb = 20 * Math.log10(DEFAULT_ANALYSIS_GAIN);
+let noiseSamples = [], lastCalibrationSampleAt = -Infinity, lastCalibrationPersistAt = -Infinity;
 let wakeLock = null;
 const midiToHz = midi => 440 * 2 ** ((midi - 69) / 12);
 const hzToMidi = hz => 69 + 12 * Math.log2(hz / 440);
 const cents = (a,b) => 1200 * Math.log2(a / b);
 const median = values => { const s = [...values].sort((a,b) => a-b), m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; };
 const noteName = midi => NOTE_NAMES[((midi % 12)+12)%12] + (Math.floor(midi/12)-1);
+const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
+function loadCalibration() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CALIBRATION_STORAGE_KEY) || 'null');
+    if (Number.isFinite(saved?.noiseFloorDb)) { noiseFloorDb = clamp(saved.noiseFloorDb, -100, -20); updateAnalysisGain(); }
+  } catch (_) {}
+}
+function updateAnalysisGain() {
+  if (noiseFloorDb === null) { analysisGain = DEFAULT_ANALYSIS_GAIN; analysisGainDb = 20 * Math.log10(analysisGain); }
+  else {
+    analysisGainDb = clamp(CALIBRATION_TARGET_DB - (noiseFloorDb + VOICE_MARGIN_DB), MIN_ANALYSIS_GAIN_DB, MAX_ANALYSIS_GAIN_DB);
+    analysisGain = 10 ** (analysisGainDb / 20);
+  }
+  if (microphoneGain) {
+    const now = audioContext?.currentTime || 0;
+    if (microphoneGain.gain.setTargetAtTime) microphoneGain.gain.setTargetAtTime(analysisGain, now, .08);
+    else microphoneGain.gain.value = analysisGain;
+  }
+}
+function effectivePitchGate() {
+  if (noiseFloorDb === null) return PITCH_RMS_GATE;
+  return Math.max(PITCH_RMS_GATE, 10 ** ((noiseFloorDb + VOICE_MARGIN_DB) / 20) * analysisGain);
+}
+function supportedMinDb() { return 20 * Math.log10(Math.max(effectivePitchGate(), 1e-5)); }
+function releaseSilenceRawRms() {
+  // Reference release is measured before analysis gain. The floor margin lets a
+  // normal device background pass even when adaptive gain is large.
+  return noiseFloorDb === null ? PITCH_RMS_GATE / DEFAULT_ANALYSIS_GAIN : 10 ** ((noiseFloorDb + 3) / 20);
+}
+function percentile(values, fraction) {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a,b) => a-b);
+  return sorted[Math.floor((sorted.length - 1) * fraction)];
+}
+function persistCalibration(force = false) {
+  if (noiseFloorDb === null || (!force && performance.now() - lastCalibrationPersistAt < CALIBRATION_PERSIST_INTERVAL_MS)) return;
+  try { localStorage.setItem(CALIBRATION_STORAGE_KEY, JSON.stringify({ noiseFloorDb, updatedAt: new Date().toISOString() })); lastCalibrationPersistAt = performance.now(); } catch (_) {}
+}
+function updateNoiseCalibration(now, rawRms, pitch) {
+  if (now - lastCalibrationSampleAt < CALIBRATION_INTERVAL_MS) return;
+  lastCalibrationSampleAt = now;
+  // A detected pitch is deliberately excluded: only quiet, non-tonal moments may define the floor.
+  if (pitch || rawRms <= 1e-8) return;
+  const db = clamp(20 * Math.log10(rawRms), -100, -20);
+  noiseSamples.push(db); if (noiseSamples.length > QUIET_SAMPLE_LIMIT) noiseSamples.shift();
+  if (noiseSamples.length < 3) return;
+  const candidate = percentile(noiseSamples, .10);
+  noiseFloorDb = noiseFloorDb === null ? candidate : noiseFloorDb * .8 + candidate * .2;
+  updateAnalysisGain(); persistCalibration(false);
+}
+function calibrationLabel() {
+  return noiseFloorDb === null ? 'Noise calibrating' : `Noise ${noiseFloorDb.toFixed(0)} dB · Gain ${analysisGainDb >= 0 ? '+' : ''}${analysisGainDb.toFixed(0)} dB`;
+}
 function range() { return { min: Math.max(55, midiToHz(targetMidi-11)), max: Math.min(700, midiToHz(targetMidi+11)) }; }
 function resetPitch() { stableHz=0; stableAt=0; stableBoundary=false; lastInputAt=null; candidate=null; history=[]; }
 function clearTrail() { points=[]; lastPointAt=0; breakTrail=true; paint.clearRect(0,0,width,height); els.cross.hidden=true; }
@@ -116,7 +175,7 @@ function detectPitch() {
   pitchAnalyser.getFloatTimeDomainData(pitchBuffer);
   let power=0; for (const value of pitchBuffer) power+=value*value;
   filteredRms=Math.sqrt(power/pitchBuffer.length);
-  if (filteredRms<PITCH_RMS_GATE) return null;
+  if (filteredRms<effectivePitchGate() || 20*Math.log10(Math.max(filteredRms,1e-5))>MAX_SUPPORTED_DB) return null;
   const band=range(), rate=audioContext.sampleRate;
   const minLag=Math.max(2,Math.ceil(rate/band.max)), maxLag=Math.min(pitchBuffer.length/2,Math.floor(rate/band.min));
   if (minLag>maxLag) return null;
@@ -159,8 +218,8 @@ function updateMicrophoneStatus(now, rawRms=0, pitch=null) {
   const track=stream?.getAudioTracks()[0], active=audioContext?.state==='running';
   els.status.textContent=active?'Listening':'Audio paused';els.start.disabled=active;
   const db=rawRms>1e-8?(20*Math.log10(rawRms)).toFixed(0)+' dB':'−∞ dB';
-  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<PITCH_RMS_GATE?(rawRms*MIC_INPUT_GAIN<PITCH_RMS_GATE?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
-  els.micLevel.textContent=`Mic ${db} · ${detail}`;
+  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<effectivePitchGate()?(rawRms*analysisGain<effectivePitchGate()?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
+  els.micLevel.textContent=`Mic ${db} · ${calibrationLabel()} · ${detail}`;
 }
 function processFrame(now) {
   if (!running) return;
@@ -169,15 +228,16 @@ function processFrame(now) {
   for (const value of volumeBuffer) power+=value*value;
   const rawRms=Math.sqrt(power/volumeBuffer.length);volumeRms=volumeRms?volumeRms*.78+rawRms*.22:rawRms;
   const pitch=stabilize(detectPitch(),now);
+  updateNoiseCalibration(now,rawRms,pitch);
   updateMicrophoneStatus(now,rawRms,pitch);
   if (awaitingRelease) {
-    if (rawRms*MIC_INPUT_GAIN<.008) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
+    if (rawRms<releaseSilenceRawRms()) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
     else quietSince=null;
     els.cross.hidden=true;breakTrail=true;
   } else if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
-  else if (pitch && volumeRms*MIC_INPUT_GAIN>=PITCH_RMS_GATE) {
+  else if (pitch && volumeRms*analysisGain>=effectivePitchGate()) {
     const error=cents(pitch.hz,midiToHz(targetMidi)),x=(Math.max(-DISPLAY_CENTS,Math.min(DISPLAY_CENTS,error))+DISPLAY_CENTS)/(2*DISPLAY_CENTS);
-    const level=Math.max(0,Math.min(20,(20*Math.log10(Math.max(volumeRms*MIC_INPUT_GAIN,1e-5))+60)/2.4)),y=1-level/20;
+    const analysisDb=20*Math.log10(Math.max(volumeRms*analysisGain,1e-5)),minDb=Math.min(supportedMinDb(),MAX_SUPPORTED_DB-1),normalizedLevel=Math.max(0,Math.min(1,(analysisDb-minDb)/(MAX_SUPPORTED_DB-minDb))),y=(1-normalizedLevel)*(1-DISPLAY_BOTTOM_GAP);
     els.cross.hidden=false;els.cross.style.left=`clamp(11px, ${x*100}%, calc(100% - 11px))`;els.cross.style.top=`clamp(11px, ${y*100}%, calc(100% - 11px))`;
     els.cross.style.color=Math.abs(error)<=15?'#a7f3d0':Math.abs(error)<=35?'#facc15':'#fb7185';
     const isolated=pitch.boundary || Math.abs(error)>=DISPLAY_CENTS;
@@ -206,14 +266,14 @@ async function start() {
     analyser=audioContext.createAnalyser();analyser.fftSize=4096;micSource.connect(analyser);
     highpass=audioContext.createBiquadFilter();highpass.type='highpass';highpass.Q.value=Math.SQRT1_2;
     lowpass=audioContext.createBiquadFilter();lowpass.type='lowpass';lowpass.Q.value=Math.SQRT1_2;
-    microphoneGain=audioContext.createGain();microphoneGain.gain.value=MIC_INPUT_GAIN;
+    microphoneGain=audioContext.createGain();microphoneGain.gain.value=analysisGain;
     pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;micSource.connect(microphoneGain).connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
     // Explicitly pull both analyser branches while keeping microphone playback inaudible.
     silentOutput=audioContext.createGain();silentOutput.gain.value=0;analyser.connect(silentOutput);pitchAnalyser.connect(silentOutput);silentOutput.connect(audioContext.destination);
     // Permission prompts/audio routing may have suspended the context since the initial gesture.
     await audioContext.resume();
     if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());if(newContext.state!=='closed') await newContext.close();return;}
-    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
+    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;noiseSamples=[];lastCalibrationSampleAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
     running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');await requestWakeLock();raf=requestAnimationFrame(frame);
     stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running && token===lifecycle) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
   } catch (error) {
@@ -242,7 +302,7 @@ function releaseWakeLock() {
   lock?.release().catch(() => {});
 }
 function stop() {
-  ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);releaseWakeLock();stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
+  persistCalibration(true);++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);releaseWakeLock();stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
   micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
@@ -262,7 +322,7 @@ els.start.addEventListener('click',start);els.stop.addEventListener('click',stop
 window.addEventListener('pagehide',stop);new ResizeObserver(resize).observe(els.indicator);
 document.addEventListener('visibilitychange',()=>{if(document.hidden && (running||starting)) stop();});
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{});
-buildTicks();resize();
+loadCalibration();buildTicks();resize();
 </script>
 </body>
 </html>
