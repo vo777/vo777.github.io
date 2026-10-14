@@ -48,11 +48,12 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-  <span id="version">Phone v4</span><div id="error" role="alert"></div>
+  <span id="version">Phone v5</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 4;
+const PHONE_VERSION = 5;
+const MIC_INPUT_GAIN = 20; // +26 dB for analysis/display; the diagnostic meter remains raw.
 const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
@@ -60,7 +61,7 @@ const $ = id => document.getElementById(id);
 const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
 const paint = els.canvas.getContext('2d');
 let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
-let audioContext = null, stream = null, micSource = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
+let audioContext = null, stream = null, micSource = null, microphoneGain = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
 let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stableBoundary = false, lastInputAt = null, candidate = null, history = [];
 let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
 let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
@@ -151,7 +152,7 @@ function updateMicrophoneStatus(now, rawRms=0, pitch=null) {
   const track=stream?.getAudioTracks()[0], active=audioContext?.state==='running';
   els.status.textContent=active?'Listening':'Audio paused';els.start.disabled=active;
   const db=rawRms>1e-8?(20*Math.log10(rawRms)).toFixed(0)+' dB':'−∞ dB';
-  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<PITCH_RMS_GATE?(rawRms<PITCH_RMS_GATE?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
+  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<PITCH_RMS_GATE?(rawRms*MIC_INPUT_GAIN<PITCH_RMS_GATE?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
   els.micLevel.textContent=`Mic ${db} · ${detail}`;
 }
 function processFrame(now) {
@@ -163,13 +164,13 @@ function processFrame(now) {
   const pitch=stabilize(detectPitch(),now);
   updateMicrophoneStatus(now,rawRms,pitch);
   if (awaitingRelease) {
-    if (rawRms<.008) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
+    if (rawRms*MIC_INPUT_GAIN<.008) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
     else quietSince=null;
     els.cross.hidden=true;breakTrail=true;
   } else if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
-  else if (pitch && volumeRms>=PITCH_RMS_GATE) {
+  else if (pitch && volumeRms*MIC_INPUT_GAIN>=PITCH_RMS_GATE) {
     const error=cents(pitch.hz,midiToHz(targetMidi)),x=(Math.max(-DISPLAY_CENTS,Math.min(DISPLAY_CENTS,error))+DISPLAY_CENTS)/(2*DISPLAY_CENTS);
-    const level=Math.max(0,Math.min(20,(20*Math.log10(Math.max(volumeRms,1e-5))+60)/2.4)),y=1-level/20;
+    const level=Math.max(0,Math.min(20,(20*Math.log10(Math.max(volumeRms*MIC_INPUT_GAIN,1e-5))+60)/2.4)),y=1-level/20;
     els.cross.hidden=false;els.cross.style.left=`clamp(11px, ${x*100}%, calc(100% - 11px))`;els.cross.style.top=`clamp(11px, ${y*100}%, calc(100% - 11px))`;
     els.cross.style.color=Math.abs(error)<=15?'#a7f3d0':Math.abs(error)<=35?'#facc15':'#fb7185';
     const isolated=pitch.boundary || Math.abs(error)>=DISPLAY_CENTS;
@@ -198,7 +199,8 @@ async function start() {
     analyser=audioContext.createAnalyser();analyser.fftSize=4096;micSource.connect(analyser);
     highpass=audioContext.createBiquadFilter();highpass.type='highpass';highpass.Q.value=Math.SQRT1_2;
     lowpass=audioContext.createBiquadFilter();lowpass.type='lowpass';lowpass.Q.value=Math.SQRT1_2;
-    pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;micSource.connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
+    microphoneGain=audioContext.createGain();microphoneGain.gain.value=MIC_INPUT_GAIN;
+    pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;micSource.connect(microphoneGain).connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
     // Explicitly pull both analyser branches while keeping microphone playback inaudible.
     silentOutput=audioContext.createGain();silentOutput.gain.value=0;analyser.connect(silentOutput);pitchAnalyser.connect(silentOutput);silentOutput.connect(audioContext.destination);
     // Permission prompts/audio routing may have suspended the context since the initial gesture.
@@ -215,7 +217,7 @@ async function start() {
 }
 function stop() {
   ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
-  micSource?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
+  micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
 els.indicator.addEventListener('pointerdown',event=>{
