@@ -54,7 +54,7 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-<span id="version">Phone v7</span><div id="error" role="alert"></div>
+<span id="version">Phone v9</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
@@ -73,7 +73,7 @@ const paint = els.canvas.getContext('2d');
 let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
 let audioContext = null, stream = null, micSource = null, microphoneGain = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
 let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stableBoundary = false, lastInputAt = null, candidate = null, history = [];
-let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
+let referenceCandidate = null, drag = null;
 let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
 let filteredRms = 0, lastHealthAt = -Infinity;
 let noiseFloorDb = null, analysisGain = DEFAULT_ANALYSIS_GAIN, analysisGainDb = 20 * Math.log10(DEFAULT_ANALYSIS_GAIN);
@@ -108,11 +108,6 @@ function effectivePitchGate() {
   return Math.max(PITCH_RMS_GATE, 10 ** ((noiseFloorDb + VOICE_MARGIN_DB) / 20) * analysisGain);
 }
 function supportedMinDb() { return 20 * Math.log10(Math.max(effectivePitchGate(), 1e-5)); }
-function releaseSilenceRawRms() {
-  // Reference release is measured before analysis gain. The floor margin lets a
-  // normal device background pass even when adaptive gain is large.
-  return noiseFloorDb === null ? PITCH_RMS_GATE / DEFAULT_ANALYSIS_GAIN : 10 ** ((noiseFloorDb + 3) / 20);
-}
 function percentile(values, fraction) {
   if (!values.length) return null;
   const sorted = [...values].sort((a,b) => a-b);
@@ -141,11 +136,10 @@ function range() { return { min: Math.max(55, midiToHz(targetMidi-11)), max: Mat
 function resetPitch() { stableHz=0; stableAt=0; stableBoundary=false; lastInputAt=null; candidate=null; history=[]; }
 function clearTrail() { points=[]; lastPointAt=0; breakTrail=true; paint.clearRect(0,0,width,height); els.cross.hidden=true; }
 function updateBand() { if (!audioContext || !highpass) return; const band=range(); highpass.frequency.setTargetAtTime(band.min,audioContext.currentTime,.03); lowpass.frequency.setTargetAtTime(band.max,audioContext.currentTime,.03); }
-function setReference(midi, source='manual') {
+function setReference(midi) {
   midi=Math.max(33,Math.min(77,Math.round(midi)));
   if (midi===targetMidi) return false;
   targetMidi=midi; referenceCandidate=null; resetPitch(); clearTrail(); buildTicks(); updateBand();
-  awaitingRelease=running && source==='audio'; quietSince=null;
   return true;
 }
 function buildTicks() {
@@ -198,7 +192,7 @@ function recognizeReference(pitch, now) {
   if (midi===targetMidi) { referenceCandidate=null; return false; }
   if (!referenceCandidate || now-referenceCandidate.last>180 || Math.abs(cents(pitch.hz,referenceCandidate.anchor))>35) referenceCandidate={anchor:pitch.hz,since:now,last:now,readings:[pitch.hz]};
   else {referenceCandidate.last=now;referenceCandidate.readings.push(pitch.hz);}
-  if (now-referenceCandidate.since>=1500) return setReference(hzToMidi(median(referenceCandidate.readings)),'audio');
+  if (now-referenceCandidate.since>=1500) return setReference(hzToMidi(median(referenceCandidate.readings)));
   return false;
 }
 function strokePoint(point, previous) {
@@ -218,7 +212,7 @@ function updateMicrophoneStatus(now, rawRms=0, pitch=null) {
   const track=stream?.getAudioTracks()[0], active=audioContext?.state==='running';
   els.status.textContent=active?'Listening':'Audio paused';els.start.disabled=active;
   const db=rawRms>1e-8?(20*Math.log10(rawRms)).toFixed(0)+' dB':'−∞ dB';
-  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<effectivePitchGate()?(rawRms*analysisGain<effectivePitchGate()?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
+  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':filteredRms<effectivePitchGate()?(rawRms*analysisGain<effectivePitchGate()?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
   els.micLevel.textContent=`Mic ${db} · ${calibrationLabel()} · ${detail}`;
 }
 function processFrame(now) {
@@ -230,11 +224,7 @@ function processFrame(now) {
   const pitch=stabilize(detectPitch(),now);
   updateNoiseCalibration(now,rawRms,pitch);
   updateMicrophoneStatus(now,rawRms,pitch);
-  if (awaitingRelease) {
-    if (rawRms<releaseSilenceRawRms()) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
-    else quietSince=null;
-    els.cross.hidden=true;breakTrail=true;
-  } else if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
+  if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
   else if (pitch && volumeRms*analysisGain>=effectivePitchGate()) {
     const error=cents(pitch.hz,midiToHz(targetMidi)),x=(Math.max(-DISPLAY_CENTS,Math.min(DISPLAY_CENTS,error))+DISPLAY_CENTS)/(2*DISPLAY_CENTS);
     const analysisDb=20*Math.log10(Math.max(volumeRms*analysisGain,1e-5)),minDb=Math.min(supportedMinDb(),MAX_SUPPORTED_DB-1),normalizedLevel=Math.max(0,Math.min(1,(analysisDb-minDb)/(MAX_SUPPORTED_DB-minDb))),y=(1-normalizedLevel)*(1-DISPLAY_BOTTOM_GAP);
@@ -273,7 +263,7 @@ async function start() {
     // Permission prompts/audio routing may have suspended the context since the initial gesture.
     await audioContext.resume();
     if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());if(newContext.state!=='closed') await newContext.close();return;}
-    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;noiseSamples=[];lastCalibrationSampleAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
+  volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;noiseSamples=[];lastCalibrationSampleAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;
     running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');await requestWakeLock();raf=requestAnimationFrame(frame);
     stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running && token===lifecycle) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
   } catch (error) {
@@ -303,7 +293,7 @@ function releaseWakeLock() {
 }
 function stop() {
   persistCalibration(true);++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);releaseWakeLock();stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
-  micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
+  micSource?.disconnect();microphoneGain?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;microphoneGain=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
 els.indicator.addEventListener('pointerdown',event=>{
