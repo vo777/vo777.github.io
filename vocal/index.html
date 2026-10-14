@@ -25,6 +25,7 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-
 .tick:first-child::after { transform: none; }
 .tick:last-child::after { transform: translateX(-100%); }
 .tick.center::after { color: #a7f3d0; font-weight: 800; }
+.tick.open-string::after { font-weight: 700; }
 .reference { position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left)); pointer-events: none; text-shadow: 0 2px 5px #11152daa; }
 #referenceNote, #referenceHz, #referenceHint { display: block; min-width: 0; min-height: 0; border: 0; border-radius: 0; padding: 0; background: transparent; color: #eef2ff; pointer-events: auto; touch-action: manipulation; text-align: left; text-shadow: inherit; cursor: pointer; }
 #referenceNote { font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; }
@@ -57,11 +58,11 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div class="reference"><button id="referenceNote" type="button" aria-pressed="false" title="Click to lock scale">C3</button><button id="referenceHz" type="button" aria-pressed="false" title="Click to lock scale">130.8 Hz</button><button id="referenceHint" type="button" aria-pressed="false">Click to lock scale</button></div>
   <div id="cross" hidden aria-hidden="true"></div>
   <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
-<span id="version">Phone v12</span><div id="error" role="alert"></div>
+<span id="version">Phone v13</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 12;
+const PHONE_VERSION = 13;
 const DEFAULT_ANALYSIS_GAIN = 20; // Used until this device has a stored noise-floor estimate.
 const CALIBRATION_STORAGE_KEY = 'vocalTrainerMicCalibration.v1';
 const CALIBRATION_INTERVAL_MS = 1000, CALIBRATION_PERSIST_INTERVAL_MS = 60000;
@@ -70,6 +71,7 @@ const MIN_ANALYSIS_GAIN_DB = -12, MAX_ANALYSIS_GAIN_DB = 36;
 const DISPLAY_SEMITONES = 7, SCALE_STOPS = [1,3,5,7];
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700, MAX_SUPPORTED_DB = -3, DISPLAY_BOTTOM_GAP = .10;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
+const OPEN_GUITAR_STRING_MIDI = new Set([40,45,50,55,59,64]); // E2, A2, D3, G3, B3, E4
 const $ = id => document.getElementById(id);
 const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), hint: $('referenceHint'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
 const paint = els.canvas.getContext('2d');
@@ -156,7 +158,7 @@ function buildTicks() {
   while(els.ticks.children.length<15) els.ticks.append(document.createElement('span'));
   for (let step=-DISPLAY_SEMITONES;step<=DISPLAY_SEMITONES;step++) {
     const midi=targetMidi+step, natural=[0,2,4,5,7,9,11].includes(((midi%12)+12)%12), tick=els.ticks.children[step+DISPLAY_SEMITONES];
-    tick.className='tick'+(natural?' natural':'')+(step===0?' center':''); tick.style.left=((step+displaySemitones)/(2*displaySemitones)*100)+'%'; tick.style.opacity=Math.abs(step)<=displaySemitones?1:0;
+    tick.className='tick'+(natural?' natural':'')+(OPEN_GUITAR_STRING_MIDI.has(midi)?' open-string':'')+(step===0?' center':''); tick.style.left=((step+displaySemitones)/(2*displaySemitones)*100)+'%'; tick.style.opacity=Math.abs(step)<=displaySemitones?1:0;
     if (natural) tick.dataset.label=noteName(midi); else delete tick.dataset.label;
   }
 }
