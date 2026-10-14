@@ -30,6 +30,7 @@ button:disabled { opacity: .45; cursor: default; }
 button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
 #status { width: 100%; text-align: right; font-size: 12px; text-shadow: 0 1px 3px #11152d; }
 #status.listening::before { content: '● '; color: #ff5266; }
+#micLevel { width: 100%; text-align: right; font-size: 10px; font-variant-numeric: tabular-nums; text-shadow: 0 1px 3px #11152d; }
 #version { position: absolute; right: calc(12px + env(safe-area-inset-right)); bottom: calc(38px + env(safe-area-inset-bottom)); font-size: 11px; color: #ffffffb0; text-shadow: 0 1px 3px #11152d; pointer-events: none; }
 #error { position: absolute; top: 110px; left: 12px; right: 12px; padding: 12px; background: #11152dee; border-radius: 10px; font-size: 14px; }
 #error:empty { display: none; }
@@ -46,23 +47,24 @@ button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
   <div id="ticks" aria-hidden="true"></div><canvas id="trail" aria-hidden="true"></canvas>
   <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
   <div id="cross" hidden aria-hidden="true"></div>
-  <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span></div>
-  <span id="version">Phone v3</span><div id="error" role="alert"></div>
+  <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span><span id="micLevel" hidden></span></div>
+  <span id="version">Phone v4</span><div id="error" role="alert"></div>
 </main>
 <script>
 'use strict';
-const PHONE_VERSION = 3;
+const PHONE_VERSION = 4;
 const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
 const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700;
 const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
 const $ = id => document.getElementById(id);
-const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), error: $('error') };
+const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), micLevel: $('micLevel'), error: $('error') };
 const paint = els.canvas.getContext('2d');
 let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
-let audioContext = null, stream = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
+let audioContext = null, stream = null, micSource = null, silentOutput = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
 let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stableBoundary = false, lastInputAt = null, candidate = null, history = [];
 let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
 let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
+let filteredRms = 0, lastHealthAt = -Infinity;
 const midiToHz = midi => 440 * 2 ** ((midi - 69) / 12);
 const hzToMidi = hz => 69 + 12 * Math.log2(hz / 440);
 const cents = (a,b) => 1200 * Math.log2(a / b);
@@ -105,7 +107,8 @@ function stabilize(pitch, now) {
 function detectPitch() {
   pitchAnalyser.getFloatTimeDomainData(pitchBuffer);
   let power=0; for (const value of pitchBuffer) power+=value*value;
-  if (Math.sqrt(power/pitchBuffer.length)<PITCH_RMS_GATE) return null;
+  filteredRms=Math.sqrt(power/pitchBuffer.length);
+  if (filteredRms<PITCH_RMS_GATE) return null;
   const band=range(), rate=audioContext.sampleRate;
   const minLag=Math.max(2,Math.ceil(rate/band.max)), maxLag=Math.min(pitchBuffer.length/2,Math.floor(rate/band.min));
   if (minLag>maxLag) return null;
@@ -142,12 +145,23 @@ function resize() {
   const ratio=Math.min(window.devicePixelRatio||1,2);els.canvas.width=Math.round(width*ratio);els.canvas.height=Math.round(height*ratio);paint.setTransform(ratio,0,0,ratio,0,0);
   points.forEach((point,i)=>strokePoint(point,points[i-1]));
 }
-function frame(now) {
+function updateMicrophoneStatus(now, rawRms=0, pitch=null) {
+  if (now-lastHealthAt<100) return;
+  lastHealthAt=now;els.micLevel.hidden=false;
+  const track=stream?.getAudioTracks()[0], active=audioContext?.state==='running';
+  els.status.textContent=active?'Listening':'Audio paused';els.start.disabled=active;
+  const db=rawRms>1e-8?(20*Math.log10(rawRms)).toFixed(0)+' dB':'−∞ dB';
+  const detail=!active?'Tap Start to resume':track?.muted?'Mic muted':rawRms<=1e-8?'No input':awaitingRelease?'Release note':filteredRms<PITCH_RMS_GATE?(rawRms<PITCH_RMS_GATE?'Too quiet':'No pitch in range'):pitch?'Pitch OK':'No stable pitch';
+  els.micLevel.textContent=`Mic ${db} · ${detail}`;
+}
+function processFrame(now) {
   if (!running) return;
+  if (audioContext.state!=='running') {els.cross.hidden=true;breakTrail=true;updateMicrophoneStatus(now);raf=requestAnimationFrame(frame);return;}
   analyser.getFloatTimeDomainData(volumeBuffer);let power=0;
   for (const value of volumeBuffer) power+=value*value;
   const rawRms=Math.sqrt(power/volumeBuffer.length);volumeRms=volumeRms?volumeRms*.78+rawRms*.22:rawRms;
   const pitch=stabilize(detectPitch(),now);
+  updateMicrophoneStatus(now,rawRms,pitch);
   if (awaitingRelease) {
     if (rawRms<.008) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
     else quietSince=null;
@@ -164,23 +178,35 @@ function frame(now) {
   } else {els.cross.hidden=true;breakTrail=true;}
   raf=requestAnimationFrame(frame);
 }
+function frame(now) {
+  try {processFrame(now);} catch (error) {stop();els.error.textContent=`Audio error: ${error.message}. Press Start to retry.`;}
+}
 async function start() {
-  if (running || starting) return;
+  if (starting) return;
+  if (running) {
+    try {await audioContext.resume();lastHealthAt=-Infinity;} catch(error) {els.error.textContent=error.message;}
+    return;
+  }
   starting=true;const token=++lifecycle;els.start.disabled=true;els.stop.disabled=false;els.error.textContent='';els.status.textContent='Starting…';
   let newContext=null,newStream=null;
   try {
     if (!navigator.mediaDevices?.getUserMedia) throw new Error('Microphone access needs HTTPS or localhost.');
     newContext=new AudioContext();await newContext.resume();
-    newStream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+    newStream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:{ideal:1},echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
     if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());await newContext.close();return;}
-    audioContext=newContext;stream=newStream;const source=audioContext.createMediaStreamSource(stream);
-    analyser=audioContext.createAnalyser();analyser.fftSize=4096;source.connect(analyser);
+    audioContext=newContext;stream=newStream;micSource=audioContext.createMediaStreamSource(stream);
+    analyser=audioContext.createAnalyser();analyser.fftSize=4096;micSource.connect(analyser);
     highpass=audioContext.createBiquadFilter();highpass.type='highpass';highpass.Q.value=Math.SQRT1_2;
     lowpass=audioContext.createBiquadFilter();lowpass.type='lowpass';lowpass.Q.value=Math.SQRT1_2;
-    pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;source.connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
-    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
+    pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;micSource.connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
+    // Explicitly pull both analyser branches while keeping microphone playback inaudible.
+    silentOutput=audioContext.createGain();silentOutput.gain.value=0;analyser.connect(silentOutput);pitchAnalyser.connect(silentOutput);silentOutput.connect(audioContext.destination);
+    // Permission prompts/audio routing may have suspended the context since the initial gesture.
+    await audioContext.resume();
+    if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());if(newContext.state!=='closed') await newContext.close();return;}
+    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;filteredRms=0;lastHealthAt=-Infinity;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
     running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');raf=requestAnimationFrame(frame);
-    stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
+    stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running && token===lifecycle) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
   } catch (error) {
     newStream?.getTracks().forEach(t=>t.stop());if(newContext && newContext.state!=='closed') await newContext.close().catch(()=>{});
     if(token!==lifecycle) return;
@@ -189,7 +215,7 @@ async function start() {
 }
 function stop() {
   ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
-  stream=null;audioContext=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;breakTrail=true;
+  micSource?.disconnect();silentOutput?.disconnect();stream=null;audioContext=null;micSource=null;silentOutput=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;els.micLevel.hidden=true;breakTrail=true;
   els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
 }
 els.indicator.addEventListener('pointerdown',event=>{
