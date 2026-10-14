@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#11152d">
+<title>Vocal Trainer Phone</title>
+<style>
+:root { font-family: system-ui, sans-serif; color: #eef2ff; background: #11152d; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+#indicator { position: fixed; inset: 0; height: 100dvh; overflow: hidden; touch-action: none; user-select: none; background: linear-gradient(to top, #8d7832 0%, #7b843a 25%, #527845 50%, #697544 76%, #813e3b 100%); }
+#ticks, #trail { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.tick { position: absolute; top: 0; bottom: 0; width: 1px; }
+.tick::before { content: ''; position: absolute; top: 0; bottom: calc(32px + env(safe-area-inset-bottom)); width: 1px; background: #9ca6c480; }
+.tick.natural::before { width: 2px; background: #d1d8efbb; }
+.tick.center::before { background: #a7f3d0; }
+.tick::after { content: attr(data-label); position: absolute; bottom: calc(9px + env(safe-area-inset-bottom)); transform: translateX(-50%); color: #eef2ff; font-size: clamp(10px, 2.8vw, 15px); text-shadow: 0 1px 3px #11152d; }
+.tick:first-child::after { transform: none; }
+.tick:last-child::after { transform: translateX(-100%); }
+.tick.center::after { color: #a7f3d0; font-weight: 800; }
+.reference { position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left)); pointer-events: none; text-shadow: 0 2px 5px #11152daa; }
+#referenceNote { display: block; font-size: clamp(48px, 10vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -.06em; }
+#referenceHz { display: block; margin-top: 5px; font-size: clamp(20px, 4vw, 28px); font-variant-numeric: tabular-nums; }
+.controls { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: calc(12px + env(safe-area-inset-right)); display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 155px; }
+button { min-width: 60px; min-height: 44px; border: 1px solid #ffffff35; border-radius: 10px; padding: 8px 12px; font: 700 15px system-ui; cursor: pointer; }
+#start { color: #11152d; background: #a7f3d0; }
+#stop { color: #ffe4e6; background: #9f1239; }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible { outline: 3px solid white; outline-offset: 2px; }
+#status { width: 100%; text-align: right; font-size: 12px; text-shadow: 0 1px 3px #11152d; }
+#status.listening::before { content: '● '; color: #ff5266; }
+#version { position: absolute; right: calc(12px + env(safe-area-inset-right)); bottom: calc(38px + env(safe-area-inset-bottom)); font-size: 11px; color: #ffffffb0; text-shadow: 0 1px 3px #11152d; pointer-events: none; }
+#error { position: absolute; top: 110px; left: 12px; right: 12px; padding: 12px; background: #11152dee; border-radius: 10px; font-size: 14px; }
+#error:empty { display: none; }
+#cross { position: absolute; width: 22px; height: 22px; transform: translate(-50%, -50%); pointer-events: none; filter: drop-shadow(0 0 4px currentColor); }
+#cross::before, #cross::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: currentColor; border-radius: 1px; }
+#cross::before { height: 22px; width: 2px; }
+#cross::after { width: 22px; height: 2px; }
+[hidden] { display: none !important; }
+@media (orientation: landscape) { .reference { display: flex; align-items: baseline; gap: 12px; } #referenceHz { margin: 0; } }
+</style>
+</head>
+<body>
+<main id="indicator" aria-label="Pitch and volume. Drag horizontally to change reference." tabindex="0">
+  <div id="ticks" aria-hidden="true"></div><canvas id="trail" aria-hidden="true"></canvas>
+  <div class="reference"><span id="referenceNote">C3</span><span id="referenceHz">130.8 Hz</span></div>
+  <div id="cross" hidden aria-hidden="true"></div>
+  <div class="controls"><button id="start">Start</button><button id="stop" disabled>Stop</button><span id="status" role="status">Ready</span></div>
+  <span id="version">Phone v3</span><div id="error" role="alert"></div>
+</main>
+<script>
+'use strict';
+const PHONE_VERSION = 3;
+const DISPLAY_SEMITONES = 7, DISPLAY_CENTS = DISPLAY_SEMITONES * 100;
+const PITCH_RMS_GATE = .005, MIN_PITCH_HZ = 55, MAX_PITCH_HZ = 700;
+const NOTE_NAMES = ['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
+const $ = id => document.getElementById(id);
+const els = { indicator: $('indicator'), ticks: $('ticks'), canvas: $('trail'), cross: $('cross'), note: $('referenceNote'), hz: $('referenceHz'), start: $('start'), stop: $('stop'), status: $('status'), error: $('error') };
+const paint = els.canvas.getContext('2d');
+let targetMidi = 48, running = false, starting = false, lifecycle = 0, raf = 0;
+let audioContext = null, stream = null, analyser = null, pitchAnalyser = null, highpass = null, lowpass = null;
+let volumeBuffer, pitchBuffer, volumeRms = 0, stableHz = 0, stableAt = 0, stableBoundary = false, lastInputAt = null, candidate = null, history = [];
+let referenceCandidate = null, awaitingRelease = false, quietSince = null, drag = null;
+let points = [], lastPointAt = 0, breakTrail = true, width = 0, height = 0;
+const midiToHz = midi => 440 * 2 ** ((midi - 69) / 12);
+const hzToMidi = hz => 69 + 12 * Math.log2(hz / 440);
+const cents = (a,b) => 1200 * Math.log2(a / b);
+const median = values => { const s = [...values].sort((a,b) => a-b), m = Math.floor(s.length/2); return s.length % 2 ? s[m] : (s[m-1]+s[m])/2; };
+const noteName = midi => NOTE_NAMES[((midi % 12)+12)%12] + (Math.floor(midi/12)-1);
+function range() { return { min: Math.max(55, midiToHz(targetMidi-11)), max: Math.min(700, midiToHz(targetMidi+11)) }; }
+function resetPitch() { stableHz=0; stableAt=0; stableBoundary=false; lastInputAt=null; candidate=null; history=[]; }
+function clearTrail() { points=[]; lastPointAt=0; breakTrail=true; paint.clearRect(0,0,width,height); els.cross.hidden=true; }
+function updateBand() { if (!audioContext || !highpass) return; const band=range(); highpass.frequency.setTargetAtTime(band.min,audioContext.currentTime,.03); lowpass.frequency.setTargetAtTime(band.max,audioContext.currentTime,.03); }
+function setReference(midi, source='manual') {
+  midi=Math.max(33,Math.min(77,Math.round(midi)));
+  if (midi===targetMidi) return false;
+  targetMidi=midi; referenceCandidate=null; resetPitch(); clearTrail(); buildTicks(); updateBand();
+  awaitingRelease=running && source==='audio'; quietSince=null;
+  return true;
+}
+function buildTicks() {
+  els.note.textContent=noteName(targetMidi); els.hz.textContent=midiToHz(targetMidi).toFixed(1)+' Hz'; els.ticks.replaceChildren();
+  for (let step=-DISPLAY_SEMITONES;step<=DISPLAY_SEMITONES;step++) {
+    const midi=targetMidi+step, natural=[0,2,4,5,7,9,11].includes(((midi%12)+12)%12), tick=document.createElement('span');
+    tick.className='tick'+(natural?' natural':'')+(step===0?' center':''); tick.style.left=((step+DISPLAY_SEMITONES)/(2*DISPLAY_SEMITONES)*100)+'%';
+    if (natural) tick.dataset.label=noteName(midi);
+    els.ticks.append(tick);
+  }
+}
+function stabilize(pitch, now) {
+  if (!pitch) { candidate=null; history=[]; return null; }
+  if (lastInputAt===null || now-lastInputAt>120) { stableHz=0; stableAt=0; stableBoundary=false; candidate=null; history=[]; }
+  lastInputAt=now;
+  const change=stableHz?cents(pitch.hz,stableHz):0;
+  if (!stableHz || Math.abs(change)>200) {
+    const hold=stableHz && change>=-1300 && change<=-1100?250:100;
+    if (!candidate || Math.abs(cents(pitch.hz,candidate.anchor))>60) candidate={anchor:pitch.hz,since:now,readings:[]};
+    candidate.readings.push(pitch.hz);
+    if (candidate.readings.length<5 || now-candidate.since<hold) return stableHz && now-stableAt<=hold+120?{...pitch,hz:stableHz,boundary:stableBoundary}:null;
+    stableHz=median(candidate.readings); history=[stableHz]; candidate=null;
+  } else { candidate=null; history.push(pitch.hz); if (history.length>3) history.shift(); stableHz=median(history); }
+  stableAt=now; stableBoundary=pitch.boundary; return {...pitch,hz:stableHz,boundary:stableBoundary};
+}
+function detectPitch() {
+  pitchAnalyser.getFloatTimeDomainData(pitchBuffer);
+  let power=0; for (const value of pitchBuffer) power+=value*value;
+  if (Math.sqrt(power/pitchBuffer.length)<PITCH_RMS_GATE) return null;
+  const band=range(), rate=audioContext.sampleRate;
+  const minLag=Math.max(2,Math.ceil(rate/band.max)), maxLag=Math.min(pitchBuffer.length/2,Math.floor(rate/band.min));
+  if (minLag>maxLag) return null;
+  const correlations=new Float32Array(maxLag-minLag+1); let best=0,bestLag=minLag;
+  for (let lag=minLag;lag<=maxLag;lag++) {
+    let sum=0,a=0,b=0;
+    for (let i=0;i<pitchBuffer.length-lag;i+=2) { const x=pitchBuffer[i],y=pitchBuffer[i+lag]; sum+=x*y;a+=x*x;b+=y*y; }
+    const corr=sum/Math.sqrt(a*b||1); correlations[lag-minLag]=corr; if (corr>best) {best=corr;bestLag=lag;}
+  }
+  if (best<.25) return null;
+  let selected=bestLag;
+  for (let i=1;i<correlations.length-1;i++) if (correlations[i]>=best-.015 && correlations[i]>=correlations[i-1] && correlations[i]>=correlations[i+1]) {selected=minLag+i;break;}
+  const hz=rate/selected;
+  return {hz,boundary:selected===minLag || selected===maxLag || Math.abs(cents(hz,band.min))<=25 || Math.abs(cents(hz,band.max))<=25};
+}
+function recognizeReference(pitch, now) {
+  if (drag) { referenceCandidate=null; return false; }
+  if (!pitch) { if (referenceCandidate && now-referenceCandidate.last>180) referenceCandidate=null; return false; }
+  const midi=Math.round(hzToMidi(pitch.hz));
+  if (midi===targetMidi) { referenceCandidate=null; return false; }
+  if (!referenceCandidate || now-referenceCandidate.last>180 || Math.abs(cents(pitch.hz,referenceCandidate.anchor))>35) referenceCandidate={anchor:pitch.hz,since:now,last:now,readings:[pitch.hz]};
+  else {referenceCandidate.last=now;referenceCandidate.readings.push(pitch.hz);}
+  if (now-referenceCandidate.since>=1500) return setReference(hzToMidi(median(referenceCandidate.readings)),'audio');
+  return false;
+}
+function strokePoint(point, previous) {
+  paint.strokeStyle='#eef2ff';paint.fillStyle='#eef2ff';paint.lineWidth=2;paint.lineCap='round';paint.lineJoin='round';
+  const x=point.x*width,y=point.y*height;
+  if (previous && !point.breakBefore && !point.isolated && !previous.isolated) {paint.beginPath();paint.moveTo(previous.x*width,previous.y*height);paint.lineTo(x,y);paint.stroke();}
+  else {paint.beginPath();paint.arc(x,y,1,0,Math.PI*2);paint.fill();}
+}
+function resize() {
+  const rect=els.indicator.getBoundingClientRect();width=rect.width;height=rect.height;
+  const ratio=Math.min(window.devicePixelRatio||1,2);els.canvas.width=Math.round(width*ratio);els.canvas.height=Math.round(height*ratio);paint.setTransform(ratio,0,0,ratio,0,0);
+  points.forEach((point,i)=>strokePoint(point,points[i-1]));
+}
+function frame(now) {
+  if (!running) return;
+  analyser.getFloatTimeDomainData(volumeBuffer);let power=0;
+  for (const value of volumeBuffer) power+=value*value;
+  const rawRms=Math.sqrt(power/volumeBuffer.length);volumeRms=volumeRms?volumeRms*.78+rawRms*.22:rawRms;
+  const pitch=stabilize(detectPitch(),now);
+  if (awaitingRelease) {
+    if (rawRms<.008) { if (quietSince===null) quietSince=now; if (now-quietSince>=180) {awaitingRelease=false;quietSince=null;} }
+    else quietSince=null;
+    els.cross.hidden=true;breakTrail=true;
+  } else if (recognizeReference(pitch,now)) { /* Reference changed; the previous trace is cleared. */ }
+  else if (pitch && volumeRms>=PITCH_RMS_GATE) {
+    const error=cents(pitch.hz,midiToHz(targetMidi)),x=(Math.max(-DISPLAY_CENTS,Math.min(DISPLAY_CENTS,error))+DISPLAY_CENTS)/(2*DISPLAY_CENTS);
+    const level=Math.max(0,Math.min(20,(20*Math.log10(Math.max(volumeRms,1e-5))+60)/2.4)),y=1-level/20;
+    els.cross.hidden=false;els.cross.style.left=`clamp(11px, ${x*100}%, calc(100% - 11px))`;els.cross.style.top=`clamp(11px, ${y*100}%, calc(100% - 11px))`;
+    els.cross.style.color=Math.abs(error)<=15?'#a7f3d0':Math.abs(error)<=35?'#facc15':'#fb7185';
+    const isolated=pitch.boundary || Math.abs(error)>=DISPLAY_CENTS;
+    if (isolated) breakTrail=true;
+    if (now-lastPointAt>=70) {const point={x,y,isolated,breakBefore:breakTrail || now-lastPointAt>200};strokePoint(point,points.at(-1));points.push(point);lastPointAt=now;breakTrail=isolated;}
+  } else {els.cross.hidden=true;breakTrail=true;}
+  raf=requestAnimationFrame(frame);
+}
+async function start() {
+  if (running || starting) return;
+  starting=true;const token=++lifecycle;els.start.disabled=true;els.stop.disabled=false;els.error.textContent='';els.status.textContent='Starting…';
+  let newContext=null,newStream=null;
+  try {
+    if (!navigator.mediaDevices?.getUserMedia) throw new Error('Microphone access needs HTTPS or localhost.');
+    newContext=new AudioContext();await newContext.resume();
+    newStream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+    if (token!==lifecycle) {newStream.getTracks().forEach(t=>t.stop());await newContext.close();return;}
+    audioContext=newContext;stream=newStream;const source=audioContext.createMediaStreamSource(stream);
+    analyser=audioContext.createAnalyser();analyser.fftSize=4096;source.connect(analyser);
+    highpass=audioContext.createBiquadFilter();highpass.type='highpass';highpass.Q.value=Math.SQRT1_2;
+    lowpass=audioContext.createBiquadFilter();lowpass.type='lowpass';lowpass.Q.value=Math.SQRT1_2;
+    pitchAnalyser=audioContext.createAnalyser();pitchAnalyser.fftSize=4096;source.connect(highpass).connect(lowpass).connect(pitchAnalyser);updateBand();
+    volumeBuffer=new Float32Array(4096);pitchBuffer=new Float32Array(4096);volumeRms=0;resetPitch();clearTrail();referenceCandidate=null;awaitingRelease=false;
+    running=true;starting=false;els.status.textContent='Listening';els.status.classList.add('listening');raf=requestAnimationFrame(frame);
+    stream.getAudioTracks().forEach(track=>track.addEventListener('ended',()=>{if(running) {stop();els.error.textContent='Microphone disconnected. Press Start to reconnect.';}}));
+  } catch (error) {
+    newStream?.getTracks().forEach(t=>t.stop());if(newContext && newContext.state!=='closed') await newContext.close().catch(()=>{});
+    if(token!==lifecycle) return;
+    stop();els.error.textContent=error.name==='NotAllowedError'?'Allow microphone access, then press Start.':error.message;
+  }
+}
+function stop() {
+  ++lifecycle;running=false;starting=false;cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());if(audioContext && audioContext.state!=='closed') audioContext.close().catch(()=>{});
+  stream=null;audioContext=null;highpass=null;lowpass=null;resetPitch();referenceCandidate=null;awaitingRelease=false;els.cross.hidden=true;breakTrail=true;
+  els.start.disabled=false;els.stop.disabled=true;els.status.textContent='Stopped';els.status.classList.remove('listening');
+}
+els.indicator.addEventListener('pointerdown',event=>{
+  if(event.target.closest('button') || event.isPrimary===false || event.button!==0) return;
+  drag={id:event.pointerId,x:event.clientX,midi:targetMidi,width:Math.max(1,width)};els.indicator.setPointerCapture(event.pointerId);referenceCandidate=null;
+});
+els.indicator.addEventListener('pointermove',event=>{
+  if(!drag || drag.id!==event.pointerId) return;
+  const delta=event.clientX-drag.x;if(Math.abs(delta)<8) return;
+  setReference(drag.midi-delta/drag.width*(2*DISPLAY_SEMITONES));
+});
+function endDrag(event) {if(drag?.id===event.pointerId) {drag=null;referenceCandidate=null;}}
+els.indicator.addEventListener('pointerup',endDrag);els.indicator.addEventListener('pointercancel',endDrag);els.indicator.addEventListener('lostpointercapture',endDrag);
+els.indicator.addEventListener('keydown',event=>{if(event.target.closest('button')) return;if(event.key==='ArrowLeft' || event.key==='ArrowRight') {event.preventDefault();setReference(targetMidi+(event.key==='ArrowRight'?1:-1));}});
+els.start.addEventListener('click',start);els.stop.addEventListener('click',stop);
+window.addEventListener('pagehide',stop);new ResizeObserver(resize).observe(els.indicator);
+document.addEventListener('visibilitychange',()=>{if(document.hidden && (running||starting)) stop();});
+buildTicks();resize();
+</script>
+</body>
+</html>
