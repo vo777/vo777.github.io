@@ -1,6 +1,6 @@
 {
-  "name": "Vocal Trainer",
-  "short_name": "Vocal Trainer",
+  "name": "Tuner",
+  "short_name": "Tuner",
   "description": "Full-screen pitch and volume trainer",
   "lang": "en-US",
   "start_url": "./",
